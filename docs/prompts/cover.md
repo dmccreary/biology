@@ -6,7 +6,7 @@
 
 Note: generate-cover.sh was not found....
 
-
+Please generate a new image.
 A professional educational textbook cover, 1200×630 pixels wide landscape
   orientation.
 
