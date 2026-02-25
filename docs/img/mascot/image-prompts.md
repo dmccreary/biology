@@ -52,7 +52,7 @@ For chapter openings.
 ```
 Please use the description above and make a new Welcome pose.
 
-
+Generate a new png with a transparent background image of Gregor the frog giving a welcome.
 Gregor is waving one front leg cheerfully at the viewer with a big,
 warm smile. His other hand holds the magnifying glass at his side. The pose
 radiates "welcome, let's get started!" energy. He faces slightly toward the
@@ -127,7 +127,9 @@ tiny stars scatter around him. His eyes are squinted with joy.
 For difficult content and moments where students may feel frustrated.
 
 ```
-[BASE] Gregor gives a confident thumbs-up with one front leg while smiling
+Generate a new png image of Gregor the frog on a transparent background.
+This pose is for an encouraging gesture.
+Gregor gives a confident thumbs-up with one front leg while smiling
 warmly and reassuringly at the viewer. His posture is relaxed and supportive.
 The pose radiates "you can do it" and "I believe in you" energy.
 ```
