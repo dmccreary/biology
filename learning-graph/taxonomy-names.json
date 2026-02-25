@@ -1,0 +1,14 @@
+{
+  "FOUND": "Scientific Foundations",
+  "CHEM": "Chemistry of Life",
+  "MACRO": "Macromolecules",
+  "CELL": "Cell Biology",
+  "ENRG": "Cellular Energetics",
+  "COMM": "Cell Communication and Division",
+  "GENET": "Heredity and Genetics",
+  "MOLBIO": "Molecular Biology",
+  "BIOTECH": "Gene Regulation and Biotechnology",
+  "EVOL": "Evolution",
+  "POPECO": "Population and Community Ecology",
+  "ECOSYS": "Ecosystem and Global Ecology"
+}
