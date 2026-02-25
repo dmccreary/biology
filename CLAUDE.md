@@ -107,6 +107,93 @@ PY
 
 ---
 
+## Equations and Chemical Notation
+
+### ⚠️ Critical Rule: Never Use Backslash Delimiters in Markdown
+
+**NEVER write `\(...\)` or `\[...\]` directly in any `.md` file.** Python-Markdown can corrupt backslash sequences before MathJax ever sees them, silently breaking equations.
+
+**Always use `$` and `$$` in markdown content files. No exceptions.**
+
+### How the Pipeline Works
+
+```
+Markdown source     pymdownx.arithmatex      MathJax renders
+──────────────      ───────────────────      ───────────────
+$...$          →    \(...\)              →    inline equation
+$$...$$        →    \[...\]             →    block equation
+```
+
+The arithmatex extension (configured with `generic: true` in `mkdocs.yml`) intercepts dollar-sign delimiters and converts them to backslash form *internally* before handing off to MathJax. The backslash delimiters in `mathjax-config.js` are what MathJax receives — they are never written by hand.
+
+### Inline Equations
+
+Wrap in single `$`:
+
+```markdown
+The free energy change is $\Delta G = \Delta H - T\Delta S$.
+
+Enzyme rate follows $v = \frac{V_{max}[S]}{K_m + [S]}$.
+
+Hardy-Weinberg: $p^2 + 2pq + q^2 = 1$
+```
+
+### Block (Display) Equations
+
+Wrap in `$$` on its own lines:
+
+```markdown
+$$
+\Delta G = \Delta H - T\Delta S
+$$
+
+$$
+\frac{dN}{dt} = rN\left(\frac{K - N}{K}\right)
+$$
+```
+
+### Chemical Equations — Use `\ce{}`
+
+Chemical notation uses the `mhchem` package via `$\ce{...}$`. This is the **only** correct way to write chemical formulas and reactions.
+
+```markdown
+Water: $\ce{H2O}$
+
+Photosynthesis:
+$$\ce{6CO2 + 6H2O ->[\text{light}] C6H12O6 + 6O2}$$
+
+Cellular respiration:
+$$\ce{C6H12O6 + 6O2 -> 6CO2 + 6H2O + ATP}$$
+
+ATP hydrolysis: $\ce{ATP + H2O -> ADP + P_i}$
+
+Ionization: $\ce{H2CO3 <=> H+ + HCO3-}$
+```
+
+Key `\ce{}` syntax:
+- Subscripts are automatic: `H2O` renders as H₂O (no `_` needed inside `\ce{}`)
+- Arrows: `->` (forward), `<=>` (equilibrium), `<->` (resonance)
+- Charges: `H+`, `OH-`, `Fe^{3+}`
+- Conditions above arrow: `->[\text{light}]` or `->[catalyst]`
+
+### What NOT to Write
+
+```markdown
+<!-- WRONG — backslash delimiters in markdown -->
+\(p^2 + 2pq + q^2 = 1\)
+\[E = mc^2\]
+
+<!-- WRONG — plain text subscripts instead of math -->
+H2O, CO2, ATP → ADP + Pi
+
+<!-- CORRECT -->
+$p^2 + 2pq + q^2 = 1$
+$$E = mc^2$$
+$\ce{H2O}$, $\ce{CO2}$, $\ce{ATP -> ADP + P_i}$
+```
+
+---
+
 ## Chapter Content Guidelines
 
 ### Complex Diagrams and Biological Illustrations
