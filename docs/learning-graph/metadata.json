@@ -1,0 +1,10 @@
+{
+  "title": "AP Biology: An Interactive Course",
+  "description": "A rigorous, college-level AP Biology course for advanced high school students covering chemistry of life, cell biology, cellular energetics, genetics, gene expression, evolution, and ecology. Aligned to the College Board AP Biology Course and Exam Description.",
+  "creator": "AP Biology Course Team",
+  "date": "2026-02-25",
+  "version": "1.0",
+  "format": "Learning Graph JSON v1.0",
+  "schema": "https://raw.githubusercontent.com/dmccreary/learning-graphs/refs/heads/main/src/schema/learning-graph-schema.json",
+  "license": "CC BY-NC-SA 4.0 DEED"
+}
