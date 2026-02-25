@@ -2,9 +2,9 @@
 
 ## Overview
 
-- **Total Concepts**: 375
+- **Total Concepts**: 380
 - **Foundational Concepts** (no dependencies): 6
-- **Concepts with Dependencies**: 369
+- **Concepts with Dependencies**: 374
 - **Average Dependencies per Concept**: 2.07
 
 ## Graph Structure Validation
@@ -58,7 +58,7 @@ These concepts have no prerequisites:
 
 ## Orphaned Nodes Analysis
 
-- **Total Orphaned Nodes**: 116
+- **Total Orphaned Nodes**: 119
 
 Concepts that are not prerequisites for any other concept:
 
@@ -83,7 +83,7 @@ Concepts that are not prerequisites for any other concept:
 - **76**: Smooth ER
 - **78**: Lysosomes
 
-*...and 96 more*
+*...and 99 more*
 
 ## Connected Components
 
@@ -105,23 +105,23 @@ Top 10 concepts that are prerequisites for the most other concepts:
 | 6 | 53 | Plasma Membrane | 11 |
 | 7 | 193 | Monohybrid Crosses | 11 |
 | 8 | 218 | DNA Replication | 10 |
-| 9 | 12 | Water Polarity | 9 |
-| 10 | 24 | Condensation Reactions | 8 |
+| 9 | 1 | Scientific Method | 9 |
+| 10 | 12 | Water Polarity | 9 |
 
 ## Outdegree Distribution
 
 | Dependencies | Number of Concepts |
 |--------------|--------------------|
 | 0 | 6 |
-| 1 | 103 |
-| 2 | 157 |
-| 3 | 90 |
-| 4 | 18 |
+| 1 | 104 |
+| 2 | 161 |
+| 3 | 89 |
+| 4 | 19 |
 | 5 | 1 |
 
 ## Recommendations
 
-- ⚠️ **Many orphaned nodes** (116): Consider if these should be prerequisites for advanced concepts
+- ⚠️ **Many orphaned nodes** (119): Consider if these should be prerequisites for advanced concepts
 - ℹ️ **Long dependency chains** (25): Ensure students can follow extended learning paths
 
 ---

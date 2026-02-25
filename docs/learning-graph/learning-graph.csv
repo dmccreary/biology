@@ -370,7 +370,12 @@ ConceptID,ConceptLabel,Dependencies,TaxonomyID
 369,Species Richness and Evenness,368,ECOSYS
 370,Habitat Fragmentation,368|323|335,ECOSYS
 371,Invasive Species,335|339|368,ECOSYS
-372,Climate Change and Ecology,359|360|368,ECOSYS
+372,Climate Change and Ecology,359|360|368|379,ECOSYS
 373,Conservation Biology,368|370|371|372|289,ECOSYS
 374,Island Biogeography,323|335|307,POPECO
 375,Ecological Footprint,355|373|372,ECOSYS
+376,Systems Thinking,1,FOUND
+377,Critical Thinking,1|2,FOUND
+378,Detecting Misinformation,377|1,FOUND
+379,Climate Change,359|360,ECOSYS
+380,Global Warming,379|360,ECOSYS

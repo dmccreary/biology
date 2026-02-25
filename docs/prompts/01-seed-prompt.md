@@ -7,7 +7,9 @@
 
 [Course Description](../course-description.md)
 
+!!! prompt
+    Run the /learning-graph-generator and store as many concepts as you feel are needed. 
+    This is a complex course and the number of 200 is not appropriate.  We can trim the concept lists down later if we need to.
 
-run the /learning-graph-generator and store as many concepts as you feel are needed.  The is a         
-  complex course and the number of 200 is not appropriate.  We can trim the concept lists down later    
-   if we need to.
+!!! prompt
+    Add the following concepts: Systems Thinking, Critical Thinking, Detecting Misinformation, Climate Change, Global Warming 

@@ -1,6 +1,6 @@
 # AP Biology Concept List
 
-350 concept labels for the AP Biology learning graph.
+380 concept labels for the AP Biology learning graph.
 Each label is in Title Case and does not exceed 32 characters.
 
 ## Unit 1: Scientific Foundations and Chemistry of Life (Concepts 1–47)
@@ -9,6 +9,9 @@ Each label is in Title Case and does not exceed 32 characters.
 2. Hypothesis Testing
 3. Controlled Experiments
 4. Independent and Dependent Variables
+376. Systems Thinking
+377. Critical Thinking
+378. Detecting Misinformation
 5. Atomic Structure
 6. Elements of Life
 7. Chemical Bonds
@@ -401,3 +404,5 @@ Each label is in Title Case and does not exceed 32 characters.
 373. Conservation Biology
 374. Island Biogeography
 375. Ecological Footprint
+379. Climate Change
+380. Global Warming

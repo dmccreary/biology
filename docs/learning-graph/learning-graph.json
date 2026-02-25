@@ -10,85 +10,85 @@
     "license": "CC BY-NC-SA 4.0 DEED"
   },
   "groups": {
-    "MACRO": {
-      "classifierName": "Macromolecules",
+    "POPECO": {
+      "classifierName": "Population and Community Ecology",
       "color": "MistyRose",
-      "font": {
-        "color": "black"
-      }
-    },
-    "EVOL": {
-      "classifierName": "Evolution",
-      "color": "PeachPuff",
       "font": {
         "color": "black"
       }
     },
     "BIOTECH": {
       "classifierName": "Gene Regulation and Biotechnology",
-      "color": "LightYellow",
-      "font": {
-        "color": "black"
-      }
-    },
-    "GENET": {
-      "classifierName": "Heredity and Genetics",
-      "color": "Honeydew",
-      "font": {
-        "color": "black"
-      }
-    },
-    "ENRG": {
-      "classifierName": "Cellular Energetics",
-      "color": "PaleTurquoise",
-      "font": {
-        "color": "black"
-      }
-    },
-    "CELL": {
-      "classifierName": "Cell Biology",
-      "color": "SteelBlue",
-      "font": {
-        "color": "black"
-      }
-    },
-    "CHEM": {
-      "classifierName": "Chemistry of Life",
-      "color": "Lavender",
-      "font": {
-        "color": "black"
-      }
-    },
-    "FOUND": {
-      "classifierName": "Scientific Foundations",
-      "color": "LavenderBlush",
-      "font": {
-        "color": "black"
-      }
-    },
-    "ECOSYS": {
-      "classifierName": "Ecosystem and Global Ecology",
-      "color": "Thistle",
-      "font": {
-        "color": "black"
-      }
-    },
-    "MOLBIO": {
-      "classifierName": "Molecular Biology",
-      "color": "MintCream",
-      "font": {
-        "color": "black"
-      }
-    },
-    "POPECO": {
-      "classifierName": "Population and Community Ecology",
-      "color": "LightCoral",
+      "color": "PeachPuff",
       "font": {
         "color": "black"
       }
     },
     "COMM": {
       "classifierName": "Cell Communication and Division",
+      "color": "LightYellow",
+      "font": {
+        "color": "black"
+      }
+    },
+    "FOUND": {
+      "classifierName": "Scientific Foundations",
+      "color": "Honeydew",
+      "font": {
+        "color": "black"
+      }
+    },
+    "CHEM": {
+      "classifierName": "Chemistry of Life",
+      "color": "PaleTurquoise",
+      "font": {
+        "color": "black"
+      }
+    },
+    "MACRO": {
+      "classifierName": "Macromolecules",
+      "color": "SteelBlue",
+      "font": {
+        "color": "black"
+      }
+    },
+    "CELL": {
+      "classifierName": "Cell Biology",
+      "color": "Lavender",
+      "font": {
+        "color": "black"
+      }
+    },
+    "MOLBIO": {
+      "classifierName": "Molecular Biology",
+      "color": "LavenderBlush",
+      "font": {
+        "color": "black"
+      }
+    },
+    "EVOL": {
+      "classifierName": "Evolution",
+      "color": "Thistle",
+      "font": {
+        "color": "black"
+      }
+    },
+    "ENRG": {
+      "classifierName": "Cellular Energetics",
+      "color": "MintCream",
+      "font": {
+        "color": "black"
+      }
+    },
+    "GENET": {
+      "classifierName": "Heredity and Genetics",
+      "color": "LightCoral",
+      "font": {
+        "color": "black"
+      }
+    },
+    "ECOSYS": {
+      "classifierName": "Ecosystem and Global Ecology",
       "color": "Plum",
       "font": {
         "color": "black"
@@ -1975,6 +1975,31 @@
     {
       "id": 375,
       "label": "Ecological Footprint",
+      "group": "ECOSYS"
+    },
+    {
+      "id": 376,
+      "label": "Systems Thinking",
+      "group": "FOUND"
+    },
+    {
+      "id": 377,
+      "label": "Critical Thinking",
+      "group": "FOUND"
+    },
+    {
+      "id": 378,
+      "label": "Detecting Misinformation",
+      "group": "FOUND"
+    },
+    {
+      "id": 379,
+      "label": "Climate Change",
+      "group": "ECOSYS"
+    },
+    {
+      "id": 380,
+      "label": "Global Warming",
       "group": "ECOSYS"
     }
   ],
@@ -4992,6 +5017,10 @@
       "to": 368
     },
     {
+      "from": 372,
+      "to": 379
+    },
+    {
       "from": 373,
       "to": 368
     },
@@ -5034,6 +5063,42 @@
     {
       "from": 375,
       "to": 372
+    },
+    {
+      "from": 376,
+      "to": 1
+    },
+    {
+      "from": 377,
+      "to": 1
+    },
+    {
+      "from": 377,
+      "to": 2
+    },
+    {
+      "from": 378,
+      "to": 377
+    },
+    {
+      "from": 378,
+      "to": 1
+    },
+    {
+      "from": 379,
+      "to": 359
+    },
+    {
+      "from": 379,
+      "to": 360
+    },
+    {
+      "from": 380,
+      "to": 379
+    },
+    {
+      "from": 380,
+      "to": 360
     }
   ]
 }
