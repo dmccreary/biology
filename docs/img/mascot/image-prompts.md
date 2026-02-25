@@ -12,7 +12,9 @@ Format: **PNG with transparent background**.
 Copy this base into every prompt below:
 
 ```
-Please generate a new image.
+Please generate a new png image based on the image above.  
+The image has a frog in the center but it the background
+is transparent.
 
 A modern flat vector illustration of Gregor the Tree Frog, a friendly
 pedagogical mascot for an AP Biology high school textbook. Gregor is a
@@ -48,7 +50,10 @@ unassuming, suitable as a general-purpose illustration.
 For chapter openings.
 
 ```
-[BASE] Gregor is waving one front leg cheerfully at the viewer with a big,
+Please use the description above and make a new Welcome pose.
+
+
+Gregor is waving one front leg cheerfully at the viewer with a big,
 warm smile. His other hand holds the magnifying glass at his side. The pose
 radiates "welcome, let's get started!" energy. He faces slightly toward the
 viewer with an open, inviting posture.
@@ -61,10 +66,12 @@ viewer with an open, inviting posture.
 For key concepts and insights.
 
 ```
-[BASE] Gregor rests one front leg against his chin in a classic thinking pose,
+Please generate a new image.
+This is an image of Gregor the frog above in a thinking pose.
+Gregor rests one front leg against his chin in a classic thinking pose,
 looking slightly upward. A small bright lightbulb glows above his head. His
 golden eyes are wide with curiosity and discovery. The magnifying glass rests
-at his side.
+at his side.  Fill in the body of the frog with non-transparent pixels.
 ```
 
 ---
@@ -74,9 +81,13 @@ at his side.
 For helpful hints and AP exam strategies.
 
 ```
-[BASE] Gregor holds up one front leg with the index finger pointing upward, as
+[BASE]
+
+Create a new image for Gregor giving a tip.
+Gregor holds up one front leg with the index finger pointing upward, as
 if sharing an important tip. A small yellow star or sparkle appears near the
 pointing gesture. His expression is knowing and helpful, with a slight smile.
+Make sure that within the body of the frog there are NO transparent pixels.
 ```
 
 ---
@@ -86,9 +97,14 @@ pointing gesture. His expression is knowing and helpful, with a slight smile.
 For common mistakes and misconceptions to avoid.
 
 ```
-[BASE] Gregor holds up both front legs with open palms in a gentle "stop" or
+Create a new image for Gregor giving a friendly warning.
+Gregor holds up both front legs with open palms in a gentle "stop" or
 "be careful" gesture. His golden eyes are wide with a concerned but caring
 expression. A small red exclamation mark or caution triangle appears nearby.
+Make sure that within the body of the frog there are NO transparent pixels.
+All transparent pixels within the body should be white for Gregor's lab coat.
+Convert all the transparent pixels in the lab coat to be a solid white.
+
 ```
 
 ---
@@ -98,7 +114,8 @@ expression. A small red exclamation mark or caution triangle appears nearby.
 For section completions and achievements.
 
 ```
-[BASE] Gregor leaps upward with both arms raised in joyful celebration, his
+Create a new image for Gregor doing a
+Gregor leaps upward with both arms raised in joyful celebration, his
 mouth open in a wide, happy smile. Small green and yellow confetti pieces and
 tiny stars scatter around him. His eyes are squinted with joy.
 ```
