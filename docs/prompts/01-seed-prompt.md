@@ -12,4 +12,13 @@
     This is a complex course and the number of 200 is not appropriate.  We can trim the concept lists down later if we need to.
 
 !!! prompt
-    Add the following concepts: Systems Thinking, Critical Thinking, Detecting Misinformation, Climate Change, Global Warming 
+    Add the following concepts: Systems Thinking, Critical Thinking, Detecting Misinformation, Climate Change, Global Warming
+
+!!! prompt
+    run the /book-installer mascot generator guide
+
+Result: Gregor the Tree Frog
+
+please update the mkdocs.yml file to include all of the features used in the following template:       
+  ../chemistry/mkdocs.yml - bring over the extra css and the extra javascript as well as the            
+  license.md and the license image in the docs/img area
