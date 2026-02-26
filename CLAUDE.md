@@ -270,6 +270,10 @@ Callout positions are stored as percentage-based `(x, y)` coordinates in a `data
 file alongside the image, so the overlay scales with any display size. The same
 JavaScript component handles both Explore and Quiz modes via a mode-toggle button.
 
+**MicroSim file naming convention:** The interactive HTML file in every MicroSim folder
+must be named `main.html` — never `index.html`. This is consistent with all p5.js
+MicroSim standards used throughout this project. The MkDocs page file remains `index.md`.
+
 ---
 
 ## Learning Mascot: Gregor the Tree Frog

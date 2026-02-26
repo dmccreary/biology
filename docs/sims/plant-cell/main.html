@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant Cell — Interactive Diagram</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f8f9fa;
+      color: #1a1a1a;
+      padding: 8px;
+    }
+
+    /* ── Controls bar ───────────────────────────────────── */
+    #controls {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .mode-btn {
+      padding: 4px 16px;
+      border: 2px solid #bbb;
+      border-radius: 20px;
+      background: white;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.15s;
+    }
+    .mode-btn:hover   { border-color: #3a7a3a; color: #3a7a3a; }
+    .mode-btn.active  { background: #3a7a3a; color: white; border-color: #3a7a3a; }
+    .mode-btn:disabled { opacity: 0.4; cursor: default; }
+
+    #edit-badge {
+      background: #C45C2A;
+      color: white;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    #quiz-score {
+      margin-left: auto;
+      font-size: 13px;
+      color: #555;
+    }
+    #quiz-score strong { color: #1a1a1a; }
+
+    /* ── Main layout: image left, label list right ──────── */
+    #layout {
+      position: relative;
+      display: grid;
+      grid-template-columns: 65fr 35fr;
+      align-items: stretch;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    /* SVG leader-line overlay — spans the full #layout */
+    #leaders-svg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 5;
+      overflow: visible;
+    }
+
+    /* ── Left: diagram ──────────────────────────────────── */
+    #diagram-wrapper {
+      position: relative;
+      line-height: 0;
+    }
+
+    #diagram-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    #markers-layer {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .marker {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #3a7a3a;
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      pointer-events: all;
+      border: 2px solid white;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.35);
+      transition: transform 0.12s, background 0.12s;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: none;
+      z-index: 10;
+    }
+    .marker:hover,
+    .marker.active       { background: #1f5c1f; transform: translate(-50%,-50%) scale(1.25); }
+    .marker.quiz-unknown { background: #777; cursor: crosshair; }
+    .marker.correct      { background: #2A8040; transform: translate(-50%,-50%) scale(1.2); }
+    .marker.incorrect    { background: #C02020; animation: shake 0.35s ease; }
+    .marker.edit-mode    { background: #C45C2A; cursor: grab; }
+    .marker.edit-mode:active { cursor: grabbing; }
+
+    @keyframes shake {
+      0%,100% { transform: translate(-50%,-50%) translateX(0); }
+      25%      { transform: translate(-50%,-50%) translateX(-5px); }
+      75%      { transform: translate(-50%,-50%) translateX(5px); }
+    }
+
+    /* ── Right: label panel ─────────────────────────────── */
+    #label-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 6px 10px 6px 14px;
+      border-left: 1px solid #e8e8e8;
+      background: #fafafa;
+      z-index: 6; /* above SVG so labels are clickable */
+      position: relative;
+    }
+
+    .label-row {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 4px 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .label-row:hover  { background: #e8f4e8; }
+    .label-row.active { background: #d2ecd2; }
+    .label-row.correct-row { background: #c8ecd0; }
+
+    .label-num {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #3a7a3a;
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.15s;
+    }
+    .label-row.active   .label-num { background: #1f5c1f; }
+    .label-row.correct-row .label-num { background: #2A8040; }
+
+    .label-text {
+      font-size: 12px;
+      font-weight: 600;
+      color: #1a1a1a;
+      line-height: 1.2;
+      transition: color 0.15s;
+    }
+    /* Quiz mode: text is visually hidden but preserves layout */
+    .label-text.quiz-hidden {
+      color: transparent;
+      background: #ddd;
+      border-radius: 3px;
+      pointer-events: none;
+    }
+
+    /* ── Label reorder (edit mode) ──────────────────────── */
+    .drag-handle {
+      display: none;
+      align-items: center;
+      color: #bbb;
+      font-size: 15px;
+      line-height: 1;
+      padding-right: 2px;
+      cursor: grab;
+      flex-shrink: 0;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: none;
+    }
+    .drag-handle:active { cursor: grabbing; }
+    .label-row.reorder-enabled .drag-handle { display: flex; }
+    .label-row.dragging { opacity: 0.25; }
+
+    .reorder-indicator {
+      height: 2px;
+      background: #3a7a3a;
+      border-radius: 1px;
+      margin: 0 6px;
+      pointer-events: none;
+    }
+
+    /* ── Infobox ────────────────────────────────────────── */
+    #infobox {
+      margin-top: 8px;
+      min-height: 110px;
+      background: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      padding: 12px 16px;
+    }
+
+    #infobox-prompt {
+      color: #999;
+      font-style: italic;
+      font-size: 13px;
+      margin-top: 6px;
+    }
+
+    #infobox-content { display: none; }
+
+    #infobox-label {
+      font-size: 17px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 5px;
+    }
+    #infobox-label.correct-label { color: #2A8040; }
+    #infobox-label.prompt-label  { color: #3a7a3a; }
+
+    #infobox-desc {
+      font-size: 13px;
+      line-height: 1.55;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    #infobox-ap-tip {
+      display: none;
+      background: #FFF8E0;
+      border-left: 3px solid #F5A623;
+      padding: 6px 10px;
+      font-size: 12px;
+      line-height: 1.5;
+      border-radius: 0 4px 4px 0;
+    }
+    #infobox-ap-tip strong { color: #8B6000; }
+
+    #quiz-restart {
+      display: none;
+      margin-top: 8px;
+      padding: 5px 16px;
+      background: #3a7a3a;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    #quiz-restart:hover { background: #1f5c1f; }
+
+    /* ── Edit panel ─────────────────────────────────────── */
+    #edit-panel {
+      display: none;
+      margin-top: 8px;
+      background: #1e1e2e;
+      border-radius: 6px;
+      padding: 12px 14px;
+      color: #cdd6f4;
+    }
+    #edit-panel h3 {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #89b4fa;
+      margin-bottom: 8px;
+    }
+    #coord-display {
+      font-family: monospace;
+      font-size: 12px;
+      color: #a6e3a1;
+      min-height: 18px;
+      margin-bottom: 8px;
+    }
+    #json-output {
+      width: 100%;
+      height: 180px;
+      font-family: monospace;
+      font-size: 11px;
+      background: #11111b;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 6px;
+      resize: vertical;
+    }
+    #edit-actions { display: flex; align-items: center; gap: 10px; margin-top: 6px; }
+    #copy-json-btn {
+      padding: 5px 14px;
+      background: #89b4fa;
+      color: #1e1e2e;
+      border: none;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    #copy-json-btn:hover { background: #74c7ec; }
+    #copy-confirm { font-size: 12px; color: #a6e3a1; }
+  </style>
+</head>
+<body>
+
+<div id="controls">
+  <button class="mode-btn active" id="btn-explore" onclick="sim.setMode('explore')">Explore</button>
+  <button class="mode-btn"        id="btn-quiz"    onclick="sim.setMode('quiz')">Quiz</button>
+  <span id="quiz-score" style="display:none">
+    Score: <strong id="score-val">0</strong> / <strong id="score-total">0</strong>
+  </span>
+</div>
+
+<div id="layout">
+  <svg id="leaders-svg"></svg>
+
+  <div id="diagram-wrapper">
+    <img id="diagram-img" src="plant-cell.png" alt="Plant Cell Diagram" draggable="false">
+    <div id="markers-layer"></div>
+  </div>
+
+  <div id="label-panel">
+    <!-- label rows injected by diagram.js -->
+  </div>
+</div>
+
+<div id="infobox">
+  <div id="infobox-prompt">Hover over a numbered marker or a label to learn about that structure.</div>
+  <div id="infobox-content">
+    <div id="infobox-label"></div>
+    <div id="infobox-desc"></div>
+    <div id="infobox-ap-tip"></div>
+    <button id="quiz-restart" onclick="sim.restartQuiz()">Try Again</button>
+  </div>
+</div>
+
+<div id="edit-panel">
+  <h3>Edit Mode — drag markers to calibrate positions</h3>
+  <div id="coord-display">Drag a marker to see its live coordinates.</div>
+  <textarea id="json-output" readonly spellcheck="false"></textarea>
+  <div id="edit-actions">
+    <button id="copy-json-btn" onclick="sim.copyJSON()">Copy JSON</button>
+    <span id="copy-confirm"></span>
+  </div>
+</div>
+
+<script src="diagram.js"></script>
+</body>
+</html>
