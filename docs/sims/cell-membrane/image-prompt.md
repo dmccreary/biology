@@ -1,12 +1,14 @@
 # Image Generation Prompt — Cell Membrane (Fluid Mosaic Model)
 
-## Target
+## Technical
 
 **File:** `cell-membrane.png`
-**Size:** 1200 × 900 px, landscape orientation
+**Size:** 800 × 1200 px, portrait oriented image
 **Style:** Scientific textbook illustration, clean line art with rich flat color fills,
 white background, no gradients or drop shadows except subtle ones on proteins.
 
+A image of a cell membrane cross-section runs vertically (top to bottom), 
+with the extracellular space on the left and the intracellular space on the right.
 ---
 
 ## Critical constraint
@@ -33,10 +35,13 @@ Draw the two leaflets of the phospholipid bilayer explicitly:
   (`#F5A623`) — face upward toward the extracellular space. Fatty-acid tails —
   pale warm gray (`#D8C8A8`) — extend downward, interdigitating loosely with
   the inner leaflet tails.
+
 - **Inner leaflet (bottom row):** Same head color and tail color, mirrored.
   Heads face downward toward the intracellular space; tails extend upward.
+
 - The two layers of tails meet in the center of the bilayer, forming a
   hydrophobic core with no gap between them.
+
 - Show approximately 22–26 phospholipid molecules per leaflet across the image
   width so individual molecules are clearly distinguishable.
 
@@ -105,6 +110,7 @@ than the glycoprotein chains.
 
 - **Extracellular space (top):** Light sky-blue wash (`#E8F4FC`), very pale.
   Leave generous room (~25% of image height) above the membrane.
+  
 - **Intracellular space (bottom):** Very pale warm beige (`#F5F0E8`), slightly
   warmer than the extracellular tone. Leave generous room (~25% of image height)
   below the membrane.

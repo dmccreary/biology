@@ -199,6 +199,32 @@ body {
 .label-row.reorder-enabled .drag-handle { display: flex; }
 .label-row.dragging { opacity: 0.25; }
 
+/* Color swatch + hint — edit mode calibration aids */
+.label-row.reorder-enabled { flex-wrap: wrap; }
+
+.color-swatch {
+  display: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(0,0,0,0.25);
+  flex-shrink: 0;
+  margin-left: auto;
+}
+.label-row.reorder-enabled .color-swatch { display: block; }
+
+.label-hint {
+  display: none;
+  font-size: 10px;
+  color: #888;
+  font-style: italic;
+  line-height: 1.3;
+  flex: 0 0 100%;
+  padding-left: 34px; /* aligns under .label-text */
+  margin-top: 1px;
+}
+.label-row.reorder-enabled .label-hint { display: block; }
+
 .reorder-indicator {
   height: 2px;
   background: #3a7a3a;

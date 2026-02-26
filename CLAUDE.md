@@ -403,6 +403,27 @@ Field reference:
 - `showNumbers` — optional boolean (default `true`); set to `false` to display plain
   dots instead of numbered circles on both the image markers and the label panel.
   The quiz mode always shows `?` on unknown markers regardless of this setting.
+- `color` — optional hex color (e.g. `"#F5A623"`); shown as a filled color swatch
+  in edit mode next to the label row. Use the dominant color of the structure as it
+  appears in the generated image so the calibrator can quickly match label to structure.
+- `hint` — optional short string describing the visual appearance and location
+  (e.g. `"gold flat ring-shaped molecule tucked between phospholipid tails"`).
+  Shown as italic sub-text under the label row in edit mode, and appended to the
+  live coordinate readout while dragging. Always populate both `color` and `hint`
+  for any diagram where structures look visually similar or are hard to distinguish.
+
+#### Layout note for cross-section diagrams
+
+The side-panel style (labels right of image) works naturally when structures are
+distributed in 2D across the image (cell organelles, pathway nodes, etc.). It works
+poorly for **horizontal cross-sections** like the cell membrane, where structures are
+stacked vertically — the leader lines from the right panel become near-vertical and
+tangle badly.
+
+For horizontal cross-sections, generate the image with the cross-section running
+**top-to-bottom** (i.e. rotate the composition 90°) rather than left-to-right.
+A vertical membrane cross-section has structures at different x positions, so the
+horizontal bezier lines from the side panel connect cleanly without crossing.
 
 #### Step 4 — Calibrate callout positions in Edit mode
 

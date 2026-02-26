@@ -116,6 +116,24 @@ class DiagramSim {
       row.appendChild(handle);
       row.appendChild(num);
       row.appendChild(text);
+
+      // Color swatch — visible only in edit mode; helps identify the structure in the image
+      if (callout.color) {
+        const swatch = document.createElement('span');
+        swatch.className = 'color-swatch';
+        swatch.style.background = callout.color;
+        swatch.title = callout.color;
+        row.appendChild(swatch);
+      }
+
+      // Hint text — visible only in edit mode; describes where/what to look for
+      if (callout.hint) {
+        const hint = document.createElement('span');
+        hint.className = 'label-hint';
+        hint.textContent = callout.hint;
+        row.appendChild(hint);
+      }
+
       this.labelPanel.appendChild(row);
       this.labelRows.set(callout.id, row);
     }
@@ -688,8 +706,9 @@ class DiagramSim {
       markerEl.style.left = x + '%';
       markerEl.style.top  = y + '%';
 
+      const hintSuffix = callout.hint ? '  |  ' + callout.hint : '';
       document.getElementById('coord-display').textContent =
-        '"' + callout.label + '"  →  x: ' + x.toFixed(1) + ',  y: ' + y.toFixed(1);
+        '"' + callout.label + '"' + hintSuffix + '  →  x: ' + x.toFixed(1) + ',  y: ' + y.toFixed(1);
 
       // Redraw leaders live as the dot moves
       this.drawLeaders();
