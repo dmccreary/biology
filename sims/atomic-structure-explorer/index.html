@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for atomic structure explorer microsim.">
+        <meta name="description" content="Interactive Bohr atom diagram for the six biological elements (H, C, N, O, P, S) showing electron shells, valence electrons, and bonding capacity.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://dmccreary.github.io/biology/sims/atomic-structure-explorer/">
       
       
+        <link rel="prev" href="../animal-cell/">
+      
+      
+        <link rel="next" href="../cell-membrane/">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -22,7 +26,7 @@
     
     
       
-        <title>Atomic Structure Explorer MicroSim - AP Biology - An Interactive Course</title>
+        <title>Atomic Structure Explorer - AP Biology - An Interactive Course</title>
       
     
     
@@ -71,11 +75,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Atomic Structure Explorer MicroSim - AP Biology - An Interactive Course" >
+        <meta  property="og:title"  content="Atomic Structure Explorer - AP Biology - An Interactive Course" >
       
-        <meta  property="og:description"  content="Interactive p5.js MicroSim for atomic structure explorer microsim." >
+        <meta  property="og:description"  content="Interactive Bohr atom diagram for the six biological elements (H, C, N, O, P, S) showing electron shells, valence electrons, and bonding capacity." >
       
-        <meta property="og:image" content="https://dmccreary.github.io/biology/sims/atomic-structure-explorer/atomic-structure-explorer.png">
+        <meta property="og:image" content="https://dmccreary.github.io/biology/biology/sims/atomic-structure-explorer/atomic-structure-explorer.png">
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -87,11 +91,11 @@
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Atomic Structure Explorer MicroSim - AP Biology - An Interactive Course" >
+        <meta  name="twitter:title"  content="Atomic Structure Explorer - AP Biology - An Interactive Course" >
       
-        <meta  name="twitter:description"  content="Interactive p5.js MicroSim for atomic structure explorer microsim." >
+        <meta  name="twitter:description"  content="Interactive Bohr atom diagram for the six biological elements (H, C, N, O, P, S) showing electron shells, valence electrons, and bonding capacity." >
       
-        <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/atomic-structure-explorer/atomic-structure-explorer.png">
+        <meta name="twitter:image" content="https://dmccreary.github.io/biology/biology/sims/atomic-structure-explorer/atomic-structure-explorer.png">
       
     
     
@@ -112,7 +116,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#atomic-structure-explorer-microsim" class="md-skip">
+        <a href="#atomic-structure-explorer" class="md-skip">
           Skip to content
         </a>
       
@@ -147,7 +151,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Atomic Structure Explorer MicroSim
+              Atomic Structure Explorer
             
           </span>
         </div>
@@ -396,6 +400,8 @@
       
   
   
+    
+  
   
   
     
@@ -427,23 +433,26 @@
       
         
       
-    
-    
-    
-    
-      
         
+      
         
       
     
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
-  
-  
-  
-    <a href="../" class="md-nav__link">
-      
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -452,12 +461,481 @@
   </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            MicroSims
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../animal-cell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Animal Cell MicroSim
+    
+  </span>
   
 
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Atomic Structure Explorer
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Atomic Structure Explorer
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-this-microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      About This MicroSim
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Use
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson Plan
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lesson Plan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grade-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grade Level
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Duration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learning-objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assessment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iframe-embed-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iframe Embed Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cell-membrane/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cell Membrane — Fluid Mosaic Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chemical-bond-visualizer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chemical Bond Visualizer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chemical-equation-rendering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chemical Equation Rendering Pipeline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chi-square-calculator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chi-Square Test Calculator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chloroplast/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chloroplast & Light Reactions (Thylakoid Membrane)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dna-double-helix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DNA Double Helix Structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mitochondria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mitochondria & Electron Transport Chain
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../neuron-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Neuron Structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plant-cell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plant Cell Drawing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scientific-method/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scientific Method Workflow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../standard-deviation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Standard Deviation Visualization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -595,9 +1073,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
+  <a href="#key-concepts" class="md-nav__link">
     <span class="md-ellipsis">
-      Iframe Embed Code
+      Key Concepts
     </span>
   </a>
   
@@ -626,6 +1104,15 @@
   <a href="#duration" class="md-nav__link">
     <span class="md-ellipsis">
       Duration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learning-objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objective
     </span>
   </a>
   
@@ -664,6 +1151,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#iframe-embed-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iframe Embed Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       References
@@ -696,44 +1192,93 @@
   
 
 
-<h1 id="atomic-structure-explorer-microsim">Atomic Structure Explorer MicroSim</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<h1 id="atomic-structure-explorer">Atomic Structure Explorer</h1>
+<iframe src="main.html" height="540" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Atomic Structure Explorer MicroSim MicroSim Fullscreen</a>
-<br/>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">View Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim shows a Bohr model atom diagram for each of the six biologically
+essential elements — Hydrogen (H), Carbon (C), Nitrogen (N), Oxygen (O),
+Phosphorus (P), and Sulfur (S) — collectively remembered as <strong>CHONPS</strong>.</p>
+<p>Click any element button to see its electron shell configuration, atomic number,
+and mass number. Two optional toggles let you:</p>
+<ul>
+<li><strong>Highlight Valence</strong> — dims inner-shell electrons and adds a golden glow to
+  the outermost (valence) shell electrons, making it easy to count how many are
+  available for bonding.</li>
+<li><strong>Show Bonding Capacity</strong> — displays a badge showing how many covalent bonds
+  that element typically forms, directly from its valence electron count.</li>
+</ul>
+<p>The right panel shows the element's properties and a brief description of its
+biological role in living systems.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li>Click <strong>H</strong>, <strong>C</strong>, <strong>N</strong>, <strong>O</strong>, <strong>P</strong>, or <strong>S</strong> to select an element.</li>
+<li>Observe the concentric shell diagram and the properties in the right panel.</li>
+<li>Click <strong>Highlight Valence</strong> to isolate the valence shell electrons
+   (shown in gold).</li>
+<li>Click <strong>Show Bonding Capacity</strong> to see how many covalent bonds the element
+   forms.</li>
+<li>Compare multiple elements — for example, C (4 bonds) vs. O (2 bonds) vs.
+   H (1 bond) — to understand how valence electrons control molecular geometry.</li>
+</ol>
+<h2 id="key-concepts">Key Concepts</h2>
+<ul>
+<li><strong>Atomic number (Z)</strong>: the number of protons in the nucleus; uniquely identifies
+  the element.</li>
+<li><strong>Mass number (A)</strong>: protons + neutrons; shown above the nucleus.</li>
+<li><strong>Valence shell</strong>: the outermost electron shell; its electron count determines
+  bonding behavior.</li>
+<li><strong>Bonding capacity</strong>: the number of covalent bonds an atom forms to complete its
+  valence shell (C = 4, N = 3, O = 2, H = 1, P = 5, S = 2).</li>
+</ul>
+<h2 id="lesson-plan">Lesson Plan</h2>
+<h3 id="grade-level">Grade Level</h3>
+<p>AP Biology (grades 10–12)</p>
+<h3 id="duration">Duration</h3>
+<p>10–15 minutes</p>
+<h3 id="learning-objective">Learning Objective</h3>
+<p>Students will explain the relationship between an element's atomic number, electron
+shell configuration, valence electrons, and its typical bonding capacity in
+biological molecules.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>Basic familiarity with the periodic table</li>
+<li>Concept of protons, neutrons, and electrons</li>
+</ul>
+<h3 id="activities">Activities</h3>
+<ol>
+<li><strong>Explore</strong> (5 min): Click through all six elements. For each one, read the
+   biological role and note the number of valence electrons.</li>
+<li><strong>Predict</strong> (3 min): Before clicking "Show Bonding Capacity," predict how many
+   bonds each element forms based on the valence electron count. Check your
+   prediction.</li>
+<li><strong>Compare</strong> (5 min): Use "Highlight Valence" to compare Carbon (4 valence) with
+   Oxygen (6 valence). Ask: why does O form fewer bonds than C even though it has
+   more valence electrons?</li>
+</ol>
+<h3 id="assessment">Assessment</h3>
+<ul>
+<li>Which element has the highest bonding capacity? (Phosphorus — 5 bonds; this is
+  why it can form the branched phosphate groups in DNA and ATP.)</li>
+<li>How many hydrogen bonds can a single water molecule participate in? (Up to 4 —
+  two as H-bond donor from the O–H groups, two as acceptor from the lone pairs.)</li>
+</ul>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://dmccreary.github.io/biology/sims/atomic-structure-explorer/main.html&quot;</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">&quot;450px&quot;</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">&quot;560&quot;</span>
         <span class="na">width</span><span class="o">=</span><span class="s">&quot;100%&quot;</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">&quot;no&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
-<h2 id="lesson-plan">Lesson Plan</h2>
-<h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
-<h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
-<h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
-<h3 id="activities">Activities</h3>
-<ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
-</ol>
-<h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Atom">Atomic Structure — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Valence_electron">Valence electron — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/CHON">CHONPS — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Chemical_bond">Chemical bond — Wikipedia</a></li>
 </ol>
 
 
@@ -770,6 +1315,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../animal-cell/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Animal Cell MicroSim">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Animal Cell MicroSim
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../cell-membrane/" class="md-footer__link md-footer__link--next" aria-label="Next: Cell Membrane — Fluid Mosaic Model">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Cell Membrane — Fluid Mosaic Model
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
