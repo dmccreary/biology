@@ -1,0 +1,30 @@
+{
+  "title": "Chemical Equation Rendering Pipeline",
+  "description": "Interactive workflow diagram showing how markdown files are sequentially processed through arithmatex, Python-Markdown, MkDocs, and MathJax with mhchem to render chemical equations and mathematical notation",
+  "subject": "Biology, Technical Documentation, Web Development",
+  "creator": "Claude AI with Mermaid Generator Skill",
+  "date": "2026-02-25",
+  "type": "Interactive Workflow Diagram",
+  "format": "text/html",
+  "language": "en-US",
+  "coverage": "Advanced",
+  "rights": "CC BY-NC-SA 4.0",
+  "audience": "Textbook Authors, Educators, Developers",
+  "diagram_type": "flowchart",
+  "direction": "TD",
+  "node_count": "14",
+  "edge_count": "15",
+  "concepts": [
+    "MathJax rendering pipeline",
+    "pymdownx.arithmatex",
+    "mhchem chemical notation",
+    "Python-Markdown processing",
+    "MkDocs Material build",
+    "Dollar sign delimiters",
+    "Protected arithmatex spans",
+    "CDN script loading order",
+    "Backslash notation danger zone"
+  ],
+  "bloom_taxonomy": "Understand",
+  "version": "1.0"
+}

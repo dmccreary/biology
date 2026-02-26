@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Chemical Equation Rendering Pipeline</title>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: { useMaxWidth: true, htmlLabels: true, curve: 'basis' }
+        });
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { width: 100%; height: 100%; overflow: hidden; font-family: Arial, Helvetica, sans-serif; }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 1840px;
+        }
+        .diagram-panel {
+            position: relative;
+            width: 66.67%;
+            background-color: aliceblue;
+            padding: 8px;
+            overflow: visible;
+        }
+        .info-panel {
+            width: 33.33%;
+            background-color: #f8fafc;
+            border-left: 2px solid #cbd5e1;
+            padding: 10px;
+            overflow: visible;
+        }
+        .info-panel h3 {
+            font-size: 14px;
+            color: #1565c0;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #cbd5e1;
+            padding-bottom: 6px;
+        }
+        #panelWrap { position: relative; height: 1790px; }
+        #panel {
+            position: absolute;
+            left: 0; right: 0; top: 8px;
+            background-color: #fff;
+            color: #334155;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #1565c0;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        .legend {
+            margin-bottom: 12px;
+            font-size: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            padding: 8px 10px;
+            background: #fff;
+        }
+        .legend-title {
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: #475569;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 2px;
+            margin-right: 6px;
+            flex-shrink: 0;
+        }
+        .node { cursor: pointer; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="diagram-panel">
+        <div class="mermaid">
+flowchart TD
+    ClaudeMD["CLAUDE.md must specify<br/>dollar notation rule<br/>NEVER backslash notation"]:::claudeNode
+    Generator("chapter-content-generator<br/>skill reads CLAUDE.md<br/>and generates .md content"):::startNode
+    Safe["Dollar sign delimiters<br/>dollar and double-dollar notation"]:::authorNode
+    Arithmatex["pymdownx.arithmatex<br/>intercepts dollar delimiters<br/>BEFORE Python-Markdown"]:::extensionNode
+    Protected["Math wrapped in<br/>protected arithmatex spans"]:::protectedNode
+    PyMarkdown["Python-Markdown processes<br/>headings, links, lists<br/>Math content is safe"]:::processNode
+    MkDocs["MkDocs Material<br/>assembles HTML page"]:::buildNode
+    Browser["Browser loads page"]:::buildNode
+    Config["mathjax-config.js loads<br/>mhchem package declared<br/>delimiters configured"]:::configNode
+    CDN["MathJax tex-chtml.js<br/>loads from CDN"]:::configNode
+    Scan["MathJax scans DOM<br/>for protected spans"]:::mathNode
+    Mhchem["mhchem extension<br/>processes chemical notation<br/>subscripts, arrows, charges"]:::mathNode
+    Render("Equations and chemical<br/>symbols rendered"):::successNode
+
+    ClaudeMD --> Generator
+    Generator --> Safe
+    Safe --> Arithmatex
+    Arithmatex --> Protected
+    Protected --> PyMarkdown
+    PyMarkdown --> MkDocs
+    MkDocs --> Browser
+    Browser --> Config
+    Config --> CDN
+    CDN --> Scan
+    Scan --> Mhchem
+    Mhchem --> Render
+
+    classDef claudeNode fill:#e65100,stroke:#bf360c,stroke-width:3px,color:#fff,font-size:16px
+    classDef startNode fill:#2e7d32,stroke:#1b5e20,stroke-width:2px,color:#fff,font-size:16px
+    classDef authorNode fill:#43a047,stroke:#2e7d32,stroke-width:2px,color:#fff,font-size:16px
+    classDef extensionNode fill:#1565c0,stroke:#0d47a1,stroke-width:2px,color:#fff,font-size:16px
+    classDef protectedNode fill:#1976d2,stroke:#1565c0,stroke-width:2px,color:#fff,font-size:16px
+    classDef processNode fill:#546e7a,stroke:#37474f,stroke-width:2px,color:#fff,font-size:16px
+    classDef buildNode fill:#6a1b9a,stroke:#4a148c,stroke-width:2px,color:#fff,font-size:16px
+    classDef configNode fill:#00695c,stroke:#004d40,stroke-width:2px,color:#fff,font-size:16px
+    classDef mathNode fill:#00838f,stroke:#006064,stroke-width:2px,color:#fff,font-size:16px
+    classDef successNode fill:#2e7d32,stroke:#1b5e20,stroke-width:3px,color:#fff,font-size:16px
+
+    linkStyle default stroke:#94a3b8,stroke-width:2px,font-size:14px
+        </div>
+    </div>
+
+    <div class="info-panel">
+        <div class="legend">
+            <div class="legend-title">Color Key</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#e65100"></div>CLAUDE.md prerequisite</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#2e7d32"></div>Content generator / success</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#43a047"></div>Authoring</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#1565c0"></div>Python extension layer</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#546e7a"></div>Markdown / build layer</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#6a1b9a"></div>MkDocs / browser layer</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#00695c"></div>MathJax configuration</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#00838f"></div>MathJax rendering</div>
+        </div>
+        <h3>Pipeline Step Details</h3>
+        <div id="panelWrap">
+            <div id="panel">Hover over any node to see a detailed explanation of that step in the rendering pipeline.</div>
+        </div>
+    </div>
+</div>
+
+<script>
+const nodeInfo = {
+    'ClaudeMD': 'CLAUDE.md is the project rulebook read by the chapter-content-generator skill before writing any content. It MUST contain the dollar notation rule: always write $...$ for inline math, $$...$$ for block math, and $\\ce{...}$ for chemistry. It must explicitly state that backslash notation (\\(...\\) and \\[...\\]) is NEVER written directly in .md files. Without this rule, an AI content generator will default to backslash notation, which breaks the rendering pipeline.',
+    'Generator': 'The chapter-content-generator skill reads CLAUDE.md before generating chapter content. Because CLAUDE.md specifies the dollar notation rule, all generated equations and chemical formulas use $...$ and $\\ce{...}$ consistently. This is the entry point of the live rendering pipeline — the generated .md files flow through arithmatex, Python-Markdown, MkDocs, and MathJax automatically.',
+    'Safe': 'Use $...$ for inline equations and $$...$$ for block equations. For chemistry, use $\\ce{...}$. These delimiters have zero overlap with Markdown link syntax []() — the dollar sign is not a Markdown special character.',
+    'Arithmatex': 'The pymdownx.arithmatex extension (configured with generic: true in mkdocs.yml) intercepts $ and $$ delimiters BEFORE Python-Markdown processes the document body. This is the protective shield that makes dollar-sign delimiters safe.',
+    'Protected': 'Math content is wrapped in <span class="arithmatex"> or <div class="arithmatex"> tags and converted to \\(...\\) and \\[...\\] form internally. The content is now invisible to Markdown link parsing — it cannot be mistaken for []() links.',
+    'PyMarkdown': 'Python-Markdown now processes the rest of the document: headings, bold/italic, links, lists, tables, admonitions. The math content inside arithmatex spans is completely protected from any interference.',
+    'MkDocs': 'MkDocs Material assembles the complete HTML page: inserting custom CSS (extra.css, mascot.css), JavaScript files (extra.js, mathjax-config.js), and the MathJax CDN script tag from the extra_javascript list in mkdocs.yml.',
+    'Browser': 'The browser loads the rendered HTML page. Equations exist as protected \\(...\\) spans in the DOM — visible in source but not yet typeset. The reader sees placeholder text until MathJax finishes loading.',
+    'Config': 'mathjax-config.js loads first (it is listed before the CDN script in mkdocs.yml). It declares: (1) load the mhchem package for \\ce{} chemistry support, (2) set \\(...\\) as the inline delimiter, (3) set \\[...\\] as the block delimiter.',
+    'CDN': 'The full MathJax tex-chtml.js bundle loads from the unpkg CDN. The FULL bundle is required — not a slim version — because mhchem is not included in the default MathJax bundle and must be dynamically loaded.',
+    'Scan': 'MathJax scans the DOM for elements matching its configured delimiters \\(...\\) and \\[...\\). It finds all the arithmatex-protected spans and queues them for typesetting. This is why $ delimiters in the source end up working correctly.',
+    'Mhchem': 'When MathJax encounters \\ce{...} inside a math block, the mhchem extension takes over. It parses chemical notation: auto-subscripts (H2O → H₂O), arrows (-> → →), equilibrium (⇌), ion charges (H⁺, OH⁻), and complex conditions above arrows.',
+    'Render': 'MathJax replaces each protected span with beautifully typeset mathematics and chemistry. The reader sees rendered equations like the Hardy-Weinberg equation, photosynthesis reaction, or ATP hydrolysis — all from simple $ delimiters in the source.'
+};
+
+const panel = document.getElementById('panel');
+const panelWrap = document.getElementById('panelWrap');
+
+function positionPanel(evt) {
+    const r = panelWrap.getBoundingClientRect();
+    const panelH = panel.offsetHeight || 120;
+    const wrapH = panelWrap.offsetHeight;
+    const y = evt.clientY - r.top - 20;
+    const top = Math.max(8, Math.min(wrapH - panelH - 180, y));
+    panel.style.top = `${top}px`;
+}
+
+function setupNodeHover() {
+    const nodes = document.querySelectorAll('.node');
+    nodes.forEach(node => {
+        const nodeId = node.id.replace('flowchart-', '').split('-')[0];
+        if (nodeInfo[nodeId]) {
+            node.addEventListener('mouseenter', (e) => {
+                panel.textContent = nodeInfo[nodeId];
+                positionPanel(e);
+            });
+            node.addEventListener('mousemove', (e) => { positionPanel(e); });
+            node.addEventListener('mouseleave', () => {
+                panel.textContent = 'Hover over any node to see a detailed explanation of that step in the rendering pipeline.';
+            });
+        }
+    });
+}
+
+function waitForMermaid() {
+    const mermaidDiv = document.querySelector('.mermaid');
+    const svg = mermaidDiv ? mermaidDiv.querySelector('svg') : null;
+    if (svg && document.querySelectorAll('.node').length > 0) {
+        setupNodeHover();
+    } else {
+        setTimeout(waitForMermaid, 100);
+    }
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => setTimeout(waitForMermaid, 100));
+} else {
+    setTimeout(waitForMermaid, 100);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+{
+  "title": "Plant Cell",
+  "orientation": "landscape",
+  "image": "plant-cell.png",
+  "callouts": [
+    {
+      "id": 1,
+      "label": "Cell Wall",
+      "x": 79,
+      "y": 11.3,
+      "radius": 3.5,
+      "description": "The thick, rigid outermost layer surrounding the plant cell, composed primarily of cellulose microfibrils. It provides structural support, prevents over-expansion, and maintains cell shape. Unlike the cell membrane, the cell wall is fully permeable.",
+      "ap_tip": "The cell wall is unique to plant cells (and fungi, bacteria) — animal cells do NOT have one. On the AP exam, turgor pressure against the cell wall is the mechanism that keeps plants upright."
+    },
+    {
+      "id": 2,
+      "label": "Cell Membrane",
+      "x": 88.1,
+      "y": 21.6,
+      "radius": 3.5,
+      "description": "The selectively permeable phospholipid bilayer that lies just inside the cell wall. It regulates the movement of substances into and out of the cell, maintains concentration gradients, and contains receptor and transport proteins.",
+      "ap_tip": "Both plant and animal cells have a cell membrane. The cell membrane (not cell wall) is responsible for selective permeability. Plasmolysis occurs when plant cells lose water and the membrane pulls away from the wall."
+    },
+    {
+      "id": 3,
+      "label": "Mitochondrion",
+      "x": 79,
+      "y": 25.9,
+      "radius": 4,
+      "description": "The double-membrane organelle responsible for cellular respiration. The outer membrane is smooth; the inner membrane is folded into cristae that greatly increase surface area for ATP synthesis. The matrix (inside the inner membrane) is where the Krebs cycle runs.",
+      "ap_tip": "Mitochondria are present in both plant AND animal cells — plants need ATP for processes other than photosynthesis. Mitochondria have their own circular DNA, supporting the endosymbiotic theory."
+    },
+    {
+      "id": 4,
+      "label": "Nucleus",
+      "x": 62.6,
+      "y": 28.1,
+      "radius": 5,
+      "description": "The large, membrane-bound organelle containing the cell's DNA organized into chromosomes. The nuclear envelope is a double membrane with pores that control RNA and protein traffic. The dark nucleolus inside produces ribosomal RNA.",
+      "ap_tip": "The nucleus is present in all eukaryotic cells. In plant cells it is often pushed to one side by the large central vacuole. The nuclear envelope is continuous with the rough ER — a key endomembrane system connection."
+    },
+    {
+      "id": 5,
+      "label": "Chloroplast",
+      "x": 34.3,
+      "y": 21.3,
+      "radius": 4.5,
+      "description": "The double-membrane organelle where photosynthesis occurs. The outer and inner membranes enclose the stroma (fluid containing the Calvin cycle enzymes). Inside are stacks of thylakoid membranes (grana) where the light reactions run.",
+      "ap_tip": "Like mitochondria, chloroplasts have their own circular DNA and ribosomes — evidence for the endosymbiotic theory. Light reactions occur in the thylakoid membranes; the Calvin cycle occurs in the stroma."
+    },
+    {
+      "id": 6,
+      "label": "Central Vacuole",
+      "x": 31.7,
+      "y": 51.2,
+      "radius": 6,
+      "description": "A large, single membrane-bound sac (bounded by the tonoplast) that can occupy up to 90% of a mature plant cell's volume. It stores water, maintains turgor pressure, holds pigments and waste products, and digests cellular debris.",
+      "ap_tip": "Turgor pressure (water pushing outward on the cell wall) keeps plants rigid. When the central vacuole loses water, the plant wilts — this is plasmolysis. The tonoplast is the vacuole's membrane."
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "title": "Neuron Structure",
+  "orientation": "landscape",
+  "image": "neuron-structure.png",
+  "callouts": [
+    {
+      "id": 1,
+      "label": "Dendrites",
+      "x": 24.1,
+      "y": 27,
+      "radius": 4,
+      "color": "#80DEEA",
+      "hint": "multiple branching tree-like processes extending outward from the soma on the left side, tapering toward their tips",
+      "description": "Dendrites are the primary input zones of a neuron. They receive neurotransmitter signals from other neurons at synapses and convert those signals into local graded potentials (EPSPs or IPSPs) that travel toward the soma. A single neuron may have thousands of dendritic spines — tiny protrusions that increase synaptic surface area and are sites of synaptic plasticity (long-term potentiation, LTP).",
+      "ap_tip": "Dendrites carry signals TOWARD the soma (afferent to the soma). Remember: dendrites receive, axons transmit. Dendritic branching increases computational power — the same soma can integrate excitatory and inhibitory signals simultaneously from hundreds of presynaptic neurons."
+    },
+    {
+      "id": 2,
+      "label": "Cell body (soma)",
+      "x": 28.8,
+      "y": 39.1,
+      "radius": 5,
+      "color": "#F8BBD0",
+      "hint": "large round or oval pale pink cell body in the left-center of the image, the bulkiest part of the neuron",
+      "description": "The cell body (soma) is the metabolic center of the neuron. It contains the nucleus and most of the organelles — rough ER (Nissl bodies), Golgi apparatus, and mitochondria — that sustain the cell's high energy demands. All proteins used throughout the axon and dendrites are synthesized here and transported to their destinations.",
+      "ap_tip": "The soma integrates incoming signals from dendrites and decides whether to fire an action potential. It is NOT the site of signal initiation — that is the axon hillock. Know that neurons are post-mitotic (cannot divide) and are replaced in only a few brain regions."
+    },
+    {
+      "id": 3,
+      "label": "Nucleus",
+      "x": 27.1,
+      "y": 43.9,
+      "radius": 4,
+      "color": "#CE93D8",
+      "hint": "large purple-violet round nucleus inside the soma, often with a prominent dark nucleolus visible at its center",
+      "description": "The nucleus of the neuron houses the cell's DNA and directs transcription of genes encoding ion channels, receptors, neurotransmitter-synthesizing enzymes, and structural proteins. The prominent nucleolus reflects the neuron's high demand for ribosome production to maintain protein synthesis across an enormous cell volume (some motor neuron axons extend over 1 meter).",
+      "ap_tip": "Neuronal nuclei are a good example of how gene expression differs by cell type — neurons express highly specific sets of ion channels and signaling proteins not found in other cells. On the AP exam, the nucleus in any cell is the site of transcription (DNA → mRNA); translation occurs at ribosomes in the cytoplasm or rough ER."
+    },
+    {
+      "id": 4,
+      "label": "Axon hillock",
+      "x": 34,
+      "y": 47.8,
+      "radius": 3.5,
+      "color": "#FF8A65",
+      "hint": "cone-shaped narrowing where the soma transitions into the axon, slightly brighter or more distinct in color from both the soma and the axon",
+      "description": "The axon hillock is the cone-shaped region where the soma merges into the axon. It has the highest density of voltage-gated Na⁺ channels of any part of the neuron, making it the site with the lowest threshold for action potential generation. All graded potentials from dendrites and the soma are summed here (spatial and temporal summation), and if the net depolarization reaches threshold (typically −55 mV), an action potential fires.",
+      "ap_tip": "The axon hillock is the 'decision point' of the neuron — where summation determines whether an action potential is triggered. This is a favorite AP Biology question topic. Know that: (1) graded potentials from dendrites sum at the hillock; (2) threshold at the hillock is lower than elsewhere due to high Na⁺ channel density; (3) if threshold is NOT reached, no action potential fires (all-or-nothing law)."
+    },
+    {
+      "id": 5,
+      "label": "Axon terminals (boutons)",
+      "x": 89.9,
+      "y": 36.1,
+      "radius": 4,
+      "color": "#80CBC4",
+      "hint": "rounded knob-shaped enlargements at the far right end of the axon, branching into several terminal boutons clustered near the postsynaptic cell",
+      "description": "Axon terminals (terminal boutons or synaptic knobs) are the swollen tips of axon branches that form the presynaptic component of the synapse. They contain many synaptic vesicles filled with neurotransmitter, abundant mitochondria to supply ATP for vesicle cycling, and voltage-gated Ca²⁺ channels. When an action potential arrives, the membrane depolarization opens Ca²⁺ channels, and Ca²⁺ influx triggers neurotransmitter exocytosis.",
+      "ap_tip": "Axon terminals are the presynaptic side of the synapse. The sequence of events for neurotransmitter release: (1) action potential arrives → (2) voltage-gated Ca²⁺ channels open → (3) Ca²⁺ enters terminal → (4) synaptic vesicles fuse with membrane (SNARE proteins) → (5) neurotransmitter released into synaptic cleft. This is a classic AP Biology process to know step by step."
+    },
+    {
+      "id": 6,
+      "label": "Synaptic vesicles",
+      "x": 85.2,
+      "y": 40.5,
+      "radius": 3,
+      "color": "#B39DDB",
+      "hint": "small round pale-purple or lavender vesicles densely packed inside the axon terminal near the presynaptic membrane",
+      "description": "Synaptic vesicles are small (~40–50 nm diameter) membrane-bound organelles packed with neurotransmitter molecules (e.g., acetylcholine, glutamate, GABA, dopamine). They are clustered near the active zone of the presynaptic membrane. Upon Ca²⁺ influx, SNARE proteins (synaptobrevin on the vesicle; syntaxin + SNAP-25 on the plasma membrane) mediate fusion of the vesicle with the membrane and release of neurotransmitter by exocytosis.",
+      "ap_tip": "Synaptic vesicles are produced in the soma and transported down the axon via fast anterograde axonal transport along microtubule tracks (kinesin motor proteins). After exocytosis, vesicle membrane is recycled locally by endocytosis. Know that synaptic vesicles are the direct source of neurotransmitter at the synapse — they are not free neurotransmitter floating in the cytoplasm."
+    },
+    {
+      "id": 7,
+      "label": "Synaptic cleft",
+      "x": 79.9,
+      "y": 46.9,
+      "radius": 3,
+      "color": "#90CAF9",
+      "hint": "narrow pale blue gap between the presynaptic terminal membrane and the postsynaptic cell membrane, typically 20–40 nm wide",
+      "description": "The synaptic cleft is the ~20–40 nm extracellular gap between the presynaptic axon terminal and the postsynaptic membrane. Neurotransmitter molecules diffuse across this gap after release. The cleft contains adhesion proteins (neuroligins, neurexins) that hold the synapse together and extracellular enzymes that degrade or recapture neurotransmitters (e.g., acetylcholinesterase breaks down acetylcholine; dopamine transporter reuptakes dopamine).",
+      "ap_tip": "The synaptic cleft is where neurotransmitter diffuses from pre- to postsynaptic cell. The cleft is extremely narrow (~20 nm) compared with the wavelength of light — it cannot be seen with a light microscope, only with an electron microscope. Many drugs act at this step: SSRIs block serotonin reuptake; organophosphates inhibit acetylcholinesterase."
+    },
+    {
+      "id": 8,
+      "label": "Receptor proteins",
+      "x": 83.5,
+      "y": 54.1,
+      "radius": 3,
+      "color": "#F48FB1",
+      "hint": "pink or magenta protein complexes embedded in the postsynaptic membrane, shown as Y-shaped or cylindrical transmembrane proteins facing the synaptic cleft",
+      "description": "Neurotransmitter receptors are integral membrane proteins in the postsynaptic membrane that bind specific neurotransmitters with high affinity and trigger a cellular response. Ionotropic receptors (e.g., AMPA, NMDA, nicotinic ACh receptors) are ligand-gated ion channels — neurotransmitter binding opens the channel directly. Metabotropic receptors (e.g., GABA-B, muscarinic ACh receptors) are G-protein-coupled receptors (GPCRs) that trigger intracellular signaling cascades, producing slower but more diverse and amplified responses.",
+      "ap_tip": "Receptor specificity is fundamental to synaptic signaling — only the correct neurotransmitter fits a given receptor (lock-and-key analogy, similar to enzyme-substrate specificity). This is directly analogous to ligand-receptor binding in cell communication (AP Unit 4). Drugs often work by mimicking neurotransmitters (agonists) or blocking receptors (antagonists): e.g., opioids act as agonists at opioid receptors; naloxone blocks them."
+    },
+    {
+      "id": 9,
+      "label": "Postsynaptic membrane",
+      "x": 84.4,
+      "y": 60.6,
+      "radius": 3.5,
+      "color": "#66BB6A",
+      "hint": "dark green membrane of the target cell (muscle fiber or next neuron) directly opposite the axon terminal, thickened at the postsynaptic density where receptors cluster",
+      "description": "The postsynaptic membrane is the region of the target cell membrane that faces the synaptic cleft and contains a high density of neurotransmitter receptors. It is thickened by the postsynaptic density (PSD), a protein scaffold that anchors receptors and signal transduction proteins. When neurotransmitter binds receptors here, it either opens ion channels (ionotropic receptors, fast signaling) or activates G-protein cascades (metabotropic receptors, slow/modulatory signaling).",
+      "ap_tip": "The postsynaptic membrane can belong to a dendrite, soma, or muscle cell (neuromuscular junction). Distinguish ionotropic (ligand-gated ion channels — fast, direct) from metabotropic receptors (G-protein coupled — slow, amplified). The AP exam may ask about the neuromuscular junction specifically: acetylcholine binds nicotinic receptors (ionotropic), opening Na⁺ channels and depolarizing the motor end plate."
+    },
+    {
+      "id": 10,
+      "label": "Node of Ranvier",
+      "x": 63.1,
+      "y": 53.4,
+      "radius": 3,
+      "color": "#EF9A9A",
+      "hint": "narrow dark gap or pinch point in the myelin sheath where the axon is briefly exposed, with distinct constriction between two myelin segments",
+      "description": "Nodes of Ranvier are the short (~1–2 µm) gaps between adjacent myelin segments where the axon membrane is exposed to the extracellular fluid. They are densely packed with voltage-gated Na⁺ and K⁺ channels. During saltatory conduction, the action potential is regenerated only at each node — current flows through the axoplasm from node to node under the insulating myelin, skipping the internodal regions and dramatically speeding conduction.",
+      "ap_tip": "Saltatory conduction (from Latin 'saltare' = to jump) is the mechanism by which action potentials travel fast in myelinated axons. The AP exam frequently asks: why is myelinated conduction faster and more energy-efficient? Answer: ions only move at nodes, so less Na⁺ enters and less Na⁺/K⁺-ATPase activity is needed to restore the resting potential."
+    },
+    {
+      "id": 11,
+      "label": "Schwann cell",
+      "x": 60.4,
+      "y": 57,
+      "radius": 4,
+      "color": "#A5D6A7",
+      "hint": "pale green elliptical glial cell body visible at the edge of a myelin segment, with its nucleus slightly indented and its membrane wrapping spirally around the axon",
+      "description": "Schwann cells are glial cells of the peripheral nervous system (PNS) that produce myelin by spirally wrapping their plasma membrane around a single axon segment. Each Schwann cell myelinates one internode segment. Unlike oligodendrocytes (CNS), Schwann cells also support nerve regeneration after injury by secreting neurotrophic factors and forming a physical channel (Büngner bands) that guides regrowth of the axon.",
+      "ap_tip": "Know the CNS vs. PNS distinction for myelinating cells: Schwann cells (PNS) vs. oligodendrocytes (CNS). One oligodendrocyte can myelinate up to 50 axon segments; one Schwann cell myelinates only one. PNS nerves can regenerate (due to Schwann cells); CNS axons generally cannot — a key difference relevant to spinal cord injuries."
+    },
+    {
+      "id": 12,
+      "label": "Myelin sheath",
+      "x": 55,
+      "y": 54.8,
+      "radius": 4,
+      "color": "#F5F5DC",
+      "hint": "thick pale cream or white segmented wrapping around the axon, present in regular intervals between the darker nodes of Ranvier",
+      "description": "The myelin sheath is a multilayered wrapping of Schwann cell (PNS) or oligodendrocyte (CNS) plasma membrane spiraled around the axon up to 100 times. This electrical insulation forces ion current to jump between nodes of Ranvier (saltatory conduction), which increases conduction velocity up to 100× compared with unmyelinated fibers and dramatically reduces ATP expenditure per action potential. Myelin is ~70–80% lipid (mainly galactocerebroside and sphingomyelin).",
+      "ap_tip": "Myelin increases the speed and efficiency of action potential conduction. Demyelinating diseases (multiple sclerosis, Guillain-Barré syndrome) disrupt saltatory conduction, causing slowed or blocked nerve signals. This is an important application of membrane structure for the AP exam — myelin's high lipid content makes it an excellent electrical insulator."
+    },
+    {
+      "id": 13,
+      "label": "Axon",
+      "x": 39.1,
+      "y": 49.9,
+      "radius": 4,
+      "color": "#FFF176",
+      "hint": "long, slender, uniform-width yellow-white process extending horizontally from the axon hillock to the right, running the full length of the diagram",
+      "description": "The axon is the neuron's output cable. It conducts action potentials — self-regenerating electrical signals — from the axon hillock to the axon terminals without decrement (the signal does not weaken with distance). Axons can vary from <1 mm (interneurons) to >1 m (motor neurons to the foot). The axon cytoplasm (axoplasm) contains microtubules that serve as tracks for axonal transport of vesicles, proteins, and organelles to and from the terminals.",
+      "ap_tip": "The axon conducts action potentials away from the soma (efferent). In myelinated axons, the action potential 'jumps' between nodes of Ranvier (saltatory conduction), greatly increasing speed while reducing energy cost. Compare with unmyelinated axons, where conduction is slower and continuous."
+    }
+  ]
+}

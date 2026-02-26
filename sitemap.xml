@@ -2,66 +2,254 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://dmccreary.github.io/biology/</loc>
-         <lastmod>2026-02-25</lastmod>
+         <lastmod>2026-02-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/biology/course-description/</loc>
-         <lastmod>2026-02-25</lastmod>
+         <lastmod>2026-02-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/biology/license/</loc>
-         <lastmod>2026-02-25</lastmod>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/chapters/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/chapters/01-scientific-foundations-and-chemistry/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/chapters/02-water-ph-and-organic-chemistry/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/chapters/03-biological-macromolecules/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/chapters/04-cell-organization-and-organelles/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/chapters/05-cell-membranes-and-transport/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/chapters/06-thermodynamics-and-enzymes/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/chapters/07-photosynthesis/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/chapters/08-cellular-respiration/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/chapters/09-cell-signaling-and-feedback/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/chapters/10-cell-cycle-mitosis-and-cancer/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/chapters/11-meiosis-and-mendelian-genetics/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/chapters/12-non-mendelian-and-chromosomal-genetics/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/chapters/13-central-dogma-replication-and-protein-synthesis/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/chapters/14-mutations-gene-regulation-and-biotechnology/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/chapters/15-evidence-for-evolution/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/chapters/16-population-genetics-and-hardy-weinberg/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/chapters/17-speciation-phylogenetics-and-macroevolution/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/chapters/18-population-ecology-and-life-history/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/chapters/19-community-ecology-and-species-interactions/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/chapters/20-ecosystem-ecology-and-conservation/</loc>
+         <lastmod>2026-02-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/biology/img/mascot/image-prompts/</loc>
-         <lastmod>2026-02-25</lastmod>
+         <lastmod>2026-02-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/biology/learning-graph/</loc>
-         <lastmod>2026-02-25</lastmod>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/learning-graph/chemical-equation-tests/</loc>
+         <lastmod>2026-02-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/biology/learning-graph/concept-list/</loc>
-         <lastmod>2026-02-25</lastmod>
+         <lastmod>2026-02-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/biology/learning-graph/concept-taxonomy/</loc>
-         <lastmod>2026-02-25</lastmod>
+         <lastmod>2026-02-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/biology/learning-graph/course-description-assessment/</loc>
-         <lastmod>2026-02-25</lastmod>
+         <lastmod>2026-02-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/biology/learning-graph/index-template/</loc>
-         <lastmod>2026-02-25</lastmod>
+         <lastmod>2026-02-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/biology/learning-graph/mascot-style-guide/</loc>
-         <lastmod>2026-02-25</lastmod>
+         <lastmod>2026-02-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/biology/learning-graph/mascot-test/</loc>
-         <lastmod>2026-02-25</lastmod>
+         <lastmod>2026-02-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/biology/learning-graph/quality-metrics/</loc>
-         <lastmod>2026-02-25</lastmod>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/learning-graph/sample-biology-diagrams/</loc>
+         <lastmod>2026-02-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/biology/learning-graph/taxonomy-distribution/</loc>
-         <lastmod>2026-02-25</lastmod>
+         <lastmod>2026-02-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/biology/prompts/01-seed-prompt/</loc>
-         <lastmod>2026-02-25</lastmod>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/prompts/04-biology-diagrams/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/prompts/05-mitosis-diagram-prompt/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/prompts/06-chapter-content-generation/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/prompts/08-standard-deviation-prompt/</loc>
+         <lastmod>2026-02-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/biology/prompts/cover/</loc>
-         <lastmod>2026-02-25</lastmod>
+         <lastmod>2026-02-26</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/biology/prompts/mascot-tuning/</loc>
-         <lastmod>2026-02-25</lastmod>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/sims/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/sims/animal-cell/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/sims/animal-cell/image-prompt/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/sims/atomic-structure-explorer/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/sims/cell-membrane/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/sims/cell-membrane/image-prompt/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/sims/chemical-equation-rendering/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/sims/chi-square-calculator/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/sims/chloroplast/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/sims/chloroplast/image-prompt/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/sims/diagram-architecture/plan/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/sims/dna-double-helix/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/sims/dna-double-helix/image-prompt/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/sims/mitochondria/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/sims/mitochondria/image-prompt/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/sims/neuron-structure/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/sims/neuron-structure/image-prompt/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/sims/plant-cell/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/sims/scientific-method/</loc>
+         <lastmod>2026-02-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/sims/standard-deviation/</loc>
+         <lastmod>2026-02-26</lastmod>
     </url>
 </urlset>

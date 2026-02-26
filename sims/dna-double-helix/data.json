@@ -1,0 +1,151 @@
+{
+  "title": "DNA Double Helix Structure",
+  "orientation": "portrait",
+  "image": "dna-double-helix.png",
+  "callouts": [
+    {
+      "id": 1,
+      "label": "Deoxyribose Sugar",
+      "x": 67.4,
+      "y": 14.8,
+      "radius": 3.5,
+      "color": "#DEB887",
+      "hint": "tan pentagon shape attached to the blue backbone ribbon",
+      "description": "A 5-carbon (pentose) sugar that forms the structural core of each nucleotide. Deoxyribose lacks the hydroxyl (-OH) group at the 2′ carbon that ribose (in RNA) has, making it 'deoxy.' The sugar connects to a phosphate group (at the 3′ or 5′ carbon) and to a nitrogenous base (at the 1′ carbon).",
+      "ap_tip": "The 'deoxy' in deoxyribose is what distinguishes DNA from RNA. RNA has ribose (with a 2′-OH), making RNA less stable than DNA. On the AP exam, this structural difference explains why DNA stores genetic information long-term while RNA is more transient."
+    },
+    {
+      "id": 2,
+      "label": "Phosphate Group",
+      "x": 70.8,
+      "y": 18.9,
+      "radius": 3,
+      "color": "#7DB84A",
+      "hint": "small bright lime-green circular node on the backbone, between two tan pentagons",
+      "description": "A phosphate ion (PO₄³⁻) that connects adjacent deoxyribose sugars via phosphodiester bonds. Phosphate groups carry a negative charge at cellular pH, making the entire DNA backbone negatively charged. This charge is one reason histones (positively charged proteins) bind DNA so effectively.",
+      "ap_tip": "Phosphodiester bonds form the covalent linkage between nucleotides (sugar-phosphate-sugar). These bonds are broken by restriction enzymes or ligated by DNA ligase. The negative charge of phosphates is why gel electrophoresis works: DNA migrates toward the positive pole."
+    },
+    {
+      "id": 3,
+      "label": "Nitrogenous Base",
+      "x": 53,
+      "y": 25.5,
+      "radius": 3.5,
+      "color": "#888888",
+      "hint": "one of the colored horizontal rung blocks projecting from the backbone toward the helix center",
+      "description": "A nitrogen-containing ring compound that projects inward from the deoxyribose sugar toward the center of the helix. Nitrogenous bases stack on top of each other along the helix axis (base stacking), contributing to DNA stability. There are two types: purines (Adenine, Guanine — two fused rings) and pyrimidines (Thymine, Cytosine — one ring).",
+      "ap_tip": "Base stacking — the hydrophobic interaction between stacked bases — contributes as much to DNA stability as hydrogen bonding does. The AP exam distinguishes purines (A, G; double rings, larger) from pyrimidines (T, C; single rings, smaller). A purine always pairs with a pyrimidine, keeping the helix width constant."
+    },
+    {
+      "id": 4,
+      "label": "Sugar-Phosphate Backbone",
+      "x": 72,
+      "y": 26.9,
+      "radius": 4,
+      "color": "#4A90D9",
+      "hint": "blue sinuous ribbon running along the left side of the helix",
+      "description": "The outer structural rails of the DNA molecule — an alternating chain of deoxyribose sugars and phosphate groups that runs the full length of each strand. The two antiparallel backbones spiral around each other, forming the 'sides' of the twisted ladder. The backbone is hydrophilic (water-compatible) and faces outward toward the cell's aqueous environment.",
+      "ap_tip": "The backbone gives DNA its negative charge (from the phosphate groups) and its structural stability. Histones wrap around the backbone. Know that the backbone runs in antiparallel directions: one strand runs 5′→3′ top to bottom while its partner runs 3′→5′ top to bottom."
+    },
+    {
+      "id": 5,
+      "label": "Adenine (A)",
+      "x": 45.1,
+      "y": 29.3,
+      "radius": 3.5,
+      "color": "#1ABC9C",
+      "hint": "teal/turquoise horizontal block extending from the left backbone inward; paired with amber Thymine",
+      "description": "A purine nitrogenous base with a double-ring structure. Adenine forms 2 hydrogen bonds with its complementary base Thymine (A=T). It is found in both DNA and RNA (in RNA it pairs with Uracil instead of Thymine). Adenine is also the central ring of ATP, the cell's primary energy currency.",
+      "ap_tip": "Chargaff's Rule: in any double-stranded DNA, A = T and G = C. This means if you know the percentage of one base, you can calculate all others. AP exam questions frequently ask you to calculate base compositions: e.g., if 30% of bases are A, then 30% are T, 20% are G, and 20% are C."
+    },
+    {
+      "id": 6,
+      "label": "Guanine (G)",
+      "x": 57.1,
+      "y": 45.9,
+      "radius": 3.5,
+      "color": "#8E44AD",
+      "hint": "purple horizontal block extending from the left backbone inward; paired with orange Cytosine",
+      "description": "A purine nitrogenous base with a double-ring structure. Guanine forms 3 hydrogen bonds with Cytosine (G≡C) — one more than the A-T pair. This extra bond makes G-C-rich regions of DNA more resistant to heat denaturation (strand separation). Guanine is found in both DNA and RNA.",
+      "ap_tip": "G-C base pairs are stronger than A-T pairs (3 H-bonds vs 2). DNA regions rich in G-C have higher melting temperatures. Primers for PCR are often designed to have high G-C content at their 3′ ends for stable binding. AP questions may ask you to rank DNA duplexes by thermal stability based on G-C content."
+    },
+    {
+      "id": 7,
+      "label": "Cytosine (C)",
+      "x": 58.9,
+      "y": 50.8,
+      "radius": 3.5,
+      "color": "#E67E22",
+      "hint": "burnt-orange horizontal block extending from the right backbone inward; paired with purple Guanine",
+      "description": "A pyrimidine nitrogenous base with a single-ring structure. Cytosine forms 3 hydrogen bonds with Guanine (G≡C). Cytosine is found in both DNA and RNA. In epigenetics, cytosine can be methylated (5-methylcytosine) in CpG dinucleotides, influencing gene expression without changing the DNA sequence.",
+      "ap_tip": "Cytosine methylation is a key mechanism of epigenetic regulation — it usually silences gene expression. AP Biology Unit 3 (Gene Expression) includes epigenetics. Note that Cytosine and Uracil are structurally similar; Uracil is essentially Cytosine without an amino group."
+    },
+    {
+      "id": 8,
+      "label": "Thymine (T)",
+      "x": 58.6,
+      "y": 55.8,
+      "radius": 3.5,
+      "color": "#F1C40F",
+      "hint": "bright yellow horizontal block extending from the right backbone inward; paired with teal Adenine",
+      "description": "A pyrimidine nitrogenous base with a single-ring structure. Thymine forms 2 hydrogen bonds with Adenine (A=T). Thymine is unique to DNA — RNA uses Uracil (U) in its place, which lacks the methyl group on the 5 position that Thymine has. The methyl group makes DNA slightly more stable than RNA.",
+      "ap_tip": "Thymine is found only in DNA, not RNA. RNA substitutes Uracil for Thymine. On AP questions about transcription: when DNA template reads 3′-ATCG-5′, the mRNA reads 5′-UAGC-3′ (T in DNA → U in RNA). Thymine's absence from RNA is frequently tested."
+    },
+    {
+      "id": 9,
+      "label": "Hydrogen Bonds",
+      "x": 52.6,
+      "y": 67.6,
+      "radius": 3,
+      "color": "#BBBBBB",
+      "hint": "short dashed gray lines in the center of a base-pair rung, between the two colored base blocks",
+      "description": "Weak noncovalent attractions between the complementary bases that hold the two strands together. A-T base pairs are held by 2 hydrogen bonds; G-C base pairs by 3 hydrogen bonds. Individually weak, but the thousands of hydrogen bonds along a DNA molecule collectively give the double helix great stability — while still allowing strand separation during replication and transcription.",
+      "ap_tip": "Hydrogen bonds between bases are what allow DNA strands to be separated (by helicase in replication) and re-annealed. They are NOT the bonds that connect nucleotides within a strand — those are covalent phosphodiester bonds. A common AP misconception: 'hydrogen bonds hold the backbone together' — FALSE. Phosphodiester bonds hold the backbone; hydrogen bonds hold the two strands to each other."
+    },
+    {
+      "id": 10,
+      "label": "Major Groove",
+      "x": 68.1,
+      "y": 77.4,
+      "radius": 4,
+      "color": "#EBF5FB",
+      "hint": "wider pale blue gap between the two backbone strands; the wider of the two alternating spaces",
+      "description": "The larger of the two alternating grooves that spiral along the outside of the double helix. The major groove (~22 Å wide in B-form DNA) exposes the edges of the base pairs, allowing transcription factors, repressors, and other DNA-binding proteins to 'read' the sequence without unwinding the helix. Most sequence-specific DNA-binding proteins recognize their target sites in the major groove.",
+      "ap_tip": "The major groove is where most protein-DNA interactions occur for gene regulation. Transcription factors (activators, repressors) bind in the major groove. This is critical for AP Unit 3 (Gene Expression and Regulation). The minor groove also has protein interactions but is less accessible for sequence-specific reading."
+    },
+    {
+      "id": 11,
+      "label": "Minor Groove",
+      "x": 71,
+      "y": 81.7,
+      "radius": 4,
+      "color": "#FEF9EF",
+      "hint": "narrower pale cream gap between the two backbone strands; the narrower of the two alternating spaces",
+      "description": "The smaller of the two alternating grooves on the surface of the double helix. The minor groove (~12 Å wide in B-form DNA) is narrower and less accessible than the major groove, but some drugs (e.g., Hoechst stain, netropsin) and certain proteins bind in the minor groove. The minor groove provides less information about the base-pair sequence than the major groove.",
+      "ap_tip": "Distinguishing major from minor grooves is rarely tested directly on AP Biology, but knowing that proteins interact with the grooves to regulate gene expression without unwinding the helix is important for Unit 3. The concept that the sequence can be 'read' from the outside supports the indirect model of gene regulation by transcription factors."
+    },
+    {
+      "id": 12,
+      "label": "3′ End",
+      "x": 26.5,
+      "y": 92.6,
+      "radius": 3.5,
+      "color": "#922B21",
+      "hint": "distinct dark-red terminus cap at the bottom of the left backbone ribbon",
+      "description": "The end of a DNA (or RNA) strand that terminates with a free 3′ hydroxyl group (-OH) on the deoxyribose sugar. During DNA replication, new nucleotides are added only to the 3′ end — DNA polymerase reads the template 3′→5′ and synthesizes the new strand 5′→3′. The 3′ end is where the growing chain is extended.",
+      "ap_tip": "DNA synthesis is always 5′→3′ — new nucleotides are added to the 3′-OH. This is why the lagging strand requires Okazaki fragments synthesized in short bursts away from the replication fork. Free-response AP questions on replication frequently require you to identify which strand is leading vs lagging based on 5′/3′ polarity."
+    },
+    {
+      "id": 13,
+      "label": "5′ End",
+      "x": 73.8,
+      "y": 93,
+      "radius": 3.5,
+      "color": "#2471A3",
+      "hint": "distinct bright-blue terminus cap at the top of the left backbone ribbon",
+      "description": "The end of a DNA (or RNA) strand that terminates with a free 5′ phosphate group. By convention, DNA sequences are written 5′→3′ (left to right). The 5′ end of the new strand in replication begins with the RNA primer laid down by primase. In mRNA, the 5′ end receives the 5′ cap (7-methylguanosine) that protects it from degradation and assists ribosome binding.",
+      "ap_tip": "Always read DNA and RNA sequences 5′→3′. The two strands of DNA are antiparallel: when one strand goes 5′→3′ top to bottom, the complementary strand goes 3′→5′ top to bottom (equivalently, 5′→3′ bottom to top). Getting polarity right is essential for transcription, translation, and PCR primer design questions on the AP exam."
+    }
+  ],
+  "layout": "side-panel"
+}
