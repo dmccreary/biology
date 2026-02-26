@@ -1,3 +1,9 @@
+---
+title: Neuron Structure
+description: A interactive diagram with quiz that covers the 13 key structures of a multipolar motor neuron.
+image: sims/neuron-structure/neuron-structure.png
+og:image: sims/neuron-structure/neuron-structure.png
+---
 # Neuron Structure
 
 <iframe src="main.html" height="730" width="100%" scrolling="no"></iframe>
