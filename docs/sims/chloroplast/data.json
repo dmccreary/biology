@@ -82,25 +82,25 @@
     },
     {
       "id": 8,
-      "label": "Proton Gradient (H⁺ Flow)",
-      "x": 72.4,
-      "y": 82.5,
+      "label": "NADP⁺ / NADPH",
+      "x": 67.2,
+      "y": 61,
       "radius": 3.5,
-      "color": "#FF7043",
-      "hint": "orange arrow showing protons (H+) flowing from the thylakoid lumen through the ATP synthase channel into the stroma",
-      "description": "The proton gradient (proton-motive force) across the thylakoid membrane is established by three processes: (1) water splitting at PSII releases H⁺ into the lumen; (2) plastoquinol oxidation at the cytochrome b6f complex pumps additional H⁺ into the lumen via the Q-cycle; (3) NADPH production consumes H⁺ from the stroma. The resulting ΔpH (lumen pH ~5 vs. stroma pH ~8) drives H⁺ through ATP synthase to produce ATP.",
-      "ap_tip": "Chemiosmosis (Mitchell hypothesis) applies identically in both chloroplasts and mitochondria — a proton gradient drives ATP synthase rotation. On the AP exam, be ready to trace the path of H⁺ in each organelle and identify where ATP is produced (stroma in chloroplasts, matrix in mitochondria)."
+      "color": "#F9A825",
+      "hint": "yellow molecule symbols in the stroma above PSI, representing the final electron acceptor and the reduced form of the coenzyme",
+      "description": "NADP⁺ (nicotinamide adenine dinucleotide phosphate) is the terminal electron acceptor of the light reactions. After receiving 2 electrons and 1 H⁺ via ferredoxin and FNR, it becomes NADPH — a high-energy electron carrier. NADPH is then consumed in the Calvin cycle to reduce 3-phosphoglycerate (3-PGA) to glyceraldehyde-3-phosphate (G3P) using the enzyme GAPDH.",
+      "ap_tip": "NADPH is not ATP — it is an electron carrier, not an energy currency per se. The Calvin cycle requires both ATP (for phosphorylation) and NADPH (for reduction). The ratio consumed is 3 ATP : 2 NADPH per CO₂ fixed, so cyclic photophosphorylation supplements ATP when the ratio is unbalanced."
     },
     {
       "id": 9,
-      "label": "Plastocyanin (PC)",
-      "x": 53.3,
-      "y": 75.9,
+      "label": "Ferredoxin (Fd)",
+      "x": 57.1,
+      "y": 61.1,
       "radius": 3,
-      "color": "#00838F",
-      "hint": "small teal copper-containing protein on the lumenal face, moving between the cytochrome b6f complex and PSI",
-      "description": "Plastocyanin (PC) is a small, soluble, copper-containing electron carrier protein located in the thylakoid lumen. It accepts electrons from the cytochrome b6f complex and donates them to the oxidized reaction-center chlorophyll (P700⁺) of Photosystem I. Its copper atom alternates between Cu²⁺ (oxidized) and Cu⁺ (reduced) during electron transfer.",
-      "ap_tip": "Plastocyanin is a lumenal protein — it shuttles within the thylakoid lumen. Its copper cofactor is why copper deficiency impairs photosynthesis. On the AP exam, remember the sequence: PSII → PQ → Cyt b6f → PC → PSI."
+      "color": "#BF360C",
+      "hint": "small reddish iron-sulfur protein on the stromal face of PSI, just above the membrane",
+      "description": "Ferredoxin (Fd) is a small, soluble iron-sulfur protein on the stromal face of Photosystem I. It accepts high-energy electrons from P700 and passes them to FNR (ferredoxin-NADP⁺ reductase), which uses two electrons from two Fd molecules to reduce NADP⁺ + H⁺ → NADPH. Ferredoxin also participates in cyclic electron flow, routing electrons back to the cytochrome b6f complex.",
+      "ap_tip": "Ferredoxin is a one-electron carrier — it transfers electrons one at a time. FNR pairs two single-electron transfers to make one NADPH. On the AP exam, Ferredoxin is part of the PSI reaction and is located on the stromal side of the thylakoid membrane."
     },
     {
       "id": 10,
@@ -126,25 +126,25 @@
     },
     {
       "id": 12,
-      "label": "H₂O → O₂ (Water Splitting)",
-      "x": 19.4,
-      "y": 80.4,
+      "label": "Proton Gradient (H⁺ Flow)",
+      "x": 72.4,
+      "y": 82.5,
       "radius": 3.5,
-      "color": "#0288D1",
-      "hint": "water molecule and oxygen bubble symbols on the lumenal (interior) side of PSII",
-      "description": "Water oxidation (photolysis) occurs on the lumenal face of PSII via the oxygen-evolving complex (OEC), which contains a Mn₄CaO₅ cluster. The reaction — 2H₂O → O₂ + 4H⁺ + 4e⁻ — releases O₂ as a byproduct, donates 4 electrons to P680, and deposits 4 H⁺ into the lumen, contributing to the proton gradient that drives ATP synthesis.",
-      "ap_tip": "Oxygen produced during photosynthesis comes from water, NOT from CO₂. This was confirmed by isotope labeling experiments (¹⁸O in water → ¹⁸O₂ produced). This is a classic AP exam question about the origin of photosynthetic oxygen."
+      "color": "#FF7043",
+      "hint": "orange arrow showing protons (H+) flowing from the thylakoid lumen through the ATP synthase channel into the stroma",
+      "description": "The proton gradient (proton-motive force) across the thylakoid membrane is established by three processes: (1) water splitting at PSII releases H⁺ into the lumen; (2) plastoquinol oxidation at the cytochrome b6f complex pumps additional H⁺ into the lumen via the Q-cycle; (3) NADPH production consumes H⁺ from the stroma. The resulting ΔpH (lumen pH ~5 vs. stroma pH ~8) drives H⁺ through ATP synthase to produce ATP.",
+      "ap_tip": "Chemiosmosis (Mitchell hypothesis) applies identically in both chloroplasts and mitochondria — a proton gradient drives ATP synthase rotation. On the AP exam, be ready to trace the path of H⁺ in each organelle and identify where ATP is produced (stroma in chloroplasts, matrix in mitochondria)."
     },
     {
       "id": 13,
-      "label": "Plastoquinone (PQ)",
-      "x": 33.2,
-      "y": 73.1,
+      "label": "Plastocyanin (PC)",
+      "x": 53.3,
+      "y": 75.9,
       "radius": 3,
-      "color": "#FFA000",
-      "hint": "small orange mobile molecule shown moving within the thylakoid membrane between PSII and the cytochrome b6f complex",
-      "description": "Plastoquinone (PQ) is a small, hydrophobic, mobile electron carrier embedded in the lipid bilayer of the thylakoid membrane. It accepts 2 electrons and 2 H⁺ from PSII to become plastoquinol (PQH₂), diffuses laterally through the membrane, and donates electrons to the cytochrome b6f complex — releasing the 2 H⁺ into the lumen and contributing to the proton gradient.",
-      "ap_tip": "PQ is analogous to ubiquinone (CoQ) in the mitochondrial ETC — both are mobile hydrophobic carriers that shuttle electrons between complexes within the membrane. On the AP exam, know that PQ carries H⁺ from the stroma into the lumen, helping build the proton-motive force."
+      "color": "#00838F",
+      "hint": "small teal copper-containing protein on the lumenal face, moving between the cytochrome b6f complex and PSI",
+      "description": "Plastocyanin (PC) is a small, soluble, copper-containing electron carrier protein located in the thylakoid lumen. It accepts electrons from the cytochrome b6f complex and donates them to the oxidized reaction-center chlorophyll (P700⁺) of Photosystem I. Its copper atom alternates between Cu²⁺ (oxidized) and Cu⁺ (reduced) during electron transfer.",
+      "ap_tip": "Plastocyanin is a lumenal protein — it shuttles within the thylakoid lumen. Its copper cofactor is why copper deficiency impairs photosynthesis. On the AP exam, remember the sequence: PSII → PQ → Cyt b6f → PC → PSI."
     },
     {
       "id": 14,
@@ -159,25 +159,25 @@
     },
     {
       "id": 15,
-      "label": "NADP⁺ / NADPH",
-      "x": 67.2,
-      "y": 61,
-      "radius": 3.5,
-      "color": "#F9A825",
-      "hint": "yellow molecule symbols in the stroma above PSI, representing the final electron acceptor and the reduced form of the coenzyme",
-      "description": "NADP⁺ (nicotinamide adenine dinucleotide phosphate) is the terminal electron acceptor of the light reactions. After receiving 2 electrons and 1 H⁺ via ferredoxin and FNR, it becomes NADPH — a high-energy electron carrier. NADPH is then consumed in the Calvin cycle to reduce 3-phosphoglycerate (3-PGA) to glyceraldehyde-3-phosphate (G3P) using the enzyme GAPDH.",
-      "ap_tip": "NADPH is not ATP — it is an electron carrier, not an energy currency per se. The Calvin cycle requires both ATP (for phosphorylation) and NADPH (for reduction). The ratio consumed is 3 ATP : 2 NADPH per CO₂ fixed, so cyclic photophosphorylation supplements ATP when the ratio is unbalanced."
+      "label": "Plastoquinone (PQ)",
+      "x": 33.2,
+      "y": 73.1,
+      "radius": 3,
+      "color": "#FFA000",
+      "hint": "small orange mobile molecule shown moving within the thylakoid membrane between PSII and the cytochrome b6f complex",
+      "description": "Plastoquinone (PQ) is a small, hydrophobic, mobile electron carrier embedded in the lipid bilayer of the thylakoid membrane. It accepts 2 electrons and 2 H⁺ from PSII to become plastoquinol (PQH₂), diffuses laterally through the membrane, and donates electrons to the cytochrome b6f complex — releasing the 2 H⁺ into the lumen and contributing to the proton gradient.",
+      "ap_tip": "PQ is analogous to ubiquinone (CoQ) in the mitochondrial ETC — both are mobile hydrophobic carriers that shuttle electrons between complexes within the membrane. On the AP exam, know that PQ carries H⁺ from the stroma into the lumen, helping build the proton-motive force."
     },
     {
       "id": 16,
-      "label": "Ferredoxin (Fd)",
-      "x": 57.1,
-      "y": 61.1,
-      "radius": 3,
-      "color": "#BF360C",
-      "hint": "small reddish iron-sulfur protein on the stromal face of PSI, just above the membrane",
-      "description": "Ferredoxin (Fd) is a small, soluble iron-sulfur protein on the stromal face of Photosystem I. It accepts high-energy electrons from P700 and passes them to FNR (ferredoxin-NADP⁺ reductase), which uses two electrons from two Fd molecules to reduce NADP⁺ + H⁺ → NADPH. Ferredoxin also participates in cyclic electron flow, routing electrons back to the cytochrome b6f complex.",
-      "ap_tip": "Ferredoxin is a one-electron carrier — it transfers electrons one at a time. FNR pairs two single-electron transfers to make one NADPH. On the AP exam, Ferredoxin is part of the PSI reaction and is located on the stromal side of the thylakoid membrane."
+      "label": "H₂O → O₂ (Water Splitting)",
+      "x": 19.4,
+      "y": 80.4,
+      "radius": 3.5,
+      "color": "#0288D1",
+      "hint": "water molecule and oxygen bubble symbols on the lumenal (interior) side of PSII",
+      "description": "Water oxidation (photolysis) occurs on the lumenal face of PSII via the oxygen-evolving complex (OEC), which contains a Mn₄CaO₅ cluster. The reaction — 2H₂O → O₂ + 4H⁺ + 4e⁻ — releases O₂ as a byproduct, donates 4 electrons to P680, and deposits 4 H⁺ into the lumen, contributing to the proton gradient that drives ATP synthesis.",
+      "ap_tip": "Oxygen produced during photosynthesis comes from water, NOT from CO₂. This was confirmed by isotope labeling experiments (¹⁸O in water → ¹⁸O₂ produced). This is a classic AP exam question about the origin of photosynthetic oxygen."
     }
   ]
 }
