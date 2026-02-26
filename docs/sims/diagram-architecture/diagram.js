@@ -1,34 +1,40 @@
-// diagram.js — Plant Cell Interactive Diagram (side-panel label style)
-// Layout: image left (65%) + numbered label list right (35%) + SVG bezier leader lines
-// Modes: explore (hover to reveal infobox) | quiz (labels hidden, click to identify) | edit (?edit=true)
+// diagram.js — Interactive Diagram MicroSim
+// Layouts : 'side-panel' (image left 65%, labels right 35% — default)
+//            'top-bottom' (labels above and below image)
+// Modes   : explore (hover infobox) | quiz (labels hidden, click to identify) | edit (?edit=true)
 
 class DiagramSim {
-  // Line width helpers — normal mode 3px, edit mode 4.5px (3×)
-  get lw()       { return this.editMode ? 4.5 : 3; }   // default line
-  get lwActive() { return this.editMode ? 6   : 4; }   // highlighted line
+  // Line width helpers — normal / edit mode
+  get lw()       { return this.editMode ? 4.5 : 3; }
+  get lwActive() { return this.editMode ? 6   : 4; }
 
   constructor() {
-    this.data        = null;
-    this.mode        = 'explore';
-    this.editMode    = false;
-    this.markers     = new Map();   // callout.id -> <button> marker element
-    this.labelRows   = new Map();   // callout.id -> .label-row element
-    this.leaderLines = new Map();   // callout.id -> <path> SVG element
-    this.activeId    = null;
-    this.quizQueue   = [];
-    this.quizIndex   = 0;
-    this.quizCorrect = 0;
-    this.quizLocked  = false;
+    this.data             = null;
+    this.layout           = 'side-panel';
+    this.mode             = 'explore';
+    this.editMode         = false;
+    this.showNumbers      = true;
+    this.markers          = new Map();   // id → <button>
+    this.labelRows        = new Map();   // id → .label-row element
+    this.leaderLines      = new Map();   // id → <path>
+    this.activeId         = null;
+    this.quizQueue        = [];
+    this.quizIndex        = 0;
+    this.quizCorrect      = 0;
+    this.quizLocked       = false;
+    // Layout-specific panel references
+    this.labelPanel       = null;  // side-panel
+    this.labelPanelTop    = null;  // top-bottom
+    this.labelPanelBottom = null;  // top-bottom
   }
 
   // ── Boot ──────────────────────────────────────────────────────────────────
 
   async init() {
-    this.imgEl       = document.getElementById('diagram-img');
+    this.imgEl        = document.getElementById('diagram-img');
     this.markersLayer = document.getElementById('markers-layer');
-    this.labelPanel  = document.getElementById('label-panel');
-    this.svgEl       = document.getElementById('leaders-svg');
-    this.layoutEl    = document.getElementById('layout');
+    this.svgEl        = document.getElementById('leaders-svg');
+    this.layoutEl     = document.getElementById('layout');
 
     const params = new URLSearchParams(window.location.search);
     this.editMode = params.get('edit') === 'true';
@@ -36,12 +42,19 @@ class DiagramSim {
     try {
       const res = await fetch('data.json');
       if (!res.ok) throw new Error('HTTP ' + res.status);
-      this.data = await res.json();
-      // showNumbers defaults to true when the key is absent
+      this.data        = await res.json();
       this.showNumbers = this.data.showNumbers !== false;
+      this.layout      = this.data.layout || 'side-panel';
     } catch (err) {
       this.showFatalError('Could not load data.json: ' + err.message);
       return;
+    }
+
+    // Set up layout-specific DOM structure
+    if (this.layout === 'top-bottom') {
+      this.setupTopBottomDOM();
+    } else {
+      this.labelPanel = document.getElementById('label-panel');
     }
 
     // Wait for image so layout dimensions are valid
@@ -53,7 +66,6 @@ class DiagramSim {
     this.renderMarkers();
     this.renderLabels();
 
-    // Draw leaders after a brief tick so the DOM has painted label positions
     requestAnimationFrame(() => {
       this.drawLeaders();
       this.resizeObserver = new ResizeObserver(() => this.drawLeaders());
@@ -65,6 +77,29 @@ class DiagramSim {
     } else {
       this.setMode('explore');
     }
+  }
+
+  // ── Top-bottom layout DOM setup ───────────────────────────────────────────
+
+  setupTopBottomDOM() {
+    this.layoutEl.classList.add('top-bottom-layout');
+
+    const wrapper = document.getElementById('diagram-wrapper');
+
+    // Top label strip — inserted before the diagram
+    const topPanel = document.createElement('div');
+    topPanel.id        = 'label-panel-top';
+    topPanel.className = 'label-panel-strip';
+    this.layoutEl.insertBefore(topPanel, wrapper);
+
+    // Bottom label strip — appended after the diagram
+    const botPanel = document.createElement('div');
+    botPanel.id        = 'label-panel-bottom';
+    botPanel.className = 'label-panel-strip';
+    this.layoutEl.appendChild(botPanel);
+
+    this.labelPanelTop    = topPanel;
+    this.labelPanelBottom = botPanel;
   }
 
   // ── Markers (numbered dots on the image) ──────────────────────────────────
@@ -80,72 +115,104 @@ class DiagramSim {
       btn.setAttribute('aria-label', callout.label);
       btn.style.left = callout.x + '%';
       btn.style.top  = callout.y + '%';
-      btn.dataset.id = callout.id;
-
+      btn.dataset.id = String(callout.id);
       this.markers.set(callout.id, btn);
       this.markersLayer.appendChild(btn);
     }
   }
 
-  // ── Label rows (right panel) ───────────────────────────────────────────────
+  // ── Label rows ────────────────────────────────────────────────────────────
 
   renderLabels() {
+    if (this.layout === 'top-bottom') {
+      this.renderLabelsTopBottom();
+    } else {
+      this.renderLabelsSidePanel();
+    }
+  }
+
+  renderLabelsSidePanel() {
     this.labelPanel.innerHTML = '';
     this.labelRows.clear();
-
     for (const callout of this.data.callouts) {
-      const row = document.createElement('div');
-      row.className = 'label-row';
-      row.dataset.id = callout.id;
-
-      const handle = document.createElement('span');
-      handle.className = 'drag-handle';
-      handle.textContent = '⠿';
-      handle.setAttribute('aria-hidden', 'true');
-      handle.title = 'Drag to reorder';
-
-      const num = document.createElement('span');
-      num.className = 'label-num';
-      num.textContent = this.showNumbers ? callout.id : '';
-
-      const text = document.createElement('span');
-      text.className = 'label-text';
-      text.dataset.id = callout.id;
-      text.textContent = callout.label;
-
-      row.appendChild(handle);
-      row.appendChild(num);
-      row.appendChild(text);
-
-      // Color swatch — visible only in edit mode; helps identify the structure in the image
-      if (callout.color) {
-        const swatch = document.createElement('span');
-        swatch.className = 'color-swatch';
-        swatch.style.background = callout.color;
-        swatch.title = callout.color;
-        row.appendChild(swatch);
-      }
-
-      // Hint text — visible only in edit mode; describes where/what to look for
-      if (callout.hint) {
-        const hint = document.createElement('span');
-        hint.className = 'label-hint';
-        hint.textContent = callout.hint;
-        row.appendChild(hint);
-      }
-
+      const row = this.buildLabelRow(callout);
       this.labelPanel.appendChild(row);
       this.labelRows.set(callout.id, row);
     }
   }
 
+  renderLabelsTopBottom() {
+    this.labelPanelTop.innerHTML    = '';
+    this.labelPanelBottom.innerHTML = '';
+    this.labelRows.clear();
+    for (const callout of this.data.callouts) {
+      const row = this.buildLabelRow(callout);
+      row.dataset.panel = callout.panel || 'top';
+      const panel = (callout.panel === 'bottom') ? this.labelPanelBottom : this.labelPanelTop;
+      panel.appendChild(row);
+      this.labelRows.set(callout.id, row);
+    }
+  }
+
+  // Shared label row builder — used by both layout modes
+  buildLabelRow(callout) {
+    const row = document.createElement('div');
+    row.className  = 'label-row';
+    row.dataset.id = String(callout.id);
+
+    const handle = document.createElement('span');
+    handle.className = 'drag-handle';
+    handle.textContent = '⠿';
+    handle.setAttribute('aria-hidden', 'true');
+    handle.title = 'Drag to reorder';
+
+    const num = document.createElement('span');
+    num.className   = 'label-num';
+    num.textContent = this.showNumbers ? callout.id : '';
+
+    const text = document.createElement('span');
+    text.className      = 'label-text';
+    text.dataset.id     = String(callout.id);
+    text.textContent    = callout.label;
+
+    row.appendChild(handle);
+    row.appendChild(num);
+    row.appendChild(text);
+
+    // Color swatch — visible only in edit mode; helps identify the structure in the image
+    if (callout.color) {
+      const swatch = document.createElement('span');
+      swatch.className        = 'color-swatch';
+      swatch.style.background = callout.color;
+      swatch.title            = callout.color;
+      row.appendChild(swatch);
+    }
+
+    // Hint text — visible only in edit mode; describes where/what to look for
+    if (callout.hint) {
+      const hint = document.createElement('span');
+      hint.className   = 'label-hint';
+      hint.textContent = callout.hint;
+      row.appendChild(hint);
+    }
+
+    return row;
+  }
+
   // ── SVG leader lines ───────────────────────────────────────────────────────
 
   drawLeaders() {
+    if (this.layout === 'top-bottom') {
+      this.drawLeadersTopBottom();
+    } else {
+      this.drawLeadersSidePanel();
+    }
+  }
+
+  drawLeadersSidePanel() {
     const layoutRect = this.layoutEl.getBoundingClientRect();
     if (layoutRect.width === 0) return;
 
-    // Size the SVG to match the layout exactly
     this.svgEl.setAttribute('width',   layoutRect.width);
     this.svgEl.setAttribute('height',  layoutRect.height);
     this.svgEl.setAttribute('viewBox', `0 0 ${layoutRect.width} ${layoutRect.height}`);
@@ -160,36 +227,80 @@ class DiagramSim {
       const markerRect = markerEl.getBoundingClientRect();
       const numRect    = numEl.getBoundingClientRect();
 
-      // Marker right-center → label-num left-center, both relative to #layout
+      // Marker right-center → label-num left-center; horizontal S-curve
       const x1 = markerRect.right  - layoutRect.left;
       const y1 = markerRect.top + markerRect.height / 2 - layoutRect.top;
       const x2 = numRect.left      - layoutRect.left;
       const y2 = numRect.top + numRect.height / 2 - layoutRect.top;
-
-      // Smooth cubic bezier: departs horizontally from x1, arrives horizontally at x2
       const mx = x1 + (x2 - x1) * 0.5;
       const d  = `M ${x1} ${y1} C ${mx} ${y1} ${mx} ${y2} ${x2} ${y2}`;
 
-      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-      path.setAttribute('d', d);
-      path.setAttribute('fill', 'none');
-      path.setAttribute('stroke', '#3a7a3a');
-      path.setAttribute('stroke-width', this.lw);
-      path.setAttribute('opacity', '0.3');
-      path.dataset.id = callout.id;
-
+      const path = this.makePath(d, callout.id);
       this.svgEl.appendChild(path);
       this.leaderLines.set(callout.id, path);
     }
 
-    // Re-apply any active highlight after redraw
-    if (this.activeId !== null) {
-      this.applyLineHighlight(this.activeId);
+    if (this.activeId !== null) this.applyLineHighlight(this.activeId);
+  }
+
+  drawLeadersTopBottom() {
+    const layoutRect = this.layoutEl.getBoundingClientRect();
+    if (layoutRect.width === 0) return;
+
+    this.svgEl.setAttribute('width',   layoutRect.width);
+    this.svgEl.setAttribute('height',  layoutRect.height);
+    this.svgEl.setAttribute('viewBox', `0 0 ${layoutRect.width} ${layoutRect.height}`);
+    this.svgEl.innerHTML = '';
+    this.leaderLines.clear();
+
+    for (const callout of this.data.callouts) {
+      const markerEl = this.markers.get(callout.id);
+      const rowEl    = this.labelRows.get(callout.id);
+      const numEl    = rowEl.querySelector('.label-num');
+
+      const markerRect = markerEl.getBoundingClientRect();
+      const numRect    = numEl.getBoundingClientRect();
+
+      // Horizontal centers
+      const markerCX = markerRect.left + markerRect.width  / 2 - layoutRect.left;
+      const labelCX  = numRect.left    + numRect.width     / 2 - layoutRect.left;
+
+      // Vertical S-curve: departs vertically from both endpoints
+      let markerY, labelY;
+      const panel = rowEl.dataset.panel || callout.panel || 'top';
+      if (panel === 'bottom') {
+        // Label is below → connect marker bottom to label top
+        markerY = markerRect.bottom - layoutRect.top;
+        labelY  = numRect.top       - layoutRect.top;
+      } else {
+        // Label is above → connect marker top to label bottom
+        markerY = markerRect.top    - layoutRect.top;
+        labelY  = numRect.bottom    - layoutRect.top;
+      }
+
+      const midY = markerY + (labelY - markerY) * 0.5;
+      const d = `M ${markerCX} ${markerY} C ${markerCX} ${midY} ${labelCX} ${midY} ${labelCX} ${labelY}`;
+
+      const path = this.makePath(d, callout.id);
+      this.svgEl.appendChild(path);
+      this.leaderLines.set(callout.id, path);
     }
+
+    if (this.activeId !== null) this.applyLineHighlight(this.activeId);
+  }
+
+  makePath(d, id) {
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', d);
+    path.setAttribute('fill', 'none');
+    path.setAttribute('stroke', '#3a7a3a');
+    path.setAttribute('stroke-width', this.lw);
+    path.setAttribute('opacity', '0.3');
+    path.dataset.id = String(id);
+    return path;
   }
 
   applyLineHighlight(id) {
-    // Dim all lines, brighten the active one
     for (const [lid, path] of this.leaderLines) {
       if (lid === id) {
         path.setAttribute('opacity',      '0.9');
@@ -215,24 +326,27 @@ class DiagramSim {
 
   setMode(newMode) {
     if (this.editMode) return;
-    this.mode = newMode;
+    this.mode     = newMode;
     this.activeId = null;
 
     document.getElementById('btn-explore').classList.toggle('active', newMode === 'explore');
     document.getElementById('btn-quiz').classList.toggle('active',    newMode === 'quiz');
 
-    // Reset all markers and label rows
     for (const btn of this.markers.values()) {
-      btn.className = 'marker';
-      btn.textContent = this.showNumbers ? this.data.callouts.find(c => c.id == btn.dataset.id).id : '';
+      btn.className     = 'marker';
+      btn.textContent   = this.showNumbers ? this.data.callouts.find(c => c.id == btn.dataset.id).id : '';
       btn.onpointerdown = null;
       btn.onpointerenter = null;
       btn.onpointerleave = null;
-      btn.onclick = null;
+      btn.onclick       = null;
     }
+
     for (const row of this.labelRows.values()) {
+      // Preserve panel affiliation across mode resets
+      const panel = row.dataset.panel;
       row.className = 'label-row';
-      row.onclick = null;
+      if (panel) row.dataset.panel = panel;
+      row.onclick        = null;
       row.onpointerenter = null;
       row.onpointerleave = null;
       row.querySelector('.label-text').classList.remove('quiz-hidden');
@@ -240,8 +354,8 @@ class DiagramSim {
 
     this.clearLineHighlights();
     this.resetInfobox();
-    document.getElementById('quiz-score').style.display    = 'none';
-    document.getElementById('quiz-restart').style.display  = 'none';
+    document.getElementById('quiz-score').style.display   = 'none';
+    document.getElementById('quiz-restart').style.display = 'none';
 
     if (newMode === 'explore') this.initExplore();
     if (newMode === 'quiz')    this.initQuiz();
@@ -268,12 +382,10 @@ class DiagramSim {
         this.clearLineHighlights();
       };
 
-      // Marker dot interactions
       btn.onpointerenter = activate;
       btn.onpointerleave = deactivate;
       btn.onclick        = () => this.showInfobox(callout);
 
-      // Label row interactions (also trigger the same highlight)
       row.onpointerenter = activate;
       row.onpointerleave = deactivate;
       row.onclick        = () => this.showInfobox(callout);
@@ -281,18 +393,18 @@ class DiagramSim {
   }
 
   showInfobox(callout) {
-    document.getElementById('infobox-prompt').style.display = 'none';
+    document.getElementById('infobox-prompt').style.display  = 'none';
     document.getElementById('infobox-content').style.display = 'block';
 
     const labelEl = document.getElementById('infobox-label');
     labelEl.textContent = callout.label;
-    labelEl.className = '';
+    labelEl.className   = '';
 
     document.getElementById('infobox-desc').textContent = callout.description;
 
     const tipEl = document.getElementById('infobox-ap-tip');
     if (callout.ap_tip) {
-      tipEl.innerHTML = '<strong>AP Exam Tip:</strong> ' + callout.ap_tip;
+      tipEl.innerHTML    = '<strong>AP Exam Tip:</strong> ' + callout.ap_tip;
       tipEl.style.display = 'block';
     } else {
       tipEl.style.display = 'none';
@@ -305,7 +417,6 @@ class DiagramSim {
   }
 
   // ── Quiz mode ─────────────────────────────────────────────────────────────
-  // Label texts are hidden; student clicks the correct dot to reveal each one.
 
   initQuiz() {
     this.quizQueue   = [...this.data.callouts].sort(() => Math.random() - 0.5);
@@ -316,7 +427,6 @@ class DiagramSim {
     document.getElementById('quiz-score').style.display = '';
     this.updateScore();
 
-    // Hide all label texts and set markers to "?"
     for (const callout of this.data.callouts) {
       this.labelRows.get(callout.id).querySelector('.label-text').classList.add('quiz-hidden');
       const btn = this.markers.get(callout.id);
@@ -337,20 +447,13 @@ class DiagramSim {
 
     const target = this.quizQueue[this.quizIndex];
 
-    // Clear previous correct/incorrect marker classes (keep quiz-unknown on unanswered)
-    for (const btn of this.markers.values()) {
-      btn.classList.remove('incorrect');
-    }
-    for (const row of this.labelRows.values()) {
-      row.classList.remove('active');
-    }
+    for (const btn of this.markers.values())   btn.classList.remove('incorrect');
+    for (const row of this.labelRows.values()) row.classList.remove('active');
     this.clearLineHighlights();
 
-    // Highlight the target label row (even though text is hidden — shows the row is active)
     this.labelRows.get(target.id).classList.add('active');
     this.applyLineHighlight(target.id);
 
-    // Prompt in infobox
     document.getElementById('infobox-prompt').style.display  = 'none';
     document.getElementById('infobox-content').style.display = 'block';
     document.getElementById('infobox-ap-tip').style.display  = 'none';
@@ -361,10 +464,8 @@ class DiagramSim {
     labelEl.className = 'prompt-label';
     labelEl.innerHTML = 'Click on: <em>' + target.label + '</em>';
 
-    // Wire up all marker dots for this question
     for (const callout of this.data.callouts) {
-      const btn = this.markers.get(callout.id);
-      btn.onclick = () => this.handleAnswer(callout, target);
+      this.markers.get(callout.id).onclick = () => this.handleAnswer(callout, target);
     }
   }
 
@@ -379,17 +480,14 @@ class DiagramSim {
       this.quizCorrect++;
       this.updateScore();
 
-      // Reveal the label text
       const textEl = this.labelRows.get(target.id).querySelector('.label-text');
       textEl.classList.remove('quiz-hidden');
       this.labelRows.get(target.id).classList.add('correct-row');
 
-      // Mark the dot
       clickedBtn.classList.remove('quiz-unknown');
       clickedBtn.classList.add('correct');
       clickedBtn.textContent = this.showNumbers ? target.id : '';
 
-      // Brighten the leader line permanently for this callout
       const path = this.leaderLines.get(target.id);
       if (path) {
         path.setAttribute('opacity',      '0.7');
@@ -398,20 +496,17 @@ class DiagramSim {
       }
 
       const labelEl = document.getElementById('infobox-label');
-      labelEl.className = 'correct-label';
+      labelEl.className   = 'correct-label';
       labelEl.textContent = '✓ ' + target.label;
       document.getElementById('infobox-desc').textContent = target.description;
 
       const tipEl = document.getElementById('infobox-ap-tip');
       if (target.ap_tip) {
-        tipEl.innerHTML = '<strong>AP Exam Tip:</strong> ' + target.ap_tip;
+        tipEl.innerHTML    = '<strong>AP Exam Tip:</strong> ' + target.ap_tip;
         tipEl.style.display = 'block';
       }
 
-      setTimeout(() => {
-        this.quizIndex++;
-        this.showNextQuestion();
-      }, 1800);
+      setTimeout(() => { this.quizIndex++; this.showNextQuestion(); }, 1800);
 
     } else {
       // ── Wrong ──
@@ -423,28 +518,23 @@ class DiagramSim {
   }
 
   showQuizComplete() {
-    const total = this.quizQueue.length;
-
-    // Reveal any still-hidden labels
     for (const row of this.labelRows.values()) {
       row.querySelector('.label-text').classList.remove('quiz-hidden');
       row.classList.remove('active');
     }
     this.clearLineHighlights();
 
-    document.getElementById('infobox-label').className = '';
+    document.getElementById('infobox-label').className   = '';
     document.getElementById('infobox-label').textContent = 'Quiz complete!';
-    document.getElementById('infobox-desc').textContent =
-      'You correctly identified ' + this.quizCorrect + ' of ' + total + ' structures.';
-    document.getElementById('infobox-ap-tip').style.display = 'none';
-    document.getElementById('quiz-restart').style.display = 'inline-block';
+    document.getElementById('infobox-desc').textContent  =
+      'You correctly identified ' + this.quizCorrect + ' of ' + this.quizQueue.length + ' structures.';
+    document.getElementById('infobox-ap-tip').style.display  = 'none';
+    document.getElementById('quiz-restart').style.display    = 'inline-block';
 
     this.launchCelebration();
   }
 
   // ── Celebration animation ─────────────────────────────────────────────────
-  // Canvas-based confetti burst. Dynamically creates and removes its own canvas
-  // so no HTML changes are needed. Runs for ~3.5 seconds then cleans up.
 
   launchCelebration() {
     const canvas = document.createElement('canvas');
@@ -458,17 +548,15 @@ class DiagramSim {
     canvas.width  = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    // Biology-themed palette + warm accents
     const COLORS = [
-      '#3a7a3a', '#7DB84A', '#a6e3a1',   // greens
-      '#F5A623', '#FFD700',               // golds
-      '#4A6FA5', '#89b4fa',               // blues
-      '#2A8040', '#C45C2A'                // teal / rust
+      '#3a7a3a', '#7DB84A', '#a6e3a1',
+      '#F5A623', '#FFD700',
+      '#4A6FA5', '#89b4fa',
+      '#2A8040', '#C45C2A'
     ];
 
-    // Spawn particles in two bursts from the lower-left and lower-right
     const particles = [];
-    const addBurst = (originX, spread) => {
+    const addBurst  = (originX, spread) => {
       for (let i = 0; i < 70; i++) {
         particles.push({
           x:             originX + (Math.random() - 0.5) * spread,
@@ -488,8 +576,8 @@ class DiagramSim {
     addBurst(canvas.width * 0.25, 60);
     addBurst(canvas.width * 0.75, 60);
 
-    const GRAVITY   = 0.3;
-    const DURATION  = 3500; // ms
+    const GRAVITY  = 0.3;
+    const DURATION = 3500;
     let   startTime = null;
 
     const animate = (timestamp) => {
@@ -498,7 +586,6 @@ class DiagramSim {
       const progress = elapsed / DURATION;
 
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       let stillVisible = false;
 
       for (const p of particles) {
@@ -506,9 +593,7 @@ class DiagramSim {
         p.x        += p.vx;
         p.y        += p.vy;
         p.rotation += p.rotationSpeed;
-
-        // Fade out during the final 40% of the duration
-        p.alpha = progress < 0.6 ? 1 : Math.max(0, 1 - (progress - 0.6) / 0.4);
+        p.alpha     = progress < 0.6 ? 1 : Math.max(0, 1 - (progress - 0.6) / 0.4);
 
         if (p.alpha > 0 && p.y < canvas.height + 40) {
           stillVisible = true;
@@ -522,11 +607,8 @@ class DiagramSim {
         }
       }
 
-      if (elapsed < DURATION && stillVisible) {
-        requestAnimationFrame(animate);
-      } else {
-        canvas.remove();
-      }
+      if (elapsed < DURATION && stillVisible) requestAnimationFrame(animate);
+      else canvas.remove();
     };
 
     requestAnimationFrame(animate);
@@ -547,14 +629,14 @@ class DiagramSim {
     document.getElementById('btn-quiz').disabled    = true;
 
     const badge = document.createElement('span');
-    badge.id = 'edit-badge';
+    badge.id          = 'edit-badge';
     badge.textContent = 'EDIT MODE';
     document.getElementById('controls').appendChild(badge);
 
     for (const callout of this.data.callouts) {
       const btn = this.markers.get(callout.id);
       btn.classList.add('edit-mode');
-      btn.title = 'Drag to reposition "' + callout.label + '"';
+      btn.title        = 'Drag to reposition "' + callout.label + '"';
       btn.onpointerdown = (e) => this.startDrag(e, callout, btn);
     }
 
@@ -562,93 +644,78 @@ class DiagramSim {
     this.updateJSONOutput();
   }
 
-  // ── Label reorder (edit mode only) ───────────────────────────────────────
+  // ── Label reorder — dispatch ──────────────────────────────────────────────
 
   enableLabelReorder() {
+    if (this.layout === 'top-bottom') {
+      this.enableTopBottomReorder();
+    } else {
+      this.enableSidePanelReorder();
+    }
+  }
+
+  // ── Side-panel: vertical drag reorder ────────────────────────────────────
+
+  enableSidePanelReorder() {
     for (const row of this.labelRows.values()) {
       row.classList.add('reorder-enabled');
       const handle = row.querySelector('.drag-handle');
       handle.onpointerdown = (e) => {
         e.preventDefault();
         e.stopPropagation();
-        this.startReorderDrag(e, row);
+        this.startSidePanelReorder(e, row);
       };
     }
   }
 
-  startReorderDrag(e, rowEl) {
-    // Use document-level listeners (not setPointerCapture on rowEl) so that
-    // moving rowEl in the DOM during onUp does not break subsequent drags.
+  startSidePanelReorder(e, rowEl) {
     const rowRect     = rowEl.getBoundingClientRect();
     const dragOffsetY = e.clientY - rowRect.top;
 
-    // Floating ghost clone that follows the cursor
     const ghost = rowEl.cloneNode(true);
     ghost.style.cssText = [
-      'position:fixed',
-      'pointer-events:none',
-      'z-index:1000',
+      'position:fixed', 'pointer-events:none', 'z-index:1000',
       'width:'  + rowRect.width + 'px',
       'left:'   + rowRect.left  + 'px',
       'top:'    + (e.clientY - dragOffsetY) + 'px',
-      'opacity:0.85',
-      'background:white',
-      'border-radius:5px',
+      'opacity:0.85', 'background:white', 'border-radius:5px',
       'box-shadow:0 4px 14px rgba(0,0,0,0.2)',
-      'padding:4px 5px',
-      'display:flex',
-      'align-items:center',
-      'gap:7px'
+      'padding:4px 5px', 'display:flex', 'align-items:center', 'gap:7px'
     ].join(';');
     document.body.appendChild(ghost);
 
-    // Green insertion indicator bar
     const indicator = document.createElement('div');
     indicator.className = 'reorder-indicator';
 
     rowEl.classList.add('dragging');
-    let dropTarget = null; // label-row to insert before; null = append at end
+    let dropTarget = null;
 
     const onMove = (mv) => {
       ghost.style.top = (mv.clientY - dragOffsetY) + 'px';
 
-      // Siblings = all rows except the one being dragged
       const siblings = [...this.labelPanel.querySelectorAll('.label-row')]
         .filter(r => r !== rowEl);
-
       dropTarget = null;
       for (const sib of siblings) {
         const rect = sib.getBoundingClientRect();
-        if (mv.clientY < rect.top + rect.height / 2) {
-          dropTarget = sib;
-          break;
-        }
+        if (mv.clientY < rect.top + rect.height / 2) { dropTarget = sib; break; }
       }
 
-      if (dropTarget) {
-        this.labelPanel.insertBefore(indicator, dropTarget);
-      } else {
-        this.labelPanel.appendChild(indicator);
-      }
+      if (dropTarget) this.labelPanel.insertBefore(indicator, dropTarget);
+      else            this.labelPanel.appendChild(indicator);
     };
 
     const onUp = () => {
       document.removeEventListener('pointermove', onMove);
       document.removeEventListener('pointerup',   onUp);
-
       ghost.remove();
       indicator.remove();
       rowEl.classList.remove('dragging');
 
-      // Move the row to its new position
-      if (dropTarget) {
-        this.labelPanel.insertBefore(rowEl, dropTarget);
-      } else {
-        this.labelPanel.appendChild(rowEl);
-      }
+      if (dropTarget) this.labelPanel.insertBefore(rowEl, dropTarget);
+      else            this.labelPanel.appendChild(rowEl);
 
-      // Renumber every row and marker by their new DOM position (1-based).
-      // This updates ids, displayed numbers, dataset attributes, and both Maps.
+      // Renumber all rows by new DOM order
       const domRows      = [...this.labelPanel.querySelectorAll('.label-row')];
       const newMarkers   = new Map();
       const newLabelRows = new Map();
@@ -659,16 +726,12 @@ class DiagramSim {
         const callout   = this.data.callouts.find(c => c.id === oldId);
         const markerBtn = this.markers.get(oldId);
 
-        // Update the data model
-        callout.id = newId;
-
-        // Update the label row DOM
+        callout.id     = newId;
         row.dataset.id = String(newId);
         row.querySelector('.label-num').textContent = this.showNumbers ? newId : '';
         const textSpan = row.querySelector('.label-text');
         if (textSpan) textSpan.dataset.id = String(newId);
 
-        // Update the marker dot on the image
         markerBtn.dataset.id  = String(newId);
         markerBtn.textContent = this.showNumbers ? String(newId) : '';
         markerBtn.setAttribute('aria-label', callout.label);
@@ -677,19 +740,123 @@ class DiagramSim {
         newLabelRows.set(newId, row);
       });
 
-      // Keep data.callouts sorted to match sequential ids
       this.data.callouts.sort((a, b) => a.id - b.id);
       this.markers   = newMarkers;
       this.labelRows = newLabelRows;
+      this.drawLeaders();
+      this.updateJSONOutput();
+    };
+
+    document.addEventListener('pointermove', onMove);
+    document.addEventListener('pointerup',   onUp);
+  }
+
+  // ── Top-bottom: horizontal drag reorder + panel toggle ───────────────────
+
+  enableTopBottomReorder() {
+    for (const [id, row] of this.labelRows) {
+      row.classList.add('reorder-enabled');
+
+      // ↓/↑ button moves the label between top and bottom panels
+      const callout  = this.data.callouts.find(c => c.id === id);
+      const toggle   = document.createElement('button');
+      toggle.className   = 'panel-toggle-btn';
+      toggle.textContent = (callout.panel === 'bottom') ? '↑' : '↓';
+      toggle.title       = (callout.panel === 'bottom') ? 'Move to top panel' : 'Move to bottom panel';
+      toggle.onclick     = (e) => { e.stopPropagation(); this.toggleLabelPanel(id); };
+      row.appendChild(toggle);
+
+      // Drag handle for left/right reorder within the same panel
+      const handle = row.querySelector('.drag-handle');
+      handle.onpointerdown = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        this.startTopBottomReorder(e, row);
+      };
+    }
+  }
+
+  toggleLabelPanel(id) {
+    const callout = this.data.callouts.find(c => c.id === id);
+    const row     = this.labelRows.get(id);
+    const toggle  = row.querySelector('.panel-toggle-btn');
+
+    if (callout.panel === 'bottom') {
+      callout.panel     = 'top';
+      row.dataset.panel = 'top';
+      toggle.textContent = '↓';
+      toggle.title       = 'Move to bottom panel';
+      this.labelPanelTop.appendChild(row);
+    } else {
+      callout.panel     = 'bottom';
+      row.dataset.panel = 'bottom';
+      toggle.textContent = '↑';
+      toggle.title       = 'Move to top panel';
+      this.labelPanelBottom.appendChild(row);
+    }
+
+    this.drawLeaders();
+    this.updateJSONOutput();
+  }
+
+  startTopBottomReorder(e, rowEl) {
+    const parentPanel  = rowEl.parentElement;
+    const rowRect      = rowEl.getBoundingClientRect();
+    const dragOffsetX  = e.clientX - rowRect.left;
+
+    const ghost = rowEl.cloneNode(true);
+    ghost.style.cssText = [
+      'position:fixed', 'pointer-events:none', 'z-index:1000',
+      'height:' + rowRect.height + 'px',
+      'top:'    + rowRect.top + 'px',
+      'left:'   + (e.clientX - dragOffsetX) + 'px',
+      'opacity:0.85', 'background:white', 'border-radius:5px',
+      'box-shadow:0 4px 14px rgba(0,0,0,0.2)',
+      'display:inline-flex', 'align-items:center', 'gap:7px', 'padding:4px 8px'
+    ].join(';');
+    document.body.appendChild(ghost);
+
+    // Vertical bar indicates insertion point between chips
+    const indicator = document.createElement('div');
+    indicator.className = 'reorder-indicator-v';
+
+    rowEl.classList.add('dragging');
+    let dropTarget = null;
+
+    const onMove = (mv) => {
+      ghost.style.left = (mv.clientX - dragOffsetX) + 'px';
+
+      const siblings = [...parentPanel.querySelectorAll('.label-row')]
+        .filter(r => r !== rowEl);
+      dropTarget = null;
+      for (const sib of siblings) {
+        const rect = sib.getBoundingClientRect();
+        if (mv.clientX < rect.left + rect.width / 2) { dropTarget = sib; break; }
+      }
+
+      if (dropTarget) parentPanel.insertBefore(indicator, dropTarget);
+      else            parentPanel.appendChild(indicator);
+    };
+
+    const onUp = () => {
+      document.removeEventListener('pointermove', onMove);
+      document.removeEventListener('pointerup',   onUp);
+      ghost.remove();
+      indicator.remove();
+      rowEl.classList.remove('dragging');
+
+      if (dropTarget) parentPanel.insertBefore(rowEl, dropTarget);
+      else            parentPanel.appendChild(rowEl);
 
       this.drawLeaders();
       this.updateJSONOutput();
     };
 
-    // Document-level listeners track the pointer even outside the panel
     document.addEventListener('pointermove', onMove);
     document.addEventListener('pointerup',   onUp);
   }
+
+  // ── Marker drag (edit mode) ───────────────────────────────────────────────
 
   startDrag(e, callout, markerEl) {
     e.preventDefault();
@@ -710,7 +877,6 @@ class DiagramSim {
       document.getElementById('coord-display').textContent =
         '"' + callout.label + '"' + hintSuffix + '  →  x: ' + x.toFixed(1) + ',  y: ' + y.toFixed(1);
 
-      // Redraw leaders live as the dot moves
       this.drawLeaders();
       this.updateJSONOutput();
     };
@@ -725,6 +891,8 @@ class DiagramSim {
     markerEl.addEventListener('pointerup',   onUp);
   }
 
+  // ── JSON export ───────────────────────────────────────────────────────────
+
   updateJSONOutput() {
     const exportData = {
       title:       this.data.title,
@@ -732,6 +900,8 @@ class DiagramSim {
       image:       this.data.image,
       callouts:    this.data.callouts.map(c => ({ ...c }))
     };
+    if (this.data.layout)  exportData.layout      = this.data.layout;
+    if (!this.showNumbers) exportData.showNumbers = false;
     document.getElementById('json-output').value = JSON.stringify(exportData, null, 2);
   }
 

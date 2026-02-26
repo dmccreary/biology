@@ -411,19 +411,29 @@ Field reference:
   Shown as italic sub-text under the label row in edit mode, and appended to the
   live coordinate readout while dragging. Always populate both `color` and `hint`
   for any diagram where structures look visually similar or are hard to distinguish.
+- `layout` — optional string (`"side-panel"` or `"top-bottom"`); default is
+  `"side-panel"`. Use `"top-bottom"` for images with a horizontal structure
+  (e.g. cell membrane cross-sections) where the side panel produces tangled leader lines.
+  In `top-bottom` mode, label chips appear in a horizontal strip above and below the
+  image; vertical S-curve leader lines connect each chip to its marker.
+- `panel` — per-callout string (`"top"` or `"bottom"`); required when
+  `"layout": "top-bottom"`. Determines which strip the label chip starts in.
+  Biologically, use `"top"` for extracellular structures and `"bottom"` for
+  intracellular structures; balance the panel counts (roughly 50/50) so neither
+  strip becomes overly crowded.
 
 #### Layout note for cross-section diagrams
 
-The side-panel style (labels right of image) works naturally when structures are
-distributed in 2D across the image (cell organelles, pathway nodes, etc.). It works
-poorly for **horizontal cross-sections** like the cell membrane, where structures are
-stacked vertically — the leader lines from the right panel become near-vertical and
-tangle badly.
+The `side-panel` layout (labels right of image) works well when structures are
+distributed across the image in 2D (cell organelles, pathway nodes, etc.). It works
+poorly for **horizontal cross-sections** like the cell membrane, where many structures
+cluster near the membrane midline — leader lines become near-vertical and tangle.
 
-For horizontal cross-sections, generate the image with the cross-section running
-**top-to-bottom** (i.e. rotate the composition 90°) rather than left-to-right.
-A vertical membrane cross-section has structures at different x positions, so the
-horizontal bezier lines from the side panel connect cleanly without crossing.
+Use `"layout": "top-bottom"` for horizontal cross-sections. Set `"panel": "top"` for
+structures in the extracellular/upper half and `"panel": "bottom"` for intracellular/lower
+half. In edit mode, each label chip gains a `↓` or `↑` toggle button to move it between
+panels, and a `⠿` drag handle to reorder chips left/right within the same panel.
+The JSON output from Copy JSON already includes the updated `panel` values.
 
 #### Step 4 — Calibrate callout positions in Edit mode
 
@@ -431,9 +441,11 @@ horizontal bezier lines from the side panel connect cleanly without crossing.
 2. Open the sim directly in the browser:
    `http://127.0.0.1:8000/biology/sims/<sim-name>/main.html?edit=true`
 3. **Drag each orange marker dot** to the exact structure in the image.
-4. The live coordinate readout shows `x` and `y` while dragging.
-5. **Drag label rows** up/down by their `⠿` handle to reorder them if needed.
+4. The live coordinate readout shows `x` and `y` (plus the `hint` text) while dragging.
+5. **Side-panel layout** — drag label rows up/down by their `⠿` handle to reorder.
    Labels and markers renumber automatically after each reorder.
+   **Top-bottom layout** — drag chips left/right within a panel to reorder;
+   click the `↓`/`↑` button on a chip to move it between the top and bottom strips.
 6. Click **Copy JSON** — the full updated `data.json` is copied to the clipboard.
 7. Paste over `docs/sims/<sim-name>/data.json` and save.
 8. Reload `main.html` (without `?edit=true`) to verify normal mode.
