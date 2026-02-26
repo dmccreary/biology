@@ -3,6 +3,10 @@
 // Modes: explore (hover to reveal infobox) | quiz (labels hidden, click to identify) | edit (?edit=true)
 
 class DiagramSim {
+  // Line width helpers — normal mode 3px, edit mode 4.5px (3×)
+  get lw()       { return this.editMode ? 4.5 : 3; }   // default line
+  get lwActive() { return this.editMode ? 6   : 4; }   // highlighted line
+
   constructor() {
     this.data        = null;
     this.mode        = 'explore';
@@ -150,7 +154,7 @@ class DiagramSim {
       path.setAttribute('d', d);
       path.setAttribute('fill', 'none');
       path.setAttribute('stroke', '#3a7a3a');
-      path.setAttribute('stroke-width', '1.5');
+      path.setAttribute('stroke-width', this.lw);
       path.setAttribute('opacity', '0.3');
       path.dataset.id = callout.id;
 
@@ -169,11 +173,11 @@ class DiagramSim {
     for (const [lid, path] of this.leaderLines) {
       if (lid === id) {
         path.setAttribute('opacity',      '0.9');
-        path.setAttribute('stroke-width', '2');
+        path.setAttribute('stroke-width', this.lwActive);
         path.setAttribute('stroke',       '#1f5c1f');
       } else {
         path.setAttribute('opacity',      '0.15');
-        path.setAttribute('stroke-width', '1.5');
+        path.setAttribute('stroke-width', this.lw);
         path.setAttribute('stroke',       '#3a7a3a');
       }
     }
@@ -182,7 +186,7 @@ class DiagramSim {
   clearLineHighlights() {
     for (const path of this.leaderLines.values()) {
       path.setAttribute('opacity',      '0.3');
-      path.setAttribute('stroke-width', '1.5');
+      path.setAttribute('stroke-width', this.lw);
       path.setAttribute('stroke',       '#3a7a3a');
     }
   }
@@ -370,7 +374,7 @@ class DiagramSim {
       if (path) {
         path.setAttribute('opacity',      '0.7');
         path.setAttribute('stroke',       '#2A8040');
-        path.setAttribute('stroke-width', '2');
+        path.setAttribute('stroke-width', this.lwActive);
       }
 
       const labelEl = document.getElementById('infobox-label');
@@ -414,6 +418,98 @@ class DiagramSim {
       'You correctly identified ' + this.quizCorrect + ' of ' + total + ' structures.';
     document.getElementById('infobox-ap-tip').style.display = 'none';
     document.getElementById('quiz-restart').style.display = 'inline-block';
+
+    this.launchCelebration();
+  }
+
+  // ── Celebration animation ─────────────────────────────────────────────────
+  // Canvas-based confetti burst. Dynamically creates and removes its own canvas
+  // so no HTML changes are needed. Runs for ~3.5 seconds then cleans up.
+
+  launchCelebration() {
+    const canvas = document.createElement('canvas');
+    canvas.style.cssText = [
+      'position:fixed', 'inset:0', 'width:100%', 'height:100%',
+      'pointer-events:none', 'z-index:9999'
+    ].join(';');
+    document.body.appendChild(canvas);
+
+    const ctx = canvas.getContext('2d');
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    // Biology-themed palette + warm accents
+    const COLORS = [
+      '#3a7a3a', '#7DB84A', '#a6e3a1',   // greens
+      '#F5A623', '#FFD700',               // golds
+      '#4A6FA5', '#89b4fa',               // blues
+      '#2A8040', '#C45C2A'                // teal / rust
+    ];
+
+    // Spawn particles in two bursts from the lower-left and lower-right
+    const particles = [];
+    const addBurst = (originX, spread) => {
+      for (let i = 0; i < 70; i++) {
+        particles.push({
+          x:             originX + (Math.random() - 0.5) * spread,
+          y:             canvas.height * 0.75,
+          vx:            (Math.random() - 0.5) * 9,
+          vy:            -(Math.random() * 12 + 7),
+          w:             Math.random() * 7 + 3,
+          h:             Math.random() * 13 + 5,
+          rotation:      Math.random() * Math.PI * 2,
+          rotationSpeed: (Math.random() - 0.5) * 0.25,
+          color:         COLORS[Math.floor(Math.random() * COLORS.length)],
+          alpha:         1
+        });
+      }
+    };
+
+    addBurst(canvas.width * 0.25, 60);
+    addBurst(canvas.width * 0.75, 60);
+
+    const GRAVITY   = 0.3;
+    const DURATION  = 3500; // ms
+    let   startTime = null;
+
+    const animate = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const elapsed  = timestamp - startTime;
+      const progress = elapsed / DURATION;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      let stillVisible = false;
+
+      for (const p of particles) {
+        p.vy       += GRAVITY;
+        p.x        += p.vx;
+        p.y        += p.vy;
+        p.rotation += p.rotationSpeed;
+
+        // Fade out during the final 40% of the duration
+        p.alpha = progress < 0.6 ? 1 : Math.max(0, 1 - (progress - 0.6) / 0.4);
+
+        if (p.alpha > 0 && p.y < canvas.height + 40) {
+          stillVisible = true;
+          ctx.save();
+          ctx.globalAlpha = p.alpha;
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.rotation);
+          ctx.fillStyle = p.color;
+          ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+          ctx.restore();
+        }
+      }
+
+      if (elapsed < DURATION && stillVisible) {
+        requestAnimationFrame(animate);
+      } else {
+        canvas.remove();
+      }
+    };
+
+    requestAnimationFrame(animate);
   }
 
   restartQuiz() { this.setMode('quiz'); }
@@ -461,24 +557,24 @@ class DiagramSim {
   }
 
   startReorderDrag(e, rowEl) {
-    rowEl.setPointerCapture(e.pointerId);
-
-    // Ghost that follows the cursor
-    const rowRect = rowEl.getBoundingClientRect();
+    // Use document-level listeners (not setPointerCapture on rowEl) so that
+    // moving rowEl in the DOM during onUp does not break subsequent drags.
+    const rowRect     = rowEl.getBoundingClientRect();
     const dragOffsetY = e.clientY - rowRect.top;
 
+    // Floating ghost clone that follows the cursor
     const ghost = rowEl.cloneNode(true);
     ghost.style.cssText = [
       'position:fixed',
       'pointer-events:none',
       'z-index:1000',
-      'width:'  + rowRect.width  + 'px',
-      'left:'   + rowRect.left   + 'px',
+      'width:'  + rowRect.width + 'px',
+      'left:'   + rowRect.left  + 'px',
       'top:'    + (e.clientY - dragOffsetY) + 'px',
       'opacity:0.85',
       'background:white',
       'border-radius:5px',
-      'box-shadow:0 4px 14px rgba(0,0,0,0.18)',
+      'box-shadow:0 4px 14px rgba(0,0,0,0.2)',
       'padding:4px 5px',
       'display:flex',
       'align-items:center',
@@ -486,17 +582,17 @@ class DiagramSim {
     ].join(';');
     document.body.appendChild(ghost);
 
-    // Insertion indicator bar
+    // Green insertion indicator bar
     const indicator = document.createElement('div');
     indicator.className = 'reorder-indicator';
 
     rowEl.classList.add('dragging');
-    let dropTarget = null; // row to insert before (null = append)
+    let dropTarget = null; // label-row to insert before; null = append at end
 
     const onMove = (mv) => {
       ghost.style.top = (mv.clientY - dragOffsetY) + 'px';
 
-      // All rows except the one being dragged
+      // Siblings = all rows except the one being dragged
       const siblings = [...this.labelPanel.querySelectorAll('.label-row')]
         .filter(r => r !== rowEl);
 
@@ -509,7 +605,6 @@ class DiagramSim {
         }
       }
 
-      // Move indicator into position
       if (dropTarget) {
         this.labelPanel.insertBefore(indicator, dropTarget);
       } else {
@@ -518,38 +613,62 @@ class DiagramSim {
     };
 
     const onUp = () => {
-      rowEl.removeEventListener('pointermove', onMove);
-      rowEl.removeEventListener('pointerup',   onUp);
+      document.removeEventListener('pointermove', onMove);
+      document.removeEventListener('pointerup',   onUp);
 
       ghost.remove();
       indicator.remove();
       rowEl.classList.remove('dragging');
 
-      // Reinsert the row at the drop position
+      // Move the row to its new position
       if (dropTarget) {
         this.labelPanel.insertBefore(rowEl, dropTarget);
       } else {
         this.labelPanel.appendChild(rowEl);
       }
 
-      // Sync this.data.callouts order to match the new DOM order
-      const domOrder = [...this.labelPanel.querySelectorAll('.label-row')];
-      this.data.callouts = domOrder.map(r =>
-        this.data.callouts.find(c => c.id == r.dataset.id)
-      );
+      // Renumber every row and marker by their new DOM position (1-based).
+      // This updates ids, displayed numbers, dataset attributes, and both Maps.
+      const domRows      = [...this.labelPanel.querySelectorAll('.label-row')];
+      const newMarkers   = new Map();
+      const newLabelRows = new Map();
 
-      // Rebuild labelRows map to match new order
-      this.labelRows.clear();
-      for (const r of domOrder) {
-        this.labelRows.set(parseInt(r.dataset.id), r);
-      }
+      domRows.forEach((row, idx) => {
+        const oldId     = parseInt(row.dataset.id);
+        const newId     = idx + 1;
+        const callout   = this.data.callouts.find(c => c.id === oldId);
+        const markerBtn = this.markers.get(oldId);
+
+        // Update the data model
+        callout.id = newId;
+
+        // Update the label row DOM
+        row.dataset.id = String(newId);
+        row.querySelector('.label-num').textContent = newId;
+        const textSpan = row.querySelector('.label-text');
+        if (textSpan) textSpan.dataset.id = String(newId);
+
+        // Update the marker dot on the image
+        markerBtn.dataset.id  = String(newId);
+        markerBtn.textContent = String(newId);
+        markerBtn.setAttribute('aria-label', callout.label);
+
+        newMarkers.set(newId, markerBtn);
+        newLabelRows.set(newId, row);
+      });
+
+      // Keep data.callouts sorted to match sequential ids
+      this.data.callouts.sort((a, b) => a.id - b.id);
+      this.markers   = newMarkers;
+      this.labelRows = newLabelRows;
 
       this.drawLeaders();
       this.updateJSONOutput();
     };
 
-    rowEl.addEventListener('pointermove', onMove);
-    rowEl.addEventListener('pointerup',   onUp);
+    // Document-level listeners track the pointer even outside the panel
+    document.addEventListener('pointermove', onMove);
+    document.addEventListener('pointerup',   onUp);
   }
 
   startDrag(e, callout, markerEl) {
