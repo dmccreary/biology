@@ -35,6 +35,7 @@ nav:
     - Animal Cell MicroSim: sims/animal-cell/index.md
     - Atomic Structure Explorer: sims/atomic-structure-explorer/index.md
     - Cell Membrane — Fluid Mosaic Model: sims/cell-membrane/index.md
+    - Chemical Bond Visualizer: sims/chemical-bond-visualizer/index.md
     - Chemical Equation Rendering Pipeline: sims/chemical-equation-rendering/index.md
     - Chi-Square Test Calculator: sims/chi-square-calculator/index.md
     - Chloroplast & Light Reactions (Thylakoid Membrane): sims/chloroplast/index.md
@@ -44,6 +45,8 @@ nav:
     - Plant Cell Drawing: sims/plant-cell/index.md
     - Scientific Method Workflow: sims/scientific-method/index.md
     - Standard Deviation Visualization: sims/standard-deviation/index.md
+
+
 
 
 

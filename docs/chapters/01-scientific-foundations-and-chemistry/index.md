@@ -333,7 +333,7 @@ Electrons occupy discrete **electron shells** (also called energy levels) surrou
 
 #### Diagram: Atomic Structure Explorer MicroSim
 
-<iframe src="../../sims/atomic-structure-explorer/main.html" width="100%" height="560" scrolling="no"></iframe>
+<iframe src="../../sims/atomic-structure-explorer/main.html" width="100%" height="540" scrolling="no"></iframe>
 
 *[View Fullscreen](../../sims/atomic-structure-explorer/main.html)*
 
