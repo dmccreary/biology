@@ -21,16 +21,40 @@ nav:
 
   - MicroSims:
     - List of MicroSims: sims/index.md
+    - Cell Membrane: sims/cell-membrane/index.md
+    - Chemical Equation Rendering: sims/chemical-equation-rendering/index.md
+    - Chloroplast & Light Reactions: sims/chloroplast/index.md
     - DNA Double Helix: sims/dna-double-helix/index.md
     - Mitochondria: sims/mitochondria/index.md
     - Neuron Structure: sims/neuron-structure/index.md
     - Simple Animal Cell: sims/animal-cell/index.md
     - Simple Plant Cell: sims/plant-cell/index.md
-    - Cell Membrane: sims/cell-membrane/index.md
-    - Chloroplast & Light Reactions: sims/chloroplast/index.md
     - Mitochondria & Electron Transport Chain: sims/mitochondria/index.md
     - Neuron Structure: sims/neuron-structure/index.md
-    - Chemical Equation Rendering: sims/chemical-equation-rendering/index.md
+    - Scientific Method: sims/scientific-method/index.md
+
+  - Chapters:
+    - Overview: chapters/index.md
+    - 1. Scientific Foundations and Atomic Chemistry: chapters/01-scientific-foundations-and-chemistry/index.md
+    - 2. Water, pH, and Organic Chemistry: chapters/02-water-ph-and-organic-chemistry/index.md
+    - 3. Biological Macromolecules: chapters/03-biological-macromolecules/index.md
+    - 4. Cell Organization and Organelles: chapters/04-cell-organization-and-organelles/index.md
+    - 5. Cell Membranes and Transport: chapters/05-cell-membranes-and-transport/index.md
+    - 6. Thermodynamics and Enzyme Kinetics: chapters/06-thermodynamics-and-enzymes/index.md
+    - 7. Photosynthesis: chapters/07-photosynthesis/index.md
+    - 8. Cellular Respiration and Fermentation: chapters/08-cellular-respiration/index.md
+    - 9. Cell Signaling and Feedback: chapters/09-cell-signaling-and-feedback/index.md
+    - 10. The Cell Cycle, Mitosis, and Cancer: chapters/10-cell-cycle-mitosis-and-cancer/index.md
+    - 11. Meiosis and Mendelian Genetics: chapters/11-meiosis-and-mendelian-genetics/index.md
+    - 12. Non-Mendelian and Chromosomal Genetics: chapters/12-non-mendelian-and-chromosomal-genetics/index.md
+    - 13. The Central Dogma: chapters/13-central-dogma-replication-and-protein-synthesis/index.md
+    - 14. Mutations, Gene Regulation, and Biotechnology: chapters/14-mutations-gene-regulation-and-biotechnology/index.md
+    - 15. Evidence for Evolution: chapters/15-evidence-for-evolution/index.md
+    - 16. Population Genetics and Hardy-Weinberg: chapters/16-population-genetics-and-hardy-weinberg/index.md
+    - 17. Speciation, Phylogenetics, and Macroevolution: chapters/17-speciation-phylogenetics-and-macroevolution/index.md
+    - 18. Population Ecology and Life History: chapters/18-population-ecology-and-life-history/index.md
+    - 19. Community Ecology and Species Interactions: chapters/19-community-ecology-and-species-interactions/index.md
+    - 20. Ecosystem Ecology and Conservation: chapters/20-ecosystem-ecology-and-conservation/index.md
 
   - License: license.md
 

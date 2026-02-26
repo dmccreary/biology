@@ -196,58 +196,81 @@ $\ce{H2O}$, $\ce{CO2}$, $\ce{ATP -> ADP + P_i}$
 
 ## Chapter Content Guidelines
 
-### Complex Diagrams and Biological Illustrations
+### Diagrams in Chapters — Always Use MicroSim Iframes
 
-Biology textbooks require many complex illustrations — cell cross-sections, organelle diagrams, molecular pathways, mitosis stages, phylogenetic trees, ecosystem energy flows, and more. These cannot be rendered as simple text or tables.
+Every multi-callout biological diagram in a chapter **must** be an interactive
+MicroSim, not a static image or a `<details>` placeholder block.
+**Never use `<details>` blocks for biological diagrams — use the MicroSim workflow.**
 
-Whenever a chapter section would benefit from a detailed biological illustration, include a `<details>` block using this pattern:
+**Decision rule:**
 
-````markdown
-<details>
-<summary>Image Description</summary>
-**Figure X.X — Animal Cell Cross-Section**
+| Content | Action |
+|---------|--------|
+| Cell organelle diagrams | MicroSim (interactive) |
+| Molecular structures (DNA, ATP, proteins) | MicroSim (interactive) |
+| Metabolic pathways (ETC, Calvin cycle, glycolysis) | MicroSim (interactive) |
+| Neuron / synapse anatomy | MicroSim (interactive) |
+| Mitosis / meiosis stage diagrams | MicroSim (interactive) |
+| Signal transduction pathway maps | MicroSim (interactive) |
+| Ecosystem / food web diagrams | MicroSim (interactive) |
+| Phylogenetic trees with labeled clades | MicroSim (interactive) |
+| Simple data tables or text comparisons | Markdown table — no sim needed |
+| Conceptual relationships (2–4 items) | Prose or bullet list — no sim needed |
 
-**Subject:** A detailed cross-section of a eukaryotic animal cell.
+### Diagrams Already Built
 
-**Key elements to illustrate:**
-- Plasma membrane (phospholipid bilayer) — labeled at the cell boundary
-- Nucleus with visible nuclear envelope, nuclear pores, and nucleolus inside
-- Rough ER — studded with ribosomes, connected to the nuclear envelope
-- Smooth ER — smooth membrane network near the Golgi
-- Golgi apparatus — stacked, flattened cisternae with vesicles budding off
-- Mitochondria (2–3 shown) — double membrane with visible cristae, labeled matrix
-- Lysosomes — small vesicles near Golgi
-- Ribosomes — free in cytoplasm and attached to rough ER
-- Cytoskeleton — microtubule and microfilament traces through cytoplasm
-- Centrioles — near nucleus, shown as paired cylinders
+The following MicroSim interactive diagrams exist in `docs/sims/`. **Always embed
+these via iframe rather than creating a duplicate sim.** Check this list first before
+creating any new diagram sim.
 
-**Callout labels required for each structure listed above.**
+| Sim directory | Topic covered | Callout count |
+|---------------|---------------|---------------|
+| `animal-cell` | Eukaryotic animal cell organelles | 13 |
+| `plant-cell` | Eukaryotic plant cell organelles | 14 |
+| `cell-membrane` | Fluid mosaic model, membrane proteins, transport | 12 |
+| `dna-double-helix` | DNA double helix, base pairing, strand directionality | 10 |
+| `chloroplast` | Chloroplast structure, thylakoid, light reactions | 12 |
+| `mitochondria` | Mitochondrial structure + ETC complexes I–V | 15 |
+| `neuron-structure` | Multipolar neuron anatomy, synapse ultrastructure | 13 |
 
-**Style:** Biological textbook illustration, clean line art with light color fills,
-white background, all labels connected to structures with thin leader lines.
-Suitable for AP Biology high school level.
-</details>
-````
+**Iframe path from a chapter page** — chapter files live at
+`docs/chapters/unit-X/chapter-name/index.md` (three levels deep from `docs/`),
+so the relative path to any sim is `../../../sims/<sim-name>/main.html`.
 
-**When to use image descriptions:**
+### Embedding an Existing Diagram in a Chapter
 
-| Content | Use image description? |
-|---------|----------------------|
-| Cell organelle diagrams | Always |
-| Molecular structures (DNA, ATP, proteins) | Always |
-| Metabolic pathways (ETC, Calvin cycle, glycolysis) | Always |
-| Mitosis / meiosis stage diagrams | Always |
-| Signal transduction pathway maps | Always |
-| Ecosystem / food web diagrams | Always |
-| Phylogenetic trees with labeled clades | Always |
-| Simple data tables or text comparisons | No — use markdown table |
-| Conceptual relationships expressible as text | No — use prose or bullet list |
+```markdown
+## Neuron Structure
 
-**Callout requirements:** Every image description must list each labeled structure explicitly. Do not write "label the main parts" — enumerate every callout by name so the illustrator (human or AI) has unambiguous targets. Include spatial cues where helpful ("located in the upper-left", "shown as a double membrane").
+<iframe src="../../../sims/neuron-structure/main.html" height="730" width="100%" scrolling="no"></iframe>
 
-**Caption format:** Use `Figure [unit].[chapter].[number] — Descriptive Title` (e.g., `Figure 3.2.1 — The Electron Transport Chain`).
+*[View Fullscreen](../../../sims/neuron-structure/main.html)*
 
-**Image generation prompts — no captions:** Never include a figure caption instruction inside a text-to-image prompt. Captions are added in the markdown file as text below the `<img>` tag, not embedded in the image itself. Do not write lines like `Figure caption (below illustration...)` or `Caption: Figure X.X — ...` in any image generation prompt.
+The diagram above shows the 13 labeled structures of a multipolar motor neuron,
+from dendrites through the myelinated axon to the synaptic terminals.
+Use **Explore mode** to read about each structure, or switch to **Quiz mode**
+to test yourself.
+```
+
+Rules for iframe embeds in chapters:
+- Never add a `style` attribute to the `<iframe>` element
+- Always include `scrolling="no"`
+- Height = image natural height (~900 px for landscape 4:3) + ~160 px infobox = **~730 px** for standard sims (adjust if the sim's own `index.md` uses a different height)
+- Add a `[View Fullscreen](...)` link immediately after the iframe
+- Write 2–4 sentences of prose around the iframe — do not just drop the iframe with no context
+
+### When a Chapter Needs a New Diagram
+
+If the chapter topic requires a diagram not in the "Already Built" list above,
+create the full MicroSim **before** writing the chapter content that references it.
+Follow the Step-by-Step Build Process below, then embed the new sim via iframe in
+the chapter markdown.
+
+Add the new sim to `mkdocs.yml` nav under the MicroSims section.
+
+**Caption format for figure references in prose:** `Figure [unit].[chapter].[number] — Descriptive Title`
+(e.g., `Figure 3.2.1 — The Electron Transport Chain`). Reference figures in prose but do not
+embed captions in images themselves.
 
 ### Interactive Diagrams
 
@@ -292,19 +315,59 @@ Use this checklist whenever creating a new interactive diagram sim.
 
 #### Step 2 — Write the image generation prompt
 
-Create `docs/sims/<sim-name>/image-prompt.md` with a detailed description for the
-text-to-image model.  **Rules:**
+Create `docs/sims/<sim-name>/image-prompt.md` with a detailed, unambiguous description
+for the text-to-image model. A high-quality prompt produces an image that needs minimal
+retouching and has clear, non-overlapping landing zones for every callout marker.
 
-- **No text of any kind in the image.** Explicitly state: "No text, labels, arrows,
-  callout lines, or annotation marks anywhere in the image."
-- **No figure captions.** Captions belong in the markdown file, never in the image.
-- Request **distinct colors per structure** so they are identifiable without labels.
-- Request **clear landing zones** around each structure so marker dots do not overlap
-  neighbors.
-- Specify the aspect ratio (landscape 4:3 is standard), resolution (1200×900 px), and
-  style ("biological textbook illustration, clean line art with light color fills").
-- List every structure that must be visible and identify any that must be connected
-  (e.g., "rough ER visually connects to the nuclear envelope").
+**Mandatory rules (non-negotiable):**
+
+- **No text of any kind in the image.** State this explicitly: "No text, labels,
+  numbers, arrows, callout lines, leader lines, or annotation marks anywhere in the
+  image." Repeat this at the top AND bottom of the prompt.
+- **No figure captions, scale bars, or legends** — these live in the markdown file.
+- **No gradient fills** that blur structure boundaries or obscure landing zones.
+- **No artistic flourishes** (decorative backgrounds, bokeh, photorealistic lighting)
+  that make it hard to place marker dots precisely.
+
+**Color and structure requirements:**
+
+- Assign a **distinct, named hex color** to every labeled structure. The same hex
+  value must appear in the `data.json` `"color"` field so the calibrator can match
+  label to structure instantly during edit mode.
+- Colors must differ by enough hue, lightness, or saturation to be distinguishable
+  without labels. Do not use two shades of the same hue for adjacent structures.
+- Request **clear landing zones**: each structure must occupy enough image area that
+  a 30–40 px circular marker dot can be placed on it without touching neighboring
+  structures. State minimum landing zone size explicitly for small structures.
+
+**Spatial layout requirements:**
+
+- Specify **exactly where** each major structure should appear in the image using
+  compass directions, thirds, or clock positions (e.g., "soma in the left third,
+  axon running horizontally through the center, terminals in the right quarter").
+- Identify all **structural connections** that must be visually explicit (e.g.,
+  "rough ER visually connects to the nuclear envelope", "axon hillock is a distinct
+  cone-shaped narrowing between soma and axon").
+- For cross-sections: specify which structures are inside/outside, which membranes
+  wrap which compartments, and how many layers are visible.
+- For pathways: specify the left-to-right or top-to-bottom flow order.
+
+**Technical specifications (every prompt must include):**
+
+- Aspect ratio: **landscape 4:3** (standard for all biology diagram sims)
+- Resolution: **1200 × 900 px**
+- Style: **"biological textbook illustration, clean line art with light color fills,
+  white background, AP Biology high school level"**
+- List every structure to be visible, in order of visual prominence
+- Note any structures that must be visible inside other structures (nested anatomy)
+
+**Per-structure prompt block (use this format for each structure):**
+
+```
+- **[Structure name]** — [shape and visual appearance]; [location in the image];
+  color: [hex or descriptive color]. Must have at least [N] px of clear,
+  non-overlapping visual space for a callout marker.
+```
 
 #### Step 3 — Create the sim directory and files
 
@@ -375,7 +438,8 @@ docs/sims/<sim-name>/
 </html>
 ```
 
-**`data.json` template** — one entry per callout, all coordinates placeholder `50, 50`:
+**`data.json` template** — one entry per callout, all coordinates placeholder `50, 50`.
+Every field shown is required (except `ap_tip`, which is omitted if not AP-testable):
 
 ```json
 {
@@ -389,28 +453,49 @@ docs/sims/<sim-name>/
       "x": 50,
       "y": 50,
       "radius": 3.5,
-      "description": "Full explanation for Explore mode infobox.",
-      "ap_tip": "AP exam tip or common misconception (optional — omit key if none)."
+      "color": "#F5A623",
+      "hint": "1–2 sentence visual description and location in the image for the calibrator.",
+      "description": "3–5 sentence explanation: what it is, physical characteristics, function, how it relates to neighboring structures. AP Biology reading level.",
+      "ap_tip": "2–3 sentences: common misconception, exam question format, analogy to another AP Biology system."
     }
   ]
 }
 ```
 
-Field reference:
-- `x`, `y` — percentage of image width/height (0–100), not pixels
-- `radius` — clickable hit zone as % of image width (3–6 is typical)
-- `ap_tip` — optional; omit the key entirely if not needed
+**Field reference and quality standards:**
+
+- `x`, `y` — percentage of image width/height (0–100), not pixels. Set to `50, 50`
+  as a placeholder; calibrate in edit mode after the image is generated.
+- `radius` — clickable hit zone as % of image width. Match to structure size:
+  - 3.0 — very small structures (single protein, narrow gap)
+  - 3.5 — small structures (small organelle, thin membrane layer)
+  - 4.0 — medium structures (mid-size organelle, short process)
+  - 5.0 — large structures (nucleus, soma, large organelle interior)
+- `label` — the canonical biological name used in AP Biology. Capitalize only the
+  first word (or proper nouns). Match exactly the name used in `index.md` section headings.
+- `description` — **required, 3–5 sentences** covering: (1) what the structure is
+  and its physical characteristics; (2) its specific biological function; (3) how it
+  interacts with adjacent structures or fits into the pathway/process. Write at
+  AP Biology reading level (rigorous but accessible to high school students). Include
+  relevant molecules, ions, or numerical values where appropriate.
+- `ap_tip` — **required for all AP-testable structures**; omit only for purely
+  anatomical landmarks with no exam relevance. Write 2–3 sentences covering:
+  (1) the most common AP exam misconception or trick question involving this structure;
+  (2) the exam question format (e.g., "Know that..."); (3) a useful analogy to another
+  system covered in AP Biology (e.g., chloroplast vs. mitochondria parallels). The
+  `ap_tip` box renders in amber — use it for genuine exam strategy, not general facts.
+- `color` — **required for every callout**. Use the hex color that matches the
+  dominant color of the structure as it appears in the generated image. This must
+  match the color specified in `image-prompt.md` for that structure. Shown as a
+  filled color swatch in edit mode for quick visual matching during calibration.
+- `hint` — **required for every callout**. A 1–2 sentence description of the
+  structure's visual appearance AND its location within the image
+  (e.g., `"pale cream elliptical segments wrapping the yellow axon, between two dark
+  pinch points, in the center-right of the image"`). Shown as italic sub-text in edit
+  mode and appended to the live coordinate readout while dragging. Precise hints
+  dramatically reduce calibration time.
 - `showNumbers` — optional boolean (default `true`); set to `false` to display plain
-  dots instead of numbered circles on both the image markers and the label panel.
-  The quiz mode always shows `?` on unknown markers regardless of this setting.
-- `color` — optional hex color (e.g. `"#F5A623"`); shown as a filled color swatch
-  in edit mode next to the label row. Use the dominant color of the structure as it
-  appears in the generated image so the calibrator can quickly match label to structure.
-- `hint` — optional short string describing the visual appearance and location
-  (e.g. `"gold flat ring-shaped molecule tucked between phospholipid tails"`).
-  Shown as italic sub-text under the label row in edit mode, and appended to the
-  live coordinate readout while dragging. Always populate both `color` and `hint`
-  for any diagram where structures look visually similar or are hard to distinguish.
+  dots instead of numbered circles. The quiz mode always shows `?` regardless.
 - `layout` — optional string (`"side-panel"` or `"top-bottom"`); default is
   `"side-panel"`. Use `"top-bottom"` for images with a horizontal structure
   (e.g. cell membrane cross-sections) where the side panel produces tangled leader lines.
