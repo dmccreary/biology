@@ -58,7 +58,7 @@ in the [course description](../../course-description.md):
 ---
 
 !!! mascot-welcome "Gregor Welcomes You!"
-    <img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Gregor welcomes you">
+    <img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Gregor welcomes you"/>
     Welcome to AP Biology, investigators! I'm Gregor the Tree Frog, and I'll be guiding you through this course. Before we can understand how life works at any level — from a single protein to an entire ecosystem — we need two fundamental tools: a rigorous method for asking questions about nature, and a solid grasp of the atoms and chemical bonds that make biology possible. These aren't just preliminaries to "get through"; they are the lens through which every chapter that follows will make sense. Let's investigate!
 
 ## Introduction
@@ -77,56 +77,22 @@ This chapter is organized in two major parts. Part 1 covers the process of scien
 
 The scientific method is an iterative, self-correcting process for building reliable knowledge about the natural world. It is not a rigid checklist performed in one direction, but a cycle of observation, inference, testing, and refinement. In AP Biology, you will apply these steps in laboratory investigations, analyze data from field studies, and evaluate claims made in the scientific literature.
 
-The method is anchored in **empiricism** — the idea that knowledge must ultimately be grounded in observation and measurement. No matter how elegant a theory may be, it must make testable predictions that can be confirmed or refuted by gathering data.
+Below is a workflow of the scientific method.  Note that it is not a single pass.  There can be many loops in the scientific method.
 
-The following table summarizes the key steps of the scientific method as practiced in biology:
+#### Diagram: Scientific Method
 
-| Step | Description | Example (Plant Growth Study) |
-|------|-------------|------------------------------|
-| 1. Observation | Notice a phenomenon or pattern in nature | Plants near the window grow taller than those farther away |
-| 2. Question | Formulate a specific, answerable question | Does light intensity affect the rate of plant stem elongation? |
-| 3. Hypothesis | State a falsifiable, testable prediction | If light intensity increases, then stem elongation rate will increase |
-| 4. Experiment | Design and conduct a controlled test | Grow identical seedlings under three light intensities for two weeks |
-| 5. Data Analysis | Organize, graph, and apply statistics to results | Calculate mean stem length and standard deviation for each group |
-| 6. Conclusion | Evaluate hypothesis against data; communicate findings | Stem elongation increased with light intensity; hypothesis supported |
-
-### Hypothesis Testing and the Null Hypothesis
-
-A **hypothesis** in science is not a guess — it is a specific, falsifiable prediction derived from prior observation or theory. A well-formed hypothesis specifies both the expected direction and the mechanism of a relationship. Notice the structure: "If [independent variable changes in this way], then [dependent variable will respond in this way], because [mechanistic reasoning]."
-
-In statistical testing, biologists work with two complementary hypotheses. The **research hypothesis** (also called the alternative hypothesis, $H_a$) states that a real relationship or difference exists. The **null hypothesis** ($H_0$) states that any observed difference is due to chance alone — that the independent variable has no effect. Statistical tests are designed to evaluate the probability that the null hypothesis is true given the observed data. When that probability falls below a threshold (typically $p < 0.05$ in biology), we **reject the null hypothesis** and conclude that the relationship is statistically significant.
-
-!!! mascot-thinking "Key Insight: Falsifiability"
-    Every scientific hypothesis must be falsifiable — meaning it must be possible, in principle, to obtain evidence that would prove it wrong. A claim like "some unknown force guides evolution" is not falsifiable and therefore not scientific. When you write hypotheses in AP Biology labs, always ask yourself: "What result would convince me my hypothesis is wrong?" If you can't answer that question, revise your hypothesis.
-
-### Controlled Experiments: Variables and Controls
-
-The power of a controlled experiment lies in its ability to isolate the effect of a single variable while holding all other conditions constant. This isolation allows us to draw a causal conclusion: the independent variable caused the change in the dependent variable.
-
-Three categories of variables must be understood and correctly managed in any experiment:
-
-| Variable Type | Definition | Example |
-|---------------|------------|---------|
-| **Independent variable** | The factor deliberately manipulated by the experimenter | Light intensity (e.g., 100, 500, 1000 lux) |
-| **Dependent variable** | The outcome measured to detect an effect | Stem elongation (mm per day) |
-| **Controlled variables** | All other factors held constant across groups | Temperature, water, soil type, pot size, plant species |
-
-A controlled experiment must include at least two groups: the **experimental group** (exposed to the independent variable) and the **control group** (not exposed, or exposed to the baseline condition). The control group provides the reference point against which the effect of the independent variable is measured. Without a control, it is impossible to distinguish the effect of the variable of interest from background variation.
-
-**Replication** — performing the experiment on multiple independent subjects per group — is essential for statistical validity. A single plant responding to high light intensity could be an outlier. Ten plants showing the same response provides much stronger evidence.
-
-#### Diagram: Scientific Method Workflow
-
-<iframe src="../../sims/scientific-method-workflow/main.html" width="100%" height="500" scrolling="no"></iframe>
-
-*[View Fullscreen](../../sims/scientific-method-workflow/main.html)*
+<iframe src="../../sims/scientific-method/main.html" width="100%" height="1650px" scrolling="no"></iframe>
+[View the Scientific Method Fullscreen](../../sims/scientific-method/main.html)
 
 <details markdown="1">
-<summary>Scientific Method Workflow</summary>
+<summary>Scientific Method</summary>
+
+Note: the first version of this microsim was copied from the Introduction to Physics course, so the following specification was not used.  The Mermaid guide was used.
+
 Type: workflow
-**sim-id:** scientific-method-workflow<br/>
-**Library:** p5.js<br/>
-**Status:** Specified
+**sim-id:** scientific-method<br/>
+**Library:** Mermaid<br/>
+**Status:** Complete
 
 Bloom Level: Understand (L2)
 Bloom Verb: explain
@@ -159,10 +125,48 @@ Interactive features:
 - Active (hovered) node glows slightly brighter
 - The revision loop animates as a pulsing dashed orange line when the page loads, drawing student attention to the iterative nature of science
 
-Canvas: 700 × 500 px responsive — must redraw on window resize
+Canvas: 600 × 1650 px responsive — must redraw on window resize
 </details>
 
----
+The scientific method is anchored in **empiricism** — the idea that knowledge must ultimately be grounded in observation and measurement. No matter how elegant a theory may be, it must make testable predictions that can be confirmed or refuted by gathering data.
+
+The following table summarizes the key steps of the scientific method as practiced in biology:
+
+| Step | Description | Example (Plant Growth Study) |
+|------|-------------|------------------------------|
+| 1. Observation | Notice a phenomenon or pattern in nature | Plants near the window grow taller than those farther away |
+| 2. Question | Formulate a specific, answerable question | Does light intensity affect the rate of plant stem elongation? |
+| 3. Hypothesis | State a falsifiable, testable prediction | If light intensity increases, then stem elongation rate will increase |
+| 4. Experiment | Design and conduct a controlled test | Grow identical seedlings under three light intensities for two weeks |
+| 5. Data Analysis | Organize, graph, and apply statistics to results | Calculate mean stem length and standard deviation for each group |
+| 6. Conclusion | Evaluate hypothesis against data; communicate findings | Stem elongation increased with light intensity; hypothesis supported |
+
+### Hypothesis Testing and the Null Hypothesis
+
+A **hypothesis** in science is not a guess — it is a specific, falsifiable prediction derived from prior observation or theory. A well-formed hypothesis specifies both the expected direction and the mechanism of a relationship. Notice the structure: "If [independent variable changes in this way], then [dependent variable will respond in this way], because [mechanistic reasoning]."
+
+In statistical testing, biologists work with two complementary hypotheses. The **research hypothesis** (also called the alternative hypothesis, $H_a$) states that a real relationship or difference exists. The **null hypothesis** ($H_0$) states that any observed difference is due to chance alone — that the independent variable has no effect. Statistical tests are designed to evaluate the probability that the null hypothesis is true given the observed data. When that probability falls below a threshold (typically $p < 0.05$ in biology), we **reject the null hypothesis** and conclude that the relationship is statistically significant.
+
+!!! mascot-thinking "Key Insight: Falsifiability"
+    <img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Gregor thinking"/>
+
+    Every scientific hypothesis must be falsifiable — meaning it must be possible, in principle, to obtain evidence that would prove it wrong. A claim like "some unknown force guides evolution" is not falsifiable and therefore not scientific. When you write hypotheses in AP Biology labs, always ask yourself: "What result would convince me my hypothesis is wrong?" If you can't answer that question, revise your hypothesis.
+
+### Controlled Experiments: Variables and Controls
+
+The power of a controlled experiment lies in its ability to isolate the effect of a single variable while holding all other conditions constant. This isolation allows us to draw a causal conclusion: the independent variable caused the change in the dependent variable.
+
+Three categories of variables must be understood and correctly managed in any experiment:
+
+| Variable Type | Definition | Example |
+|---------------|------------|---------|
+| **Independent variable** | The factor deliberately manipulated by the experimenter | Light intensity (e.g., 100, 500, 1000 lux) |
+| **Dependent variable** | The outcome measured to detect an effect | Stem elongation (mm per day) |
+| **Controlled variables** | All other factors held constant across groups | Temperature, water, soil type, pot size, plant species |
+
+A controlled experiment must include at least two groups: the **experimental group** (exposed to the independent variable) and the **control group** (not exposed, or exposed to the baseline condition). The control group provides the reference point against which the effect of the independent variable is measured. Without a control, it is impossible to distinguish the effect of the variable of interest from background variation.
+
+**Replication** — performing the experiment on multiple independent subjects per group — is essential for statistical validity. A single plant responding to high light intensity could be an outlier. Ten plants showing the same response provides much stronger evidence.
 
 ### Quantitative Reasoning and Statistical Tools
 
@@ -171,10 +175,15 @@ Biology is a quantitative science. Raw data collected from an experiment — a c
 Two statistical measures are central to AP Biology: **standard deviation** and the **chi-square test**. Both will appear throughout the course and on the AP exam.
 
 !!! mascot-encourage "You've Got This!"
-    <img src="../../img/mascot/encouraging.png" class="mascot-admonition-img" alt="Gregor encouraging">
+    <img src="../../img/mascot/encouraging.png" class="mascot-admonition-img" alt="Gregor encouraging"/>
     Statistics can feel intimidating at first — I know that feeling well! But here's the truth: you only need two statistical tools for the entire AP Biology course, and both have a clear biological purpose. Standard deviation tells you how variable your measurements are. Chi-square tells you whether your genetic ratios match what Mendel's laws predict. Master these two tools early and you will have a real advantage on free-response questions.
 
 ### Standard Deviation
+
+#### Diagram: Standard Deviation
+
+<iframe src="../../sims/standard-deviation/main.html" width="100%" height="525px" scrolling="no"></iframe>
+[View the Standard Deviation Visualization MicroSim Fullscreen](../../sims/standard-deviation/main.html)
 
 **Standard deviation** ($s$ or $\sigma$) measures the spread of data around the mean. A small standard deviation indicates that data points cluster tightly around the average; a large standard deviation indicates high variability. In biology, high variability often reflects genuine biological diversity, measurement error, or the influence of uncontrolled variables.
 
@@ -299,6 +308,7 @@ Biology increasingly studies not just individual components but the **systems** 
 **Models in science** are simplified representations of complex phenomena. A model is never a perfect replica of reality — it is a tool for generating predictions that can be tested. Models in biology range from conceptual diagrams (the fluid mosaic model of the cell membrane) to mathematical equations (the Hardy-Weinberg equilibrium equations) to physical structures (the Watson-Crick double helix model). The value of a model is judged by its predictive power: does it correctly predict what we observe when we run new experiments?
 
 !!! mascot-tip "Gregor's Tip"
+    <img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Gregor tip"/>
     On AP free-response questions, you will often be asked to "use a model to predict" or "identify a limitation of this model." The key is to recognize that all models are simplifications. A limitation is something the model leaves out or gets wrong — for example, the Hardy-Weinberg model assumes no mutation, random mating, and infinite population size. Real populations violate all three assumptions, which is exactly why populations evolve!
 
 ---
@@ -538,7 +548,7 @@ This chapter established the conceptual and chemical foundation for everything t
 - Van der Waals forces arise from transient induced dipoles and contribute to protein folding and enzyme-substrate specificity through complementary surface packing.
 
 !!! mascot-celebration "Excellent Work!"
-    <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Gregor celebrating">
+    <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Gregor celebrating"/>
     You've just built the analytical and chemical foundation that underlies every remaining chapter in this course. The scientific method will guide how you design and evaluate experiments. Standard deviation and chi-square will appear again in Unit 5 when we analyze genetic crosses. Covalent bonds, hydrogen bonds, and van der Waals forces will show up in virtually every unit — in water, in macromolecules, in enzymes, in DNA. Every concept we covered here is a tool you'll reach for again. Well done, investigators — onward!
 
 ---

@@ -6,6 +6,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 AP Biology: An Interactive Course — an MkDocs Material intelligent textbook for advanced high school students preparing for the AP Biology exam. The textbook covers 8 College Board units across 375 concepts organized in a dependency graph.
 
+## Development Environment
+
+Assume the user is running `mkdocs serve` in a terminal. When a new MicroSim has been generated, print the URL of the new MicroSim and open it in Chrome:
+
+```bash
+open -a "Google Chrome" "http://127.0.0.1:8000/biology/sims/<sim-name>/main.html"
+```
+
 ## Development Commands
 
 ```bash

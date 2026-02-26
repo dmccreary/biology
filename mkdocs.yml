@@ -32,17 +32,21 @@ nav:
 
   - MicroSims:
     - List of MicroSims: sims/index.md
-    - Cell Membrane: sims/cell-membrane/index.md
-    - Chemical Equation Rendering: sims/chemical-equation-rendering/index.md
-    - Chloroplast & Light Reactions: sims/chloroplast/index.md
-    - DNA Double Helix: sims/dna-double-helix/index.md
-    - Mitochondria: sims/mitochondria/index.md
-    - Neuron Structure: sims/neuron-structure/index.md
-    - Simple Animal Cell: sims/animal-cell/index.md
-    - Simple Plant Cell: sims/plant-cell/index.md
+    - Animal Cell MicroSim: sims/animal-cell/index.md
+    - Cell Membrane — Fluid Mosaic Model: sims/cell-membrane/index.md
+    - Chemical Equation Rendering Pipeline: sims/chemical-equation-rendering/index.md
+    - Chloroplast & Light Reactions (Thylakoid Membrane): sims/chloroplast/index.md
+    - DNA Double Helix Structure: sims/dna-double-helix/index.md
     - Mitochondria & Electron Transport Chain: sims/mitochondria/index.md
     - Neuron Structure: sims/neuron-structure/index.md
-    - Scientific Method: sims/scientific-method/index.md
+    - Plant Cell Drawing: sims/plant-cell/index.md
+    - Scientific Method Workflow: sims/scientific-method/index.md
+    - Standard Deviation: sims/chi-square-calculator/index.md
+    - Standard Deviation Visualization: sims/standard-deviation/index.md
+
+
+
+
 
 
   - Learning Graph:
@@ -101,6 +105,8 @@ extra_css:
 
 extra_javascript:
   - js/extra.js
+  # This configuration file allows us to use the $ and $$ to specify and equation.
+  # We never use backslash due to conflict with the []() Markdown format
   - js/mathjax-config.js
   # For a Biology textbook we use chemistry equations
   # We add the chemical markdown extension to MathJax
