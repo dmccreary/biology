@@ -33,16 +33,19 @@ nav:
   - MicroSims:
     - List of MicroSims: sims/index.md
     - Animal Cell MicroSim: sims/animal-cell/index.md
+    - Atomic Structure Explorer: sims/atomic-structure-explorer/index.md
     - Cell Membrane — Fluid Mosaic Model: sims/cell-membrane/index.md
     - Chemical Equation Rendering Pipeline: sims/chemical-equation-rendering/index.md
+    - Chi-Square Test Calculator: sims/chi-square-calculator/index.md
     - Chloroplast & Light Reactions (Thylakoid Membrane): sims/chloroplast/index.md
     - DNA Double Helix Structure: sims/dna-double-helix/index.md
     - Mitochondria & Electron Transport Chain: sims/mitochondria/index.md
     - Neuron Structure: sims/neuron-structure/index.md
     - Plant Cell Drawing: sims/plant-cell/index.md
     - Scientific Method Workflow: sims/scientific-method/index.md
-    - Standard Deviation: sims/chi-square-calculator/index.md
     - Standard Deviation Visualization: sims/standard-deviation/index.md
+
+
 
 
 
