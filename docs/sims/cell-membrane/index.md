@@ -1,6 +1,6 @@
 # Cell Membrane — Fluid Mosaic Model
 
-<iframe src="main.html" height="620" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="750" width="100%" scrolling="no"></iframe>
 
 [View Fullscreen](main.html)
 

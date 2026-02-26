@@ -21,6 +21,7 @@ nav:
 
   - MicroSims:
     - List of MicroSims: sims/index.md
+    - DNA Double Helix: sims/dna-double-helix/index.md
     - Simple Animal Cell: sims/animal-cell/index.md   
     - Simple Plant Cell: sims/plant-cell/index.md
     - Cell Membrane: sims/cell-membrane/index.md
