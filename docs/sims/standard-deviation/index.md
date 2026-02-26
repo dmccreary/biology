@@ -10,7 +10,7 @@ social:
 
 # Standard Deviation Visualization
 
-<iframe src="main.html" height="525" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="500" width="100%" scrolling="no"></iframe>
 
 [View Fullscreen](main.html){ .md-button .md-button--primary }
 

@@ -267,6 +267,32 @@ Rules for iframe embeds in chapters:
 - Add a `[View Fullscreen](...)` link immediately after the iframe
 - Write 2–4 sentences of prose around the iframe — do not just drop the iframe with no context
 
+### "Return to Lesson Plan" Link — Iframe-Aware Pattern
+
+HTML-page MicroSims that grow vertically (form calculators, tables, step-through tools — anything that is **not** a fixed-height canvas) must include a "Return to Lesson Plan" link that is shown **only** when the page is opened fullscreen, and hidden when embedded inside an iframe.
+
+Use this exact pattern at the bottom of `main.html`, after the main JS `<script>` tag:
+
+```html
+<div id="return-link" style="display:none; padding: 8px 16px;">
+    <a href=".">← Return to Lesson Plan</a>
+</div>
+<script>
+    // Show the link only when running fullscreen, not inside an iframe.
+    if (window.self === window.top) {
+        document.getElementById('return-link').style.display = 'block';
+    }
+</script>
+```
+
+**When to apply this rule:**
+
+| MicroSim type | Return link needed? |
+|---------------|---------------------|
+| Fixed-height canvas (p5.js, Chart.js) | No — canvas height is fixed; no overflow |
+| HTML form / calculator / table (grows vertically) | **Yes — always apply the pattern** |
+| Diagram architecture sims (`diagram.js`) | No — fixed layout |
+
 ### When a Chapter Needs a New Diagram
 
 If the chapter topic requires a diagram not in the "Already Built" list above,

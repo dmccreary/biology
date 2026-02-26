@@ -221,9 +221,9 @@ With 1 degree of freedom and $\chi^2 = 1.33$, the critical value at $p = 0.05$ i
 
 #### Diagram: Chi-Square Test Calculator MicroSim
 
-<iframe src="../../sims/chi-square-calculator/main.html" width="100%" height="550" scrolling="no"></iframe>
+<iframe src="../../sims/chi-square-calculator/main.html" width="100%" height="875" scrolling="no"></iframe>
 
-*[View Fullscreen](../../sims/chi-square-calculator/main.html)*
+*[View the Chi-Square Test Calculator MicroSim Fullscreen](../../sims/chi-square-calculator/main.html)*
 
 <details markdown="1">
 <summary>Chi-Square Test Calculator MicroSim</summary>

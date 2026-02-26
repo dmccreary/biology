@@ -18,6 +18,11 @@
             categories:  ['A_B_ (both dominant)', 'A_bb (A dominant only)', 'aaB_ (B dominant only)', 'aabb (both recessive)'],
             parts:       [9, 3, 3, 1],
             defaults:    [222, 78, 71, 29]
+        },
+        '3:1-reject': {
+            categories:  ['Dominant phenotype', 'Recessive phenotype'],
+            parts:       [3, 1],
+            defaults:    [320, 80]   // χ² ≈ 5.33 > 3.84 → rejects null hypothesis
         }
     };
 
