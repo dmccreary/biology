@@ -8,7 +8,7 @@
 let containerWidth;
 let canvasWidth = 600;
 let drawHeight = 360;
-let controlHeight = 180;
+let controlHeight = 120;
 let canvasHeight = drawHeight + controlHeight;
 let containerHeight = canvasHeight;
 

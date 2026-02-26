@@ -342,7 +342,7 @@ Electrons occupy discrete **electron shells** (also called energy levels) surrou
 Type: microsim
 **sim-id:** atomic-structure-explorer<br/>
 **Library:** p5.js<br/>
-**Status:** Specified
+**Status:** Complete
 
 Bloom Level: Understand (L2)
 Bloom Verb: explain

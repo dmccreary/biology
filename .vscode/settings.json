@@ -4,6 +4,7 @@
         "granum",
         "Gregor",
         "intermembrane",
+        "monohybrid",
         "Photosystem",
         "plastoquinol",
         "Plastoquinone",
@@ -13,6 +14,7 @@
         "thylakoid",
         "thylakoids",
         "transmembrane",
-        "ubiquinone"
+        "ubiquinone",
+        "Waals"
     ]
 }

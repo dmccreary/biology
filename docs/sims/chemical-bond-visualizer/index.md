@@ -11,7 +11,7 @@ quality_score: 0
 
 # Chemical Bond Visualizer
 
-<iframe src="main.html" height="500px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="485px" width="100%" scrolling="no"></iframe>
 
 [Run the Chemical Bond Visualizer MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
