@@ -21,12 +21,13 @@ nav:
 
   - MicroSims:
     - List of MicroSims: sims/index.md
-    - Chloroplast & Light Reactions: sims/chloroplast/index.md
     - DNA Double Helix: sims/dna-double-helix/index.md
-    - Simple Animal Cell: sims/animal-cell/index.md   
+    - Mitochondria: sims/mitochondria/index.md
+    - Simple Animal Cell: sims/animal-cell/index.md
     - Simple Plant Cell: sims/plant-cell/index.md
     - Cell Membrane: sims/cell-membrane/index.md
     - Chloroplast & Light Reactions: sims/chloroplast/index.md
+    - Mitochondria & Electron Transport Chain: sims/mitochondria/index.md
     - Chemical Equation Rendering: sims/chemical-equation-rendering/index.md
 
   - License: license.md
