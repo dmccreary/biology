@@ -1,15 +1,13 @@
 {
   "title": "Cell Membrane — Fluid Mosaic Model",
   "orientation": "landscape",
-  "image": "cell-membrane.png",
-  "layout": "top-bottom",
-  "showNumbers": true,
+  "image": "cell-membrane-horiz.png",
   "callouts": [
     {
       "id": 1,
       "label": "Extracellular Space",
-      "x": 86,
-      "y": 4.9,
+      "x": 5,
+      "y": 11,
       "radius": 5,
       "panel": "top",
       "color": "#E8F4FC",
@@ -44,8 +42,8 @@
     {
       "id": 4,
       "label": "Phospholipid Bilayer",
-      "x": 76,
-      "y": 42.9,
+      "x": 8.9,
+      "y": 57.6,
       "radius": 5,
       "panel": "bottom",
       "color": "#F5A623",
@@ -56,8 +54,8 @@
     {
       "id": 5,
       "label": "Hydrophobic Tail",
-      "x": 94.3,
-      "y": 51.9,
+      "x": 96.8,
+      "y": 52.4,
       "radius": 3.5,
       "panel": "bottom",
       "color": "#D8C8A8",
@@ -68,8 +66,8 @@
     {
       "id": 6,
       "label": "Integral Protein",
-      "x": 87.5,
-      "y": 41.3,
+      "x": 45.7,
+      "y": 48.2,
       "radius": 4,
       "panel": "bottom",
       "color": "#2D7D9A",
@@ -80,8 +78,8 @@
     {
       "id": 7,
       "label": "Receptor Protein",
-      "x": 45.6,
-      "y": 42.8,
+      "x": 66.2,
+      "y": 44.1,
       "radius": 3.5,
       "panel": "top",
       "color": "#C47A7A",
@@ -92,8 +90,8 @@
     {
       "id": 8,
       "label": "Hydrophilic Head",
-      "x": 94.1,
-      "y": 47,
+      "x": 90.3,
+      "y": 48.4,
       "radius": 3.5,
       "panel": "bottom",
       "color": "#F5A623",
@@ -104,8 +102,8 @@
     {
       "id": 9,
       "label": "Carrier Protein",
-      "x": 66.1,
-      "y": 33.5,
+      "x": 56.6,
+      "y": 39,
       "radius": 3.5,
       "panel": "top",
       "color": "#2D7D9A",
@@ -140,8 +138,8 @@
     {
       "id": 12,
       "label": "Intracellular Space",
-      "x": 87.1,
-      "y": 95.2,
+      "x": 90.5,
+      "y": 92.2,
       "radius": 5,
       "panel": "bottom",
       "color": "#F5F0E8",
@@ -161,5 +159,6 @@
       "description": "A transmembrane protein that forms a hydrophilic pore through the bilayer, allowing specific ions or small polar molecules to pass by facilitated diffusion — down their concentration gradient, no energy required. Aquaporins are channel proteins specific to water. Ion channels may be gated (opened or closed by a stimulus) or ungated.",
       "ap_tip": "Channel proteins enable facilitated diffusion — movement DOWN a concentration gradient through a protein, requiring NO ATP. Do not confuse with active transport pumps, which move ions AGAINST their gradient using ATP. Aquaporins are a classic AP example of channel proteins."
     }
-  ]
+  ],
+  "layout": "top-bottom"
 }
