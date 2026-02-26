@@ -715,17 +715,22 @@ class DiagramSim {
       if (dropTarget) this.labelPanel.insertBefore(rowEl, dropTarget);
       else            this.labelPanel.appendChild(rowEl);
 
-      // Renumber all rows by new DOM order
-      const domRows      = [...this.labelPanel.querySelectorAll('.label-row')];
+      // Pass 1 — resolve all old-ID references BEFORE any IDs are changed,
+      // so overlapping IDs during renumbering never cause find() to grab the
+      // wrong callout (the bug that caused reorder results to silently corrupt).
+      const domRows = [...this.labelPanel.querySelectorAll('.label-row')];
+      const entries = domRows.map((row, idx) => ({
+        row,
+        newId:     idx + 1,
+        callout:   this.data.callouts.find(c => c.id === parseInt(row.dataset.id)),
+        markerBtn: this.markers.get(parseInt(row.dataset.id))
+      }));
+
+      // Pass 2 — update everything now that all references are locked in
       const newMarkers   = new Map();
       const newLabelRows = new Map();
 
-      domRows.forEach((row, idx) => {
-        const oldId     = parseInt(row.dataset.id);
-        const newId     = idx + 1;
-        const callout   = this.data.callouts.find(c => c.id === oldId);
-        const markerBtn = this.markers.get(oldId);
-
+      entries.forEach(({ row, newId, callout, markerBtn }) => {
         callout.id     = newId;
         row.dataset.id = String(newId);
         row.querySelector('.label-num').textContent = this.showNumbers ? newId : '';
@@ -863,10 +868,15 @@ class DiagramSim {
     e.stopPropagation();
     markerEl.setPointerCapture(e.pointerId);
 
+    // Capture offset so the marker doesn't snap to the cursor on first move
+    const imgRect0 = this.imgEl.getBoundingClientRect();
+    const offsetX  = callout.x - (e.clientX - imgRect0.left) / imgRect0.width  * 100;
+    const offsetY  = callout.y - (e.clientY - imgRect0.top)  / imgRect0.height * 100;
+
     const onMove = (ev) => {
       const rect = this.imgEl.getBoundingClientRect();
-      const x = Math.round(Math.max(0, Math.min(100, (ev.clientX - rect.left)  / rect.width  * 100)) * 10) / 10;
-      const y = Math.round(Math.max(0, Math.min(100, (ev.clientY - rect.top)   / rect.height * 100)) * 10) / 10;
+      const x = Math.round(Math.max(0, Math.min(100, (ev.clientX - rect.left)  / rect.width  * 100 + offsetX)) * 10) / 10;
+      const y = Math.round(Math.max(0, Math.min(100, (ev.clientY - rect.top)   / rect.height * 100 + offsetY)) * 10) / 10;
 
       callout.x = x;
       callout.y = y;

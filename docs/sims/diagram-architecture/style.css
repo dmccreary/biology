@@ -71,6 +71,7 @@ body {
 #diagram-wrapper {
   position: relative;
   line-height: 0;
+  align-self: start;   /* never stretch beyond image height; keeps markers-layer ≡ image */
 }
 
 #diagram-img {
@@ -115,8 +116,11 @@ body {
 .marker.quiz-unknown { background: #777; cursor: crosshair; }
 .marker.correct      { background: #2A8040; transform: translate(-50%,-50%) scale(1.2); }
 .marker.incorrect    { background: #C02020; animation: shake 0.35s ease; }
-.marker.edit-mode    { background: #C45C2A; cursor: grab; }
-.marker.edit-mode:active { cursor: grabbing; }
+.marker.edit-mode              { background: #C45C2A; cursor: grab; }
+.marker.edit-mode:active       { cursor: grabbing; }
+/* Disable hover-scale and transition during drag calibration */
+.marker.edit-mode,
+.marker.edit-mode:hover        { transform: translate(-50%, -50%); transition: none; }
 
 @keyframes shake {
   0%,100% { transform: translate(-50%,-50%) translateX(0); }
