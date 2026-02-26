@@ -37,6 +37,8 @@ class DiagramSim {
       const res = await fetch('data.json');
       if (!res.ok) throw new Error('HTTP ' + res.status);
       this.data = await res.json();
+      // showNumbers defaults to true when the key is absent
+      this.showNumbers = this.data.showNumbers !== false;
     } catch (err) {
       this.showFatalError('Could not load data.json: ' + err.message);
       return;
@@ -74,7 +76,7 @@ class DiagramSim {
     for (const callout of this.data.callouts) {
       const btn = document.createElement('button');
       btn.className = 'marker';
-      btn.textContent = callout.id;
+      btn.textContent = this.showNumbers ? callout.id : '';
       btn.setAttribute('aria-label', callout.label);
       btn.style.left = callout.x + '%';
       btn.style.top  = callout.y + '%';
@@ -104,7 +106,7 @@ class DiagramSim {
 
       const num = document.createElement('span');
       num.className = 'label-num';
-      num.textContent = callout.id;
+      num.textContent = this.showNumbers ? callout.id : '';
 
       const text = document.createElement('span');
       text.className = 'label-text';
@@ -204,7 +206,7 @@ class DiagramSim {
     // Reset all markers and label rows
     for (const btn of this.markers.values()) {
       btn.className = 'marker';
-      btn.textContent = this.data.callouts.find(c => c.id == btn.dataset.id).id;
+      btn.textContent = this.showNumbers ? this.data.callouts.find(c => c.id == btn.dataset.id).id : '';
       btn.onpointerdown = null;
       btn.onpointerenter = null;
       btn.onpointerleave = null;
@@ -367,7 +369,7 @@ class DiagramSim {
       // Mark the dot
       clickedBtn.classList.remove('quiz-unknown');
       clickedBtn.classList.add('correct');
-      clickedBtn.textContent = target.id;
+      clickedBtn.textContent = this.showNumbers ? target.id : '';
 
       // Brighten the leader line permanently for this callout
       const path = this.leaderLines.get(target.id);
@@ -644,13 +646,13 @@ class DiagramSim {
 
         // Update the label row DOM
         row.dataset.id = String(newId);
-        row.querySelector('.label-num').textContent = newId;
+        row.querySelector('.label-num').textContent = this.showNumbers ? newId : '';
         const textSpan = row.querySelector('.label-text');
         if (textSpan) textSpan.dataset.id = String(newId);
 
         // Update the marker dot on the image
         markerBtn.dataset.id  = String(newId);
-        markerBtn.textContent = String(newId);
+        markerBtn.textContent = this.showNumbers ? String(newId) : '';
         markerBtn.setAttribute('aria-label', callout.label);
 
         newMarkers.set(newId, markerBtn);

@@ -1,0 +1,124 @@
+{
+  "title": "Cell Membrane — Fluid Mosaic Model",
+  "orientation": "landscape",
+  "image": "cell-membrane.png",
+  "callouts": [
+    {
+      "id": 1,
+      "label": "Extracellular Space",
+      "x": 86,
+      "y": 4.9,
+      "radius": 5,
+      "description": "The aqueous environment outside the cell. This is where extracellular signals (hormones, neurotransmitters, growth factors) arrive and bind receptor proteins. The concentration gradients of ions and molecules across the membrane relative to this space drive osmosis, diffusion, and active transport.",
+      "ap_tip": "The extracellular face of the membrane carries the carbohydrate chains (glycocalyx) that identify the cell to the immune system. Signals received here are transduced across the membrane without the signal molecule entering the cell — a principle central to AP Unit 4 (cell communication)."
+    },
+    {
+      "id": 2,
+      "label": "Hydrophobic Tail",
+      "x": 94.3,
+      "y": 51.9,
+      "radius": 3.5,
+      "description": "The two nonpolar fatty-acid chains of the phospholipid. They are repelled by water and cluster together in the interior of the bilayer, away from aqueous environments. Unsaturated tails (with double bonds) have kinks that increase membrane fluidity; saturated tails pack tightly and reduce fluidity.",
+      "ap_tip": "Temperature and tail saturation both affect membrane fluidity. Unsaturated fatty acids (with C=C kinks) keep the membrane fluid at low temperatures. Saturated fatty acids pack tightly, reducing fluidity. Cholesterol buffers both extremes."
+    },
+    {
+      "id": 3,
+      "label": "Hydrophilic Head",
+      "x": 94.1,
+      "y": 47,
+      "radius": 3.5,
+      "description": "The polar, charged head of the phospholipid — a glycerol backbone attached to a phosphate group. It is attracted to water and faces outward toward the aqueous environments on both sides of the membrane (extracellular fluid and cytoplasm).",
+      "ap_tip": "Know the phrase 'hydrophilic heads face water, hydrophobic tails face each other.' The head is polar because of the negatively charged phosphate group, making it compatible with the polar water molecules on either side."
+    },
+    {
+      "id": 4,
+      "label": "Carrier Protein",
+      "x": 50.1,
+      "y": 73.3,
+      "radius": 3.5,
+      "description": "A transmembrane protein that binds a specific solute on one side of the membrane, changes shape (conformation), and releases the solute on the other side. Carrier proteins can work by facilitated diffusion (passive, no energy) or active transport (requires ATP). Unlike channels, they do not form open pores.",
+      "ap_tip": "A carrier protein changes shape to move its solute — this is the key distinction from a channel protein. If the carrier uses ATP and moves a solute AGAINST its gradient, it is an active transport pump (e.g., the Na⁺/K⁺ ATPase). If it moves solutes DOWN their gradient, it is passive facilitated diffusion."
+    },
+    {
+      "id": 5,
+      "label": "Phospholipid Bilayer",
+      "x": 79.8,
+      "y": 37.8,
+      "radius": 5,
+      "description": "The fundamental structure of the plasma membrane — two back-to-back layers of phospholipid molecules. Each molecule has a hydrophilic (water-loving) head and two hydrophobic (water-fearing) fatty-acid tails. The tails of both layers face each other in the interior, creating a hydrophobic core that blocks most water-soluble molecules.",
+      "ap_tip": "The phospholipid bilayer gives membranes selective permeability. Small nonpolar molecules (O₂, CO₂, steroids) pass freely by diffusion; ions and large polar molecules cannot and require protein channels or carriers."
+    },
+    {
+      "id": 6,
+      "label": "Peripheral Protein",
+      "x": 9.4,
+      "y": 38.8,
+      "radius": 3.5,
+      "description": "A protein loosely associated with the surface of the membrane — attached to the head groups of phospholipids or to exposed portions of integral proteins, but not embedded in the hydrophobic core. Found on either the extracellular or intracellular face. Functions include signal transduction, anchoring the cytoskeleton, and enzymatic activity.",
+      "ap_tip": "Peripheral proteins are loosely attached and can be removed without disrupting the bilayer. They are often involved in cell signaling. The AP exam may ask you to distinguish peripheral from integral proteins by their relationship to the hydrophobic core."
+    },
+    {
+      "id": 7,
+      "label": "Receptor Protein",
+      "x": 45.6,
+      "y": 42.8,
+      "radius": 3.5,
+      "description": "A transmembrane protein with an extracellular binding domain shaped to recognize and bind a specific signaling molecule (ligand) such as a hormone or neurotransmitter. Binding triggers a conformational change that activates a signal transduction cascade inside the cell, converting an extracellular signal into an intracellular response.",
+      "ap_tip": "Receptor proteins are at the heart of signal transduction (AP Unit 4). Remember: the signal molecule (first messenger) does NOT need to enter the cell — it binds the receptor, which activates an intracellular pathway. G-protein coupled receptors and receptor tyrosine kinases are two key types tested on the AP exam."
+    },
+    {
+      "id": 8,
+      "label": "Glycolipid",
+      "x": 20,
+      "y": 31.4,
+      "radius": 3.5,
+      "description": "A phospholipid in the outer leaflet of the membrane with one or more sugar chains attached to its hydrophilic head. Like glycoproteins, glycolipids contribute to the glycocalyx and are involved in cell recognition and cell-surface signaling. Found exclusively in the extracellular leaflet.",
+      "ap_tip": "Both glycolipids and glycoproteins have their carbohydrate portions on the extracellular surface only — a key fact for AP. Their sugars make each cell type's surface identity unique, which is why the immune system can distinguish 'self' from 'non-self' cells."
+    },
+    {
+      "id": 9,
+      "label": "Cholesterol",
+      "x": 38.5,
+      "y": 52.7,
+      "radius": 3.5,
+      "description": "A steroid lipid molecule wedged between phospholipids in both leaflets of animal cell membranes. Its rigid ring structure reduces phospholipid movement, stabilizing the membrane. At high temperatures cholesterol prevents the membrane from becoming too fluid; at low temperatures it prevents it from becoming too rigid by keeping the phospholipids from packing too tightly.",
+      "ap_tip": "Cholesterol is a membrane fluidity buffer — it reduces fluidity at high temperatures and prevents solidification at low temperatures. This is important for AP Unit 1 (membrane structure) and Unit 2 (membrane function). Plant and bacterial cell membranes do NOT contain cholesterol; they use other mechanisms to regulate fluidity."
+    },
+    {
+      "id": 10,
+      "label": "Integral Protein",
+      "x": 87.5,
+      "y": 41.3,
+      "radius": 4,
+      "description": "A protein that is permanently embedded in the phospholipid bilayer, typically spanning both leaflets. Also called a transmembrane protein. The portions that sit within the hydrophobic core have nonpolar amino acid side chains; the portions that protrude into aqueous environments have polar or charged side chains.",
+      "ap_tip": "Integral proteins cannot be removed from the membrane without detergents that disrupt the bilayer. Compare to peripheral proteins, which can be removed with high-salt solutions. On the AP exam, channel and carrier proteins are both types of integral proteins."
+    },
+    {
+      "id": 11,
+      "label": "Channel Protein",
+      "x": 30.5,
+      "y": 48.2,
+      "radius": 3.5,
+      "description": "A transmembrane protein that forms a hydrophilic pore through the bilayer, allowing specific ions or small polar molecules to pass by facilitated diffusion — down their concentration gradient, no energy required. Aquaporins are channel proteins specific to water. Ion channels may be gated (opened or closed by a stimulus) or ungated.",
+      "ap_tip": "Channel proteins enable facilitated diffusion — movement DOWN a concentration gradient through a protein, requiring NO ATP. Do not confuse with active transport pumps, which move ions AGAINST their gradient using ATP. Aquaporins are a classic AP example of channel proteins."
+    },
+    {
+      "id": 12,
+      "label": "Glycoprotein",
+      "x": 47.8,
+      "y": 32.6,
+      "radius": 3.5,
+      "description": "An integral membrane protein with one or more branching oligosaccharide (sugar) chains covalently attached to its extracellular domain. The carbohydrate chains form part of the glycocalyx — the cell-surface 'sugar coat' — and participate in cell-cell recognition, immune response, and cell adhesion.",
+      "ap_tip": "Glycoproteins are critical for cell-cell recognition — the basis of immune self/non-self distinction. The ABO blood group antigens are glycoproteins. On the AP exam, carbohydrates are always on the EXTRACELLULAR face of the membrane, never the intracellular face."
+    },
+    {
+      "id": 13,
+      "label": "Intracellular Space",
+      "x": 87.1,
+      "y": 95.2,
+      "radius": 5,
+      "description": "The cytoplasm side of the plasma membrane — the aqueous interior of the cell. The intracellular face is where peripheral proteins often anchor the cytoskeleton to the membrane, where signal transduction cascades are initiated by activated receptors, and where transport proteins release their cargo after crossing the bilayer.",
+      "ap_tip": "The cytoplasmic side of the membrane is where most active transport pumps (like the Na⁺/K⁺ ATPase) hydrolyze ATP, and where second messengers (cAMP, Ca²⁺) carry signals received from the extracellular side. The peripheral proteins here often connect to microfilaments and microtubules."
+    }
+  ]
+}

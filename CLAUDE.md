@@ -274,6 +274,197 @@ JavaScript component handles both Explore and Quiz modes via a mode-toggle butto
 must be named `main.html` — never `index.html`. This is consistent with all p5.js
 MicroSim standards used throughout this project. The MkDocs page file remains `index.md`.
 
+### Biology Diagram MicroSim: Step-by-Step Build Process
+
+Use this checklist whenever creating a new interactive diagram sim.
+
+#### Step 1 — Plan the diagram
+
+1. Choose the biological subject (e.g., "Cell Membrane — Fluid Mosaic Model").
+2. List every structure that will receive a callout. Use the reference table in
+   `docs/learning-graph/sample-biology-diagrams.md` as a starting point.
+3. Decide the layout style. **Side-panel is the default.**
+   - **Side-panel style (default)** — 65/35 grid with image left and numbered label
+     list right, connected by SVG bezier leader lines. Use this for all new sims.
+   - **Floating-marker style (legacy)** — numbered dots float over the image, infobox
+     below. Used only for the original animal-cell sim (`docs/sims/animal-cell/`),
+     which has its own local `diagram.js` and is not shared.
+
+#### Step 2 — Write the image generation prompt
+
+Create `docs/sims/<sim-name>/image-prompt.md` with a detailed description for the
+text-to-image model.  **Rules:**
+
+- **No text of any kind in the image.** Explicitly state: "No text, labels, arrows,
+  callout lines, or annotation marks anywhere in the image."
+- **No figure captions.** Captions belong in the markdown file, never in the image.
+- Request **distinct colors per structure** so they are identifiable without labels.
+- Request **clear landing zones** around each structure so marker dots do not overlap
+  neighbors.
+- Specify the aspect ratio (landscape 4:3 is standard), resolution (1200×900 px), and
+  style ("biological textbook illustration, clean line art with light color fills").
+- List every structure that must be visible and identify any that must be connected
+  (e.g., "rough ER visually connects to the nuclear envelope").
+
+#### Step 3 — Create the sim directory and files
+
+```
+docs/sims/<sim-name>/
+├── main.html         ← thin HTML shell (copy template below)
+├── data.json         ← callout data (copy template below, fill placeholder coords)
+├── <sim-name>.png    ← AI-generated image (no text)
+└── index.md          ← MkDocs page with iframe embed
+```
+
+**`main.html` template** — references shared JS and CSS, never has its own copies:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><!-- Diagram Title --> — Interactive Diagram</title>
+  <link rel="stylesheet" href="../diagram-architecture/style.css">
+</head>
+<body>
+
+<div id="controls">
+  <button class="mode-btn active" id="btn-explore" onclick="sim.setMode('explore')">Explore</button>
+  <button class="mode-btn"        id="btn-quiz"    onclick="sim.setMode('quiz')">Quiz</button>
+  <span id="quiz-score" style="display:none">
+    Score: <strong id="score-val">0</strong> / <strong id="score-total">0</strong>
+  </span>
+</div>
+
+<div id="layout">
+  <svg id="leaders-svg"></svg>
+
+  <div id="diagram-wrapper">
+    <img id="diagram-img" src="<!-- image filename -->.png" alt="<!-- Alt text -->" draggable="false">
+    <div id="markers-layer"></div>
+  </div>
+
+  <div id="label-panel">
+    <!-- label rows injected by diagram.js -->
+  </div>
+</div>
+
+<div id="infobox">
+  <div id="infobox-prompt">Hover over a numbered marker or a label to learn about that structure.</div>
+  <div id="infobox-content">
+    <div id="infobox-label"></div>
+    <div id="infobox-desc"></div>
+    <div id="infobox-ap-tip"></div>
+    <button id="quiz-restart" onclick="sim.restartQuiz()">Try Again</button>
+  </div>
+</div>
+
+<div id="edit-panel">
+  <h3>Edit Mode — drag markers to calibrate positions</h3>
+  <div id="coord-display">Drag a marker to see its live coordinates.</div>
+  <textarea id="json-output" readonly spellcheck="false"></textarea>
+  <div id="edit-actions">
+    <button id="copy-json-btn" onclick="sim.copyJSON()">Copy JSON</button>
+    <span id="copy-confirm"></span>
+  </div>
+</div>
+
+<script src="../diagram-architecture/diagram.js"></script>
+</body>
+</html>
+```
+
+**`data.json` template** — one entry per callout, all coordinates placeholder `50, 50`:
+
+```json
+{
+  "title": "Cell Membrane — Fluid Mosaic Model",
+  "orientation": "landscape",
+  "image": "<sim-name>.png",
+  "callouts": [
+    {
+      "id": 1,
+      "label": "Phospholipid bilayer",
+      "x": 50,
+      "y": 50,
+      "radius": 3.5,
+      "description": "Full explanation for Explore mode infobox.",
+      "ap_tip": "AP exam tip or common misconception (optional — omit key if none)."
+    }
+  ]
+}
+```
+
+Field reference:
+- `x`, `y` — percentage of image width/height (0–100), not pixels
+- `radius` — clickable hit zone as % of image width (3–6 is typical)
+- `ap_tip` — optional; omit the key entirely if not needed
+- `showNumbers` — optional boolean (default `true`); set to `false` to display plain
+  dots instead of numbered circles on both the image markers and the label panel.
+  The quiz mode always shows `?` on unknown markers regardless of this setting.
+
+#### Step 4 — Calibrate callout positions in Edit mode
+
+1. Start the local dev server: `mkdocs serve`
+2. Open the sim directly in the browser:
+   `http://127.0.0.1:8000/biology/sims/<sim-name>/main.html?edit=true`
+3. **Drag each orange marker dot** to the exact structure in the image.
+4. The live coordinate readout shows `x` and `y` while dragging.
+5. **Drag label rows** up/down by their `⠿` handle to reorder them if needed.
+   Labels and markers renumber automatically after each reorder.
+6. Click **Copy JSON** — the full updated `data.json` is copied to the clipboard.
+7. Paste over `docs/sims/<sim-name>/data.json` and save.
+8. Reload `main.html` (without `?edit=true`) to verify normal mode.
+
+Manual coordinate formula if needed: `x = pixel_x / imageWidth * 100`,
+`y = pixel_y / imageHeight * 100`.
+
+#### Step 5 — Verify both modes
+
+Open `main.html` (no `?edit=true`) and check:
+
+- [ ] **Explore mode** — hovering a marker or label row highlights both, shows infobox
+- [ ] **Explore mode** — AP Exam Tip box appears (amber) for callouts that have `ap_tip`
+- [ ] **Quiz mode** — label texts are hidden, markers show `?`
+- [ ] **Quiz mode** — clicking the correct marker reveals label text and shows description
+- [ ] **Quiz mode** — clicking a wrong marker shows red shake animation and "Not quite" text
+- [ ] **Quiz mode** — after all structures answered, confetti animation plays
+- [ ] **Leader lines** — SVG bezier curves redraw correctly after resizing the window
+
+#### Step 6 — Add the MkDocs page
+
+In `docs/sims/<sim-name>/index.md`, embed the sim as an iframe and add descriptive
+text for each structure:
+
+```markdown
+# <Diagram Title>
+
+<iframe src="main.html" height="560" width="100%" scrolling="no"></iframe>
+
+[View Fullscreen](main.html)
+
+## Structure 1 Name
+Brief description...
+```
+
+iframe height guideline: image natural height + ~160 px for the infobox below.
+Never use a `style` attribute on the iframe element; always include `scrolling="no"`.
+
+#### Shared architecture files (do not copy — always reference)
+
+Both files live at `docs/sims/diagram-architecture/` and are shared by every diagram sim:
+
+| File | Purpose |
+|------|---------|
+| `diagram-architecture/diagram.js` | All interactive logic — Explore, Quiz, Edit modes |
+| `diagram-architecture/style.css`  | All CSS — layout, markers, leader lines, infobox, edit panel |
+
+Each sim's `main.html` references them via `../diagram-architecture/filename`.
+`fetch('data.json')` inside `diagram.js` always resolves relative to the **page URL**
+(the `main.html` location), so `data.json` and the image are always found in the sim's
+own directory regardless of where `diagram.js` lives.
+
 ---
 
 ## Learning Mascot: Gregor the Tree Frog
