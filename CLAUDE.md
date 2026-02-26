@@ -247,6 +247,29 @@ Suitable for AP Biology high school level.
 
 **Caption format:** Use `Figure [unit].[chapter].[number] — Descriptive Title` (e.g., `Figure 3.2.1 — The Electron Transport Chain`).
 
+**Image generation prompts — no captions:** Never include a figure caption instruction inside a text-to-image prompt. Captions are added in the markdown file as text below the `<img>` tag, not embedded in the image itself. Do not write lines like `Figure caption (below illustration...)` or `Caption: Figure X.X — ...` in any image generation prompt.
+
+### Interactive Diagrams
+
+A core principle of this intelligent textbook is that complex biological diagrams must
+be **interactive**, not static. Every multi-callout diagram should support two modes:
+
+**Explore mode** — The student hovers over a callout label or numbered marker and sees
+an infobox that describes the structure, its function, and any AP exam relevance.
+- Infobox placement: **below** the diagram for landscape-orientation images;
+  **to the right** of the diagram for portrait-orientation images.
+
+**Quiz mode** — A quiz prompt appears (in the same position as the Explore infobox).
+The student must click the correct region of the image to identify a named structure,
+or identify an unlabeled structure by name from a list.
+- Correct/incorrect feedback is shown immediately in the infobox area.
+
+**Implementation pattern:** Interactive diagrams are built as self-contained MicroSim
+iframes (HTML + JS + JSON). The AI-generated image contains **no embedded text labels**.
+Callout positions are stored as percentage-based `(x, y)` coordinates in a `data.json`
+file alongside the image, so the overlay scales with any display size. The same
+JavaScript component handles both Explore and Quiz modes via a mode-toggle button.
+
 ---
 
 ## Learning Mascot: Gregor the Tree Frog
