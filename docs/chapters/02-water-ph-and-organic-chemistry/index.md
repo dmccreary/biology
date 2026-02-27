@@ -194,7 +194,7 @@ At $[\ce{H+}] = 10^{-7}$ mol/L (pure water at 25°C), pH = 7.0, which is called 
 
 #### Diagram: pH Scale Explorer
 
-<iframe src="../../sims/ph-scale-explorer/main.html" width="100%" height="500" scrolling="no"></iframe>
+<iframe src="../../sims/ph-scale-explorer/main.html" width="100%" height="530" scrolling="no"></iframe>
 
 [View Fullscreen](../../sims/ph-scale-explorer/main.html)
 
@@ -203,54 +203,13 @@ At $[\ce{H+}] = 10^{-7}$ mol/L (pure water at 25°C), pH = 7.0, which is called 
 Type: microsim
 **sim-id:** ph-scale-explorer<br/>
 **Library:** p5.js<br/>
-**Status:** Specified
+**Status:** Complete
 
 Bloom Level: Apply (L3)
 Bloom Verb: calculate
 Learning Objective: Students will use the pH formula to calculate [H⁺] from a given pH value and pH from a given [H⁺], and correctly identify whether common biological solutions are acidic, neutral, or basic.
 
-Canvas layout:
-- Left panel (55%): Vertical pH scale bar from 0 to 14, with a color gradient and a draggable probe
-- Right panel (45%): Numerical display of pH, [H⁺], [OH⁻], and name/description of the nearest reference substance
-
-Visual elements:
-- Vertical scale bar spanning the full canvas height with major gridlines at each integer and minor ticks at 0.5 increments
-- Continuous color gradient: deep red at pH 0, orange-yellow at pH 3, yellow at pH 5, yellow-green at pH 7, light blue at pH 10, deep indigo at pH 14
-- Labeled reference markers (small dots with name tags) at key pH values:
-  - Gastric juice: pH 1.5–2.0
-  - Lemon juice: pH 2.3
-  - Black coffee: pH 5.0
-  - Urine: pH 6.0
-  - Pure water: pH 7.0
-  - Blood: pH 7.35–7.45
-  - Seawater: pH 8.1
-  - Baking soda: pH 8.3
-  - Bleach: pH 12.5
-- A draggable triangular probe that slides up/down the scale
-- Zones labeled directly on the scale: "ACIDIC" (red, pH < 7), "NEUTRAL" (pH = 7), "BASIC" (blue, pH > 7)
-
-Interactive controls:
-- Draggable probe: sliding it updates all numerical displays in real time
-- Right panel displays continuously: current pH (2 decimal places), [H⁺] in scientific notation, [OH⁻] in scientific notation, name of nearest reference substance
-- Checkbox "Highlight biological range": shades the band pH 6.5–8.5 in green on the scale; band pH < 6.0 or > 9.0 shaded red with label "Lethal to most cells"
-- Checkbox "Show reference substances": toggles labeled dots on/off
-
-Default state: probe at pH 7.0; biological range checkbox checked; reference substances visible
-
-Behavior:
-- All numerical displays update continuously as probe is dragged
-- When probe enters the pH range < 6.0 or > 9.0, the right panel header turns red with warning text "Outside safe cellular range"
-
-Data Visibility Requirements:
-Stage 1: pH value from probe position
-Stage 2: [H⁺] = 10^(–pH) calculated and displayed in scientific notation
-Stage 3: [OH⁻] = (1 × 10⁻¹⁴) / [H⁺] calculated and displayed
-Stage 4: Name and brief description of the nearest reference substance
-
-Instructional Rationale: The draggable probe directly connects the student's physical action to the mathematical formula, reinforcing the logarithmic relationship through immediate numerical feedback. This Apply-level design requires students to actively use the formula rather than passively observe a static diagram.
-
-Canvas size: 640 × 460 px
-Responsive: Must respond to window resize events
+The sim presents a color-coded 0–14 pH scale with pinned labels for real substances (gastric acid, lemon juice, blood, seawater, bleach, etc.). Dragging the slider updates pH, pOH, [H⁺], and [OH⁻] in real time, directly connecting the student's action to the logarithmic formula. Keyboard-navigable and responsive.
 </details>
 
 The biological importance of pH cannot be overstated. Enzymes are proteins whose three-dimensional active-site geometry depends on precise electrostatic interactions between charged amino acid side chains. A shift of even half a pH unit from the optimum can alter the ionization state of key residues, deform the active site, and reduce enzyme activity dramatically. The normal pH of human blood plasma is 7.35–7.45 — a range of only 0.1 pH unit. Values below 7.35 constitute **acidosis** and above 7.45 **alkalosis**; either condition, if uncorrected, is life-threatening because virtually all enzyme-catalyzed metabolism depends on proteins whose function is optimized near pH 7.4.
