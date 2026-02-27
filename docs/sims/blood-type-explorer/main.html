@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Type Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Blood Type Explorer</h2>
+        <p id="description">
+            Change the blood type of the mother and father and see the impact to the blood type of the children.
+        </p>
+        <div class="parent-block">
+            <div class="parent-title">Mother:</div>
+            <div class="selectors">
+                <div class="select-group">
+                    <label for="momType">Blood Type</label>
+                    <select id="momType" class="blood">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="AB">AB</option>
+                        <option value="O">O</option>
+                    </select>
+                </div>
+                <div class="select-group">
+                    <label for="momRh">Rh</label>
+                    <select id="momRh" class="rh">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="parent-block">
+            <div class="parent-title">Father:</div>
+            <div class="selectors">
+                <div class="select-group">
+                    <label for="dadType">Blood Type</label>
+                    <select id="dadType" class="blood">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="AB">AB</option>
+                        <option value="O">O</option>
+                    </select>
+                </div>
+                <div class="select-group">
+                    <label for="dadRh">Rh</label>
+                    <select id="dadRh" class="rh">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div id="result"></div>
+        <div id="explanation"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

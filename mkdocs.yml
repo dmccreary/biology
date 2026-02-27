@@ -33,20 +33,86 @@ nav:
 
   - MicroSims:
     - List of MicroSims: sims/index.md
+    - Activation Energy and Reaction Coordinate: sims/activation-energy-diagram/index.md
     - Animal Cell MicroSim: sims/animal-cell/index.md
     - Atomic Structure Explorer: sims/atomic-structure-explorer/index.md
+    - ATP Yield Calculator: sims/atp-yield-calculator/index.md
+    - Biogeochemical Cycles Dashboard: sims/biogeochemical-cycles/index.md
+    - Biotechnology Toolkit Workflow: sims/biotech-toolkit/index.md
+    - Blood Type Explorer: sims/blood-type-explorer/index.md
+    - Blood Type Inheritance Explorer: sims/blood-type-inheritance/index.md
+    - Buffer Action Simulator: sims/buffer-action-simulator/index.md
+    - C3, C4, and CAM Photosynthesis Comparison: sims/photosynthesis-strategies/index.md
+    - Calvin Cycle Simulator: sims/calvin-cycle-simulator/index.md
+    - cAMP Signaling Cascade: sims/camp-signaling-cascade/index.md
+    - Cancer Mutation Simulator: sims/cancer-mutation-simulator/index.md
+    - Carbohydrate Structures Explorer: sims/carbohydrate-structures/index.md
+    - Cell Cycle Checkpoint Control: sims/cell-cycle-checkpoints/index.md
+    - Cell Cycle Phases Explorer: sims/cell-cycle-phases/index.md
+    - Cell Junctions Explorer: sims/cell-junctions-explorer/index.md
     - Cell Membrane — Fluid Mosaic Model: sims/cell-membrane/index.md
     - Chemical Bond Visualizer: sims/chemical-bond-visualizer/index.md
     - Chemical Equation Rendering Pipeline: sims/chemical-equation-rendering/index.md
     - Chi-Square Test Calculator: sims/chi-square-calculator/index.md
     - Chloroplast & Light Reactions (Thylakoid Membrane): sims/chloroplast/index.md
+    - Comparative Anatomy Explorer: sims/comparative-anatomy/index.md
+    - Condensation and Hydrolysis Reaction Simulator: sims/condensation-hydrolysis/index.md
+    - Crossing Over Visualization: sims/crossing-over/index.md
+    - Cytoskeleton Component Explorer: sims/cytoskeleton-explorer/index.md
+    - Dihybrid Cross Outcome Visualizer: sims/dihybrid-cross/index.md
     - DNA Double Helix Structure: sims/dna-double-helix/index.md
+    - DNA Replication Fork Explorer: sims/replication-fork/index.md
+    - Ecological Succession Timeline: sims/ecological-succession/index.md
+    - Endomembrane System — Protein Secretion Pathway: sims/endomembrane-system/index.md
+    - Endosymbiosis Model: sims/endosymbiosis-model/index.md
+    - Energy Pyramid Explorer: sims/energy-pyramid/index.md
+    - Enzyme Kinetics Explorer: sims/enzyme-kinetics-explorer/index.md
+    - Enzyme Regulation Simulator: sims/enzyme-regulation-simulator/index.md
+    - Eukaryotic Gene Regulation Layers: sims/eukaryotic-gene-regulation/index.md
+    - Feedback Loop Simulator: sims/feedback-loop-simulator/index.md
+    - Fermentation Pathways Comparison: sims/fermentation-pathways/index.md
+    - Functional Groups Explorer: sims/functional-groups-explorer/index.md
+    - Gene Expression Pipeline: sims/gene-expression-pipeline/index.md
+    - Genetic Code Table Explorer: sims/genetic-code-table/index.md
+    - Genetic Drift Simulator: sims/genetic-drift/index.md
+    - Genetic Linkage and Recombination Mapper: sims/linkage-mapper/index.md
+    - Glycolysis Pathway Simulator: sims/glycolysis-simulator/index.md
+    - Hardy-Weinberg Equilibrium Calculator: sims/hardy-weinberg-calculator/index.md
+    - Interactive Cladogram Builder: sims/cladogram-builder/index.md
+    - Interactive Pedigree Analyzer: sims/pedigree-analyzer/index.md
+    - Interactive pH Scale Explorer: sims/ph-scale-explorer/index.md
+    - Interactive Punnett Square Calculator: sims/punnett-square-calculator/index.md
+    - Krebs Cycle Explorer: sims/krebs-cycle-explorer/index.md
+    - Light-Dependent Reactions (Z-Scheme): sims/light-dependent-reactions/index.md
+    - Meiosis Stages Explorer: sims/meiosis-stages/index.md
+    - Mendel-to-Meiosis Concept Map: sims/mendel-meiosis-map/index.md
     - Mitochondria & Electron Transport Chain: sims/mitochondria/index.md
+    - Mitosis Stage Explorer: sims/mitosis-stage-explorer/index.md
+    - Mutation Effects Comparator: sims/mutation-effects/index.md
     - Neuron Structure: sims/neuron-structure/index.md
+    - Nondisjunction in Meiosis Visualizer: sims/nondisjunction/index.md
+    - Operon Regulation Simulator: sims/operon-regulation/index.md
+    - Osmosis and Water Potential Simulator: sims/osmosis-simulator/index.md
     - Plant Cell Drawing: sims/plant-cell/index.md
+    - Polygenic Trait Distribution Visualizer: sims/polygenic-distribution/index.md
+    - Population Growth Model Explorer: sims/population-growth/index.md
+    - Prokaryote vs. Eukaryote Cell Comparison: sims/prokaryote-eukaryote-comparison/index.md
+    - Protein Structure Levels Explorer: sims/protein-structure-levels/index.md
     - Scientific Method Workflow: sims/scientific-method/index.md
-    - pH Scale Explorer: sims/ph-scale-explorer/index.md
+    - Selection Modes Visualizer: sims/selection-modes/index.md
+    - Signal Transduction Pathway Overview: sims/signal-transduction-pathway/index.md
+    - Sodium-Potassium Pump Cycle: sims/sodium-potassium-pump/index.md
+    - Speciation Pathways Comparison: sims/speciation-pathways/index.md
+    - Species Interactions Web: sims/species-interactions/index.md
     - Standard Deviation Visualization: sims/standard-deviation/index.md
+    - Surface Area to Volume Ratio Explorer: sims/surface-area-volume-ratio/index.md
+    - Survivorship Curves Comparator: sims/survivorship-curves/index.md
+    - Temperature and pH Effects on Enzyme Activity: sims/enzyme-activity-explorer/index.md
+    - Test Cross Simulator: sims/test-cross-simulator/index.md
+    - Timeline of Evolutionary Thought: sims/evolution-timeline/index.md
+    - Translation Step-Through Simulator: sims/translation-simulator/index.md
+    - Water Molecule Polarity: sims/water-molecule-polarity/index.md
+    - X-Linked Inheritance Simulator: sims/x-linked-inheritance/index.md
 
   - Learning Graph:
     - Introduction: learning-graph/index.md

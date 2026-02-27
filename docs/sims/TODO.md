@@ -2,9 +2,14 @@
 
 **Generated:** 2026-02-27 | **Remaining:** 65 of 79
 
-> **Note:** All 79 sim directories have scaffolding (`main.html`, `index.md`, `metadata.json`).
-> A sim is **done** when it has a substantial `.js` file in its directory. If no `.js` file
-> exists, the sim still needs its JavaScript implementation.
+**Note:** All MicroSim directories ALREADY been created and the three core
+scaffolding files have been generated.  (`main.html`, `index.md`, `metadata.json`).
+You do not need to create these directories and files.
+
+A sim is **done** when it has a substantial `.js` file in its directory. If no `.js` file
+exists, the sim still needs its JavaScript implementation.
+
+Always use the /microsim-generator skill to implement these Microsims
 
 ## Summary by Chapter
 
@@ -39,125 +44,6 @@
 | Chart.js | 5 |
 | vis-network | 2 |
 | vis-timeline | 1 |
-
----
-
-## water-molecule-polarity
-
-- **Title:** Water Molecule Polarity
-- **Chapter:** 02-water-ph-and-organic-chemistry
-- **Library:** p5.js
-- **Bloom:** Understand (L2)
-- **Status:** specified
-- **Target:** `docs/sims/water-molecule-polarity/water-molecule-polarity.js`
-
-### Specification
-
-Type: microsim
-**sim-id:** water-molecule-polarity<br/>
-**Library:** p5.js<br/>
-
-Bloom Level: Understand (L2)
-Bloom Verb: explain
-Learning Objective: Students will explain how the bent geometry and electronegative oxygen of the water molecule produce a permanent dipole moment, and connect this polarity to hydrogen bond formation between adjacent water molecules.
-
-Canvas layout:
-- Drawing area (left 65%): Shows a central water molecule at large scale, with 2 neighboring water molecules connected to it via hydrogen bonds
-- Info panel (right 35%): Explains the concept layer currently displayed; updates when each button is pressed
-
-Visual elements:
-- Central water molecule: oxygen atom drawn as a large red circle labeled "O", two hydrogen atoms as smaller light-gray circles labeled "H"
-- Bond angle of 104.5° shown with a curved arc and label between the two O–H bonds
-- Partial charge labels: δ⁻ near oxygen, δ⁺ near each hydrogen (hidden initially)
-- Dipole arrow: a bold vector arrow pointing from the positive end toward the negative end of the molecule (hidden initially)
-- Two neighboring water molecules at smaller scale, connected to the central molecule via dashed blue lines representing hydrogen bonds (hidden initially)
-- Hydrogen bond distance label: "H-bond ~0.18 nm" vs covalent "O–H ~0.10 nm"
-
-Interactive controls:
-- Button "Show Partial Charges": reveals δ⁻ and δ⁺ labels and updates info panel with explanation of electronegativity
-- Button "Show Dipole": reveals dipole arrow and explains why the bent geometry does not allow cancellation
-- Button "Show H-Bonds": reveals dashed hydrogen bonds to neighboring molecules and explains that each water molecule can form up to 4 H-bonds
-- Button "Reset": hides all overlays and returns to bare molecule
-
-Default state: bare molecule drawn; all overlays hidden; info panel shows introductory text about the water molecule
-
-Behavior: Each button reveals one additional layer of information in causal order (electronegativity → polar bonds → bent geometry → dipole → hydrogen bonds), supporting sequential prediction before revelation.
-
-Data Visibility Requirements:
-Stage 1: Bare molecule with atom labels and bond angle
-Stage 2: Partial charges with electronegativity values (O = 3.44, H = 2.20)
-Stage 3: Dipole arrow with vector direction explained
-Stage 4: Hydrogen bonds to neighbors with bond length comparison
-
-Instructional Rationale: Step-through reveal is appropriate for an Understand objective because it requires students to trace the causal chain from atom-level electronegativity to molecule-level hydrogen bonding. Continuous animation would obscure this causal sequence.
-
-Canvas size: 620 × 420 px
-Responsive: Must respond to window resize events
-
----
-
-## buffer-action-simulator
-
-- **Title:** Buffer Action Simulator
-- **Chapter:** 02-water-ph-and-organic-chemistry
-- **Library:** p5.js
-- **Bloom:** Analyze (L4)
-- **Status:** done
-- **Target:** `docs/sims/buffer-action-simulator/buffer-action-simulator.js`
-
-### Specification
-
-Type: microsim
-**sim-id:** buffer-action-simulator<br/>
-**Library:** p5.js<br/>
-
-Bloom Level: Analyze (L4)
-Bloom Verb: compare
-Learning Objective: Students will compare the pH response of a bicarbonate buffer versus pure water when equal amounts of strong acid or base are added, and explain why the buffered solution resists pH change using the conjugate acid-base pair mechanism.
-
-Canvas layout:
-- Top section (50%): Two animated side-by-side beakers — left labeled "Pure Water (pH 7.0)", right labeled "Bicarbonate Buffer (pH 7.4)"
-- Middle section (20%): Slider controls for adding HCl or NaOH
-- Bottom section (30%): Line graph showing pH vs. moles of acid added for both systems simultaneously
-
-Visual elements:
-- Two beakers with interior fill color shifting from neutral yellow → vivid red as acid is added (pH drop), or yellow → blue as base is added (pH rise)
-- Digital pH meter display on each beaker, updating in real time as sliders move
-- Line graph: x-axis "moles of HCl added (0 to 0.10 mol)", y-axis "pH (0 to 14)"
-  - Pure water line: steep linear-ish drop from pH 7
-  - Buffer line: plateau region showing resistance to pH change (roughly pH 7.4 to 6.8 over 0–0.04 mol)
-  - Buffering range region shaded green on the graph
-  - Vertical dashed red line marking buffer exhaustion point (~0.05 mol)
-- Equation display panel: shows the active neutralization reaction as acid is being added (e.g., "$\ce{H+ + HCO3- -> H2CO3}$")
-
-Interactive controls:
-- Horizontal slider "Add HCl": 0 to 0.10 mol in 0.001 mol steps
-- Horizontal slider "Add NaOH": 0 to 0.10 mol in 0.001 mol steps
-- Toggle buttons: "Show Pure Water", "Show Buffer", "Show Both"
-- Button: "Reset" — returns to starting state
-
-Default parameters:
-- Pure water initial pH: 7.00
-- Buffer initial pH: 7.40 (bicarbonate at 20:1 ratio, [HCO₃⁻] = 24 mmol/L)
-- Buffer capacity: ~0.05 mol before exhaustion
-
-Behavior:
-- As HCl slider increases, both beakers change color and both graph lines advance simultaneously
-- Tooltip appears at key events: "Buffer working — HCO₃⁻ is neutralizing H⁺", "Buffer capacity exhausted — pH drops rapidly"
-- When buffer is exhausted, the plateau ends and buffer line drops steeply, converging toward the pure-water line
-
-Data Visibility Requirements:
-Stage 1: Initial pH values for both systems
-Stage 2: Active neutralization equation displayed as acid is added
-Stage 3: Both pH vs. moles lines plotting simultaneously on the graph
-Stage 4: Exhaustion point annotation when buffer capacity is exceeded
-
-Instructional Rationale: Simultaneous comparison of buffered versus unbuffered systems at the Analyze level requires students to differentiate the behaviors and attribute the difference to the presence of the conjugate acid-base pair. The real-time graph makes the buffering plateau visually unambiguous and the exhaustion point dramatically apparent.
-
-Canvas size: 660 × 500 px
-Responsive: Must respond to window resize events
-
----
 
 ## functional-groups-explorer
 
