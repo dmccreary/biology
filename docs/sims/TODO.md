@@ -2,6 +2,10 @@
 
 **Generated:** 2026-02-27 | **Remaining:** 65 of 79
 
+> **Note:** All 79 sim directories have scaffolding (`main.html`, `index.md`, `metadata.json`).
+> A sim is **done** when it has a substantial `.js` file in its directory. If no `.js` file
+> exists, the sim still needs its JavaScript implementation.
+
 ## Summary by Chapter
 
 | Chapter | Total | Done | Remaining |
@@ -98,7 +102,7 @@ Responsive: Must respond to window resize events
 - **Chapter:** 02-water-ph-and-organic-chemistry
 - **Library:** p5.js
 - **Bloom:** Analyze (L4)
-- **Status:** specified
+- **Status:** done
 - **Target:** `docs/sims/buffer-action-simulator/buffer-action-simulator.js`
 
 ### Specification
@@ -161,7 +165,7 @@ Responsive: Must respond to window resize events
 - **Chapter:** 02-water-ph-and-organic-chemistry
 - **Library:** p5.js
 - **Bloom:** Understand (L2)
-- **Status:** specified
+- **Status:** done
 - **Target:** `docs/sims/functional-groups-explorer/functional-groups-explorer.js`
 
 ### Specification

@@ -30,6 +30,30 @@ pip install mkdocs-material
 
 The `site/` directory and `.cache/` are gitignored — never commit them.
 
+### p5.js MicroSim Development
+
+When building a p5.js MicroSim, always read the p5 guide at `/Users/danmccreary/Documents/ws/claude-skills/skills/microsim-generator/references/p5-guide.md` first. Mention to the user in the dialog that you are reading the p5-guide.md before generating code.
+
+### Slider UX: Use Non-Linear Mapping for Logarithmic Quantities
+
+When a MicroSim controls a quantity that produces logarithmic or exponential responses (pH, concentration, decibels, population growth rates, etc.), **never use a linear slider-to-value mapping**. A linear slider causes jarring jumps at one end and imperceptible changes at the other.
+
+Instead, use a **power-curve mapping** (cubic or quartic) so that small slider movements at the low end produce small value changes and the full slider range still covers the complete domain:
+
+```javascript
+let sliderPower = 3; // cubic curve
+function sliderToValue(sliderVal) {
+    let fraction = sliderVal / sliderMax;
+    return pow(fraction, sliderPower) * maxValue;
+}
+```
+
+This pattern was validated in the buffer-action-simulator where pH (a logarithmic scale) needed gradual visual feedback as the user moved the slider. Apply the same principle whenever the controlled quantity has a non-linear relationship to the observable outcome.
+
+### MicroSim Scaffolding Note
+
+All 79 MicroSim directories under `docs/sims/` have scaffolding in place (`main.html`, `index.md`, `metadata.json`). To determine whether a MicroSim is actually **complete**, check for a substantial JavaScript file (e.g., `<sim-name>.js`) in the sim directory. If the directory has no `.js` file, or only a skeleton, the sim still needs to be implemented. The TODO list in `docs/sims/TODO.md` tracks which sims need JS implementation.
+
 ## Architecture
 
 ### Content Layer (`docs/`)
