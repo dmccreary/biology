@@ -1,0 +1,61 @@
+---
+title: Cell Cycle Checkpoint Control
+description: Interactive p5.js MicroSim for cell cycle checkpoint control.
+image: /sims/cell-cycle-checkpoints/cell-cycle-checkpoints.png
+og:image: /sims/cell-cycle-checkpoints/cell-cycle-checkpoints.png
+twitter:image: /sims/cell-cycle-checkpoints/cell-cycle-checkpoints.png
+social:
+   cards: false
+quality_score: 0
+---
+
+# Cell Cycle Checkpoint Control
+
+<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+
+[Run the Cell Cycle Checkpoint Control MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
+<br/>
+[Edit in the p5.js Editor](https://editor.p5js.org/)
+
+## About This MicroSim
+
+TODO: Describe what this MicroSim demonstrates.
+
+## How to Use
+
+TODO: Describe how students should interact with this MicroSim.
+
+## Iframe Embed Code
+
+You can add this MicroSim to any web page by adding this to your HTML:
+
+```html
+<iframe src="https://dmccreary.github.io/biology/sims/cell-cycle-checkpoints/main.html"
+        height="450px"
+        width="100%"
+        scrolling="no"></iframe>
+```
+
+## Lesson Plan
+
+### Grade Level
+9-12 (High School Geometry)
+
+### Duration
+10-15 minutes
+
+### Prerequisites
+TODO: List prerequisites.
+
+### Activities
+
+1. **Exploration** (5 min): TODO
+2. **Guided Practice** (5 min): TODO
+3. **Assessment** (5 min): TODO
+
+### Assessment
+TODO: List assessment criteria.
+
+## References
+
+1. TODO: Add references.

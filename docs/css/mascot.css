@@ -12,6 +12,8 @@
 }
 
 /* ---- Shared base for all mascot admonitions ---- */
+/* Override MkDocs Material's default smaller admonition font size
+   so mascot admonition text matches the body text exactly. */
 .md-typeset .admonition.mascot-welcome,
 .md-typeset .admonition.mascot-thinking,
 .md-typeset .admonition.mascot-tip,
@@ -26,7 +28,7 @@
 .md-typeset details.mascot-celebration,
 .md-typeset details.mascot-encourage,
 .md-typeset details.mascot-neutral {
-  font-size: 0.95rem;
+  font-size: inherit;
 }
 
 /* ---- Welcome (chapter openings) — forest green ---- */
