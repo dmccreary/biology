@@ -91,7 +91,7 @@ Here is an example of how humans children inherit their blood type from their pa
 
 #### Diagram: Blood Type Explorer
 
-<iframe src="../../sims/blood-type-explorer/main.html" height="520px" width="100%" scrolling="no"></iframe>
+<iframe src="../../sims/blood-type-explorer/main.html" height="680px" width="100%" scrolling="no"></iframe>
 
 [Run the Blood Type Explorer Fullscreen](../../sims/blood-type-explorer/main.html)
 
