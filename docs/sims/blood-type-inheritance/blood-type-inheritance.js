@@ -2,9 +2,9 @@
 // Follows microsim-generator standards: responsive layout, control area, accessible annotations
 
 let canvasWidth = 780;
-const drawHeight = 400;
+let drawHeight = 700;
 const controlHeight = 80; // (2 rows × 35) + 10
-const canvasHeight = drawHeight + controlHeight;
+let canvasHeight = drawHeight + controlHeight;
 const margin = 25;
 const sliderLeftMargin = 250; // used as second column x-position for controls
 const defaultTextSize = 16;
