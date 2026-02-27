@@ -6,6 +6,7 @@ site_author: Dan McCreary
 
 nav:
   - Home: index.md
+  - About this Course: about.md
   - Course Description: course-description.md
   - Chapters:
     - Overview: chapters/index.md
