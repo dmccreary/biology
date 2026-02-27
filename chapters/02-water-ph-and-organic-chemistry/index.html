@@ -292,6 +292,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About this Course
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../course-description/" class="md-nav__link">
         
   
@@ -372,7 +394,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -389,14 +411,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Chapters
           </label>
@@ -1243,6 +1265,8 @@
       
         
       
+        
+      
     
     
     
@@ -1929,7 +1953,7 @@ Notice how every property we just discussed — cohesion, adhesion, surface tens
 <div class="arithmatex">\[\text{pH} = -\log_{10}[\ce{H+}]\]</div>
 <p>At <span class="arithmatex">\([\ce{H+}] = 10^{-7}\)</span> mol/L (pure water at 25°C), pH = 7.0, which is called <strong>neutral</strong>. pH values below 7 are acidic (higher <span class="arithmatex">\([\ce{H+}]\)</span>); values above 7 are basic (alkaline). Because the scale is logarithmic, a one-unit change in pH corresponds to a <strong>tenfold</strong> change in <span class="arithmatex">\([\ce{H+}]\)</span> concentration. A solution at pH 5 has 100 times more hydrogen ions than one at pH 7.</p>
 <h4 id="diagram-ph-scale-explorer">Diagram: pH Scale Explorer</h4>
-<iframe src="../../sims/ph-scale-explorer/main.html" width="100%" height="500" scrolling="no"></iframe>
+<iframe src="../../sims/ph-scale-explorer/main.html" width="100%" height="530" scrolling="no"></iframe>
 
 <p><a href="../../sims/ph-scale-explorer/main.html">View Fullscreen</a></p>
 <details>
@@ -1937,45 +1961,11 @@ Notice how every property we just discussed — cohesion, adhesion, surface tens
 <p>Type: microsim
 <strong>sim-id:</strong> ph-scale-explorer<br/>
 <strong>Library:</strong> p5.js<br/>
-<strong>Status:</strong> Specified</p>
+<strong>Status:</strong> Complete</p>
 <p>Bloom Level: Apply (L3)
 Bloom Verb: calculate
 Learning Objective: Students will use the pH formula to calculate [H⁺] from a given pH value and pH from a given [H⁺], and correctly identify whether common biological solutions are acidic, neutral, or basic.</p>
-<p>Canvas layout:
-- Left panel (55%): Vertical pH scale bar from 0 to 14, with a color gradient and a draggable probe
-- Right panel (45%): Numerical display of pH, [H⁺], [OH⁻], and name/description of the nearest reference substance</p>
-<p>Visual elements:
-- Vertical scale bar spanning the full canvas height with major gridlines at each integer and minor ticks at 0.5 increments
-- Continuous color gradient: deep red at pH 0, orange-yellow at pH 3, yellow at pH 5, yellow-green at pH 7, light blue at pH 10, deep indigo at pH 14
-- Labeled reference markers (small dots with name tags) at key pH values:
-  - Gastric juice: pH 1.5–2.0
-  - Lemon juice: pH 2.3
-  - Black coffee: pH 5.0
-  - Urine: pH 6.0
-  - Pure water: pH 7.0
-  - Blood: pH 7.35–7.45
-  - Seawater: pH 8.1
-  - Baking soda: pH 8.3
-  - Bleach: pH 12.5
-- A draggable triangular probe that slides up/down the scale
-- Zones labeled directly on the scale: "ACIDIC" (red, pH &lt; 7), "NEUTRAL" (pH = 7), "BASIC" (blue, pH &gt; 7)</p>
-<p>Interactive controls:
-- Draggable probe: sliding it updates all numerical displays in real time
-- Right panel displays continuously: current pH (2 decimal places), [H⁺] in scientific notation, [OH⁻] in scientific notation, name of nearest reference substance
-- Checkbox "Highlight biological range": shades the band pH 6.5–8.5 in green on the scale; band pH &lt; 6.0 or &gt; 9.0 shaded red with label "Lethal to most cells"
-- Checkbox "Show reference substances": toggles labeled dots on/off</p>
-<p>Default state: probe at pH 7.0; biological range checkbox checked; reference substances visible</p>
-<p>Behavior:
-- All numerical displays update continuously as probe is dragged
-- When probe enters the pH range &lt; 6.0 or &gt; 9.0, the right panel header turns red with warning text "Outside safe cellular range"</p>
-<p>Data Visibility Requirements:
-Stage 1: pH value from probe position
-Stage 2: [H⁺] = 10^(–pH) calculated and displayed in scientific notation
-Stage 3: [OH⁻] = (1 × 10⁻¹⁴) / [H⁺] calculated and displayed
-Stage 4: Name and brief description of the nearest reference substance</p>
-<p>Instructional Rationale: The draggable probe directly connects the student's physical action to the mathematical formula, reinforcing the logarithmic relationship through immediate numerical feedback. This Apply-level design requires students to actively use the formula rather than passively observe a static diagram.</p>
-<p>Canvas size: 640 × 460 px
-Responsive: Must respond to window resize events</p>
+<p>The sim presents a color-coded 0–14 pH scale with pinned labels for real substances (gastric acid, lemon juice, blood, seawater, bleach, etc.). Dragging the slider updates pH, pOH, [H⁺], and [OH⁻] in real time, directly connecting the student's action to the logarithmic formula. Keyboard-navigable and responsive.</p>
 </details>
 <p>The biological importance of pH cannot be overstated. Enzymes are proteins whose three-dimensional active-site geometry depends on precise electrostatic interactions between charged amino acid side chains. A shift of even half a pH unit from the optimum can alter the ionization state of key residues, deform the active site, and reduce enzyme activity dramatically. The normal pH of human blood plasma is 7.35–7.45 — a range of only 0.1 pH unit. Values below 7.35 constitute <strong>acidosis</strong> and above 7.45 <strong>alkalosis</strong>; either condition, if uncorrected, is life-threatening because virtually all enzyme-catalyzed metabolism depends on proteins whose function is optimized near pH 7.4.</p>
 <p>The following table shows representative pH values for biologically important solutions:</p>
