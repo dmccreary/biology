@@ -1,4 +1,16 @@
-document.addEventListener('DOMContentLoaded', () => {
+let comboExplanations = {};
+
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const res = await fetch('data.json');
+        if (res.ok) {
+            const data = await res.json();
+            comboExplanations = data.explanations || {};
+        }
+    } catch (err) {
+        console.error('Could not load explanations', err);
+    }
+
     const controls = ['momType', 'momRh', 'dadType', 'dadRh'];
     controls.forEach(id => {
         const el = document.getElementById(id);
@@ -44,10 +56,15 @@ function calculateBloodType() {
     resultDiv.textContent = `Possible Child Blood Types (ABO): ${typeList}`;
 
     const rhNotes = buildRhExplanation(momRh, dadRh);
+    const comboKey = `${mom}_${dad}`;
+    const reverseKey = `${dad}_${mom}`;
+    const explanationText = comboExplanations[comboKey] || comboExplanations[reverseKey] || 'This combination follows the standard ABO dominance rules shown above.';
+
     explanationDiv.innerHTML = `
+        <p>${explanationText}</p>
         <p>The ABO result above only reflects A, B, AB, or O phenotypes. Each parent also contributes an Rh allele: “+” is dominant and “–” is recessive.</p>
         <p><strong>Rh possibilities:</strong> ${rhNotes}</p>
-        <p>Examples: if both parents are Rh–, all children must be Rh–. If at least one parent is Rh+, some or all children may be Rh+ depending on whether that parent carries a hidden recessive allele.</p>
+        <p>If both parents are Rh–, all children must be Rh–. If at least one parent is Rh+, some or all children may be Rh+ depending on whether that parent carries a hidden recessive allele.</p>
     `;
 }
 

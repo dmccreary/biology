@@ -87,6 +87,14 @@ Notice that in incomplete dominance, the phenotypic ratio equals the genotypic r
 
 In **codominance**, both alleles in the heterozygote are fully and simultaneously expressed — the phenotype is not intermediate but rather shows both parental traits distinctly.
 
+Here is an example of how humans children inherit their blood type from their parents.
+
+#### Diagram: Blood Type Explorer
+
+<iframe src="../../sims/blood-type-explorer/main.html" height="520px" width="100%" scrolling="no"></iframe>
+
+[Run the Blood Type Explorer Fullscreen](../../sims/blood-type-explorer/main.html)
+
 **Classic example:** ABO blood type — the $I^A$ and $I^B$ alleles
 
 - $I^A I^A$ or $I^A i$ → type **A** blood (A antigens on red blood cells)

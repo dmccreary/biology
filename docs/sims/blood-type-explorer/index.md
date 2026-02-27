@@ -7,7 +7,7 @@ quality_score: 0
 
 # Blood Type Explorer
 
-<iframe src="main.html" height="520px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="680px" width="100%" scrolling="no"></iframe>
 
 [Open the MicroSim in a new tab](main.html){ .md-button .md-button--primary }
 
