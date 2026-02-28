@@ -319,6 +319,18 @@ body {
   border-radius: 6px 0 0 6px;
 }
 
+/* Left panel: number circle on the RIGHT (nearest the image),
+   text right-aligned for easier visual tracking of leader lines. */
+#label-panel-left .label-row .drag-handle { order: 0; }
+#label-panel-left .label-row .label-text  { order: 1; text-align: right; flex: 1; }
+#label-panel-left .label-row .color-swatch { order: 2; margin-left: 0; }
+#label-panel-left .label-row .label-num   { order: 3; }
+#label-panel-left .label-hint {
+  text-align: right;
+  padding-left: 0;
+  padding-right: 34px;
+}
+
 #label-panel-right {
   border-left: 1px solid #e8e8e8;
   border-radius: 0 6px 6px 0;
