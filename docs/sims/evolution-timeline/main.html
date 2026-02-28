@@ -4,17 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
-    <title>Timeline of Evolutionary Thought using vis-timeline</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vis-timeline@7.7.3/styles/vis-timeline-graph2d.min.css">
-    <style>
-        body { margin: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif; }
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/vis-timeline@7.7.3/standalone/umd/vis-timeline-graph2d.min.js"></script>
-    <script src="evolution-timeline.js"></script>
+    <title>Timeline of Evolutionary Thought</title>
+    <link rel="stylesheet" href="https://unpkg.com/vis-timeline/standalone/umd/vis-timeline-graph2d.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vis-timeline/standalone/umd/vis-timeline-graph2d.min.js"></script>
 </head>
 <body>
-    <main></main>
-    <br/>
-    <a href=".">Back to Lesson Plan</a>
+
+<div class="header">
+    <h1>Timeline of Evolutionary Thought</h1>
+    <p>From Linnaeus (1735) to the Human Genome Project (2003)</p>
+</div>
+
+<div class="controls">
+    <button class="filter-btn active" data-category="all" onclick="filterCategory('all', this)">All Events</button>
+    <button class="filter-btn" data-category="Pre-Darwin" onclick="filterCategory('Pre-Darwin', this)">Pre-Darwin</button>
+    <button class="filter-btn" data-category="Darwin Era" onclick="filterCategory('Darwin Era', this)">Darwin Era</button>
+    <button class="filter-btn" data-category="Modern Synthesis" onclick="filterCategory('Modern Synthesis', this)">Modern Synthesis</button>
+    <button class="filter-btn" data-category="Molecular Era" onclick="filterCategory('Molecular Era', this)">Molecular Era</button>
+</div>
+
+<div class="nav-controls">
+    <button class="nav-btn" onclick="panLeft()" title="Pan left">&#9664;</button>
+    <button class="nav-btn" onclick="zoomIn()" title="Zoom in">+</button>
+    <button class="nav-btn" onclick="zoomOut()" title="Zoom out">&minus;</button>
+    <button class="nav-btn" onclick="fitAll()" title="Show all events">Fit All</button>
+    <button class="nav-btn" onclick="panRight()" title="Pan right">&#9654;</button>
+</div>
+
+<div id="timeline"></div>
+
+<p class="instructions">Click an event for details. Hover for context notes. Drag to pan, use buttons to zoom.</p>
+
+<div class="info-panel">
+    <div id="event-detail-container">
+        <p class="event-placeholder">Click on any event in the timeline to see its full description and AP Biology context.</p>
+        <div class="event-detail" id="event-detail">
+            <span class="era-badge" id="detail-badge"></span>
+            <h3 id="detail-title"></h3>
+            <div class="description" id="detail-description"></div>
+            <div class="context" id="detail-context"></div>
+        </div>
+    </div>
+</div>
+
+<div id="return-link" style="display:none; padding: 8px 16px;">
+    <a href=".">&#8592; Return to Lesson Plan</a>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>

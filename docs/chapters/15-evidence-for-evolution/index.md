@@ -87,7 +87,7 @@ Darwin synthesized these observations with Malthus's ideas to formulate natural 
 
 #### Diagram: Timeline of Evolutionary Thought
 
-<iframe src="../../sims/evolution-timeline/main.html" height="500" width="100%" scrolling="no"></iframe>
+<iframe src="../../sims/evolution-timeline/main.html" height="840" width="100%" scrolling="no"></iframe>
 
 *[View Fullscreen](../../sims/evolution-timeline/main.html)*
 

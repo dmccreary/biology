@@ -1,0 +1,115 @@
+{
+  "title": "Timeline of Evolutionary Thought",
+  "events": [
+    {
+      "start_date": { "year": "1735" },
+      "text": {
+        "headline": "Linnaeus: <em>Systema Naturae</em>",
+        "text": "Carl Linnaeus publishes <em>Systema Naturae</em>, establishing the binomial nomenclature system for classifying organisms. While Linnaeus believed species were fixed and created by God, his hierarchical classification system inadvertently revealed patterns of relatedness that later scientists would interpret as evidence for common descent."
+      },
+      "group": "Pre-Darwin",
+      "notes": "Linnaeus created the classification system still used today. His nested hierarchy (kingdom → phylum → class → order → family → genus → species) foreshadowed evolutionary thinking."
+    },
+    {
+      "start_date": { "year": "1798" },
+      "text": {
+        "headline": "Malthus: <em>Essay on Population</em>",
+        "text": "Thomas Malthus publishes <em>An Essay on the Principle of Population</em>, arguing that human populations grow exponentially while food supply grows linearly, leading to a 'struggle for existence.' This concept directly influenced both Darwin and Wallace in formulating natural selection — if more organisms are born than can survive, those with favorable traits are more likely to reproduce."
+      },
+      "group": "Pre-Darwin",
+      "notes": "Darwin read Malthus in 1838 and later wrote that it gave him 'a theory by which to work.' The concept of population pressure driving competition is central to natural selection."
+    },
+    {
+      "start_date": { "year": "1809" },
+      "text": {
+        "headline": "Lamarck: Inheritance of Acquired Characteristics",
+        "text": "Jean-Baptiste Lamarck proposes that organisms evolve by passing on traits acquired during their lifetime — for example, a blacksmith's children inheriting his strong arms. While this mechanism was later disproven, Lamarck was among the first to propose that species change over time and that the environment drives adaptation."
+      },
+      "group": "Pre-Darwin",
+      "notes": "Lamarck's mechanism was wrong, but his idea that species are not fixed was revolutionary. AP Biology may test the distinction between Lamarckian and Darwinian evolution."
+    },
+    {
+      "start_date": { "year": "1830" },
+      "text": {
+        "headline": "Lyell: <em>Principles of Geology</em>",
+        "text": "Charles Lyell publishes <em>Principles of Geology</em>, championing uniformitarianism — the idea that geological processes observed today (erosion, volcanic activity, sedimentation) operated at the same rates in the past. This implied Earth was far older than the 6,000 years widely accepted at the time, providing the vast timescale needed for evolution by natural selection."
+      },
+      "group": "Pre-Darwin",
+      "notes": "Darwin took Lyell's book aboard the Beagle. The concept of 'deep time' was essential — natural selection requires millions of years to produce the diversity of life we see."
+    },
+    {
+      "start_date": { "year": "1831" },
+      "end_date": { "year": "1836" },
+      "text": {
+        "headline": "Darwin's Voyage on HMS <em>Beagle</em>",
+        "text": "Charles Darwin serves as naturalist aboard HMS <em>Beagle</em> during a five-year circumnavigation. His observations — Galápagos finch beak variation, South American fossil distributions, island biogeography patterns — provide the raw data that will eventually lead to his theory of evolution by natural selection."
+      },
+      "group": "Darwin Era",
+      "notes": "The Galápagos finches are the most famous example, but Darwin was equally influenced by the geographic distribution of fossils in South America and the unique species on oceanic islands."
+    },
+    {
+      "start_date": { "year": "1858" },
+      "text": {
+        "headline": "Wallace's Independent Discovery",
+        "text": "Alfred Russel Wallace sends Darwin a manuscript describing natural selection, arrived at independently during his fieldwork in the Malay Archipelago. This prompts a joint presentation of both men's ideas to the Linnean Society of London, establishing the co-discovery of natural selection."
+      },
+      "group": "Darwin Era",
+      "notes": "Wallace developed his theory while studying biogeography in Southeast Asia. The 'Wallace Line' — the boundary between Asian and Australian fauna — is named for him."
+    },
+    {
+      "start_date": { "year": "1859" },
+      "text": {
+        "headline": "Darwin: <em>On the Origin of Species</em>",
+        "text": "Charles Darwin publishes <em>On the Origin of Species by Means of Natural Selection</em>. The book presents extensive evidence for evolution — from artificial selection in domesticated organisms to biogeographic patterns, comparative anatomy, and the fossil record — and proposes natural selection as the primary mechanism driving adaptation and speciation."
+      },
+      "group": "Darwin Era",
+      "notes": "This is arguably the most important publication in the history of biology. Darwin presented four key observations: variation exists, more offspring are produced than survive, traits are heritable, and individuals with favorable traits reproduce more."
+    },
+    {
+      "start_date": { "year": "1865" },
+      "text": {
+        "headline": "Mendel Publishes Genetics Work",
+        "text": "Gregor Mendel publishes 'Experiments on Plant Hybridization,' describing the laws of inheritance based on his pea plant experiments. His discovery of discrete hereditary units (later called genes) and the patterns of dominance, segregation, and independent assortment would eventually provide the missing mechanism for how traits are passed from parent to offspring — but his work is largely ignored for 35 years."
+      },
+      "group": "Darwin Era",
+      "notes": "Darwin never knew about Mendel's work, which would have solved his biggest problem: explaining how favorable traits are maintained across generations rather than being 'blended away.'"
+    },
+    {
+      "start_date": { "year": "1900" },
+      "text": {
+        "headline": "Mendel's Work Rediscovered",
+        "text": "Three botanists — Hugo de Vries, Carl Correns, and Erich von Tschermak — independently rediscover Mendel's laws of inheritance. This triggers the field of genetics and eventually leads to the realization that Mendelian genetics provides the hereditary mechanism that Darwin's theory needed."
+      },
+      "group": "Modern Synthesis",
+      "notes": "Initially, geneticists and Darwinian naturalists were at odds — the 'biometricians' studied continuous variation while 'Mendelians' studied discrete traits. The Modern Synthesis resolved this conflict."
+    },
+    {
+      "start_date": { "year": "1930" },
+      "end_date": { "year": "1945" },
+      "text": {
+        "headline": "The Modern Synthesis",
+        "text": "Scientists including Ronald Fisher, J.B.S. Haldane, Sewall Wright, Theodosius Dobzhansky, Ernst Mayr, and George Gaylord Simpson unify Mendelian genetics with Darwinian natural selection into a coherent framework. The Modern Synthesis demonstrates that mutation provides raw genetic variation, natural selection and genetic drift change allele frequencies, and geographic isolation can lead to speciation."
+      },
+      "group": "Modern Synthesis",
+      "notes": "The Modern Synthesis established population genetics as the mathematical foundation of evolutionary biology. Key concepts: allele frequency, gene pool, Hardy-Weinberg equilibrium, genetic drift, and gene flow."
+    },
+    {
+      "start_date": { "year": "1953" },
+      "text": {
+        "headline": "Watson & Crick Describe DNA Structure",
+        "text": "James Watson and Francis Crick, building on X-ray crystallography data from Rosalind Franklin and Maurice Wilkins, publish the double-helix structure of DNA. This discovery reveals the molecular basis of heredity — how genetic information is stored, copied, and transmitted — and opens the door to understanding mutations at the molecular level."
+      },
+      "group": "Molecular Era",
+      "notes": "Understanding DNA structure explained how mutations arise (base-pair changes, insertions, deletions) and how genetic information is faithfully replicated — the molecular basis of inheritance that Mendel and Darwin could never have imagined."
+    },
+    {
+      "start_date": { "year": "2003" },
+      "text": {
+        "headline": "Human Genome Project Completed",
+        "text": "The Human Genome Project completes sequencing all 3.2 billion base pairs of the human genome. This landmark achievement enables comparative genomics — comparing DNA sequences across species to reconstruct evolutionary relationships, identify conserved genes, and measure molecular divergence times. It confirms that humans share approximately 98.7% of their DNA with chimpanzees."
+      },
+      "group": "Molecular Era",
+      "notes": "Comparative genomics provides some of the strongest modern evidence for evolution. Shared pseudogenes, endogenous retroviruses, and conserved developmental genes (like Hox genes) across species all point to common ancestry."
+    }
+  ]
+}

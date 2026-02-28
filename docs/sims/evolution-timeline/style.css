@@ -1,0 +1,227 @@
+/* Evolution Timeline MicroSim Styles */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #2d5016, #4a7c2e);
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+}
+.header h1 {
+    margin: 0;
+    font-size: 1.3em;
+}
+.header p {
+    margin: 4px 0 0 0;
+    font-size: 0.85em;
+    opacity: 0.9;
+}
+
+/* Filter controls */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: #f0f5eb;
+    border-bottom: 1px solid #ccc;
+}
+.filter-btn {
+    padding: 6px 14px;
+    border: 2px solid #999;
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+    font-size: 0.82em;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+.filter-btn:hover { opacity: 0.85; }
+.filter-btn.active { box-shadow: 0 0 0 2px #333; }
+.filter-btn[data-category="all"] { border-color: #555; color: white; background: #555; }
+.filter-btn[data-category="Pre-Darwin"] { border-color: #7f8c8d; color: white; background: #7f8c8d; }
+.filter-btn[data-category="Darwin Era"] { border-color: #27ae60; color: white; background: #27ae60; }
+.filter-btn[data-category="Modern Synthesis"] { border-color: #2980b9; color: white; background: #2980b9; }
+.filter-btn[data-category="Molecular Era"] { border-color: #8e44ad; color: white; background: #8e44ad; }
+
+/* Navigation buttons */
+.nav-controls {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    padding: 6px 16px;
+    background: #f0f5eb;
+}
+.nav-btn {
+    padding: 4px 12px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    font-size: 0.8em;
+    transition: background 0.2s;
+}
+.nav-btn:hover { background: #e8e8e8; }
+
+/* Timeline Container */
+#timeline {
+    padding-left: 80px;
+    padding-right: 80px;
+    overflow: hidden;
+}
+
+/* Override vis-timeline clipping */
+.vis-timeline {
+    overflow: visible !important;
+    border: none !important;
+}
+.vis-panel.vis-center {
+    overflow: visible !important;
+}
+.vis-item .vis-item-overflow {
+    overflow: visible !important;
+}
+
+/* Ensure all item boxes fit their text */
+.vis-item .vis-item-content {
+    white-space: nowrap !important;
+    padding: 4px 8px !important;
+}
+.vis-item.vis-range {
+    min-width: fit-content !important;
+}
+.vis-item.vis-box {
+    min-width: fit-content !important;
+}
+
+/* Tooltip styling */
+.vis-tooltip {
+    background: #2c3e50 !important;
+    color: white !important;
+    padding: 10px 15px !important;
+    border-radius: 8px !important;
+    font-size: 13px !important;
+    max-width: 300px !important;
+    line-height: 1.4 !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+    box-sizing: border-box !important;
+}
+.vis-tooltip div {
+    max-width: 280px !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+}
+
+/* Info panel */
+.info-panel {
+    padding: 12px 20px;
+    min-height: 60px;
+}
+
+/* Legend */
+.legend {
+    padding: 8px 12px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+.legend h3 {
+    margin: 0 0 8px 0;
+    font-size: 0.85em;
+    color: #555;
+}
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+    font-size: 0.8em;
+}
+.legend-color {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+/* Event detail card */
+.event-detail {
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 12px 16px;
+    display: none;
+}
+.event-detail.visible { display: block; }
+.event-detail h3 {
+    margin: 0 0 6px 0;
+    font-size: 1em;
+    color: #2d5016;
+}
+.event-detail .era-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 8px;
+}
+.event-detail .description {
+    font-size: 0.88em;
+    line-height: 1.55;
+    color: #444;
+}
+.event-detail .context {
+    margin-top: 8px;
+    padding: 8px 12px;
+    background: #fef9e7;
+    border-left: 3px solid #f39c12;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.82em;
+    line-height: 1.45;
+    color: #7d6608;
+}
+.event-detail .context strong {
+    color: #b7950b;
+}
+
+/* Placeholder text */
+.event-placeholder {
+    color: #888;
+    font-size: 0.88em;
+    font-style: italic;
+    padding: 16px 0;
+}
+
+/* Instructions */
+.instructions {
+    text-align: center;
+    font-size: 0.78em;
+    color: #777;
+    padding: 4px 16px 0 16px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .info-panel {
+        grid-template-columns: 1fr;
+    }
+    #timeline {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .header h1 { font-size: 1.1em; }
+}

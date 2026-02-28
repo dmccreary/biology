@@ -119,6 +119,10 @@ nav:
     - Water Molecule Polarity: sims/water-molecule-polarity/index.md
     - X-Linked Inheritance Simulator: sims/x-linked-inheritance/index.md
 
+
+
+
+
   - Stories:
     - "List of Stories": stories/index.md
     - "Gregor Mendel": stories/gregor-mendel/index.md
