@@ -136,8 +136,9 @@ nav:
   - Glossary: glossary.md
   - Stories:
     - List of Possible Biology Stories: stories/list-of-possible-biology-stories.md
-    - Seeds of Genetics: Gregor Mendel: stories/11-seeds-of-genetics-gregor-mendel.md
-    - Graphic Story: Gregor Mendel: stories/gregor-mendel/index.md
+    - "Seeds of Genetics: Gregor Mendel": stories/11-seeds-of-genetics-gregor-mendel.md
+    - "Graphic Story: Gregor Mendel": stories/gregor-mendel/index.md
+    - "Hidden Figures of Botany: Ynes Mexia": stories/ynes-mexia/index.md
 
 
   - Prompts:
