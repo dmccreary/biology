@@ -6,6 +6,23 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 AP Biology: An Interactive Course — an MkDocs Material intelligent textbook for advanced high school students preparing for the AP Biology exam. The textbook covers 8 College Board units across 375 concepts organized in a dependency graph.
 
+## Token Efficiency: Prefer Serial Over Parallel Processing
+
+These skills target teachers on the **Claude Pro plan**, which has a **five-hour
+budget of only ~200K tokens**. Teachers are **not sensitive to run times** — a task
+that takes 3 minutes instead of 1 minute is fine, but a task that burns 84K tokens
+instead of 48K means they can do fewer tasks before hitting their ceiling.
+
+Always default to serial processing (one Task agent) unless the user explicitly
+requests speed or parallel execution. Each parallel Task agent costs ~12K tokens
+in startup overhead (system prompt + tool descriptions). Four parallel agents waste
+~36K tokens on overhead alone — that's 18% of a Pro user's entire five-hour budget
+spent on nothing but agent startups.
+
+Before launching parallel agents, ask: "Does the user need this faster, or cheaper?"
+The answer for teachers is almost always cheaper. See
+`logs/glossary-generation-very-inefficient.md` for the full post-mortem.
+
 ## Development Environment
 
 Assume the user is running `mkdocs serve` in a terminal. When a new MicroSim has been generated, print the URL of the new MicroSim and open it in Chrome:
