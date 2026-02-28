@@ -8,6 +8,7 @@ nav:
   - Home: index.md
   - About this Course: about.md
   - Course Description: course-description.md
+  - FAQ: faq.md
   - Chapters:
     - Overview: chapters/index.md
     - 1. Scientific Foundations and Atomic Chemistry: chapters/01-scientific-foundations-and-chemistry/index.md
@@ -119,6 +120,7 @@ nav:
     - Course Description Assessment: learning-graph/course-description-assessment.md
     - Concept List: learning-graph/concept-list.md
     - Graph Quality Analysis: learning-graph/quality-metrics.md
+    - FAQ Quality Report: learning-graph/faq-quality-report.md
     - Concept Taxonomy: learning-graph/concept-taxonomy.md
     - Taxonomy Distribution Report: learning-graph/taxonomy-distribution.md
     - Mascot Style Guide: learning-graph/mascot-style-guide.md
@@ -127,6 +129,8 @@ nav:
     - Index Template: learning-graph/index-template.md
     - Sample Biology Diagrams: learning-graph/sample-biology-diagrams.md
   
+  - Glossary: glossary.md
+
   - Prompts:
     - List of Prompts: prompts/index.md
     - prompts/01-seed-prompt.md
