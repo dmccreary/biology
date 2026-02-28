@@ -1,6 +1,7 @@
 // diagram.js — Interactive Diagram MicroSim
-// Layouts : 'side-panel' (image left 65%, labels right 35% — default)
-//            'top-bottom' (labels above and below image)
+// Layouts : 'side-panel'  (image left 65%, labels right 35% — default)
+//            'top-bottom'  (labels above and below image)
+//            'dual-panel'  (labels left 22% | image center 56% | labels right 22%)
 // Modes   : explore (hover infobox) | quiz (labels hidden, click to identify) | edit (?edit=true)
 
 class DiagramSim {
@@ -26,6 +27,8 @@ class DiagramSim {
     this.labelPanel       = null;  // side-panel
     this.labelPanelTop    = null;  // top-bottom
     this.labelPanelBottom = null;  // top-bottom
+    this.labelPanelLeft   = null;  // dual-panel
+    this.labelPanelRight  = null;  // dual-panel
   }
 
   // ── Boot ──────────────────────────────────────────────────────────────────
@@ -53,6 +56,8 @@ class DiagramSim {
     // Set up layout-specific DOM structure
     if (this.layout === 'top-bottom') {
       this.setupTopBottomDOM();
+    } else if (this.layout === 'dual-panel') {
+      this.setupDualPanelDOM();
     } else {
       this.labelPanel = document.getElementById('label-panel');
     }
@@ -102,6 +107,35 @@ class DiagramSim {
     this.labelPanelBottom = botPanel;
   }
 
+  // ── Dual-panel layout DOM setup ──────────────────────────────────────────
+
+  setupDualPanelDOM() {
+    this.layoutEl.classList.add('dual-panel-layout');
+
+    const wrapper  = document.getElementById('diagram-wrapper');
+    const oldPanel = document.getElementById('label-panel');
+
+    // Left label panel — inserted before the diagram wrapper
+    const leftPanel = document.createElement('div');
+    leftPanel.id        = 'label-panel-left';
+    leftPanel.className = 'label-panel-side';
+    this.layoutEl.insertBefore(leftPanel, wrapper);
+
+    // Right label panel — replace the default #label-panel
+    if (oldPanel) {
+      oldPanel.id        = 'label-panel-right';
+      oldPanel.className = 'label-panel-side';
+    } else {
+      const rightPanel = document.createElement('div');
+      rightPanel.id        = 'label-panel-right';
+      rightPanel.className = 'label-panel-side';
+      this.layoutEl.appendChild(rightPanel);
+    }
+
+    this.labelPanelLeft  = document.getElementById('label-panel-left');
+    this.labelPanelRight = document.getElementById('label-panel-right');
+  }
+
   // ── Markers (numbered dots on the image) ──────────────────────────────────
 
   renderMarkers() {
@@ -126,6 +160,8 @@ class DiagramSim {
   renderLabels() {
     if (this.layout === 'top-bottom') {
       this.renderLabelsTopBottom();
+    } else if (this.layout === 'dual-panel') {
+      this.renderLabelsDualPanel();
     } else {
       this.renderLabelsSidePanel();
     }
@@ -154,7 +190,20 @@ class DiagramSim {
     }
   }
 
-  // Shared label row builder — used by both layout modes
+  renderLabelsDualPanel() {
+    this.labelPanelLeft.innerHTML  = '';
+    this.labelPanelRight.innerHTML = '';
+    this.labelRows.clear();
+    for (const callout of this.data.callouts) {
+      const row = this.buildLabelRow(callout);
+      row.dataset.panel = callout.panel || 'right';
+      const panel = (callout.panel === 'left') ? this.labelPanelLeft : this.labelPanelRight;
+      panel.appendChild(row);
+      this.labelRows.set(callout.id, row);
+    }
+  }
+
+  // Shared label row builder — used by all layout modes
   buildLabelRow(callout) {
     const row = document.createElement('div');
     row.className  = 'label-row';
@@ -204,6 +253,8 @@ class DiagramSim {
   drawLeaders() {
     if (this.layout === 'top-bottom') {
       this.drawLeadersTopBottom();
+    } else if (this.layout === 'dual-panel') {
+      this.drawLeadersDualPanel();
     } else {
       this.drawLeadersSidePanel();
     }
@@ -280,6 +331,52 @@ class DiagramSim {
 
       const midY = markerY + (labelY - markerY) * 0.5;
       const d = `M ${markerCX} ${markerY} C ${markerCX} ${midY} ${labelCX} ${midY} ${labelCX} ${labelY}`;
+
+      const path = this.makePath(d, callout.id);
+      this.svgEl.appendChild(path);
+      this.leaderLines.set(callout.id, path);
+    }
+
+    if (this.activeId !== null) this.applyLineHighlight(this.activeId);
+  }
+
+  drawLeadersDualPanel() {
+    const layoutRect = this.layoutEl.getBoundingClientRect();
+    if (layoutRect.width === 0) return;
+
+    this.svgEl.setAttribute('width',   layoutRect.width);
+    this.svgEl.setAttribute('height',  layoutRect.height);
+    this.svgEl.setAttribute('viewBox', `0 0 ${layoutRect.width} ${layoutRect.height}`);
+    this.svgEl.innerHTML = '';
+    this.leaderLines.clear();
+
+    for (const callout of this.data.callouts) {
+      const markerEl = this.markers.get(callout.id);
+      const rowEl    = this.labelRows.get(callout.id);
+      const numEl    = rowEl.querySelector('.label-num');
+
+      const markerRect = markerEl.getBoundingClientRect();
+      const numRect    = numEl.getBoundingClientRect();
+
+      const panel = rowEl.dataset.panel || callout.panel || 'right';
+      let x1, y1, x2, y2;
+
+      if (panel === 'left') {
+        // Leader goes from label-num right-center → marker left-center
+        x1 = numRect.right - layoutRect.left;
+        y1 = numRect.top + numRect.height / 2 - layoutRect.top;
+        x2 = markerRect.left - layoutRect.left;
+        y2 = markerRect.top + markerRect.height / 2 - layoutRect.top;
+      } else {
+        // Leader goes from marker right-center → label-num left-center
+        x1 = markerRect.right - layoutRect.left;
+        y1 = markerRect.top + markerRect.height / 2 - layoutRect.top;
+        x2 = numRect.left - layoutRect.left;
+        y2 = numRect.top + numRect.height / 2 - layoutRect.top;
+      }
+
+      const mx = x1 + (x2 - x1) * 0.5;
+      const d  = `M ${x1} ${y1} C ${mx} ${y1} ${mx} ${y2} ${x2} ${y2}`;
 
       const path = this.makePath(d, callout.id);
       this.svgEl.appendChild(path);
@@ -649,6 +746,8 @@ class DiagramSim {
   enableLabelReorder() {
     if (this.layout === 'top-bottom') {
       this.enableTopBottomReorder();
+    } else if (this.layout === 'dual-panel') {
+      this.enableDualPanelReorder();
     } else {
       this.enableSidePanelReorder();
     }
@@ -748,6 +847,110 @@ class DiagramSim {
       this.data.callouts.sort((a, b) => a.id - b.id);
       this.markers   = newMarkers;
       this.labelRows = newLabelRows;
+      this.drawLeaders();
+      this.updateJSONOutput();
+    };
+
+    document.addEventListener('pointermove', onMove);
+    document.addEventListener('pointerup',   onUp);
+  }
+
+  // ── Dual-panel: vertical drag reorder + left/right toggle ────────────────
+
+  enableDualPanelReorder() {
+    for (const [id, row] of this.labelRows) {
+      row.classList.add('reorder-enabled');
+
+      // ←/→ button moves the label between left and right panels
+      const callout  = this.data.callouts.find(c => c.id === id);
+      const toggle   = document.createElement('button');
+      toggle.className   = 'panel-toggle-btn';
+      toggle.textContent = (callout.panel === 'left') ? '→' : '←';
+      toggle.title       = (callout.panel === 'left') ? 'Move to right panel' : 'Move to left panel';
+      toggle.onclick     = (e) => { e.stopPropagation(); this.toggleDualPanel(id); };
+      row.appendChild(toggle);
+
+      // Drag handle for vertical reorder within the same panel
+      const handle = row.querySelector('.drag-handle');
+      handle.onpointerdown = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const parentPanel = row.parentElement;
+        this.startDualPanelReorder(e, row, parentPanel);
+      };
+    }
+  }
+
+  toggleDualPanel(id) {
+    const callout = this.data.callouts.find(c => c.id === id);
+    const row     = this.labelRows.get(id);
+    const toggle  = row.querySelector('.panel-toggle-btn');
+
+    if (callout.panel === 'left') {
+      callout.panel     = 'right';
+      row.dataset.panel = 'right';
+      toggle.textContent = '←';
+      toggle.title       = 'Move to left panel';
+      this.labelPanelRight.appendChild(row);
+    } else {
+      callout.panel     = 'left';
+      row.dataset.panel = 'left';
+      toggle.textContent = '→';
+      toggle.title       = 'Move to right panel';
+      this.labelPanelLeft.appendChild(row);
+    }
+
+    this.drawLeaders();
+    this.updateJSONOutput();
+  }
+
+  startDualPanelReorder(e, rowEl, parentPanel) {
+    const rowRect     = rowEl.getBoundingClientRect();
+    const dragOffsetY = e.clientY - rowRect.top;
+
+    const ghost = rowEl.cloneNode(true);
+    ghost.style.cssText = [
+      'position:fixed', 'pointer-events:none', 'z-index:1000',
+      'width:'  + rowRect.width + 'px',
+      'left:'   + rowRect.left  + 'px',
+      'top:'    + (e.clientY - dragOffsetY) + 'px',
+      'opacity:0.85', 'background:white', 'border-radius:5px',
+      'box-shadow:0 4px 14px rgba(0,0,0,0.2)',
+      'padding:4px 5px', 'display:flex', 'align-items:center', 'gap:7px'
+    ].join(';');
+    document.body.appendChild(ghost);
+
+    const indicator = document.createElement('div');
+    indicator.className = 'reorder-indicator';
+
+    rowEl.classList.add('dragging');
+    let dropTarget = null;
+
+    const onMove = (mv) => {
+      ghost.style.top = (mv.clientY - dragOffsetY) + 'px';
+
+      const siblings = [...parentPanel.querySelectorAll('.label-row')]
+        .filter(r => r !== rowEl);
+      dropTarget = null;
+      for (const sib of siblings) {
+        const rect = sib.getBoundingClientRect();
+        if (mv.clientY < rect.top + rect.height / 2) { dropTarget = sib; break; }
+      }
+
+      if (dropTarget) parentPanel.insertBefore(indicator, dropTarget);
+      else            parentPanel.appendChild(indicator);
+    };
+
+    const onUp = () => {
+      document.removeEventListener('pointermove', onMove);
+      document.removeEventListener('pointerup',   onUp);
+      ghost.remove();
+      indicator.remove();
+      rowEl.classList.remove('dragging');
+
+      if (dropTarget) parentPanel.insertBefore(rowEl, dropTarget);
+      else            parentPanel.appendChild(rowEl);
+
       this.drawLeaders();
       this.updateJSONOutput();
     };

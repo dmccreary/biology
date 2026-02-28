@@ -41,5 +41,13 @@ them anywhere over the diagram.
 
 Currently we only have Type 1 and Type 3 working.
 
+## Layout Modes
+
+The shared `diagram.js` supports three layout modes, set via `"layout"` in `data.json`:
+
+1. **`side-panel`** (default) — Image left (65%), labels right (35%). Best for single-subject diagrams (e.g., animal cell, neuron).
+2. **`top-bottom`** — Label strips above and below the image. Best for horizontal cross-sections (e.g., cell membrane). Each callout gets `"panel": "top"` or `"panel": "bottom"`.
+3. **`dual-panel`** — Labels left (22%) | image center (56%) | labels right (22%). Best for comparison diagrams where structures belong to two groups (e.g., prokaryote vs. eukaryote). Each callout gets `"panel": "left"` or `"panel": "right"`.
+
 All diagrams can also have a quiz mode which shows a gold star for each
 correct answer and a celebration animation for completing a quiz.

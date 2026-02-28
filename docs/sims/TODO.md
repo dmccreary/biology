@@ -49,10 +49,11 @@ Always use the /microsim-generator skill to implement these Microsims
 
 - **Title:** Prokaryote vs. Eukaryote Cell Comparison
 - **Chapter:** 04-cell-organization-and-organelles
-- **Library:** p5.js
+- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
 - **Bloom:** Analyze (L4)
 - **Status:** specified
-- **Target:** `docs/sims/prokaryote-eukaryote-comparison/prokaryote-eukaryote-comparison.js`
+- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts
+- **Target:** `docs/sims/prokaryote-eukaryote-comparison/data.json`
 
 ### Specification
 
@@ -168,10 +169,11 @@ Responsive: Must respond to window resize events
 
 - **Title:** Endomembrane System — Protein Secretion Pathway
 - **Chapter:** 04-cell-organization-and-organelles
-- **Library:** p5.js
+- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
 - **Bloom:** Create (L6)
 - **Status:** specified
-- **Target:** `docs/sims/endomembrane-system/endomembrane-system.js`
+- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts
+- **Target:** `docs/sims/endomembrane-system/data.json`
 
 ### Specification
 
@@ -238,10 +240,11 @@ Responsive: Must respond to window resize events
 
 - **Title:** Cytoskeleton Component Explorer
 - **Chapter:** 04-cell-organization-and-organelles
-- **Library:** p5.js
+- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
 - **Bloom:** Understand (L2)
 - **Status:** specified
-- **Target:** `docs/sims/cytoskeleton-explorer/cytoskeleton-explorer.js`
+- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts
+- **Target:** `docs/sims/cytoskeleton-explorer/data.json`
 
 ### Specification
 
@@ -357,10 +360,11 @@ Responsive: Must respond to window resize events
 
 - **Title:** Sodium-Potassium Pump Cycle
 - **Chapter:** 05-cell-membranes-and-transport
-- **Library:** p5.js
+- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
 - **Bloom:** Create (L6)
 - **Status:** specified
-- **Target:** `docs/sims/sodium-potassium-pump/sodium-potassium-pump.js`
+- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts
+- **Target:** `docs/sims/sodium-potassium-pump/data.json`
 
 ### Specification
 
@@ -418,10 +422,11 @@ Responsive: Must respond to window resize events
 
 - **Title:** Cell Junctions Explorer
 - **Chapter:** 05-cell-membranes-and-transport
-- **Library:** p5.js
+- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
 - **Bloom:** Analyze (L4)
 - **Status:** specified
-- **Target:** `docs/sims/cell-junctions-explorer/cell-junctions-explorer.js`
+- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts
+- **Target:** `docs/sims/cell-junctions-explorer/data.json`
 
 ### Specification
 
@@ -921,10 +926,11 @@ Responsive: Must respond to window resize events
 
 - **Title:** Signal Transduction Pathway Overview
 - **Chapter:** 09-cell-signaling-and-feedback
-- **Library:** p5.js
+- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
 - **Bloom:** Create (L6)
 - **Status:** specified
-- **Target:** `docs/sims/signal-transduction-pathway/signal-transduction-pathway.js`
+- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts
+- **Target:** `docs/sims/signal-transduction-pathway/data.json`
 
 ### Specification
 
@@ -1062,10 +1068,11 @@ Responsive: Must respond to window resize events
 
 - **Title:** Mitosis Stage Explorer
 - **Chapter:** 10-cell-cycle-mitosis-and-cancer
-- **Library:** p5.js
+- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
 - **Bloom:** Create (L6)
 - **Status:** specified
-- **Target:** `docs/sims/mitosis-stage-explorer/mitosis-stage-explorer.js`
+- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts
+- **Target:** `docs/sims/mitosis-stage-explorer/data.json`
 
 ### Specification
 
@@ -1194,10 +1201,11 @@ Responsive: Must respond to window resize events
 
 - **Title:** Meiosis Stages Explorer
 - **Chapter:** 11-meiosis-and-mendelian-genetics
-- **Library:** p5.js
+- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
 - **Bloom:** Create (L6)
 - **Status:** specified
-- **Target:** `docs/sims/meiosis-stages/meiosis-stages.js`
+- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts
+- **Target:** `docs/sims/meiosis-stages/data.json`
 
 ### Specification
 
@@ -1722,10 +1730,11 @@ Each pedigree object includes: nodes (generation, position, sex, affected status
 
 - **Title:** DNA Replication Fork Explorer
 - **Chapter:** 13-central-dogma-replication-and-protein-synthesis
-- **Library:** p5.js
+- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
 - **Bloom:** Create (L6)
 - **Status:** specified
-- **Target:** `docs/sims/replication-fork/replication-fork.js`
+- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts
+- **Target:** `docs/sims/replication-fork/data.json`
 
 ### Specification
 

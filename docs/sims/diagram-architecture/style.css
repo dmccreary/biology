@@ -299,6 +299,31 @@ body {
   flex-shrink: 0;
 }
 
+/* ── Dual-panel layout (labels left + right) ────────── */
+#layout.dual-panel-layout {
+  grid-template-columns: 22fr 56fr 22fr;
+}
+
+.label-panel-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 6px 10px;
+  background: #fafafa;
+  z-index: 6;
+  position: relative;
+}
+
+#label-panel-left {
+  border-right: 1px solid #e8e8e8;
+  border-radius: 6px 0 0 6px;
+}
+
+#label-panel-right {
+  border-left: 1px solid #e8e8e8;
+  border-radius: 0 6px 6px 0;
+}
+
 /* ── Infobox ────────────────────────────────────────── */
 #infobox {
   margin-top: 8px;
