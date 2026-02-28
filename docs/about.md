@@ -1,14 +1,17 @@
 # About This Course
 
-## Hello from Mendel
+## Hello from Gregor
 
 ![](./img/mascot/welcome.png){ width="200px" align="left"}
 
-Hello!  I am Mendel the tree frog.  I will be your guide in this course.  I was named after Gregor Mendel who was a botanist and teacher.  Gregor was the first person to lay the mathematical foundation of the science of genetics.  I pop up at key checkpoints in each chapter to welcome you to new chapters, give friendly reminders, highlight common pitfalls, guide your learning path and help you celebrate your progress.
+Hello!  I am Gregor the tree frog.  I will be your guide in this course.  I was named after [Gregor Mendel](./stories/gregor-mendel/index.md) who was a botanist and teacher.  Gregor was the first person to lay the mathematical foundation of the science of genetics.  I pop up at key checkpoints in each chapter to welcome you to new chapters, give friendly reminders, highlight common pitfalls, guide your learning path and help you celebrate your progress.
 
 ## Why Biology Matters Now More Than Ever
 
-Biology sits at the center of today’s most urgent challenges—pandemics, food security, climate resilience, and biotechnology. When you learn to reason like a biologist you gain the ability to analyze complex systems, interpret data, and design experiments that improve lives. The scale of learners tackling these ideas is enormous:
+Biology sits at the center of today’s most urgent challenges—pandemics, food security, climate resilience, and biotechnology. When you learn to reason like a biologist you gain the ability to analyze complex systems, interpret data, and design experiments that improve lives.
+This book puts a special focus on critical thinking skills, detecting misinformation and systems thinking.
+
+The scale of learners tackling these ideas is enormous:
 
 **In the United States (2025):**
 
@@ -26,7 +29,7 @@ By studying with this open textbook you are joining a global movement of learner
 !!! mascot-welcome "Gregor Can Help!"
     <img src="../img/mascot/welcome.png" class="mascot-admonition-img" alt="Gregor welcomes you"/>
     
-    Traditional biology textbooks frequently cost between **\$150** and **\$300** and still rely on static diagrams that make it hard to visualize molecular processes. That barrier is especially steep for community-college and dual-enrollment students balancing work, family, and school.
+    Traditional printed biology textbooks frequently cost between **\$150** and **\$300** and still rely on static diagrams that make it hard to visualize molecular processes. That barrier is especially steep for community-college and dual-enrollment students balancing work, family, and school.
 
     Gregor—the tree frog learning mascot for this course—believes curiosity should be the only prerequisite. Every chapter, simulation, and formative check is free, remixable, and continuously updated. Let me hop in alongside you so we can explore living systems without hitting a paywall.
 
@@ -47,12 +50,12 @@ Biology is full of wonder, and this course keeps that sense of discovery alive. 
 
 ## Background
 
-The scope of this course was anchored to the following guiding question:
+The scope of this course was guided by the following guiding question:
 
 !!! prompt
-    What standards organizations describe the concepts that should appear in a high-school Biology course that maximizes a student’s chance of earning college credit?
+    What concepts that should be covered in a high-school Biology course that maximizes a student’s chance of earning college credit?
 
-Since early 2025 we have iterated on AI-assisted authoring workflows to pair accurate biology content with interactive assets. This edition was produced with Claude Code Skills on February 3, 2026, with an emphasis on tighter alignment to AP Biology, NGSS Life Science performance expectations, and story-driven MicroSims.
+For the past three years we have iterated on AI-assisted authoring workflows to pair accurate biology content with interactive assets. The first daft of this book was produced with Claude Code Opus 4.6 using Skills on February 3, 2026, with an emphasis on tighter alignment to AP Biology, NGSS Life Science performance expectations, and story-driven MicroSims.
 
 ## About Dan McCreary
 
@@ -60,10 +63,10 @@ Dan McCreary is a semi-retired AI researcher, solution architect, and educator w
 
 He is the co-author of *Making Sense of NoSQL* (Manning Publications), the founding chair of the NoSQL Now! conference, and a frequent keynote speaker on semantic search, ontology strategy, and AI hardware. Beyond industry, Dan has mentored students as a STEM volunteer since 2014 now applies the same rigor to building open AP Biology resources.  You can visit the [Intelligent Textbooks Case Studies](https://dmccreary.github.io/intelligent-textbooks/case-studies/) to see over 70 textbooks that Dan has create or co-created with other authors.
 
-**Selected credentials**
+**Selected Credentials for Dan McCreary**
 
 - B.A. in Physics and Computer Science from Carleton College
-- M.S.E.E. from the University of Minnesota;
+- M.S.E.E. from the University of Minnesota
 - MBA coursework at the University of St. Thomas (33 of 36 credits complete)
 - Patent holder in semantic search and ontology management techniques
 - Advocate for large-scale Enterprise Knowledge Graph adoption across healthcare and education
