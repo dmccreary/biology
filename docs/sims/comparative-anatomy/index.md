@@ -10,7 +10,7 @@ social:
 
 # Comparative Anatomy Explorer
 
-<iframe src="main.html" height="482" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="616" width="100%" scrolling="no"></iframe>
 
 [Run the Comparative Anatomy Explorer Fullscreen](./main.html){ .md-button .md-button--primary }
 

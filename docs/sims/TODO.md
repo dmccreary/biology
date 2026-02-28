@@ -1,6 +1,6 @@
 # MicroSim TODO — Remaining Implementations
 
-**Generated:** 2026-02-28 | **Remaining:** 53 of 59
+**Generated:** 2026-02-28 | **Remaining:** 52 of 59
 
 **Note:** All MicroSim directories ALREADY been created and the three core
 scaffolding files have been generated.  (`main.html`, `index.md`, `metadata.json`).
@@ -44,66 +44,6 @@ Always use the /microsim-generator skill to implement these Microsims
 | Chart.js | 5 |
 | vis-network | 2 |
 | vis-timeline | 1 |
-
-## protein-structure-levels
-
-- **Title:** Protein Structure Levels Explorer
-- **Chapter:** 03-biological-macromolecules
-- **Library:** p5.js
-- **Bloom:** Understand (L2)
-- **Status:** specified
-- **Target:** `docs/sims/protein-structure-levels/protein-structure-levels.js`
-
-### Specification
-
-Type: infographic
-**sim-id:** protein-structure-levels<br/>
-**Library:** p5.js<br/>
-
-Bloom Level: Understand (L2)
-Bloom Verb: explain
-Learning Objective: Students will explain the defining features and stabilizing forces at each of the four levels of protein structure, and identify the type of bonds or interactions that maintain each level.
-
-Canvas layout:
-- Top row: Four labeled panels side by side: "Primary", "Secondary", "Tertiary", "Quaternary"
-- Each panel is clickable; clicking expands it to fill the center of the canvas with a detailed diagram
-- Bottom strip: "Stabilizing forces" legend showing bond/interaction types and their icons
-
-Visual elements — Primary panel:
-- Linear chain of 8 labeled colored circles (amino acids) connected by lines labeled "Peptide bond"
-- N-terminus labeled with "H₂N–" on left, C-terminus with "–COOH" on right
-- Each circle a different color representing a different amino acid type (nonpolar gray, polar blue, charged red/orange)
-
-Visual elements — Secondary panel:
-- Side-by-side: α-helix (coil) and β-pleated sheet, each drawn with p5.js
-- Hydrogen bonds shown as dashed green lines between backbone C=O and N–H
-- R groups shown as stubs projecting outward from the helix
-- Labels: "H-bonds stabilize both secondary structures"
-
-Visual elements — Tertiary panel:
-- Schematic globular protein showing helices (coils) and sheets (arrows) connected by loops, folded into a compact shape
-- Color-coded regions of secondary structure: helices orange, sheets blue, loops gray
-- Callout labels with arrows pointing to: "Hydrophobic core", "Disulfide bridge (–S–S–)", "Salt bridge (+/–)", "H-bonds between R groups"
-
-Visual elements — Quaternary panel:
-- Hemoglobin tetramer: two α subunits (light blue) and two β subunits (light red) arranged symmetrically
-- Heme groups shown as flat disk icons within each subunit
-- Subunit interfaces labeled "Noncovalent interactions hold subunits together"
-- Small oxygen molecules (O₂) shown binding to heme groups
-
-Interactive controls:
-- Clicking any panel header expands that level to full-canvas view with more detail
-- "Back to overview" button returns to four-panel view
-- Hovering over any labeled element shows a tooltip with definition and biological example
-
-Default state: four-panel overview visible
-
-Instructional Rationale: A step-through from linear (primary) to 3D multimeric (quaternary) builds the scaffold for understanding structure–function relationships. The overview lets students see all four levels simultaneously, reinforcing the hierarchical nature of protein organization.
-
-Canvas size: 700 × 480 px
-Responsive: Must respond to window resize events
-
----
 
 ## prokaryote-eukaryote-comparison
 

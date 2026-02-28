@@ -1,6 +1,6 @@
 # MicroSim DONE — Completed Implementations
 
-**Completed:** 6 MicroSims
+**Completed:** 7 MicroSims
 
 These MicroSims have been fully implemented with substantial JavaScript.
 
@@ -316,5 +316,17 @@ Responsive: Must respond to window resize events
 **Colors:** Humerus: red (#E74C3C). Radius/Ulna: blue (#3498DB). Carpals: green (#27AE60). Phalanges: yellow (#F1C40F). Background: light gray.
 
 **Responsive design:** Species silhouettes wrap to two rows on narrow screens.
+
+---
+
+## protein-structure-levels
+
+- **Title:** Protein Structure Levels Explorer
+- **Chapter:** 03-biological-macromolecules
+- **Library:** p5.js
+- **Bloom:** Understand (L2)
+- **Status:** complete
+- **Target:** `docs/sims/protein-structure-levels/protein-structure-levels.js`
+- **Approach:** Text-to-image illustration (`protein-structures.png`) + p5.js overlay
 
 ---

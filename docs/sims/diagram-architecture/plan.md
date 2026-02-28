@@ -6,6 +6,9 @@ Transform every complex biological diagram in this textbook from a static labele
 into a self-contained interactive MicroSim. Students switch between **Explore mode**
 (hover to learn) and **Quiz mode** (click to test) without leaving the page.
 
+In the quiz mode, a gold star is presented for each correct response.
+At the end of a quiz, a celebration animation is generated.
+
 ---
 
 ## Core Principle
