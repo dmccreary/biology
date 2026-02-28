@@ -2,9 +2,15 @@
 
 ## Goal
 
-Transform every complex biological diagram in this textbook from a static labeled image
-into a self-contained interactive MicroSim. Students switch between **Explore mode**
-(hover to learn) and **Quiz mode** (click to test) without leaving the page.
+Enable complex biological diagrams in this textbook to not just be static labeled images.
+They should all become a self-contained interactive MicroSim by using
+an overlay layer that catches hover and click events on regions over the diagram.
+The overlay layer is controlled by centralized JavaScript libraries that
+enable powerful features like Explore, Quiz and Edit modes and support
+positive feedback for recognizing and naming structures within these diagrams.
+
+Students switch between **Explore mode** (hover to learn) and **Quiz mode** (click to test) without leaving the page.  In the fullscreen mode and Edit button is enabled
+that allows authors to change the regions using region and point editors.
 
 In the quiz mode, a gold star is presented for each correct response.
 At the end of a quiz, a celebration animation is generated.
