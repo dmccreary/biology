@@ -130,7 +130,7 @@ The Krebs cycle's primary function is **not** to produce ATP directly but to ext
 
 #### Diagram: Krebs Cycle Explorer
 
-<iframe src="../../sims/krebs-cycle-explorer/main.html" height="500" width="100%" scrolling="no"></iframe>
+<iframe src="../../sims/krebs-cycle-explorer/main.html" height="655" width="100%" scrolling="no"></iframe>
 
 *[View Fullscreen](../../sims/krebs-cycle-explorer/main.html)*
 

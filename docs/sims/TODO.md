@@ -1066,7 +1066,7 @@ Responsive: Must respond to window resize events
 - **Chapter:** 08-cellular-respiration
 - **Library:** p5.js
 - **Bloom:** Create (L6)
-- **Status:** specified
+- **Status:** implemented
 - **Target:** `docs/sims/krebs-cycle-explorer/krebs-cycle-explorer.js`
 
 ### Specification

@@ -11,8 +11,12 @@ nav:
   - FAQ: faq.md
   - Chapters:
     - Overview: chapters/index.md
-    - 1. Scientific Foundations and Atomic Chemistry: chapters/01-scientific-foundations-and-chemistry/index.md
-    - 2. Water, pH, and Organic Chemistry: chapters/02-water-ph-and-organic-chemistry/index.md
+    - 1. Scientific Foundations and Atomic Chemistry: 
+      - Content: chapters/01-scientific-foundations-and-chemistry/index.md
+      - Quiz: chapters/01-scientific-foundations-and-chemistry/quiz.md
+    - 2. Water, pH, and Organic Chemistry: 
+      - Content: chapters/02-water-ph-and-organic-chemistry/index.md
+      - Quiz: chapters/02-water-ph-and-organic-chemistry/quiz.md
     - 3. Biological Macromolecules: chapters/03-biological-macromolecules/index.md
     - 4. Cell Organization and Organelles: chapters/04-cell-organization-and-organelles/index.md
     - 5. Cell Membranes and Transport: chapters/05-cell-membranes-and-transport/index.md
