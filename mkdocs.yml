@@ -134,6 +134,11 @@ nav:
     - Sample Biology Diagrams: learning-graph/sample-biology-diagrams.md
   
   - Glossary: glossary.md
+  - Stories:
+    - List of Possible Biology Stories: stories/list-of-possible-biology-stories.md
+    - Seeds of Genetics: Gregor Mendel: stories/11-seeds-of-genetics-gregor-mendel.md
+    - Graphic Story: Gregor Mendel: stories/gregor-mendel/index.md
+
 
   - Prompts:
     - List of Prompts: prompts/index.md
@@ -169,6 +174,17 @@ plugins:
   - search
   - social
   - social_override
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      auto_caption: false
+      caption_position: bottom
 
 markdown_extensions:
   - md_in_html

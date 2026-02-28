@@ -23,7 +23,7 @@ The cell cycle is divided into two major stages:
 
 The cycle is not simply a timer — it is actively driven and monitored by molecular machinery that can pause, accelerate, or halt progression depending on conditions.
 
-#### Diagram: The Stages of Mitosis
+#### Diagram: The Stages of Mitosis Image
 
 ![The Stages of Mitosis](../../img/six-stages-of-mitosis.png)
 

@@ -1,5 +1,11 @@
 # About This Course
 
+## Hello from Mendel
+
+![](./img/mascot/welcome.png){ width="200px" align="left"}
+
+Hello!  I am Mendel the tree frog.  I will be your guide in this course.  I was named after Gregor Mendel who was a botanist and teacher.  Gregor was the first person to lay the mathematical foundation of the science of genetics.  I pop up at key checkpoints in each chapter to welcome you to new chapters, give friendly reminders, highlight common pitfalls, guide your learning path and help you celebrate your progress.
+
 ## Why Biology Matters Now More Than Ever
 
 Biology sits at the center of today’s most urgent challenges—pandemics, food security, climate resilience, and biotechnology. When you learn to reason like a biologist you gain the ability to analyze complex systems, interpret data, and design experiments that improve lives. The scale of learners tackling these ideas is enormous:
