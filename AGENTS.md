@@ -3,6 +3,7 @@
 ## MicroSim Production Standards
 
 - When generating any p5.js MicroSim, ALWAYS read `/Users/danmccreary/Documents/ws/claude-skills/skills/microsim-generator/references/p5-guide.md` first and follow every requirement from the microsim-generator skill. This guide defines the canvas layout, responsive control positioning, accessibility description, and validation checklist our sims must meet.
+- Shared superscript helpers live in `docs/src/shared-js/superscript-text.js`. Include that script before your MicroSim’s JS (e.g., `<script src="../../src/shared-js/superscript-text.js"></script>`) and call `SuperscriptText.drawSuperscriptText()` / `convertSuperscriptOption()` whenever you need polished exponents like `I^A` or `I^B` in p5.js or vanilla canvas contexts.
 
 ## Open Link When Finished Generating a MicroSim
 
@@ -27,4 +28,3 @@ Where `<sim-name>` is the name of the MicroSim you just created.
 
 - `docs/sims/diagram-architecture/diagram.js` is our reference implementation for complex biology diagrams (leader lines, multiple layouts, quiz mode, edit tools).
 - Before adding bespoke logic to a new MicroSim, check this file for reusable patterns (marker rendering, label management, confetti animation). Extending this architecture keeps controls, animations, and accessibility consistent across the course.
-

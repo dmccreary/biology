@@ -2,7 +2,7 @@
 // Follows microsim-generator standards: responsive layout, control area, accessible annotations
 
 let canvasWidth = 780;
-let drawHeight = 700;
+let drawHeight = 580;
 const controlHeight = 80; // (2 rows × 35) + 10
 let canvasHeight = drawHeight + controlHeight;
 const margin = 25;
@@ -23,6 +23,11 @@ const selectionListLeftMargin = 120;
 // should be wide enough selection value of "Type AB" without wrapping
 const selectWidth = 80;
 
+const Superscript = window.SuperscriptText || {};
+const convertSuperscriptOption = Superscript.convertSuperscriptOption;
+const buildSuperscriptTokens = Superscript.buildSuperscriptTokens;
+const drawSuperscriptText = Superscript.drawSuperscriptText;
+
 const parentStates = [
   { phenotype: 'A', genotype: ['IA', 'i'] },
   { phenotype: 'B', genotype: ['IB', 'i'] }
@@ -35,7 +40,8 @@ const BLOOD_TYPES = [
     key: 'A',
     label: 'Type A',
     color: '#E74C3C',
-    antigens: 'A antigens; anti-B antibodies',
+    antigens: 'A antigens',
+    antibodies: 'Anti-B antibodies',
     genotypes: [
       ['IA', 'IA'],
       ['IA', 'i']
@@ -45,7 +51,8 @@ const BLOOD_TYPES = [
     key: 'B',
     label: 'Type B',
     color: '#3498DB',
-    antigens: 'B antigens; anti-A antibodies',
+    antigens: 'B antigens',
+    antibodies: 'Anti-A antibodies',
     genotypes: [
       ['IB', 'IB'],
       ['IB', 'i']
@@ -55,7 +62,8 @@ const BLOOD_TYPES = [
     key: 'AB',
     label: 'Type AB',
     color: '#8E44AD',
-    antigens: 'A and B antigens; no antibodies',
+    antigens: 'A and B antigens',
+    antibodies: 'No antibodies',
     genotypes: [
       ['IA', 'IB']
     ]
@@ -64,7 +72,8 @@ const BLOOD_TYPES = [
     key: 'O',
     label: 'Type O',
     color: '#95A5A6',
-    antigens: 'No antigens; anti-A and anti-B antibodies',
+    antigens: 'No antigens',
+    antibodies: 'Anti-A and anti-B antibodies',
     genotypes: [
       ['i', 'i']
     ]
@@ -168,10 +177,11 @@ function drawParentPanel(index, x, y) {
   fill('black');
   textSize(defaultTextSize);
   text(`${parentLabel}: ${typeData.label}`, x, y);
-  text(`Selected genotype: ${formatGenotype(parent.genotype)}`, x, y + 20);
+  drawSuperscriptText('Selected genotype: ' + formatGenotype(parent.genotype), x, y + 20, defaultTextSize);
   text(`Antigens: ${typeData.antigens}`, x, y + 40);
+  text(`Antibodies: ${typeData.antibodies}`, x, y + 60);
 
-  const chipY = y + 70;
+  const chipY = y + 90;
   drawGenotypeChips(index, x, chipY);
 }
 
@@ -186,14 +196,15 @@ function drawGenotypeChips(index, startX, y) {
   textSize(defaultTextSize);
   for (const alleles of typeData.genotypes) {
     const label = formatGenotype(alleles);
-    const chipWidth = textWidth(label) + 24;
+    const labelMetrics = buildSuperscriptTokens(label, defaultTextSize);
+    const chipWidth = labelMetrics.totalWidth + 24;
     stroke('silver');
     fill(selectedKey === genotypeKey(alleles) ? 255 : 245);
     rect(x, y, chipWidth, chipHeight, 8);
     noStroke();
     fill('black');
     textAlign(LEFT, CENTER);
-    text(label, x + 12, y + chipHeight / 2);
+    drawSuperscriptText(label, x + 12, y + chipHeight / 2, defaultTextSize, 'left', labelMetrics);
     x += chipWidth + gap;
   }
   textAlign(LEFT, CENTER);
@@ -202,8 +213,8 @@ function drawGenotypeChips(index, startX, y) {
 function drawPunnettSquare(punnettData) {
   const cellSize = 90;
   const gridSize = cellSize * 2;
-  const gridLeft = Math.max(margin, canvasWidth / 2 - gridSize / 2);
-  const gridTop = 170;
+  const gridLeft = Math.max(margin, canvasWidth / 2 - gridSize / 2) - 50;
+  const gridTop = 240;
   hoveredCellInfo = null;
 
   // Parent gamete labels
@@ -214,13 +225,24 @@ function drawPunnettSquare(punnettData) {
 
   for (let col = 0; col < 2; col++) {
     const allele = punnettData.parent2Gametes[col];
-    text(formatAllele(allele), gridLeft + col * cellSize + cellSize / 2, gridTop - 22);
+    drawSuperscriptText(
+      formatAllele(allele),
+      gridLeft + col * cellSize + cellSize / 2,
+      gridTop - 22,
+      defaultTextSize,
+      'center'
+    );
   }
 
   textAlign(LEFT, CENTER);
   for (let row = 0; row < 2; row++) {
     const allele = punnettData.parent1Gametes[row];
-    text(formatAllele(allele), gridLeft - 50, gridTop + row * cellSize + cellSize / 2);
+    drawSuperscriptText(
+      formatAllele(allele),
+      gridLeft - 50,
+      gridTop + row * cellSize + cellSize / 2,
+      defaultTextSize
+    );
   }
 
   stroke('gray');
@@ -249,7 +271,7 @@ function drawPunnettSquare(punnettData) {
       noStroke();
       fill('black');
       textSize(15);
-      text(formatGenotype(cell.genotype), cellX + 8, cellY + 24);
+      drawSuperscriptText(formatGenotype(cell.genotype), cellX + 8, cellY + 24, defaultTextSize);
 
       fill(cell.phenotype.color);
       textSize(13);
@@ -263,10 +285,10 @@ function drawPunnettSquare(punnettData) {
 }
 
 function drawInfoPanel() {
-  const infoWidth = 240;
+  const infoWidth = 210;
   const infoHeight = 130;
-  const panelX = canvasWidth - infoWidth - margin;
-  const panelY = 80;
+  const panelX = canvasWidth - infoWidth - margin - 15;
+  const panelY = 215;
 
   stroke(200);
   fill(255, 255, 255, 235);
@@ -277,7 +299,12 @@ function drawInfoPanel() {
 
   if (hoveredCellInfo) {
     const phenotypeData = hoveredCellInfo.phenotype;
-    text(`Genotype: ${formatGenotype(hoveredCellInfo.genotype)}`, panelX + 12, panelY + 24);
+    drawSuperscriptText(
+      'Genotype: ' + formatGenotype(hoveredCellInfo.genotype),
+      panelX + 12,
+      panelY + 24,
+      defaultTextSize
+    );
     text(`Phenotype: ${phenotypeData.label}`, panelX + 12, panelY + 50);
     text(`Antigens: ${phenotypeData.antigens}`, panelX + 12, panelY + 76, infoWidth - 24, 60);
   } else {
@@ -353,7 +380,8 @@ function handlePhenotypeChange(index) {
 
   genotypeSelect.elt.innerHTML = '';
   typeData.genotypes.forEach((alleles) => {
-    genotypeSelect.option(formatGenotype(alleles), genotypeKey(alleles));
+    const label = formatGenotype(alleles);
+    genotypeSelect.option(convertSuperscriptOption(label), genotypeKey(alleles));
   });
 
   if (typeData.genotypes.length === 1) {

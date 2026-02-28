@@ -38,6 +38,12 @@
 
     Interactive MicroSim for biotechnology toolkit workflow.
 
+-   **[Blood Type Explorer](./blood-type-eixplorer/index.md)**
+
+    ![Blood Type Explorer](./blood-type-inheritance/blood-type-eixplorer.png)
+
+    Interactive MicroSim for blood type explorer.
+
 -   **[Blood Type Inheritance Explorer](./blood-type-inheritance/index.md)**
 
     ![Blood Type Inheritance Explorer](./blood-type-inheritance/blood-type-inheritance.png)
