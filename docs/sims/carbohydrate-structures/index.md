@@ -11,7 +11,7 @@ quality_score: 0
 
 # Carbohydrate Structures Explorer
 
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="462" width="100%" scrolling="no"></iframe>
 
 [Run the Carbohydrate Structures Explorer MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -19,43 +19,36 @@ quality_score: 0
 
 ## About This MicroSim
 
-TODO: Describe what this MicroSim demonstrates.
+This MicroSim allows students to explore Haworth projection diagrams of key carbohydrate molecules. Students can compare the structural difference between α-glucose and β-glucose (the orientation of the C-1 hydroxyl group), see how monosaccharides join through glycosidic bonds in sucrose, and contrast the coiled chains of starch (α-1,4 bonds) with the straight, rigid chains of cellulose (β-1,4 bonds).
 
 ## How to Use
 
-TODO: Describe how students should interact with this MicroSim.
-
-## Iframe Embed Code
-
-You can add this MicroSim to any web page by adding this to your HTML:
-
-```html
-<iframe src="https://dmccreary.github.io/biology/sims/carbohydrate-structures/main.html"
-        height="450px"
-        width="100%"
-        scrolling="no"></iframe>
-```
+1. **Select a molecule** from the dropdown menu to view its Haworth projection
+2. **Compare α- and β-Glucose** — notice the C-1 –OH group points DOWN in the α form (red) and UP in the β form (blue)
+3. **View Sucrose** to see how two different monosaccharides join via a glycosidic bond, with water released
+4. **Compare Starch and Cellulose** to see how bond orientation (α-1,4 vs. β-1,4) determines chain shape
+5. **Toggle "Show bond orientation labels"** to highlight the anomeric position and glycosidic bond details
 
 ## Lesson Plan
 
 ### Grade Level
-9-12 (High School Geometry)
+9-12 (AP Biology)
 
 ### Duration
 10-15 minutes
 
 ### Prerequisites
-TODO: List prerequisites.
+Basic understanding of organic chemistry functional groups (hydroxyl, carbon backbone)
 
 ### Activities
 
-1. **Exploration** (5 min): TODO
-2. **Guided Practice** (5 min): TODO
-3. **Assessment** (5 min): TODO
+1. **Exploration** (5 min): Have students select each molecule and read the properties panel. Ask them to note what changes between α- and β-glucose.
+2. **Guided Practice** (5 min): Turn on bond orientation labels. Compare starch and cellulose chains. Discuss why humans can digest starch but not cellulose.
+3. **Assessment** (5 min): Ask students to explain in writing how a single bond orientation difference (C-1 –OH up vs. down) leads to dramatically different biological functions.
 
 ### Assessment
-TODO: List assessment criteria.
+Students should be able to:
 
-## References
-
-1. TODO: Add references.
+- Identify the structural difference between α- and β-glucose
+- Explain what a glycosidic bond is and how water is involved in its formation
+- Contrast starch and cellulose in terms of bond type, chain shape, and biological function

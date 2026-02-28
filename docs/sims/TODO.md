@@ -51,7 +51,7 @@ Always use the /microsim-generator skill to implement these Microsims
 - **Chapter:** 02-water-ph-and-organic-chemistry
 - **Library:** p5.js
 - **Bloom:** Understand (L2)
-- **Status:** specified
+- **Status:** complete
 - **Target:** `docs/sims/condensation-hydrolysis/condensation-hydrolysis.js`
 
 ### Specification

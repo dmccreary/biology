@@ -67,6 +67,45 @@ function sliderToValue(sliderVal) {
 
 This pattern was validated in the buffer-action-simulator where pH (a logarithmic scale) needed gradual visual feedback as the user moved the slider. Apply the same principle whenever the controlled quantity has a non-linear relationship to the observable outcome.
 
+### Label Placement in Structural Diagrams (Avoiding Overlap)
+
+When drawing molecular structures, cell diagrams, or any labeled scientific diagram in p5.js, label overlap is the most common readability problem. Follow these rules:
+
+**1. Size the scaffold generously before placing labels.**
+Make rings, membranes, and structural outlines 20–30% larger than feels necessary. Labels need the surrounding whitespace — a tight-looking ring guarantees overlap once substituent labels are added.
+
+**2. Offset substituent labels diagonally, not straight out.**
+When two attachment points are vertically close (e.g., C-1 and C-2 on a Haworth ring), extending both labels straight down causes collision. Instead, angle them in different directions:
+
+```
+WRONG (both straight down):        CORRECT (diagonal offsets):
+  C1                                  C1
+  |                                    \
+  OH   ← overlaps C2's OH              OH  (down-right)
+  C2                                  C2
+  |                                    \
+  OH                                    OH  (down-right, further right)
+```
+
+**3. Use different stem lengths for primary vs. secondary labels.**
+- Primary labels (functional groups: OH, NH₂, COOH): stem length 35–40 px, strokeWeight 2, textSize 13–15, bold
+- Secondary labels (H atoms, lone pairs): stem length 18–22 px, strokeWeight 1, textSize 10–11, normal weight
+- This visual hierarchy prevents H and OH from competing for the same space
+
+**4. Place carbon/atom labels outside the ring perimeter.**
+Push C1, C2, etc. at least 14–18 px beyond the nearest ring vertex. Never place them inside the ring or directly on a vertex — they merge with the ring outline.
+
+**5. Stagger labels that share an edge.**
+When multiple labels project from the same side of a structure (e.g., all substituents on the right side of a ring), alternate their horizontal offsets: first label at +16 px, second at +24 px, third at +16 px. This prevents a vertical stack of overlapping text.
+
+**6. Reserve annotation labels for toggle-on display.**
+Detailed annotations (e.g., "C-1 –OH (DOWN = α)") should only appear when the user checks a "Show labels" checkbox. Drawing them unconditionally clutters the default view. When shown, place them 25–30 px beyond the substituent label they annotate, with a dashed ellipse highlight connecting them to the relevant structure.
+
+**7. Test at the narrowest expected width.**
+Responsive MicroSims may render as narrow as 500 px. If labels overlap at that width, either reduce font sizes or switch to abbreviated labels (e.g., "OH" instead of "–OH group") at narrow widths.
+
+This pattern was validated in the carbohydrate-structures MicroSim where C-1 and C-2 substituents on a Haworth pyranose ring overlapped badly until diagonal offsets and hierarchical sizing were applied.
+
 ### MicroSim Scaffolding Note
 
 All 79 MicroSim directories under `docs/sims/` have scaffolding in place (`main.html`, `index.md`, `metadata.json`). To determine whether a MicroSim is actually **complete**, check for a substantial JavaScript file (e.g., `<sim-name>.js`) in the sim directory. If the directory has no `.js` file, or only a skeleton, the sim still needs to be implemented. The TODO list in `docs/sims/TODO.md` tracks which sims need JS implementation.
