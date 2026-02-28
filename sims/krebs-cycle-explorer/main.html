@@ -13,7 +13,13 @@
 </head>
 <body>
     <main></main>
-    <br/>
-    <a href=".">Back to Lesson Plan</a>
+    <div id="return-link" style="display:none; padding: 8px 16px;">
+        <a href=".">← Return to Lesson Plan</a>
+    </div>
+    <script>
+        if (window.self === window.top) {
+            document.getElementById('return-link').style.display = 'block';
+        }
+    </script>
 </body>
 </html>

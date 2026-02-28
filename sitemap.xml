@@ -13,6 +13,10 @@
          <lastmod>2026-02-28</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/biology/faq/</loc>
+         <lastmod>2026-02-28</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/biology/glossary/</loc>
          <lastmod>2026-02-28</lastmod>
     </url>
@@ -29,11 +33,23 @@
          <lastmod>2026-02-28</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/biology/chapters/01-scientific-foundations-and-chemistry/quiz/</loc>
+         <lastmod>2026-02-28</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/biology/chapters/02-water-ph-and-organic-chemistry/</loc>
          <lastmod>2026-02-28</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/biology/chapters/02-water-ph-and-organic-chemistry/quiz/</loc>
+         <lastmod>2026-02-28</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/biology/chapters/03-biological-macromolecules/</loc>
+         <lastmod>2026-02-28</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/chapters/03-biological-macromolecules/quiz/</loc>
          <lastmod>2026-02-28</lastmod>
     </url>
     <url>
@@ -129,6 +145,10 @@
          <lastmod>2026-02-28</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/biology/learning-graph/faq-quality-report/</loc>
+         <lastmod>2026-02-28</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/biology/learning-graph/index-template/</loc>
          <lastmod>2026-02-28</lastmod>
     </url>
@@ -150,6 +170,10 @@
     </url>
     <url>
          <loc>https://dmccreary.github.io/biology/learning-graph/taxonomy-distribution/</loc>
+         <lastmod>2026-02-28</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/prompts/</loc>
          <lastmod>2026-02-28</lastmod>
     </url>
     <url>
@@ -177,6 +201,10 @@
          <lastmod>2026-02-28</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/biology/prompts/12-click-to-enlarge-image/</loc>
+         <lastmod>2026-02-28</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/biology/prompts/cover/</loc>
          <lastmod>2026-02-28</lastmod>
     </url>
@@ -198,10 +226,6 @@
     </url>
     <url>
          <loc>https://dmccreary.github.io/biology/sims/animal-cell/</loc>
-         <lastmod>2026-02-28</lastmod>
-    </url>
-    <url>
-         <loc>https://dmccreary.github.io/biology/sims/animal-cell/image-prompt/</loc>
          <lastmod>2026-02-28</lastmod>
     </url>
     <url>
@@ -265,10 +289,6 @@
          <lastmod>2026-02-28</lastmod>
     </url>
     <url>
-         <loc>https://dmccreary.github.io/biology/sims/cell-membrane/image-prompt/</loc>
-         <lastmod>2026-02-28</lastmod>
-    </url>
-    <url>
          <loc>https://dmccreary.github.io/biology/sims/chemical-bond-visualizer/</loc>
          <lastmod>2026-02-28</lastmod>
     </url>
@@ -282,10 +302,6 @@
     </url>
     <url>
          <loc>https://dmccreary.github.io/biology/sims/chloroplast/</loc>
-         <lastmod>2026-02-28</lastmod>
-    </url>
-    <url>
-         <loc>https://dmccreary.github.io/biology/sims/chloroplast/image-prompt/</loc>
          <lastmod>2026-02-28</lastmod>
     </url>
     <url>
@@ -309,19 +325,11 @@
          <lastmod>2026-02-28</lastmod>
     </url>
     <url>
-         <loc>https://dmccreary.github.io/biology/sims/diagram-architecture/plan/</loc>
-         <lastmod>2026-02-28</lastmod>
-    </url>
-    <url>
          <loc>https://dmccreary.github.io/biology/sims/dihybrid-cross/</loc>
          <lastmod>2026-02-28</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/biology/sims/dna-double-helix/</loc>
-         <lastmod>2026-02-28</lastmod>
-    </url>
-    <url>
-         <loc>https://dmccreary.github.io/biology/sims/dna-double-helix/image-prompt/</loc>
          <lastmod>2026-02-28</lastmod>
     </url>
     <url>
@@ -417,10 +425,6 @@
          <lastmod>2026-02-28</lastmod>
     </url>
     <url>
-         <loc>https://dmccreary.github.io/biology/sims/mitochondria/image-prompt/</loc>
-         <lastmod>2026-02-28</lastmod>
-    </url>
-    <url>
          <loc>https://dmccreary.github.io/biology/sims/mitosis-stage-explorer/</loc>
          <lastmod>2026-02-28</lastmod>
     </url>
@@ -430,10 +434,6 @@
     </url>
     <url>
          <loc>https://dmccreary.github.io/biology/sims/neuron-structure/</loc>
-         <lastmod>2026-02-28</lastmod>
-    </url>
-    <url>
-         <loc>https://dmccreary.github.io/biology/sims/neuron-structure/image-prompt/</loc>
          <lastmod>2026-02-28</lastmod>
     </url>
     <url>
@@ -538,6 +538,26 @@
     </url>
     <url>
          <loc>https://dmccreary.github.io/biology/sims/x-linked-inheritance/</loc>
+         <lastmod>2026-02-28</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/stories/</loc>
+         <lastmod>2026-02-28</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/stories/list-of-possible-biology-stories/</loc>
+         <lastmod>2026-02-28</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/stories/gregor-mendel/</loc>
+         <lastmod>2026-02-28</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/stories/gregor-mendel/description/</loc>
+         <lastmod>2026-02-28</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/stories/ynes-mexia/</loc>
          <lastmod>2026-02-28</lastmod>
     </url>
 </urlset>
