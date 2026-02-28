@@ -229,6 +229,8 @@ class DiagramSim {
         tipEl.style.display = 'block';
       }
 
+      this.showQuickStar();
+
       // Advance after a short pause so the student can read the feedback
       setTimeout(() => {
         this.quizIndex++;
@@ -259,6 +261,121 @@ class DiagramSim {
     for (const btn of this.markers.values()) {
       btn.classList.remove('quiz-unknown', 'correct', 'incorrect');
     }
+
+    this.launchCelebration();
+  }
+
+  // ── Celebration animation ─────────────────────────────────────────────────
+
+  launchCelebration() {
+    const canvas = document.createElement('canvas');
+    canvas.style.cssText = [
+      'position:fixed', 'inset:0', 'width:100%', 'height:100%',
+      'pointer-events:none', 'z-index:9999'
+    ].join(';');
+    document.body.appendChild(canvas);
+
+    const ctx = canvas.getContext('2d');
+    const resize = () => {
+      canvas.width  = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+    resize();
+
+    const COLORS = [
+      '#2A8040', '#3a7a3a', '#7DB84A',
+      '#F5A623', '#FFD700', '#89b4fa',
+      '#FF6F61', '#C45C2A'
+    ];
+
+    const particles = [];
+    const addBurst = (originX, spread) => {
+      for (let i = 0; i < 70; i++) {
+        particles.push({
+          x:             originX + (Math.random() - 0.5) * spread,
+          y:             canvas.height * 0.75,
+          vx:            (Math.random() - 0.5) * 9,
+          vy:            -(Math.random() * 12 + 7),
+          w:             Math.random() * 7 + 3,
+          h:             Math.random() * 13 + 5,
+          rotation:      Math.random() * Math.PI * 2,
+          rotationSpeed: (Math.random() - 0.5) * 0.25,
+          color:         COLORS[Math.floor(Math.random() * COLORS.length)],
+          alpha:         1
+        });
+      }
+    };
+
+    addBurst(canvas.width * 0.25, 60);
+    addBurst(canvas.width * 0.75, 60);
+
+    const GRAVITY  = 0.3;
+    const DURATION = 3500;
+    let startTime  = null;
+
+    const animate = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const elapsed  = timestamp - startTime;
+      const progress = elapsed / DURATION;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      let visible = false;
+
+      for (const p of particles) {
+        p.vy       += GRAVITY;
+        p.x        += p.vx;
+        p.y        += p.vy;
+        p.rotation += p.rotationSpeed;
+        p.alpha     = progress < 0.6 ? 1 : Math.max(0, 1 - (progress - 0.6) / 0.4);
+
+        if (p.alpha > 0 && p.y < canvas.height + 40) {
+          visible = true;
+          ctx.save();
+          ctx.globalAlpha = p.alpha;
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.rotation);
+          ctx.fillStyle = p.color;
+          ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+          ctx.restore();
+        }
+      }
+
+      if (elapsed < DURATION && visible) requestAnimationFrame(animate);
+      else {
+        window.removeEventListener('resize', resize);
+        canvas.remove();
+      }
+    };
+
+    window.addEventListener('resize', resize);
+    requestAnimationFrame(animate);
+  }
+
+  showQuickStar() {
+    const overlay = document.createElement('div');
+    overlay.style.cssText = [
+      'position:fixed', 'inset:0', 'display:flex',
+      'align-items:center', 'justify-content:center',
+      'pointer-events:none', 'z-index:9998'
+    ].join(';');
+
+    const wrapper = document.createElement('div');
+    wrapper.style.cssText = 'text-align:center; color:#FFD700; font-family:var(--md-text-font-family, sans-serif); text-shadow:0 4px 12px rgba(0,0,0,0.35);';
+
+    const star = document.createElement('div');
+    star.textContent = '★';
+    star.style.cssText = 'font-size:110px; line-height:1;';
+
+    const caption = document.createElement('div');
+    caption.textContent = 'You Got It!';
+    caption.style.cssText = 'font-size:28px; margin-top:0.2em;';
+
+    wrapper.appendChild(star);
+    wrapper.appendChild(caption);
+    overlay.appendChild(wrapper);
+    document.body.appendChild(overlay);
+
+    setTimeout(() => overlay.remove(), 1000);
   }
 
   restartQuiz() {

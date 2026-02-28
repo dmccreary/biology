@@ -1,0 +1,45 @@
+{
+  "title": "Mendel-to-Meiosis Concept Map",
+  "creator": "Dan McCreary",
+  "subject": "High School Geometry",
+  "description": "Interactive MicroSim for mendel-to-meiosis concept map",
+  "date": "2026-02-27",
+  "educational": {
+    "gradeLevel": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "subjectArea": "Mathematics",
+    "topic": "Mendel-to-Meiosis Concept Map",
+    "learningObjectives": [
+      "TODO: Add learning objectives"
+    ],
+    "bloomsTaxonomy": "Create",
+    "duration": "10-15 minutes",
+    "prerequisites": [],
+    "standards": []
+  },
+  "technical": {
+    "framework": "vis-network",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 450
+    },
+    "responsive": true,
+    "dependencies": [],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": false
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Interactive exploration",
+    "keyQuestions": [],
+    "commonMisconceptions": [],
+    "assessmentOpportunities": []
+  },
+  "chapter": "11-meiosis-and-mendelian-genetics"
+}

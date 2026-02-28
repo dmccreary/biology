@@ -1,0 +1,84 @@
+body {
+    font-family: sans-serif;
+    padding: 10px;
+    margin: 0;
+    background-color: aliceblue;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 720px;
+    margin: auto;
+    padding: 10px 20px 20px 20px;
+}
+
+.parent-block {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.parent-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 100px;
+    flex: 0 0 auto;
+}
+
+.selectors {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex: 1 1 200px;
+}
+
+.select-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.select-group label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+select {
+    padding: 8px;
+    font-size: 1rem;
+}
+
+select.blood {
+    width: 70px;
+}
+
+select.rh {
+    width: 60px;
+}
+
+#result {
+    margin-top: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    min-height: 24px;
+}
+
+#explanation {
+    margin-top: 20px;
+    color: #333;
+    line-height: 1.4;
+}
+
+#description {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 24px auto;
+}
+
+/* used for the title at the top of the page and also the title when embedded in an iframe - centers the text and adds spacing below */
+h2 {
+    text-align: center;
+    margin: 0 0 12px 0;
+}
