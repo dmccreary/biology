@@ -10,9 +10,6 @@ Please generate a wide-landscape 16:9 cover image showing Gregor Mendel in his B
 Narrate the life of Gregor Mendel in a hopeful, accessible tone for high-school readers, emphasizing perseverance, curiosity, and meticulous observation. Highlight how limited resources, failed exams, and skeptical peers did not prevent him from discovering the laws of inheritance. Balance factual detail with emotional resonance, showing how his notebooks, patience, and honesty became the foundation for modern genetics.
 </details>
 
-### Prologue – Quiet Questions in a Monastery
-
-Mendel arrived in Brno as a shy teacher-in-training, more comfortable with plants than podiums. The prologue introduces his curiosity about how traits were passed down and the solitude he found among greenhouse benches when lecture halls felt overwhelming.
 
 ## Panel 1: Leaving the Village School
 ![](./panel-01.png)

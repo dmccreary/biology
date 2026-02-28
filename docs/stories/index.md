@@ -1,5 +1,6 @@
 # List of Graphic Novel Stories
 
+<div class="grid cards" markdown>
 - **[Seeds of Genetics: Gregor Mendel](gregor-mendel/index.md)**
 
     ![Gregor Mendel](./gregor-mendel/cover.png)
@@ -9,3 +10,4 @@
 
     ![Ynes Mexia](./ynes-mexia/cover.png)
     Mexican-American botanist Ynes Mexia started her scientific career at age 51, battling health issues and gender bias to collect over 145,000 plant specimens across the Americas — from Alaska's Denali to the headwaters of the Amazon. Her story proves it is never too late to pursue your passion and make world-changing contributions to science.
+</div>

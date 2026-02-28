@@ -132,6 +132,8 @@ Today, Ynes Mexia's 145,000 specimens are preserved in herbaria across the world
 
 ### Epilogue – What Made Ynes Mexia Different?
 
+![](./ynes-mexia.jpg)
+
 Mexia combined fearless curiosity with meticulous scientific practice. She refused to let age, gender, ethnicity, or personal hardship define her limits. In just thirteen years of active fieldwork, she outpaced collectors who had spent entire careers in the field. Her story teaches us that passion pursued with discipline can accomplish more in a decade than timidity achieves in a lifetime.
 
 | Challenge | How Mexia Responded | Lesson for Today |
