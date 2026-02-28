@@ -640,16 +640,20 @@ Every field shown is required (except `ap_tip`, which is omitted if not AP-testa
   dramatically reduce calibration time.
 - `showNumbers` — optional boolean (default `true`); set to `false` to display plain
   dots instead of numbered circles. The quiz mode always shows `?` regardless.
-- `layout` — optional string (`"side-panel"` or `"top-bottom"`); default is
-  `"side-panel"`. Use `"top-bottom"` for images with a horizontal structure
+- `layout` — optional string (`"side-panel"`, `"top-bottom"`, or `"dual-panel"`);
+  default is `"side-panel"`. Use `"top-bottom"` for images with a horizontal structure
   (e.g. cell membrane cross-sections) where the side panel produces tangled leader lines.
   In `top-bottom` mode, label chips appear in a horizontal strip above and below the
   image; vertical S-curve leader lines connect each chip to its marker.
-- `panel` — per-callout string (`"top"` or `"bottom"`); required when
-  `"layout": "top-bottom"`. Determines which strip the label chip starts in.
-  Biologically, use `"top"` for extracellular structures and `"bottom"` for
-  intracellular structures; balance the panel counts (roughly 50/50) so neither
-  strip becomes overly crowded.
+  Use `"dual-panel"` for comparison diagrams (e.g., prokaryote vs. eukaryote) where
+  structures belong to two groups — labels for group A appear in a left panel, labels
+  for group B appear in a right panel, with the image centered between them
+  (CSS grid `22fr 56fr 22fr`). Left-panel labels are right-aligned with the numbered
+  circle on the right edge (nearest the image) for clean leader-line tracking.
+- `panel` — per-callout string; required when `"layout"` is `"top-bottom"` or
+  `"dual-panel"`. For `"top-bottom"`: `"top"` or `"bottom"`. For `"dual-panel"`:
+  `"left"` or `"right"`. Balance the panel counts (roughly 50/50) so neither
+  panel becomes overly crowded.
 
 #### Layout note for cross-section diagrams
 
@@ -663,6 +667,38 @@ structures in the extracellular/upper half and `"panel": "bottom"` for intracell
 half. In edit mode, each label chip gains a `↓` or `↑` toggle button to move it between
 panels, and a `⠿` drag handle to reorder chips left/right within the same panel.
 The JSON output from Copy JSON already includes the updated `panel` values.
+
+#### Layout note for comparison diagrams
+
+Use `"layout": "dual-panel"` when the image compares two structures side by side
+(e.g., prokaryote vs. eukaryote, plant cell vs. animal cell). Set `"panel": "left"` for
+structures belonging to the left subject and `"panel": "right"` for the right subject.
+In edit mode, each label row gains a `←`/`→` toggle button to move it between panels,
+and a `⠿` drag handle to reorder labels vertically within the same panel.
+
+#### Leader line z-index rule (all layouts)
+
+SVG leader lines (`#leaders-svg`) must render **above** the label panels so that
+curves are not clipped where they meet the panel edge. The current z-index stack:
+
+| Element | z-index |
+|---------|---------|
+| Label panels (`.label-panel-side`, `#label-panel`, `.label-panel-strip`) | 6 |
+| `#leaders-svg` | **7** (above panels, `pointer-events: none`) |
+| `.cell-label` overlays | 8 |
+| `.marker` dots | 10 |
+
+Never lower `#leaders-svg` below the label panel z-index — it causes leader line
+endpoints to disappear behind the panel background.
+
+#### MicroSim background color
+
+All interactive MicroSims (diagram-architecture sims and p5.js sims) must use
+`background: aliceblue` on the `<body>` element. This provides a consistent visual
+cue so students scrolling through a chapter can immediately recognize an embedded
+MicroSim as an interactive element, distinct from static content. The shared
+`diagram-architecture/style.css` already sets this. For p5.js sims, set
+`background('aliceblue')` or use `body { background: aliceblue; }` in the HTML.
 
 #### Step 4 — Calibrate callout positions in Edit mode
 

@@ -10,7 +10,7 @@ social:
 
 # Prokaryote vs. Eukaryote Cell Comparison
 
-<iframe src="main.html" height="730" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="590" width="100%" scrolling="no"></iframe>
 
 [Run the Prokaryote vs. Eukaryote Comparison Fullscreen](./main.html){ .md-button .md-button--primary }
 

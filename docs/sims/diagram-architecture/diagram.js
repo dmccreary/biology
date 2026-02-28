@@ -724,6 +724,8 @@ class DiagramSim {
     document.getElementById('edit-panel').style.display = 'block';
     document.getElementById('btn-explore').disabled = true;
     document.getElementById('btn-quiz').disabled    = true;
+    const editBtn = document.getElementById('btn-edit');
+    if (editBtn) editBtn.style.display = 'none';
 
     const badge = document.createElement('span');
     badge.id          = 'edit-badge';

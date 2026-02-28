@@ -29,6 +29,8 @@
 <div id="controls">
   <button class="mode-btn active" id="btn-explore" onclick="sim.setMode('explore')">Explore</button>
   <button class="mode-btn"        id="btn-quiz"    onclick="sim.setMode('quiz')">Quiz</button>
+  <button class="mode-btn" id="btn-edit" style="display:none" onclick="window.location.search='?edit=true'">Edit Points</button>
+  <script>if (window.self === window.top) document.getElementById('btn-edit').style.display = '';</script>
   <span id="quiz-score" style="display:none">
     Score: <strong id="score-val">0</strong> / <strong id="score-total">0</strong>
   </span>
@@ -68,6 +70,15 @@
     <span id="copy-confirm"></span>
   </div>
 </div>
+
+<div id="return-link" style="display:none; padding: 8px 16px;">
+    <a href=".">← Return to Lesson Plan</a>
+</div>
+<script>
+    if (window.self === window.top) {
+        document.getElementById('return-link').style.display = 'block';
+    }
+</script>
 
 <script src="../diagram-architecture/diagram.js"></script>
 </body>
