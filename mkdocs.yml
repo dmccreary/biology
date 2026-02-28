@@ -193,6 +193,15 @@ watch:
   - docs
   - mkdocs.yml
 
+exclude_docs: |
+  sims/animal-cell/image-prompt.md
+  sims/cell-membrane/image-prompt.md
+  sims/chloroplast/image-prompt.md
+  sims/diagram-architecture/plan.md
+  sims/dna-double-helix/image-prompt.md
+  sims/mitochondria/image-prompt.md
+  sims/neuron-structure/image-prompt.md
+
 copyright: Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
 
 extra:

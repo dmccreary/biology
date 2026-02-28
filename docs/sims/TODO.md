@@ -1336,49 +1336,6 @@ Responsive: Must respond to window resize events
 
 ---
 
-## cell-cycle-phases
-
-- **Title:** Cell Cycle Phases Explorer
-- **Chapter:** 10-cell-cycle-mitosis-and-cancer
-- **Library:** p5.js
-- **Bloom:** Create (L6)
-- **Status:** specified
-- **Target:** `docs/sims/cell-cycle-phases/cell-cycle-phases.js`
-
-### Specification
-
-**Type:** MicroSim (p5.js)<br/>
-**sim-id:** cell-cycle-phases<br/>
-**Library:** p5.js<br/>
-
-**Learning objective:** Students will be able to *identify* (Bloom's L1: Remember) each phase of the cell cycle and *describe* (Bloom's L2: Understand) the key events and approximate duration of each phase.
-
-**Canvas:** 760 × 480 px, responsive.
-
-**Layout:** Center: circular cell cycle "clock" diagram with arc segments proportional to phase duration. Outer ring: phase labels (G1, S, G2, M with sub-divisions). Right panel: phase detail card that updates on click.
-
-**Phase arcs (approximate proportions for a 24-hour cell cycle):**
-- G1: 42% of circle (~10 hr), color: light blue (#AED6F1)
-- S: 38% of circle (~9 hr), color: gold (#F9E79F)
-- G2: 17% of circle (~4 hr), color: light green (#A9DFBF)
-- M (mitosis + cytokinesis): 4% of circle (~1 hr), color: salmon (#F5CBA7)
-
-**Phase detail card (right):** Title, duration, key events as bullet list, key molecules involved.
-
-**Checkpoints:** Three checkpoint markers shown as red octagon icons on the circle:
-- G1/S checkpoint ("restriction point")
-- G2/M checkpoint
-- Spindle assembly checkpoint (within M)
-
-**Interaction:**
-- Click any phase arc to highlight it and update the detail card
-- Hover over checkpoint icons to show checkpoint name and what is being monitored
-- "Animate" button: rotating spotlight sweeps around the circle at realistic proportional speed, pausing at each checkpoint
-
-**Responsive design:** Circle diameter and card width scale with container width.
-
----
-
 ## mitosis-stage-explorer
 
 - **Title:** Mitosis Stage Explorer

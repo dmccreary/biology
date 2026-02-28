@@ -23,6 +23,19 @@ The cell cycle is divided into two major stages:
 
 The cycle is not simply a timer — it is actively driven and monitored by molecular machinery that can pause, accelerate, or halt progression depending on conditions.
 
+#### Diagram: The Stages of Mitosis
+
+![The Stages of Mitosis](../../img/six-stages-of-mitosis.png)
+
+We can summarize the stages with the following terms:
+
+1. Prophase: prepare
+2. Metaphase: meet
+3. Anaphase: apart
+4. Telophases: two
+
+[NDSU YouTube Video Explaining the Phases of Cell Division](https://www.youtube.com/watch?v=C6hn3sA0ip0&t=3s)
+
 #### Diagram: Cell Cycle Phases Explorer
 
 <iframe src="../../sims/cell-cycle-phases/main.html" height="500" width="100%" scrolling="no"></iframe>
