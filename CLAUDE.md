@@ -582,7 +582,10 @@ docs/sims/<sim-name>/
 </html>
 ```
 
-**`data.json` template** — one entry per callout, all coordinates placeholder `50, 50`.
+**`data.json` template** — one entry per callout. **Never stack all markers at the
+same coordinate.** Spread initial y values evenly from top to bottom (y ≈ 7 to ≈ 93,
+spaced by `86 / (N-1)` where N is the callout count) at x = 50. This makes markers
+individually visible and draggable when entering edit mode for the first time.
 Every field shown is required (except `ap_tip`, which is omitted if not AP-testable):
 
 ```json

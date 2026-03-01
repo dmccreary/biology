@@ -51,3 +51,17 @@ The shared `diagram.js` supports three layout modes, set via `"layout"` in `data
 
 All diagrams can also have a quiz mode which shows a gold star for each
 correct answer and a celebration animation for completing a quiz.
+
+## Initial Marker Placement
+
+When creating a new `data.json`, **never stack all callout markers at the same
+coordinate** (e.g., `x: 50, y: 50`). Stacked markers are impossible to
+distinguish or drag individually in edit mode.
+
+Instead, spread initial `y` values evenly from top to bottom at `x = 50`:
+- Range: y ≈ 7 to y ≈ 93
+- Step: `86 / (N - 1)` where N is the number of callouts
+- Example with 13 callouts: y = 7, 14, 21, 29, 36, 43, 50, 57, 64, 71, 79, 86, 93
+
+This makes every marker individually visible and draggable on first load in
+edit mode, before the image has been calibrated.
