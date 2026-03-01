@@ -1,8 +1,56 @@
 # MicroSim DONE — Completed Implementations
 
-**Completed:** 15 MicroSims
+**Completed:** 17 MicroSims
 
 These MicroSims have been fully implemented with substantial JavaScript or diagram-architecture overlays.
+
+---
+
+## mitosis-stage-explorer
+
+- **Title:** Mitosis Stage Explorer
+- **Chapter:** 10-cell-cycle-mitosis-and-cancer
+- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
+- **Bloom:** Understand (L2)
+- **Status:** complete
+- **Architecture:** Diagram overlay — top-bottom layout with 15 callouts across 5 mitosis stages
+- **Target:** `docs/sims/mitosis-stage-explorer/data.json`
+
+### Specification
+
+Type: diagram-architecture overlay
+**sim-id:** mitosis-stage-explorer<br/>
+**Library:** diagram-architecture<br/>
+
+Bloom Level: Understand (L2)
+Bloom Verb: identify, explain
+Learning Objective: Students will identify each stage of mitosis by its chromosome appearance and explain the key molecular events driving each stage, including the role of the spindle assembly checkpoint.
+
+Layout: Top-bottom — 15 callout markers distributed across five horizontal panels (Prophase, Metaphase, Anaphase, Telophase, Cytokinesis). AI-generated landscape image with stage title overlays and diagram.js providing Explore, Quiz, and Edit modes.
+
+---
+
+## signal-transduction-pathway
+
+- **Title:** Signal Transduction Pathway Overview
+- **Chapter:** 09-cell-signaling-and-feedback
+- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
+- **Bloom:** Understand (L2)
+- **Status:** complete
+- **Architecture:** Diagram overlay — dual-panel layout with 13 callouts
+- **Target:** `docs/sims/signal-transduction-pathway/data.json`
+
+### Specification
+
+Type: diagram-architecture overlay
+**sim-id:** signal-transduction-pathway<br/>
+**Library:** diagram-architecture<br/>
+
+Bloom Level: Understand (L2)
+Bloom Verb: describe
+Learning Objective: Students will describe the three stages of cell signaling — reception, transduction, response — and identify the role of each molecular component in the GPCR-cAMP pathway.
+
+Layout: Dual-panel — left panel (6 labels: ligand, GPCR, cell membrane, G-protein inactive, active Gα-GTP, adenylyl cyclase) and right panel (7 labels: cAMP, PKA, phosphorylation cascade, target enzyme, nucleus, transcription factors, gene expression). AI-generated landscape image with diagram.js overlay providing Explore, Quiz, and Edit modes.
 
 ---
 

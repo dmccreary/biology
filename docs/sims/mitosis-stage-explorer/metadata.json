@@ -1,9 +1,9 @@
 {
   "title": "Mitosis Stage Explorer",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
-  "description": "Interactive MicroSim for mitosis stage explorer",
-  "date": "2026-02-27",
+  "subject": "AP Biology",
+  "description": "Interactive diagram overlay showing the five stages of mitosis with 15 callout markers for key structures, featuring Explore and Quiz modes.",
+  "date": "2026-02-28",
   "educational": {
     "gradeLevel": [
       "9",
@@ -11,35 +11,61 @@
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
-    "topic": "Mitosis Stage Explorer",
+    "subjectArea": "Biology",
+    "topic": "Mitosis and Cell Division",
     "learningObjectives": [
-      "TODO: Add learning objectives"
+      "Identify each stage of mitosis by its chromosome appearance and cellular structures",
+      "Explain the key molecular events driving each stage of mitosis",
+      "Describe the role of the spindle assembly checkpoint in preventing aneuploidy",
+      "Compare the mechanisms of cytokinesis in animal cells vs plant cells"
     ],
-    "bloomsTaxonomy": "Create",
+    "bloomsTaxonomy": "Understand",
     "duration": "10-15 minutes",
-    "prerequisites": [],
-    "standards": []
+    "prerequisites": [
+      "Cell cycle phases (G1, S, G2, M)",
+      "Chromosome structure (chromatids, centromeres)",
+      "Cytoskeleton components (microtubules, microfilaments)"
+    ],
+    "standards": [
+      "AP Biology Unit 10: Cell Cycle, Mitosis, and Cancer"
+    ]
   },
   "technical": {
-    "framework": "p5.js",
+    "framework": "diagram-architecture",
     "version": "1.0",
     "canvasDimensions": {
       "width": "responsive",
-      "height": 450
+      "height": 730
     },
     "responsive": true,
-    "dependencies": [],
+    "dependencies": [
+      "diagram-architecture/diagram.js",
+      "diagram-architecture/style.css"
+    ],
     "accessibility": {
-      "hasAltText": false,
+      "hasAltText": true,
       "keyboardNavigable": false
     }
   },
   "pedagogical": {
-    "teachingStrategy": "Interactive exploration",
-    "keyQuestions": [],
-    "commonMisconceptions": [],
-    "assessmentOpportunities": []
+    "teachingStrategy": "Interactive exploration with callout markers and quiz mode",
+    "keyQuestions": [
+      "What happens to chromosomes during each stage of mitosis?",
+      "Why is the spindle assembly checkpoint important for preventing cancer?",
+      "How does the contractile ring divide the cell during cytokinesis?",
+      "What is the difference between chromatin and chromosomes?"
+    ],
+    "commonMisconceptions": [
+      "Students confuse chromatids with chromosomes when counting",
+      "Students think the metaphase plate is a physical structure",
+      "Students forget that nuclear envelope breakdown occurs in prophase",
+      "Students confuse animal cell cytokinesis (cleavage furrow) with plant cell cytokinesis (cell plate)"
+    ],
+    "assessmentOpportunities": [
+      "Quiz mode: identify all 15 structures by clicking correct markers",
+      "Stage ordering: name the 5 stages in correct sequence",
+      "Compare/contrast: mitosis vs meiosis outcomes"
+    ]
   },
   "chapter": "10-cell-cycle-mitosis-and-cancer"
 }

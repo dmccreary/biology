@@ -39,7 +39,7 @@ Every cell signaling pathway can be described in three stages:
 
 #### Diagram: Signal Transduction Pathway Overview
 
-<iframe src="../../sims/signal-transduction-pathway/main.html" height="500" width="100%" scrolling="no"></iframe>
+<iframe src="../../sims/signal-transduction-pathway/main.html" height="590" width="100%" scrolling="no"></iframe>
 
 *[View Fullscreen](../../sims/signal-transduction-pathway/main.html)*
 

@@ -1,9 +1,9 @@
 {
   "title": "Signal Transduction Pathway Overview",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
-  "description": "Interactive MicroSim for signal transduction pathway overview",
-  "date": "2026-02-27",
+  "subject": "AP Biology",
+  "description": "Interactive diagram exploring the three stages of cell signaling — reception, transduction, and response — through a GPCR-cAMP pathway with 13 labeled structures.",
+  "date": "2026-02-28",
   "educational": {
     "gradeLevel": [
       "9",
@@ -11,35 +11,57 @@
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
-    "topic": "Signal Transduction Pathway Overview",
+    "subjectArea": "Biology",
+    "topic": "Signal Transduction Pathway",
     "learningObjectives": [
-      "TODO: Add learning objectives"
+      "Identify the three stages of cell signaling: reception, transduction, and response",
+      "Describe the role of GPCRs, G-proteins, and adenylyl cyclase in signal transduction",
+      "Explain how signal amplification occurs through second messengers and phosphorylation cascades",
+      "Distinguish between fast responses (enzyme activation) and slow responses (gene expression)"
     ],
-    "bloomsTaxonomy": "Create",
+    "bloomsTaxonomy": "Understand",
     "duration": "10-15 minutes",
-    "prerequisites": [],
+    "prerequisites": [
+      "Cell membrane structure",
+      "Protein structure and enzyme function",
+      "ATP and phosphorylation"
+    ],
     "standards": []
   },
   "technical": {
-    "framework": "p5.js",
+    "framework": "diagram-architecture",
     "version": "1.0",
     "canvasDimensions": {
       "width": "responsive",
-      "height": 450
+      "height": 730
     },
     "responsive": true,
-    "dependencies": [],
+    "dependencies": [
+      "diagram-architecture/diagram.js",
+      "diagram-architecture/style.css"
+    ],
     "accessibility": {
-      "hasAltText": false,
+      "hasAltText": true,
       "keyboardNavigable": false
     }
   },
   "pedagogical": {
-    "teachingStrategy": "Interactive exploration",
-    "keyQuestions": [],
-    "commonMisconceptions": [],
-    "assessmentOpportunities": []
+    "teachingStrategy": "Interactive exploration with quiz mode",
+    "keyQuestions": [
+      "How does a signal molecule outside the cell produce a response inside the cell without entering?",
+      "Where does signal amplification occur in the pathway?",
+      "Why can the same ligand produce different responses in different cell types?"
+    ],
+    "commonMisconceptions": [
+      "Students often think the signal molecule enters the cell — it does not for GPCR pathways",
+      "Students confuse the first messenger (ligand) with the second messenger (cAMP)",
+      "Students may not realize that signal amplification occurs at multiple steps"
+    ],
+    "assessmentOpportunities": [
+      "Quiz mode tests identification of all 13 pathway components",
+      "Ask students to trace the amplification at each step",
+      "Compare GPCR signaling to receptor tyrosine kinase signaling"
+    ]
   },
   "chapter": "09-cell-signaling-and-feedback"
 }

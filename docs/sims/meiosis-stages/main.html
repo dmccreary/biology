@@ -1,19 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
-    <title>Meiosis Stages Explorer using p5.js</title>
-    <style>
-        body { margin: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif; }
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
-    <script src="meiosis-stages.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+  <title>Meiosis Stages Explorer — Interactive Diagram</title>
+  <link rel="stylesheet" href="../diagram-architecture/style.css">
+  <style>
+    .stage-labels {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 5;
+    }
+    .stage-label {
+      text-align: center;
+      font: bold 12px Arial, sans-serif;
+      color: #333;
+      background: rgba(255,255,255,0.85);
+      padding: 2px 5px;
+      border-radius: 3px;
+      position: absolute;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+  </style>
 </head>
 <body>
-    <main></main>
-    <br/>
-    <a href=".">Back to Lesson Plan</a>
+
+<h2 style="text-align:center; margin:0.3em 0 0.2em;">Meiosis Stages Explorer</h2>
+
+<div id="controls">
+  <button class="mode-btn active" id="btn-explore" onclick="sim.setMode('explore')">Explore</button>
+  <button class="mode-btn"        id="btn-quiz"    onclick="sim.setMode('quiz')">Quiz</button>
+  <span id="quiz-score" style="display:none">
+    Score: <strong id="score-val">0</strong> / <strong id="score-total">0</strong>
+  </span>
+  <button class="mode-btn" id="btn-edit" style="display:none" onclick="window.location.search='?edit=true'">Edit</button>
+</div>
+<script>
+  if (window.self === window.top) {
+    document.getElementById('btn-edit').style.display = '';
+  }
+</script>
+
+<div id="layout">
+  <svg id="leaders-svg"></svg>
+
+  <div id="diagram-wrapper">
+    <img id="diagram-img" src="meiosis.png" alt="Stages of Meiosis I and Meiosis II" draggable="false">
+    <div id="markers-layer"></div>
+    <div class="stage-labels">
+      <!-- Meiosis I row labels (top row, starts near top of image) -->
+      <span class="stage-label" style="left:11%; top:1%">Interphase</span>
+      <span class="stage-label" style="left:30%; top:1%">Prophase I</span>
+      <span class="stage-label" style="left:49%; top:1%">Metaphase I</span>
+      <span class="stage-label" style="left:69%; top:1%">Anaphase I</span>
+      <span class="stage-label" style="left:89%; top:1%">Telophase I</span>
+      <!-- Row titles centered at the divider -->
+      <span class="stage-label" style="left:50%; top:44%; font-size:16px; font-weight:bold; color:#555">Meiosis I Stages</span>
+      <span class="stage-label" style="left:50%; top:52%; font-size:16px; font-weight:bold; color:#555">Meiosis II Stages</span>
+      <!-- Meiosis II row labels (bottom row, starts ~63% down) -->
+      <span class="stage-label" style="left:12%; top:56%">Prophase II</span>
+      <span class="stage-label" style="left:37%; top:56%">Metaphase II</span>
+      <span class="stage-label" style="left:63%; top:56%">Anaphase II</span>
+      <span class="stage-label" style="left:88%; top:56%">Telophase II</span>
+    </div>
+  </div>
+
+  <div id="label-panel">
+    <!-- label rows injected by diagram.js -->
+  </div>
+</div>
+
+<div id="infobox">
+  <div id="infobox-prompt">Hover over a numbered marker or a label to learn about each structure and stage of meiosis.</div>
+  <div id="infobox-content">
+    <div id="infobox-label"></div>
+    <div id="infobox-desc"></div>
+    <div id="infobox-ap-tip"></div>
+    <button id="quiz-restart" onclick="sim.restartQuiz()">Try Again</button>
+  </div>
+</div>
+
+<div id="edit-panel">
+  <h3>Edit Mode — drag markers to calibrate positions</h3>
+  <div id="coord-display">Drag a marker to see its live coordinates.</div>
+  <textarea id="json-output" readonly spellcheck="false"></textarea>
+  <div id="edit-actions">
+    <button id="copy-json-btn" onclick="sim.copyJSON()">Copy JSON</button>
+    <span id="copy-confirm"></span>
+  </div>
+</div>
+
+<script src="../diagram-architecture/diagram.js"></script>
 </body>
 </html>
