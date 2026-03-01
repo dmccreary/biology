@@ -341,10 +341,6 @@
          <lastmod>2026-03-01</lastmod>
     </url>
     <url>
-         <loc>https://dmccreary.github.io/biology/sims/diagram-architecture/</loc>
-         <lastmod>2026-03-01</lastmod>
-    </url>
-    <url>
          <loc>https://dmccreary.github.io/biology/sims/dihybrid-cross/</loc>
          <lastmod>2026-03-01</lastmod>
     </url>
@@ -538,6 +534,10 @@
     </url>
     <url>
          <loc>https://dmccreary.github.io/biology/sims/selection-modes/</loc>
+         <lastmod>2026-03-01</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/biology/sims/shared-libs/</loc>
          <lastmod>2026-03-01</lastmod>
     </url>
     <url>
