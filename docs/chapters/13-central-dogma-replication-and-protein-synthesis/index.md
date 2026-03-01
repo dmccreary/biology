@@ -181,7 +181,7 @@ The short DNA segments synthesized on the lagging strand are called **Okazaki fr
 
 #### Diagram: DNA Replication Fork Explorer
 
-<iframe src="../../sims/replication-fork/main.html" height="580" width="100%" scrolling="no"></iframe>
+<iframe src="../../sims/replication-fork/main.html" height="610" width="100%" scrolling="no"></iframe>
 
 *[View Fullscreen](../../sims/replication-fork/main.html)*
 

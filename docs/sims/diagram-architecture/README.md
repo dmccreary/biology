@@ -52,6 +52,33 @@ The shared `diagram.js` supports three layout modes, set via `"layout"` in `data
 All diagrams can also have a quiz mode which shows a gold star for each
 correct answer and a celebration animation for completing a quiz.
 
+## Diagram Title (Required)
+
+Every diagram overlay `main.html` **must** include a visible title at the top center
+of the page, above the Explore/Quiz controls:
+
+```html
+<h2 id="diagram-title">DNA Replication Fork</h2>
+```
+
+Style it with a small inline `<style>` block:
+
+```css
+#diagram-title {
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 4px 0 2px;
+  color: #1a1a1a;
+}
+```
+
+The title should be a short, descriptive name for the diagram — not the full MicroSim
+title (omit "Explorer", "Interactive Diagram", etc.).
+
+For **dual-panel** layouts where the two panels represent distinct biological subjects
+(e.g., prokaryote vs. eukaryote), add `<h3>` region labels above each panel. Omit
+region labels when the panels are just a spatial convenience for distributing callouts.
+
 ## Initial Marker Placement
 
 When creating a new `data.json`, **never stack all callout markers at the same

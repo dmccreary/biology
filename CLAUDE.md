@@ -533,8 +533,18 @@ docs/sims/<sim-name>/
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><!-- Diagram Title --> — Interactive Diagram</title>
   <link rel="stylesheet" href="../diagram-architecture/style.css">
+  <style>
+    #diagram-title {
+      text-align: center;
+      font-size: 1.4rem;
+      margin: 4px 0 2px;
+      color: #1a1a1a;
+    }
+  </style>
 </head>
 <body>
+
+<h2 id="diagram-title"><!-- Diagram Title --></h2>
 
 <div id="controls">
   <button class="mode-btn active" id="btn-explore" onclick="sim.setMode('explore')">Explore</button>
@@ -581,6 +591,20 @@ docs/sims/<sim-name>/
 </body>
 </html>
 ```
+
+#### Diagram title and region labels (required for every diagram sim)
+
+Every diagram overlay `main.html` **must** include a visible `<h2 id="diagram-title">`
+at the top center of the page, above the Explore/Quiz controls. The title should be
+a short, descriptive name for the diagram (e.g., "DNA Replication Fork",
+"Animal Cell", "Electron Transport Chain") — not the full MicroSim title with
+"Explorer" or "Interactive Diagram" appended.
+
+For **dual-panel** layouts, each panel should have a region label `<h3>` above it
+when the two panels represent distinct biological subjects (e.g., "Prokaryotic Cell"
+on the left, "Eukaryotic Cell" on the right). Omit region labels when the panels
+are just a spatial convenience for distributing callouts (e.g., leading strand
+enzymes left, lagging strand enzymes right).
 
 **`data.json` template** — one entry per callout. **Never stack all markers at the
 same coordinate.** Spread initial y values evenly from top to bottom (y ≈ 7 to ≈ 93,

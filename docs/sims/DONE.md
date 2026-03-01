@@ -1,8 +1,32 @@
 # MicroSim DONE — Completed Implementations
 
-**Completed:** 17 MicroSims
+**Completed:** 18 MicroSims
 
 These MicroSims have been fully implemented with substantial JavaScript or diagram-architecture overlays.
+
+---
+
+## meiosis-stages
+
+- **Title:** Meiosis Stages Explorer
+- **Chapter:** 11-meiosis-and-mendelian-genetics
+- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
+- **Bloom:** Understand (L2)
+- **Status:** complete
+- **Architecture:** Diagram overlay — dual-panel layout with 14 callouts across 9 meiosis stages (two rows: Meiosis I and Meiosis II)
+- **Target:** `docs/sims/meiosis-stages/data.json`
+
+### Specification
+
+Type: diagram-architecture overlay
+**sim-id:** meiosis-stages<br/>
+**Library:** diagram-architecture<br/>
+
+Bloom Level: Understand (L2)
+Bloom Verb: identify, describe
+Learning Objective: Students will identify each stage of meiosis I and meiosis II by chromosome appearance and describe the key events and chromosome behavior at each stage, including crossing over, independent assortment, and nondisjunction.
+
+Layout: Dual-panel — left panel (7 labels: Meiosis I stages + Meiosis II Prophase/Metaphase) and right panel (7 labels: Meiosis I Anaphase/Telophase + Meiosis II Anaphase/Telophase + conceptual markers). AI-generated landscape image with two rows, stage title overlays, and diagram.js providing Explore, Quiz, and Edit modes.
 
 ---
 
