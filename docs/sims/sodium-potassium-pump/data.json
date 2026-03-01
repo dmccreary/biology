@@ -1,0 +1,152 @@
+{
+  "title": "Sodium-Potassium Pump (Na⁺/K⁺-ATPase)",
+  "orientation": "landscape",
+  "image": "sodium-pump.png",
+  "callouts": [
+    {
+      "id": 1,
+      "label": "Extracellular Space",
+      "x": 50.1,
+      "y": 4,
+      "radius": 5,
+      "panel": "top",
+      "color": "#A8D8EA",
+      "hint": "light blue region above the membrane bilayer, representing the fluid outside the cell",
+      "description": "The aqueous environment outside the cell. In the context of the Na⁺/K⁺-ATPase, the extracellular space has a high concentration of Na⁺ ions (~145 mM) and a low concentration of K⁺ ions (~5 mM). The pump actively exports Na⁺ into this space against its concentration gradient, maintaining the steep electrochemical gradient essential for nerve impulses, muscle contraction, and secondary active transport.",
+      "ap_tip": "The AP exam tests your knowledge of concentration gradients: Na⁺ is HIGH outside and LOW inside; K⁺ is HIGH inside and LOW outside. This gradient is maintained by the Na⁺/K⁺-ATPase and is the driving force behind action potentials in neurons."
+    },
+    {
+      "id": 2,
+      "label": "Phospholipid Bilayer",
+      "x": 2.8,
+      "y": 56.5,
+      "radius": 5,
+      "panel": "bottom",
+      "color": "#F5A623",
+      "hint": "the double row of orange/gold phospholipid molecules forming the membrane, running horizontally across the image",
+      "description": "The plasma membrane composed of two layers of phospholipid molecules with their hydrophobic tails facing inward and hydrophilic heads facing outward. The bilayer is selectively permeable — it blocks the passage of charged ions like Na⁺ and K⁺, which is why the pump protein is necessary to move them across. Without this barrier, the ion gradients would dissipate instantly.",
+      "ap_tip": "Ions cannot cross the hydrophobic core of the phospholipid bilayer without help from transport proteins. This is why the Na⁺/K⁺-ATPase is classified as a transmembrane integral protein — it must span the full width of the bilayer to create a pathway for ion movement."
+    },
+    {
+      "id": 3,
+      "label": "Na⁺/K⁺-ATPase Pump Protein",
+      "x": 17.7,
+      "y": 15,
+      "radius": 5,
+      "panel": "top",
+      "color": "#2D7D9A",
+      "hint": "large teal/blue protein spanning the full thickness of the membrane in the center of the image",
+      "description": "The sodium-potassium pump is a large transmembrane protein (approximately 100 kDa alpha subunit) that uses the energy from ATP hydrolysis to transport 3 Na⁺ ions out of the cell and 2 K⁺ ions into the cell per cycle. It consists of an alpha subunit (catalytic, with ion binding sites and ATPase activity) and a beta subunit (regulatory, helps with proper folding and membrane insertion). The pump cycles between two conformational states: E1 (open to cytoplasm) and E2 (open to extracellular space).",
+      "ap_tip": "The 3:2 ratio (3 Na⁺ out, 2 K⁺ in) means the pump is electrogenic — it creates a net movement of positive charge out of the cell, contributing about -6 mV to the resting membrane potential. The AP exam may ask why this pump is classified as PRIMARY active transport: it directly uses ATP, unlike secondary active transport which uses the gradient this pump creates."
+    },
+    {
+      "id": 4,
+      "label": "Na⁺ Binding Sites",
+      "x": 46.4,
+      "y": 53.9,
+      "radius": 3.5,
+      "panel": "bottom",
+      "color": "#FF6B35",
+      "hint": "three small orange/red pockets or recesses on the cytoplasmic face of the pump protein, shown with Na⁺ ions nearby",
+      "description": "Three high-affinity binding sites for sodium ions located on the cytoplasmic face of the pump when it is in the E1 conformation. These sites have a specific shape and charge distribution that preferentially binds Na⁺ over K⁺. Once all three Na⁺ ions are bound, the pump can accept ATP and begin the transport cycle. After phosphorylation and conformational change to E2, the binding sites lose affinity for Na⁺ and release them to the extracellular space.",
+      "ap_tip": "The pump binds 3 Na⁺ on the INSIDE (cytoplasmic side) in the E1 conformation. A common AP misconception is that ions are 'pumped through a channel' — instead, the protein changes shape around the bound ions, alternately exposing them to opposite sides of the membrane."
+    },
+    {
+      "id": 5,
+      "label": "K⁺ Binding Sites",
+      "x": 45.5,
+      "y": 28.3,
+      "radius": 3.5,
+      "panel": "top",
+      "color": "#4A90D9",
+      "hint": "two small blue pockets or recesses on the extracellular face of the pump protein, shown with K⁺ ions nearby",
+      "description": "Two high-affinity binding sites for potassium ions located on the extracellular face of the pump when it is in the E2 conformation. After the pump releases its 3 Na⁺ ions extracellularly, these sites become available and bind 2 K⁺ ions from the extracellular fluid. K⁺ binding triggers dephosphorylation (release of the phosphate group), which causes the pump to return to the E1 conformation and release K⁺ into the cytoplasm.",
+      "ap_tip": "The pump binds 2 K⁺ on the OUTSIDE (extracellular side) in the E2 conformation. Note the asymmetry: 3 Na⁺ out but only 2 K⁺ in — this imbalance is what makes the pump electrogenic and contributes to the negative resting membrane potential."
+    },
+    {
+      "id": 6,
+      "label": "ATP Binding Site",
+      "x": 25.1,
+      "y": 61.5,
+      "radius": 3.5,
+      "panel": "bottom",
+      "color": "#FFD700",
+      "hint": "yellow region on the large cytoplasmic domain of the pump protein, below the membrane, where the ATP molecule docks",
+      "description": "The ATP binding and hydrolysis site located on the large cytoplasmic domain of the alpha subunit. After 3 Na⁺ ions bind, ATP docks at this site and is hydrolyzed to ADP + Pᵢ. The phosphate group is temporarily transferred to an aspartate residue on the pump (phosphorylation), triggering the E1→E2 conformational change. This is the step that provides the energy to move Na⁺ against its steep concentration gradient.",
+      "ap_tip": "ATP hydrolysis occurs on the CYTOPLASMIC side of the membrane. The energy from ATP is not used to 'push' ions — it changes the protein's shape, which changes the binding affinity for ions. This is a key concept in understanding how enzymes couple energy release to work."
+    },
+    {
+      "id": 7,
+      "label": "Na⁺ Ions (Sodium)",
+      "x": 6.9,
+      "y": 14.8,
+      "radius": 3.5,
+      "panel": "top",
+      "color": "#FF6B35",
+      "hint": "small orange circles or spheres representing sodium ions, shown both inside the cell (few) and outside (many)",
+      "description": "Sodium ions (Na⁺) are monovalent cations that are actively pumped out of the cell by the Na⁺/K⁺-ATPase. The pump maintains a steep concentration gradient: approximately 12 mM Na⁺ inside the cell versus 145 mM outside. This gradient stores potential energy that the cell uses for many secondary processes including glucose co-transport (SGLT), amino acid absorption, and generating action potentials in neurons.",
+      "ap_tip": "The Na⁺ gradient created by this pump drives secondary active transport — for example, the sodium-glucose cotransporter (SGLT) in intestinal epithelial cells uses the Na⁺ gradient to import glucose against its concentration gradient. This is indirect (secondary) active transport because it depends on a gradient created by primary active transport."
+    },
+    {
+      "id": 8,
+      "label": "K⁺ Ions (Potassium)",
+      "x": 61.5,
+      "y": 79.7,
+      "radius": 3.5,
+      "panel": "bottom",
+      "color": "#4A90D9",
+      "hint": "small blue circles or spheres representing potassium ions, shown both inside the cell (many) and outside (few)",
+      "description": "Potassium ions (K⁺) are monovalent cations that are actively pumped into the cell by the Na⁺/K⁺-ATPase. The pump maintains approximately 140 mM K⁺ inside the cell versus 5 mM outside. This concentration gradient is critical for establishing the resting membrane potential (about -70 mV in neurons), because K⁺ leak channels allow some K⁺ to flow back out, creating a net negative charge inside.",
+      "ap_tip": "The resting membrane potential is primarily determined by K⁺ leak channels, NOT by the pump directly. The pump creates and maintains the K⁺ gradient, but it is the passive outflow of K⁺ through leak channels that generates most of the -70 mV resting potential. The pump itself contributes only about -6 mV directly."
+    },
+    {
+      "id": 9,
+      "label": "ATP Molecule",
+      "x": 28,
+      "y": 80,
+      "radius": 3.5,
+      "panel": "bottom",
+      "color": "#FFD700",
+      "hint": "yellow star or molecule shape in the cytoplasm below the membrane, near the pump's cytoplasmic domain",
+      "description": "Adenosine triphosphate (ATP) is the energy currency that powers the Na⁺/K⁺-ATPase. One molecule of ATP is hydrolyzed per pump cycle, releasing approximately 30.5 kJ/mol of free energy. The terminal phosphate group is transferred to the pump protein itself (autophosphorylation at Asp-376), triggering the conformational change from E1 to E2. The ADP and free phosphate (Pᵢ) are released back into the cytoplasm.",
+      "ap_tip": "The Na⁺/K⁺-ATPase consumes roughly 25-40% of a cell's total ATP production — even more in neurons (up to 70%). This enormous energy expenditure underscores how critical the Na⁺/K⁺ gradient is for cell function. The AP exam may connect this to cellular respiration: without mitochondrial ATP production, the pump stops and cells lose their ion gradients."
+    },
+    {
+      "id": 10,
+      "label": "ADP + Pᵢ",
+      "x": 74.2,
+      "y": 76.3,
+      "radius": 3,
+      "panel": "bottom",
+      "color": "#DAA520",
+      "hint": "smaller yellow symbols near the ATP molecule, representing the products of ATP hydrolysis — ADP and inorganic phosphate",
+      "description": "The products of ATP hydrolysis: adenosine diphosphate (ADP) and inorganic phosphate (Pᵢ). During the pump cycle, the phosphate group is first transferred to the pump protein (forming a phosphoenzyme intermediate), then released after K⁺ binding triggers dephosphorylation. Both ADP and Pᵢ are released into the cytoplasm, where they can be recycled back into ATP by mitochondria through oxidative phosphorylation.",
+      "ap_tip": "The phosphorylation step is what distinguishes P-type ATPases (like the Na⁺/K⁺-ATPase) from other transport proteins. The 'P' stands for phosphorylation — the pump temporarily accepts a phosphate group from ATP. This is different from ATP-binding cassette (ABC) transporters, which bind but do not become phosphorylated by ATP."
+    },
+    {
+      "id": 11,
+      "label": "Cytoplasm (Intracellular Space)",
+      "x": 49.1,
+      "y": 85.2,
+      "radius": 5,
+      "panel": "bottom",
+      "color": "#F5F0E8",
+      "hint": "pale warm beige region below the membrane, representing the cell interior",
+      "description": "The intracellular environment where K⁺ concentration is high (~140 mM) and Na⁺ concentration is low (~12 mM). The cytoplasm is where ATP is available to fuel the pump, where Na⁺ ions bind to the pump in the E1 conformation, and where K⁺ ions are released from the pump after the E2→E1 transition. The resulting high-K⁺/low-Na⁺ intracellular environment is essential for protein function, enzyme activity, and cell volume regulation.",
+      "ap_tip": "Many intracellular enzymes require K⁺ as a cofactor and are inhibited by high Na⁺. If the Na⁺/K⁺-ATPase stops (e.g., due to the poison ouabain or ATP depletion), Na⁺ accumulates inside the cell, water follows by osmosis, and the cell swells — potentially lysing. This connects membrane transport to osmosis (AP Unit 2)."
+    },
+    {
+      "id": 12,
+      "label": "Electrochemical Gradient",
+      "x": 40.2,
+      "y": 8,
+      "radius": 4,
+      "panel": "top",
+      "color": "#9B59B6",
+      "hint": "purple gradient arrow or symbol near the top of the image, indicating the net charge difference across the membrane",
+      "description": "The combined chemical (concentration) and electrical (charge) gradient across the plasma membrane. The Na⁺/K⁺-ATPase creates both components: the chemical gradient (unequal ion concentrations on each side) and the electrical gradient (net negative charge inside due to 3 positive charges exported vs. 2 imported per cycle). Together these form the electrochemical gradient, which stores potential energy used to power secondary active transport, action potentials, and ATP synthesis in mitochondria.",
+      "ap_tip": "The electrochemical gradient is a form of potential energy — the AP exam calls this 'chemiosmotic potential.' The same principle that the Na⁺/K⁺-ATPase demonstrates at the plasma membrane also operates in mitochondria (H⁺ gradient drives ATP synthase) and chloroplasts (H⁺ gradient across the thylakoid membrane). Recognizing this parallel across biological systems is a Big Idea tested on the AP exam."
+    }
+  ],
+  "layout": "top-bottom"
+}

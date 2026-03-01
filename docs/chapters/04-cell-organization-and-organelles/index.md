@@ -453,7 +453,7 @@ The distinction between cilia and flagella is primarily one of number and beat p
 
 #### Diagram: Cytoskeleton Component Explorer
 
-<iframe src="../../sims/cytoskeleton-explorer/main.html" width="100%" height="500" scrolling="no"></iframe>
+<iframe src="../../sims/cytoskeleton-explorer/main.html" width="100%" height="610" scrolling="no"></iframe>
 
 [View Fullscreen](../../sims/cytoskeleton-explorer/main.html)
 

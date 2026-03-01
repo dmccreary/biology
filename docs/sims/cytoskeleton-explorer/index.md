@@ -11,7 +11,7 @@ quality_score: 0
 
 # Cytoskeleton Component Explorer
 
-<iframe src="main.html" height="730" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="610" width="100%" scrolling="no"></iframe>
 
 [View Fullscreen](main.html){ .md-button .md-button--primary }
 
