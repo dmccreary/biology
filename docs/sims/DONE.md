@@ -1,8 +1,8 @@
 # MicroSim DONE — Completed Implementations
 
-**Completed:** 7 MicroSims
+**Completed:** 15 MicroSims
 
-These MicroSims have been fully implemented with substantial JavaScript.
+These MicroSims have been fully implemented with substantial JavaScript or diagram-architecture overlays.
 
 ---
 
@@ -328,5 +328,101 @@ Responsive: Must respond to window resize events
 - **Status:** complete
 - **Target:** `docs/sims/protein-structure-levels/protein-structure-levels.js`
 - **Approach:** Text-to-image illustration (`protein-structures.png`) + p5.js overlay
+
+---
+
+## cell-membrane
+
+- **Title:** Cell Membrane — Fluid Mosaic Model
+- **Chapter:** 05-cell-membranes-and-transport
+- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
+- **Bloom:** Understand (L2)
+- **Status:** complete
+- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts
+- **Target:** `docs/sims/cell-membrane/data.json`
+
+---
+
+## chloroplast
+
+- **Title:** Chloroplast Structure
+- **Chapter:** 07-photosynthesis
+- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
+- **Bloom:** Understand (L2)
+- **Status:** complete
+- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts
+- **Target:** `docs/sims/chloroplast/data.json`
+
+---
+
+## mitochondria
+
+- **Title:** Mitochondria Structure
+- **Chapter:** 08-cellular-respiration
+- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
+- **Bloom:** Understand (L2)
+- **Status:** complete
+- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts
+- **Target:** `docs/sims/mitochondria/data.json`
+
+---
+
+## prokaryote-eukaryote-comparison
+
+- **Title:** Prokaryote vs. Eukaryote Cell Comparison
+- **Chapter:** 04-cell-organization-and-organelles
+- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
+- **Bloom:** Analyze (L4)
+- **Status:** complete
+- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts
+- **Target:** `docs/sims/prokaryote-eukaryote-comparison/data.json`
+
+---
+
+## endomembrane-system
+
+- **Title:** Endomembrane System — Protein Secretion Pathway
+- **Chapter:** 04-cell-organization-and-organelles
+- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
+- **Bloom:** Understand (L2)
+- **Status:** complete
+- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts
+- **Target:** `docs/sims/endomembrane-system/data.json`
+
+---
+
+## cytoskeleton-explorer
+
+- **Title:** Cytoskeleton Component Explorer
+- **Chapter:** 04-cell-organization-and-organelles
+- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
+- **Bloom:** Understand (L2)
+- **Status:** complete
+- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts
+- **Target:** `docs/sims/cytoskeleton-explorer/data.json`
+
+---
+
+## sodium-potassium-pump
+
+- **Title:** Sodium-Potassium Pump Cycle
+- **Chapter:** 05-cell-membranes-and-transport
+- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
+- **Bloom:** Understand (L2)
+- **Status:** complete
+- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts
+- **Target:** `docs/sims/sodium-potassium-pump/data.json`
+
+---
+
+## cell-junctions-explorer
+
+- **Title:** Cell Junctions Explorer
+- **Chapter:** 05-cell-membranes-and-transport
+- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
+- **Bloom:** Analyze (L4)
+- **Status:** complete
+- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts (dual-panel layout)
+- **Target:** `docs/sims/cell-junctions-explorer/data.json`
 
 ---

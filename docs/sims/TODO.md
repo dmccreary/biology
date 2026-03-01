@@ -1,6 +1,6 @@
 # MicroSim TODO — Remaining Implementations
 
-**Generated:** 2026-02-28 | **Remaining:** 52 of 59
+**Generated:** 2026-02-28 | **Remaining:** 47 of 59
 
 **Note:** All MicroSim directories ALREADY been created and the three core
 scaffolding files have been generated.  (`main.html`, `index.md`, `metadata.json`).
@@ -18,8 +18,8 @@ Always use the /microsim-generator skill to implement these Microsims
 | 01-scientific-foundations-and-chemistry | 5 | 5 | 0 |
 | 02-water-ph-and-organic-chemistry | 5 | 1 | 4 |
 | 03-biological-macromolecules | 4 | 2 | 2 |
-| 04-cell-organization-and-organelles | 8 | 4 | 4 |
-| 05-cell-membranes-and-transport | 4 | 1 | 3 |
+| 04-cell-organization-and-organelles | 8 | 7 | 1 |
+| 05-cell-membranes-and-transport | 4 | 3 | 1 |
 | 06-thermodynamics-and-enzymes | 4 | 0 | 4 |
 | 07-photosynthesis | 4 | 1 | 3 |
 | 08-cellular-respiration | 4 | 0 | 4 |
@@ -161,71 +161,6 @@ Stage 4: Show equilibrium state after animation completes
 Instructional Rationale: Sliders that directly alter concentration and instantly show updated Ψ calculations with animated water flow directly connect the abstract formula to a visible physical outcome. The animal/plant toggle reinforces that the same osmotic principles produce different cell outcomes due to the presence or absence of a rigid wall.
 
 Canvas size: 680 × 480 px
-Responsive: Must respond to window resize events
-
----
-
-## cell-junctions-explorer
-
-- **Title:** Cell Junctions Explorer
-- **Chapter:** 05-cell-membranes-and-transport
-- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
-- **Bloom:** Analyze (L4)
-- **Status:** specified
-- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts
-- **Target:** `docs/sims/cell-junctions-explorer/data.json`
-
-### Specification
-
-Type: infographic
-**sim-id:** cell-junctions-explorer<br/>
-**Library:** p5.js<br/>
-
-Bloom Level: Understand (L2)
-Bloom Verb: explain, compare
-Learning Objective: Students will explain the structural basis and functional role of tight junctions, desmosomes, and gap junctions in animal cells, and compare them to plasmodesmata in plant cells.
-
-Canvas layout:
-- Left panel (25%): Four clickable buttons — "Tight Junction", "Desmosome", "Gap Junction", "Plasmodesma"
-- Center panel (50%): Detailed cross-sectional diagram of two adjacent cells with the selected junction type shown at large scale
-- Right panel (25%): Junction name, structural proteins, function, and tissue examples
-
-Visual elements — Tight Junction:
-- Two adjacent epithelial cells (rectangles) with their apical surfaces at the top
-- Tight junction shown as a continuous seal (thick red line) running across the intercellular space near the apical surface
-- Claudin/occludin proteins drawn as interlocking transmembrane segments
-- Aqueous intercellular cleft present below the tight junction but absent above (sealed)
-- Label: "Seals paracellular space; prevents leakage"
-
-Visual elements — Desmosome:
-- Two adjacent cells with thick electron-dense plaques (gray bars) on the cytoplasmic face of each plasma membrane
-- Transmembrane cadherin proteins (desmoglein) shown as paired stalk proteins spanning the intercellular space and connecting the two plaques
-- Intermediate filament bundles (keratin) shown anchoring to the plaque inside each cell
-- Label: "Mechanical anchor; transmits tensile force"
-
-Visual elements — Gap Junction:
-- Two adjacent cells; at the gap junction, connexon hemichannels are shown as cylindrical pores spanning each membrane, docking end-to-end to form a complete channel
-- Inside each connexon: six connexin subunits shown as a ring in cross-section
-- Small colored dots (ions, cAMP) shown passing through the channel from one cell to the other
-- Label: "Direct cytoplasmic connection; passes ions and second messengers"
-
-Visual elements — Plasmodesma:
-- Two adjacent plant cells with thick cellulose cell walls (dark green outer layers)
-- Plasmodesma shown as a narrow channel through the wall, lined with plasma membrane
-- Desmotubule (ER-derived membrane strand) running through the center
-- Cytoplasm flowing in the annular space between desmotubule and outer membrane
-- Label: "Plant cell-to-cell channel; symplastic transport"
-
-Interactive controls:
-- Clicking any button updates center and right panels with animated transition
-- Hovering over any molecular element shows a tooltip with protein name and brief description
-- Toggle "Show intercellular space scale" — adds a nanometer scale bar to the center panel
-
-Default state: Tight Junction selected
-
-Instructional Rationale: Seeing all four junction types in the same visual format and at comparable scales allows direct structural comparison. The consistent two-cell canvas layout and the right panel's functional summary help students connect structure to function for each junction type.
-
-Canvas size: 700 × 460 px
 Responsive: Must respond to window resize events
 
 ---

@@ -399,7 +399,7 @@ In plants, the functional analogue of gap junctions is the plasmodesma (describe
 
 #### Diagram: Cell Junctions Explorer
 
-<iframe src="../../sims/cell-junctions-explorer/main.html" width="100%" height="520" scrolling="no"></iframe>
+<iframe src="../../sims/cell-junctions-explorer/main.html" width="100%" height="590" scrolling="no"></iframe>
 
 [View Fullscreen](../../sims/cell-junctions-explorer/main.html)
 
