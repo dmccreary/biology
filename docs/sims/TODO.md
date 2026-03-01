@@ -52,6 +52,7 @@ Always use the /microsim-generator skill to implement these Microsims
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 6
 - **Target:** `docs/sims/surface-area-volume-ratio/surface-area-volume-ratio.js`
 
 ### Specification
@@ -109,6 +110,7 @@ Responsive: Must respond to window resize events
 - **Library:** p5.js
 - **Bloom:** Apply (L3)
 - **Status:** specified
+- **Complexity Rating:** 9
 - **Target:** `docs/sims/osmosis-simulator/osmosis-simulator.js`
 
 ### Specification
@@ -172,6 +174,7 @@ Responsive: Must respond to window resize events
 - **Library:** p5.js
 - **Bloom:** Apply (L3)
 - **Status:** specified
+- **Complexity Rating:** 7
 - **Target:** `docs/sims/enzyme-kinetics-explorer/enzyme-kinetics-explorer.js`
 
 ### Specification
@@ -236,6 +239,7 @@ Responsive: Must respond to window resize events
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 8
 - **Target:** `docs/sims/enzyme-regulation-simulator/enzyme-regulation-simulator.js`
 
 ### Specification
@@ -293,6 +297,7 @@ Responsive: Must respond to window resize events
 - **Library:** p5.js
 - **Bloom:** Apply (L3)
 - **Status:** specified
+- **Complexity Rating:** 6
 - **Target:** `docs/sims/enzyme-activity-explorer/enzyme-activity-explorer.js`
 
 ### Specification
@@ -353,6 +358,7 @@ Responsive: Must respond to window resize events
 - **Library:** p5.js
 - **Bloom:** Understand (L2)
 - **Status:** specified
+- **Complexity Rating:** 8
 - **Target:** `docs/sims/light-dependent-reactions/light-dependent-reactions.js`
 
 ### Specification
@@ -416,13 +422,14 @@ Responsive: Must respond to window resize events
 - **Library:** p5.js
 - **Bloom:** Analyze (L4)
 - **Status:** specified
+- **Complexity Rating:** 7
 - **Target:** `docs/sims/photosynthesis-strategies/photosynthesis-strategies.js`
 
 ### Specification
 
 Type: infographic
 **sim-id:** photosynthesis-strategies<br/>
-**Library:** p5.js<br/>
+**Library:** p5.js with text-to-image background diagram<br/>
 
 Bloom Level: Analyze (L4)
 Bloom Verb: compare, differentiate
@@ -475,88 +482,6 @@ Responsive: Must respond to window resize events
 
 ---
 
-## glycolysis-simulator
-
-- **Title:** Glycolysis Pathway Simulator
-- **Chapter:** 08-cellular-respiration
-- **Library:** p5.js
-- **Bloom:** Understand (L2)
-- **Status:** specified
-- **Target:** `docs/sims/glycolysis-simulator/glycolysis-simulator.js`
-
-### Specification
-
-**Type:** MicroSim (p5.js)<br/>
-**sim-id:** glycolysis-simulator<br/>
-**Library:** p5.js<br/>
-
-**Learning objective:** Students will be able to *describe* (Bloom's L2: Understand) the inputs, outputs, and net energy yield of glycolysis, distinguishing the investment phase from the payoff phase.
-
-**Canvas:** 760 × 420 px, responsive.
-
-**Layout:** Three columns: left (energy investment phase, reactions 1–5 shaded red/pink), center divider showing glucose cleavage, right (energy payoff phase, reactions 6–10 shaded green).
-
-**Visual elements:**
-- Hexagon icon for glucose at top-left; arrow flow downward through 10 numbered steps
-- Each step shows: substrate name → enzyme name → product name
-- ATP consumed shown as red "−ATP" badges at steps 1 and 3
-- ATP produced shown as green "+ATP" badges at steps 7 and 10 (×2 each because 2 G3P)
-- NADH produced shown as blue "+NADH" badge at step 6 (×2)
-- Net tally panel at bottom: "Net ATP: +2", "Net NADH: +2", "Net Pyruvate: 2"
-
-**Interaction:**
-- Click any numbered step to expand a tooltip panel showing the full reaction equation, enzyme name, and cofactor requirement
-- Toggle button: "Show Investment Phase" / "Show Payoff Phase" highlights the relevant half of the pathway
-- "Reset" button returns all steps to default state
-
-**Color coding:** Investment phase background light coral (#FFCCCC); payoff phase background light green (#CCFFCC); NADH badges blue (#4A90D9); ATP badges gold (#F5A623)
-
----
-
-## atp-yield-calculator
-
-- **Title:** ATP Yield Calculator
-- **Chapter:** 08-cellular-respiration
-- **Library:** p5.js
-- **Bloom:** Create (L6)
-- **Status:** specified
-- **Target:** `docs/sims/atp-yield-calculator/atp-yield-calculator.js`
-
-### Specification
-
-**Type:** MicroSim (p5.js)<br/>
-**sim-id:** atp-yield-calculator<br/>
-**Library:** p5.js<br/>
-
-**Learning objective:** Students will be able to *calculate* (Bloom's L3: Apply) the total ATP yield per glucose from cellular respiration, accounting for each stage's contribution.
-
-**Canvas:** 760 × 450 px, responsive.
-
-**Layout:** Vertical table-style visualization with one row per metabolic stage.
-
-**Rows:**
-1. Glycolysis: 2 ATP (substrate-level), 2 NADH × 2.5 = 5 ATP (oxidative) = 7 ATP total
-2. Pyruvate Oxidation: 0 substrate-level, 2 NADH × 2.5 = 5 ATP (oxidative) = 5 ATP total
-3. Krebs Cycle: 2 ATP (substrate-level), 6 NADH × 2.5 = 15 ATP + 2 FADH₂ × 1.5 = 3 ATP (oxidative) = 20 ATP total
-4. **Grand Total: ~32 ATP per glucose**
-
-**Columns:** Stage | Substrate-level ATP | NADH → ATP | FADH₂ → ATP | Stage Total
-
-**Visual elements:**
-- Color-coded rows: glycolysis (yellow), pyruvate oxidation (orange), Krebs cycle (red/maroon), ETC/oxidative phosphorylation (purple)
-- Running total shown in bold bottom row
-- "Modern estimate (~32)" vs "Classic estimate (~38)" toggle button that updates NADH and FADH₂ conversion factors and re-totals
-- Pie chart (right side) showing proportion of ATP from each stage
-
-**Interaction:**
-- Slider for NADH → ATP conversion factor (1.5–3 range) with live recalculation
-- Slider for FADH₂ → ATP conversion factor (1.0–2.0 range) with live recalculation
-- Hover over any row for a brief explanation of where that stage occurs
-
-**Responsive design:** Column widths scale proportionally. Pie chart radius scales with available space.
-
----
-
 ## fermentation-pathways
 
 - **Title:** Fermentation Pathways Comparison
@@ -564,6 +489,7 @@ Responsive: Must respond to window resize events
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 6
 - **Target:** `docs/sims/fermentation-pathways/fermentation-pathways.js`
 
 ### Specification
@@ -602,9 +528,6 @@ Responsive: Must respond to window resize events
 
 **Responsive design:** Panel widths scale with container width. Molecule labels scale proportionally.
 
----
-
----
 
 ## camp-signaling-cascade
 
@@ -613,6 +536,7 @@ Responsive: Must respond to window resize events
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 7
 - **Target:** `docs/sims/camp-signaling-cascade/camp-signaling-cascade.js`
 
 ### Specification
@@ -658,6 +582,7 @@ Responsive: Must respond to window resize events
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 7
 - **Target:** `docs/sims/feedback-loop-simulator/feedback-loop-simulator.js`
 
 ### Specification
@@ -706,6 +631,7 @@ Responsive: Must respond to window resize events
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 8
 - **Target:** `docs/sims/cell-cycle-checkpoints/cell-cycle-checkpoints.js`
 
 ### Specification
@@ -753,6 +679,7 @@ Responsive: Must respond to window resize events
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 7
 - **Target:** `docs/sims/cancer-mutation-simulator/cancer-mutation-simulator.js`
 
 ### Specification
@@ -798,6 +725,7 @@ Responsive: Must respond to window resize events
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 6
 - **Target:** `docs/sims/crossing-over/crossing-over.js`
 
 ### Specification
@@ -838,6 +766,7 @@ Responsive: Must respond to window resize events
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 6
 - **Target:** `docs/sims/punnett-square-calculator/punnett-square-calculator.js`
 
 ### Specification
@@ -886,6 +815,7 @@ Responsive: Must respond to window resize events
 - **Library:** Chart.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 5
 - **Target:** `docs/sims/dihybrid-cross/dihybrid-cross.js`
 
 ### Specification
@@ -936,6 +866,7 @@ Responsive: Must respond to window resize events
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 6
 - **Target:** `docs/sims/test-cross-simulator/test-cross-simulator.js`
 
 ### Specification
@@ -981,6 +912,7 @@ Responsive: Must respond to window resize events
 - **Library:** vis-network
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 5
 - **Target:** `docs/sims/mendel-meiosis-map/mendel-meiosis-map.js`
 
 ### Specification
@@ -1031,6 +963,7 @@ Responsive: Must respond to window resize events
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 6
 - **Target:** `docs/sims/x-linked-inheritance/x-linked-inheritance.js`
 
 ### Specification
@@ -1075,6 +1008,7 @@ Responsive: Must respond to window resize events
 - **Library:** Chart.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 6
 - **Target:** `docs/sims/polygenic-distribution/polygenic-distribution.js`
 
 ### Specification
@@ -1124,6 +1058,7 @@ Responsive: Must respond to window resize events
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 8
 - **Target:** `docs/sims/linkage-mapper/linkage-mapper.js`
 
 ### Specification
@@ -1180,6 +1115,7 @@ Responsive: Must respond to window resize events
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 7
 - **Target:** `docs/sims/nondisjunction/nondisjunction.js`
 
 ### Specification
@@ -1226,6 +1162,7 @@ Responsive: Must respond to window resize events
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 9
 - **Target:** `docs/sims/pedigree-analyzer/pedigree-analyzer.js`
 
 ### Specification
@@ -1278,6 +1215,7 @@ Each pedigree object includes: nodes (generation, position, sex, affected status
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 6
 - **Target:** `docs/sims/gene-expression-pipeline/gene-expression-pipeline.js`
 
 ### Specification
@@ -1328,6 +1266,7 @@ Each pedigree object includes: nodes (generation, position, sex, affected status
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 7
 - **Target:** `docs/sims/genetic-code-table/genetic-code-table.js`
 
 ### Specification
@@ -1373,6 +1312,7 @@ Each pedigree object includes: nodes (generation, position, sex, affected status
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 8
 - **Target:** `docs/sims/translation-simulator/translation-simulator.js`
 
 ### Specification
@@ -1425,6 +1365,7 @@ Each pedigree object includes: nodes (generation, position, sex, affected status
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 7
 - **Target:** `docs/sims/mutation-effects/mutation-effects.js`
 
 ### Specification
@@ -1478,6 +1419,7 @@ Each pedigree object includes: nodes (generation, position, sex, affected status
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 7
 - **Target:** `docs/sims/operon-regulation/operon-regulation.js`
 
 ### Specification
@@ -1526,6 +1468,7 @@ Each pedigree object includes: nodes (generation, position, sex, affected status
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 5
 - **Target:** `docs/sims/eukaryotic-gene-regulation/eukaryotic-gene-regulation.js`
 
 ### Specification
@@ -1567,13 +1510,14 @@ Each pedigree object includes: nodes (generation, position, sex, affected status
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 6
 - **Target:** `docs/sims/biotech-toolkit/biotech-toolkit.js`
 
 ### Specification
 
 **Type:** Workflow diagram (p5.js)<br/>
 **sim-id:** biotech-toolkit<br/>
-**Library:** p5.js<br/>
+**Library:** mermaid<br/>
 
 **Learning objective:** Students will be able to *organize* (Bloom's L4: Analyze) the major biotechnology tools into a logical workflow and *explain* (Bloom's L2: Understand) how each tool contributes to a gene cloning or gene editing experiment.
 
@@ -1608,6 +1552,7 @@ Each node is a rounded rectangle with tool name and icon.
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 6
 - **Target:** `docs/sims/endosymbiosis-model/endosymbiosis-model.js`
 
 ### Specification
@@ -1655,6 +1600,7 @@ Each node is a rounded rectangle with tool name and icon.
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 7
 - **Target:** `docs/sims/hardy-weinberg-calculator/hardy-weinberg-calculator.js`
 
 ### Specification
@@ -1699,6 +1645,7 @@ Each node is a rounded rectangle with tool name and icon.
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 9
 - **Target:** `docs/sims/genetic-drift/genetic-drift.js`
 
 ### Specification
@@ -1741,6 +1688,7 @@ Each node is a rounded rectangle with tool name and icon.
 - **Library:** Chart.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 6
 - **Target:** `docs/sims/selection-modes/selection-modes.js`
 
 ### Specification
@@ -1786,6 +1734,7 @@ Each node is a rounded rectangle with tool name and icon.
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 6
 - **Target:** `docs/sims/speciation-pathways/speciation-pathways.js`
 
 ### Specification
@@ -1824,6 +1773,7 @@ Each node is a rounded rectangle with tool name and icon.
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 9
 - **Target:** `docs/sims/cladogram-builder/cladogram-builder.js`
 
 ### Specification
@@ -1880,6 +1830,7 @@ Each node is a rounded rectangle with tool name and icon.
 - **Library:** Chart.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 6
 - **Target:** `docs/sims/population-growth/population-growth.js`
 
 ### Specification
@@ -1927,6 +1878,7 @@ Each node is a rounded rectangle with tool name and icon.
 - **Library:** Chart.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 6
 - **Target:** `docs/sims/survivorship-curves/survivorship-curves.js`
 
 ### Specification
@@ -1969,6 +1921,7 @@ Each node is a rounded rectangle with tool name and icon.
 - **Library:** vis-network
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 7
 - **Target:** `docs/sims/species-interactions/species-interactions.js`
 
 ### Specification
@@ -2016,6 +1969,7 @@ Each node is a rounded rectangle with tool name and icon.
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 6
 - **Target:** `docs/sims/ecological-succession/ecological-succession.js`
 
 ### Specification
@@ -2059,6 +2013,7 @@ Each node is a rounded rectangle with tool name and icon.
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 5
 - **Target:** `docs/sims/energy-pyramid/energy-pyramid.js`
 
 ### Specification
@@ -2104,6 +2059,7 @@ Each node is a rounded rectangle with tool name and icon.
 - **Library:** p5.js
 - **Bloom:** Create (L6)
 - **Status:** specified
+- **Complexity Rating:** 8
 - **Target:** `docs/sims/biogeochemical-cycles/biogeochemical-cycles.js`
 
 ### Specification

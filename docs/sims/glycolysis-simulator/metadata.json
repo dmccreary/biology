@@ -1,45 +1,78 @@
 {
   "title": "Glycolysis Pathway Simulator",
+  "description": "Interactive visualization of the ten glycolysis reactions with investment/payoff highlighting, ATP/NADH badges, and clickable reaction cards.",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
-  "description": "Interactive MicroSim for glycolysis pathway simulator",
-  "date": "2026-02-27",
+  "contributor": [
+    "ChatGPT"
+  ],
+  "publisher": "MicroSims Biology Collection",
+  "date": "2026-02-28",
+  "subject": [
+    "Biology",
+    "Biochemistry",
+    "Cellular Respiration"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "https://dmccreary.github.io/biology/sims/glycolysis-simulator/",
+  "chapter": "08-cellular-respiration",
   "educational": {
     "gradeLevel": [
       "9",
       "10",
       "11",
-      "12"
+      "12",
+      "Undergraduate"
     ],
-    "subjectArea": "Mathematics",
-    "topic": "Glycolysis Pathway Simulator",
+    "subjectArea": "AP/IB Biology",
+    "topic": "Glycolysis steps and energy accounting",
     "learningObjectives": [
-      "TODO: Add learning objectives"
+      "Describe substrates, enzymes, and products for each glycolysis step.",
+      "Differentiate the energy investment and payoff phases by tracking ATP/NADH changes.",
+      "Explain why glycolysis nets +2 ATP and +2 NADH per glucose."
     ],
-    "bloomsTaxonomy": "Understand",
-    "duration": "10-15 minutes",
-    "prerequisites": [],
-    "standards": []
+    "bloomsTaxonomy": [
+      "Understand",
+      "Analyze"
+    ],
+    "duration": "15 minutes",
+    "prerequisites": [
+      "Knows the overall goal of cellular respiration",
+      "Can define NADH and substrate-level phosphorylation"
+    ],
+    "assessmentOpportunities": [
+      "Exit ticket listing ATP-consuming and ATP-producing steps",
+      "Discussion on why the payoff steps are doubled"
+    ]
   },
   "technical": {
     "framework": "p5.js",
-    "version": "1.0",
+    "version": "1.11.10",
     "canvasDimensions": {
       "width": "responsive",
-      "height": 450
+      "height": 1000
     },
     "responsive": true,
-    "dependencies": [],
+    "dependencies": [
+      "p5.js"
+    ],
     "accessibility": {
-      "hasAltText": false,
-      "keyboardNavigable": false
+      "hasAltText": true,
+      "keyboardNavigable": false,
+      "highContrastSupport": true
     }
   },
   "pedagogical": {
-    "teachingStrategy": "Interactive exploration",
-    "keyQuestions": [],
-    "commonMisconceptions": [],
-    "assessmentOpportunities": []
-  },
-  "chapter": "08-cellular-respiration"
+    "teachingStrategy": "Guided visualization with toggled emphasis",
+    "keyQuestions": [
+      "Where in glycolysis is ATP consumed?",
+      "Which step produces NADH and why is it doubled?"
+    ],
+    "commonMisconceptions": [
+      "Glycolysis produces 4 net ATP",
+      "Only one pyruvate forms per glucose"
+    ]
+  }
 }
