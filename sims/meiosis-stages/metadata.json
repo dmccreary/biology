@@ -1,9 +1,9 @@
 {
   "title": "Meiosis Stages Explorer",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
-  "description": "Interactive MicroSim for meiosis stages explorer",
-  "date": "2026-02-27",
+  "subject": "AP Biology",
+  "description": "Interactive diagram overlay showing all stages of meiosis I and meiosis II with 16 callout markers, featuring Explore and Quiz modes.",
+  "date": "2026-02-28",
   "educational": {
     "gradeLevel": [
       "9",
@@ -11,35 +11,62 @@
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
-    "topic": "Meiosis Stages Explorer",
+    "subjectArea": "Biology",
+    "topic": "Meiosis and Genetic Diversity",
     "learningObjectives": [
-      "TODO: Add learning objectives"
+      "Identify each stage of meiosis I and meiosis II by chromosome appearance",
+      "Describe the key events and chromosome behavior at each stage",
+      "Explain how crossing over and independent assortment generate genetic variation",
+      "Distinguish between what separates in anaphase I vs anaphase II",
+      "Describe nondisjunction and its consequences"
     ],
-    "bloomsTaxonomy": "Create",
-    "duration": "10-15 minutes",
-    "prerequisites": [],
-    "standards": []
+    "bloomsTaxonomy": "Understand",
+    "duration": "15-20 minutes",
+    "prerequisites": [
+      "Mitosis and cell cycle",
+      "Chromosome structure (homologs, sister chromatids)",
+      "Diploid vs haploid concepts"
+    ],
+    "standards": [
+      "AP Biology Unit 11: Meiosis and Mendelian Genetics"
+    ]
   },
   "technical": {
-    "framework": "p5.js",
+    "framework": "diagram-architecture",
     "version": "1.0",
     "canvasDimensions": {
       "width": "responsive",
-      "height": 450
+      "height": 730
     },
     "responsive": true,
-    "dependencies": [],
+    "dependencies": [
+      "diagram-architecture/diagram.js",
+      "diagram-architecture/style.css"
+    ],
     "accessibility": {
-      "hasAltText": false,
+      "hasAltText": true,
       "keyboardNavigable": false
     }
   },
   "pedagogical": {
-    "teachingStrategy": "Interactive exploration",
-    "keyQuestions": [],
-    "commonMisconceptions": [],
-    "assessmentOpportunities": []
+    "teachingStrategy": "Interactive exploration with callout markers and quiz mode",
+    "keyQuestions": [
+      "What separates in anaphase I vs anaphase II?",
+      "How does crossing over create recombinant chromosomes?",
+      "Why does independent assortment produce 2^n possible gamete combinations?",
+      "What is nondisjunction and what conditions does it cause?"
+    ],
+    "commonMisconceptions": [
+      "Students confuse what separates in anaphase I (homologs) vs anaphase II (sister chromatids)",
+      "Students think DNA replication occurs between meiosis I and meiosis II",
+      "Students believe crossing over and independent assortment are the same thing",
+      "Students forget that meiosis I is reductional (2n to n) while meiosis II is equational (n to n)"
+    ],
+    "assessmentOpportunities": [
+      "Quiz mode: identify all 16 structures and concepts by clicking correct markers",
+      "Compare meiosis I and meiosis II side by side",
+      "Explain sources of genetic variation in meiosis"
+    ]
   },
   "chapter": "11-meiosis-and-mendelian-genetics"
 }

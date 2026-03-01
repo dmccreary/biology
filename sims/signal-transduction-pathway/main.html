@@ -1,19 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
-    <title>Signal Transduction Pathway Overview using p5.js</title>
-    <style>
-        body { margin: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif; }
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
-    <script src="signal-transduction-pathway.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signal Transduction Pathway — Interactive Diagram</title>
+  <link rel="stylesheet" href="../diagram-architecture/style.css">
 </head>
 <body>
-    <main></main>
-    <br/>
-    <a href=".">Back to Lesson Plan</a>
+
+<h2 style="text-align:center; margin:0.3em 0 0.2em;">Signal Transduction Pathway</h2>
+
+<div id="controls">
+  <button class="mode-btn active" id="btn-explore" onclick="sim.setMode('explore')">Explore</button>
+  <button class="mode-btn"        id="btn-quiz"    onclick="sim.setMode('quiz')">Quiz</button>
+  <span id="quiz-score" style="display:none">
+    Score: <strong id="score-val">0</strong> / <strong id="score-total">0</strong>
+  </span>
+  <button class="mode-btn" id="btn-edit" style="display:none" onclick="window.location.search='?edit=true'">Edit</button>
+</div>
+<script>
+  if (window.self === window.top) {
+    document.getElementById('btn-edit').style.display = '';
+  }
+</script>
+
+<div id="layout">
+  <svg id="leaders-svg"></svg>
+
+  <div id="diagram-wrapper">
+    <img id="diagram-img" src="signal-transduction.png" alt="Signal Transduction Pathway Diagram" draggable="false">
+    <div id="markers-layer"></div>
+  </div>
+
+  <div id="label-panel">
+    <!-- label rows injected by diagram.js -->
+  </div>
+</div>
+
+<div id="infobox">
+  <div id="infobox-prompt">Hover over a numbered marker or a label to learn about that structure.</div>
+  <div id="infobox-content">
+    <div id="infobox-label"></div>
+    <div id="infobox-desc"></div>
+    <div id="infobox-ap-tip"></div>
+    <button id="quiz-restart" onclick="sim.restartQuiz()">Try Again</button>
+  </div>
+</div>
+
+<div id="edit-panel">
+  <h3>Edit Mode — drag markers to calibrate positions</h3>
+  <div id="coord-display">Drag a marker to see its live coordinates.</div>
+  <textarea id="json-output" readonly spellcheck="false"></textarea>
+  <div id="edit-actions">
+    <button id="copy-json-btn" onclick="sim.copyJSON()">Copy JSON</button>
+    <span id="copy-confirm"></span>
+  </div>
+</div>
+
+<script src="../diagram-architecture/diagram.js"></script>
 </body>
 </html>

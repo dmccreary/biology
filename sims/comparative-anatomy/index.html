@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for comparative anatomy explorer.">
+        <meta name="description" content="Interactive MicroSim comparing vertebrate forelimb homology across five species, with bone highlighting and a classification quiz for homologous, analogous, and vestigial structures.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Comparative Anatomy Explorer - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for comparative anatomy explorer.">
+        <meta property="og:description" content="Interactive MicroSim comparing vertebrate forelimb homology across five species, with bone highlighting and a classification quiz for homologous, analogous, and vestigial structures.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/comparative-anatomy/comparative-anatomy.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Comparative Anatomy Explorer - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for comparative anatomy explorer.">
+        <meta name="twitter:description" content="Interactive MicroSim comparing vertebrate forelimb homology across five species, with bone highlighting and a classification quiz for homologous, analogous, and vestigial structures.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/comparative-anatomy/comparative-anatomy.png">
       
@@ -1217,15 +1217,6 @@
   <a href="#how-to-use" class="md-nav__link">
     <span class="md-ellipsis">
       How to Use
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
     </span>
   </a>
   
@@ -2925,15 +2916,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lesson-plan" class="md-nav__link">
     <span class="md-ellipsis">
       Lesson Plan
@@ -3027,43 +3009,41 @@
 
 
 <h1 id="comparative-anatomy-explorer">Comparative Anatomy Explorer</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="616" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Comparative Anatomy Explorer MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">Run the Comparative Anatomy Explorer Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This interactive explorer displays the forelimbs of five vertebrate species — human, whale, bat, dog, and bird — side by side with color-coded skeletal overlays. The same five bone groups (humerus, radius, ulna, carpals, phalanges) appear in each species, modified by natural selection for different functions. This is one of the strongest lines of evidence for common ancestry.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
-<h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
-<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/comparative-anatomy/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
-        <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
-        <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li><strong>Explore Mode</strong>: Hover over any bone in any species to highlight the same bone across all five species simultaneously. An info box describes the bone's adaptation in that species.</li>
+<li><strong>Toggle Bones</strong>: Click "Hide Bones" to see just the silhouettes, then reveal bones again.</li>
+<li><strong>Quiz Mode</strong>: Click "Switch to Quiz Mode" to test your knowledge. You'll be presented with pairs of structures to classify as homologous, analogous, or vestigial. Immediate feedback explains the reasoning.</li>
+</ol>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>9-12 (AP Biology)</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<p>Basic understanding of natural selection and common ancestry.</p>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Students hover over each bone type across all five species. Ask: "What stays the same? What changes? Why?"</li>
+<li><strong>Guided Practice</strong> (5 min): Discuss the difference between homologous structures (same origin, different function) and analogous structures (different origin, same function). Use the bone legend to trace each bone across species.</li>
+<li><strong>Assessment</strong> (5 min): Switch to Quiz Mode. Students classify 8 structure pairs and review feedback.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Students can correctly identify homologous, analogous, and vestigial structures.</li>
+<li>Students can explain why shared bone structure across species is evidence for common descent.</li>
+<li>Students score at least 6/8 on the classification quiz.</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Homology_(biology)">Homology (biology)</a> — Wikipedia</li>
+<li><a href="https://en.wikipedia.org/wiki/Comparative_anatomy">Comparative anatomy</a> — Wikipedia</li>
+<li><a href="https://apcentral.collegeboard.org/courses/ap-biology">AP Biology Course and Exam Description</a> — College Board</li>
 </ol>
 
 

@@ -1,7 +1,7 @@
 {
   "title": "Cell Junctions Explorer",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
+  "subject": "AP Biology",
   "description": "Interactive MicroSim for cell junctions explorer",
   "date": "2026-02-27",
   "educational": {
@@ -11,7 +11,7 @@
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
+    "subjectArea": "Biology",
     "topic": "Cell Junctions Explorer",
     "learningObjectives": [
       "TODO: Add learning objectives"

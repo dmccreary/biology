@@ -1,0 +1,116 @@
+{
+  "title": "Cell Junctions Explorer",
+  "orientation": "landscape",
+  "image": "cell-junctions.png",
+  "callouts": [
+    {
+      "id": 1,
+      "label": "Claudin / Occludin Proteins",
+      "x": 17.5,
+      "y": 15,
+      "radius": 3.5,
+      "panel": "left",
+      "color": "#C0392B",
+      "hint": "dark red transmembrane protein strands forming interlocking rows between two cells at the tight junction site, shown as paired stalk-like structures crossing the intercellular space",
+      "description": "The primary structural proteins of tight junctions. Claudins form the backbone of the seal, creating strands that pair with claudins on the adjacent cell to close the intercellular cleft. Occludins associate with claudin strands and regulate junction permeability. Both are tetraspan transmembrane proteins — they cross the membrane four times, with two extracellular loops that interlock with the neighboring cell's proteins.",
+      "ap_tip": "While individual protein names are not typically tested on the AP exam, understanding that tight junction sealing depends on protein-protein interactions between adjacent cells is important. This is a key example of how membrane protein structure determines tissue-level function."
+    },
+    {
+      "id": 2,
+      "label": "Cadherin Proteins",
+      "x": 82.9,
+      "y": 17.8,
+      "radius": 3.5,
+      "panel": "right",
+      "color": "#9B59B6",
+      "hint": "purple paired stalk proteins spanning the intercellular space at the desmosome, connecting the two dense plaques",
+      "description": "Calcium-dependent cell adhesion proteins that form the transmembrane core of desmosomes. Desmoglein and desmocollin are desmosomal cadherins — their extracellular domains extend into the intercellular space and bind to cadherins from the adjacent cell in a calcium-dependent manner. Their intracellular domains anchor to the dense plaque proteins (plakoglobin, plakophilin, desmoplakin), which in turn connect to the intermediate filament network.",
+      "ap_tip": "The name 'cadherin' comes from 'calcium-dependent adhesion.' Without calcium, cadherins cannot bind — this is why EDTA (a calcium chelator) disrupts cell-cell adhesion in lab settings. The AP exam may test the concept that cell adhesion molecules require extracellular calcium to function."
+    },
+    {
+      "id": 3,
+      "label": "Intermediate Filaments",
+      "x": 72.2,
+      "y": 26.7,
+      "radius": 3.5,
+      "panel": "right",
+      "color": "#7D3C98",
+      "hint": "thick purple-tinted filament bundles looping through the desmosomal plaque and extending into each cell's cytoplasm",
+      "description": "Rope-like cytoskeletal filaments (typically keratin in epithelial cells) that anchor to the desmosomal plaque and distribute mechanical forces throughout the cell. Unlike microfilaments (actin) and microtubules, intermediate filaments have no polarity and are not involved in motor protein transport. Their primary role is providing tensile strength — they act like internal guy-wires that prevent the cell from being torn apart when the tissue is stretched.",
+      "ap_tip": "Intermediate filaments are the toughest of the three cytoskeletal elements. Keratin (in skin cells) and lamin (in the nuclear envelope) are the two most AP-relevant examples. Mutations in keratin genes cause epidermolysis bullosa — a skin blistering disease that illustrates how cytoskeletal defects cause tissue fragility."
+    },
+    {
+      "id": 4,
+      "label": "Connexon (Hemichannel)",
+      "x": 21.3,
+      "y": 66.2,
+      "radius": 3.5,
+      "panel": "left",
+      "color": "#2471A3",
+      "hint": "blue cylindrical pore structure in one cell's membrane, shown as a ring of six protein subunits in cross-section, docking with the matching connexon from the adjacent cell",
+      "description": "A half-channel composed of six connexin protein subunits arranged in a ring around a central pore (~1.5 nm diameter). Each cell contributes one connexon; when two connexons from adjacent cells dock together, they form a complete gap junction channel. The channel can open or close in response to changes in intracellular calcium, pH, or voltage, providing regulated intercellular communication.",
+      "ap_tip": "The six-subunit ring structure of connexons is a classic example of quaternary protein structure — six identical (or similar) connexin polypeptides assemble into a functional complex. The AP exam sometimes tests the concept that protein subunit assembly creates channels with specific selectivity and gating properties."
+    },
+    {
+      "id": 5,
+      "label": "Ions and Second Messengers",
+      "x": 25.8,
+      "y": 75.7,
+      "radius": 3,
+      "panel": "left",
+      "color": "#5DADE2",
+      "hint": "small colored dots (representing ions and signaling molecules) shown passing through the gap junction channel from one cell's cytoplasm to the other",
+      "description": "Small molecules that pass through gap junction channels, including inorganic ions (Na⁺, K⁺, Ca²⁺, Cl⁻), second messengers (cAMP, cGMP, IP3), ATP, amino acids, and glucose. The size limit is approximately 1 kilodalton — larger molecules like proteins and nucleic acids cannot pass through. This molecular traffic allows metabolic cooperation (sharing nutrients) and signal coordination (synchronizing cell responses) across a tissue.",
+      "ap_tip": "The passage of Ca²⁺ and cAMP through gap junctions is directly connected to AP Unit 4 (Cell Communication). When one cell receives a hormone signal and produces cAMP, that second messenger can spread to neighboring cells through gap junctions, amplifying the signal across a tissue without each cell needing its own receptor."
+    },
+    {
+      "id": 6,
+      "label": "Desmotubule",
+      "x": 74.3,
+      "y": 72.1,
+      "radius": 3,
+      "panel": "right",
+      "color": "#1E8449",
+      "hint": "dark green strand running through the center of the plasmodesma channel, connecting the ER of one cell to the ER of the adjacent cell",
+      "description": "A tubular strand of compressed endoplasmic reticulum (ER) that runs through the center of each plasmodesma, connecting the ER networks of adjacent plant cells into a continuous system. The desmotubule leaves only a narrow annular space (~3 nm) between itself and the outer plasma membrane lining of the channel. This space is the primary route for molecular transport. The desmotubule can regulate the plasmodesma's size exclusion limit by expanding or contracting.",
+      "ap_tip": "The desmotubule is unique to plant cells and has no animal cell equivalent. It demonstrates that the endomembrane system (ER) can extend between cells in plants, creating tissue-level connectivity of internal membrane compartments. This is a structural feature that makes the plant symplast fundamentally different from animal intercellular communication."
+    },
+    {
+      "id": 7,
+      "label": "Plant Cell Wall",
+      "x": 93,
+      "y": 58.3,
+      "radius": 4,
+      "panel": "right",
+      "color": "#2ECC71",
+      "hint": "thick green layers flanking the plasmodesma on both sides, representing the cellulose cell walls of the two adjacent plant cells",
+      "description": "The rigid structural layer outside the plasma membrane of plant cells, composed primarily of cellulose microfibrils embedded in a matrix of hemicellulose and pectin. The cell wall is typically 0.1-10 micrometers thick — far thicker than the plasma membrane (~7 nm). Plasmodesmata are pre-formed channels through the wall that are established during cell division when the cell plate forms. The wall provides structural support but creates a communication barrier that plasmodesmata solve.",
+      "ap_tip": "The cell wall is the reason plant cells need plasmodesmata — animal cells have no wall, so gap junctions only need to bridge the narrow intercellular gap (~2-4 nm). Plant cells must bridge a wall that can be hundreds of times thicker. On the AP exam, know that the cell wall is made of cellulose (a polysaccharide), not protein."
+    },
+    {
+      "id": 8,
+      "label": "Plasma Membrane",
+      "x": 24.2,
+      "y": 85.1,
+      "radius": 4,
+      "panel": "left",
+      "color": "#F39C12",
+      "hint": "thin orange/gold line forming the boundary of each cell, visible running along the edges of all four junction panels",
+      "description": "The phospholipid bilayer that forms the outer boundary of every cell. All four junction types involve modifications of the plasma membrane: tight junctions seal adjacent membranes together, desmosomes anchor membranes via cadherin proteins, gap junctions create membrane-spanning channels, and plasmodesmata are lined by continuous plasma membrane running through the cell wall. The membrane's fluid mosaic structure allows junction proteins to be inserted, clustered, and rearranged.",
+      "ap_tip": "Notice that every junction type requires transmembrane proteins — the plasma membrane alone cannot form cell-cell connections. This reinforces the AP concept that membrane proteins are responsible for all specific membrane functions (transport, signaling, adhesion, recognition). The lipid bilayer provides the barrier; proteins provide the functionality."
+    },
+    {
+      "id": 9,
+      "label": "Intercellular Space",
+      "x": 73.8,
+      "y": 80,
+      "radius": 3.5,
+      "panel": "right",
+      "color": "#BDC3C7",
+      "hint": "narrow pale gray gap between the two adjacent cells, visible between the plasma membranes in each junction panel",
+      "description": "The narrow extracellular gap between adjacent cells, typically 20-30 nm wide. Each junction type interacts with this space differently: tight junctions eliminate it entirely (sealing it shut near the apical surface), desmosomes span it with cadherin proteins (~30 nm wide), gap junctions bridge it with connexon channels (~2-4 nm gap), and plasmodesmata bypass it entirely by passing through the cell wall. The width and accessibility of this space determines the paracellular transport pathway.",
+      "ap_tip": "The intercellular space is the paracellular pathway — the route between cells. Tight junctions block this pathway, forcing all transport to go through cells (transcellular). Understanding the difference between paracellular and transcellular transport is tested on the AP exam in the context of epithelial absorption."
+    }
+  ],
+  "layout": "dual-panel"
+}

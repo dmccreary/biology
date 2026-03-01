@@ -1,19 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
-    <title>Mitosis Stage Explorer using p5.js</title>
-    <style>
-        body { margin: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif; }
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
-    <script src="mitosis-stage-explorer.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+  <title>Mitosis Stage Explorer — Interactive Diagram</title>
+  <link rel="stylesheet" href="../diagram-architecture/style.css">
+  <style>
+    .stage-labels {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      pointer-events: none;
+      z-index: 5;
+    }
+    .stage-label {
+      text-align: center;
+      font: bold 13px Arial, sans-serif;
+      color: #333;
+      background: rgba(255,255,255,0.85);
+      padding: 2px 6px;
+      border-radius: 3px;
+      position: absolute;
+      transform: translateX(-50%);
+      top: 2px;
+      white-space: nowrap;
+    }
+  </style>
 </head>
 <body>
-    <main></main>
-    <br/>
-    <a href=".">Back to Lesson Plan</a>
+
+<h2 style="text-align:center; margin:0.3em 0 0.2em;">Mitosis Stage Explorer</h2>
+
+<div id="controls">
+  <button class="mode-btn active" id="btn-explore" onclick="sim.setMode('explore')">Explore</button>
+  <button class="mode-btn"        id="btn-quiz"    onclick="sim.setMode('quiz')">Quiz</button>
+  <span id="quiz-score" style="display:none">
+    Score: <strong id="score-val">0</strong> / <strong id="score-total">0</strong>
+  </span>
+  <button class="mode-btn" id="btn-edit" style="display:none" onclick="window.location.search='?edit=true'">Edit</button>
+</div>
+<script>
+  if (window.self === window.top) {
+    document.getElementById('btn-edit').style.display = '';
+  }
+</script>
+
+<div id="layout">
+  <svg id="leaders-svg"></svg>
+
+  <div id="diagram-wrapper">
+    <img id="diagram-img" src="mitosis-stages.png" alt="Five Stages of Mitosis: Prophase, Metaphase, Anaphase, Telophase, Cytokinesis" draggable="false">
+    <div id="markers-layer"></div>
+    <div class="stage-labels">
+      <span class="stage-label" style="left:10%">Prophase</span>
+      <span class="stage-label" style="left:29%">Metaphase</span>
+      <span class="stage-label" style="left:50%">Anaphase</span>
+      <span class="stage-label" style="left:70%">Telophase</span>
+      <span class="stage-label" style="left:90%">Cytokinesis</span>
+    </div>
+  </div>
+
+  <div id="label-panel">
+    <!-- label rows injected by diagram.js -->
+  </div>
+</div>
+
+<div id="infobox">
+  <div id="infobox-prompt">Hover over a numbered marker or a label to learn about each structure and stage of mitosis.</div>
+  <div id="infobox-content">
+    <div id="infobox-label"></div>
+    <div id="infobox-desc"></div>
+    <div id="infobox-ap-tip"></div>
+    <button id="quiz-restart" onclick="sim.restartQuiz()">Try Again</button>
+  </div>
+</div>
+
+<div id="edit-panel">
+  <h3>Edit Mode — drag markers to calibrate positions</h3>
+  <div id="coord-display">Drag a marker to see its live coordinates.</div>
+  <textarea id="json-output" readonly spellcheck="false"></textarea>
+  <div id="edit-actions">
+    <button id="copy-json-btn" onclick="sim.copyJSON()">Copy JSON</button>
+    <span id="copy-confirm"></span>
+  </div>
+</div>
+
+<script src="../diagram-architecture/diagram.js"></script>
 </body>
 </html>

@@ -1,45 +1,60 @@
 {
   "title": "DNA Replication Fork Explorer",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
-  "description": "Interactive MicroSim for dna replication fork explorer",
-  "date": "2026-02-27",
+  "subject": "AP Biology",
+  "description": "Interactive diagram overlay showing the complete enzymatic machinery at a DNA replication fork, with Explore and Quiz modes for 13 labeled structures.",
+  "date": "2026-03-01",
   "educational": {
-    "gradeLevel": [
-      "9",
-      "10",
-      "11",
-      "12"
-    ],
-    "subjectArea": "Mathematics",
-    "topic": "DNA Replication Fork Explorer",
+    "gradeLevel": ["9", "10", "11", "12"],
+    "subjectArea": "Biology",
+    "topic": "DNA Replication",
     "learningObjectives": [
-      "TODO: Add learning objectives"
+      "Identify the enzymes at the replication fork and state their functions",
+      "Explain why leading strand synthesis is continuous while lagging strand synthesis is discontinuous",
+      "Describe the roles of primase, DNA Pol I, and DNA Ligase in Okazaki fragment processing"
     ],
-    "bloomsTaxonomy": "Create",
+    "bloomsTaxonomy": "Understand",
     "duration": "10-15 minutes",
-    "prerequisites": [],
+    "prerequisites": [
+      "DNA structure and base pairing",
+      "Enzyme function",
+      "5' to 3' directionality"
+    ],
     "standards": []
   },
   "technical": {
-    "framework": "p5.js",
+    "framework": "diagram-architecture",
     "version": "1.0",
     "canvasDimensions": {
       "width": "responsive",
-      "height": 450
+      "height": 730
     },
     "responsive": true,
-    "dependencies": [],
+    "dependencies": [
+      "diagram-architecture/diagram.js",
+      "diagram-architecture/style.css"
+    ],
     "accessibility": {
-      "hasAltText": false,
+      "hasAltText": true,
       "keyboardNavigable": false
     }
   },
   "pedagogical": {
-    "teachingStrategy": "Interactive exploration",
-    "keyQuestions": [],
-    "commonMisconceptions": [],
-    "assessmentOpportunities": []
+    "teachingStrategy": "Interactive exploration with quiz assessment",
+    "keyQuestions": [
+      "Why can't DNA Polymerase III start a new strand without a primer?",
+      "Why is the lagging strand synthesized as Okazaki fragments?",
+      "What would happen if DNA Ligase were absent?"
+    ],
+    "commonMisconceptions": [
+      "Helicase breaks covalent bonds (it breaks hydrogen bonds)",
+      "The leading and lagging strands use different enzymes (they use the same Pol III)",
+      "Okazaki fragments are caused by pausing (they result from 5' to 3' directionality constraint)"
+    ],
+    "assessmentOpportunities": [
+      "Quiz mode identification of all 13 structures",
+      "Explain directionality constraint"
+    ]
   },
   "chapter": "13-central-dogma-replication-and-protein-synthesis"
 }

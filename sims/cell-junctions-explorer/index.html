@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for cell junctions explorer.">
+        <meta name="description" content="Interactive diagram comparing four types of cell junctions — tight junctions, desmosomes, gap junctions, and plasmodesmata — with structural details and AP exam tips.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Cell Junctions Explorer - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for cell junctions explorer.">
+        <meta property="og:description" content="Interactive diagram comparing four types of cell junctions — tight junctions, desmosomes, gap junctions, and plasmodesmata — with structural details and AP exam tips.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/cell-junctions-explorer/cell-junctions-explorer.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Cell Junctions Explorer - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for cell junctions explorer.">
+        <meta name="twitter:description" content="Interactive diagram comparing four types of cell junctions — tight junctions, desmosomes, gap junctions, and plasmodesmata — with structural details and AP exam tips.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/cell-junctions-explorer/cell-junctions-explorer.png">
       
@@ -1085,9 +1085,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
+  <a href="#junction-types-at-a-glance" class="md-nav__link">
     <span class="md-ellipsis">
-      Iframe Embed Code
+      Junction Types at a Glance
     </span>
   </a>
   
@@ -2925,9 +2925,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
+  <a href="#junction-types-at-a-glance" class="md-nav__link">
     <span class="md-ellipsis">
-      Iframe Embed Code
+      Junction Types at a Glance
     </span>
   </a>
   
@@ -3027,43 +3027,84 @@
 
 
 <h1 id="cell-junctions-explorer">Cell Junctions Explorer</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="590" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Cell Junctions Explorer MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a href="main.html">View Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This interactive diagram compares the four major types of cell junctions found in animal and plant tissues. The image is organized as a 2x2 grid showing <strong>tight junctions</strong>, <strong>desmosomes</strong>, <strong>gap junctions</strong>, and <strong>plasmodesmata</strong> in cross-section between adjacent cells.</p>
+<p>Use <strong>Explore mode</strong> to hover over each structure and learn about its molecular components and biological function. Switch to <strong>Quiz mode</strong> to test your ability to identify junction components.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
-<h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
-<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/cell-junctions-explorer/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
-        <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
-        <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li><strong>Explore mode</strong> — Hover over any numbered marker or label to see a description and AP exam tip</li>
+<li><strong>Quiz mode</strong> — A structure name appears in the prompt; click the correct marker on the diagram</li>
+<li>Compare junction types by exploring structures across all four quadrants</li>
+</ol>
+<h2 id="junction-types-at-a-glance">Junction Types at a Glance</h2>
+<table>
+<thead>
+<tr>
+<th>Junction Type</th>
+<th>Key Proteins</th>
+<th>Function</th>
+<th>Found In</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tight Junction</td>
+<td>Claudins, occludins</td>
+<td>Seals intercellular space; prevents leakage</td>
+<td>Epithelial tissues (gut, kidney, bladder)</td>
+</tr>
+<tr>
+<td>Desmosome</td>
+<td>Cadherins (desmoglein), keratin</td>
+<td>Mechanical anchoring; resists stretching</td>
+<td>Skin, heart muscle, uterus</td>
+</tr>
+<tr>
+<td>Gap Junction</td>
+<td>Connexins (6 per connexon)</td>
+<td>Direct cytoplasmic communication; passes ions and second messengers</td>
+<td>Heart muscle, smooth muscle, neurons</td>
+</tr>
+<tr>
+<td>Plasmodesma</td>
+<td>Plasma membrane + desmotubule (ER)</td>
+<td>Plant cell-to-cell channel; symplastic transport</td>
+<td>All plant tissues</td>
+</tr>
+</tbody>
+</table>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>9-12 (AP Biology)</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Plasma membrane structure</li>
+<li>Cytoskeleton components (intermediate filaments)</li>
+<li>Cell signaling basics (second messengers)</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Use Explore mode to examine all four junction types, focusing on structural proteins and their functions</li>
+<li><strong>Guided Practice</strong> (5 min): Compare tight junctions (sealing) vs. gap junctions (communication) — how do their structures reflect their opposite functions?</li>
+<li><strong>Assessment</strong> (5 min): Complete Quiz mode; then answer: How are gap junctions and plasmodesmata analogous? How do they differ structurally?</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Can students explain why tight junctions force transcellular (not paracellular) transport?</li>
+<li>Can students distinguish the mechanical role of desmosomes from the sealing role of tight junctions?</li>
+<li>Can students compare gap junctions (animal) to plasmodesmata (plant) as analogous structures?</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Cell_junction">Cell junction — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tight_junction">Tight junction — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Gap_junction">Gap junction — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Plasmodesma">Plasmodesma — Wikipedia</a></li>
 </ol>
 
 
