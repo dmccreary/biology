@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for atp yield calculator.">
+        <meta name="description" content="Interactive p5.js MicroSim that compares ATP yield from each stage of cellular respiration.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="ATP Yield Calculator - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for atp yield calculator.">
+        <meta property="og:description" content="Interactive p5.js MicroSim that compares ATP yield from each stage of cellular respiration.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/atp-yield-calculator/atp-yield-calculator.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="ATP Yield Calculator - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for atp yield calculator.">
+        <meta name="twitter:description" content="Interactive p5.js MicroSim that compares ATP yield from each stage of cellular respiration.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/atp-yield-calculator/atp-yield-calculator.png">
       
@@ -774,6 +774,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-visual-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Visual Elements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -789,6 +804,33 @@
   <a href="#iframe-embed-code" class="md-nav__link">
     <span class="md-ellipsis">
       Iframe Embed Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controls
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-and-calculations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data and Calculations
     </span>
   </a>
   
@@ -2913,6 +2955,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-visual-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Visual Elements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2928,6 +2985,33 @@
   <a href="#iframe-embed-code" class="md-nav__link">
     <span class="md-ellipsis">
       Iframe Embed Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controls
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-and-calculations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data and Calculations
     </span>
   </a>
   
@@ -3027,43 +3111,114 @@
 
 
 <h1 id="atp-yield-calculator">ATP Yield Calculator</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="610px" width="100%" scrolling="no"></iframe>
 
 <p><a class="md-button md-button--primary" href="main.html">Run the ATP Yield Calculator MicroSim Fullscreen</a>
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This interactive visualization decomposes the ATP produced per glucose molecule across glycolysis, pyruvate oxidation, and the citric acid cycle. A dynamic table and proportional pie chart update instantly when students change the conversion factors for NADH and FADH₂, illustrating why modern biology textbooks report ~32 ATP whereas older references cited ~38.</p>
+<h3 id="key-visual-elements">Key Visual Elements</h3>
+<ul>
+<li><strong>Stage Table:</strong> Shows substrate-level ATP, oxidative ATP from NADH, oxidative ATP from FADH₂, and the stage total.</li>
+<li><strong>Pie Chart:</strong> Animates the relative contribution each stage makes to the overall ATP budget.</li>
+<li><strong>Context Tips:</strong> Hovering any stage row reveals where the reactions take place and why they matter.</li>
+</ul>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li>Start in the default <strong>Modern (~32 ATP)</strong> mode that uses 2.5 ATP/NADH and 1.5 ATP/FADH₂ conversion factors.</li>
+<li>Hover over each stage row to review the anatomical location (cytosol vs. mitochondrial matrix) and main products.</li>
+<li>Drag the <strong>NADH</strong> and <strong>FADH₂</strong> sliders to explore how shuttle efficiencies or membrane leakiness alter the net ATP tally.</li>
+<li>Press the toggle button to jump to the <strong>Classic (~38 ATP)</strong> assumption and observe how the pie chart shifts when NADH and FADH₂ are given more generous yields.</li>
+<li>Have students explain why substrate-level ATP remains constant while oxidative phosphorylation changes with slider inputs.</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
 <p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/atp-yield-calculator/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"610px"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<ul>
+<li>Calculate the total ATP produced per glucose at each stage of cellular respiration using adjustable NADH and FADH₂ conversion factors.</li>
+<li>Compare modern (~32 ATP) and classic (~38 ATP) assumptions and justify why current estimates are lower.</li>
+<li>Interpret visual data (table + pie chart) to explain why the citric acid cycle dominates ATP yield despite producing only two substrate-level ATP.</li>
+</ul>
+<h2 id="controls">Controls</h2>
+<ul>
+<li><strong>Mode Toggle:</strong> Switches between preset modern and classic conversion factors.</li>
+<li><strong>NADH Slider (1.5–3.0 ATP):</strong> Adjusts oxidative phosphorylation yield per NADH.</li>
+<li><strong>FADH₂ Slider (1.0–2.0 ATP):</strong> Adjusts oxidative phosphorylation yield per FADH₂.</li>
+<li><strong>Show Pie Labels:</strong> Optional checkbox to declutter the chart during discussion.</li>
+</ul>
+<h2 id="data-and-calculations">Data and Calculations</h2>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Substrate ATP</th>
+<th>NADH Produced</th>
+<th>FADH₂ Produced</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Glycolysis</td>
+<td>2</td>
+<td>2</td>
+<td>0</td>
+<td>Occurs in the cytosol before pyruvate enters mitochondria.</td>
+</tr>
+<tr>
+<td>Pyruvate Oxidation</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>Converts pyruvate to acetyl-CoA in the mitochondrial matrix.</td>
+</tr>
+<tr>
+<td>Citric Acid Cycle</td>
+<td>2</td>
+<td>6</td>
+<td>2</td>
+<td>Completes oxidation of acetyl-CoA, producing most reduced coenzymes.</td>
+</tr>
+</tbody>
+</table>
+<p>The simulation multiplies NADH and FADH₂ counts by the selected conversion factors, adds substrate-level ATP, and reports both a numeric and proportional breakdown.</p>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>9–12 (AP/IB Biology) and introductory undergraduate biology</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15 minutes (including short discussion)</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Students can list the stages of cellular respiration in order.</li>
+<li>Students know what NADH and FADH₂ are and that they donate electrons to the ETC.</li>
+<li>Students understand substrate-level vs. oxidative phosphorylation.</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Predict &amp; Observe (5 min):</strong> Ask students to estimate how much ATP each stage supplies before touching the sliders. Then reveal the default visualization.</li>
+<li><strong>Parameter Sweep (5 min):</strong> In pairs, students drag the NADH slider from 1.5 to 3.0 and note how much the total ATP fluctuates. Repeat for FADH₂.</li>
+<li><strong>Explain (5 min):</strong> Groups summarize why the modern estimate is lower (membrane leak, shuttle costs) and report which stage is most sensitive to slider changes.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Quick exit ticket: “Which slider affects total ATP more and why?”</li>
+<li>Ask students to describe how the citric acid cycle can remain the largest contributor even when slider values change.</li>
+<li>Optional: Have students screenshot the table in classic mode and annotate the biochemical rationale.</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li>Freeman, S. <em>Biological Science</em>, 7e. Pearson, 2024 — Chapter on Cellular Respiration.</li>
+<li>Nelson, D. &amp; Cox, M. <em>Lehninger Principles of Biochemistry</em>, 8e. W.H. Freeman, 2021.</li>
+<li>Alberts, B. <em>Molecular Biology of the Cell</em>, 7e. Garland Science, 2022.</li>
 </ol>
 
 

@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for glycolysis pathway simulator.">
+        <meta name="description" content="Interactive p5.js MicroSim that walks through all ten steps of glycolysis with investment/payoff highlighting and reaction tooltips.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Glycolysis Pathway Simulator - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for glycolysis pathway simulator.">
+        <meta property="og:description" content="Interactive p5.js MicroSim that walks through all ten steps of glycolysis with investment/payoff highlighting and reaction tooltips.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/glycolysis-simulator/glycolysis-simulator.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Glycolysis Pathway Simulator - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for glycolysis pathway simulator.">
+        <meta name="twitter:description" content="Interactive p5.js MicroSim that walks through all ten steps of glycolysis with investment/payoff highlighting and reaction tooltips.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/glycolysis-simulator/glycolysis-simulator.png">
       
@@ -1694,6 +1694,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visual-highlights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Highlights
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1709,6 +1724,33 @@
   <a href="#iframe-embed-code" class="md-nav__link">
     <span class="md-ellipsis">
       Iframe Embed Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controls
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-and-reactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data and Reactions
     </span>
   </a>
   
@@ -2913,6 +2955,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visual-highlights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Highlights
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2928,6 +2985,33 @@
   <a href="#iframe-embed-code" class="md-nav__link">
     <span class="md-ellipsis">
       Iframe Embed Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controls
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-and-reactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data and Reactions
     </span>
   </a>
   
@@ -3027,43 +3111,121 @@
 
 
 <h1 id="glycolysis-pathway-simulator">Glycolysis Pathway Simulator</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="905px" width="100%" scrolling="no"></iframe>
 
 <p><a class="md-button md-button--primary" href="main.html">Run the Glycolysis Pathway Simulator MicroSim Fullscreen</a>
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This simulation visualizes the glycolytic pathway as two color-coded halves: the ATP-investment steps (1–5) and the ATP/NADH-producing payoff steps (6–10). Each block lists the substrate, enzyme, and product; badges flag when ATP is consumed or produced and when NADH is generated. Clicking a step reveals the full reaction equation, energetic notes, and cofactors so students can trace how glucose becomes pyruvate and why glycolysis nets only two ATP.</p>
+<h3 id="visual-highlights">Visual Highlights</h3>
+<ul>
+<li><strong>Phase backgrounds:</strong> Light coral vs. light green regions emphasize energy flow and can be spotlighted with the toggle button.</li>
+<li><strong>Badges:</strong> Red “−ATP,” green “+ATP,” and blue “+NADH” badges signal energy transactions at a glance (×2 in the payoff phase).</li>
+<li><strong>Cleavage divider:</strong> A central column labels the split into two glyceraldehyde-3-phosphate molecules.</li>
+<li><strong>Net tally cards:</strong> Bottom summary cards track cumulative ATP, NADH, and pyruvate yields.</li>
+</ul>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li>Begin with the Investment phase highlighted (default). Read down steps 1–5 to see where ATP is consumed.</li>
+<li>Click any step to open its reaction card. Encourage students to articulate enzyme names aloud.</li>
+<li>Press <strong>Show Payoff Phase</strong> to highlight steps 6–10; discuss why ATP production occurs twice per glucose.</li>
+<li>Use the <strong>Reset</strong> button to clear selections and re-focus the Investment half for review.</li>
+<li>Challenge students to explain the net ATP count by referencing the badge placements and the summary panel.</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
 <p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/glycolysis-simulator/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"1000px"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<ul>
+<li>Describe the substrates, enzymes, and products of each glycolytic reaction (Bloom L2).</li>
+<li>Distinguish between the energy investment and payoff phases by identifying when ATP is used or generated.</li>
+<li>Explain why glycolysis yields a net of +2 ATP and +2 NADH per glucose.</li>
+</ul>
+<h2 id="controls">Controls</h2>
+<ul>
+<li><strong>Show Payoff Phase / Show Investment Phase:</strong> Toggles which half of the pathway is emphasized.</li>
+<li><strong>Reset:</strong> Returns to the default emphasis (investment phase) and clears any selected reaction card.</li>
+<li><strong>Clickable Steps:</strong> Selecting a step opens an information card that lists the reaction equation, cofactor needs, and energetic notes.</li>
+</ul>
+<h2 id="data-and-reactions">Data and Reactions</h2>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Enzyme</th>
+<th>Key Reaction</th>
+<th>Energy Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Hexokinase</td>
+<td>Glucose + ATP → Glucose-6-P + ADP</td>
+<td>−ATP</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Phosphofructokinase-1</td>
+<td>F6P + ATP → F1,6-BP + ADP</td>
+<td>−ATP</td>
+</tr>
+<tr>
+<td>6</td>
+<td>G3P dehydrogenase</td>
+<td>G3P + NAD⁺ + Pi → 1,3-BPG + NADH + H⁺</td>
+<td>+2 NADH</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Phosphoglycerate kinase</td>
+<td>1,3-BPG + ADP → 3-PG + ATP</td>
+<td>+2 ATP</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Pyruvate kinase</td>
+<td>PEP + ADP → Pyruvate + ATP</td>
+<td>+2 ATP</td>
+</tr>
+</tbody>
+</table>
+<p>All other steps rearrange carbon skeletons or generate high-energy intermediates that set up these energy transactions. The net outcome shown in the tally cards is <strong>+2 ATP</strong>, <strong>+2 NADH</strong>, and <strong>2 Pyruvate</strong> per glucose.</p>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>9–12 (AP/IB Biology) and introductory undergraduate biology</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Students know the purpose of cellular respiration and the role of NADH.</li>
+<li>Students can define substrate-level phosphorylation.</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Engage (4 min):</strong> Ask learners to predict why glycolysis costs ATP even though it makes ATP. Display the investment side to confirm.</li>
+<li><strong>Explore (7 min):</strong> Students click each step, jotting enzyme names and energy changes; toggle to the payoff phase midway.</li>
+<li><strong>Explain (4 min):</strong> Groups summarize why net ATP is +2 despite two ATP-producing steps happening twice.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Quick exit ticket: “Which steps consume ATP and which produce it?”</li>
+<li>Oral check: “What reaction generates NADH in glycolysis, and why is it doubled?”</li>
+<li>Optional screenshot annotation: label the cleavage divider and describe what it represents.</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li>Freeman, S. <em>Biological Science</em>, 7e. Pearson, 2024 — Cellular respiration chapter.</li>
+<li>Nelson, D. &amp; Cox, M. <em>Lehninger Principles of Biochemistry</em>, 8e. W.H. Freeman, 2021.</li>
+<li>Alberts, B. <em>Molecular Biology of the Cell</em>, 7e. Garland Science, 2022.</li>
 </ol>
 
 

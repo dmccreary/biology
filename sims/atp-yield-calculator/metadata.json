@@ -1,45 +1,79 @@
 {
   "title": "ATP Yield Calculator",
+  "description": "Interactive calculator that shows how glycolysis, pyruvate oxidation, and the citric acid cycle contribute to total ATP yield under different NADH/FADH2 conversion assumptions.",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
-  "description": "Interactive MicroSim for atp yield calculator",
-  "date": "2026-02-27",
+  "contributor": [
+    "ChatGPT"
+  ],
+  "publisher": "MicroSims Biology Collection",
+  "date": "2026-02-28",
+  "subject": [
+    "Biology",
+    "Cellular Respiration",
+    "Bioenergetics"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "https://dmccreary.github.io/biology/sims/atp-yield-calculator/",
+  "chapter": "08-cellular-respiration",
   "educational": {
     "gradeLevel": [
       "9",
       "10",
       "11",
-      "12"
+      "12",
+      "Undergraduate"
     ],
-    "subjectArea": "Mathematics",
-    "topic": "ATP Yield Calculator",
+    "subjectArea": "AP/IB Biology",
+    "topic": "ATP yield across cellular respiration stages",
     "learningObjectives": [
-      "TODO: Add learning objectives"
+      "Calculate ATP contributions from glycolysis, pyruvate oxidation, and the citric acid cycle using adjustable conversion factors.",
+      "Compare modern (~32 ATP) and classic (~38 ATP) estimates and justify the difference.",
+      "Interpret proportional graphics to explain why the citric acid cycle contributes the most ATP despite only two substrate-level ATP."
     ],
-    "bloomsTaxonomy": "Create",
-    "duration": "10-15 minutes",
-    "prerequisites": [],
-    "standards": []
+    "bloomsTaxonomy": [
+      "Apply",
+      "Analyze"
+    ],
+    "duration": "15 minutes",
+    "prerequisites": [
+      "Understands the stages of cellular respiration",
+      "Can distinguish substrate-level vs. oxidative phosphorylation"
+    ],
+    "assessmentOpportunities": [
+      "Exit ticket describing how slider changes affect the ATP total",
+      "Student explanation for why modern estimates are lower"
+    ]
   },
   "technical": {
     "framework": "p5.js",
-    "version": "1.0",
+    "version": "1.11.10",
     "canvasDimensions": {
       "width": "responsive",
-      "height": 450
+      "height": 610
     },
     "responsive": true,
-    "dependencies": [],
+    "dependencies": [
+      "p5.js",
+      "SuperscriptText helper"
+    ],
     "accessibility": {
-      "hasAltText": false,
-      "keyboardNavigable": false
+      "hasAltText": true,
+      "keyboardNavigable": false,
+      "highContrastSupport": true
     }
   },
   "pedagogical": {
-    "teachingStrategy": "Interactive exploration",
-    "keyQuestions": [],
-    "commonMisconceptions": [],
-    "assessmentOpportunities": []
-  },
-  "chapter": "08-cellular-respiration"
+    "teachingStrategy": "Guided inquiry with manipulatives",
+    "keyQuestions": [
+      "Which stage’s contribution shifts the most when NADH yield changes?",
+      "Why does the modern estimate accept fewer ATP per NADH/FADH2?"
+    ],
+    "commonMisconceptions": [
+      "All textbooks still agree on 38 ATP per glucose.",
+      "Most ATP is produced during glycolysis."
+    ]
+  }
 }
