@@ -2,7 +2,7 @@
 
 The user has been very happy with the quality if detailed images created with
 text-to-image models.  Our goal is to centralize these algorithms in
-the @docs/sims/diagram-architecture directory.  A draft diagram.js file is
+the @docs/sims/shared-libs directory.  A draft diagram.js file is
 located there.
 
 There are currently four different types of Diagram Overlay MicroSims.  All of these

@@ -23,7 +23,7 @@
     "standards": []
   },
   "technical": {
-    "framework": "diagram-architecture",
+    "framework": "shared-libs",
     "version": "1.0",
     "canvasDimensions": {
       "width": "responsive",
@@ -31,8 +31,8 @@
     },
     "responsive": true,
     "dependencies": [
-      "diagram-architecture/diagram.js",
-      "diagram-architecture/style.css"
+      "shared-libs/diagram.js",
+      "shared-libs/style.css"
     ],
     "accessibility": {
       "hasAltText": true,

@@ -29,5 +29,5 @@ Where `<sim-name>` is the name of the MicroSim you just created.
 
 ## Shared Diagram Architecture
 
-- `docs/sims/diagram-architecture/diagram.js` is our reference implementation for complex biology diagrams (leader lines, multiple layouts, quiz mode, edit tools).
+- `docs/sims/shared-libs/diagram.js` is our reference implementation for complex biology diagrams (leader lines, multiple layouts, quiz mode, edit tools).
 - Before adding bespoke logic to a new MicroSim, check this file for reusable patterns (marker rendering, label management, confetti animation). Extending this architecture keeps controls, animations, and accessibility consistent across the course.

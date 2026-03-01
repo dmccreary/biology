@@ -2,7 +2,7 @@
 
 **Completed:** 19 MicroSims
 
-These MicroSims have been fully implemented with substantial JavaScript or diagram-architecture overlays.
+These MicroSims have been fully implemented with substantial JavaScript or shared-libs overlays.
 
 ---
 
@@ -10,7 +10,7 @@ These MicroSims have been fully implemented with substantial JavaScript or diagr
 
 - **Title:** DNA Replication Fork Explorer
 - **Chapter:** 13-central-dogma-replication-and-protein-synthesis
-- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
+- **Library:** shared-libs (shared diagram.js + text-to-image overlay)
 - **Bloom:** Understand (L2)
 - **Status:** complete
 - **Architecture:** Diagram overlay — dual-panel layout with 13 callouts covering all enzymes and structures at the DNA replication fork (helicase, DNA Pol III, primase, SSB, topoisomerase, DNA Pol I, DNA ligase, Okazaki fragments, RNA primers, leading/lagging strands)
@@ -18,9 +18,9 @@ These MicroSims have been fully implemented with substantial JavaScript or diagr
 
 ### Specification
 
-Type: diagram-architecture overlay
+Type: shared-libs overlay
 **sim-id:** replication-fork<br/>
-**Library:** diagram-architecture<br/>
+**Library:** shared-libs<br/>
 
 Bloom Level: Understand (L2)
 Bloom Verb: identify, explain
@@ -34,7 +34,7 @@ Layout: Dual-panel — left panel (6 labels: RNA primer, SSB, topoisomerase, par
 
 - **Title:** Meiosis Stages Explorer
 - **Chapter:** 11-meiosis-and-mendelian-genetics
-- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
+- **Library:** shared-libs (shared diagram.js + text-to-image overlay)
 - **Bloom:** Understand (L2)
 - **Status:** complete
 - **Architecture:** Diagram overlay — dual-panel layout with 14 callouts across 9 meiosis stages (two rows: Meiosis I and Meiosis II)
@@ -42,9 +42,9 @@ Layout: Dual-panel — left panel (6 labels: RNA primer, SSB, topoisomerase, par
 
 ### Specification
 
-Type: diagram-architecture overlay
+Type: shared-libs overlay
 **sim-id:** meiosis-stages<br/>
-**Library:** diagram-architecture<br/>
+**Library:** shared-libs<br/>
 
 Bloom Level: Understand (L2)
 Bloom Verb: identify, describe
@@ -58,7 +58,7 @@ Layout: Dual-panel — left panel (7 labels: Meiosis I stages + Meiosis II Proph
 
 - **Title:** Mitosis Stage Explorer
 - **Chapter:** 10-cell-cycle-mitosis-and-cancer
-- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
+- **Library:** shared-libs (shared diagram.js + text-to-image overlay)
 - **Bloom:** Understand (L2)
 - **Status:** complete
 - **Architecture:** Diagram overlay — top-bottom layout with 15 callouts across 5 mitosis stages
@@ -66,9 +66,9 @@ Layout: Dual-panel — left panel (7 labels: Meiosis I stages + Meiosis II Proph
 
 ### Specification
 
-Type: diagram-architecture overlay
+Type: shared-libs overlay
 **sim-id:** mitosis-stage-explorer<br/>
-**Library:** diagram-architecture<br/>
+**Library:** shared-libs<br/>
 
 Bloom Level: Understand (L2)
 Bloom Verb: identify, explain
@@ -82,7 +82,7 @@ Layout: Top-bottom — 15 callout markers distributed across five horizontal pan
 
 - **Title:** Signal Transduction Pathway Overview
 - **Chapter:** 09-cell-signaling-and-feedback
-- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
+- **Library:** shared-libs (shared diagram.js + text-to-image overlay)
 - **Bloom:** Understand (L2)
 - **Status:** complete
 - **Architecture:** Diagram overlay — dual-panel layout with 13 callouts
@@ -90,9 +90,9 @@ Layout: Top-bottom — 15 callout markers distributed across five horizontal pan
 
 ### Specification
 
-Type: diagram-architecture overlay
+Type: shared-libs overlay
 **sim-id:** signal-transduction-pathway<br/>
-**Library:** diagram-architecture<br/>
+**Library:** shared-libs<br/>
 
 Bloom Level: Understand (L2)
 Bloom Verb: describe
@@ -431,10 +431,10 @@ Responsive: Must respond to window resize events
 
 - **Title:** Cell Membrane — Fluid Mosaic Model
 - **Chapter:** 05-cell-membranes-and-transport
-- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
+- **Library:** shared-libs (shared diagram.js + text-to-image overlay)
 - **Bloom:** Understand (L2)
 - **Status:** complete
-- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts
+- **Architecture:** Diagram overlay — use shared `shared-libs/diagram.js` with `data.json` callouts
 - **Target:** `docs/sims/cell-membrane/data.json`
 
 ---
@@ -443,10 +443,10 @@ Responsive: Must respond to window resize events
 
 - **Title:** Chloroplast Structure
 - **Chapter:** 07-photosynthesis
-- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
+- **Library:** shared-libs (shared diagram.js + text-to-image overlay)
 - **Bloom:** Understand (L2)
 - **Status:** complete
-- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts
+- **Architecture:** Diagram overlay — use shared `shared-libs/diagram.js` with `data.json` callouts
 - **Target:** `docs/sims/chloroplast/data.json`
 
 ---
@@ -455,10 +455,10 @@ Responsive: Must respond to window resize events
 
 - **Title:** Mitochondria Structure
 - **Chapter:** 08-cellular-respiration
-- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
+- **Library:** shared-libs (shared diagram.js + text-to-image overlay)
 - **Bloom:** Understand (L2)
 - **Status:** complete
-- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts
+- **Architecture:** Diagram overlay — use shared `shared-libs/diagram.js` with `data.json` callouts
 - **Target:** `docs/sims/mitochondria/data.json`
 
 ---
@@ -467,10 +467,10 @@ Responsive: Must respond to window resize events
 
 - **Title:** Prokaryote vs. Eukaryote Cell Comparison
 - **Chapter:** 04-cell-organization-and-organelles
-- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
+- **Library:** shared-libs (shared diagram.js + text-to-image overlay)
 - **Bloom:** Analyze (L4)
 - **Status:** complete
-- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts
+- **Architecture:** Diagram overlay — use shared `shared-libs/diagram.js` with `data.json` callouts
 - **Target:** `docs/sims/prokaryote-eukaryote-comparison/data.json`
 
 ---
@@ -479,10 +479,10 @@ Responsive: Must respond to window resize events
 
 - **Title:** Endomembrane System — Protein Secretion Pathway
 - **Chapter:** 04-cell-organization-and-organelles
-- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
+- **Library:** shared-libs (shared diagram.js + text-to-image overlay)
 - **Bloom:** Understand (L2)
 - **Status:** complete
-- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts
+- **Architecture:** Diagram overlay — use shared `shared-libs/diagram.js` with `data.json` callouts
 - **Target:** `docs/sims/endomembrane-system/data.json`
 
 ---
@@ -491,10 +491,10 @@ Responsive: Must respond to window resize events
 
 - **Title:** Cytoskeleton Component Explorer
 - **Chapter:** 04-cell-organization-and-organelles
-- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
+- **Library:** shared-libs (shared diagram.js + text-to-image overlay)
 - **Bloom:** Understand (L2)
 - **Status:** complete
-- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts
+- **Architecture:** Diagram overlay — use shared `shared-libs/diagram.js` with `data.json` callouts
 - **Target:** `docs/sims/cytoskeleton-explorer/data.json`
 
 ---
@@ -503,10 +503,10 @@ Responsive: Must respond to window resize events
 
 - **Title:** Sodium-Potassium Pump Cycle
 - **Chapter:** 05-cell-membranes-and-transport
-- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
+- **Library:** shared-libs (shared diagram.js + text-to-image overlay)
 - **Bloom:** Understand (L2)
 - **Status:** complete
-- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts
+- **Architecture:** Diagram overlay — use shared `shared-libs/diagram.js` with `data.json` callouts
 - **Target:** `docs/sims/sodium-potassium-pump/data.json`
 
 ---
@@ -515,10 +515,10 @@ Responsive: Must respond to window resize events
 
 - **Title:** Cell Junctions Explorer
 - **Chapter:** 05-cell-membranes-and-transport
-- **Library:** diagram-architecture (shared diagram.js + text-to-image overlay)
+- **Library:** shared-libs (shared diagram.js + text-to-image overlay)
 - **Bloom:** Analyze (L4)
 - **Status:** complete
-- **Architecture:** Diagram overlay — use shared `diagram-architecture/diagram.js` with `data.json` callouts (dual-panel layout)
+- **Architecture:** Diagram overlay — use shared `shared-libs/diagram.js` with `data.json` callouts (dual-panel layout)
 - **Target:** `docs/sims/cell-junctions-explorer/data.json`
 
 ---

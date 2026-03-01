@@ -457,7 +457,7 @@
                                                                                                            
   - The exact HTML snippet with the window.self === window.top detection script
   - A decision table showing which sim types need the link (vertically-growing HTML forms/calculators) vs. 
-  which don't (fixed-height canvas and diagram-architecture sims)
+  which don't (fixed-height canvas and shared-libs sims)
                                                
 ✻ Cogitated for 34s
 

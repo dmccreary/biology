@@ -149,7 +149,7 @@ Compact summary
      mascot-tip, mascot-warning, mascot-celebration, mascot-encourage, mascot-neutral)
         - MicroSim specifications in `<details markdown="1">` blocks with `#### Diagram:` headers
         - Bloom's Taxonomy levels (L1-L6) for learning objectives in MicroSim specs
-        - Diagram architecture: shared `diagram.js` and `style.css` at `docs/sims/diagram-architecture/`
+        - Diagram architecture: shared `diagram.js` and `style.css` at `docs/sims/shared-libs/`
         - Learning graph with 380 concepts in `learning-graph.csv` with dependencies and taxonomy IDs
         - No `navigation.tabs` — side navigation only
         - iframe embeds with `scrolling="no"` and no `style` attribute

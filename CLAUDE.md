@@ -69,7 +69,7 @@ This pattern was validated in the `comparative-anatomy` MicroSim where p5.js pol
 
 The user has been very happy with the quality if detailed images created with
 text-to-image models.  Our goal is to centralize these algorithms in
-the @docs/sims/diagram-architecture directory.  A draft diagram.js file is
+the @docs/sims/shared-libs directory.  A draft diagram.js file is
 located there.
 
 There are currently four different types of Diagram Overlay MicroSims.  All of these
@@ -532,7 +532,7 @@ docs/sims/<sim-name>/
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><!-- Diagram Title --> — Interactive Diagram</title>
-  <link rel="stylesheet" href="../diagram-architecture/style.css">
+  <link rel="stylesheet" href="../shared-libs/style.css">
   <style>
     #diagram-title {
       text-align: center;
@@ -587,7 +587,7 @@ docs/sims/<sim-name>/
   </div>
 </div>
 
-<script src="../diagram-architecture/diagram.js"></script>
+<script src="../shared-libs/diagram.js"></script>
 </body>
 </html>
 ```
@@ -720,11 +720,11 @@ endpoints to disappear behind the panel background.
 
 #### MicroSim background color
 
-All interactive MicroSims (diagram-architecture sims and p5.js sims) must use
+All interactive MicroSims (shared-libs sims and p5.js sims) must use
 `background: aliceblue` on the `<body>` element. This provides a consistent visual
 cue so students scrolling through a chapter can immediately recognize an embedded
 MicroSim as an interactive element, distinct from static content. The shared
-`diagram-architecture/style.css` already sets this. For p5.js sims, set
+`shared-libs/style.css` already sets this. For p5.js sims, set
 `background('aliceblue')` or use `body { background: aliceblue; }` in the HTML.
 
 #### Step 4 — Calibrate callout positions in Edit mode
@@ -778,14 +778,14 @@ Never use a `style` attribute on the iframe element; always include `scrolling="
 
 #### Shared architecture files (do not copy — always reference)
 
-Both files live at `docs/sims/diagram-architecture/` and are shared by every diagram sim:
+Both files live at `docs/sims/shared-libs/` and are shared by every diagram sim:
 
 | File | Purpose |
 |------|---------|
-| `diagram-architecture/diagram.js` | All interactive logic — Explore, Quiz, Edit modes |
-| `diagram-architecture/style.css`  | All CSS — layout, markers, leader lines, infobox, edit panel |
+| `shared-libs/diagram.js` | All interactive logic — Explore, Quiz, Edit modes |
+| `shared-libs/style.css`  | All CSS — layout, markers, leader lines, infobox, edit panel |
 
-Each sim's `main.html` references them via `../diagram-architecture/filename`.
+Each sim's `main.html` references them via `../shared-libs/filename`.
 `fetch('data.json')` inside `diagram.js` always resolves relative to the **page URL**
 (the `main.html` location), so `data.json` and the image are always found in the sim's
 own directory regardless of where `diagram.js` lives.

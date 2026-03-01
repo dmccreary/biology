@@ -3,7 +3,7 @@
 **Date:** 2026-02-25
 **Status:** Two sims complete and working — Dan McCreary is very pleased with the results
 **Sims:** `docs/sims/animal-cell/` · `docs/sims/plant-cell/`
-**Architecture docs:** `docs/sims/diagram-architecture/plan.md`
+**Architecture docs:** `docs/sims/shared-libs/plan.md`
 
 ---
 
@@ -24,7 +24,7 @@ editor workflow (Edit mode) for calibrating callout positions after image genera
 |------|---------|
 | `docs/learning-graph/sample-biology-diagrams.md` | Reference list: 10 most common biology textbook diagrams with full callout lists |
 | `docs/prompts/05-mitosis-diagram-prompt.md` | Detailed text-to-image prompt for 6-panel mitosis diagram |
-| `docs/sims/diagram-architecture/plan.md` | Full architecture spec for the interactive diagram system |
+| `docs/sims/shared-libs/plan.md` | Full architecture spec for the interactive diagram system |
 
 ### Pilot MicroSim — Animal Cell (floating-marker style)
 
@@ -298,7 +298,7 @@ easier to see while calibrating positions, where precision matters most.
 ## Next Directions Under Consideration
 
 1. **Shared `diagram.js`** — single canonical copy at
-   `docs/sims/diagram-architecture/diagram.js`, referenced by all sim `main.html`
+   `docs/sims/shared-libs/diagram.js`, referenced by all sim `main.html`
    files via a relative path, rather than copying per sim. Avoids version drift.
 
 2. **Mitosis 6-panel interactive sim** — next complex diagram; introduces the
