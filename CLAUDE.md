@@ -2,26 +2,21 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+This project has two phases:
+
+1. **Phase 1:** Generation of Learning Graph and Chapter Content
+2. **Phase 2:** Generation of high-quality MicroSims
+
+Because of the complexity of the project, all the rules
+for phase 1 have been moved into the file @CLAUDE-book-generation.md
+
+The remaining rules focus on the generation of high-quality MicroSims.
+
 ## Project Overview
 
 AP Biology: An Interactive Course — an MkDocs Material intelligent textbook for advanced high school students preparing for the AP Biology exam. The textbook covers 8 College Board units across 375 concepts organized in a dependency graph.
 
-## Token Efficiency: Prefer Serial Over Parallel Processing
 
-These skills target teachers on the **Claude Pro plan**, which has a **five-hour
-budget of only ~200K tokens**. Teachers are **not sensitive to run times** — a task
-that takes 3 minutes instead of 1 minute is fine, but a task that burns 84K tokens
-instead of 48K means they can do fewer tasks before hitting their ceiling.
-
-Always default to serial processing (one Task agent) unless the user explicitly
-requests speed or parallel execution. Each parallel Task agent costs ~12K tokens
-in startup overhead (system prompt + tool descriptions). Four parallel agents waste
-~36K tokens on overhead alone — that's 18% of a Pro user's entire five-hour budget
-spent on nothing but agent startups.
-
-Before launching parallel agents, ask: "Does the user need this faster, or cheaper?"
-The answer for teachers is almost always cheaper. See
-`logs/glossary-generation-very-inefficient.md` for the full post-mortem.
 
 ## Development Environment
 
@@ -30,22 +25,6 @@ Assume the user is running `mkdocs serve` in a terminal. When a new MicroSim has
 ```bash
 open -a "Google Chrome" "http://127.0.0.1:8000/biology/sims/<sim-name>/main.html"
 ```
-
-## Development Commands
-
-```bash
-# Local dev server (live reload)
-mkdocs serve
-# Visit: http://127.0.0.1:8000/biology/
-
-# Production build
-mkdocs build
-
-# Install dependencies (one-time)
-pip install mkdocs-material
-```
-
-The `site/` directory and `.cache/` are gitignored — never commit them.
 
 ### p5.js MicroSim Development
 
@@ -183,22 +162,7 @@ All 79 MicroSim directories under `docs/sims/` have scaffolding in place (`main.
 - `docs/js/extra.js` — Copy-button logic for `.admonition.prompt` blocks
 - `docs/js/mathjax-config.js` — MathJax configuration (equations use MathJax, not KaTeX)
 
-### Learning Graph Data (`docs/learning-graph/`)
 
-Two canonical data files drive the interactive graph viewer:
-- `learning-graph.csv` — edges as `from,to` concept pairs
-- `learning-graph.json` — vis-network format with `nodes`, `edges`, and `metadata` elements
-
-Supporting analysis pages (Python scripts in same directory): `analyze-graph.py`, `csv-to-json.py`, `taxonomy-distribution.py`, `add-taxonomy.py`, `validate-learning-graph.py`.
-
-### Configuration (`mkdocs.yml`)
-
-Key settings:
-- Theme: MkDocs Material, primary color `green`
-- No `navigation.tabs` — this book uses side navigation only (never add `navigation.tabs`)
-- Math: MathJax via external CDN + `docs/js/mathjax-config.js`
-- Social plugin enabled (requires Cairo system library)
-- `watch: [docs, mkdocs.yml]` for live reload
 
 ### CSS Architecture
 
