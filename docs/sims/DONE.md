@@ -1,8 +1,31 @@
 # MicroSim DONE — Completed Implementations
 
-**Completed:** 19 MicroSims
+**Completed:** 20 MicroSims
 
 These MicroSims have been fully implemented with substantial JavaScript or shared-libs overlays.
+
+---
+
+## eukaryotic-gene-regulation
+
+- **Title:** Eukaryotic Gene Regulation Layers
+- **Chapter:** 14-mutations-gene-regulation-and-biotechnology
+- **Library:** p5.js
+- **Bloom:** Create (L6)
+- **Status:** complete
+- **Target:** `docs/sims/eukaryotic-gene-regulation/eukaryotic-gene-regulation.js`
+
+### Specification
+
+Type: Infographic (p5.js)<br/>
+**sim-id:** eukaryotic-gene-regulation<br/>
+**Library:** p5.js<br/>
+
+Learning Objective: Students organize the five checkpoints of eukaryotic gene regulation and explain how activation vs. repression cues operate at each level.
+
+Layout & Interaction: Aliceblue drawing region with stacked responsive bands anchored to a right-side detail panel. Students click any band—or press Start Flow—to highlight it, expand its height, and auto-populate the persistent detail panel. Start Flow also animates a timeline/spine indicator through the checkpoints and keeps the detail panel synchronized. Icons are pinned relative to each band’s right edge for responsive alignment, adaptive spacing prevents overlaps (including a 20 px cushion above the controls), and the control deck includes a widened Start/Pause button plus a flow-speed slider.
+
+Responsive Design: Width-aware calculations drive layer widths, icon placement, detail panel sizing, and slider layout. `windowResized()` keeps the canvas and slider aligned, while `updateCanvasSize()` and adaptive margins maintain the non-overlap guarantee.
 
 ---
 
