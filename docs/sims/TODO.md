@@ -1461,48 +1461,6 @@ Each pedigree object includes: nodes (generation, position, sex, affected status
 
 ---
 
-## eukaryotic-gene-regulation
-
-- **Title:** Eukaryotic Gene Regulation Layers
-- **Chapter:** 14-mutations-gene-regulation-and-biotechnology
-- **Library:** p5.js
-- **Bloom:** Create (L6)
-- **Status:** specified
-- **Complexity Rating:** 5
-- **Target:** `docs/sims/eukaryotic-gene-regulation/eukaryotic-gene-regulation.js`
-
-### Specification
-
-**Type:** Infographic (p5.js)<br/>
-**sim-id:** eukaryotic-gene-regulation<br/>
-**Library:** p5.js<br/>
-
-**Learning objective:** Students will be able to *organize* (Bloom's L4: Analyze) the multiple layers of eukaryotic gene regulation from chromatin level to post-translational, and *explain* how each layer contributes to controlling gene expression.
-
-**Instructional Rationale:** A layered infographic with progressive disclosure (hover to reveal details at each level) avoids overwhelming students with all regulatory mechanisms at once while showing the complete picture.
-
-**Canvas:** 780 × 480 px, responsive.
-
-**Layout:** Vertical stack of 5 layers, each represented as a horizontal band:
-
-1. **Chromatin level** — shows nucleosomes with methylation/acetylation marks
-2. **Transcriptional level** — shows promoter, enhancer, transcription factors
-3. **Post-transcriptional level** — shows mRNA processing, alternative splicing
-4. **Translational level** — shows miRNA binding to mRNA, ribosome blocked
-5. **Post-translational level** — shows protein folding, ubiquitin tagging
-
-**Interaction:**
-- Hover over any layer → expands to show detail diagram and 2–3 sentence description
-- Click layer → locks the expanded view; click again to collapse
-- "Flow" animation button: traces a gene from chromatin through to functional protein, highlighting each regulatory checkpoint
-- Color-coded: activation mechanisms in green, repression mechanisms in red
-
-**Colors:** Chromatin: purple band. Transcription: blue band. Post-transcription: teal band. Translation: orange band. Post-translation: brown band.
-
-**Responsive design:** Layers stack and expand vertically; all text and diagrams scale with container.
-
----
-
 ## biotech-toolkit
 
 - **Title:** Biotechnology Toolkit Workflow

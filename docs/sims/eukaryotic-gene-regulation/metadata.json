@@ -1,9 +1,9 @@
 {
   "title": "Eukaryotic Gene Regulation Layers",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
-  "description": "Interactive MicroSim for eukaryotic gene regulation layers",
-  "date": "2026-02-27",
+  "subject": "High School Biology",
+  "description": "Interactive MicroSim for exploring chromatin, transcriptional, post-transcriptional, translational, and post-translational regulation layers.",
+  "date": "2026-03-02",
   "educational": {
     "gradeLevel": [
       "9",
@@ -11,35 +11,53 @@
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
-    "topic": "Eukaryotic Gene Regulation Layers",
+    "subjectArea": "Biology",
+    "topic": "Eukaryotic Gene Regulation",
     "learningObjectives": [
-      "TODO: Add learning objectives"
+      "Students will be able to organize the five major layers of eukaryotic gene regulation and explain how activation and repression cues act at each checkpoint."
     ],
     "bloomsTaxonomy": "Create",
     "duration": "10-15 minutes",
-    "prerequisites": [],
-    "standards": []
+    "prerequisites": [
+      "Understands DNA structure and function",
+      "Can describe the central dogma of molecular biology"
+    ],
+    "standards": [
+      "NGSS HS-LS1-1",
+      "NGSS HS-LS3-1"
+    ]
   },
   "technical": {
     "framework": "p5.js",
     "version": "1.0",
     "canvasDimensions": {
       "width": "responsive",
-      "height": 450
+      "height": 480
     },
     "responsive": true,
-    "dependencies": [],
+    "dependencies": [
+      "p5.js 1.11.0"
+    ],
     "accessibility": {
-      "hasAltText": false,
-      "keyboardNavigable": false
+      "hasAltText": true,
+      "keyboardNavigable": true
     }
   },
   "pedagogical": {
-    "teachingStrategy": "Interactive exploration",
-    "keyQuestions": [],
-    "commonMisconceptions": [],
-    "assessmentOpportunities": []
+    "teachingStrategy": "Interactive exploration with progressive disclosure and flow-based storytelling",
+    "keyQuestions": [
+      "What molecular events either open or close chromatin at the start of gene regulation?",
+      "How do promoter/enhancer interactions change transcription outcomes?",
+      "Where can cells intercept a message after transcription but before translation finishes?"
+    ],
+    "commonMisconceptions": [
+      "Only transcription regulates genes; later checkpoints do not matter.",
+      "Activation and repression always happen at separate loci instead of within the same layer."
+    ],
+    "assessmentOpportunities": [
+      "Student explains one activation and one repression strategy for each layer.",
+      "Learner narrates the flow animation and predicts what happens if a checkpoint fails."
+    ]
   },
   "chapter": "14-mutations-gene-regulation-and-biotechnology"
 }

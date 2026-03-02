@@ -31,3 +31,12 @@ Where `<sim-name>` is the name of the MicroSim you just created.
 
 - `docs/sims/shared-libs/diagram.js` is our reference implementation for complex biology diagrams (leader lines, multiple layouts, quiz mode, edit tools).
 - Before adding bespoke logic to a new MicroSim, check this file for reusable patterns (marker rendering, label management, confetti animation). Extending this architecture keeps controls, animations, and accessibility consistent across the course.
+
+## Wireframe Plan
+
+- After drafting a high-level concept for any new p5.js MicroSim, pause before coding and build a "Wireframe Plan" consisting of labeled rectangles that represent every canvas element.
+- Begin with the title: calculate its top margin and text height, sketch a rectangle for it relative to the top edge (no responsive rules needed), and treat that rect as reserved space before placing other components.
+- Lay out every non-control element in the drawing region next; estimate each rectangle's width and height, assume the overall canvas height is fixed by the iframe, and position elements so their horizontal alignment updates with canvas width changes.
+- Sketch the control region (white background) below the drawing region (aliceblue background): add a Start/Pause button anchored to the lower-left corner for simulations, draw rectangles for every control plus its label/value pair (labels/values always to the left of their sliders), and ensure each rectangle uses a distinct color and name for clear reference.
+- When the wireframe is complete, validate that no rectangles overlap for any canvas width between 450 px and 1200 px, adjusting font sizes as needed, and record the plan so it can be shared later if troubleshooting is required.
+- Always inform the user that the wireframe regions do not overlap before moving on to implementation, and keep the saved wireframe plan handy for follow-up questions.
