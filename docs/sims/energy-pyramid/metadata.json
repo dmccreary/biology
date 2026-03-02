@@ -1,9 +1,9 @@
 {
   "title": "Energy Pyramid Explorer",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
-  "description": "Interactive MicroSim for energy pyramid explorer",
-  "date": "2026-02-27",
+  "subject": "High School Biology",
+  "description": "Interactive MicroSim that visualizes energy, biomass, and organism-count pyramids with adjustable producer input and efficiency.",
+  "date": "2026-03-02",
   "educational": {
     "gradeLevel": [
       "9",
@@ -11,35 +11,55 @@
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
-    "topic": "Energy Pyramid Explorer",
+    "subjectArea": "Biology",
+    "topic": "Energy Flow and Trophic Levels",
     "learningObjectives": [
-      "TODO: Add learning objectives"
+      "Calculate the energy available at each trophic level by adjusting producer input and transfer efficiency using the 10% rule.",
+      "Compare energy, biomass, and organism-count pyramids to explain why food chains are limited in length and why aquatic pyramids can invert."
     ],
     "bloomsTaxonomy": "Create",
     "duration": "10-15 minutes",
-    "prerequisites": [],
-    "standards": []
+    "prerequisites": [
+      "Understands producers, consumers, and trophic levels",
+      "Knows the 10% rule / energy transfer concept"
+    ],
+    "standards": [
+      "NGSS HS-LS2-3",
+      "NGSS HS-LS2-4"
+    ]
   },
   "technical": {
     "framework": "p5.js",
     "version": "1.0",
     "canvasDimensions": {
       "width": "responsive",
-      "height": 450
+      "height": 490
     },
     "responsive": true,
-    "dependencies": [],
+    "dependencies": [
+      "p5.js 1.11.0"
+    ],
     "accessibility": {
-      "hasAltText": false,
-      "keyboardNavigable": false
+      "hasAltText": true,
+      "keyboardNavigable": true
     }
   },
   "pedagogical": {
-    "teachingStrategy": "Interactive exploration",
-    "keyQuestions": [],
-    "commonMisconceptions": [],
-    "assessmentOpportunities": []
+    "teachingStrategy": "Interactive exploration with comparative toggles and immediate visual feedback",
+    "keyQuestions": [
+      "How much energy reaches each trophic level when efficiency drops below 10%?",
+      "What happens to the pyramid shape when you switch to biomass or numbers?",
+      "Why can aquatic numbers pyramids appear inverted?"
+    ],
+    "commonMisconceptions": [
+      "Energy transfer can exceed 10% between any two levels.",
+      "Adding apex predators does not impact lower-level energy requirements.",
+      "Biomass and numbers pyramids must always have the same shape as energy pyramids."
+    ],
+    "assessmentOpportunities": [
+      "Students justify whether an added apex level is sustainable at a selected efficiency.",
+      "Learners compare and contrast energy vs. biomass vs. numbers pyramids in writing."
+    ]
   },
   "chapter": "20-ecosystem-ecology-and-conservation"
 }

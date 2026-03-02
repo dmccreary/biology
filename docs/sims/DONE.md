@@ -29,6 +29,29 @@ Responsive Design: Width-aware calculations drive layer widths, icon placement, 
 
 ---
 
+## energy-pyramid
+
+- **Title:** Energy Pyramid Explorer
+- **Chapter:** 20-ecosystem-ecology-and-conservation
+- **Library:** p5.js
+- **Bloom:** Create (L6)
+- **Status:** complete
+- **Target:** `docs/sims/energy-pyramid/energy-pyramid.js`
+
+### Specification
+
+Type: MicroSim (p5.js)<br/>
+**sim-id:** energy-pyramid<br/>
+**Library:** p5.js<br/>
+
+Learning Objective: Students calculate the energy reaching each trophic level (10% rule) and explain how biomass and organism-count pyramids compare, highlighting why food chains rarely exceed four or five levels.
+
+Layout & Interaction: Left 70% contains a tapered pyramid of up to six tiers, a heat-loss band, and hover tooltips; the right column hosts the detail panel. Producer-input and efficiency sliders live in the top two control rows; separate **Add Level** and **Remove Level** buttons plus “Show Biomass” / “Show Individuals” toggles sit in row three. Energy values always display; toggles optionally append kg/ha and “ind” text. Icons and bars anchor to geometric rules derived from the saved wireframe, and adaptive gutters/bottom margins prevent overlaps at widths 450–1200 px.
+
+Responsive Design: Uses width-aware calculations for bar widths, icon placement, detail panel sizing, sliders, and control rows. `windowResized()` resizes the canvas and p5 sliders; a silver border + white control fill expose any overflow during QA.
+
+---
+
 ## replication-fork
 
 - **Title:** DNA Replication Fork Explorer

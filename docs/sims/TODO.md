@@ -1465,7 +1465,7 @@ Each pedigree object includes: nodes (generation, position, sex, affected status
 
 - **Title:** Biotechnology Toolkit Workflow
 - **Chapter:** 14-mutations-gene-regulation-and-biotechnology
-- **Library:** p5.js
+- **Library:** mermaid
 - **Bloom:** Create (L6)
 - **Status:** specified
 - **Complexity Rating:** 6
@@ -1964,52 +1964,6 @@ Each node is a rounded rectangle with tool name and icon.
 
 ---
 
-## energy-pyramid
-
-- **Title:** Energy Pyramid Explorer
-- **Chapter:** 20-ecosystem-ecology-and-conservation
-- **Library:** p5.js
-- **Bloom:** Create (L6)
-- **Status:** specified
-- **Complexity Rating:** 5
-- **Target:** `docs/sims/energy-pyramid/energy-pyramid.js`
-
-### Specification
-
-**Type:** MicroSim (p5.js)<br/>
-**sim-id:** energy-pyramid<br/>
-**Library:** p5.js<br/>
-
-**Learning objective:** Students will be able to *calculate* (Bloom's L3: Apply) the energy available at each trophic level using the 10% rule and *explain* (Bloom's L2: Understand) why food chains are limited in length.
-
-**Instructional Rationale:** An interactive pyramid with adjustable base energy and transfer efficiency lets students see the exponential energy loss firsthand and discover why a fifth trophic level receives almost nothing.
-
-**Canvas:** 780 × 480 px, responsive.
-
-**Layout:**
-
-- Center: Stacked pyramid with 4 levels, each proportional to its energy content
-  - Each level labeled with trophic level name and energy value
-  - Width of each bar proportional to energy available
-- Right panel: Controls
-  - Slider: Producer energy input (1,000 to 100,000 kcal)
-  - Slider: Transfer efficiency (5% to 20%, default 10%)
-  - "Add Level" button (up to 6 levels)
-- Bottom: Energy loss arrows showing heat dissipation at each level
-
-**Interaction:**
-- Adjust sliders → pyramid redraws immediately
-- Hover over any level: tooltip with energy breakdown (transferred, lost to heat, indigestible)
-- "Show Numbers" toggle: display exact kcal values on each level
-- "Biomass Pyramid" toggle: switch from energy to biomass view
-- "Numbers Pyramid" toggle: switch to organism count (showing inverted pyramids possible in aquatic systems)
-
-**Colors:** Producers: green gradient. Primary consumers: light orange. Secondary: medium orange. Tertiary: red. Heat loss arrows: warm gray.
-
-**Responsive design:** Pyramid and controls scale with container width.
-
----
-
 ## biogeochemical-cycles
 
 - **Title:** Biogeochemical Cycles Dashboard
@@ -2024,7 +1978,7 @@ Each node is a rounded rectangle with tool name and icon.
 
 **Type:** MicroSim (p5.js)<br/>
 **sim-id:** biogeochemical-cycles<br/>
-**Library:** p5.js<br/>
+**Library:** p5.js but use the diagram overlay mode to overlay images of the ecosystem landscape diagrams<br/>
 
 **Learning objective:** Students will be able to *compare* (Bloom's L4: Analyze) the reservoirs and fluxes of the carbon, nitrogen, phosphorus, and water cycles, and *explain* (Bloom's L2: Understand) how human activities have altered each cycle.
 
