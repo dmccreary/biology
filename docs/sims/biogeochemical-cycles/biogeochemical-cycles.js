@@ -11,7 +11,8 @@ let img;
 let canvasWidth, drawHeight, controlHeight, canvasHeight;
 let imgW, imgH, imgY;
 const MARGIN = 12;
-const TAB_ROW_Y = 4;
+const TITLE_H = 28;
+const TAB_ROW_Y = TITLE_H;
 const TAB_H = 28;
 
 // ── state ──
@@ -265,6 +266,8 @@ const TAB_COLORS = {
 //  p5.js LIFECYCLE
 // ═══════════════════════════════════════════════════════════
 
+// Note that when using the p5.js editor you MUST load this image manually.
+// Look for the "+" symbol in the upper left corner of the editor.
 function preload() {
   img = loadImage('landscape.png');
 }
@@ -273,16 +276,19 @@ function setup() {
   updateCanvasSize();
   let cnv = createCanvas(canvasWidth, canvasHeight);
   cnv.parent(select('main'));
-  textFont('Arial');
+  // textFont('Arial');
   initQuizState();
 }
 
 function updateCanvasSize() {
-  canvasWidth = min(windowWidth - 20, 900);
+  // Is the min needed?
+  // canvasWidth = min(windowWidth - 20, 900);
+  canvasWidth = windowWidth;
   let imgAspect = img.width / img.height;    // 3:2
   imgW = canvasWidth;
   imgH = canvasWidth / imgAspect;
-  imgY = TAB_H + 14;                         // below tab row
+  // this needs to be enough to have padding below the image for controls + infobox
+  imgY = TAB_H + 24;                         // below tab row
   controlHeight = 40;                        // checkbox row below image
   drawHeight = imgY + imgH;
   canvasHeight = drawHeight + controlHeight + 130; // +130 for infobox
@@ -296,6 +302,7 @@ function windowResized() {
 function draw() {
   background('#F0F8FF');  // aliceblue
 
+  drawMainTitle();
   drawTabs();
   drawImage();
   drawFluxArrows();
@@ -308,6 +315,16 @@ function draw() {
 // ═══════════════════════════════════════════════════════════
 //  DRAWING HELPERS
 // ═══════════════════════════════════════════════════════════
+
+function drawMainTitle() {
+  textAlign(CENTER, CENTER);
+  textSize(18);
+  textStyle(BOLD);
+  fill(30);
+  noStroke();
+  text('Biological and Chemical Cycles of Earth', canvasWidth / 2, TITLE_H / 2);
+  textStyle(NORMAL);
+}
 
 function drawTitle() {
   let cyc = cycles[activeCycle];

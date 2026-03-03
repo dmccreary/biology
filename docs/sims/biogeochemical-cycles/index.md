@@ -15,7 +15,7 @@ quality_score: 0
 
 [Run the Biogeochemical Cycles Dashboard MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
-[Edit in the p5.js Editor](https://editor.p5js.org/)
+[Edit the Biogeochemical Cycles Dashboard MicroSim Using the p5.js Editor](https://editor.p5js.org/dmccreary/sketches/I85gLuqNr_)
 
 ## About This MicroSim
 
