@@ -45,63 +45,6 @@ Always use the /microsim-generator skill to implement these Microsims
 | vis-network | 2 |
 | vis-timeline | 1 |
 
-## surface-area-volume-ratio
-
-- **Title:** Surface Area to Volume Ratio Explorer
-- **Chapter:** 04-cell-organization-and-organelles
-- **Library:** p5.js
-- **Bloom:** Create (L6)
-- **Status:** specified
-- **Complexity Rating:** 6
-- **Target:** `docs/sims/surface-area-volume-ratio/surface-area-volume-ratio.js`
-
-### Specification
-
-Type: microsim
-**sim-id:** surface-area-volume-ratio<br/>
-**Library:** p5.js<br/>
-
-Bloom Level: Apply (L3)
-Bloom Verb: calculate
-Learning Objective: Students will calculate surface area, volume, and SA:V ratio for cuboidal cells of different sizes, and explain why a high SA:V ratio is essential for efficient cellular exchange.
-
-Canvas layout:
-- Left panel (50%): 3D wireframe cube drawn in perspective, scaling dynamically as the slider changes cell size
-- Right panel (50%): Numerical display showing calculated SA, V, SA:V ratio, and a bar chart comparing SA (blue bar) and V (red bar) as the cube grows
-
-Visual elements:
-- Wireframe cube with perspective lines, side length labeled with slider value (1–10 µm)
-- Six faces of cube shaded lightly in blue (representing membrane surface area)
-- Interior shaded red (representing volume that must be supplied)
-- Bar chart below: two bars updating in real time — "Surface Area (µm²)" and "Volume (µm³)"
-- SA:V ratio displayed in large bold text; color-coded green (≥ 2.0 = good), yellow (1.0–2.0 = marginal), red (< 1.0 = too large)
-- Optional second cube shown at fixed size (e.g., 1 µm) for comparison
-
-Interactive controls:
-- Slider: Cell side length from 1 µm to 10 µm (step 0.5 µm)
-- Toggle button: "Show comparison cell" — adds a fixed 1 µm reference cube to the left panel
-- Checkbox: "Show calculation formulas" — reveals the formulas SA = 6s², V = s³, SA:V = 6/s below the numerical display
-
-Default parameters:
-- Side length: 1 µm
-- Comparison cell: hidden
-
-Behavior:
-- As slider increases, cube scales up, bar chart updates, SA:V ratio display updates with color change
-- When side length > 5 µm, red warning text appears: "Diffusion too slow — cell would need to compartmentalize or remain small"
-
-Data Visibility Requirements:
-Stage 1: Show cube at current size with side length label
-Stage 2: Show calculated SA and V values
-Stage 3: Show SA:V ratio with color-coded assessment
-Stage 4: Show bar chart comparison at multiple sizes if "comparison cell" is toggled on
-
-Instructional Rationale: Moving a slider and watching SA:V collapse in real time directly demonstrates the mathematical relationship described in the text, converting an abstract ratio into a visceral observation. This Apply-level design requires students to operate the formula, not just read it.
-
-Canvas size: 660 × 420 px
-Responsive: Must respond to window resize events
-
----
 
 ## osmosis-simulator
 

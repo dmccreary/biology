@@ -7,6 +7,7 @@
 - **Always re-read the SKILL.md file before running any skill.** Every time a skill is invoked (quiz-generator, faq-generator, microsim-generator, etc.), open its `SKILL.md` to refresh the exact instructions, formats, and quality checks before generating outputs.
 - When asked to generate stories or bios, use the `/Users/danmccreary/.codex/skills/story-generator` skill, following its SKILL.md instructions for readiness checks, story structure, and navigation updates.
 - MkDocs can ignore one-off prompt/plan files by using the `exclude_docs` multiline string in `mkdocs.yml`. The current configuration lists the MicroSim image-prompt markdown files so `mkdocs build` doesn’t warn about them being outside `nav`. Add future exclusions to that block (keep the YAML literal format).
+- **Never override fonts in MicroSim JavaScript.** The base font-family is defined in each `main.html`. Keep all typography adjustments in CSS/HTML layers so we maintain consistent text rendering across sims.
 
 ## Open Link When Finished Generating a MicroSim
 

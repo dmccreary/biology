@@ -655,3 +655,45 @@ Responsive: Must respond to window resize events
 **Color coding:** Investment phase background light coral (#FFCCCC); payoff phase background light green (#CCFFCC); NADH badges blue (#4A90D9); ATP badges gold (#F5A623)
 
 ---
+## surface-area-volume-ratio
+
+- **Title:** Surface Area to Volume Ratio Explorer
+- **Chapter:** 04-cell-organization-and-organelles
+- **Library:** p5.js
+- **Bloom:** Apply (L3)
+- **Status:** complete
+- **Target:** `docs/sims/surface-area-volume-ratio/surface-area-volume-ratio.js`
+
+### Specification
+
+Type: microsim
+**sim-id:** surface-area-volume-ratio<br/>
+**Library:** p5.js<br/>
+
+Learning Objective: Students will calculate surface area, volume, and SA:V ratio for cuboidal cells of different sizes, and explain why a high SA:V ratio is essential for efficient cellular exchange.
+
+Canvas layout:
+- Left panel (50%): 3D wireframe cube drawn in perspective, scaling dynamically as the slider changes cell size
+- Right panel (50%): Numerical display showing calculated SA, V, SA:V ratio, and a bar chart comparing SA (blue bar) and V (red bar) as the cube grows
+
+Visual elements:
+- Wireframe cube with perspective lines, side length labeled with slider value (1–10 µm)
+- Six faces of cube shaded lightly in blue (representing membrane surface area)
+- Interior shaded red (representing volume that must be supplied)
+- Bar chart below: two bars updating in real time — "Surface Area (µm²)" and "Volume (µm³)"
+- SA:V ratio displayed in large bold text; color-coded green (≥ 2.0 = good), yellow (1.0–2.0 = marginal), red (< 1.0 = too large)
+- Optional second cube shown at fixed size (e.g., 1 µm) for comparison
+
+Interactive controls:
+- Slider: Cell side length from 1 µm to 10 µm (step 0.5 µm)
+- Checkbox: "Show comparison cell" — adds a fixed 1 µm reference cube to the left panel
+- Checkbox: "Show calculation formulas" — reveals the formulas SA = 6s², V = s³, SA:V = 6/s below the numerical display
+- Start/Stop button: begins and pauses the rotation/scaling animation for the cube
+
+Behavior:
+- As slider increases, cube scales up, bar chart updates, SA:V ratio display updates with color change
+- When side length > 5 µm, red warning text appears: "Diffusion too slow — cell must compartmentalize or shrink."
+
+Responsive design: Canvas width and controls respond to window resize events; bar chart and warning/status strip span the full drawing region.
+
+---
