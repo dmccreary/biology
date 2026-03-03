@@ -8,9 +8,9 @@ Generate a **single landscape illustration** showing a cross-section of Earth's 
 
 ## Image Specifications
 
-- **Aspect ratio:** Landscape 4:3
-- **Resolution:** 1200 × 900 px
-- **Style:** Biological textbook illustration, clean line art with light color fills, white background transitioning to sky blue at top, AP Biology high school level
+- **Aspect ratio:** Landscape 2:1
+- **Resolution:** 1200 × 600 px
+- **Style:** Biological textbook illustration, clean line art with light color fills, earth cross section at the bottom, green land in the middle, sky blue at top, AP Biology high school level
 - **Perspective:** Cross-section view from left to right, showing atmosphere above, land surface in the middle, and underground/underwater layers below
 
 ## Spatial Layout (Left to Right, Top to Bottom)
@@ -26,7 +26,7 @@ The land occupies the left two-thirds of the image width. The right third is oce
 
 - **Far left (0–15% width):** Rocky mountain/volcanic area. Gray-brown rocky outcrop (#8B7D6B) with sparse dark green shrubs. Represents geological/rock reservoir. A small volcanic vent or hot spring at the peak emitting a faint wisp (no text labels).
 - **Left-center (15–40% width):** Temperate forest. Dense canopy of mixed deciduous and coniferous trees in rich greens (#2E8B57 dark green canopy, #3CB371 medium green understory). Tree trunks visible in brown (#8B4513). Fallen leaves and decomposing matter visible at the base. This represents the terrestrial organism reservoir and connects to soil decomposition below.
-- **Center (40–55% width):** Agricultural/grassland area. Shorter golden-green grasses (#9ACD32) with a small farm structure (simple red barn silhouette, no text). One or two farm animals (simple cow silhouettes). A tractor or factory smokestack in the background emitting a gray plume (represents human industrial activity — for the Human Impact toggle overlay). A river or stream (#4682B4 blue) flows from left to right through this zone, cutting through the land before reaching the ocean. The stream bed is visible in cross-section where it meets the soil layers below.
+- **Center (40–55% width):** Agricultural/grassland area. Shorter golden-green grasses (#9ACD32) with a small farm structure, simple red barn silhouette, one cow silhouette. A factory smokestack in the background emitting a gray plume (represents human industrial activity — for the Human Impact toggle overlay). A river or stream (#4682B4 blue) flows from left to right through this zone, cutting through the land before reaching the ocean. The stream bed is visible in cross-section where it meets the soil layers below.
 - **Right-center (55–65% width):** Coastal wetland/marsh transition zone. Low green marsh grasses (#6B8E23) at the water's edge. Muddy brown shoreline. This is where land meets ocean — a critical zone for nutrient exchange (runoff, erosion).
 
 ### Ocean (right third, 55–100% width, from 30% to 75% depth)

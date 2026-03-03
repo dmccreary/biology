@@ -14,6 +14,7 @@ const MARGIN = 12;
 const TITLE_H = 28;
 const TAB_ROW_Y = TITLE_H;
 const TAB_H = 28;
+const OVERLAY_Y_OFFSET = 20; // shift all reservoir markers and arrows up/down (px)
 
 // ── state ──
 let activeCycle = 'carbon';
@@ -269,14 +270,13 @@ const TAB_COLORS = {
 // Note that when using the p5.js editor you MUST load this image manually.
 // Look for the "+" symbol in the upper left corner of the editor.
 function preload() {
-  img = loadImage('landscape.png');
+  img = loadImage('landscape-v2.jpg');
 }
 
 function setup() {
   updateCanvasSize();
   let cnv = createCanvas(canvasWidth, canvasHeight);
   cnv.parent(select('main'));
-  // textFont('Arial');
   initQuizState();
 }
 
@@ -291,7 +291,7 @@ function updateCanvasSize() {
   imgY = TAB_H + 24;                         // below tab row
   controlHeight = 40;                        // checkbox row below image
   drawHeight = imgY + imgH;
-  canvasHeight = drawHeight + controlHeight + 130; // +130 for infobox
+  canvasHeight = drawHeight + controlHeight + 8;
 }
 
 function windowResized() {
@@ -329,11 +329,11 @@ function drawMainTitle() {
 function drawTitle() {
   let cyc = cycles[activeCycle];
   textAlign(CENTER, TOP);
-  textSize(15);
+  textSize(16);
   textStyle(BOLD);
   fill(30);
   noStroke();
-  text(cyc.title, canvasWidth / 2, imgY - 12);
+  text(cyc.title, canvasWidth / 2, imgY + 10);
   textStyle(NORMAL);
 }
 
@@ -464,7 +464,7 @@ function drawFluxArrows() {
     }
 
     stroke(arrowColor);
-    strokeWeight(isHovered ? 3.5 : 2.5);
+    strokeWeight(isHovered ? 5.5 : 2.5);
     noFill();
 
     // Self-referencing arrow (e.g., dam storage)
@@ -584,29 +584,76 @@ function drawControls() {
   }
 }
 
-// ── Infobox ──
+// ── Floating Infobox (overlays the image, avoids hovered item) ──
 function drawInfobox() {
-  let iy = drawHeight + controlHeight + 4;
-  let iw = canvasWidth - MARGIN * 2;
-  let ih = 120;
+  // Box dimensions
+  // 
+  let iw = min(canvasWidth * 0.55, 200);
+  let ih = 110;
+  let pad = MARGIN;
 
-  // Box background
-  fill(255, 255, 255, 230);
-  stroke(180);
+  // Determine which corner to place the infobox in, opposite the hovered item
+  let itemX = canvasWidth / 2;
+  let itemY = imgY + imgH / 2;
+  if (hoveredItem) {
+    let cyc = cycles[activeCycle];
+    if (hoveredItem.type === 'reservoir') {
+      let r = cyc.reservoirs[hoveredItem.idx];
+      itemX = pctX(r.x);
+      itemY = pctY(r.y);
+    } else if (hoveredItem.type === 'flux') {
+      let f = cyc.fluxes[hoveredItem.idx];
+      let fromR = cyc.reservoirs[f.from];
+      let toR   = cyc.reservoirs[f.to];
+      itemX = (pctX(fromR.x) + pctX(toR.x)) / 2;
+      itemY = (pctY(fromR.y) + pctY(toR.y)) / 2;
+    }
+  }
+
+  // Place infobox near the hovered item but offset so it doesn't cover it
+  let offsetX = 40;
+  let offsetY = 30;
+  let ix, iy;
+
+  // Horizontal: offset to the right if room, else to the left
+  if (itemX + offsetX + iw < canvasWidth - pad) {
+    ix = itemX + offsetX;
+  } else {
+    ix = itemX - offsetX - iw;
+  }
+  // Clamp to canvas bounds
+  ix = constrain(ix, pad, canvasWidth - iw - pad);
+
+  // Vertical: place just above the item if room, else just below
+  if (itemY - offsetY - ih > imgY + pad) {
+    iy = itemY - offsetY - ih;
+  } else {
+    iy = itemY + offsetY;
+  }
+  // Clamp within image area
+  iy = constrain(iy, imgY + pad, imgY + imgH - ih - pad);
+
+  // Only draw if there is content to show
+  let hasContent = (quizMode && quizFeedback) || hoveredItem ||
+                   (quizMode && quizTarget !== null);
+  if (!hasContent) return;
+
+  // Box background — semi-transparent white
+  fill(255, 255, 255, 220);
+  stroke(120);
   strokeWeight(1);
-  rect(MARGIN, iy, iw, ih, 6);
+  rect(ix, iy, iw, ih, 8);
 
   fill(40);
   noStroke();
   textSize(12);
   textAlign(LEFT, TOP);
 
-  let tx = MARGIN + 10;
+  let tx = ix + 10;
   let ty = iy + 8;
   let maxW = iw - 20;
 
   if (quizMode && quizFeedback) {
-    // Quiz feedback
     textStyle(BOLD);
     fill(quizFeedback.startsWith('✓') ? color(0, 130, 0) : color(200, 50, 50));
     text(quizFeedback, tx, ty, maxW, ih - 16);
@@ -634,12 +681,11 @@ function drawInfobox() {
       textSize(11);
       fill(60);
       text(f.description, tx, ty + 20, maxW, ih - 36);
-      // Show from → to
       let fromName = cyc.reservoirs[f.from].name;
       let toName   = cyc.reservoirs[f.to].name;
       fill(120);
       textSize(10);
-      text(fromName + '  →  ' + toName, tx, ty + ih - 34, maxW, 16);
+      text(fromName + '  →  ' + toName, tx, ty + ih - 30, maxW, 16);
     }
   } else if (quizMode && quizTarget !== null) {
     let r = cycles[activeCycle].reservoirs[quizTarget];
@@ -671,28 +717,34 @@ function drawInfobox() {
 function mouseMoved() {
   hoveredItem = null;
 
-  // Check flux arrows first (wider hit zone)
   let cyc = cycles[activeCycle];
-  for (let i = 0; i < cyc.fluxes.length; i++) {
-    let f = cyc.fluxes[i];
-    if (f.human && !showHumanImpact) continue;
-    if (f.from === f.to) continue;
-    if (isNearFluxArrow(f, cyc.reservoirs, i)) {
-      hoveredItem = { type: 'flux', idx: i };
-      cursor(HAND);
-      return;
-    }
-  }
 
-  // Check reservoirs
+  // Check reservoirs first — they take priority
+  let nearReservoir = false;
   for (let i = 0; i < cyc.reservoirs.length; i++) {
     let r = cyc.reservoirs[i];
     let px = pctX(r.x);
     let py = pctY(r.y);
-    if (dist(mouseX, mouseY, px, py) < 16) {
+    let d = dist(mouseX, mouseY, px, py);
+    if (d < 16) {
       hoveredItem = { type: 'reservoir', idx: i };
       cursor(HAND);
       return;
+    }
+    if (d < 26) nearReservoir = true; // within 10px of the 16px hit zone
+  }
+
+  // Check flux arrows only if not near any reservoir
+  if (!nearReservoir) {
+    for (let i = 0; i < cyc.fluxes.length; i++) {
+      let f = cyc.fluxes[i];
+      if (f.human && !showHumanImpact) continue;
+      if (f.from === f.to) continue;
+      if (isNearFluxArrow(f, cyc.reservoirs, i)) {
+        hoveredItem = { type: 'flux', idx: i };
+        cursor(HAND);
+        return;
+      }
     }
   }
 
@@ -825,7 +877,7 @@ function pctX(pct) {
 }
 
 function pctY(pct) {
-  return imgY + (pct / 100) * imgH;
+  return imgY + (pct / 100) * imgH + OVERLAY_Y_OFFSET;
 }
 
 function luminance(hexColor) {
