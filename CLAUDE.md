@@ -17,7 +17,6 @@ The remaining rules focus on the generation of high-quality MicroSims.
 AP Biology: An Interactive Course — an MkDocs Material intelligent textbook for advanced high school students preparing for the AP Biology exam. The textbook covers 8 College Board units across 375 concepts organized in a dependency graph.
 
 
-
 ## Development Environment
 
 Assume the user is running `mkdocs serve` in a terminal. When a new MicroSim has been generated, print the URL of the new MicroSim and open it in Chrome:
@@ -162,8 +161,6 @@ All 79 MicroSim directories under `docs/sims/` have scaffolding in place (`main.
 - `docs/js/extra.js` — Copy-button logic for `.admonition.prompt` blocks
 - `docs/js/mathjax-config.js` — MathJax configuration (equations use MathJax, not KaTeX)
 
-
-
 ### CSS Architecture
 
 Two CSS files are loaded in order:
@@ -301,19 +298,10 @@ MicroSim, not a static image or a `<details>` placeholder block.
 
 ### Diagrams Already Built
 
-The following MicroSim interactive diagrams exist in `docs/sims/`. **Always embed
-these via iframe rather than creating a duplicate sim.** Check this list first before
-creating any new diagram sim.
-
-| Sim directory | Topic covered | Callout count |
-|---------------|---------------|---------------|
-| `animal-cell` | Eukaryotic animal cell organelles | 13 |
-| `plant-cell` | Eukaryotic plant cell organelles | 14 |
-| `cell-membrane` | Fluid mosaic model, membrane proteins, transport | 12 |
-| `dna-double-helix` | DNA double helix, base pairing, strand directionality | 10 |
-| `chloroplast` | Chloroplast structure, thylakoid, light reactions | 12 |
-| `mitochondria` | Mitochondrial structure + ETC complexes I–V | 15 |
-| `neuron-structure` | Multipolar neuron anatomy, synapse ultrastructure | 13 |
+The following MicroSim interactive diagrams exist in `@docs/sims/`.
+A list of competed Microsims is stored in `@docs/sims/DONE.md`
+You may use these as references to find similar MicroSims.
+Look for MicroSims with similar learning objectives and similar JavaScript libraries.
 
 **Iframe path from a chapter page** — chapter files live at
 `docs/chapters/unit-X/chapter-name/index.md` (three levels deep from `docs/`),
@@ -335,10 +323,11 @@ to test yourself.
 ```
 
 Rules for iframe embeds in chapters:
-- Never add a `style` attribute to the `<iframe>` element
-- Always include `scrolling="no"`
+- Never add a `style` attribute to the `<iframe>` element.  The styles
+around an iframe are governed by the central `@docs/css/extra.css`
+- Always include `scrolling="no"` to avoid scroll hijacking.
 - Height = image natural height (~900 px for landscape 4:3) + ~160 px infobox = **~730 px** for standard sims (adjust if the sim's own `index.md` uses a different height)
-- Add a `[View Fullscreen](...)` link immediately after the iframe
+- Add a `[View {NAME} MicroSim Fullscreen](...)` link immediately after the iframe
 - Write 2–4 sentences of prose around the iframe — do not just drop the iframe with no context
 
 ### "Return to Lesson Plan" Link — Iframe-Aware Pattern
@@ -367,18 +356,9 @@ Use this exact pattern at the bottom of `main.html`, after the main JS `<script>
 | HTML form / calculator / table (grows vertically) | **Yes — always apply the pattern** |
 | Diagram architecture sims (`diagram.js`) | No — fixed layout |
 
-### When a Chapter Needs a New Diagram
+### Updating the Site Navigation Menu
 
-If the chapter topic requires a diagram not in the "Already Built" list above,
-create the full MicroSim **before** writing the chapter content that references it.
-Follow the Step-by-Step Build Process below, then embed the new sim via iframe in
-the chapter markdown.
-
-Add the new sim to `mkdocs.yml` nav under the MicroSims section.
-
-**Caption format for figure references in prose:** `Figure [unit].[chapter].[number] — Descriptive Title`
-(e.g., `Figure 3.2.1 — The Electron Transport Chain`). Reference figures in prose but do not
-embed captions in images themselves.
+When finished creating a new MicroSim, add the new sim to `mkdocs.yml` nav under the MicroSims section.
 
 ### Interactive Diagrams
 
@@ -731,7 +711,7 @@ text for each structure:
 
 <iframe src="main.html" height="560" width="100%" scrolling="no"></iframe>
 
-[View Fullscreen](main.html)
+[View {MICROSIM_NAME} Fullscreen](main.html)
 
 ## Structure 1 Name
 Brief description...
@@ -754,86 +734,3 @@ Each sim's `main.html` references them via `../shared-libs/filename`.
 (the `main.html` location), so `data.json` and the image are always found in the sim's
 own directory regardless of where `diagram.js` lives.
 
----
-
-## Learning Mascot: Gregor the Tree Frog
-
-### Character Overview
-
-- **Name**: Gregor (after Gregor Mendel, father of genetics)
-- **Species**: Tree Frog
-- **Personality**: Curious and scientifically enthusiastic when introducing concepts; warm and encouraging when material gets difficult
-- **Catchphrase**: "Let's investigate!"
-- **Visual**: Small, round-bodied lime-green tree frog with large golden eyes, cream-white underbelly, white lab coat, and a round magnifying glass
-
-### Voice Characteristics
-
-- Uses clear, precise scientific language appropriate for AP-level high school students
-- Frames biology as an active investigation ("Let's investigate!", "What does the evidence tell us?")
-- Normalizes difficulty: "This is one of the trickiest concepts in AP Biology — that's completely normal"
-- Celebrates connections between units: "Notice how this connects back to what we saw in Unit 3"
-- Refers to students as "investigators" or "scientists"
-- Signature phrases: "Let's investigate!", "What does the evidence tell us?", "You're closer than you think!", "The answer is hiding in plain sight"
-
-### Placement Rules
-
-| Context | Admonition Type | Frequency |
-|---------|----------------|-----------|
-| General note / sidebar | `mascot-neutral` | As needed |
-| Chapter opening | `mascot-welcome` | Every chapter (required) |
-| Major concept introduction | `mascot-thinking` | 2–3 per chapter |
-| AP exam strategy / memory tip | `mascot-tip` | As needed |
-| Common misconception | `mascot-warning` | As needed |
-| End of major section | `mascot-celebration` | 1 per chapter |
-| Difficult content (e.g., Hardy-Weinberg, ETC) | `mascot-encourage` | Where students typically struggle |
-
-### Do's
-
-- Use Gregor to introduce new topics warmly at chapter openings
-- Include the catchphrase "Let's investigate!" in the welcome admonition
-- Keep Gregor's dialogue brief: 1–4 sentences maximum
-- Use `mascot-thinking` for Big Ideas connections across units
-- Use `mascot-warning` for the most common AP exam misconceptions
-
-### Don'ts
-
-- Do **not** use Gregor more than **5–6 times per chapter**
-- Do **not** stack Gregor admonitions back-to-back
-- Do **not** use Gregor purely decoratively (every appearance must add value)
-- Do **not** change Gregor's personality or voice between chapters
-- Do **not** use Gregor for routine content that needs no special emphasis
-
-### Admonition Syntax Reference
-
-```markdown
-!!! mascot-neutral "A Note from Gregor"
-    General notes, sidebars, or any context without a specific tone.
-
-!!! mascot-welcome "Gregor Welcomes You!"
-    Welcome text here. Always include "Let's investigate!" in the welcome.
-
-!!! mascot-thinking "Key Insight"
-    A critical conceptual connection or big-picture observation.
-
-!!! mascot-tip "Gregor's Tip"
-    An AP exam strategy, memory trick, or problem-solving shortcut.
-
-!!! mascot-warning "Common Mistake"
-    A frequent misconception or error students make on the AP exam.
-
-!!! mascot-celebration "Excellent Work!"
-    Acknowledgment of completing a difficult section or mastering a concept.
-
-!!! mascot-encourage "You've Got This!"
-    Encouragement before or during a challenging section.
-```
-
-To include Gregor's image inside an admonition body:
-
-```markdown
-!!! mascot-welcome "Gregor Welcomes You!"
-    <img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Gregor welcomes you">
-    Welcome text here...
-```
-
-Image paths are relative to the rendered page depth — use `../../img/mascot/` from pages two levels deep (e.g., `docs/learning-graph/`), or `../img/mascot/` from one level deep.
