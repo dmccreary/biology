@@ -1,6 +1,6 @@
 # MicroSim DONE — Completed Implementations
 
-**Completed:** 20 MicroSims
+**Completed:** 21 MicroSims
 
 These MicroSims have been fully implemented with substantial JavaScript or shared-libs overlays.
 
@@ -49,6 +49,29 @@ Learning Objective: Students calculate the energy reaching each trophic level (1
 Layout & Interaction: Left 70% contains a tapered pyramid of up to six tiers, a heat-loss band, and hover tooltips; the right column hosts the detail panel. Producer-input and efficiency sliders live in the top two control rows; separate **Add Level** and **Remove Level** buttons plus “Show Biomass” / “Show Individuals” toggles sit in row three. Energy values always display; toggles optionally append kg/ha and “ind” text. Icons and bars anchor to geometric rules derived from the saved wireframe, and adaptive gutters/bottom margins prevent overlaps at widths 450–1200 px.
 
 Responsive Design: Uses width-aware calculations for bar widths, icon placement, detail panel sizing, sliders, and control rows. `windowResized()` resizes the canvas and p5 sliders; a silver border + white control fill expose any overflow during QA.
+
+---
+
+## osmosis-simulator
+
+- **Title:** Osmosis and Water Potential Simulator
+- **Chapter:** 05-cell-membranes-and-transport
+- **Library:** p5.js
+- **Bloom:** Apply (L3)
+- **Status:** complete
+- **Target:** `docs/sims/osmosis-simulator/osmosis-simulator.js`
+
+### Specification
+
+Type: MicroSim (p5.js)<br/>
+**sim-id:** osmosis-simulator<br/>
+**Library:** p5.js<br/>
+
+Learning Objective: Students calculate Ψ<sub>s</sub>, Ψ<sub>p</sub>, and overall Ψ for internal vs. external solutions, classify tonicity, and predict water movement effects on animal and plant cells.
+
+Layout & Interaction: Expanded drawing height allocates room for Ψ labels above the blue (cell) and green (external) chambers separated by a dashed membrane; water/solute particles animate stochastically, a turgor gauge appears in plant mode, and a bold arrow visualizes ΔΨ direction. Stage 1–4 info rail summarizes concentrations, Ψ calculations, ΔΨ, and the equilibration endpoint, while Start/Pause plus Equilibrate controls manage motion and scripted balancing.
+
+Responsive Design: Width-aware layout recalculates chamber widths, membrane band, annotation rail, and slider alignment between 450–1200 px. Sliders and toggle reposition via `positionControls()`, slider labels right-align next to the tracks, and `updateCanvasSize()` maintains the non-overlap guarantee.
 
 ---
 

@@ -1,6 +1,6 @@
 # MicroSim TODO — Remaining Implementations
 
-**Generated:** 2026-02-28 | **Remaining:** 47 of 59
+**Generated:** 2026-02-28 | **Remaining:** 46 of 59
 
 **Note:** All MicroSim directories ALREADY been created and the three core
 scaffolding files have been generated.  (`main.html`, `index.md`, `metadata.json`).
@@ -19,7 +19,7 @@ Always use the /microsim-generator skill to implement these Microsims
 | 02-water-ph-and-organic-chemistry | 5 | 1 | 4 |
 | 03-biological-macromolecules | 4 | 2 | 2 |
 | 04-cell-organization-and-organelles | 8 | 7 | 1 |
-| 05-cell-membranes-and-transport | 4 | 3 | 1 |
+| 05-cell-membranes-and-transport | 4 | 4 | 0 |
 | 06-thermodynamics-and-enzymes | 4 | 0 | 4 |
 | 07-photosynthesis | 4 | 1 | 3 |
 | 08-cellular-respiration | 4 | 0 | 4 |
@@ -40,75 +40,11 @@ Always use the /microsim-generator skill to implement these Microsims
 
 | Library | Count |
 |---------|-------|
-| p5.js | 57 |
+| p5.js | 56 |
 | Chart.js | 5 |
 | vis-network | 2 |
 | vis-timeline | 1 |
 
-
-## osmosis-simulator
-
-- **Title:** Osmosis and Water Potential Simulator
-- **Chapter:** 05-cell-membranes-and-transport
-- **Library:** p5.js
-- **Bloom:** Apply (L3)
-- **Status:** specified
-- **Complexity Rating:** 9
-- **Target:** `docs/sims/osmosis-simulator/osmosis-simulator.js`
-
-### Specification
-
-Type: microsim
-**sim-id:** osmosis-simulator<br/>
-**Library:** p5.js<br/>
-
-Bloom Level: Apply (L3)
-Bloom Verb: calculate, demonstrate
-Learning Objective: Students will calculate solute potential and water potential for solutions of given concentration, predict the direction of water movement between compartments, and describe the effect of osmosis on both animal and plant cells under hypotonic, isotonic, and hypertonic conditions.
-
-Canvas layout:
-- Top half (55%): Two chambers separated by a vertical dashed membrane line; left chamber = cell interior, right chamber = extracellular solution
-- Bottom half (45%): Control panel with sliders and numerical readouts
-
-Visual elements:
-- Left chamber (cell interior): blue-tinted fluid with small blue dots representing water molecules and larger red dots representing solute molecules
-- Right chamber (external solution): same styling but adjustable solute concentration
-- Semipermeable membrane: vertical dashed line allowing water (blue dots) to cross but blocking solute (red dots)
-- Animated water molecules: small blue dots move through the membrane in proportion to the water potential gradient; net flow direction indicated by a bold blue arrow
-- Cell membrane icon at left wall: when using "Plant cell mode," a green outer cell wall appears and a turgor pressure gauge shows pressure building up
-- Water potential display: Ψ_cell and Ψ_external calculated and displayed in MPa in the info panel
-
-Interactive controls:
-- Slider "Internal solute concentration" (0–1.0 mol/L)
-- Slider "External solute concentration" (0–1.0 mol/L)
-- Slider "Temperature" (273–313 K, default 298 K)
-- Toggle: "Animal cell" vs "Plant cell" mode (plant mode adds rigid wall and turgor pressure gauge)
-- Calculated display (updating live): Ψ_s (internal), Ψ_s (external), Ψ_p (internal; 0 for animal, positive for plant), net Ψ difference, direction of water flow
-- Button "Equilibrate": runs animation to show final equilibrium state
-
-Default parameters:
-- Internal solute: 0.3 mol/L
-- External solute: 0.3 mol/L (isotonic)
-- Mode: Animal cell
-
-Behavior:
-- When internal and external Ψ are equal, water molecules cross membrane equally in both directions; blue arrow disappears
-- When external is hypotonic: blue arrow points inward; in animal mode the cell cartoon swells; in plant mode the turgor pressure gauge rises
-- When external is hypertonic: blue arrow points outward; in animal mode the cell cartoon shrinks; in plant mode plasmolysis is shown (membrane pulls away from wall)
-- Warning text appears if animal cell enters lytic range (solute difference > 0.5 mol/L)
-
-Data Visibility Requirements:
-Stage 1: Show initial solute concentrations in each chamber
-Stage 2: Show calculated Ψ_s values using Ψ_s = −iCRT
-Stage 3: Show net Ψ difference and direction of water flow
-Stage 4: Show equilibrium state after animation completes
-
-Instructional Rationale: Sliders that directly alter concentration and instantly show updated Ψ calculations with animated water flow directly connect the abstract formula to a visible physical outcome. The animal/plant toggle reinforces that the same osmotic principles produce different cell outcomes due to the presence or absence of a rigid wall.
-
-Canvas size: 680 × 480 px
-Responsive: Must respond to window resize events
-
----
 
 ## enzyme-kinetics-explorer
 
