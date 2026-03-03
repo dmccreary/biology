@@ -494,12 +494,15 @@ function drawFluxArrows() {
     quadraticVertex(cx, cy, x2, y2);
     endShape();
 
-    // Arrowhead at endpoint
-    let t = 0.95;
-    let ax = (1 - t) * (1 - t) * x1 + 2 * (1 - t) * t * cx + t * t * x2;
-    let ay = (1 - t) * (1 - t) * y1 + 2 * (1 - t) * t * cy + t * t * y2;
-    let angle = atan2(y2 - ay, x2 - ax);
-    drawArrowhead(x2, y2, angle, arrowColor);
+    // Arrowhead — pull tip back from the reservoir center so it's visible
+    let t = 0.85;
+    let bx = (1 - t) * (1 - t) * x1 + 2 * (1 - t) * t * cx + t * t * x2;
+    let by = (1 - t) * (1 - t) * y1 + 2 * (1 - t) * t * cy + t * t * y2;
+    let t2 = 0.80;
+    let ax = (1 - t2) * (1 - t2) * x1 + 2 * (1 - t2) * t2 * cx + t2 * t2 * x2;
+    let ay = (1 - t2) * (1 - t2) * y1 + 2 * (1 - t2) * t2 * cy + t2 * t2 * y2;
+    let angle = atan2(by - ay, bx - ax);
+    drawArrowhead(bx, by, angle, arrowColor);
 
     // Label on arrow midpoint
     if (isHovered) {
@@ -522,8 +525,9 @@ function drawArrowhead(tipX, tipY, angle, col) {
   translate(tipX, tipY);
   rotate(angle);
   fill(col);
-  noStroke();
-  triangle(0, 0, -10, -5, -10, 5);
+  stroke(col);
+  strokeWeight(1);
+  triangle(0, 0, -14, -7, -14, 7);
   pop();
 }
 
