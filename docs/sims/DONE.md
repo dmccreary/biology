@@ -1,6 +1,6 @@
 # MicroSim DONE — Completed Implementations
 
-**Completed:** 22 MicroSims
+**Completed:** 23 MicroSims
 
 These MicroSims have been fully implemented with substantial JavaScript or shared-libs overlays.
 
@@ -100,6 +100,31 @@ Canvas Size: Responsive width × 610 px height.
 
 ---
 
+## enzyme-activity-explorer
+
+- **Title:** Temperature and pH Effects on Enzyme Activity
+- **Chapter:** 06-thermodynamics-and-enzymes
+- **Library:** p5.js
+- **Bloom:** Apply (L3)
+- **Status:** complete
+- **Target:** `docs/sims/enzyme-activity-explorer/enzyme-activity-explorer.js`
+
+### Specification
+
+Type: MicroSim (p5.js)<br/>
+**sim-id:** enzyme-activity-explorer<br/>
+**Library:** p5.js<br/>
+
+Learning Objective: Students predict how enzyme activity changes with temperature and pH, identify optimal values for a given enzyme, and explain the molecular basis for the activity drop at extreme values.
+
+Layout & Interaction: The top toggle switches between Temperature and pH views, each with a responsive bell-shaped activity curve (left 55%) and a molecular explanation/ionization panel (right 45%). A draggable cursor (or sweep autoplay) updates activity readouts, dashed guidelines, and the right-panel cartoon showing intact vs. denatured proteins or histidine charge states. Sliders adjust optimal temperature, optimal pH, and enzyme thermostability (curve width), while preset buttons load human enzymes, pepsin, or Taq polymerase and animate the curve to new optima.
+
+Responsive Design: Activity graph and explanation panel recompute widths from `layout.graphArea` and `layout.panelArea`; axis guides, cursor readouts, and annotations remain pinned to panel edges between 450–1200 px widths. Sliders and preset buttons reposition via `updateControlPositions()` so labels stay on-canvas and buttons never overlap sliders. Right-panel explanations wrap inside their bounds, and the entire sim stays paused by default with “Sweep Temperature/pH Values” contextual buttons.
+
+Canvas Size: Responsive width × 700 px height.
+
+---
+
 ## replication-fork
 
 - **Title:** DNA Replication Fork Explorer
@@ -193,6 +218,42 @@ Bloom Verb: describe
 Learning Objective: Students will describe the three stages of cell signaling — reception, transduction, response — and identify the role of each molecular component in the GPCR-cAMP pathway.
 
 Layout: Dual-panel — left panel (6 labels: ligand, GPCR, cell membrane, G-protein inactive, active Gα-GTP, adenylyl cyclase) and right panel (7 labels: cAMP, PKA, phosphorylation cascade, target enzyme, nucleus, transcription factors, gene expression). AI-generated landscape image with diagram.js overlay providing Explore, Quiz, and Edit modes.
+
+---
+
+## enzyme-regulation-simulator
+
+- **Title:** Enzyme Regulation Simulator
+- **Chapter:** 06-thermodynamics-and-enzymes
+- **Library:** p5.js
+- **Bloom:** Analyze (L4)
+- **Status:** complete
+- **Target:** `docs/sims/enzyme-regulation-simulator/enzyme-regulation-simulator.js`
+
+### Specification
+
+Type: microsim
+**sim-id:** enzyme-regulation-simulator<br/>
+**Library:** p5.js<br/>
+
+Learning Objective: Students differentiate competitive inhibition, noncompetitive inhibition, and allosteric feedback inhibition by comparing their effects on enzyme kinetics and explaining which regulatory mechanism fits each metabolic context.
+
+Canvas layout:
+- Top strip (20%): Mode cards for “No Inhibition”, “Competitive”, “Noncompetitive”, “Feedback Inhibition”
+- Center panel (55%): Split view — left enzyme schematic (active site, allosteric site, substrate, inhibitor), right Michaelis–Menten curve with live probe dot
+- Bottom panel (25%): Text box summarizing effects on Vmax and Km plus a metabolic context sentence
+
+Visual elements:
+- Enzyme schematic shows substrate/inhibitor placement, allosteric binding, dashed links, and shape shifts
+- Kinetics graph plots baseline vs. mode-specific curves (competitive: right-shifted Km; noncompetitive/feedback: lower Vmax with dashed purple curve)
+- Slider controls inhibitor concentration to modulate curve deviation; probe slider adjusts [S] readout
+
+Controls & Behavior:
+- Four mode buttons, inhibitor slider (0–100%), probe [S] slider, and Start Simulation button
+- Switching modes updates schematic, curves, and info panel simultaneously; sliders drive real-time curve/probe updates
+- Feedback mode adds product-loop annotation showing negative feedback arrow
+
+Responsive Design: Canvas width adapts to iframes with continuous gutters; `updateCanvasSize()` + `positionControls()` realign top strip cards, split panels, and two-row control deck across 450–1200 px while preserving 20 px spacing between regions.
 
 ---
 

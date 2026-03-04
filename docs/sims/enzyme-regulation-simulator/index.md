@@ -15,7 +15,7 @@ quality_score: 88
 
 [Run the Enzyme Regulation Simulator MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
-[Edit in the p5.js Editor](https://editor.p5js.org/)
+[Edit in the p5.js Editor](https://editor.p5js.org/dmccreary/sketches/jtehut1Zd)
 
 ## About This MicroSim
 
