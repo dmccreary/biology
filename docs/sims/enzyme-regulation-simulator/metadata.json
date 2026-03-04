@@ -1,24 +1,26 @@
 {
   "title": "Enzyme Regulation Simulator",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
-  "description": "Interactive MicroSim for enzyme regulation simulator",
+  "subject": "Biology",
+  "description": "Compare competitive, noncompetitive, and feedback inhibition through linked enzyme schematics and Michaelis\u2013Menten curves.",
   "date": "2026-02-27",
   "educational": {
     "gradeLevel": [
-      "9",
-      "10",
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
-    "topic": "Enzyme Regulation Simulator",
+    "subjectArea": "Biology",
+    "topic": "Enzyme regulation and enzyme kinetics",
     "learningObjectives": [
-      "TODO: Add learning objectives"
+      "Differentiate competitive, noncompetitive, and feedback inhibition by observing how each mechanism alters Vmax and Km on a Michaelis\u2013Menten curve.",
+      "Explain which metabolic context calls for each regulation mode using inhibitor concentration and probe-dot evidence."
     ],
-    "bloomsTaxonomy": "Create",
-    "duration": "10-15 minutes",
-    "prerequisites": [],
+    "bloomsTaxonomy": "Analyze",
+    "duration": "15 minutes",
+    "prerequisites": [
+      "Students understand enzyme\u2013substrate complexes and catalytic cycles.",
+      "Students can interpret Michaelis\u2013Menten graphs and define Vmax and Km."
+    ],
     "standards": []
   },
   "technical": {
@@ -26,20 +28,28 @@
     "version": "1.0",
     "canvasDimensions": {
       "width": "responsive",
-      "height": 450
+      "height": 710
     },
     "responsive": true,
     "dependencies": [],
     "accessibility": {
-      "hasAltText": false,
+      "hasAltText": true,
       "keyboardNavigable": false
     }
   },
   "pedagogical": {
     "teachingStrategy": "Interactive exploration",
-    "keyQuestions": [],
-    "commonMisconceptions": [],
-    "assessmentOpportunities": []
+    "keyQuestions": [
+      "Which inhibition mode changes Km and which changes Vmax?",
+      "How does increasing inhibitor concentration shift the probe dot on the curve?"
+    ],
+    "commonMisconceptions": [
+      "Competitive inhibitors reduce Vmax (they only affect Km).",
+      "Feedback inhibition acts at the active site instead of an allosteric site."
+    ],
+    "assessmentOpportunities": [
+      "Students justify a metabolic scenario by citing the slider value, probe reading, and info panel summary."
+    ]
   },
   "chapter": "06-thermodynamics-and-enzymes"
 }

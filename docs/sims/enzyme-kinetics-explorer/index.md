@@ -15,7 +15,7 @@ quality_score: 85
 
 [Run the Enzyme Kinetics Explorer MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
-[Edit Enzyme Kinetics Explorer MicroSim in the p5.js Editor](https://editor.p5js.org/dmccreary/sketches/ICXlLpIwk)
+[Edit Enzyme Kinetics Explorer MicroSim the p5.js Editor](https://editor.p5js.org/dmccreary/sketches/ICXlLpIwk)
 
 ## About This MicroSim
 

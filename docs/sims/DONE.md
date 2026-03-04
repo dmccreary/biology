@@ -1,6 +1,6 @@
 # MicroSim DONE — Completed Implementations
 
-**Completed:** 21 MicroSims
+**Completed:** 22 MicroSims
 
 These MicroSims have been fully implemented with substantial JavaScript or shared-libs overlays.
 
@@ -72,6 +72,31 @@ Learning Objective: Students calculate Ψ<sub>s</sub>, Ψ<sub>p</sub>, and overa
 Layout & Interaction: Expanded drawing height allocates room for Ψ labels above the blue (cell) and green (external) chambers separated by a dashed membrane; water/solute particles animate stochastically, a turgor gauge appears in plant mode, and a bold arrow visualizes ΔΨ direction. Stage 1–4 info rail summarizes concentrations, Ψ calculations, ΔΨ, and the equilibration endpoint, while Start/Pause plus Equilibrate controls manage motion and scripted balancing.
 
 Responsive Design: Width-aware layout recalculates chamber widths, membrane band, annotation rail, and slider alignment between 450–1200 px. Sliders and toggle reposition via `positionControls()`, slider labels right-align next to the tracks, and `updateCanvasSize()` maintains the non-overlap guarantee.
+
+---
+
+## enzyme-kinetics-explorer
+
+- **Title:** Enzyme Kinetics Explorer
+- **Chapter:** 06-thermodynamics-and-enzymes
+- **Library:** p5.js
+- **Bloom:** Apply (L3)
+- **Status:** complete
+- **Target:** `docs/sims/enzyme-kinetics-explorer/enzyme-kinetics-explorer.js`
+
+### Specification
+
+Type: MicroSim (p5.js)<br/>
+**sim-id:** enzyme-kinetics-explorer<br/>
+**Library:** p5.js<br/>
+
+Learning Objective: Students will use the Michaelis-Menten equation to predict enzyme velocity at a given substrate concentration, identify Vmax and Km from a v vs [S] graph, and explain how competitive and noncompetitive inhibitors shift the curve.
+
+Layout & Interaction: Left 60% hosts a responsive Michaelis-Menten plot with dashed Vmax and Km guides, draggable/autoplay probe dot, and optional competitive (red) or noncompetitive (purple) overlay curves that respect inhibitor concentration. Right 40% contains the numerical info panel with Stage 1–3 prompts that summarize baseline reading, probe exploration, and inhibitor comparisons. Control deck beneath the canvas includes Vmax, Km, and inhibitor sliders; toggles for each inhibitor type; Start/Pause and Reset buttons; and a probe autoplay caption.
+
+Responsive Design: Canvas resizes to container width; graph axes, probe bounds, and info panel recompute every frame. Slider labels right-align precisely 15 px left of the tracks, toggles anchor to the right edge, and the probe interaction respects updated graph bounds after every resize. The wireframe (stored in `wireframe.html`) guarantees non-overlap from 450–1200 px widths, and `windowResized()` repositions all controls via `positionControls()`.
+
+Canvas Size: Responsive width × 610 px height.
 
 ---
 
