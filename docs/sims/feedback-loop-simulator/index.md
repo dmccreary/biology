@@ -15,7 +15,7 @@ quality_score: 90
 
 [Run the Feedback Loop Simulator MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
-[Edit in the p5.js Editor](https://editor.p5js.org/)
+[Edit Feedback Loop Simulator MicroSim in the p5.js Editor](https://editor.p5js.org/dmccreary/sketches/8OwhO6j0e)
 
 ## About This MicroSim
 

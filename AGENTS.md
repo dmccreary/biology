@@ -48,3 +48,11 @@ Where `<sim-name>` is the name of the MicroSim you just created.
 - For split-screen diagrams + graphs (like Feedback Loop Simulator), reserve equal square panels with only 20 px gutters from the iframe edge. Compute each square as `(canvasWidth - margin*2 - gutter) / 2`, enforce matching heights, and let the drawing region height expand so the squares never overlap controls.
 - Keep the controls in their own deck below the drawing region; only the diagram/graph squares resize responsively.
 - This strategy produced stable behavior across 450 px–1200 px widths—reuse it for any future two-panel MicroSim so both views stay balanced and aligned.
+
+## Lessons Learned
+
+- **Lock specs early.** Agree on panel shapes, control placement, and arrow styling upfront. A quick mockup or annotated screenshot saves multiple iteration loops later.
+- **Centralize layout constants.** Keep margins, rotations, and sizing math in a shared config so adjusting values (like arrow offsets or panel heights) happens once.
+- **Modularize tricky visuals.** The circular arrows consumed most of the session. Move tangent/arrow helpers to a shared utility so future diagrams reuse the vetted logic.
+- **Use reusable control layouts.** Build a declarative control deck (label + element definitions) that auto-positions items, avoiding manual pixel tweaks for every request.
+- **Capture snapshots per milestone.** After each layout change, auto-generate visual diffs so requesters can sign off quickly without repeated restarts.
