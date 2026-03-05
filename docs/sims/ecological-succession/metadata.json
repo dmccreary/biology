@@ -1,8 +1,8 @@
 {
   "title": "Ecological Succession Timeline",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
-  "description": "Interactive MicroSim for ecological succession timeline",
+  "subject": "Biology",
+  "description": "Interactive MicroSim showing how primary and secondary ecological succession progress over time.",
   "date": "2026-02-27",
   "educational": {
     "gradeLevel": [
@@ -11,14 +11,17 @@
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
-    "topic": "Ecological Succession Timeline",
+    "subjectArea": "Biology",
+    "topic": "Ecological Succession",
     "learningObjectives": [
-      "TODO: Add learning objectives"
+      "Compare the sequence and timing of stages in primary versus secondary succession.",
+      "Identify example organisms that characterize each stage and describe their ecological roles."
     ],
     "bloomsTaxonomy": "Create",
     "duration": "10-15 minutes",
-    "prerequisites": [],
+    "prerequisites": [
+      "Basic knowledge of trophic roles and ecosystems"
+    ],
     "standards": []
   },
   "technical": {
@@ -26,7 +29,7 @@
     "version": "1.0",
     "canvasDimensions": {
       "width": "responsive",
-      "height": 450
+      "height": 830
     },
     "responsive": true,
     "dependencies": [],

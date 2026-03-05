@@ -1,6 +1,6 @@
 # MicroSim TODO — Remaining Implementations
 
-**Generated:** 2026-02-28 | **Remaining:** 46 of 59
+**Generated:** 2026-02-28 | **Remaining:** 44 of 59
 
 **Note:** All MicroSim directories ALREADY been created and the three core
 scaffolding files have been generated.  (`main.html`, `index.md`, `metadata.json`).
@@ -23,7 +23,7 @@ Always use the /microsim-generator skill to implement these Microsims
 | 06-thermodynamics-and-enzymes | 4 | 0 | 4 |
 | 07-photosynthesis | 4 | 1 | 3 |
 | 08-cellular-respiration | 4 | 0 | 4 |
-| 09-cell-signaling-and-feedback | 3 | 0 | 3 |
+| 09-cell-signaling-and-feedback | 3 | 1 | 2 |
 | 10-cell-cycle-mitosis-and-cancer | 4 | 0 | 4 |
 | 11-meiosis-and-mendelian-genetics | 6 | 0 | 6 |
 | 12-non-mendelian-and-chromosomal-genetics | 6 | 0 | 6 |
@@ -33,14 +33,14 @@ Always use the /microsim-generator skill to implement these Microsims
 | 16-population-genetics-and-hardy-weinberg | 3 | 0 | 3 |
 | 17-speciation-phylogenetics-and-macroevolution | 2 | 0 | 2 |
 | 18-population-ecology-and-life-history | 2 | 0 | 2 |
-| 19-community-ecology-and-species-interactions | 2 | 0 | 2 |
+| 19-community-ecology-and-species-interactions | 2 | 1 | 1 |
 | 20-ecosystem-ecology-and-conservation | 2 | 0 | 2 |
 
 ## Summary by Library
 
 | Library | Count |
 |---------|-------|
-| p5.js | 56 |
+| p5.js | 54 |
 | Chart.js | 5 |
 | vis-network | 2 |
 | vis-timeline | 1 |
@@ -268,60 +268,6 @@ Responsive: Must respond to window resize events
 - Slider to adjust initial ligand concentration (1–100 molecules); amplification counter updates
 
 **Responsive design:** All shapes and text scale proportionally with container width.
-
----
-
-## feedback-loop-simulator
-
-- **Title:** Feedback Loop Simulator
-- **Chapter:** 09-cell-signaling-and-feedback
-- **Library:** p5.js
-- **Bloom:** Create (L6)
-- **Status:** specified
-- **Complexity Rating:** 7
-- **Target:** `docs/sims/feedback-loop-simulator/feedback-loop-simulator.js`
-
-### Specification
-
-**Type:** MicroSim (p5.js)<br/>
-**sim-id:** feedback-loop-simulator<br/>
-**Library:** p5.js<br/>
-
-**Learning objective:** Students will be able to *compare* (Bloom's L4: Analyze) negative and positive feedback loops, predict how each type responds to a perturbation, and identify real biological examples of each.
-
-**Canvas:** 760 × 480 px, responsive.
-
-**Layout:** Left panel: causal loop diagram (circular arrow showing stimulus → detector → response → effector → stimulus). Right panel: time-series graph showing the variable over time.
-
-**Controls:**
-- Start Simulation/Pause Simulation
-- Toggle buttons: "Negative Feedback" / "Positive Feedback"
-- Dropdown: choose example (Negative: blood glucose, thermoregulation, enzyme inhibition; Positive: action potential, blood clotting, childbirth)
-- "Apply perturbation" button: introduces a step increase or decrease in the stimulus variable
-- "Reset" button: returns system to initial state
-
-**Negative feedback behavior:**
-- Time graph shows an oscillating damped curve that returns to set point after perturbation
-- Causal Loop diagram arrow labeled "dampens/opposes" with a "B" in the center for "Balance"
-- Color: blue (stabilizing)
-
-**Positive feedback behavior:**
-- Time graph shows an exponential/sigmoidal curve that moves away from baseline and may plateau (all-or-nothing)
-- Loop diagram arrow labeled "amplifies/reinforces" with a "R" in the center for "Reinforce"
-- Color: orange (amplifying)
-
-**Labels on graph:** Set point (horizontal dashed line), perturbation marker (vertical dashed line), response curve.
-
-**Interaction:**
-- Selecting a different example redraws the graph with that system's characteristic dynamics
-- Hover over any point on the graph to see the system state at that time
-- Click on loop diagram nodes (stimulus, detector, response, effector) for explanatory tooltips
-
-**Responsive design:** Graph and loop diagram scale proportionally with container width.
-
-**Note:** focus on drawing high quality circular arrows between the items in the left-side causal loop diagram
-
-**For Lesson Plan:** show a link to the Systems Thinking course https://dmccreary.github.io/systems-thinking/
 
 ---
 
@@ -1618,50 +1564,6 @@ Each node is a rounded rectangle with tool name and icon.
 **Colors:** Predation edges: red. Competition: orange. Mutualism: green. Commensalism: blue. Parasitism: purple.
 
 **Responsive design:** Graph recalculates layout on resize.
-
----
-
-## ecological-succession
-
-- **Title:** Ecological Succession Timeline
-- **Chapter:** 19-community-ecology-and-species-interactions
-- **Library:** p5.js
-- **Bloom:** Create (L6)
-- **Status:** specified
-- **Complexity Rating:** 6
-- **Target:** `docs/sims/ecological-succession/ecological-succession.js`
-
-### Specification
-
-**Type:** MicroSim (p5.js)<br/>
-**sim-id:** ecological-succession<br/>
-**Library:** p5.js<br/>
-
-**Learning objective:** Students will be able to *compare* (Bloom's L4: Analyze) primary and secondary succession and *sequence* (Bloom's L1: Remember) the stages from pioneer community to climax community.
-
-**Instructional Rationale:** An animated landscape that transforms through succession stages — with species appearing and disappearing — makes the temporal scale and gradual nature of succession visually compelling.
-
-**Canvas:** 780 × 440 px, responsive.
-
-**Layout:**
-
-- Top: Toggle — "Primary Succession" / "Secondary Succession"
-- Center: Landscape illustration showing terrain, soil depth, and vegetation at each stage
-  - 5 stages (slides or smooth animation)
-  - Primary: bare rock → lichens/mosses → grasses → shrubs → forest
-  - Secondary: disturbed field → grasses/annuals → shrubs → young forest → mature forest
-- Bottom: Timeline bar with stage labels and approximate time scales
-- Right panel: Species list for current stage with brief descriptions
-
-**Interaction:**
-- Click or drag along the timeline to advance through stages
-- "Compare" mode: primary and secondary shown side by side, aligned by time axis (showing secondary is faster)
-- Hover over any plant/animal icon: species name and role in succession
-- Soil depth indicator bar that grows through stages (primary) or stays constant (secondary)
-
-**Colors:** Bare rock: gray. Lichens/mosses: light green. Grasses: yellow-green. Shrubs: medium green. Forest: dark green. Soil: brown gradient increasing in depth.
-
-**Responsive design:** Landscape and timeline scale with container; comparison mode stacks vertically on narrow screens.
 
 ---
 
