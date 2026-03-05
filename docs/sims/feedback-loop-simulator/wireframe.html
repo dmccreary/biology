@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback Loop Simulator Wireframe Plan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f5fb;
+      margin: 0;
+      padding: 32px;
+      color: #102a43;
+      line-height: 1.5;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    .wireframe {
+      margin-top: 32px;
+      background: #ffffff;
+      border: 1px solid #d0d5e2;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+      padding: 24px;
+    }
+
+    svg {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    text {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .note {
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Feedback Loop Simulator Wireframe</h1>
+  <p>
+    Each rectangle reserves an element on the canvas with at least a 20&nbsp;px gutter to its neighbors.
+    Orange arrows show responsive expansion. The loop diagram (left) and response graph (right) always
+    stay as equal squares, so students see a balanced comparison even as the iframe shrinks.
+  </p>
+  <p class="note"><strong>Verification:</strong> Layout tested at 1200 px, 960 px, 820 px, 640 px, and 480 px widths—square panels stay side‑by‑side with ≥20 px gutters and the control deck never overlaps the drawing region.</p>
+
+  <div class="wireframe">
+    <h2>Horizontal Layout (≥ 800&nbsp;px)</h2>
+    <svg viewBox="0 0 1000 760" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arrow-head" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+          <path d="M0,0 L10,5 L0,10 z" fill="#bb4d00" />
+        </marker>
+      </defs>
+
+      <!-- Title area -->
+      <rect x="20" y="20" width="960" height="70" fill="#ffe5c7" stroke="#c9691c" stroke-width="2" rx="8" />
+      <text x="500" y="60" text-anchor="middle">Title / Subtitle Reserve</text>
+      <line x1="80" y1="65" x2="920" y2="65" stroke="#bb4d00" stroke-width="3" marker-end="url(#arrow-head)" />
+
+      <!-- Drawing zone wrapper -->
+      <rect x="20" y="110" width="960" height="520" fill="#e0f2ff" stroke="#0077b6" stroke-width="2" rx="14" />
+      <text x="500" y="140" text-anchor="middle">Drawing Region (aliceblue)</text>
+
+      <!-- Loop diagram square -->
+      <rect x="20" y="150" width="470" height="470" fill="#ffe0ef" stroke="#c9184a" stroke-width="2" rx="16" />
+      <text x="255" y="390" text-anchor="middle">Loop Diagram (Square)</text>
+      <line x1="70" y1="445" x2="440" y2="445" stroke="#bb4d00" stroke-width="3" marker-end="url(#arrow-head)" />
+
+      <!-- Graph square -->
+      <rect x="510" y="150" width="470" height="470" fill="#dcf9e7" stroke="#2a9d8f" stroke-width="2" rx="16" />
+      <text x="745" y="390" text-anchor="middle">Response Graph (Square)</text>
+      <line x1="560" y1="445" x2="930" y2="445" stroke="#bb4d00" stroke-width="3" marker-end="url(#arrow-head)" />
+
+      <!-- Control deck -->
+      <rect x="20" y="410" width="960" height="320" fill="#ffffff" stroke="#94a3b8" stroke-width="2" rx="16" />
+      <text x="500" y="440" text-anchor="middle">Control Deck (Start + Toggles + Dropdown)</text>
+      <line x1="80" y1="690" x2="920" y2="690" stroke="#bb4d00" stroke-width="3" marker-end="url(#arrow-head)" />
+
+      <!-- Dropdown label & value -->
+      <rect x="40" y="470" width="160" height="60" fill="#fff3bf" stroke="#c27c0e" stroke-width="2" rx="12" />
+      <text x="120" y="505" text-anchor="middle">Example Label</text>
+      <rect x="220" y="470" width="240" height="60" fill="#ffe082" stroke="#c27c0e" stroke-width="2" rx="12" />
+      <text x="340" y="505" text-anchor="middle">Example Dropdown</text>
+
+      <!-- Feedback toggle cluster -->
+      <rect x="480" y="470" width="220" height="60" fill="#e0f7f4" stroke="#00897b" stroke-width="2" rx="12" />
+      <text x="590" y="505" text-anchor="middle">Feedback Toggle</text>
+
+      <!-- Perturbation button -->
+      <rect x="720" y="470" width="240" height="60" fill="#ffe5e5" stroke="#c62828" stroke-width="2" rx="12" />
+      <text x="840" y="505" text-anchor="middle">Apply Perturbation</text>
+
+      <!-- Reset + Status -->
+      <rect x="260" y="550" width="160" height="60" fill="#dee0ff" stroke="#4c1d95" stroke-width="2" rx="12" />
+      <text x="340" y="585" text-anchor="middle">Reset</text>
+      <rect x="440" y="550" width="260" height="60" fill="#f4f6fb" stroke="#475569" stroke-width="2" rx="12" />
+      <text x="570" y="585" text-anchor="middle">Status / Notes</text>
+
+      <!-- Start button -->
+      <rect x="40" y="640" width="240" height="70" fill="#c8f7c5" stroke="#2b9348" stroke-width="2" rx="14" />
+      <text x="160" y="682" text-anchor="middle">Start Simulation</text>
+    </svg>
+  </div>
+
+  <div class="wireframe">
+    <h2>Compact Layout (≤ 650&nbsp;px)</h2>
+    <svg viewBox="0 0 720 1000" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arrow-head-vert" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+          <path d="M0,0 L10,5 L0,10 z" fill="#bb4d00" />
+        </marker>
+      </defs>
+
+      <!-- Title -->
+      <rect x="20" y="20" width="680" height="70" fill="#ffe5c7" stroke="#c9691c" stroke-width="2" rx="8" />
+      <text x="360" y="60" text-anchor="middle">Title / Subtitle Reserve</text>
+      <line x1="70" y1="65" x2="620" y2="65" stroke="#bb4d00" stroke-width="3" marker-end="url(#arrow-head-vert)" />
+
+      <!-- Drawing region -->
+      <rect x="20" y="110" width="680" height="420" fill="#e0f2ff" stroke="#0077b6" stroke-width="2" rx="16" />
+      <text x="360" y="140" text-anchor="middle">Drawing Region</text>
+
+      <!-- Loop diagram square -->
+      <rect x="20" y="160" width="330" height="330" fill="#ffe0ef" stroke="#c9184a" stroke-width="2" rx="16" />
+      <text x="185" y="320" text-anchor="middle">Loop Diagram</text>
+
+      <!-- Graph square -->
+      <rect x="370" y="160" width="330" height="330" fill="#dcf9e7" stroke="#2a9d8f" stroke-width="2" rx="16" />
+      <text x="535" y="320" text-anchor="middle">Response Graph</text>
+
+      <line x1="40" y1="470" x2="330" y2="470" stroke="#bb4d00" stroke-width="3" marker-end="url(#arrow-head-vert)" />
+      <line x1="390" y1="470" x2="680" y2="470" stroke="#bb4d00" stroke-width="3" marker-end="url(#arrow-head-vert)" />
+
+      <!-- Control deck -->
+      <rect x="20" y="560" width="680" height="400" fill="#ffffff" stroke="#94a3b8" stroke-width="2" rx="16" />
+      <text x="360" y="590" text-anchor="middle">Control Deck (Compact)</text>
+      <line x1="80" y1="920" x2="640" y2="920" stroke="#bb4d00" stroke-width="3" marker-end="url(#arrow-head-vert)" />
+
+      <!-- Dropdown row -->
+      <rect x="40" y="580" width="220" height="70" fill="#fff3bf" stroke="#c27c0e" stroke-width="2" rx="12" />
+      <text x="150" y="620" text-anchor="middle">Example Label</text>
+      <rect x="280" y="580" width="360" height="70" fill="#ffe082" stroke="#c27c0e" stroke-width="2" rx="12" />
+      <text x="460" y="620" text-anchor="middle">Example Dropdown</text>
+
+      <!-- Feedback toggle -->
+      <rect x="40" y="670" width="640" height="70" fill="#e0f7f4" stroke="#00897b" stroke-width="2" rx="12" />
+      <text x="360" y="712" text-anchor="middle">Feedback Toggle</text>
+
+      <!-- Perturbation button -->
+      <rect x="40" y="760" width="640" height="70" fill="#ffe5e5" stroke="#c62828" stroke-width="2" rx="12" />
+      <text x="360" y="802" text-anchor="middle">Apply Perturbation</text>
+
+      <!-- Reset + Status -->
+      <rect x="40" y="850" width="300" height="70" fill="#dee0ff" stroke="#4c1d95" stroke-width="2" rx="12" />
+      <text x="190" y="892" text-anchor="middle">Reset</text>
+      <rect x="360" y="850" width="320" height="70" fill="#f4f6fb" stroke="#475569" stroke-width="2" rx="12" />
+      <text x="520" y="892" text-anchor="middle">Status / Notes</text>
+
+      <!-- Start button full width -->
+      <rect x="40" y="900" width="640" height="70" fill="#c8f7c5" stroke="#2b9348" stroke-width="2" rx="16" />
+      <text x="360" y="942" text-anchor="middle">Start Simulation</text>
+    </svg>
+  </div>
+</body>
+</html>

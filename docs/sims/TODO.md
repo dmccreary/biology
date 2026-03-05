@@ -291,9 +291,10 @@ Responsive: Must respond to window resize events
 
 **Canvas:** 760 × 480 px, responsive.
 
-**Layout:** Left panel: loop diagram (circular arrow showing stimulus → detector → response → effector → stimulus). Right panel: time-series graph showing the variable over time.
+**Layout:** Left panel: causal loop diagram (circular arrow showing stimulus → detector → response → effector → stimulus). Right panel: time-series graph showing the variable over time.
 
 **Controls:**
+- Start Simulation/Pause Simulation
 - Toggle buttons: "Negative Feedback" / "Positive Feedback"
 - Dropdown: choose example (Negative: blood glucose, thermoregulation, enzyme inhibition; Positive: action potential, blood clotting, childbirth)
 - "Apply perturbation" button: introduces a step increase or decrease in the stimulus variable
@@ -301,12 +302,12 @@ Responsive: Must respond to window resize events
 
 **Negative feedback behavior:**
 - Time graph shows an oscillating damped curve that returns to set point after perturbation
-- Loop diagram arrow labeled "dampens/opposes"
+- Causal Loop diagram arrow labeled "dampens/opposes" with a "B" in the center for "Balance"
 - Color: blue (stabilizing)
 
 **Positive feedback behavior:**
 - Time graph shows an exponential/sigmoidal curve that moves away from baseline and may plateau (all-or-nothing)
-- Loop diagram arrow labeled "amplifies/reinforces"
+- Loop diagram arrow labeled "amplifies/reinforces" with a "R" in the center for "Reinforce"
 - Color: orange (amplifying)
 
 **Labels on graph:** Set point (horizontal dashed line), perturbation marker (vertical dashed line), response curve.
@@ -317,6 +318,10 @@ Responsive: Must respond to window resize events
 - Click on loop diagram nodes (stimulus, detector, response, effector) for explanatory tooltips
 
 **Responsive design:** Graph and loop diagram scale proportionally with container width.
+
+**Note:** focus on drawing high quality circular arrows between the items in the left-side causal loop diagram
+
+**For Lesson Plan:** show a link to the Systems Thinking course https://dmccreary.github.io/systems-thinking/
 
 ---
 

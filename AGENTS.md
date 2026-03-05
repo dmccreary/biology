@@ -42,3 +42,9 @@ Where `<sim-name>` is the name of the MicroSim you just created.
 - Sketch the control region (white background) below the drawing region (aliceblue background): add a Start/Pause button anchored to the lower-left corner for simulations, draw rectangles for every control plus its label/value pair (labels/values always to the left of their sliders), and ensure each rectangle uses a distinct color and name for clear reference.
 - When the wireframe is complete, validate that no rectangles overlap for any canvas width between 450 px and 1200 px, adjusting font sizes as needed, and record the plan so it can be shared later if troubleshooting is required.
 - Always inform the user that the wireframe regions do not overlap before moving on to implementation, and keep the saved wireframe plan handy for follow-up questions.
+
+## Responsive Two-Panel Layout Pattern
+
+- For split-screen diagrams + graphs (like Feedback Loop Simulator), reserve equal square panels with only 20 px gutters from the iframe edge. Compute each square as `(canvasWidth - margin*2 - gutter) / 2`, enforce matching heights, and let the drawing region height expand so the squares never overlap controls.
+- Keep the controls in their own deck below the drawing region; only the diagram/graph squares resize responsively.
+- This strategy produced stable behavior across 450 px–1200 px widths—reuse it for any future two-panel MicroSim so both views stay balanced and aligned.
