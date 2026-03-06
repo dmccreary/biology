@@ -4,16 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
-    <title>Biotechnology Toolkit Workflow using p5.js</title>
-    <style>
-        body { margin: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif; }
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
-    <script src="biotech-toolkit.js"></script>
+    <title>Biotechnology Toolkit Workflow</title>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
+            }
+        });
+    </script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main></main>
-    <br/>
-    <a href=".">Back to Lesson Plan</a>
+    <h2 id="diagram-title">Biotechnology Toolkit Workflow</h2>
+    <div class="container">
+        <div class="diagram-panel">
+            <div class="mermaid">
+flowchart TD
+    subgraph Track1["Gene Cloning"]
+        RE["Restriction Enzymes<br/>Cut DNA at<br/>specific sequences"]:::cloneNode
+        GEL1["Gel Electrophoresis<br/>Separate fragments<br/>by size"]:::sharedNode
+        CLONE["DNA Cloning<br/>Insert into vector"]:::cloneNode
+        RDNA["Recombinant DNA<br/>Gene joined<br/>to plasmid"]:::cloneNode
+        TRANS["Transform Bacteria<br/>Introduce plasmid<br/>into host cells"]:::cloneNode
+        SCREEN["Screen Colonies<br/>Identify cells<br/>with target gene"]:::cloneNode
+    end
+
+    subgraph Track2["Gene Editing"]
+        PCR["PCR<br/>Amplify target<br/>DNA region"]:::sharedNode
+        CRISPR["CRISPR-Cas9 Design<br/>Create guide RNA<br/>for target site"]:::editNode
+        DELIVER["Guide RNA + Cas9<br/>Deliver to cells"]:::editNode
+        REPAIR["DNA Repair Pathway<br/>NHEJ or HDR"]:::editNode
+        SEQ["DNA Sequencing<br/>Verify the edit"]:::sharedNode
+    end
+
+    RE --> GEL1
+    GEL1 --> CLONE
+    CLONE --> RDNA
+    RDNA --> TRANS
+    TRANS --> SCREEN
+
+    PCR --> CRISPR
+    CRISPR --> DELIVER
+    DELIVER --> REPAIR
+    REPAIR --> SEQ
+
+    PCR -.->|"Amplify insert"| CLONE
+    GEL1 -.->|"Verify edit size"| SEQ
+    SCREEN -.->|"Sequence to confirm"| SEQ
+
+    classDef cloneNode fill:#3498DB,stroke:#2471A3,stroke-width:2px,color:#fff,font-size:16px
+    classDef editNode fill:#27AE60,stroke:#1E8449,stroke-width:2px,color:#fff,font-size:16px
+    classDef sharedNode fill:#8E44AD,stroke:#6C3483,stroke-width:2px,color:#fff,font-size:16px
+
+    linkStyle default stroke:#999,stroke-width:2px,font-size:16px
+
+    style Track1 fill:#EBF5FB,stroke:#3498DB,stroke-width:2px,color:#2C3E50,font-size:16px
+    style Track2 fill:#EAFAF1,stroke:#27AE60,stroke-width:2px,color:#2C3E50,font-size:16px
+            </div>
+        </div>
+        <div class="info-panel">
+            <div class="legend">
+                <div class="legend-title">Color Key</div>
+                <div class="legend-item"><div class="legend-dot" style="background:#3498DB"></div>Gene Cloning tools</div>
+                <div class="legend-item"><div class="legend-dot" style="background:#27AE60"></div>Gene Editing tools</div>
+                <div class="legend-item"><div class="legend-dot" style="background:#8E44AD"></div>Shared tools</div>
+                <div class="legend-item" style="margin-top:4px; font-style:italic; color:#666">Dashed lines show shared connections</div>
+            </div>
+            <h3>Tool Details</h3>
+            <div id="info-display">
+                <p class="info-placeholder">Hover over a node to learn about that biotechnology tool and its role in the workflow.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const nodeInfo = {
+            'RE': {
+                title: 'Restriction Enzymes',
+                description: 'Molecular scissors that cut DNA at specific recognition sequences (typically 4-8 base pairs). Each restriction enzyme recognizes a unique palindromic sequence and makes a precise cut, often producing "sticky ends" that facilitate joining DNA from different sources. EcoRI, HindIII, and BamHI are commonly used examples. This is the first step in traditional gene cloning.'
+            },
+            'GEL1': {
+                title: 'Gel Electrophoresis',
+                description: 'A technique that separates DNA fragments by size using an electric field applied to an agarose gel. Smaller fragments migrate faster through the gel matrix. This shared tool is used in both cloning (to isolate the correct fragment after restriction digestion) and gene editing (to verify that the CRISPR edit produced the expected size change). Fragments are visualized with fluorescent dyes under UV light.'
+            },
+            'CLONE': {
+                title: 'DNA Cloning (Ligation)',
+                description: 'The target DNA fragment is inserted into a cloning vector (usually a bacterial plasmid) using DNA ligase, which joins the sticky or blunt ends. The vector contains an origin of replication so it can be copied inside a host cell, plus selectable markers (like antibiotic resistance genes) to identify cells that received the plasmid.'
+            },
+            'RDNA': {
+                title: 'Recombinant DNA',
+                description: 'The product of ligation: a plasmid containing both the vector backbone and the foreign gene of interest. This recombinant molecule carries the target gene linked to regulatory sequences that control its expression. Recombinant DNA technology is the foundation of genetic engineering and has applications in medicine (insulin production), agriculture (Bt crops), and research.'
+            },
+            'TRANS': {
+                title: 'Bacterial Transformation',
+                description: 'The process of introducing the recombinant plasmid into bacterial host cells (usually E. coli). Methods include heat shock (brief exposure to 42 degrees C makes membranes temporarily permeable) or electroporation (short electrical pulse creates pores). Only a small fraction of cells take up the plasmid, so a selection step is needed.'
+            },
+            'SCREEN': {
+                title: 'Colony Screening',
+                description: 'After transformation, bacteria are plated on selective media containing antibiotics. Only cells carrying the plasmid survive. Additional screening methods include blue-white screening (lacZ gene disruption), colony PCR, or restriction digest analysis to confirm the insert is present and correctly oriented. Positive colonies are then grown up for protein expression or further analysis.'
+            },
+            'PCR': {
+                title: 'PCR (Polymerase Chain Reaction)',
+                description: 'An enzyme-driven technique that amplifies a specific DNA sequence millions of times in just a few hours. Uses a thermostable DNA polymerase (Taq), two short primers flanking the target region, and repeated cycles of denaturation (95 degrees C), annealing (50-65 degrees C), and extension (72 degrees C). PCR is a shared tool: it amplifies the insert for cloning and the target region for CRISPR guide RNA design.'
+            },
+            'CRISPR': {
+                title: 'CRISPR-Cas9 Design',
+                description: 'A guide RNA (gRNA) is designed to match a 20-nucleotide target sequence adjacent to a PAM site (NGG for SpCas9). The gRNA directs the Cas9 nuclease to the exact genomic location for cutting. Careful design minimizes off-target effects. Online tools score candidate gRNAs for specificity and efficiency. The gRNA is synthesized or cloned into an expression vector.'
+            },
+            'DELIVER': {
+                title: 'Guide RNA + Cas9 Delivery',
+                description: 'The CRISPR components (gRNA and Cas9 protein or their expression vectors) are delivered into target cells. Delivery methods include lipofection (lipid nanoparticles), electroporation, viral vectors (AAV, lentivirus), or ribonucleoprotein (RNP) complexes. The choice depends on the cell type and whether transient or stable expression is needed.'
+            },
+            'REPAIR': {
+                title: 'DNA Repair Pathway',
+                description: 'After Cas9 cuts both DNA strands, the cell repairs the break by one of two pathways. NHEJ (Non-Homologous End Joining) is error-prone and often introduces insertions or deletions (indels) that disrupt the gene — useful for gene knockouts. HDR (Homology-Directed Repair) uses a supplied DNA template to make precise edits — useful for correcting mutations or inserting new sequences.'
+            },
+            'SEQ': {
+                title: 'DNA Sequencing',
+                description: 'The final verification step for both workflows. Sanger sequencing reads individual DNA fragments up to ~800 bp and is used to confirm specific edits or inserts. Next-generation sequencing (NGS) can screen thousands of clones or check for off-target CRISPR edits genome-wide. Sequencing confirms that the intended modification was made correctly.'
+            }
+        };
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>

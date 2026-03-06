@@ -39,14 +39,15 @@ nav:
   - MicroSims:
     - List of MicroSims: sims/index.md
     - Activation Energy and Reaction Coordinate: sims/activation-energy-diagram/index.md
+    - Alcoholic Fermentation Explorer: sims/alcoholic-fermentation-explorer/index.md
     - Animal Cell MicroSim: sims/animal-cell/index.md
     - Atomic Structure Explorer: sims/atomic-structure-explorer/index.md
     - ATP Yield Calculator: sims/atp-yield-calculator/index.md
-    - Brewing Beer: sims/brewing-beer /index.md
     - Biogeochemical Cycles Dashboard: sims/biogeochemical-cycles/index.md
     - Biotechnology Toolkit Workflow: sims/biotech-toolkit/index.md
     - Blood Type Explorer: sims/blood-type-explorer/index.md
     - Blood Type Inheritance Explorer: sims/blood-type-inheritance/index.md
+    - Brewing Beer Process Explorer: sims/brewing-beer/index.md
     - Buffer Action Simulator: sims/buffer-action-simulator/index.md
     - C3, C4, and CAM Photosynthesis Comparison: sims/photosynthesis-strategies/index.md
     - Calvin Cycle Simulator: sims/calvin-cycle-simulator/index.md
@@ -90,7 +91,9 @@ nav:
     - Interactive pH Scale Explorer: sims/ph-scale-explorer/index.md
     - Interactive Punnett Square Calculator: sims/punnett-square-calculator/index.md
     - Krebs Cycle Explorer: sims/krebs-cycle-explorer/index.md
+    - Lactic Acid Fermentation Explorer: sims/lactic-fermentation-explorer/index.md
     - Light-Dependent Reactions (Z-Scheme): sims/light-dependent-reactions/index.md
+    - Load Image Test: sims/load-image-test/index.md
     - Meiosis Stages Explorer: sims/meiosis-stages/index.md
     - Mendel-to-Meiosis Concept Map: sims/mendel-meiosis-map/index.md
     - Mitochondria & Electron Transport Chain: sims/mitochondria/index.md
@@ -120,6 +123,10 @@ nav:
     - Translation Step-Through Simulator: sims/translation-simulator/index.md
     - Water Molecule Polarity: sims/water-molecule-polarity/index.md
     - X-Linked Inheritance Simulator: sims/x-linked-inheritance/index.md
+
+
+
+
 
 
 

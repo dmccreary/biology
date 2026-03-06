@@ -1,6 +1,6 @@
 # MicroSim DONE — Completed Implementations
 
-**Completed:** 30 MicroSims
+**Completed:** 32 MicroSims
 
 These MicroSims have been fully implemented with substantial JavaScript or shared-libs overlays.
 
@@ -898,5 +898,47 @@ Responsive design: Canvas width and controls respond to window resize events; ba
 **Colors:** Bare rock: gray. Lichens/mosses: light green. Grasses: yellow-green. Shrubs: medium green. Forest: dark green. Soil: brown gradient increasing in depth.
 
 **Responsive design:** Landscape and timeline scale with container; comparison mode stacks vertically on narrow screens.
+
+---
+
+## biotech-toolkit
+
+- **Title:** Biotechnology Toolkit Workflow
+- **Chapter:** 14-mutations-gene-regulation-and-biotechnology
+- **Library:** Mermaid.js
+- **Bloom:** Analyze (L4)
+- **Status:** complete
+- **Target:** `docs/sims/biotech-toolkit/main.html`
+
+### Specification
+
+**Type:** Workflow diagram (Mermaid.js)<br/>
+**sim-id:** biotech-toolkit<br/>
+**Library:** Mermaid.js<br/>
+
+**Learning objective:** Students will be able to *organize* (Bloom's L4: Analyze) the major biotechnology tools into a logical workflow and *explain* (Bloom's L2: Understand) how each tool contributes to a gene cloning or gene editing experiment.
+
+Layout: 2/3 diagram panel + 1/3 info panel. Two parallel tracks (Gene Cloning in blue, Gene Editing in green) with shared tools in purple (PCR, Gel Electrophoresis, DNA Sequencing). Dashed lines connect shared tools between tracks. Hover any node for detailed tool descriptions in the info panel. Color-coded legend in the info panel.
+
+---
+
+## light-dependent-reactions
+
+- **Title:** Light-Dependent Reactions (Z-Scheme)
+- **Chapter:** 07-photosynthesis
+- **Library:** p5.js
+- **Bloom:** Understand (L2)
+- **Status:** complete
+- **Target:** `docs/sims/light-dependent-reactions/light-dependent-reactions.js`
+
+### Specification
+
+Type: microsim (p5.js)<br/>
+**sim-id:** light-dependent-reactions<br/>
+**Library:** p5.js<br/>
+
+**Learning objective:** Students will trace the path of an electron from water through PSII, the electron transport chain, and PSI to NADPH, identifying each carrier molecule, the direction of proton pumping, and where ATP and NADPH are produced.
+
+Layout: Z-scheme energy diagram (upper left, 70%) with reduction potential y-axis (-1.5V to +1.0V) and 10 carrier nodes in zig-zag path. Thylakoid membrane schematic (lower left) with PSII, Cyt b6f, PSI, and ATP synthase. Info panel (right, 30%) with step title, description, equation, and running product tally. 6-step step-through with Previous/Next/Play All/Reset buttons. Photon arrows, proton pumping arrows, and product labels appear progressively.
 
 ---

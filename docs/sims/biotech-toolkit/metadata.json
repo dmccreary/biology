@@ -1,45 +1,82 @@
 {
   "title": "Biotechnology Toolkit Workflow",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
-  "description": "Interactive MicroSim for biotechnology toolkit workflow",
-  "date": "2026-02-27",
+  "subject": "AP Biology",
+  "description": "Interactive Mermaid workflow diagram comparing gene cloning and CRISPR gene editing pipelines with shared tools highlighted",
+  "date": "2026-03-06",
+  "type": "Interactive Workflow Diagram",
+  "format": "text/html",
+  "language": "en-US",
+  "coverage": "Introductory to Intermediate",
+  "rights": "CC BY-NC-SA 4.0",
+  "audience": "High School AP Biology",
   "educational": {
-    "gradeLevel": [
-      "9",
-      "10",
-      "11",
-      "12"
-    ],
-    "subjectArea": "Mathematics",
-    "topic": "Biotechnology Toolkit Workflow",
+    "gradeLevel": ["9", "10", "11", "12"],
+    "subjectArea": "Biology",
+    "topic": "Biotechnology Tools and Gene Engineering",
     "learningObjectives": [
-      "TODO: Add learning objectives"
+      "Organize the major biotechnology tools into a logical workflow",
+      "Explain how each tool contributes to a gene cloning or gene editing experiment",
+      "Compare gene cloning and CRISPR-Cas9 gene editing pipelines",
+      "Identify shared tools used in both workflows"
     ],
-    "bloomsTaxonomy": "Create",
+    "bloomsTaxonomy": "Analyze",
     "duration": "10-15 minutes",
-    "prerequisites": [],
+    "prerequisites": [
+      "DNA structure and base pairing",
+      "Transcription and translation",
+      "Enzyme specificity"
+    ],
     "standards": []
   },
   "technical": {
-    "framework": "p5.js",
+    "framework": "Mermaid.js",
     "version": "1.0",
     "canvasDimensions": {
       "width": "responsive",
-      "height": 450
+      "height": 750
     },
     "responsive": true,
-    "dependencies": [],
+    "dependencies": ["mermaid@11"],
     "accessibility": {
-      "hasAltText": false,
+      "hasAltText": true,
       "keyboardNavigable": false
     }
   },
   "pedagogical": {
-    "teachingStrategy": "Interactive exploration",
-    "keyQuestions": [],
-    "commonMisconceptions": [],
-    "assessmentOpportunities": []
+    "teachingStrategy": "Interactive exploration with hover details",
+    "keyQuestions": [
+      "What is the purpose of restriction enzymes in gene cloning?",
+      "How does CRISPR-Cas9 differ from traditional gene cloning?",
+      "Which tools are shared between gene cloning and gene editing?",
+      "When would you choose HDR over NHEJ for DNA repair?"
+    ],
+    "commonMisconceptions": [
+      "CRISPR and cloning are completely separate techniques with no shared tools",
+      "PCR is only used in gene editing, not in cloning",
+      "CRISPR always inserts new genes (it can also knock out or correct existing ones)"
+    ],
+    "assessmentOpportunities": [
+      "Identify which workflow to use for a given experimental goal",
+      "Explain the role of each shared tool in both contexts"
+    ]
   },
+  "diagram_type": "flowchart",
+  "direction": "TD",
+  "node_count": "11",
+  "edge_count": "11",
+  "concepts": [
+    "Restriction Enzymes",
+    "Gel Electrophoresis",
+    "DNA Cloning",
+    "Recombinant DNA",
+    "Bacterial Transformation",
+    "Colony Screening",
+    "PCR",
+    "CRISPR-Cas9",
+    "Guide RNA Delivery",
+    "DNA Repair Pathways",
+    "DNA Sequencing"
+  ],
   "chapter": "14-mutations-gene-regulation-and-biotechnology"
 }

@@ -1,6 +1,6 @@
 # MicroSim TODO — Remaining Implementations
 
-**Generated:** 2026-02-28 | **Remaining:** 44 of 59
+**Generated:** 2026-02-28 | **Remaining:** 42 of 59
 
 **Note:** All MicroSim directories ALREADY been created and the three core
 scaffolding files have been generated.  (`main.html`, `index.md`, `metadata.json`).
@@ -21,14 +21,14 @@ Always use the /microsim-generator skill to implement these Microsims
 | 04-cell-organization-and-organelles | 8 | 7 | 1 |
 | 05-cell-membranes-and-transport | 4 | 4 | 0 |
 | 06-thermodynamics-and-enzymes | 4 | 0 | 4 |
-| 07-photosynthesis | 4 | 1 | 3 |
+| 07-photosynthesis | 4 | 2 | 2 |
 | 08-cellular-respiration | 4 | 0 | 4 |
 | 09-cell-signaling-and-feedback | 3 | 1 | 2 |
 | 10-cell-cycle-mitosis-and-cancer | 4 | 0 | 4 |
 | 11-meiosis-and-mendelian-genetics | 6 | 0 | 6 |
 | 12-non-mendelian-and-chromosomal-genetics | 6 | 0 | 6 |
 | 13-central-dogma-replication-and-protein-synthesis | 4 | 0 | 4 |
-| 14-mutations-gene-regulation-and-biotechnology | 4 | 0 | 4 |
+| 14-mutations-gene-regulation-and-biotechnology | 4 | 1 | 3 |
 | 15-evidence-for-evolution | 3 | 0 | 3 |
 | 16-population-genetics-and-hardy-weinberg | 3 | 0 | 3 |
 | 17-speciation-phylogenetics-and-macroevolution | 2 | 0 | 2 |
@@ -46,70 +46,6 @@ Always use the /microsim-generator skill to implement these Microsims
 | vis-timeline | 1 |
 
 
-
-## light-dependent-reactions
-
-- **Title:** Light-Dependent Reactions (Z-Scheme)
-- **Chapter:** 07-photosynthesis
-- **Library:** p5.js
-- **Bloom:** Understand (L2)
-- **Status:** specified
-- **Complexity Rating:** 8
-- **Target:** `docs/sims/light-dependent-reactions/light-dependent-reactions.js`
-
-### Specification
-
-Type: microsim
-**sim-id:** light-dependent-reactions<br/>
-**Library:** p5.js<br/>
-
-Bloom Level: Understand (L2)
-Bloom Verb: explain, trace
-Learning Objective: Students will trace the path of an electron from water through PSII, the electron transport chain, and PSI to NADPH, identifying each carrier molecule, the direction of proton pumping, and where ATP and NADPH are produced.
-
-Canvas layout:
-- Main drawing area (70%): Z-scheme energy diagram — y-axis shows electron energy (low at bottom = high reduction potential, high at top = low reduction potential); x-axis shows reaction sequence left to right
-- Right info panel (30%): Label and detailed description of the currently highlighted component
-
-Visual elements:
-- y-axis label: "Electron Energy / Reduction Potential (V)" with scale from −1.5 V (top) to +1.0 V (bottom)
-- Horizontal lines (energy levels) for each electron carrier labeled at left: H₂O/O₂, P680, PQ, Cyt b6f, PC, P700, Fd, NADP⁺/NADPH
-- Arrows connecting each level showing electron flow direction (zig-zag Z shape)
-- Upward arrows at PSII (P680) and PSI (P700) labeled "Light energy input (photon)" with a lightning bolt icon
-- Thylakoid membrane schematic drawn below the energy diagram showing PSII, cytochrome b6f, PSI, and ATP synthase embedded in membrane, with proton pumping arrows pointing into the lumen
-- Lumen (inside thylakoid) labeled with accumulating H⁺ ions; stroma labeled outside
-- ATP synthase shown with rotating symbol and "ATP" output arrow into stroma
-- NADPH shown forming at the stroma face of PSI
-
-Step-through animation sequence:
-- Step 1: Photon hits PSII → P680 electron excited (glowing dot rises up the y-axis)
-- Step 2: Excited electron transfers to PQ; water splitting replaces it (O₂ released)
-- Step 3: Electron passes through Cyt b6f; H⁺ pumped into lumen (proton counter increments)
-- Step 4: Electron arrives at P700 via PC; second photon excites it
-- Step 5: Excited electron transfers to Fd → NADP⁺ reductase → NADPH formed
-- Step 6: Proton gradient shown; ATP synthase rotates; ATP produced
-
-Interactive controls:
-- Button "Next Step": advances one step
-- Button "Previous Step": goes back
-- Button "Play All": auto-advances at 2-second intervals
-- Button "Reset"
-- Hovering any labeled carrier: info panel updates with carrier name, chemical formula, and role
-
-Default state: Step 1 shown with H₂O and P680 highlighted
-
-Data Visibility Requirements:
-Stage 1: Water splitting equation shown: 2H₂O → 4H⁺ + 4e⁻ + O₂
-Stage 2: Electron energy levels and Z-path drawn with carrier labels
-Stage 3: Proton accumulation in lumen counted per cycle
-Stage 4: ATP and NADPH outputs labeled with stoichiometry
-
-Instructional Rationale: The Z-scheme is the canonical representation of the light reactions, but it is notoriously confusing when presented statically. A step-through animation that moves an electron dot along the path, simultaneously showing the energy diagram and the membrane cross-section, makes the spatial and energetic relationships simultaneously clear.
-
-Canvas size: 720 × 480 px
-Responsive: Must respond to window resize events
-
----
 
 ## photosynthesis-strategies
 
@@ -1105,48 +1041,6 @@ Each pedigree object includes: nodes (generation, position, sex, affected status
 **Colors:** Promoter: green. Operator: orange. Structural genes: blue. Repressor: red (active) / gray (inactive). Inducer: purple. Corepressor: yellow.
 
 **Responsive design:** Operon diagram scales horizontally; condition panel wraps below on narrow screens.
-
----
-
-## biotech-toolkit
-
-- **Title:** Biotechnology Toolkit Workflow
-- **Chapter:** 14-mutations-gene-regulation-and-biotechnology
-- **Library:** mermaid
-- **Bloom:** Create (L6)
-- **Status:** specified
-- **Complexity Rating:** 6
-- **Target:** `docs/sims/biotech-toolkit/biotech-toolkit.js`
-
-### Specification
-
-**Type:** Workflow diagram (p5.js)<br/>
-**sim-id:** biotech-toolkit<br/>
-**Library:** mermaid<br/>
-
-**Learning objective:** Students will be able to *organize* (Bloom's L4: Analyze) the major biotechnology tools into a logical workflow and *explain* (Bloom's L2: Understand) how each tool contributes to a gene cloning or gene editing experiment.
-
-**Instructional Rationale:** A clickable workflow diagram connecting the tools in a logical experimental pipeline helps students understand that these are not isolated techniques but rather steps in an integrated process.
-
-**Canvas:** 780 × 480 px, responsive.
-
-**Layout:** Flowchart with two parallel tracks:
-
-- **Track 1: Gene Cloning** — Restriction enzymes → Gel electrophoresis → DNA cloning → Recombinant DNA → Transform bacteria → Screen colonies
-- **Track 2: Gene Editing** — PCR (amplify target region) → CRISPR-Cas9 design → Guide RNA + Cas9 delivery → Repair pathway → Verify edit (sequencing)
-- **Shared tools** (connecting both tracks): PCR, Gel electrophoresis, DNA sequencing
-
-Each node is a rounded rectangle with tool name and icon.
-
-**Interaction:**
-- Hover over any node: tooltip with 2–3 sentence description of the tool and its purpose in this step
-- Click any node: expands to show a mini-diagram of how the tool works
-- Arrows between nodes animate to show flow direction
-- Toggle: "Show Timeline" overlays approximate time for each step
-
-**Colors:** Gene cloning track: blue (#3498DB). Gene editing track: green (#27AE60). Shared tools: purple (#8E44AD). Active node: bright highlight.
-
-**Responsive design:** Flowchart reflows to vertical layout on narrow screens.
 
 ---
 
