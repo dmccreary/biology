@@ -594,6 +594,16 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1494,6 +1504,54 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#biotech-toolkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      biotech-toolkit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="biotech-toolkit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#specification_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specification
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#light-dependent-reactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      light-dependent-reactions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="light-dependent-reactions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#specification_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specification
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1519,7 +1577,7 @@
 
 
 <h1 id="microsim-done-completed-implementations">MicroSim DONE — Completed Implementations</h1>
-<p><strong>Completed:</strong> 30 MicroSims</p>
+<p><strong>Completed:</strong> 32 MicroSims</p>
 <p>These MicroSims have been fully implemented with substantial JavaScript or shared-libs overlays.</p>
 <hr>
 <h2 id="eukaryotic-gene-regulation">eukaryotic-gene-regulation</h2>
@@ -2233,6 +2291,38 @@ Responsive: Must respond to window resize events</p>
 - Soil depth indicator bar that grows through stages (primary) or stays constant (secondary)</p>
 <p><strong>Colors:</strong> Bare rock: gray. Lichens/mosses: light green. Grasses: yellow-green. Shrubs: medium green. Forest: dark green. Soil: brown gradient increasing in depth.</p>
 <p><strong>Responsive design:</strong> Landscape and timeline scale with container; comparison mode stacks vertically on narrow screens.</p>
+<hr>
+<h2 id="biotech-toolkit">biotech-toolkit</h2>
+<ul>
+<li><strong>Title:</strong> Biotechnology Toolkit Workflow</li>
+<li><strong>Chapter:</strong> 14-mutations-gene-regulation-and-biotechnology</li>
+<li><strong>Library:</strong> Mermaid.js</li>
+<li><strong>Bloom:</strong> Analyze (L4)</li>
+<li><strong>Status:</strong> complete</li>
+<li><strong>Target:</strong> <code>docs/sims/biotech-toolkit/main.html</code></li>
+</ul>
+<h3 id="specification_21">Specification</h3>
+<p><strong>Type:</strong> Workflow diagram (Mermaid.js)<br>
+<strong>sim-id:</strong> biotech-toolkit<br>
+<strong>Library:</strong> Mermaid.js<br></p>
+<p><strong>Learning objective:</strong> Students will be able to <em>organize</em> (Bloom's L4: Analyze) the major biotechnology tools into a logical workflow and <em>explain</em> (Bloom's L2: Understand) how each tool contributes to a gene cloning or gene editing experiment.</p>
+<p>Layout: 2/3 diagram panel + 1/3 info panel. Two parallel tracks (Gene Cloning in blue, Gene Editing in green) with shared tools in purple (PCR, Gel Electrophoresis, DNA Sequencing). Dashed lines connect shared tools between tracks. Hover any node for detailed tool descriptions in the info panel. Color-coded legend in the info panel.</p>
+<hr>
+<h2 id="light-dependent-reactions">light-dependent-reactions</h2>
+<ul>
+<li><strong>Title:</strong> Light-Dependent Reactions (Z-Scheme)</li>
+<li><strong>Chapter:</strong> 07-photosynthesis</li>
+<li><strong>Library:</strong> p5.js</li>
+<li><strong>Bloom:</strong> Understand (L2)</li>
+<li><strong>Status:</strong> complete</li>
+<li><strong>Target:</strong> <code>docs/sims/light-dependent-reactions/light-dependent-reactions.js</code></li>
+</ul>
+<h3 id="specification_22">Specification</h3>
+<p>Type: microsim (p5.js)<br>
+<strong>sim-id:</strong> light-dependent-reactions<br>
+<strong>Library:</strong> p5.js<br></p>
+<p><strong>Learning objective:</strong> Students will trace the path of an electron from water through PSII, the electron transport chain, and PSI to NADPH, identifying each carrier molecule, the direction of proton pumping, and where ATP and NADPH are produced.</p>
+<p>Layout: Z-scheme energy diagram (upper left, 70%) with reduction potential y-axis (-1.5V to +1.0V) and 10 carrier nodes in zig-zag path. Thylakoid membrane schematic (lower left) with PSII, Cyt b6f, PSI, and ATP synthase. Info panel (right, 30%) with step title, description, equation, and running product tally. 6-step step-through with Previous/Next/Play All/Reset buttons. Photon arrows, proton pumping arrows, and product labels appear progressively.</p>
 <hr>
 
 

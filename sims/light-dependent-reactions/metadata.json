@@ -1,24 +1,25 @@
 {
   "title": "Light-Dependent Reactions (Z-Scheme)",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
-  "description": "Interactive MicroSim for light-dependent reactions (z-scheme)",
-  "date": "2026-02-27",
+  "subject": "AP Biology",
+  "description": "Interactive step-through MicroSim showing electron flow through the Z-scheme of photosynthesis light reactions",
+  "date": "2026-03-06",
   "educational": {
-    "gradeLevel": [
-      "9",
-      "10",
-      "11",
-      "12"
-    ],
-    "subjectArea": "Mathematics",
-    "topic": "Light-Dependent Reactions (Z-Scheme)",
+    "gradeLevel": ["9", "10", "11", "12"],
+    "subjectArea": "Biology",
+    "topic": "Photosynthesis Light-Dependent Reactions",
     "learningObjectives": [
-      "TODO: Add learning objectives"
+      "Trace the path of an electron from water through PSII, ETC, and PSI to NADPH",
+      "Identify each carrier molecule and the direction of proton pumping",
+      "Explain where ATP and NADPH are produced in the light reactions"
     ],
     "bloomsTaxonomy": "Understand",
     "duration": "10-15 minutes",
-    "prerequisites": [],
+    "prerequisites": [
+      "Chloroplast structure",
+      "Redox reactions",
+      "Electrochemical gradients"
+    ],
     "standards": []
   },
   "technical": {
@@ -26,20 +27,31 @@
     "version": "1.0",
     "canvasDimensions": {
       "width": "responsive",
-      "height": 450
+      "height": 550
     },
     "responsive": true,
     "dependencies": [],
     "accessibility": {
-      "hasAltText": false,
+      "hasAltText": true,
       "keyboardNavigable": false
     }
   },
   "pedagogical": {
-    "teachingStrategy": "Interactive exploration",
-    "keyQuestions": [],
-    "commonMisconceptions": [],
-    "assessmentOpportunities": []
+    "teachingStrategy": "Step-through with prediction prompts",
+    "keyQuestions": [
+      "Why does the Z-scheme have two upward energy jumps?",
+      "Where is the proton gradient generated?",
+      "How does the proton gradient drive ATP synthesis?"
+    ],
+    "commonMisconceptions": [
+      "Light reactions only occur in the presence of visible light",
+      "PSII comes after PSI (PSII was named second but acts first)",
+      "ATP is produced directly by the photosystems"
+    ],
+    "assessmentOpportunities": [
+      "Trace electron path from H2O to NADPH",
+      "Explain the role of each complex in the thylakoid membrane"
+    ]
   },
   "chapter": "07-photosynthesis"
 }

@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for light-dependent reactions (z-scheme).">
+        <meta name="description" content="Interactive step-through MicroSim showing electron flow through the Z-scheme of photosynthesis, from water splitting through PSII and PSI to NADPH and ATP production.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -12,10 +12,10 @@
         <link rel="canonical" href="https://dmccreary.github.io/biology/sims/light-dependent-reactions/">
       
       
-        <link rel="prev" href="../krebs-cycle-explorer/">
+        <link rel="prev" href="../lactic-fermentation-explorer/">
       
       
-        <link rel="next" href="../meiosis-stages/">
+        <link rel="next" href="../load-image-test/">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Light-Dependent Reactions (Z-Scheme) - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for light-dependent reactions (z-scheme).">
+        <meta property="og:description" content="Interactive step-through MicroSim showing electron flow through the Z-scheme of photosynthesis, from water splitting through PSII and PSI to NADPH and ATP production.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/light-dependent-reactions/light-dependent-reactions.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Light-Dependent Reactions (Z-Scheme) - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for light-dependent reactions (z-scheme).">
+        <meta name="twitter:description" content="Interactive step-through MicroSim showing electron flow through the Z-scheme of photosynthesis, from water splitting through PSII and PSI to NADPH and ATP production.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/light-dependent-reactions/light-dependent-reactions.png">
       
@@ -600,6 +600,16 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -655,6 +665,29 @@
   
   <span class="md-ellipsis">
     Activation Energy and Reaction Coordinate
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alcoholic-fermentation-explorer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Alcoholic Fermentation Explorer
     
   </span>
   
@@ -816,6 +849,29 @@
   
   <span class="md-ellipsis">
     Blood Type Inheritance Explorer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../brewing-beer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Brewing Beer Process Explorer
     
   </span>
   
@@ -1500,6 +1556,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../fermentation-comparison-matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fermentation Comparison Matrix
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../fermentation-pathways/" class="md-nav__link">
         
   
@@ -1796,6 +1875,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../lactic-fermentation-explorer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lactic Acid Fermentation Explorer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1867,9 +1969,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
+  <a href="#key-concepts" class="md-nav__link">
     <span class="md-ellipsis">
-      Iframe Embed Code
+      Key Concepts
     </span>
   </a>
   
@@ -1948,6 +2050,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../load-image-test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Load Image Test
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2925,9 +3050,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
+  <a href="#key-concepts" class="md-nav__link">
     <span class="md-ellipsis">
-      Iframe Embed Code
+      Key Concepts
     </span>
   </a>
   
@@ -3027,43 +3152,58 @@
 
 
 <h1 id="light-dependent-reactions-z-scheme">Light-Dependent Reactions (Z-Scheme)</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="475" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Light-Dependent Reactions (Z-Scheme) MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">Run the Light-Dependent Reactions MicroSim Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This interactive step-through diagram traces the path of an electron through the light-dependent reactions of photosynthesis. The <strong>Z-scheme energy diagram</strong> (upper left) shows electron energy at each carrier molecule, while the <strong>thylakoid membrane schematic</strong> (lower left) shows the physical arrangement of PSII, cytochrome b6f, PSI, and ATP synthase. The <strong>info panel</strong> (right) explains each step with equations and running product tallies.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
-<h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
-<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/light-dependent-reactions/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
-        <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
-        <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li>Click <strong>Next Step</strong> to advance through the 6 stages of the light reactions</li>
+<li>Click <strong>Previous</strong> to go back and review</li>
+<li>Click <strong>Play All</strong> to auto-advance at 2.5-second intervals</li>
+<li>Watch the <strong>orange highlighted path</strong> trace electron flow on the Z-scheme</li>
+<li>Track the <strong>product tally</strong> in the info panel (O2, H+ gradient, NADPH, ATP)</li>
+</ol>
+<h2 id="key-concepts">Key Concepts</h2>
+<ul>
+<li><strong>PSII (P680)</strong> absorbs a photon, exciting an electron to high energy</li>
+<li><strong>Water splitting</strong> replaces the lost electron, releasing O2 and H+ into the lumen</li>
+<li><strong>Cytochrome b6f</strong> pumps H+ into the lumen, building the proton gradient</li>
+<li><strong>PSI (P700)</strong> absorbs a second photon, boosting the electron to very high energy</li>
+<li><strong>NADPH</strong> forms when the electron reduces NADP+ via ferredoxin</li>
+<li><strong>ATP synthase</strong> uses the H+ gradient (chemiosmosis) to produce ATP</li>
+</ul>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>9-12 (AP Biology)</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Chloroplast structure (thylakoid membranes, stroma, lumen)</li>
+<li>Basic understanding of redox reactions and electron carriers</li>
+<li>Concept of electrochemical gradients</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Step-through</strong> (5 min): Students advance through all 6 steps, reading each description and tracking where electrons, protons, and products go</li>
+<li><strong>Prediction</strong> (5 min): Before clicking Next Step, students predict which carrier receives the electron next and whether energy goes up or down</li>
+<li><strong>Assessment</strong> (5 min): Students answer: "Why does the Z-scheme have two upward jumps? What provides the energy for each?"</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Can students trace the complete electron path from H2O to NADPH?</li>
+<li>Can students explain why two photosystems are needed?</li>
+<li>Can students identify where the proton gradient is generated and how it drives ATP synthesis?</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Light-dependent_reactions">Light-dependent reactions - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Photosystem_II">Photosystem II - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Photosystem_I">Photosystem I - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Chemiosmosis">Chemiosmosis - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Z_scheme">Z scheme - Wikipedia</a></li>
 </ol>
 
 
@@ -3105,7 +3245,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../krebs-cycle-explorer/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Krebs Cycle Explorer">
+          <a href="../lactic-fermentation-explorer/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Lactic Acid Fermentation Explorer">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -3115,20 +3255,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Krebs Cycle Explorer
+                Lactic Acid Fermentation Explorer
               </div>
             </div>
           </a>
         
         
           
-          <a href="../meiosis-stages/" class="md-footer__link md-footer__link--next" aria-label="Next: Meiosis Stages Explorer">
+          <a href="../load-image-test/" class="md-footer__link md-footer__link--next" aria-label="Next: Load Image Test">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Meiosis Stages Explorer
+                Load Image Test
               </div>
             </div>
             <div class="md-footer__button md-icon">
