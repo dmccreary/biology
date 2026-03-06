@@ -56,3 +56,8 @@ Where `<sim-name>` is the name of the MicroSim you just created.
 - **Modularize tricky visuals.** The circular arrows consumed most of the session. Move tangent/arrow helpers to a shared utility so future diagrams reuse the vetted logic.
 - **Use reusable control layouts.** Build a declarative control deck (label + element definitions) that auto-positions items, avoiding manual pixel tweaks for every request.
 - **Capture snapshots per milestone.** After each layout change, auto-generate visual diffs so requesters can sign off quickly without repeated restarts.
+
+## Asset Loading in p5.js (Local + Editor)
+
+- When a MicroSim uses local image assets, the p5.js web editor will only find those files if we reference them using the editor’s sketch path (`https://preview.p5js.org/<user>/sketches/<id>/image.png`). We now resolve asset paths dynamically: if `window.location.hostname` includes `p5js.org`, we prepend the current `/sketches/<id>/` path to the filename; otherwise we use the plain filename that works under MkDocs and local servers. See `docs/sims/ecological-succession/ecological-succession.js` (`resolveAssetPath()` inside `preload()`) for the reference implementation.
+- For basic cases where assets are uploaded alongside the sketch (the common MkDocs + p5.js editor workflow), a plain `loadImage('filename.png')` is sufficient, and we do **not** need to place anything inside the editor’s `assets/` folder. See `docs/sims/load-image-test/` for a minimal harness that confirms the same file path works in both environments. Default to this simple pattern whenever possible; only introduce path resolution logic when we have multiple assets or nested directories that the p5 editor cannot auto-resolve.

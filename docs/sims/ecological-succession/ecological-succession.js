@@ -209,12 +209,34 @@ let labelTargets = [];
 let isComplete = false;
 
 function preload() {
-  stageImages = [];
+  stageImages = new Array(5).fill(null);
   for (let i = 1; i <= 5; i += 1) {
-    stageImages.push(loadImage(`image-${i}.png`, undefined, () => {
-      stageImages[i - 1] = null;
-    }));
+    const index = i - 1;
+    const filename = `image-${i}.png`;
+    const source = resolveAssetPath(filename);
+    stageImages[index] = loadImage(
+      source,
+      (img) => {
+        stageImages[index] = img;
+      },
+      () => {
+        stageImages[index] = null;
+      }
+    );
   }
+}
+
+function resolveAssetPath(filename) {
+  if (typeof window !== 'undefined') {
+    const { hostname, pathname } = window.location;
+    if (hostname.includes('p5js.org')) {
+      const sketchMatch = pathname.match(/^(.*\/sketches\/[^/]+)(?:\/|$)/);
+      if (sketchMatch && sketchMatch[1]) {
+        return `${sketchMatch[1]}/${filename}`;
+      }
+    }
+  }
+  return filename;
 }
 
 function setup() {
@@ -277,8 +299,8 @@ function draw() {
   const delta = millis() - lastUpdate;
   if (isPlaying) {
     const speedFactor = speedSlider ? speedSlider.value() : 3;
-    const rate = 0.00002 * speedFactor;
-    timelinePosition += rate * delta;
+    const progressRate = 0.00002 * speedFactor;
+    timelinePosition += progressRate * delta;
     if (timelinePosition >= 1) {
       timelinePosition = 1;
       isComplete = true;
