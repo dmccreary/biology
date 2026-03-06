@@ -2120,6 +2120,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#activities" class="md-nav__link">
     <span class="md-ellipsis">
       Activities
@@ -2971,6 +2980,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#activities" class="md-nav__link">
     <span class="md-ellipsis">
       Activities
@@ -3026,44 +3044,73 @@
   
 
 
+<hr>
 <h1 id="osmosis-and-water-potential-simulator">Osmosis and Water Potential Simulator</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="610px" width="100%" scrolling="no"></iframe>
 
 <p><a class="md-button md-button--primary" href="main.html">Run the Osmosis and Water Potential Simulator MicroSim Fullscreen</a>
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim models two fluid chambers separated by a semipermeable membrane so students can see how solute potential (Ψ<sub>s</sub>), pressure potential (Ψ<sub>p</sub>), and temperature determine the direction of osmotic water flow. Animated water molecules drift between the cell interior and the external solution, a bold blue arrow shows net flow, and plant mode adds a rigid cell wall plus turgor gauge to depict pressure buildup.</p>
+<p><strong>Key visual elements</strong></p>
+<ul>
+<li>Dynamic cell cartoon that swells, shrinks, or plasmolyzes based on tonicity.</li>
+<li>Water and solute particles with densities proportional to the selected concentrations.</li>
+<li>Ψ calculations (Ψ<sub>s</sub>, Ψ<sub>p</sub>, Ψ<sub>cell</sub>, Ψ<sub>external</sub>) rendered live in Stage 2 and Stage 3.</li>
+<li>A Stage 1–4 info rail that documents concentrations, calculated potentials, net ΔΨ, and the equilibrium preview triggered by the <em>Equilibrate</em> button.</li>
+</ul>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Set concentrations</strong> – Use the <em>Internal</em> and <em>External solute concentration</em> sliders (0–1.0 mol L⁻¹) to create hypotonic, isotonic, or hypertonic conditions.</li>
+<li><strong>Adjust temperature</strong> – Use the temperature slider (273–313 K) to see how higher thermal energy decreases the magnitude of Ψ<sub>s</sub> (−iCRT).</li>
+<li><strong>Toggle cell type</strong> – Switch between <em>Animal cell</em> and <em>Plant cell</em> to reveal the cell wall and turgor pressure gauge; plasmolysis appears automatically when the external medium is strongly hypertonic.</li>
+<li><strong>Control animation</strong> – Pause/resume the stochastic motion of the molecules at any time; <em>Equilibrate</em> gradually balances the two solutions and activates the Stage 4 explanation block.</li>
+<li><strong>Interpret the Stage rail</strong> – Stage 1 lists concentrations, Stage 2 displays Ψ<sub>s</sub>, Stage 3 reports Ψ<sub>cell</sub>, Ψ<sub>external</sub>, ΔΨ, and Stage 4 either prompts equilibration or confirms when ΔΨ ≈ 0 MPa.</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
 <p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/osmosis-simulator/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"610px"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>High School Biology (Grades 9–12)</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>12–15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Familiarity with diffusion and osmosis vocabulary.</li>
+<li>Ability to interpret positive vs. negative water potential values.</li>
+<li>Awareness that temperature is measured in Kelvin when using the Ψ<sub>s</sub> equation.</li>
+</ul>
+<h3 id="learning-objectives">Learning Objectives</h3>
+<ul>
+<li>Students will calculate Ψ<sub>s</sub>, Ψ<sub>p</sub>, and overall Ψ for given concentrations and temperatures.</li>
+<li>Students will classify solutions as hypotonic, isotonic, or hypertonic relative to the cell interior.</li>
+<li>Students will predict which direction water will move and describe how that movement affects animal vs. plant cells.</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Explore Baseline (4 min)</strong> – Set both concentrations to 0.30 mol L⁻¹, note the missing arrow, and explain why water exchange is balanced.</li>
+<li><strong>Compare Tonicities (5 min)</strong> – Create a hypotonic scenario (internal = 0.5, external = 0.1) and then a hypertonic scenario (internal = 0.2, external = 0.65); have students record the Stage 3 ΔΨ values and direction statements.</li>
+<li><strong>Plant vs. Animal Focus (3 min)</strong> – Toggle to plant mode, press <em>Equilibrate</em>, and discuss why turgor pressure appears while animal cells risk lysis when ΔΨ is highly negative.</li>
+<li><strong>What-if Challenge (3 min)</strong> – Students set a temperature, cell type, and concentration pair that makes ΔΨ ≈ 0 MPa and justify their configuration verbally or in writing.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Ask students to capture a screenshot (or reading) of the Stage rail that demonstrates each tonicity and annotate which control values produced it.</li>
+<li>Provide ΔΨ targets (e.g., +0.30, −0.15 MPa) and have learners reproduce them within ±0.02 MPa, explaining how they tuned both concentration and temperature.</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li>Campbell, N. A. &amp; Reece, J. B. <em>Campbell Biology</em> (12th ed.). Pearson, 2020.</li>
+<li>Raven, P. H. et al. <em>Biology of Plants</em> (8th ed.). W. H. Freeman, 2012.</li>
 </ol>
 
 

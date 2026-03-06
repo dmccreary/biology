@@ -1,24 +1,29 @@
 {
   "title": "Temperature and pH Effects on Enzyme Activity",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
-  "description": "Interactive MicroSim for temperature and ph effects on enzyme activity",
-  "date": "2026-02-27",
+  "subject": "High School Biology",
+  "description": "Students predict how temperature, pH, and thermostability reshape enzyme activity curves while connecting those shifts to molecular explanations.",
+  "date": "2026-03-04",
   "educational": {
     "gradeLevel": [
-      "9",
       "10",
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
-    "topic": "Temperature and pH Effects on Enzyme Activity",
+    "subjectArea": "Biology",
+    "topic": "Enzyme kinetics, temperature, and pH effects",
     "learningObjectives": [
-      "TODO: Add learning objectives"
+      "Predict how adjusting optimal temperature or pH shifts an enzyme's relative activity curve.",
+      "Explain why excessive heat denatures the active site while pH extremes mis-ionize catalytic residues.",
+      "Compare human enzymes, pepsin, and Taq polymerase by interpreting preset curves and curve width."
     ],
     "bloomsTaxonomy": "Apply",
-    "duration": "10-15 minutes",
-    "prerequisites": [],
+    "duration": "15-20 minutes",
+    "prerequisites": [
+      "Basic understanding of enzyme structure and substrate binding",
+      "Familiarity with kinetic energy, hydrogen bonding, and ionization",
+      "Ability to read trends on Cartesian graphs"
+    ],
     "standards": []
   },
   "technical": {
@@ -26,20 +31,32 @@
     "version": "1.0",
     "canvasDimensions": {
       "width": "responsive",
-      "height": 450
+      "height": 640
     },
     "responsive": true,
-    "dependencies": [],
+    "dependencies": [
+      "p5.js",
+      "SuperscriptText helper"
+    ],
     "accessibility": {
-      "hasAltText": false,
+      "hasAltText": true,
       "keyboardNavigable": false
     }
   },
   "pedagogical": {
-    "teachingStrategy": "Interactive exploration",
-    "keyQuestions": [],
-    "commonMisconceptions": [],
-    "assessmentOpportunities": []
+    "teachingStrategy": "Interactive exploration with comparative presets",
+    "keyQuestions": [
+      "What molecular events explain the decline in activity at the cursor's position?",
+      "How do the optimal conditions of each preset align with its native environment?"
+    ],
+    "commonMisconceptions": [
+      "Learners may assume that higher temperatures always speed catalysis.",
+      "Students may think pH changes only scale activity instead of altering residue charge."
+    ],
+    "assessmentOpportunities": [
+      "Collect written predictions before and after loading each preset curve.",
+      "Use exit tickets asking students to justify the activity drop using collisions, denaturation, or protonation."
+    ]
   },
   "chapter": "06-thermodynamics-and-enzymes"
 }

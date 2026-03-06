@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for energy pyramid explorer.">
+        <meta name="description" content="Interactive p5.js MicroSim that visualizes how energy, biomass, or organism counts cascade through trophic levels.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Energy Pyramid Explorer - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for energy pyramid explorer.">
+        <meta property="og:description" content="Interactive p5.js MicroSim that visualizes how energy, biomass, or organism counts cascade through trophic levels.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/energy-pyramid/energy-pyramid.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Energy Pyramid Explorer - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for energy pyramid explorer.">
+        <meta name="twitter:description" content="Interactive p5.js MicroSim that visualizes how energy, biomass, or organism counts cascade through trophic levels.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/energy-pyramid/energy-pyramid.png">
       
@@ -3027,15 +3027,20 @@
 
 
 <h1 id="energy-pyramid-explorer">Energy Pyramid Explorer</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="500px" width="100%" scrolling="no"></iframe>
 
 <p><a class="md-button md-button--primary" href="main.html">Run the Energy Pyramid Explorer MicroSim Fullscreen</a>
 <br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<a href="https://editor.p5js.org/dmccreary/sketches/ebnGGjAtC">Edit the Energy Pyramid Explorer MicroSim p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim lets students manipulate an energy pyramid and immediately see how exponential losses constrain trophic levels. Sliders adjust the producer input and transfer efficiency, an <strong>Add Level</strong> button extends the chain to a maximum of six levels, and optional toggles overlay biomass (kg/ha) or organism-count (“ind”) values alongside the baseline kcal numbers. The right-hand info panel mirrors the currently selected level, showing energy transferred upward, heat/waste, and optional biomass/individuals notes. A heat-loss band and hover tooltips reinforce where the “missing” energy goes.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Set the baseline:</strong> Drag the <strong>Producer Input</strong> slider (default 20,000 kcal) and choose a realistic transfer efficiency (5–20%). The pyramid widths and values update instantly.</li>
+<li><strong>Reveal exact values:</strong> Use the <strong>Show Numbers</strong> checkbox to toggle precise kcal/kg/individual labels on each level. Hovering over a band also pops up the transferred vs. lost amounts.</li>
+<li><strong>Overlay alternate metrics:</strong> Use the <strong>Show Biomass</strong> and <strong>Show Individuals</strong> toggles (they can be active simultaneously) to add kg/ha and “ind” figures under each level while keeping the energy view as the baseline.</li>
+<li><strong>Extend or trim the chain:</strong> Press <strong>Add Level</strong> to append quaternary or apex consumers and observe how little energy remains; use <strong>Remove Level</strong> to go back to four levels if needed. Discuss whether a sixth level is sustainable at the chosen efficiency.</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
 <p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -3048,22 +3053,31 @@
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>Grades 9-12 Biology</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understands the 10% rule for energy transfer.</li>
+<li>Can differentiate producers, primary consumers, and higher trophic levels.</li>
+<li>Familiar with units for energy (kcal) and biomass (kg/ha).</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Students adjust producer input and efficiency, turning the number labels on to record the energy reaching each level.</li>
+<li><strong>Guided Practice</strong> (5 min): Switch to biomass and numbers modes. Discuss why aquatic numbers pyramids invert and what it implies about individual organism size.</li>
+<li><strong>Assessment</strong> (5 min): Challenge learners to add a sixth level and justify whether that apex predator could survive under different efficiency assumptions.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Accurate calculations of energy/biomass at each trophic level given slider settings.</li>
+<li>Explanation of why only a few trophic levels are viable at 10% efficiency.</li>
+<li>Written comparison of energy vs. biomass vs. numbers pyramids for terrestrial vs. aquatic systems.</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li>Odum, E. &amp; Barrett, G. (2005). <em>Fundamentals of Ecology</em> (5th ed.). Brooks Cole.</li>
+<li>U.S. EPA. (2024). <strong>Food Chain and Energy Pyramid</strong>. Retrieved from https://www.epa.gov/</li>
 </ol>
 
 

@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for enzyme regulation simulator.">
+        <meta name="description" content="Explore how different inhibition mechanisms reshape enzyme kinetics in real time.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Enzyme Regulation Simulator - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for enzyme regulation simulator.">
+        <meta property="og:description" content="Explore how different inhibition mechanisms reshape enzyme kinetics in real time.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/enzyme-regulation-simulator/enzyme-regulation-simulator.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Enzyme Regulation Simulator - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for enzyme regulation simulator.">
+        <meta name="twitter:description" content="Explore how different inhibition mechanisms reshape enzyme kinetics in real time.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/enzyme-regulation-simulator/enzyme-regulation-simulator.png">
       
@@ -3027,43 +3027,67 @@
 
 
 <h1 id="enzyme-regulation-simulator">Enzyme Regulation Simulator</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="722px" width="100%" scrolling="no"></iframe>
 
 <p><a class="md-button md-button--primary" href="main.html">Run the Enzyme Regulation Simulator MicroSim Fullscreen</a>
 <br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<a href="https://editor.p5js.org/dmccreary/sketches/jtehut1Zd">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim links the molecular view of enzyme regulation to the macroscopic
+Michaelis–Menten curve. The top panel highlights the selected mechanism, the
+center shows a cartoon enzyme alongside a responsive v vs. [S] graph, and the
+bottom summary explains how Vmax, Km, and metabolic context change with each
+mode. Sliders and buttons keep the schematic, curve, and textual explanation in
+sync so learners can immediately see cause-and-effect relationships.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li>Click <strong>Start Simulation</strong> to animate substrate and inhibitor movement.</li>
+<li>Move the <strong>Inhibitor concentration</strong> slider to control how strongly the
+   enzyme is inhibited. Higher values exaggerate Vmax or Km shifts depending on
+   the mechanism.</li>
+<li>Use the <strong>Probe substrate [S]</strong> slider to reposition the dot on the
+   Michaelis–Menten curve and read off the instantaneous reaction rate.</li>
+<li>Switch among the four <strong>mode buttons</strong>. The top strip, enzyme schematic,
+   kinetics graph, and summary panel update together so learners can compare
+   competitive, noncompetitive, and feedback regulation.</li>
+<li>Pause the simulation at any time to take screenshots or have students sketch
+   the altered curves for formative assessment.</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
+<p>You can add this MicroSim to any web page by inserting this iframe snippet:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/enzyme-regulation-simulator/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"712px"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>11-12 (AP/IB Biology)</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Students have graphed the Michaelis–Menten equation.</li>
+<li>Students can define Vmax, Km, and substrate concentration.</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration (4 min):</strong> Start the sim in No Inhibition mode and have students describe how the probe dot traces the blue curve.</li>
+<li><strong>Compare Mechanisms (6 min):</strong> Cycle through Competitive, Noncompetitive, and Feedback modes. Students adjust the inhibitor slider and predict how Vmax and Km will shift before observing the new curves.</li>
+<li><strong>Context Challenge (5 min):</strong> Give two metabolic scenarios (e.g., antibacterial treatment vs. amino-acid biosynthesis) and ask students to choose the most appropriate regulatory mode with evidence from the info panel.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Exit ticket: “Which inhibition mode leaves Km unchanged? Explain using the probe dot’s readout.”</li>
+<li>Students sketch the red/purple curve they observed and label whether Vmax or Km was altered.</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li>Nelson, D. L., &amp; Cox, M. M. (2017). <em>Lehninger Principles of Biochemistry</em> (7th ed.). W.H. Freeman.</li>
+<li>Alberts, B. et al. (2014). <em>Molecular Biology of the Cell</em> (6th ed.). Garland Science.</li>
 </ol>
 
 

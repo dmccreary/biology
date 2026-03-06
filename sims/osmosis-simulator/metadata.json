@@ -1,9 +1,9 @@
 {
   "title": "Osmosis and Water Potential Simulator",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
-  "description": "Interactive MicroSim for osmosis and water potential simulator",
-  "date": "2026-02-27",
+  "subject": "Biology",
+  "description": "Interactive MicroSim that visualizes how solute potential, pressure potential, temperature, and tonicity drive osmotic water movement.",
+  "date": "2026-02-28",
   "educational": {
     "gradeLevel": [
       "9",
@@ -11,35 +11,56 @@
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
-    "topic": "Osmosis and Water Potential Simulator",
+    "subjectArea": "Biology",
+    "topic": "Osmosis and Water Potential",
     "learningObjectives": [
-      "TODO: Add learning objectives"
+      "Calculate solute potential (Ψs) for internal and external solutions using Ψs = −iCRT.",
+      "Predict the direction of net water movement by comparing Ψcell and Ψexternal values.",
+      "Explain how hypotonic, isotonic, and hypertonic environments affect animal and plant cells differently."
     ],
     "bloomsTaxonomy": "Apply",
-    "duration": "10-15 minutes",
-    "prerequisites": [],
-    "standards": []
+    "duration": "12-15 minutes",
+    "prerequisites": [
+      "Basic familiarity with diffusion and osmosis terminology",
+      "Ability to convert between degrees Celsius and Kelvin"
+    ],
+    "standards": [
+      "NGSS HS-LS1-2"
+    ]
   },
   "technical": {
     "framework": "p5.js",
-    "version": "1.0",
+    "version": "1.11.10",
     "canvasDimensions": {
       "width": "responsive",
-      "height": 450
+      "height": 610
     },
     "responsive": true,
-    "dependencies": [],
+    "dependencies": [
+      "p5.js",
+      "SuperscriptText helper"
+    ],
     "accessibility": {
-      "hasAltText": false,
+      "hasAltText": true,
       "keyboardNavigable": false
     }
   },
   "pedagogical": {
-    "teachingStrategy": "Interactive exploration",
-    "keyQuestions": [],
-    "commonMisconceptions": [],
-    "assessmentOpportunities": []
+    "teachingStrategy": "Interactive parameter exploration with staged conceptual feedback",
+    "keyQuestions": [
+      "How does changing temperature alter Ψs values for the same concentrations?",
+      "Which side has the higher water potential and why?",
+      "What structural features allow plant cells to resist lysis during hypotonic stress?"
+    ],
+    "commonMisconceptions": [
+      "Water always moves toward the higher solute concentration regardless of pressure.",
+      "Plant and animal cells respond identically to hypertonic environments.",
+      "Temperature has no effect on osmotic movement."
+    ],
+    "assessmentOpportunities": [
+      "Have students tune the sliders to achieve ΔΨ ≈ 0 MPa and explain their reasoning.",
+      "Ask learners to create a scenario that triggers the lysis warning and describe the underlying physics."
+    ]
   },
   "chapter": "05-cell-membranes-and-transport"
 }

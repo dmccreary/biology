@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for enzyme kinetics explorer.">
+        <meta name="description" content="Interactive p5.js MicroSim for visualizing Michaelis-Menten kinetics and inhibitor effects.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Enzyme Kinetics Explorer - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for enzyme kinetics explorer.">
+        <meta property="og:description" content="Interactive p5.js MicroSim for visualizing Michaelis-Menten kinetics and inhibitor effects.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/enzyme-kinetics-explorer/enzyme-kinetics-explorer.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Enzyme Kinetics Explorer - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for enzyme kinetics explorer.">
+        <meta name="twitter:description" content="Interactive p5.js MicroSim for visualizing Michaelis-Menten kinetics and inhibitor effects.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/enzyme-kinetics-explorer/enzyme-kinetics-explorer.png">
       
@@ -3027,15 +3027,19 @@
 
 
 <h1 id="enzyme-kinetics-explorer">Enzyme Kinetics Explorer</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="615px" width="100%" scrolling="no"></iframe>
 
 <p><a class="md-button md-button--primary" href="main.html">Run the Enzyme Kinetics Explorer MicroSim Fullscreen</a>
 <br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<a href="https://editor.p5js.org/dmccreary/sketches/ICXlLpIwk">Edit Enzyme Kinetics Explorer MicroSim the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This simulation plots the Michaelis-Menten relationship between substrate concentration <code>[S]</code> and reaction velocity <code>v</code>. Students can change <code>Vmax</code>, adjust <code>Km</code>, drag or autoplay the on-curve probe to read precise coordinates, and visualize how competitive versus noncompetitive inhibitors reshape the curve. Stage prompts in the right panel guide learners from interpreting the labeled asymptotes to comparing overlay curves.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li>Set <code>Vmax</code> and <code>Km</code> with the sliders while watching the dashed <code>Vmax</code> and <code>Km</code> references shift on the graph.</li>
+<li>Drag the blue probe dot along the curve (or let playback run) to read <code>[S]</code>, <code>v</code>, and percentage of <code>Vmax</code> in real time.</li>
+<li>Turn on the inhibitor toggles and raise <code>[Inhibitor]</code> concentration to see competitive inhibitors shift <code>Km</code> right and noncompetitive inhibitors pull <code>Vmax</code> downward. Use Reset to return to the default kinetic profile.</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
 <p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -3048,22 +3052,31 @@
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>11-12 (AP/IB Biology)</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Ability to interpret coordinate graphs and read asymptotes</li>
+<li>Prior exposure to enzyme function, <code>Vmax</code>, and <code>Km</code></li>
+<li>Basic algebra skills for ratios and percentage change</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Stage 1 - Baseline curve (5 min):</strong> Move the <code>Vmax</code> slider to see the horizontal asymptote rise, then adjust <code>Km</code> to watch the dashed <code>Km</code> line shift right and discuss what these changes mean for affinity.</li>
+<li><strong>Stage 2 - Probe investigation (5 min):</strong> Drag the probe to several <code>[S]</code> values, record the matching velocities, and calculate when the reaction is operating at 50% <code>Vmax</code> or greater.</li>
+<li><strong>Stage 3 - Inhibitor comparison (5-10 min):</strong> Activate each inhibitor, increase <code>[Inhibitor]</code>, and explain why the competitive overlay shifts horizontally while the noncompetitive overlay lowers only <code>Vmax</code>.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Students correctly state how changing <code>Km</code> or <code>Vmax</code> reshapes the Michaelis-Menten curve.</li>
+<li>Learners use probe data to justify whether the reaction is saturated at a given <code>[S]</code>.</li>
+<li>Students compare screenshots or notes from inhibitor runs to explain how therapeutic inhibitors would alter enzyme behavior.</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li>Michaelis, L., &amp; Menten, M. L. (1913). <em>Die Kinetik der Invertinwirkung.</em> Biochemische Zeitschrift.</li>
+<li>Campbell, N. A., &amp; Reece, J. B. (2019). <em>Campbell Biology</em> (12th ed.). Pearson.</li>
 </ol>
 
 

@@ -1,9 +1,9 @@
 {
   "title": "Feedback Loop Simulator",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
-  "description": "Interactive MicroSim for feedback loop simulator",
-  "date": "2026-02-27",
+  "subject": "Biology",
+  "description": "Interactive p5.js simulation comparing how negative and positive biological feedback loops respond to perturbations.",
+  "date": "2026-03-05",
   "educational": {
     "gradeLevel": [
       "9",
@@ -11,35 +11,49 @@
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
-    "topic": "Feedback Loop Simulator",
+    "subjectArea": "Biology",
+    "topic": "Cell signaling and homeostatic feedback",
     "learningObjectives": [
-      "TODO: Add learning objectives"
+      "Differentiate balancing (negative) and reinforcing (positive) feedback loops by observing the time-series response.",
+      "Identify the role of the stimulus, detector, control center, and effector within a feedback circuit.",
+      "Predict whether a biological example will return to its set point or diverge after a disturbance."
     ],
-    "bloomsTaxonomy": "Create",
+    "bloomsTaxonomy": "Analyze",
     "duration": "10-15 minutes",
-    "prerequisites": [],
+    "prerequisites": [
+      "Basic understanding of homeostasis",
+      "Ability to read line graphs"
+    ],
     "standards": []
   },
   "technical": {
     "framework": "p5.js",
-    "version": "1.0",
+    "version": "1.11.10",
     "canvasDimensions": {
       "width": "responsive",
-      "height": 450
+      "height": 640
     },
     "responsive": true,
     "dependencies": [],
     "accessibility": {
-      "hasAltText": false,
+      "hasAltText": true,
       "keyboardNavigable": false
     }
   },
   "pedagogical": {
-    "teachingStrategy": "Interactive exploration",
-    "keyQuestions": [],
-    "commonMisconceptions": [],
-    "assessmentOpportunities": []
+    "teachingStrategy": "Interactive exploration with prediction, perturbation, and comparison tasks",
+    "keyQuestions": [
+      "What visual evidence shows the loop returning to its set point?",
+      "How does the reinforcing loop continue to grow without intervention?"
+    ],
+    "commonMisconceptions": [
+      "Positive feedback always represents a desirable outcome",
+      "Detectors only exist in negative feedback circuits"
+    ],
+    "assessmentOpportunities": [
+      "Learners explain how a chosen example responds after clicking Apply Perturbation",
+      "Students map each diagram node to a structure in the selected scenario"
+    ]
   },
   "chapter": "09-cell-signaling-and-feedback"
 }

@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for feedback loop simulator.">
+        <meta name="description" content="Compare negative and positive feedback loops with an interactive causal loop diagram and responsive time-series graph.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Feedback Loop Simulator - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for feedback loop simulator.">
+        <meta property="og:description" content="Compare negative and positive feedback loops with an interactive causal loop diagram and responsive time-series graph.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/feedback-loop-simulator/feedback-loop-simulator.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Feedback Loop Simulator - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for feedback loop simulator.">
+        <meta name="twitter:description" content="Compare negative and positive feedback loops with an interactive causal loop diagram and responsive time-series graph.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/feedback-loop-simulator/feedback-loop-simulator.png">
       
@@ -1533,6 +1533,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2913,6 +2928,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3027,43 +3057,65 @@
 
 
 <h1 id="feedback-loop-simulator">Feedback Loop Simulator</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="720px" width="100%" scrolling="no"></iframe>
 
 <p><a class="md-button md-button--primary" href="main.html">Run the Feedback Loop Simulator MicroSim Fullscreen</a>
 <br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<a href="https://editor.p5js.org/dmccreary/sketches/8OwhO6j0e">Edit Feedback Loop Simulator MicroSim in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim helps learners contrast <strong>balancing (negative)</strong> and <strong>reinforcing (positive)</strong> biological feedback loops. The left panel shows a clickable causal loop diagram where each node (stimulus, detector, control center, effector) provides plain-language explanations. The right panel charts the variable of interest through time, including a dashed set-point line and a vertical perturbation marker so students can see whether the response damps or amplifies the disturbance. Example presets highlight common scenarios such as blood glucose regulation, thermoregulation, action potentials, blood clotting, and childbirth.</p>
+<h3 id="learning-objectives">Learning Objectives</h3>
+<ul>
+<li>Compare how negative and positive feedback loops respond to the same perturbation by analyzing the time-series curve and loop diagram.</li>
+<li>Identify the role of each component (stimulus, detector, control center, effector) by clicking the diagram nodes and reading their tooltips.</li>
+<li>Predict how real biological systems listed in the example menu will behave (return to baseline or run away) after an applied disturbance.</li>
+</ul>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Pick a loop type.</strong> Use the Negative/Positive Feedback toggle, then choose a biological scenario from the dropdown (blood glucose, thermoregulation, enzyme inhibition, action potential, blood clotting, or childbirth).</li>
+<li><strong>Start the animation.</strong> Press <strong>Start Simulation</strong> to watch the variable evolve through time. The sim always loads paused to avoid autoplay surprises.</li>
+<li><strong>Apply a perturbation.</strong> Click <strong>Apply Perturbation</strong> to create a sudden increase or decrease in the controlled variable. A vertical dashed line marks the event while the graph shows either a damped return (negative) or runaway surge (positive).</li>
+<li><strong>Investigate the diagram.</strong> Hover over the graph to read exact values/time stamps and click each loop node for an explanation of that component’s role in the circuit.</li>
+<li><strong>Reset as needed.</strong> Use <strong>Reset System</strong> to clear the history, switch examples, or restart the sequence with different perturbations.</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
 <p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/feedback-loop-simulator/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"640px"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>Grades 9–12 life science or introductory undergraduate physiology</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>10–15 minutes (exploration + discussion)</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Prior exposure to the definition of negative vs. positive feedback in homeostasis</li>
+<li>Ability to interpret line graphs (time on the x-axis, variable level on the y-axis)</li>
+<li>Familiarity with at least one body-system example (e.g., glucose regulation or neuron firing)</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Launch &amp; predict (3 min).</strong> Have students describe what they expect to see for a negative feedback loop before pressing <strong>Start Simulation</strong>. Capture their predictions on the board.</li>
+<li><strong>Guided comparison (5 min).</strong> Run the blood glucose example, apply a perturbation, and ask learners to justify why the curve returns to the set point. Switch to the action potential example and highlight how the reinforcing loop stays far from baseline.</li>
+<li><strong>Systems mapping (4 min).</strong> Students click each node in the loop diagram and relate it to the graph (e.g., detector corresponds to pancreatic beta cells). Encourage them to reference the <a href="https://dmccreary.github.io/systems-thinking/">Systems Thinking course</a> for vocabulary that describes balancing vs. reinforcing loops.</li>
+<li><strong>Create a scenario (3 min).</strong> In pairs, students choose a preset and write two sentences explaining which part of the loop they could intervene on to change the response.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Ask students to screenshot or sketch the graph before and after a perturbation and annotate how the feedback loop explains the shape.</li>
+<li>Quick exit ticket: “Which example shows a runaway response and why?” or “How would activating the detector earlier change the curve?”</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li>Alberts, B. <em>Molecular Biology of the Cell</em>, 7th ed., Garland Science, 2022 – Chapter on cell signaling and feedback regulation.</li>
+<li>Silverthorn, D. <em>Human Physiology: An Integrated Approach</em>, 8th ed., Pearson, 2023 – Sections on thermoregulation and endocrine control.</li>
+<li>Meadows, D. <em>Thinking in Systems</em>, Chelsea Green Publishing, 2008 – Foundations of balancing vs. reinforcing loops used in the Systems Thinking course.</li>
 </ol>
 
 

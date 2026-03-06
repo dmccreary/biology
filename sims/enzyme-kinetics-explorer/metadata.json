@@ -1,45 +1,63 @@
 {
   "title": "Enzyme Kinetics Explorer",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
-  "description": "Interactive MicroSim for enzyme kinetics explorer",
+  "subject": "Biology",
+  "description": "Interactive MicroSim for exploring Michaelis-Menten kinetics and inhibitor effects",
   "date": "2026-02-27",
   "educational": {
     "gradeLevel": [
-      "9",
-      "10",
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
-    "topic": "Enzyme Kinetics Explorer",
+    "subjectArea": "Biology",
+    "topic": "Michaelis-Menten enzyme kinetics",
     "learningObjectives": [
-      "TODO: Add learning objectives"
+      "Calculate reaction velocity using the Michaelis-Menten equation for any substrate concentration",
+      "Identify Vmax and Km on a velocity vs. substrate curve and relate their biological meaning",
+      "Compare competitive versus noncompetitive inhibitor effects on Km and Vmax"
     ],
     "bloomsTaxonomy": "Apply",
-    "duration": "10-15 minutes",
-    "prerequisites": [],
-    "standards": []
+    "duration": "15-20 minutes",
+    "prerequisites": [
+      "Understands enzyme active site interactions",
+      "Can read and interpret coordinate graphs"
+    ],
+    "standards": [
+      "NGSS HS-LS1-1",
+      "NGSS HS-LS1-7"
+    ]
   },
   "technical": {
     "framework": "p5.js",
     "version": "1.0",
     "canvasDimensions": {
       "width": "responsive",
-      "height": 450
+      "height": 610
     },
     "responsive": true,
     "dependencies": [],
     "accessibility": {
-      "hasAltText": false,
+      "hasAltText": true,
       "keyboardNavigable": false
     }
   },
   "pedagogical": {
     "teachingStrategy": "Interactive exploration",
-    "keyQuestions": [],
-    "commonMisconceptions": [],
-    "assessmentOpportunities": []
+    "keyQuestions": [
+      "At what substrate concentration does the velocity reach half of Vmax?",
+      "How do inhibitor overlays change the curve's shape and why?",
+      "What experimental evidence distinguishes affinity changes from catalytic efficiency changes?"
+    ],
+    "commonMisconceptions": [
+      "Competitive inhibitors lower Vmax rather than shifting Km",
+      "Increasing substrate indefinitely always recovers noncompetitive inhibition",
+      "Km is interpreted as a rate instead of a concentration"
+    ],
+    "assessmentOpportunities": [
+      "Students capture probe readings that demonstrate saturation versus low substrate conditions",
+      "Learners explain screenshots of each inhibitor overlay and summarize the kinetic shift",
+      "Exit ticket asking when a therapy should target Km versus Vmax changes"
+    ]
   },
   "chapter": "06-thermodynamics-and-enzymes"
 }

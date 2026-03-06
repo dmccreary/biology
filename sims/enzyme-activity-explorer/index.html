@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for temperature and ph effects on enzyme activity.">
+        <meta name="description" content="Explore how changes in temperature, pH, and thermostability reshape enzyme activity curves and reveal the molecular causes of activity loss.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Temperature and pH Effects on Enzyme Activity - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for temperature and ph effects on enzyme activity.">
+        <meta property="og:description" content="Explore how changes in temperature, pH, and thermostability reshape enzyme activity curves and reveal the molecular causes of activity loss.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/enzyme-activity-explorer/enzyme-activity-explorer.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Temperature and pH Effects on Enzyme Activity - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for temperature and ph effects on enzyme activity.">
+        <meta name="twitter:description" content="Explore how changes in temperature, pH, and thermostability reshape enzyme activity curves and reveal the molecular causes of activity loss.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/enzyme-activity-explorer/enzyme-activity-explorer.png">
       
@@ -3027,43 +3027,57 @@
 
 
 <h1 id="temperature-and-ph-effects-on-enzyme-activity">Temperature and pH Effects on Enzyme Activity</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="660px" width="100%" scrolling="no"></iframe>
 
 <p><a class="md-button md-button--primary" href="main.html">Run the Temperature and pH Effects on Enzyme Activity MicroSim Fullscreen</a>
 <br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<a href="https://editor.p5js.org/dmccreary/sketches/vYF4WuCD9">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This simulation helps students connect the macroscopic bell-shaped activity curves of enzymes with the molecular events that cause them. A draggable cursor explores relative activity across temperature (0–100 °C) or pH (0–14), while a molecular panel explains whether increased collisions, denaturation, or incorrect ionization are driving the change. Sliders shift the optimal temperature, optimal pH, and thermostability (width at half-maximum). Preset buttons load human enzymes, stomach pepsin, or thermostable Taq polymerase so learners can compare adaptations.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li>Click <strong>Temperature Mode</strong> or <strong>pH Mode</strong> at the top to choose which axis is plotted.</li>
+<li>Drag the orange cursor along the curve (or press the <strong>Sweep Temperature Values</strong> / <strong>Sweep pH Values</strong> button to auto-sweep) and read the activity percent plus annotated explanation.</li>
+<li>Adjust the <strong>Optimal temperature</strong> or <strong>Optimal pH</strong> slider to shift the peak and observe how the molecular panel reshapes.</li>
+<li>Use <strong>Enzyme thermostability (FWHM)</strong> to widen or narrow the bell; note how the “Width at 50% activity” label updates.</li>
+<li>Activate preset buttons for Human enzyme, Pepsin, or Taq polymerase to animate the curve toward real operating conditions.</li>
+<li>Compare the molecular cartoon or histidine charge gauge to explain why activity falls on either side of the optimum.</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
 <p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/enzyme-activity-explorer/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"700px"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>10-12 (Honors or AP Biology)</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Structure and function of enzymes (active site, substrate binding)</li>
+<li>How kinetic energy and pH influence molecular motion and ionization</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Predict and Observe (5 min):</strong> Students sketch how they expect the activity curve to change for a hot-spring enzyme, then use sliders/presets to verify whether the optimum shifts and why.</li>
+<li><strong>Guided Molecular Reasoning (7 min):</strong> In pairs, students keep the cursor just left of the peak and list evidence for “collision frequency,” then move it right of the peak and list evidence for “denaturation” or “incorrect charges.” They summarize in their notebooks.</li>
+<li><strong>Apply to Scenarios (5 min):</strong> Each group selects Pepsin or Taq polymerase, explains how their environment justifies that optimum, and shares one misconception the right panel helped them correct.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Exit ticket prompts students to (1) state the optimal temperature/pH for a chosen preset and (2) explain why activity collapses past that point using the language of collisions, denaturation, or protonation.</li>
+<li>Formative questioning during exploration checks that students can interpret the width-at-half-maximum label and relate it to thermostability.</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li>Campbell, N. A., &amp; Reece, J. B. <em>Campbell Biology</em> (12th ed.), Chapter 6: “An Introduction to Metabolism.”</li>
+<li>Khan Academy. <a href="https://www.khanacademy.org/science/biology/biology-of-cells/enzymes/a/factors-affecting-enzymes">Factors affecting enzyme activity</a>.</li>
 </ol>
 
 

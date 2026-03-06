@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Surface Area : Volume Wireframe</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #fafafa; margin: 0; padding: 20px; }
+    h1 { margin-top: 0; }
+    svg { background: #fff; border: 1px solid #ccc; }
+    .label { font-size: 12px; fill: #111; }
+  </style>
+</head>
+<body>
+  <h1>Surface Area to Volume Ratio Wireframe</h1>
+  <p>Rectangles capture the reserved regions for the MicroSim layout. Colors map to the main sections described in the plan.</p>
+  <svg width="900" height="650" viewBox="0 0 900 650">
+    <!-- Drawing background split -->
+    <rect x="10" y="10" width="880" height="460" fill="#f0f8ff" stroke="#9ec4e6"/>
+    <text class="label" x="20" y="25">Drawing Region (aliceblue)</text>
+
+    <!-- Title area -->
+    <rect x="20" y="40" width="860" height="36" fill="#ffe3b3" stroke="#d79b32"/>
+    <text class="label" x="30" y="60">Title Bar</text>
+
+    <!-- Cube panel -->
+    <rect x="20" y="90" width="430" height="230" fill="#d5e8ff" stroke="#5a8ed1"/>
+    <text class="label" x="30" y="110">3D Cube &amp; Comparison Cube</text>
+
+    <!-- Metrics panel -->
+    <rect x="470" y="90" width="410" height="230" fill="#e9ffe2" stroke="#5db146"/>
+    <text class="label" x="480" y="110">Metrics + SA:V Status</text>
+
+    <!-- Formulas -->
+    <rect x="470" y="330" width="410" height="32" fill="#f4d5ff" stroke="#a54cc4"/>
+    <text class="label" x="480" y="352">Formulas (toggle)</text>
+
+    <!-- Bar chart -->
+    <rect x="20" y="360" width="860" height="120" fill="#ffd5d5" stroke="#c35858"/>
+    <text class="label" x="30" y="420">SA vs V Bar Chart (full width)</text>
+
+    <!-- Control background -->
+    <rect x="10" y="480" width="880" height="140" fill="#fff" stroke="#c2c2c2"/>
+    <text class="label" x="20" y="495">Control Region (compact)</text>
+
+    <!-- Start/Pause button -->
+    <rect x="20" y="510" width="160" height="40" fill="#d0d0ff" stroke="#6b6bb2"/>
+    <text class="label" x="30" y="535">Start / Pause</text>
+
+    <!-- Slider + label -->
+    <rect x="200" y="510" width="330" height="70" fill="#e7d5ff" stroke="#8a6cc8"/>
+    <text class="label" x="210" y="535">Side Length Slider + Value</text>
+
+    <!-- Comparison toggle -->
+    <rect x="550" y="510" width="150" height="70" fill="#d5fff0" stroke="#4da88a"/>
+    <text class="label" x="560" y="545">Show Comparison</text>
+
+    <!-- Formulas checkbox -->
+    <rect x="720" y="510" width="150" height="70" fill="#f4d5ff" stroke="#a54cc4"/>
+    <text class="label" x="730" y="545">Show Formulas</text>
+
+    <!-- Warning text area -->
+    <rect x="20" y="420" width="420" height="50" fill="#ffe1e1" stroke="#ff6b6b"/>
+    <text class="label" x="30" y="448">Warning Text (Diffusion too slow)</text>
+
+    <!-- Status area -->
+    <rect x="460" y="420" width="420" height="50" fill="#e1f0ff" stroke="#669dd2"/>
+    <text class="label" x="470" y="448">Status / Accessibility</text>
+  </svg>
+</body>
+</html>

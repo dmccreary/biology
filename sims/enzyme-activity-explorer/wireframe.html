@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Enzyme Activity Explorer Wireframe</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#f4f6fb; margin:0; padding:20px; }
+    h1 { margin-top:0; }
+    svg { background:#fff; border:1px solid #c5cee0; }
+    text { font-size:14px; fill:#1a1a1a; }
+  </style>
+</head>
+<body>
+  <h1>Wireframe – Enzyme Activity Explorer</h1>
+  <svg width="960" height="720" viewBox="0 0 960 720" role="img" aria-label="Wireframe showing layout regions and controls">
+    <defs>
+      <marker id="arrowhead" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+        <polygon points="0 0, 7 3.5, 0 7" fill="#1a1a1a"></polygon>
+      </marker>
+    </defs>
+    <!-- Title Region -->
+    <rect x="20" y="20" width="920" height="70" fill="#ffd580" stroke="#b07b00" stroke-width="2" rx="6" />
+    <text x="40" y="60">Title + Subtitle Area (fixed height, 20px margin)</text>
+
+    <!-- Drawing Canvas Background -->
+    <rect x="20" y="110" width="920" height="360" fill="#e6f3ff" stroke="#3e7cb1" stroke-width="2" rx="8" />
+    <text x="40" y="140">Drawing Region (aliceblue, contains toggle, graph, molecular panel)</text>
+
+    <!-- Mode Toggle Bar -->
+    <rect x="40" y="160" width="880" height="50" fill="#ffe6f2" stroke="#c96496" stroke-width="2" rx="6" />
+    <text x="60" y="190">Mode Toggle + Preset Buttons Row (fixed height)</text>
+
+    <!-- Graph Area -->
+    <rect x="40" y="230" width="480" height="220" fill="#d0f0c0" stroke="#4a814c" stroke-width="2" rx="10" />
+    <text x="60" y="260">Activity Graph (55% width)</text>
+    <line x1="80" y1="340" x2="440" y2="340" stroke="#1a1a1a" stroke-width="3" marker-start="url(#arrowhead)" marker-end="url(#arrowhead)" />
+    <text x="180" y="310">Responsive width expands</text>
+
+    <!-- Cursor Indicator -->
+    <rect x="60" y="420" width="180" height="30" fill="#fff7d6" stroke="#b99a35" stroke-width="2" rx="6" />
+    <text x="70" y="440">Cursor Readout</text>
+
+    <!-- Molecular Panel -->
+    <rect x="560" y="230" width="360" height="220" fill="#f7e1ff" stroke="#854eb7" stroke-width="2" rx="10" />
+    <text x="580" y="260">Molecular Explanation Panel (45% width)</text>
+    <line x1="590" y1="340" x2="870" y2="340" stroke="#1a1a1a" stroke-width="3" marker-start="url(#arrowhead)" marker-end="url(#arrowhead)" />
+    <text x="640" y="310">Responsive width expands</text>
+
+    <!-- Control Region Background -->
+    <rect x="20" y="490" width="920" height="210" fill="#ffffff" stroke="#a0a7b8" stroke-width="2" rx="10" />
+    <text x="40" y="520">Control Deck (white background, labels left of sliders)</text>
+
+    <!-- Start/Pause Button -->
+    <rect x="40" y="540" width="160" height="50" fill="#e0f7ff" stroke="#3282b8" stroke-width="2" rx="8" />
+    <text x="60" y="570">Start / Pause</text>
+
+    <!-- Reset Button -->
+    <rect x="220" y="540" width="120" height="50" fill="#fdf0d5" stroke="#c37a24" stroke-width="2" rx="8" />
+    <text x="240" y="570">Reset</text>
+
+    <!-- Optimal Temp Label + Slider -->
+    <rect x="40" y="610" width="160" height="40" fill="#f3e5f5" stroke="#8e44ad" stroke-width="2" rx="6" />
+    <text x="50" y="635">Label + value</text>
+    <rect x="210" y="610" width="300" height="40" fill="#e8f0fe" stroke="#4c6fbf" stroke-width="2" rx="6" />
+    <line x1="240" y1="630" x2="460" y2="630" stroke="#1a1a1a" stroke-width="2" marker-start="url(#arrowhead)" marker-end="url(#arrowhead)" />
+    <text x="300" y="635">Optimal Temp slider</text>
+
+    <!-- Optimal pH Label + Slider -->
+    <rect x="40" y="660" width="160" height="40" fill="#f3e5f5" stroke="#8e44ad" stroke-width="2" rx="6" />
+    <text x="60" y="685">Label + value</text>
+    <rect x="210" y="660" width="300" height="40" fill="#e8f0fe" stroke="#4c6fbf" stroke-width="2" rx="6" />
+    <line x1="240" y1="680" x2="460" y2="680" stroke="#1a1a1a" stroke-width="2" marker-start="url(#arrowhead)" marker-end="url(#arrowhead)" />
+    <text x="320" y="685">Optimal pH slider</text>
+
+    <!-- Thermostability Label + Slider -->
+    <rect x="540" y="610" width="160" height="40" fill="#f3e5f5" stroke="#8e44ad" stroke-width="2" rx="6" />
+    <text x="550" y="635">Label + value</text>
+    <rect x="710" y="610" width="210" height="40" fill="#e8f0fe" stroke="#4c6fbf" stroke-width="2" rx="6" />
+    <line x1="740" y1="630" x2="890" y2="630" stroke="#1a1a1a" stroke-width="2" marker-start="url(#arrowhead)" marker-end="url(#arrowhead)" />
+    <text x="750" y="635">Thermostability slider</text>
+
+    <!-- Preset Buttons -->
+    <rect x="540" y="660" width="380" height="40" fill="#fff0f0" stroke="#c45d5d" stroke-width="2" rx="6" />
+    <text x="560" y="685">Preset Buttons Group (3 buttons, evenly spaced)</text>
+  </svg>
+
+  <p>All rectangles maintain at least a 20&nbsp;px buffer from the canvas edges and from each other. Controls are arranged in distinct rows to avoid overlap down to a 450&nbsp;px iframe width—the responsive rectangles marked with ↔ stretch horizontally while respecting margins.</p>
+</body>
+</html>
