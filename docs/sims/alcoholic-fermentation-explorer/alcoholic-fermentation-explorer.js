@@ -82,10 +82,10 @@ function setup() {
   resetButton.mousePressed(resetSimulation);
 
   prevButton = createButton('Previous Step');
-  prevButton.mousePressed(() => stepBy(-1));
+  prevButton.mousePressed(() => changeStep(-1));
 
   nextButton = createButton('Next Step');
-  nextButton.mousePressed(() => stepBy(1));
+  nextButton.mousePressed(() => changeStep(1));
 
   co2Toggle = createCheckbox(' Show CO2 Trace', false);
   co2Toggle.changed(() => {
@@ -115,7 +115,7 @@ function draw() {
   rect(0, drawHeight, canvasWidth, controlHeight);
 
   if (isRunning && millis() - lastAdvance >= autoDelay) {
-    advanceAuto();
+    advanceStep();
   }
 
   drawTitle();
@@ -126,7 +126,7 @@ function draw() {
   drawBadges();
   drawOrganismRow();
   drawNarration();
-  drawControlText();
+  drawControlsLabeling();
 }
 
 function drawTitle() {
@@ -156,12 +156,14 @@ function drawStatusStrip() {
 
 function drawStages() {
   const area = layout.stageArea;
-  const slotHeight = (area.h / stageCards.length) + 30;
-  const cardHeight = slotHeight - 22;
+  const gap = 16;
+  const totalGap = gap * (stageCards.length - 1);
+  const cardHeight = (area.h - totalGap) / stageCards.length;
+  const slotHeight = cardHeight + gap;
   const cardWidth = area.w - 20;
   stageCards.forEach((stage, index) => {
     const x = area.x + 10;
-    const y = area.y + index * slotHeight + 8;
+    const y = area.y + index * slotHeight;
     stroke('#c27f55');
     fill(stage.color);
     rect(x, y, cardWidth, cardHeight, 12);
@@ -169,10 +171,10 @@ function drawStages() {
     fill('#1d1d1d');
     textAlign(LEFT, TOP);
     textSize(14);
-    text(`Step ${index + 1}: ${stage.title}`, x + 10, y + 8, cardWidth - 20, 22);
+    text(`Step ${index + 1}: ${stage.title}`, x + 12, y + 7, cardWidth - 24, 22);
     textSize(11);
     fill('#4b4b4b');
-    text(stage.detail, x + 10, y + 32, cardWidth - 20, cardHeight - 16);
+    text(stage.detail, x + 12, y + 29, cardWidth - 24, cardHeight - 28);
     if (steps[currentStep].highlights.includes(index)) {
       noFill();
       stroke('#d97706');
@@ -185,8 +187,9 @@ function drawStages() {
       strokeWeight(2);
       const arrowX = x + cardWidth / 2;
       const arrowTop = y + cardHeight;
-      line(arrowX, arrowTop, arrowX, arrowTop + 20);
-      drawArrowHead(arrowX, arrowTop + 20, HALF_PI);
+      const arrowBottom = arrowTop + gap - 4;
+      line(arrowX, arrowTop, arrowX, arrowBottom);
+      drawArrowHead(arrowX, arrowBottom, HALF_PI);
     }
   });
 }
@@ -291,7 +294,7 @@ function drawOrganismRow() {
   const spacing = (area.w - chipWidth * organisms.length) / (organisms.length + 1);
   organisms.forEach((org, i) => {
     const x = area.x + spacing * (i + 1) + chipWidth * i;
-    const y = area.y + 14;
+    const y = area.y + 9;
     stroke(selectedOrganism === org.name ? '#d97706' : '#0f172a');
     fill(org.color);
     rect(x, y, chipWidth, 28, 12);
@@ -307,7 +310,7 @@ function drawOrganismRow() {
     textAlign(LEFT, TOP);
     textSize(12);
     const fact = organisms.find((o) => o.name === selectedOrganism)?.fact || '';
-    text(fact, area.x + 12, area.y + area.h - 24);
+    text(fact, area.x + 12, area.y + area.h - 19);
   }
 }
 
@@ -328,20 +331,20 @@ function drawNarration() {
   text(`CO2 counter: ${co2Count}`, area.x + 16, area.y + area.h / 2 + 14);
 }
 
-function drawControlText() {
+function drawControlsLabeling() {
   fill('#0f172a');
   textAlign(LEFT, TOP);
   textSize(12);
-  text(`Step delay: ${(autoDelay / 1000).toFixed(1)} s`, margin, drawHeight + 90);
+  text(`Step delay: ${(autoDelay / 1000).toFixed(1)} s`, margin, drawHeight + 95);
 
   fill('#1f2937');
   textAlign(LEFT, CENTER);
   textSize(15);
   text('Simulation Speed:', simulationSpeedLabel.x, simulationSpeedLabel.y);
   textSize(12);
-  text('slower', simulationSpeedLabel.x + 130, simulationSpeedLabel.y + 20);
+  text('slower', simulationSpeedLabel.x + 130, simulationSpeedLabel.y + 17);
   textAlign(RIGHT, CENTER);
-  text('faster', canvasWidth - margin, simulationSpeedLabel.y + 20);
+  text('faster', canvasWidth - margin, simulationSpeedLabel.y + 17);
 }
 
 function toggleSimulation() {
@@ -354,11 +357,11 @@ function toggleSimulation() {
   lastAdvance = millis();
 }
 
-function advanceAuto() {
-  stepBy(1);
+function advanceStep() {
+  changeStep(1);
 }
 
-function stepBy(delta) {
+function changeStep(delta) {
   const nextIndex = constrain(currentStep + delta, 0, steps.length - 1);
   if (nextIndex !== currentStep) {
     currentStep = nextIndex;
@@ -388,13 +391,15 @@ function resetSimulation() {
 function mousePressed() {
   if (layout) {
     const stageArea = layout.stageArea;
-    const slotHeight = (stageArea.h / stageCards.length) + 30;
+    const gap = 16;
+    const cardHeight = (stageArea.h - gap * (stageCards.length - 1)) / stageCards.length;
+    const slotHeight = cardHeight + gap;
 
     const cardWidth = stageArea.w - 20;
     for (let i = 0; i < stageCards.length; i++) {
       const x = stageArea.x + 10;
-      const y = stageArea.y + i * slotHeight + 8;
-      const h = slotHeight - 22;
+      const y = stageArea.y + i * slotHeight;
+      const h = cardHeight;
       if (mouseX >= x && mouseX <= x + cardWidth && mouseY >= y && mouseY <= y + h) {
         currentStep = i;
         isRunning = false;
@@ -424,23 +429,31 @@ function computeLayout() {
   const leftWidth = contentWidth * 0.62;
   const gap = 14;
   const rightWidth = contentWidth - leftWidth - gap;
-  const stageHeight = 260;
+  const statusHeight = 44;
+  const stageHeight = 294;
+  const nadhHeight = 28;
+  const co2Height = 36;
+  const badgeHeight = 28;
+  const organismHeight = 60;
+  const narrationHeight = 32;
   const statusY = margin + 60;
-  const stageY = statusY + 48 + 12;
-    const co2Y = stageY + stageHeight + 12;
-  const wasteY = co2Y + 40 + 12;
-  const organismY = wasteY + 32 + 12;
-  const narrationY = organismY + 70 + 12;
+  const stageY = statusY + statusHeight + 12;
+  const nadhY = stageY + stageHeight + 12;
+  const co2Y = nadhY + nadhHeight + 24;
+  const wasteY = co2Y + co2Height + 12;
+  const organismY = wasteY + badgeHeight + 12;
+  const narrationY = organismY + organismHeight + 12;
 
   return {
-    statusStrip: { x: margin, y: statusY, w: contentWidth, h: 48 },
+    statusStrip: { x: margin, y: statusY, w: contentWidth, h: statusHeight },
     stageArea: { x: margin, y: stageY, w: leftWidth, h: stageHeight },
     infoBox: { x: margin + leftWidth + gap, y: stageY, w: rightWidth, h: stageHeight },
-    co2Box: { x: margin + 30, y: co2Y, w: contentWidth - 60, h: 40 },
-    wasteBadge: { x: margin + 10, y: wasteY, w: contentWidth / 2 - 20, h: 32 },
-    atpBadge: { x: margin + contentWidth / 2 + 10, y: wasteY, w: contentWidth / 2 - 20, h: 32 },
-    organisms: { x: margin, y: organismY, w: contentWidth, h: 70 },
-    narration: { x: margin, y: narrationY, w: contentWidth, h: 40 }
+    nadhArea: { x: margin + 30, y: nadhY, w: contentWidth - 60, h: nadhHeight },
+    co2Box: { x: margin + 30, y: co2Y, w: contentWidth - 60, h: co2Height },
+    wasteBadge: { x: margin + 10, y: wasteY, w: contentWidth / 2 - 20, h: badgeHeight },
+    atpBadge: { x: margin + contentWidth / 2 + 10, y: wasteY, w: contentWidth / 2 - 20, h: badgeHeight },
+    organisms: { x: margin, y: organismY, w: contentWidth, h: organismHeight },
+    narration: { x: margin, y: narrationY, w: contentWidth, h: narrationHeight }
   };
 }
 
@@ -458,7 +471,7 @@ function updateControlPositions() {
   const sliderX = margin + 130;
   delaySlider.position(sliderX, sliderY);
   delaySlider.size(canvasWidth - sliderX - margin);
-  simulationSpeedLabel = { x: margin, y: sliderY - 4 };
+  simulationSpeedLabel = { x: margin, y: sliderY + 6 };
 }
 
 function positionButton(btn, x, y) {
@@ -490,6 +503,16 @@ function drawArrowHead(x, y, angle) {
   translate(x, y);
   rotate(angle);
   fill('#555');
+  noStroke();
+  triangle(0, 0, -10, 4, -10, -4);
+  pop();
+}
+
+function drawCurvedArrowHead(x, y, angle) {
+  push();
+  translate(x, y);
+  rotate(angle);
+  fill('#7b3fad');
   noStroke();
   triangle(0, 0, -10, 4, -10, -4);
   pop();
