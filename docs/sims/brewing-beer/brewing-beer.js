@@ -1,5 +1,5 @@
-// Alcoholic Fermentation Explorer MicroSim
-// Visualizes the yeast/plant fermentation pathway with stage cards, CO2 counter, and organism trivia.
+// Brewing Beer Process Explorer MicroSim
+// Adapts the alcoholic fermentation explorer to highlight brewery steps, CO2 capture, and strain differences.
 
 let containerWidth;
 let canvasWidth = 760;
@@ -27,45 +27,45 @@ let simulationSpeedLabel = { x: 0, y: 0 };
 const co2Increment = 4;
 
 const stageCards = [
-  { title: 'Glucose feedstock', detail: 'Sugars from grain mash or plant sap', color: '#fffef1' },
-  { title: 'Glycolysis', detail: '2 ATP + 2 NADH + 2 pyruvate', color: '#fff4e2' },
-  { title: 'Pyruvate pool', detail: 'Anaerobic conditions trigger fermentation', color: '#ffe6ce' },
-  { title: 'Acetaldehyde + CO2', detail: 'Pyruvate decarboxylase releases CO2', color: '#ffd9c0' },
-  { title: 'Ethanol formed', detail: 'NADH reduces acetaldehyde → ethanol', color: '#ffcdb0' }
+  { title: 'Glucose feedstock', detail: 'Malted barley mash converted to sweet wort', color: '#fffef1' },
+  { title: 'Glycolysis', detail: '2 ATP + 2 NADH + 2 pyruvate in the fermenter', color: '#fff4e2' },
+  { title: 'Pyruvate pool', detail: 'Oxygen exclusion pushes wort chemistry anaerobic', color: '#ffe6ce' },
+  { title: 'Acetaldehyde + CO2', detail: 'Pyruvate decarboxylase vents CO2 through blow-off tubes', color: '#ffd9c0' },
+  { title: 'Ethanol formed', detail: 'NADH reduces acetaldehyde to flavorful ethanol', color: '#ffcdb0' }
 ];
 
 const steps = [
   {
-    heading: '1. Yeast absorb sugar and run glycolysis',
-    body: 'Glucose splits to pyruvate, netting 2 ATP and 2 NADH.',
+    heading: '1. Mash tun feeds glucose-rich wort to yeast',
+    body: 'Yeast absorb maltose and run glycolysis, netting 2 ATP and 2 NADH per glucose.',
     highlights: [0]
   },
   {
-    heading: '2. Without oxygen, pyruvate cannot enter mitochondria',
-    body: 'Cells divert pyruvate to fermentation to recycle NAD+.',
+    heading: '2. Fermentation vessels stay oxygen-limited',
+    body: 'Brewers cap the tank so pyruvate cannot enter mitochondria, forcing fermentation.',
     highlights: [1]
   },
   {
-    heading: '3. Pyruvate decarboxylase releases CO2 gas',
-    body: 'CO2 bubbles leaven bread and carbonate beverages.',
+    heading: '3. Pyruvate decarboxylase vents aromatic CO2',
+    body: 'Carbon dioxide scrubs volatile aromatics and carbonates the beer.',
     highlights: [2]
   },
   {
-    heading: '4. Acetaldehyde accepts electrons from NADH',
-    body: 'NADH → NAD+ keeps glycolysis running while ethanol forms.',
+    heading: '4. Acetaldehyde accepts NADH electrons',
+    body: 'NADH → NAD+ keeps glycolysis running while ethanol precursors form flavor compounds.',
     highlights: [3]
   },
   {
-    heading: '5. Brewer controls CO2 and ethanol output',
-    body: 'CO2 can be trapped or vented; ethanol stays in solution.',
+    heading: '5. Cellar team directs CO2 capture and ethanol conditioning',
+    body: 'CO2 can be trapped in bright tanks while ethanol matures with yeast cleanup.',
     highlights: [4]
   }
 ];
 
 const organisms = [
-  { name: "Baker's Yeast", fact: 'CO2 inflates dough bubbles that bake into bread crumb.', color: '#2a9d8f' },
-  { name: "Brewer's Yeast", fact: 'Brewers capture ethanol and sometimes CO2 for carbonation.', color: '#1c7a74' },
-  { name: 'Flooded Plant Tissue', fact: 'Waterlogged roots ferment to survive until oxygen returns.', color: '#90be6d' }
+  { name: 'Ale Yeast (Saccharomyces cerevisiae)', fact: 'Top-fermenting strains generate fruity esters while recycling NAD+ quickly.', color: '#2a9d8f' },
+  { name: 'Lager Yeast (Saccharomyces pastorianus)', fact: 'Cold fermentation slows glycolysis but keeps acetaldehyde and diacetyl low.', color: '#1c7a74' },
+  { name: 'Spontaneous Cultures', fact: 'Mixed yeasts and bacteria drive complex fermentation and CO2 curves in foeders.', color: '#90be6d' }
 ];
 
 let layout;
@@ -99,7 +99,7 @@ function setup() {
     autoDelay = map(delaySlider.value(), sliderRange.min, sliderRange.max, 4000, 800, true);
   });
 
-  describe('Alcoholic fermentation MicroSim showing stage cards, CO2 production, and organism facts.', LABEL);
+  describe('Brewing beer fermentation MicroSim showing stage cards, CO2 production, and yeast strain facts.', LABEL);
   updateControlPositions();
   lastAdvance = millis();
 }
@@ -135,10 +135,10 @@ function drawTitle() {
   fill('#103049');
   textAlign(CENTER, TOP);
   textSize(30);
-  text('Alcoholic Fermentation Explorer', canvasWidth / 2, margin);
+  text('Brewing Beer Process Explorer', canvasWidth / 2, margin);
   textSize(15);
   fill('#1f4b99');
-  text('Follow yeast electrons from glucose to CO2 bubbles and ethanol', canvasWidth / 2, margin + 32);
+  text('Trace how wort sugars become CO2 and ethanol in a brewery fermenter', canvasWidth / 2, margin + 32);
 }
 
 function drawStatusStrip() {
