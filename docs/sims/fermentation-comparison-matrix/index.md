@@ -11,7 +11,7 @@ quality_score: 0
 
 # Fermentation Comparison Matrix
 
-<iframe src="main.html" height="520px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="750px" width="100%" scrolling="no"></iframe>
 
 [Run the Fermentation Comparison Matrix MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>

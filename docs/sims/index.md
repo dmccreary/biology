@@ -234,6 +234,12 @@
 
     Interactive MicroSim for feedback loop simulator.
 
+-   **[Fermentation Comparison Matrix](./fermentation-comparison-matrix/index.md)**
+
+    ![Fermentation Comparison Matrix](./fermentation-comparison-matrix/fermentation-comparison-matrix.png)
+
+    Interactive MicroSim comparing lactic and alcoholic fermentation features.
+
 -   **[Fermentation Pathways Comparison](./fermentation-pathways/index.md)**
 
     ![Fermentation Pathways Comparison](./fermentation-pathways/fermentation-pathways.png)

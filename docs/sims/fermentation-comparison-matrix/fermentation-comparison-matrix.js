@@ -1,343 +1,432 @@
 // Fermentation Comparison Matrix MicroSim
-// Reveals lactic vs alcoholic fermentation features row by row and offers a quiz mode for classification.
+// Side-by-side comparison of lactic acid vs alcoholic fermentation with quiz mode.
 
-let containerWidth;
 let canvasWidth = 760;
-const drawHeight = 400;
-const controlHeight = 120;
-const canvasHeight = drawHeight + controlHeight;
-const margin = 24;
+let drawHeight = 650;
+let controlHeight = 50;
+let canvasHeight = drawHeight + controlHeight;
+const margin = 16;
 
-let startButton;
-let resetButton;
-let revealAllButton;
-let hideAllButton;
-let quizButton;
-let rowSlider;
+let modeButton;
+let currentMode = 'explore'; // 'explore' or 'quiz'
+let hoveredRow = -1;
+let quizAnswers = [];    // tracks correct answers per row
+let quizCurrent = 0;     // current quiz question index
+let quizFeedback = '';
+let quizFeedbackTime = 0;
+let quizComplete = false;
+let quizScore = 0;
 
-let autoReveal = false;
-let lastReveal = 0;
-let quizMode = false;
-let quizIndex = 0;
-let quizMessage = '';
+const HEADER_HEIGHT = 70;
+const COL_LABEL_H = 36;
 
-const rows = [
+const comparisonData = [
   {
-    label: 'Organisms / contexts',
-    lactic: 'Muscle cells, red blood cells, Lactobacillus bacteria',
-    alcoholic: "Baker's yeast, brewer's yeast, waterlogged plant tissue"
+    feature: 'Organisms',
+    lactic: 'Muscle cells, red blood cells, some bacteria (Lactobacillus)',
+    alcoholic: 'Yeasts (Saccharomyces cerevisiae), some plants under waterlogging'
   },
   {
-    label: 'Waste products',
-    lactic: 'Lactate exported to blood, later recycled via Cori cycle',
-    alcoholic: 'Ethanol remains in fluid, CO2 gas escapes or is captured'
+    feature: 'Location in cell',
+    lactic: 'Cytoplasm (no organelles involved)',
+    alcoholic: 'Cytoplasm (no organelles involved)'
   },
   {
-    label: 'Gas released',
-    lactic: 'No gas; acid builds up until blood removes it',
-    alcoholic: 'CO2 bubbles inflate dough or carbonate beverages'
+    feature: 'Oxygen requirement',
+    lactic: 'Anaerobic (occurs without oxygen)',
+    alcoholic: 'Anaerobic (occurs without oxygen)'
   },
   {
-    label: 'ATP yield',
-    lactic: 'Net 2 ATP per glucose (glycolysis only)',
-    alcoholic: 'Also net 2 ATP per glucose (glycolysis only)'
+    feature: 'Starting molecule',
+    lactic: 'Pyruvate (from glycolysis)',
+    alcoholic: 'Pyruvate (from glycolysis)'
   },
   {
-    label: 'NAD+ recycling note',
-    lactic: 'NADH reduces pyruvate directly to regenerate NAD+',
-    alcoholic: 'NADH reduces acetaldehyde to ethanol, regenerating NAD+'
+    feature: 'Number of steps',
+    lactic: '1 step: pyruvate reduced directly to lactate',
+    alcoholic: '2 steps: pyruvate decarboxylated, then acetaldehyde reduced'
+  },
+  {
+    feature: 'Key enzyme(s)',
+    lactic: 'Lactate dehydrogenase (LDH)',
+    alcoholic: 'Pyruvate decarboxylase (PDC) + Alcohol dehydrogenase (ADH)'
+  },
+  {
+    feature: 'End products',
+    lactic: 'Lactate (lactic acid)',
+    alcoholic: 'Ethanol + CO\u2082'
+  },
+  {
+    feature: 'Gas produced?',
+    lactic: 'No gas released',
+    alcoholic: 'Yes \u2014 CO\u2082 (bubbles, carbonation, bread rising)'
+  },
+  {
+    feature: 'Carbon count',
+    lactic: 'Pyruvate (3C) \u2192 Lactate (3C) \u2014 no carbon lost',
+    alcoholic: 'Pyruvate (3C) \u2192 CO\u2082 (1C) + Ethanol (2C)'
+  },
+  {
+    feature: 'Reversibility',
+    lactic: 'Reversible \u2014 lactate recycled to glucose via Cori cycle in liver',
+    alcoholic: 'Irreversible \u2014 ethanol and CO\u2082 cannot be reassembled into pyruvate'
+  },
+  {
+    feature: 'NAD\u207A recycling',
+    lactic: 'NADH donates electrons directly to pyruvate \u2192 NAD\u207A regenerated',
+    alcoholic: 'NADH donates electrons to acetaldehyde \u2192 NAD\u207A regenerated'
+  },
+  {
+    feature: 'Net ATP per glucose',
+    lactic: '2 ATP (from glycolysis only)',
+    alcoholic: '2 ATP (from glycolysis only)'
+  },
+  {
+    feature: 'Real-world uses',
+    lactic: 'Yogurt, sauerkraut, kimchi, cheese production',
+    alcoholic: 'Beer, wine, bread, biofuel production'
   }
 ];
 
-const quizPrompts = [
-  { text: 'Produces CO2 bubbles that make bread rise?', answer: 'alcoholic' },
-  { text: 'Occurs in fast-twitch muscle fibers during a sprint?', answer: 'lactic' },
-  { text: 'Exports lactate that the liver converts back to glucose?', answer: 'lactic' },
-  { text: 'Creates ethanol alcohol as a waste product?', answer: 'alcoholic' }
+const quizQuestions = [
+  { text: 'Produces CO\u2082 gas that makes bread dough rise', answer: 'alcoholic' },
+  { text: 'Occurs in your leg muscles during an all-out sprint', answer: 'lactic' },
+  { text: 'Uses lactate dehydrogenase as its key enzyme', answer: 'lactic' },
+  { text: 'Converts pyruvate to ethanol in two steps', answer: 'alcoholic' },
+  { text: 'Product can be recycled back to glucose via the Cori cycle', answer: 'lactic' },
+  { text: 'Used by Saccharomyces cerevisiae in beer brewing', answer: 'alcoholic' },
+  { text: 'No carbon atoms are lost as gas during this process', answer: 'lactic' },
+  { text: 'Requires pyruvate decarboxylase and alcohol dehydrogenase', answer: 'alcoholic' },
+  { text: 'Used to produce yogurt, sauerkraut, and kimchi', answer: 'lactic' },
+  { text: 'The reaction is irreversible \u2014 products cannot reform pyruvate', answer: 'alcoholic' }
 ];
-
-let revealedCount = 0;
-let layout;
 
 function setup() {
   updateCanvasSize();
+  canvasHeight = drawHeight + controlHeight;
   const canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.parent(document.querySelector('main'));
 
-  startButton = createButton('Start Comparison');
-  startButton.mousePressed(toggleAutoReveal);
+  modeButton = createButton('Switch to Quiz Mode');
+  modeButton.parent(document.querySelector('main'));
+  modeButton.mousePressed(toggleMode);
 
-  resetButton = createButton('Reset Grid');
-  resetButton.mousePressed(resetMatrix);
-
-  revealAllButton = createButton('Reveal All');
-  revealAllButton.mousePressed(() => setRevealed(rows.length));
-
-  hideAllButton = createButton('Hide All');
-  hideAllButton.mousePressed(() => setRevealed(0));
-
-  quizButton = createButton('Enter Quiz Mode');
-  quizButton.mousePressed(toggleQuizMode);
-
-  rowSlider = createSlider(0, rows.length, 0, 1);
-  rowSlider.input(() => {
-    setRevealed(rowSlider.value());
-  });
-
-  describe('Comparison matrix for lactic vs alcoholic fermentation with reveal and quiz features.', LABEL);
   updateControlPositions();
 }
 
 function draw() {
   updateCanvasSize();
+  canvasHeight = drawHeight + controlHeight;
   resizeCanvas(canvasWidth, canvasHeight, true);
-  layout = computeLayout();
 
-  fill('aliceblue');
-  stroke('silver');
-  rect(0, 0, canvasWidth, drawHeight);
-  fill('white');
-  rect(0, drawHeight, canvasWidth, controlHeight);
-
-  if (autoReveal && millis() - lastReveal > 1800) {
-    setRevealed(min(rows.length, revealedCount + 1));
-    if (revealedCount === rows.length) {
-      autoReveal = false;
-      startButton.html('Start Comparison');
-    }
-    lastReveal = millis();
-  }
+  background('aliceblue');
 
   drawTitle();
-  drawRevealStrip();
-  drawMatrix();
-  drawQuizNotice();
-  drawSummary();
-  drawStatusText();
+  drawTable();
+
+  // Control area
+  fill(255);
+  noStroke();
+  rect(0, drawHeight, canvasWidth, controlHeight);
+
+  updateControlPositions();
 }
 
 function drawTitle() {
   noStroke();
-  fill('#2f2f4a');
+  fill('#1a2744');
   textAlign(CENTER, TOP);
-  textSize(28);
+  textStyle(BOLD);
+  textSize(Math.max(16, canvasWidth * 0.026));
   text('Fermentation Comparison Matrix', canvasWidth / 2, margin);
-  textSize(14);
-  fill('#485b78');
-  text('Compare lactic vs alcoholic fermentation row by row, then test yourself.', canvasWidth / 2, margin + 28);
-}
 
-function drawRevealStrip() {
-  const area = layout.revealStrip;
-  stroke('#7ca9c8');
-  fill('#e2f3ff');
-  rect(area.x, area.y, area.w, area.h, 8);
-  noStroke();
-  fill('#1f3c54');
-  textAlign(LEFT, CENTER);
-  textSize(13);
-  text('Use the controls below to reveal rows in order or jump ahead.', area.x + 12, area.y + area.h / 2);
-}
-
-function drawMatrix() {
-  const area = layout.matrix;
-  const rowHeight = area.h / rows.length;
-  const colDivider = area.x + area.w / 2;
-
-  stroke('#8cb0c9');
-  fill('#ffffff');
-  rect(area.x, area.y, area.w, area.h);
-
-  // Column labels
-  noStroke();
-  fill('#1a2a44');
-  textAlign(CENTER, CENTER);
-  textSize(14);
-  text('Lactic Fermentation', area.x + (area.w / 4), area.y + 16);
-  text('Alcoholic Fermentation', area.x + (3 * area.w / 4), area.y + 16);
-
-  // Grid lines
-  stroke('#cfcfcf');
-  for (let i = 1; i < rows.length; i++) {
-    line(area.x, area.y + i * rowHeight, area.x + area.w, area.y + i * rowHeight);
+  textStyle(NORMAL);
+  textSize(Math.max(12, canvasWidth * 0.016));
+  fill('#4a5568');
+  if (currentMode === 'explore') {
+    text('Hover over any row to highlight it. Click the button below to test yourself.', canvasWidth / 2, margin + Math.max(20, canvasWidth * 0.03));
+  } else if (quizComplete) {
+    text('Quiz complete! Score: ' + quizScore + ' / ' + quizQuestions.length + '. Click button to return to Explore mode.', canvasWidth / 2, margin + Math.max(20, canvasWidth * 0.03));
+  } else {
+    text('Question ' + (quizCurrent + 1) + ' of ' + quizQuestions.length + ':  ' + quizQuestions[quizCurrent].text, canvasWidth / 2, margin + Math.max(20, canvasWidth * 0.03));
   }
-  stroke('#8cb0c9');
-  strokeWeight(2);
-  line(colDivider, area.y, colDivider, area.y + area.h);
-  strokeWeight(1);
+}
 
-  // Row labels and content
-  rows.forEach((row, index) => {
-    const yTop = area.y + index * rowHeight;
-    const yCenter = yTop + rowHeight / 2;
+function drawTable() {
+  let tableX = margin;
+  let tableY = HEADER_HEIGHT;
+  let tableW = canvasWidth - margin * 2;
+  let numRows = comparisonData.length;
 
-    // Row label on left margin
+  // Column widths: feature 22%, lactic 39%, alcoholic 39%
+  let featureW = tableW * 0.22;
+  let lacticW = tableW * 0.39;
+  let alcoholicW = tableW * 0.39;
+
+  let lacticX = tableX + featureW;
+  let alcoholicX = lacticX + lacticW;
+
+  // Available height for data rows
+  let availableH = drawHeight - tableY - COL_LABEL_H - 8;
+  let rowH = availableH / numRows;
+
+  // Column headers
+  let headerY = tableY;
+
+  // Feature header
+  fill('#2d3748');
+  stroke('#cbd5e0');
+  rect(tableX, headerY, featureW, COL_LABEL_H);
+  noStroke();
+  fill('#fff');
+  textAlign(CENTER, CENTER);
+  textStyle(BOLD);
+  textSize(Math.max(11, Math.min(14, canvasWidth * 0.016)));
+  text('Feature', tableX + featureW / 2, headerY + COL_LABEL_H / 2);
+
+  // Lactic header
+  fill('#7c3aed');
+  stroke('#cbd5e0');
+  rect(lacticX, headerY, lacticW, COL_LABEL_H);
+  noStroke();
+  fill('#fff');
+  text('Lactic Acid Fermentation', lacticX + lacticW / 2, headerY + COL_LABEL_H / 2);
+
+  // Alcoholic header
+  fill('#d97706');
+  stroke('#cbd5e0');
+  rect(alcoholicX, headerY, alcoholicW, COL_LABEL_H);
+  noStroke();
+  fill('#fff');
+  text('Alcoholic Fermentation', alcoholicX + alcoholicW / 2, headerY + COL_LABEL_H / 2);
+
+  // Data rows
+  let dataY = headerY + COL_LABEL_H;
+  let fontSize = Math.max(10, Math.min(13, canvasWidth * 0.014));
+
+  for (let i = 0; i < numRows; i++) {
+    let rowY = dataY + i * rowH;
+    let row = comparisonData[i];
+    let isHovered = (hoveredRow === i && currentMode === 'explore');
+    let isEven = (i % 2 === 0);
+
+    // Row backgrounds
+    let featureBg = isHovered ? '#e2e8f0' : (isEven ? '#edf2f7' : '#f7fafc');
+    let lacticBg = isHovered ? '#ede9fe' : (isEven ? '#faf5ff' : '#f5f0ff');
+    let alcoholicBg = isHovered ? '#fef3c7' : (isEven ? '#fffbeb' : '#fff8e1');
+
+    // Feature cell
+    fill(featureBg);
+    stroke('#e2e8f0');
+    rect(tableX, rowY, featureW, rowH);
     noStroke();
-    fill('#4b5563');
+    fill('#2d3748');
     textAlign(LEFT, TOP);
-    textSize(12);
-    text(row.label, area.x + 10, yTop + 6);
+    textStyle(BOLD);
+    textSize(fontSize);
+    text(row.feature, tableX + 6, rowY + 4, featureW - 12, rowH - 8);
 
-    const revealed = index < revealedCount;
-    const isQuizRow = quizMode && index === quizIndex;
+    // Lactic cell
+    fill(lacticBg);
+    stroke('#e2e8f0');
+    rect(lacticX, rowY, lacticW, rowH);
+    noStroke();
+    fill('#4a1d96');
+    textAlign(LEFT, TOP);
+    textStyle(NORMAL);
+    textSize(fontSize);
 
-    // Column backgrounds
-    fill(revealed ? '#f7fbff' : '#f0f0f0');
-    stroke('#f0f0f0');
-    rect(area.x + 10, yTop + 26, area.w / 2 - 20, rowHeight - 30);
-    rect(colDivider + 10, yTop + 26, area.w / 2 - 20, rowHeight - 30);
-
-    if (revealed && !quizMode) {
-      // show text
-      noStroke();
-      fill('#1f2a37');
-      textAlign(LEFT, TOP);
-      textSize(12);
-      text(row.lactic, area.x + 18, yTop + 32, area.w / 2 - 32, rowHeight - 38);
-      text(row.alcoholic, colDivider + 18, yTop + 32, area.w / 2 - 32, rowHeight - 38);
-    } else if (quizMode && isQuizRow) {
-      noStroke();
-      fill('#1f2a37');
-      textAlign(CENTER, CENTER);
-      textSize(12);
-      text('Click here if statement fits Lactic', area.x + area.w / 4, yCenter + 10);
-      text('Click here if statement fits Alcoholic', area.x + (3 * area.w) / 4, yCenter + 10);
-      stroke('#f59e0b');
-      noFill();
-      rect(area.x + 10, yTop + 26, area.w - 20, rowHeight - 30);
-    } else if (!revealed) {
-      noStroke();
-      fill('#7c7c7c');
-      textAlign(CENTER, CENTER);
-      textSize(12);
-      text('Hidden until revealed', area.x + area.w / 4, yCenter + 10);
-      text('Hidden until revealed', area.x + (3 * area.w) / 4, yCenter + 10);
+    if (currentMode === 'explore') {
+      text(row.lactic, lacticX + 6, rowY + 4, lacticW - 12, rowH - 8);
+    } else {
+      // Quiz mode — show if already answered correctly, else show "?"
+      if (quizAnswers[i] === true) {
+        fill('#16a34a');
+        text(row.lactic, lacticX + 6, rowY + 4, lacticW - 12, rowH - 8);
+      } else {
+        fill('#a0aec0');
+        textAlign(CENTER, CENTER);
+        text('?', lacticX + lacticW / 2, rowY + rowH / 2);
+      }
     }
-  });
+
+    // Alcoholic cell
+    fill(alcoholicBg);
+    stroke('#e2e8f0');
+    rect(alcoholicX, rowY, alcoholicW, rowH);
+    noStroke();
+    fill('#92400e');
+    textAlign(LEFT, TOP);
+    textStyle(NORMAL);
+    textSize(fontSize);
+
+    if (currentMode === 'explore') {
+      text(row.alcoholic, alcoholicX + 6, rowY + 4, alcoholicW - 12, rowH - 8);
+    } else {
+      if (quizAnswers[i] === true) {
+        fill('#16a34a');
+        text(row.alcoholic, alcoholicX + 6, rowY + 4, alcoholicW - 12, rowH - 8);
+      } else {
+        fill('#a0aec0');
+        textAlign(CENTER, CENTER);
+        text('?', alcoholicX + alcoholicW / 2, rowY + rowH / 2);
+      }
+    }
+  }
+
+  // Quiz mode: highlight clickable columns
+  if (currentMode === 'quiz' && !quizComplete) {
+    drawQuizClickZones(lacticX, lacticW, alcoholicX, alcoholicW, dataY);
+  }
+
+  // Quiz feedback
+  if (quizFeedback && millis() - quizFeedbackTime < 1500) {
+    let feedbackY = drawHeight - 28;
+    noStroke();
+    textAlign(CENTER, CENTER);
+    textStyle(BOLD);
+    textSize(16);
+    if (quizFeedback === 'Correct!') {
+      fill('#16a34a');
+    } else {
+      fill('#dc2626');
+    }
+    text(quizFeedback, canvasWidth / 2, feedbackY);
+  }
 }
 
-function drawQuizNotice() {
-  const area = layout.quizStrip;
-  stroke('#d4a642');
-  fill('#fff7dd');
-  rect(area.x, area.y, area.w, area.h, 8);
+function drawQuizClickZones(lacticX, lacticW, alcoholicX, alcoholicW, dataY) {
+  // Draw clickable column indicators at the bottom
+  let zoneY = drawHeight - 50;
+  let zoneH = 38;
+
+  // Lactic click zone
+  fill('#7c3aed');
   noStroke();
-  fill('#5b4315');
-  textAlign(LEFT, CENTER);
-  textSize(12);
-  const textMsg = quizMode ? `Quiz Mode: ${quizPrompts[quizIndex].text}` : 'Quiz Mode tells you a feature; click the correct column to classify it.';
-  text(textMsg, area.x + 12, area.y + area.h / 2);
-}
+  rect(lacticX + 10, zoneY, lacticW - 20, zoneH, 8);
+  fill('#fff');
+  textAlign(CENTER, CENTER);
+  textStyle(BOLD);
+  textSize(14);
+  text('Click: Lactic Acid', lacticX + lacticW / 2, zoneY + zoneH / 2);
 
-function drawSummary() {
-  const area = layout.summary;
-  stroke('#95a8d5');
-  fill('#f0f5ff');
-  rect(area.x, area.y, area.w, area.h, 8);
+  // Alcoholic click zone
+  fill('#d97706');
   noStroke();
-  fill('#1d2f44');
-  textAlign(LEFT, CENTER);
-  textSize(13);
-  const summaryText = revealedCount === rows.length ? 'All rows revealed - compare vocabulary, gases, and ATP at a glance.' : 'Reveal rows to compare organisms, waste, gases, ATP, and NAD+ recycling.';
-  text(summaryText, area.x + 12, area.y + area.h / 2);
+  rect(alcoholicX + 10, zoneY, alcoholicW - 20, zoneH, 8);
+  fill('#fff');
+  text('Click: Alcoholic', alcoholicX + alcoholicW / 2, zoneY + zoneH / 2);
 }
 
-function drawStatusText() {
-  fill('#1f2937');
-  textAlign(LEFT, TOP);
-  textSize(12);
-  const status = `Rows revealed: ${revealedCount}/${rows.length}${quizMode ? ' • ' + quizMessage : ''}`;
-  text(status, margin, drawHeight - 18);
+function mouseMoved() {
+  if (currentMode !== 'explore') {
+    hoveredRow = -1;
+    return;
+  }
+  let tableY = HEADER_HEIGHT + COL_LABEL_H;
+  let availableH = drawHeight - HEADER_HEIGHT - COL_LABEL_H - 8;
+  let rowH = availableH / comparisonData.length;
+
+  if (mouseX >= margin && mouseX <= canvasWidth - margin &&
+      mouseY >= tableY && mouseY < tableY + availableH) {
+    hoveredRow = floor((mouseY - tableY) / rowH);
+    if (hoveredRow >= comparisonData.length) hoveredRow = -1;
+  } else {
+    hoveredRow = -1;
+  }
 }
 
 function mousePressed() {
-  if (!quizMode) return;
-  const area = layout.matrix;
-  if (mouseY < area.y || mouseY > area.y + area.h) return;
-  const rowHeight = area.h / rows.length;
-  const clickedRow = floor((mouseY - area.y) / rowHeight);
-  if (clickedRow !== quizIndex) return;
-  const colDivider = area.x + area.w / 2;
-  const choice = mouseX < colDivider ? 'lactic' : 'alcoholic';
-  const prompt = quizPrompts[quizIndex];
-  if (choice === prompt.answer) {
-    quizMessage = 'Correct!';
-    quizIndex = (quizIndex + 1) % quizPrompts.length;
-  } else {
-    quizMessage = 'Try again: think about the waste product.';
+  if (currentMode !== 'quiz' || quizComplete) return;
+
+  let tableW = canvasWidth - margin * 2;
+  let featureW = tableW * 0.22;
+  let lacticW = tableW * 0.39;
+  let lacticX = margin + featureW;
+  let alcoholicX = lacticX + lacticW;
+  let alcoholicW = tableW * 0.39;
+
+  // Check click on the answer zones at the bottom
+  let zoneY = drawHeight - 50;
+  let zoneH = 38;
+
+  let choice = null;
+  if (mouseY >= zoneY && mouseY <= zoneY + zoneH) {
+    if (mouseX >= lacticX + 10 && mouseX <= lacticX + lacticW - 10) {
+      choice = 'lactic';
+    } else if (mouseX >= alcoholicX + 10 && mouseX <= alcoholicX + alcoholicW - 10) {
+      choice = 'alcoholic';
+    }
   }
-}
 
-function toggleAutoReveal() {
-  autoReveal = !autoReveal;
-  if (autoReveal) {
-    startButton.html('Pause Auto Reveal');
-    lastReveal = millis();
+  if (choice === null) return;
+
+  let q = quizQuestions[quizCurrent];
+  if (choice === q.answer) {
+    quizFeedback = 'Correct!';
+    quizScore++;
+    // Reveal a matching row (cycle through unrevealed rows)
+    for (let i = 0; i < comparisonData.length; i++) {
+      if (quizAnswers[i] !== true) {
+        quizAnswers[i] = true;
+        break;
+      }
+    }
+    quizCurrent++;
+    if (quizCurrent >= quizQuestions.length) {
+      quizComplete = true;
+      // Reveal all remaining
+      for (let i = 0; i < comparisonData.length; i++) {
+        quizAnswers[i] = true;
+      }
+    }
   } else {
-    startButton.html('Start Comparison');
+    quizFeedback = 'Not quite \u2014 try again!';
   }
+  quizFeedbackTime = millis();
 }
 
-function resetMatrix() {
-  autoReveal = false;
-  quizMode = false;
-  quizMessage = '';
-  startButton.html('Start Comparison');
-  quizButton.html('Enter Quiz Mode');
-  setRevealed(0);
-}
-
-function setRevealed(count) {
-  revealedCount = constrain(count, 0, rows.length);
-  rowSlider.value(revealedCount);
-}
-
-function toggleQuizMode() {
-  quizMode = !quizMode;
-  quizMessage = '';
-  quizIndex = 0;
-  quizButton.html(quizMode ? 'Exit Quiz Mode' : 'Enter Quiz Mode');
+function toggleMode() {
+  if (currentMode === 'explore') {
+    currentMode = 'quiz';
+    modeButton.html('Return to Explore Mode');
+    quizAnswers = new Array(comparisonData.length).fill(false);
+    quizCurrent = 0;
+    quizScore = 0;
+    quizComplete = false;
+    quizFeedback = '';
+  } else {
+    currentMode = 'explore';
+    modeButton.html('Switch to Quiz Mode');
+    hoveredRow = -1;
+    quizFeedback = '';
+  }
 }
 
 function updateControlPositions() {
-  const rowY = drawHeight + 10;
-  startButton.position(margin, rowY);
-  startButton.size(160, 34);
-
-  resetButton.position(margin + 170, rowY);
-  resetButton.size(120, 34);
-
-  quizButton.position(margin + 300, rowY);
-  quizButton.size(150, 34);
-
-  revealAllButton.position(margin + 460, rowY);
-  revealAllButton.size(120, 34);
-
-  hideAllButton.position(margin + 590, rowY);
-  hideAllButton.size(120, 34);
-
-  rowSlider.position(margin, rowY + 50);
-  rowSlider.size(canvasWidth - margin * 2);
-}
-
-function computeLayout() {
-  return {
-    revealStrip: { x: margin, y: margin + 50, w: canvasWidth - margin * 2, h: 36 },
-    matrix: { x: margin, y: margin + 100, w: canvasWidth - margin * 2, h: 200 },
-    quizStrip: { x: margin, y: margin + 310, w: canvasWidth - margin * 2, h: 28 },
-    summary: { x: margin, y: margin + 345, w: canvasWidth - margin * 2, h: 36 }
-  };
+  let btnW = Math.min(200, canvasWidth * 0.3);
+  modeButton.position((canvasWidth - btnW) / 2, drawHeight + 8);
+  modeButton.size(btnW, 34);
+  modeButton.style('font-size', '14px');
+  modeButton.style('border-radius', '6px');
+  modeButton.style('cursor', 'pointer');
+  modeButton.style('border', '1px solid #cbd5e0');
+  modeButton.style('background-color', currentMode === 'explore' ? '#f3e8d0' : '#ede9fe');
+  modeButton.style('color', '#2d3748');
+  modeButton.style('font-weight', 'bold');
 }
 
 function updateCanvasSize() {
   const container = document.querySelector('main');
   if (!container) return;
-  containerWidth = Math.floor(container.getBoundingClientRect().width);
-  canvasWidth = containerWidth;
+  canvasWidth = Math.floor(container.getBoundingClientRect().width);
+  // Scale draw height based on width to keep rows readable
+  drawHeight = Math.max(500, Math.min(700, canvasWidth * 0.72));
 }
 
 function windowResized() {
   updateCanvasSize();
+  canvasHeight = drawHeight + controlHeight;
   resizeCanvas(canvasWidth, canvasHeight, true);
   updateControlPositions();
 }
