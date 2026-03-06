@@ -60,6 +60,10 @@
 
     ![](./brewing-beer/brewing-beer.png)
 
+    Interactive MicroSim showing the five steps in brewing beer using
+    detailed images of the steps inside a brewery and callouts of the
+    molecular processes involved in brewing beer.
+
 -   **[Calvin Cycle Simulator](./calvin-cycle-simulator/index.md)**
 
     ![Calvin Cycle Simulator](./calvin-cycle-simulator/calvin-cycle-simulator.png)

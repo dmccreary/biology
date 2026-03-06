@@ -8,6 +8,29 @@ version: 0.05
 
 # Cellular Respiration and Fermentation
 
+## Summary
+
+Cellular respiration extracts the chemical energy stored in glucose and converts it into ATP, the currency cells actually spend. This chapter follows the complete oxidative pathway: glycolysis in the cytoplasm produces pyruvate and a small ATP yield; pyruvate oxidation and the Krebs cycle in the mitochondrial matrix generate NADH and FADH₂ electron carriers; and the mitochondrial electron transport chain couples electron flow to a proton gradient that ATP synthase harvests via chemiosmosis. The chapter quantifies the total ATP yield per glucose and closes with anaerobic fermentation — lactic acid and alcoholic pathways that regenerate NAD⁺ when oxygen is unavailable.
+
+## Concepts Covered
+
+This chapter covers the following 14 concepts from the learning graph:
+
+1. Cellular Respiration Overview
+2. Glycolysis
+3. Substrate-Level Phosphorylation
+4. Pyruvate Oxidation
+5. Acetyl-CoA
+6. Krebs Cycle
+7. Electron Transport Chain (Mitochondria)
+8. Oxidative Phosphorylation
+9. Chemiosmosis
+10. NADH and FADH₂
+11. ATP Yield of Respiration
+12. Fermentation
+13. Lactic Acid Fermentation
+14. Alcoholic Fermentation
+
 !!! mascot-welcome "Gregor Welcomes You!"
     <img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Gregor welcomes you">
     Welcome, investigators! In Chapter 7 we saw how chloroplasts *build* glucose from sunlight and $\ce{CO2}$. Now we flip the script. Cellular respiration *dismantles* glucose, extracting its stored chemical energy and repackaging it as ATP — the molecule every living cell uses to do work. Let's investigate where all that energy goes!
@@ -297,6 +320,14 @@ $$\ce{Acetaldehyde + NADH + H+ -> Ethanol + NAD+}$$
 **Where it occurs:**
 - Yeast (*Saccharomyces cerevisiae*) — the basis of bread baking (CO₂ makes dough rise) and alcoholic beverage production
 - Some plant cells under waterlogged (anaerobic) conditions
+
+#### MicroSim: Brewing Beer Process Explorer
+
+Even though beer brewing is beyond the scope of the AP Biology exam, it's a fun, memorable way to see glycolysis and alcoholic fermentation unfold step by step right inside a real-world fermenter.
+
+<iframe src="../../sims/brewing-beer/main.html" height="720" width="100%" scrolling="no"></iframe>
+
+*[View Fullscreen](../../sims/brewing-beer/main.html)*
 
 #### Diagram: Fermentation Pathways Comparison
 
