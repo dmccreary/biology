@@ -56,6 +56,10 @@
 
     Interactive MicroSim for buffer action simulator.
 
+-   **[Brewing Beer Explorer](brewing-beer/index.md)**
+
+    ![](./brewing-beer/brewing-beer.png)
+
 -   **[Calvin Cycle Simulator](./calvin-cycle-simulator/index.md)**
 
     ![Calvin Cycle Simulator](./calvin-cycle-simulator/calvin-cycle-simulator.png)
