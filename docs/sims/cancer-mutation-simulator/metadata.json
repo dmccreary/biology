@@ -1,9 +1,9 @@
 {
   "title": "Cancer Mutation Simulator",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
-  "description": "Interactive MicroSim for cancer mutation simulator",
-  "date": "2026-02-27",
+  "subject": "AP Biology",
+  "description": "Interactive MicroSim demonstrating the multi-hit model of colorectal cancer showing how 6 sequential mutations in proto-oncogenes and tumor suppressor genes progressively disrupt cell cycle control",
+  "date": "2026-03-07",
   "educational": {
     "gradeLevel": [
       "9",
@@ -11,14 +11,21 @@
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
-    "topic": "Cancer Mutation Simulator",
+    "subjectArea": "Biology",
+    "topic": "Cancer and Multi-Hit Model",
     "learningObjectives": [
-      "TODO: Add learning objectives"
+      "Analyze how accumulating mutations progressively disrupt cell cycle control",
+      "Distinguish between oncogene activation and tumor suppressor loss",
+      "Explain why cancer requires multiple mutations over time",
+      "Identify the hallmarks of cancer contributed by each mutation"
     ],
-    "bloomsTaxonomy": "Create",
+    "bloomsTaxonomy": "Analyze",
     "duration": "10-15 minutes",
-    "prerequisites": [],
+    "prerequisites": [
+      "Cell cycle phases and checkpoint control",
+      "Proto-oncogenes and tumor suppressor genes",
+      "Signal transduction pathways"
+    ],
     "standards": []
   },
   "technical": {
@@ -26,20 +33,31 @@
     "version": "1.0",
     "canvasDimensions": {
       "width": "responsive",
-      "height": 450
+      "height": 520
     },
     "responsive": true,
     "dependencies": [],
     "accessibility": {
-      "hasAltText": false,
+      "hasAltText": true,
       "keyboardNavigable": false
     }
   },
   "pedagogical": {
-    "teachingStrategy": "Interactive exploration",
-    "keyQuestions": [],
-    "commonMisconceptions": [],
-    "assessmentOpportunities": []
+    "teachingStrategy": "Sequential exploration with progressive complexity",
+    "keyQuestions": [
+      "Why do oncogene mutations require only one hit while tumor suppressors require two?",
+      "What happens to the growth curve as each mutation is added?",
+      "Why does cancer typically take decades to develop?"
+    ],
+    "commonMisconceptions": [
+      "A single mutation is sufficient to cause cancer",
+      "All cancer genes work the same way",
+      "Cancer cells grow faster than normal cells (they actually evade growth controls)"
+    ],
+    "assessmentOpportunities": [
+      "Predict the effect of each new mutation before clicking",
+      "Compare oncogene vs tumor suppressor mutation mechanisms"
+    ]
   },
   "chapter": "10-cell-cycle-mitosis-and-cancer"
 }

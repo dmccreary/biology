@@ -1,6 +1,6 @@
 # MicroSim TODO — Remaining Implementations
 
-**Generated:** 2026-02-28 | **Remaining:** 38 of 59
+**Generated:** 2026-02-28 | **Remaining:** 36 of 59
 
 **Note:** All MicroSim directories ALREADY been created and the three core
 scaffolding files have been generated.  (`main.html`, `index.md`, `metadata.json`).
@@ -24,7 +24,7 @@ Always use the /microsim-generator skill to implement these Microsims
 | 07-photosynthesis | 4 | 3 | 1 |
 | 08-cellular-respiration | 4 | 1 | 3 |
 | 09-cell-signaling-and-feedback | 3 | 3 | 0 |
-| 10-cell-cycle-mitosis-and-cancer | 4 | 0 | 4 |
+| 10-cell-cycle-mitosis-and-cancer | 4 | 2 | 2 |
 | 11-meiosis-and-mendelian-genetics | 6 | 0 | 6 |
 | 12-non-mendelian-and-chromosomal-genetics | 6 | 0 | 6 |
 | 13-central-dogma-replication-and-protein-synthesis | 4 | 0 | 4 |
@@ -46,100 +46,6 @@ Always use the /microsim-generator skill to implement these Microsims
 | vis-timeline | 1 |
 
 
-
----
-
-## cell-cycle-checkpoints
-
-- **Title:** Cell Cycle Checkpoint Control
-- **Chapter:** 10-cell-cycle-mitosis-and-cancer
-- **Library:** p5.js
-- **Bloom:** Create (L6)
-- **Status:** specified
-- **Complexity Rating:** 8
-- **Target:** `docs/sims/cell-cycle-checkpoints/cell-cycle-checkpoints.js`
-
-### Specification
-
-**Type:** MicroSim (p5.js)<br/>
-**sim-id:** cell-cycle-checkpoints<br/>
-**Library:** p5.js<br/>
-
-**Learning objective:** Students will be able to *explain* (Bloom's L2: Understand) how cyclin-CDK complexes and checkpoint proteins regulate cell cycle progression, and *predict* (Bloom's L3: Apply) what happens when checkpoints fail.
-
-**Canvas:** 760 × 500 px, responsive.
-
-**Layout:** Left half: cyclin concentration graph over time (oscillating wave for Cyclin D, E, A, B overlaid). Right half: checkpoint decision flowchart at G1/S and G2/M with YES/NO branches.
-
-**Cyclin concentration graph:**
-- X-axis: cell cycle phase (G1, S, G2, M)
-- Y-axis: relative protein level
-- Four colored curves: Cyclin D (blue, peaks in G1), Cyclin E (green, peaks at G1/S boundary), Cyclin A (orange, peaks in S/G2), Cyclin B (red, peaks in M, drops sharply at anaphase)
-- CDK activity shown as shaded region (mirrors cyclin levels)
-
-**Checkpoint flowchart (G1/S example):**
-- "Is cell large enough?" → Yes/No
-- "Growth factors present?" → Yes/No
-- "DNA undamaged?" → Yes/No
-- All Yes → "CDK4/6–Cyclin D active → Rb phosphorylated → E2F released → S phase enters"
-- Any No → "Cycle halted; repair or apoptosis"
-
-**Toggle button:** Switch between G1/S checkpoint and G2/M checkpoint flowcharts.
-
-**"Damage event" button:** Introduces a DNA damage signal; shows checkpoint kinases (ATM/ATR) activating p53 → p21 induced → CDK inhibited → cycle halted.
-
-**Interaction:**
-- Hover over any cyclin curve to see its name, partner CDK, and function
-- Click checkpoint decision nodes to see explanatory tooltips
-- "What if p53 is mutated?" button: bypasses damage arrest and shows cycle proceeding despite damage (cancer scenario)
-
-**Responsive design:** Graph and flowchart scale proportionally with container width.
-
----
-
-## cancer-mutation-simulator
-
-- **Title:** Cancer Mutation Simulator
-- **Chapter:** 10-cell-cycle-mitosis-and-cancer
-- **Library:** p5.js
-- **Bloom:** Create (L6)
-- **Status:** specified
-- **Complexity Rating:** 7
-- **Target:** `docs/sims/cancer-mutation-simulator/cancer-mutation-simulator.js`
-
-### Specification
-
-**Type:** MicroSim (p5.js)<br/>
-**sim-id:** cancer-mutation-simulator<br/>
-**Library:** p5.js<br/>
-
-**Learning objective:** Students will be able to *analyze* (Bloom's L4: Analyze) how accumulating mutations in proto-oncogenes and tumor suppressor genes progressively disrupt normal cell cycle control, leading to cancer.
-
-**Canvas:** 760 × 480 px, responsive.
-
-**Layout:** Left panel: mutation checklist with 6 gene events (matching colorectal cancer progression). Center: cell behavior panel (cell image + growth graph). Right: information panel describing the selected mutation.
-
-**Six mutation events (colorectal cancer model, in order):**
-1. APC loss (tumor suppressor, first hit) — "Wnt signaling activated; early adenoma"
-2. Ras activation (oncogene) — "Constitutive proliferation signals; growing adenoma"
-3. SMAD4/DPC4 loss (tumor suppressor) — "TGF-β growth inhibition lost; intermediate adenoma"
-4. p53 loss (tumor suppressor) — "DNA damage no longer triggers apoptosis; late adenoma"
-5. Telomerase reactivation — "Replicative immortality; carcinoma in situ"
-6. Metastasis gene changes — "Invasion and metastasis; malignant carcinoma"
-
-**Cell behavior panel:** As each mutation is added:
-- The cell image shows increasing disorganization (from normal orderly monolayer to piled-up irregular cells)
-- A growth curve updates, showing increasingly rapid, contact-inhibition-independent growth
-- Color shifts from healthy green to progressively more orange/red
-
-**Mutation type badges:** Each mutation event labeled as "Oncogene (dominant)" or "Tumor Suppressor (recessive, 2 hits)" with appropriate icon.
-
-**Interaction:**
-- Click each mutation event in sequence to add it; earlier events must be added first
-- "Reset" button returns to normal cell state
-- Hover over any mutation to see which gene, protein affected, and associated human cancer type
-
-**Responsive design:** All panels scale proportionally with container width.
 
 ---
 

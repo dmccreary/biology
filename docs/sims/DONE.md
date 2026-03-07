@@ -1,6 +1,6 @@
 # MicroSim DONE — Completed Implementations
 
-**Completed:** 35 MicroSims
+**Completed:** 37 MicroSims
 
 These MicroSims have been fully implemented with substantial JavaScript or shared-libs overlays.
 
@@ -19,6 +19,38 @@ These MicroSims have been fully implemented with substantial JavaScript or share
 ### Specification
 
 Vertical cascade flow from epinephrine (hexagon) through GPCR (membrane rectangle), G protein (oval), adenylyl cyclase (diamond), cAMP (multiple circles), PKA (pentagon), target proteins (multi-rect), to cellular response (rounded box). 8-step narration with amplification counter (x1 to x100K), signal amplification bar, PDE toggle for signal termination, and info panel with detailed molecular descriptions.
+
+---
+
+## cell-cycle-checkpoints
+
+- **Title:** Cell Cycle Checkpoint Control
+- **Chapter:** 10-cell-cycle-mitosis-and-cancer
+- **Library:** p5.js
+- **Bloom:** Create (L6)
+- **Status:** implemented
+- **Complexity Rating:** 8
+- **Target:** `docs/sims/cell-cycle-checkpoints/cell-cycle-checkpoints.js`
+
+### Specification
+
+Left panel plots cyclin concentrations (Cyclins D/E/A/B) across G1→S→G2→M with shaded CDK activity, while the right panel shows an interactive checkpoint decision tree (toggle between G1/S and G2/M). Buttons trigger DNA damage events (ATM/ATR → p53 → p21 arrest) or simulate p53 loss to illustrate failed checkpoints. Hover tooltips explain each cyclin/CDK role, slider adjusts growth factor levels, and responsiveness keeps graph + flowchart aligned 450–1200 px.
+
+---
+
+## cancer-mutation-simulator
+
+- **Title:** Cancer Mutation Simulator
+- **Chapter:** 10-cell-cycle-mitosis-and-cancer
+- **Library:** p5.js
+- **Bloom:** Create (L6)
+- **Status:** implemented
+- **Complexity Rating:** 7
+- **Target:** `docs/sims/cancer-mutation-simulator/cancer-mutation-simulator.js`
+
+### Specification
+
+Checklist-driven colorectal cancer progression: six sequential mutations (APC loss → Ras activation → SMAD4 loss → p53 loss → telomerase reactivation → metastasis genes) toggle badges between oncogene/tumor-suppressor hits. Center panel shows a cell illustration and growth curve that become more chaotic and steep with each mutation, right panel narrates functional effects, and hover tooltips provide gene/protein detail. Includes Reset button and responsive panel scaling from 450–1200 px.
 
 ---
 
