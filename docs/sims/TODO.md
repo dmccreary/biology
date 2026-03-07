@@ -1,6 +1,6 @@
 # MicroSim TODO — Remaining Implementations
 
-**Generated:** 2026-02-28 | **Remaining:** 36 of 59
+**Generated:** 2026-02-28 | **Remaining:** 34 of 59
 
 **Note:** All MicroSim directories ALREADY been created and the three core
 scaffolding files have been generated.  (`main.html`, `index.md`, `metadata.json`).
@@ -25,7 +25,7 @@ Always use the /microsim-generator skill to implement these Microsims
 | 08-cellular-respiration | 4 | 1 | 3 |
 | 09-cell-signaling-and-feedback | 3 | 3 | 0 |
 | 10-cell-cycle-mitosis-and-cancer | 4 | 2 | 2 |
-| 11-meiosis-and-mendelian-genetics | 6 | 0 | 6 |
+| 11-meiosis-and-mendelian-genetics | 6 | 2 | 4 |
 | 12-non-mendelian-and-chromosomal-genetics | 6 | 0 | 6 |
 | 13-central-dogma-replication-and-protein-synthesis | 4 | 0 | 4 |
 | 14-mutations-gene-regulation-and-biotechnology | 4 | 1 | 3 |
@@ -46,96 +46,6 @@ Always use the /microsim-generator skill to implement these Microsims
 | vis-timeline | 1 |
 
 
-
----
-
-## crossing-over
-
-- **Title:** Crossing Over Visualization
-- **Chapter:** 11-meiosis-and-mendelian-genetics
-- **Library:** p5.js
-- **Bloom:** Create (L6)
-- **Status:** specified
-- **Complexity Rating:** 6
-- **Target:** `docs/sims/crossing-over/crossing-over.js`
-
-### Specification
-
-**Type:** MicroSim (p5.js)<br/>
-**sim-id:** crossing-over<br/>
-**Library:** p5.js<br/>
-
-**Learning objective:** Students will be able to *explain* (Bloom's L2: Understand) how crossing over during prophase I generates recombinant chromatids carrying novel allele combinations.
-
-**Instructional Rationale:** Step-through with concrete allele data is ideal because learners need to see exactly which alleles move where. A step-by-step approach lets students predict the outcome before it is revealed, reinforcing understanding.
-
-**Canvas:** 760 × 460 px, responsive.
-
-**Data Visibility Requirements:**
-
-- Stage 1: Show two homologous chromosomes, each with 4 labeled gene loci (A/a, B/b, C/c, D/d). Maternal: A-B-C-D (pink). Paternal: a-b-c-d (blue).
-- Stage 2: Chromosomes replicate → show sister chromatids joined at centromere (tetrad of 4 chromatids). Label each chromatid.
-- Stage 3: Chiasmata form between loci B and C. Show X-shaped crossover point.
-- Stage 4: After crossing over, show recombinant chromatids: A-B-c-d and a-b-C-D, alongside non-recombinant parental chromatids: A-B-C-D and a-b-c-d.
-- Stage 5: Show the four resulting chromatids separated, labeled "Parental" or "Recombinant."
-
-**Interaction:**
-- Next/Previous step buttons
-- "Predict" prompt before stage 4: "Which alleles will each recombinant chromatid carry?" (text appears before revealing the answer)
-- Toggle to add a second chiasma between A and B to show double crossover
-
-**Colors:** Maternal chromatid segments: pink (#E8A0BF). Paternal: blue (#7FB3D8). Recombinant segments: striped pattern.
-
-**Responsive design:** Chromatid lengths and font sizes scale with container width.
-
----
-
-## punnett-square-calculator
-
-- **Title:** Interactive Punnett Square Calculator
-- **Chapter:** 11-meiosis-and-mendelian-genetics
-- **Library:** p5.js
-- **Bloom:** Create (L6)
-- **Status:** specified
-- **Complexity Rating:** 6
-- **Target:** `docs/sims/punnett-square-calculator/punnett-square-calculator.js`
-
-### Specification
-
-**Type:** MicroSim (p5.js)<br/>
-**sim-id:** punnett-square-calculator<br/>
-**Library:** p5.js<br/>
-
-**Learning objective:** Students will be able to *solve* (Bloom's L3: Apply) monohybrid and dihybrid crosses using Punnett squares and *calculate* expected genotypic and phenotypic ratios.
-
-**Instructional Rationale:** An interactive calculator gives students hands-on practice with Punnett squares. By entering parent genotypes and seeing immediate results, learners build fluency with the procedure and can check their own manual calculations.
-
-**Canvas:** 800 × 520 px, responsive.
-
-**Layout:**
-
-- Top bar: Toggle between "Monohybrid" and "Dihybrid" mode
-- Left panel: Parent genotype selectors
-  - Monohybrid: Dropdown for Parent 1 (AA, Aa, aa) and Parent 2 (AA, Aa, aa), using configurable gene letter
-  - Dihybrid: Dropdowns for two gene loci on each parent
-- Center: Animated Punnett square grid that fills in cell by cell
-- Right panel: Results summary — genotypic ratio, phenotypic ratio, percentage breakdown
-
-**Interaction:**
-- Select parent genotypes → Punnett square auto-fills
-- "Step Through" button: fills cells one at a time with brief highlight animation
-- "Show All" button: fills entire grid instantly
-- Hover over any cell: highlights the contributing gametes on the row and column headers
-- "Randomize Parents" button for practice
-
-**Data Visibility:**
-- Each cell shows the genotype AND a color-coded phenotype indicator
-- Summary panel shows counts (e.g., 1 TT, 2 Tt, 1 tt) and ratios
-- For dihybrid: shows 16-cell grid with 9:3:3:1 breakdown
-
-**Colors:** Dominant phenotype cells: green tint. Recessive phenotype cells: tan tint. Highlighted gametes: yellow.
-
-**Responsive design:** Grid cells and font sizes scale proportionally with container width.
 
 ---
 

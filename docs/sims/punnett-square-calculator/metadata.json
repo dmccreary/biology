@@ -1,45 +1,63 @@
 {
   "title": "Interactive Punnett Square Calculator",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
-  "description": "Interactive MicroSim for interactive punnett square calculator",
+  "subject": "AP Biology",
+  "description": "Interactive MicroSim that animates mono- and dihybrid Punnett squares, tracks genotype/phenotype counts, and lets students compare observed ratios to Mendelian expectations.",
   "date": "2026-02-27",
   "educational": {
     "gradeLevel": [
-      "9",
       "10",
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
-    "topic": "Interactive Punnett Square Calculator",
+    "subjectArea": "Genetics",
+    "topic": "Punnett Square Modeling",
     "learningObjectives": [
-      "TODO: Add learning objectives"
+      "Apply Punnett squares to determine genotype and phenotype outcomes for monohybrid crosses.",
+      "Compare live genotype/phenotype ratios from dihybrid crosses to the expected 9:3:3:1 distribution.",
+      "Explain how changing parent genotypes or gene letters alters gamete headers and resulting offspring."
     ],
-    "bloomsTaxonomy": "Create",
-    "duration": "10-15 minutes",
-    "prerequisites": [],
-    "standards": []
+    "bloomsTaxonomy": "Apply",
+    "duration": "15 minutes",
+    "prerequisites": [
+      "Understands dominant vs. recessive alleles and capital/lowercase notation",
+      "Has solved a basic Punnett square manually"
+    ],
+    "standards": [
+      "AP Biology Unit 5: Heredity",
+      "NGSS HS-LS3-3"
+    ]
   },
   "technical": {
     "framework": "p5.js",
     "version": "1.0",
     "canvasDimensions": {
       "width": "responsive",
-      "height": 450
+      "height": 760
     },
     "responsive": true,
     "dependencies": [],
     "accessibility": {
-      "hasAltText": false,
+      "hasAltText": true,
       "keyboardNavigable": false
     }
   },
   "pedagogical": {
     "teachingStrategy": "Interactive exploration",
-    "keyQuestions": [],
-    "commonMisconceptions": [],
-    "assessmentOpportunities": []
+    "keyQuestions": [
+      "Which gametes appear on the headers for the parents you selected?",
+      "How do the running genotype counts compare to the theoretical ratio?",
+      "What happens to the recessive phenotype when both parents are heterozygous?"
+    ],
+    "commonMisconceptions": [
+      "Believing that all heterozygous crosses produce 50% dominant and 50% recessive offspring",
+      "Confusing genotype labels when gene letters change",
+      "Thinking that mixing two heterozygous traits automatically yields equal phenotype categories"
+    ],
+    "assessmentOpportunities": [
+      "Have learners pause the animation halfway and predict the final ratios.",
+      "Ask students to screenshot a completed grid and annotate which cells are recombinant phenotypes."
+    ]
   },
   "chapter": "11-meiosis-and-mendelian-genetics"
 }

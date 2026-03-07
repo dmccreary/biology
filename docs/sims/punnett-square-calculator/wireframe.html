@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Punnett Square Calculator — Wireframe</title>
+  <style>
+    :root {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2a32;
+      background: #f7f9fc;
+    }
+    body {
+      margin: 0;
+      padding: 24px;
+    }
+    h1 {
+      margin: 0 0 12px 0;
+    }
+    .wireframe {
+      border: 2px solid #1f2a32;
+      background: #fff;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-height: 720px;
+    }
+    .title-band,
+    .mode-bar,
+    .control-strip,
+    .legend-row {
+      border: 2px dashed #7f8c8d;
+      padding: 12px;
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fefefe;
+    }
+    .title-band {
+      background: #e9f4ff;
+    }
+    .mode-bar {
+      background: #f1f1ff;
+    }
+    .mode-bar span {
+      border: 1px solid #95a5a6;
+      padding: 6px 12px;
+      border-radius: 6px;
+      background: #fff;
+      flex: 1;
+      margin-right: 12px;
+      text-align: center;
+    }
+    .mode-bar span:last-child {
+      margin-right: 0;
+    }
+    .drawing-region {
+      display: flex;
+      gap: 16px;
+      border: 2px solid #2980b9;
+      background: aliceblue;
+      padding: 16px;
+      flex: 1;
+      min-height: 360px;
+    }
+    .panel {
+      border: 2px dashed #8e44ad;
+      background: #ffffffcc;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .panel h2 {
+      margin: 0 0 8px 0;
+      font-size: 1rem;
+    }
+    .controls-panel {
+      flex: 0 0 28%;
+    }
+    .grid-panel {
+      flex: 0 0 44%;
+      align-items: center;
+      justify-content: center;
+    }
+    .grid-placeholder {
+      flex: 1;
+      border: 2px solid #2c3e50;
+      background: #ecf0f1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 12px;
+    }
+    .grid-placeholder .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+      flex: 1;
+    }
+    .grid-placeholder .row span {
+      flex: 1;
+      border: 1px dashed #7f8c8d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      background: #fff;
+    }
+    .summary-panel {
+      flex: 0 0 28%;
+    }
+    .summary-panel .card {
+      border: 1px dashed #95a5a6;
+      padding: 8px;
+      min-height: 60px;
+      background: #fafafa;
+    }
+    .control-strip {
+      flex-direction: column;
+      gap: 8px;
+      background: #fff;
+    }
+    .control-row {
+      width: 100%;
+      display: flex;
+      gap: 12px;
+    }
+    .control {
+      border: 1px solid #7f8c8d;
+      flex: 1;
+      padding: 8px;
+      text-align: center;
+      background: #fdfdfd;
+    }
+    .legend-row {
+      gap: 12px;
+      justify-content: flex-start;
+    }
+    .legend {
+      border: 1px solid #95a5a6;
+      padding: 6px 10px;
+      border-radius: 4px;
+      background: #fff;
+    }
+    @media (max-width: 720px) {
+      .drawing-region {
+        flex-direction: column;
+      }
+      .controls-panel,
+      .grid-panel,
+      .summary-panel {
+        flex: 1 1 auto;
+      }
+      .control-row {
+        flex-direction: column;
+      }
+      .mode-bar {
+        flex-direction: column;
+      }
+      .mode-bar span {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 8px;
+      }
+      .mode-bar span:last-child {
+        margin-bottom: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Punnett Square Calculator Wireframe</h1>
+  <p>This wireframe reserves non-overlapping rectangles for every region between canvas widths of 450–1200 px.</p>
+
+  <section class="wireframe">
+    <div class="title-band">
+      <strong>Title Band (40 px tall)</strong>
+      <span>Subtitle / instructions</span>
+    </div>
+
+    <div class="mode-bar">
+      <span>Monohybrid Toggle</span>
+      <span>Dihybrid Toggle</span>
+      <span>Start Simulation Button</span>
+      <span>Status Chip</span>
+    </div>
+
+    <div class="drawing-region">
+      <div class="panel controls-panel">
+        <h2>Parent Controls (28%)</h2>
+        <div class="card">Parent 1 selector</div>
+        <div class="card">Parent 2 selector</div>
+        <div class="card">Gene letter inputs</div>
+        <div class="card">Randomize parents</div>
+      </div>
+
+      <div class="panel grid-panel">
+        <h2>Punnett Grid (44%)</h2>
+        <div class="grid-placeholder">
+          <div class="row">
+            <span>Aa</span>
+            <span>Aa</span>
+          </div>
+          <div class="row">
+            <span>Aa</span>
+            <span>aa</span>
+          </div>
+          <div class="row">
+            <span>Grid scales for 2×2 or 4×4</span>
+            <span>Headers wrap</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel summary-panel">
+        <h2>Summary Panel (28%)</h2>
+        <div class="card">Genotype counts</div>
+        <div class="card">Phenotype breakdown</div>
+        <div class="card">Ratios + percentages</div>
+        <div class="card">Progress / instructions</div>
+      </div>
+    </div>
+
+    <div class="control-strip">
+      <strong>Control Deck (Start/Pause anchored bottom-left)</strong>
+      <div class="control-row">
+        <div class="control">Start / Pause</div>
+        <div class="control">Step Through</div>
+        <div class="control">Show All</div>
+        <div class="control">Genotype / Phenotype toggle</div>
+      </div>
+      <div class="control-row">
+        <div class="control">Animation speed slider</div>
+        <div class="control">Hover legend / instructions</div>
+        <div class="control">Reset</div>
+      </div>
+    </div>
+
+    <div class="legend-row">
+      <div class="legend">Dominant phenotype swatch</div>
+      <div class="legend">Recessive phenotype swatch</div>
+      <div class="legend">Tooltip instructions</div>
+    </div>
+  </section>
+</body>
+</html>

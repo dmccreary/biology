@@ -1,6 +1,6 @@
 # MicroSim DONE — Completed Implementations
 
-**Completed:** 37 MicroSims
+**Completed:** 39 MicroSims
 
 These MicroSims have been fully implemented with substantial JavaScript or shared-libs overlays.
 
@@ -51,6 +51,38 @@ Left panel plots cyclin concentrations (Cyclins D/E/A/B) across G1→S→G2→M 
 ### Specification
 
 Checklist-driven colorectal cancer progression: six sequential mutations (APC loss → Ras activation → SMAD4 loss → p53 loss → telomerase reactivation → metastasis genes) toggle badges between oncogene/tumor-suppressor hits. Center panel shows a cell illustration and growth curve that become more chaotic and steep with each mutation, right panel narrates functional effects, and hover tooltips provide gene/protein detail. Includes Reset button and responsive panel scaling from 450–1200 px.
+
+---
+
+## crossing-over
+
+- **Title:** Crossing Over Visualization
+- **Chapter:** 11-meiosis-and-mendelian-genetics
+- **Library:** p5.js
+- **Bloom:** Create (L6)
+- **Status:** implemented
+- **Complexity Rating:** 6
+- **Target:** `docs/sims/crossing-over/crossing-over.js`
+
+### Specification
+
+Step-through model of homologous chromosomes: Stage 1 shows chromatids with loci A–D, Stage 2 forms a tetrad, Stage 3 animates chiasmata, Stage 4 reveals recombinant chromatids, Stage 5 separates parental vs. recombinant products. Predict prompts precede recombination, double-crossover toggle adds a second chiasma, and responsive sizing keeps chromosomes + controls readable from 450–1200 px.
+
+---
+
+## punnett-square-calculator
+
+- **Title:** Interactive Punnett Square Calculator
+- **Chapter:** 11-meiosis-and-mendelian-genetics
+- **Library:** p5.js
+- **Bloom:** Apply (L3)
+- **Status:** implemented
+- **Complexity Rating:** 6
+- **Target:** `docs/sims/punnett-square-calculator/punnett-square-calculator.js`
+
+### Specification
+
+Responsive canvas with a title band, a mode toggle bar (monohybrid vs. dihybrid), a three-column drawing deck (parent controls, Punnett grid, live summaries), and a dedicated control deck. Hovering any revealed cell highlights its row/column headers; Start/Step/Show All buttons populate the grid while genotype/phenotype tallies update in real time. Randomize Parents, gene-letter inputs, and a speed slider keep the simulation scaffolded between 450–1200 px widths.
 
 ---
 
