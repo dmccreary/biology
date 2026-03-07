@@ -323,9 +323,12 @@ $$\ce{Acetaldehyde + NADH + H+ -> Ethanol + NAD+}$$
 
 #### MicroSim: Brewing Beer Process Explorer
 
+![](../../img/mascot/beer.png){ align="left" width="150px"}
 Even though beer brewing is beyond the scope of the AP Biology exam, it's a fun, memorable way to see glycolysis and alcoholic fermentation unfold step by step right inside a real-world fermenter.
 
-<iframe src="../../sims/brewing-beer/main.html" height="720" width="100%" scrolling="no"></iframe>
+#### Diagram: Brewing Beer
+
+<iframe src="../../sims/brewing-beer/main.html" height="670" width="100%" scrolling="no"></iframe>
 
 *[View Fullscreen](../../sims/brewing-beer/main.html)*
 

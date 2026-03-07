@@ -1,6 +1,6 @@
 # MicroSim TODO — Remaining Implementations
 
-**Generated:** 2026-02-28 | **Remaining:** 42 of 59
+**Generated:** 2026-02-28 | **Remaining:** 38 of 59
 
 **Note:** All MicroSim directories ALREADY been created and the three core
 scaffolding files have been generated.  (`main.html`, `index.md`, `metadata.json`).
@@ -21,9 +21,9 @@ Always use the /microsim-generator skill to implement these Microsims
 | 04-cell-organization-and-organelles | 8 | 7 | 1 |
 | 05-cell-membranes-and-transport | 4 | 4 | 0 |
 | 06-thermodynamics-and-enzymes | 4 | 0 | 4 |
-| 07-photosynthesis | 4 | 2 | 2 |
-| 08-cellular-respiration | 4 | 0 | 4 |
-| 09-cell-signaling-and-feedback | 3 | 1 | 2 |
+| 07-photosynthesis | 4 | 3 | 1 |
+| 08-cellular-respiration | 4 | 1 | 3 |
+| 09-cell-signaling-and-feedback | 3 | 3 | 0 |
 | 10-cell-cycle-mitosis-and-cancer | 4 | 0 | 4 |
 | 11-meiosis-and-mendelian-genetics | 6 | 0 | 6 |
 | 12-non-mendelian-and-chromosomal-genetics | 6 | 0 | 6 |
@@ -46,164 +46,6 @@ Always use the /microsim-generator skill to implement these Microsims
 | vis-timeline | 1 |
 
 
-
-## photosynthesis-strategies
-
-- **Title:** C3, C4, and CAM Photosynthesis Comparison
-- **Chapter:** 07-photosynthesis
-- **Library:** p5.js
-- **Bloom:** Analyze (L4)
-- **Status:** specified
-- **Complexity Rating:** 7
-- **Target:** `docs/sims/photosynthesis-strategies/photosynthesis-strategies.js`
-
-### Specification
-
-Type: infographic
-**sim-id:** photosynthesis-strategies<br/>
-**Library:** p5.js with text-to-image background diagram<br/>
-
-Bloom Level: Analyze (L4)
-Bloom Verb: compare, differentiate
-Learning Objective: Students will compare the C3, C4, and CAM photosynthetic strategies by identifying the spatial or temporal mechanism each uses to concentrate CO₂ around RuBisCO, and predict which strategy is favored under each climate scenario.
-
-Canvas layout:
-- Left column (25%): Three clickable strategy buttons — "C3", "C4", "CAM" — plus a "Compare All" view toggle
-- Center panel (50%): Leaf cross-section diagram (or daily timeline for CAM) showing the selected strategy's cell types, enzyme locations, and CO₂ flow
-- Right panel (25%): Climate suitability gauge (temperature, water availability, light intensity sliders showing which strategy wins)
-
-Visual elements — C3 view:
-- Leaf cross-section showing mesophyll cells only (no ring of bundle sheath)
-- CO₂ arrow entering stomata → mesophyll → RuBisCO label → Calvin cycle box
-- Stomata open indicator (daytime, sun icon)
-- Photorespiration side arrow labeled with "Wastes carbon at high T"
-
-Visual elements — C4 view:
-- Leaf cross-section with distinct outer mesophyll cells (green) and inner bundle sheath cells (darker green) — Kranz anatomy
-- CO₂ arrow → mesophyll: PEP carboxylase → OAA → Malate; transport arrow to bundle sheath → decarboxylation → high [CO₂] → RuBisCO → Calvin cycle
-- Bundle sheath cells labeled "CO₂ concentrated here"
-- Photorespiration side arrow labeled "Suppressed"
-
-Visual elements — CAM view:
-- Leaf cross-section: single cell type (succulent mesophyll)
-- Split timeline showing night (left) and day (right):
-  - Night: stomata open, CO₂ → PEP carboxylase → Malate → stored in vacuole
-  - Day: stomata closed, Malate → decarboxylated → CO₂ → RuBisCO → Calvin cycle
-- Sun/moon icons indicating time of day
-
-Visual elements — Compare All view:
-- Side-by-side mini-versions of all three cell diagrams with color-coded CO₂ flow arrows
-
-Climate suitability panel (right):
-- Three sliders: Temperature (cool to hot), Water availability (wet to dry), Light intensity (low to high)
-- Based on slider positions, colored indicators light up for which strategy is "best suited" at those conditions
-- Example: high T + low water → CAM highlighted; high T + high water → C4 highlighted; low T + high water → C3 highlighted
-
-Interactive controls:
-- Strategy buttons in left panel
-- "Compare All" toggle
-- Climate sliders in right panel
-- Hovering enzyme labels (RuBisCO, PEP carboxylase) shows tooltip with enzyme properties
-
-Default state: C3 selected; climate sliders at moderate values (C3 suitable)
-
-Instructional Rationale: Presenting the three strategies in the same visual format (leaf cross-section) with explicit CO₂ flow arrows, then connecting each to its optimal climate via interactive sliders, supports Analysis-level work by requiring students to attribute structural differences to functional consequences in specific environmental contexts — a core AP Biology analytical skill.
-
-Canvas size: 700 × 460 px
-Responsive: Must respond to window resize events
-
----
-
-## fermentation-pathways
-
-- **Title:** Fermentation Pathways Comparison
-- **Chapter:** 08-cellular-respiration
-- **Library:** p5.js
-- **Bloom:** Create (L6)
-- **Status:** specified
-- **Complexity Rating:** 6
-- **Target:** `docs/sims/fermentation-pathways/fermentation-pathways.js`
-
-### Specification
-
-**Type:** MicroSim (p5.js)<br/>
-**sim-id:** fermentation-pathways<br/>
-**Library:** p5.js<br/>
-
-**Learning objective:** Students will be able to *compare* (Bloom's L4: Analyze) lactic acid and alcoholic fermentation in terms of reactants, products, and organisms, and explain why fermentation is necessary when oxygen is absent.
-
-**Canvas:** 760 × 440 px, responsive.
-
-**Layout:** Two parallel flow diagrams side by side, separated by a central divider column.
-
-**Left panel (Lactic Acid Fermentation):**
-- Glucose → (Glycolysis) → 2 Pyruvate + 2 NADH + 2 ATP
-- Arrow from pyruvate → lactate (with NADH → NAD⁺ shown as curved arrow)
-- Waste product label: "Lactate (lactic acid)"
-- Organism examples: muscle cells, red blood cells, Lactobacillus (with small icons)
-
-**Right panel (Alcoholic Fermentation):**
-- Glucose → (Glycolysis) → 2 Pyruvate + 2 NADH + 2 ATP
-- Arrow: pyruvate → acetaldehyde + CO₂ (pyruvate decarboxylase)
-- Arrow: acetaldehyde → ethanol (NADH → NAD⁺ curved arrow)
-- Waste products: "Ethanol + CO₂"
-- Organism examples: yeast, waterlogged plant cells
-
-**Central column:** Shows "NAD⁺ Regenerated!" badge with a circular arrow graphic; label "Purpose: Allow glycolysis to continue"
-
-**Running ATP tally:** Both panels show "Net ATP = 2 per glucose" with a note "No extra ATP from fermentation"
-
-**Interaction:**
-- Click "Animate" to trace molecule flow through either pathway with color-coded NADH → NAD⁺ conversion
-- Click organism icons to show a fun-fact pop-up (e.g., "Yeast produce CO₂ that makes bread rise!")
-- Toggle between "Aerobic" (greyed out ETC shown as disabled) and "Anaerobic" (ETC marked with ✗) modes to show context
-
-**Responsive design:** Panel widths scale with container width. Molecule labels scale proportionally.
-
-
-## camp-signaling-cascade
-
-- **Title:** cAMP Signaling Cascade
-- **Chapter:** 09-cell-signaling-and-feedback
-- **Library:** p5.js
-- **Bloom:** Create (L6)
-- **Status:** specified
-- **Complexity Rating:** 7
-- **Target:** `docs/sims/camp-signaling-cascade/camp-signaling-cascade.js`
-
-### Specification
-
-**Type:** MicroSim (p5.js)<br/>
-**sim-id:** camp-signaling-cascade<br/>
-**Library:** p5.js<br/>
-
-**Learning objective:** Students will be able to *trace* (Bloom's L3: Apply) the sequence of molecular events from hormone binding to a GPCR through the cAMP-PKA cascade to a cellular response, and explain how signal amplification occurs at each step.
-
-**Canvas:** 760 × 500 px, responsive.
-
-**Layout:** Vertical cascade flow from top (extracellular ligand) to bottom (cellular response). Each molecule represented as a labeled circle or shape with color coding.
-
-**Cascade steps (top to bottom):**
-1. Epinephrine (ligand) — orange hexagon — "binds GPCR"
-2. GPCR (7-pass receptor) — membrane-spanning rectangle — "activates G protein"
-3. G protein (Gα-GTP) — purple oval — "GDP→GTP exchange; activates adenylyl cyclase"
-4. Adenylyl cyclase — yellow diamond — "ATP → cAMP"
-5. cAMP molecules — small blue circles (quantity increases) — "4 cAMP activate PKA"
-6. PKA (active) — green pentagon — "phosphorylates target proteins"
-7. Target proteins (×N) — multiple shapes — "enzyme activation or inhibition"
-8. Cellular response — outcome box (e.g., "Glycogen breakdown, glucose release")
-
-**Amplification counter:** A live counter shows how many product molecules are generated at each step. Starting with 1 epinephrine molecule, the counter shows ×1 → ×10 → ×100 → ×1000 as the signal progresses, illustrating cascade amplification.
-
-**Phosphodiesterase toggle:** A "PDE active" button degrades cAMP (blue circles disappear) and shows PKA returning to inactive state — illustrating signal termination.
-
-**Interaction:**
-- Step-through mode: "Next step" button advances the cascade one stage at a time
-- Continuous mode: "Animate" button runs the full cascade loop
-- Click any molecule for a tooltip with name, type, and function
-- Slider to adjust initial ligand concentration (1–100 molecules); amplification counter updates
-
-**Responsive design:** All shapes and text scale proportionally with container width.
 
 ---
 

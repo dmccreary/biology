@@ -1,8 +1,57 @@
 # MicroSim DONE — Completed Implementations
 
-**Completed:** 32 MicroSims
+**Completed:** 35 MicroSims
 
 These MicroSims have been fully implemented with substantial JavaScript or shared-libs overlays.
+
+---
+
+## camp-signaling-cascade
+
+- **Title:** cAMP Signaling Cascade
+- **Chapter:** 09-cell-signaling-and-feedback
+- **Library:** p5.js
+- **Bloom:** Apply (L3)
+- **Status:** implemented
+- **Complexity Rating:** 7
+- **Target:** `docs/sims/camp-signaling-cascade/camp-signaling-cascade.js`
+
+### Specification
+
+Vertical cascade flow from epinephrine (hexagon) through GPCR (membrane rectangle), G protein (oval), adenylyl cyclase (diamond), cAMP (multiple circles), PKA (pentagon), target proteins (multi-rect), to cellular response (rounded box). 8-step narration with amplification counter (x1 to x100K), signal amplification bar, PDE toggle for signal termination, and info panel with detailed molecular descriptions.
+
+---
+
+## fermentation-pathways
+
+- **Title:** Fermentation Pathways Comparison
+- **Chapter:** 08-cellular-respiration
+- **Library:** p5.js
+- **Bloom:** Analyze (L4)
+- **Status:** implemented
+- **Complexity Rating:** 6
+- **Target:** `docs/sims/fermentation-pathways/fermentation-pathways.js`
+
+### Specification
+
+Two parallel flow diagrams comparing lactic acid and alcoholic fermentation. 8-step narration with auto-advance, pathway focus selector (lactic/both/alcoholic), oxygen mode toggle (anaerobic/aerobic), organism fun-fact pop-ups, NAD+ regeneration hub, highlighted path segments with animated progress dots, and ATP yield badges.
+
+---
+
+## photosynthesis-strategies
+
+- **Title:** C3, C4, and CAM Photosynthesis Comparison
+- **Chapter:** 07-photosynthesis
+- **Library:** p5.js
+- **Bloom:** Analyze (L4)
+- **Status:** implemented
+- **Complexity Rating:** 7
+- **Target:** `docs/sims/photosynthesis-strategies/photosynthesis-strategies.js`
+
+### Specification
+
+Type: infographic
+Interactive comparison of C3, C4, and CAM photosynthetic carbon fixation strategies. Left panel has strategy selector buttons and Compare All toggle. Center panel shows leaf cross-section diagrams (C3: mesophyll-only with RuBisCO; C4: Kranz anatomy with PEP carboxylase in mesophyll and RuBisCO in bundle sheath; CAM: night/day temporal separation with vacuole storage). Right panel has climate sliders (temperature, water, light) with real-time suitability scoring.
 
 ---
 
