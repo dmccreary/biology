@@ -4,16 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
-    <title>Dihybrid Cross Outcome Visualizer using Chart.js</title>
-    <style>
-        body { margin: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif; }
-    </style>
+    <title>Dihybrid Cross Outcome Visualizer</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
-    <script src="dihybrid-cross.js"></script>
 </head>
 <body>
-    <main></main>
-    <br/>
-    <a href=".">Back to Lesson Plan</a>
+
+<h2>Dihybrid Cross Outcome Visualizer</h2>
+
+<div id="controls">
+    <label>Parent 1:</label>
+    <select id="p1-locus1"><option value="Rr">Rr</option><option value="RR">RR</option><option value="rr">rr</option></select>
+    <select id="p1-locus2"><option value="Yy">Yy</option><option value="YY">YY</option><option value="yy">yy</option></select>
+
+    <label>Parent 2:</label>
+    <select id="p2-locus1"><option value="Rr">Rr</option><option value="RR">RR</option><option value="rr">rr</option></select>
+    <select id="p2-locus2"><option value="Yy">Yy</option><option value="YY">YY</option><option value="yy">yy</option></select>
+
+    <button id="toggle-btn" onclick="toggleView()">Show Phenotypes</button>
+</div>
+
+<div id="main-layout">
+    <div id="punnett-container">
+        <table id="punnett-table"></table>
+    </div>
+    <div id="chart-container">
+        <canvas id="phenotype-chart"></canvas>
+    </div>
+</div>
+
+<div id="summary"></div>
+
+<div id="return-link">
+    <a href=".">← Return to Lesson Plan</a>
+</div>
+
+<script src="dihybrid-cross.js"></script>
+<script>
+    if (window.self === window.top) {
+        document.getElementById('return-link').style.display = 'block';
+    }
+</script>
 </body>
 </html>

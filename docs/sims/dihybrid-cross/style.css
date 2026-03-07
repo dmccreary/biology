@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: aliceblue;
+}
+
+h2 {
+    text-align: center;
+    margin: 4px 0 8px;
+    color: #1a1a1a;
+    font-size: 1.3rem;
+}
+
+#controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    padding: 6px 10px;
+    background: #f0f4f8;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+#controls label {
+    font-weight: bold;
+}
+
+#controls select {
+    padding: 3px 6px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+}
+
+#toggle-btn {
+    padding: 4px 12px;
+    font-size: 0.82rem;
+    border: 1px solid #888;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+}
+
+#toggle-btn:hover {
+    background: #e8e8e8;
+}
+
+#main-layout {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Punnett Square */
+#punnett-container {
+    min-width: 0;
+}
+
+#punnett-table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+#punnett-table th,
+#punnett-table td {
+    border: 1px solid #888;
+    text-align: center;
+    padding: 6px 4px;
+    font-size: 0.82rem;
+    height: 38px;
+    transition: background 0.3s;
+    min-width: 0;
+}
+
+#punnett-table th {
+    background: #e8eef4;
+    font-weight: bold;
+}
+
+#punnett-table td {
+    cursor: pointer;
+}
+
+#punnett-table td.highlighted {
+    outline: 3px solid #333;
+    outline-offset: -2px;
+    z-index: 1;
+    position: relative;
+}
+
+.corner-cell {
+    background: #d0d8e0 !important;
+}
+
+/* Chart */
+#chart-container {
+    min-width: 0;
+    position: relative;
+}
+
+#chart-container canvas {
+    width: 100% !important;
+}
+
+/* Summary */
+#summary {
+    text-align: center;
+    font-size: 0.88rem;
+    margin-top: 8px;
+    padding: 5px;
+    background: #f8f8f0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+#summary strong {
+    color: #2c3e50;
+}
+
+#return-link {
+    display: none;
+    padding: 8px 16px;
+}
