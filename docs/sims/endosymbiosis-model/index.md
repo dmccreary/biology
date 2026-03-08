@@ -15,6 +15,8 @@ quality_score: 0
 
 [View Endosymbiosis Model Fullscreen](./main.html){ .md-button .md-button--primary }
 
+[Edit the Endosymbiosis Model using the p5.js Editor](https://editor.p5js.org/dmccreary/sketches/WXgN7_25X)
+
 ## About This MicroSim
 
 This step-through visualization walks through the endosymbiotic theory in six stages: ancestral cells, engulfment of an aerobic bacterium, its transformation into a mitochondrion, the five key pieces of molecular evidence, a second engulfment of a cyanobacterium becoming a chloroplast, and the modern eukaryotic cell with both organelles. An "Evidence" toggle shows the supporting evidence at each stage, and a "Double Membrane" toggle highlights the origin of the double membrane (inner from the endosymbiont, outer from the host's vesicle).

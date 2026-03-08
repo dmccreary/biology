@@ -6,14 +6,20 @@
     <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
     <title>Interactive Pedigree Analyzer using p5.js</title>
     <style>
-        body { margin: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif; }
+        body { margin: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif; background: aliceblue; }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.js"></script>
     <script src="pedigree-analyzer.js"></script>
 </head>
 <body>
     <main></main>
-    <br/>
-    <a href=".">Back to Lesson Plan</a>
+    <div id="return-link" style="display:none; padding: 8px 16px;">
+        <a href=".">← Return to Lesson Plan</a>
+    </div>
+    <script>
+        if (window.self === window.top) {
+            document.getElementById('return-link').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
