@@ -17,6 +17,7 @@ let chart;
 let placements = {}; // organism name -> placed type
 let hintsOn = false;
 let correctCount = 0;
+let selectedOrgIndex = null; // for click-to-place
 
 // Generate survivorship data (semi-log: y-axis is log scale)
 function generateCurveData() {
@@ -32,12 +33,11 @@ function generateCurveData() {
         labels.push(Math.round(x * 100));
 
         // Type I: most survive until old age, then rapid death
-        // Gompertz-like: high survival until ~70% of lifespan
         let s1 = N * Math.exp(-Math.pow(x / 0.85, 8));
         type1.push(Math.max(1, s1));
 
         // Type II: constant mortality rate (exponential decay)
-        let s2 = N * Math.exp(-4.6 * x); // dies off ~100-fold over lifespan
+        let s2 = N * Math.exp(-4.6 * x);
         type2.push(Math.max(1, s2));
 
         // Type III: very high early mortality, few survivors live long
@@ -110,15 +110,7 @@ function createChart() {
                     font: { size: 14 }
                 },
                 tooltip: {
-                    callbacks: {
-                        title: function(items) {
-                            return items[0].label + '% of maximum lifespan';
-                        },
-                        label: function(ctx) {
-                            return ctx.dataset.label.split('(')[0].trim() +
-                                   ': ' + Math.round(ctx.raw) + ' survivors';
-                        }
-                    }
+                    enabled: false
                 }
             },
             scales: {
@@ -167,25 +159,54 @@ function renderPool() {
 
         let chip = document.createElement('div');
         chip.className = 'organism-chip';
+        if (selectedOrgIndex === i) {
+            chip.classList.add('selected');
+        }
         chip.draggable = true;
         chip.dataset.index = i;
         chip.textContent = org.emoji + ' ' + org.name;
 
         if (hintsOn) {
             chip.title = org.hint;
-            chip.textContent += ' ⓘ';
+            chip.textContent += ' \u24D8';
         }
 
+        // Drag support
         chip.addEventListener('dragstart', (e) => {
             e.dataTransfer.setData('text/plain', i.toString());
             chip.classList.add('dragging');
+            selectedOrgIndex = null;
+            clearZoneHighlights();
         });
         chip.addEventListener('dragend', () => {
             chip.classList.remove('dragging');
         });
 
+        // Click-to-select support
+        chip.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (selectedOrgIndex === i) {
+                // Deselect
+                selectedOrgIndex = null;
+                clearZoneHighlights();
+            } else {
+                selectedOrgIndex = i;
+                highlightZones();
+            }
+            renderPool();
+            updateInfoText();
+        });
+
         pool.appendChild(chip);
     });
+}
+
+function highlightZones() {
+    document.querySelectorAll('.drop-overlay').forEach(z => z.classList.add('selected-target'));
+}
+
+function clearZoneHighlights() {
+    document.querySelectorAll('.drop-overlay').forEach(z => z.classList.remove('selected-target'));
 }
 
 function renderDropZones() {
@@ -193,23 +214,28 @@ function renderDropZones() {
         let zoneId = type === 'I' ? 'drop-type1' : type === 'II' ? 'drop-type2' : 'drop-type3';
         let zone = document.getElementById(zoneId);
 
-        // Keep the label text
-        let label = type === 'I' ? '<strong>Type I</strong> — low early mortality' :
-                    type === 'II' ? '<strong>Type II</strong> — constant mortality' :
-                    '<strong>Type III</strong> — high early mortality';
+        let label = type === 'I' ? 'Type I \u2014 low early mortality' :
+                    type === 'II' ? 'Type II \u2014 constant mortality' :
+                    'Type III \u2014 high early mortality';
 
-        let placed = Object.entries(placements)
+        let placedHtml = Object.entries(placements)
             .filter(([name, t]) => t === type)
             .map(([name]) => {
                 let org = ORGANISMS.find(o => o.name === name);
                 let correct = org.type === type;
                 let cls = correct ? 'placed-correct' : 'placed-incorrect';
                 return '<span class="placed-chip ' + cls + '">' + org.emoji + ' ' + name +
-                       (correct ? ' ✓' : ' ✗') + '</span>';
+                       (correct ? ' \u2713' : ' \u2717') + '</span>';
             }).join(' ');
 
-        zone.innerHTML = label + (placed ? '<br>' + placed : '');
+        zone.innerHTML = '<span class="zone-label">' + label + '</span>' +
+                         (placedHtml ? ' ' + placedHtml : '');
     });
+
+    // Restore highlight if an organism is selected
+    if (selectedOrgIndex !== null) {
+        highlightZones();
+    }
 }
 
 function handleDragOver(e) {
@@ -226,7 +252,19 @@ function handleDrop(e, type) {
     e.currentTarget.classList.remove('drag-over');
 
     let idx = parseInt(e.dataTransfer.getData('text/plain'));
+    placeOrganism(idx, type);
+}
+
+function handleZoneClick(type) {
+    if (selectedOrgIndex === null) return;
+    placeOrganism(selectedOrgIndex, type);
+    selectedOrgIndex = null;
+    clearZoneHighlights();
+}
+
+function placeOrganism(idx, type) {
     let org = ORGANISMS[idx];
+    if (placements[org.name]) return; // already placed
 
     placements[org.name] = type;
     let correct = org.type === type;
@@ -249,6 +287,19 @@ function handleDrop(e, type) {
             document.getElementById('info-text').textContent =
                 correctCount + ' of ' + total + ' correct. Click Reset to try again.';
         }
+    } else {
+        updateInfoText();
+    }
+}
+
+function updateInfoText() {
+    if (selectedOrgIndex !== null) {
+        let org = ORGANISMS[selectedOrgIndex];
+        document.getElementById('info-text').textContent =
+            org.emoji + ' ' + org.name + ' selected \u2014 click a curve zone on the graph to place it.';
+    } else {
+        document.getElementById('info-text').textContent =
+            'Click an organism, then click a curve zone \u2014 or drag and drop.';
     }
 }
 
@@ -264,7 +315,7 @@ function toggleHints() {
     let btn = document.getElementById('btn-hint');
     if (hintsOn) {
         btn.classList.add('active');
-        btn.textContent = '✓ Hints';
+        btn.textContent = '\u2713 Hints';
     } else {
         btn.classList.remove('active');
         btn.textContent = 'Hints';
@@ -276,14 +327,28 @@ function resetAll() {
     placements = {};
     correctCount = 0;
     hintsOn = false;
+    selectedOrgIndex = null;
     document.getElementById('btn-hint').classList.remove('active');
     document.getElementById('btn-hint').textContent = 'Hints';
     document.getElementById('info-text').textContent =
-        'Drag each organism to the survivorship curve type that best describes its life history strategy.';
+        'Click an organism, then click a curve zone \u2014 or drag and drop.';
     document.getElementById('score-display').textContent = '';
+    clearZoneHighlights();
     renderPool();
     renderDropZones();
 }
+
+// Deselect organism when clicking outside
+document.addEventListener('click', (e) => {
+    if (selectedOrgIndex !== null &&
+        !e.target.closest('.organism-chip') &&
+        !e.target.closest('.drop-overlay')) {
+        selectedOrgIndex = null;
+        clearZoneHighlights();
+        renderPool();
+        updateInfoText();
+    }
+});
 
 // Initialize
 window.addEventListener('DOMContentLoaded', () => {
