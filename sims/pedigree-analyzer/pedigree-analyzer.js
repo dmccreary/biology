@@ -1,17 +1,17 @@
 // Interactive Pedigree Analyzer
-// Students classify pedigrees by inheritance mode: AD, AR, XR, XD
-// 12 pre-built pedigrees with immediate feedback
+// Two modes: Explore (default) shows classification and reasoning;
+// Quiz mode asks students to classify each pedigree with gold-star feedback.
 
 let containerWidth;
 let canvasWidth = 800;
-let drawHeight = 480;
-let controlHeight = 40;
+let drawHeight = 360;
+let controlHeight = 46;
 let canvasHeight = drawHeight + controlHeight;
 let containerHeight = canvasHeight;
 let margin = 10;
 
-// UI
-let newPedigreeBtn;
+// Mode: 'explore' or 'quiz'
+let mode = 'explore';
 
 // State
 let currentPedigree = null;
@@ -22,6 +22,18 @@ let answered = false;
 let score = 0;
 let totalAttempts = 0;
 let hoveredIndividual = null;
+let quizComplete = false;
+
+// Modal state
+let showModal = false;
+let modalTimer = 0;
+let modalMessage = '';
+let modalIsCorrect = false;
+
+// Celebration state
+let celebrating = false;
+let celebrationTimer = 0;
+let confetti = [];
 
 // Inheritance mode labels
 const MODES = {
@@ -38,10 +50,10 @@ const MODE_COLORS = {
     XD: [243, 156, 18]
 };
 
+const MODE_SHORT = ['AD', 'AR', 'XR', 'XD'];
+const MODE_LABELS = ['Autosomal Dominant', 'Autosomal Recessive', 'X-Linked Recessive', 'X-Linked Dominant'];
+
 // Pedigree data: 12 pedigrees (3 per mode)
-// Each person: {id, sex:'M'/'F', affected:bool, gen:0-2, pos:0-N, genotype:string}
-// Matings: {p1:id, p2:id}
-// Children: {parent_mating:idx, child:id}
 const PEDIGREES = [
     // ===== AUTOSOMAL DOMINANT (3) =====
     {
@@ -244,26 +256,15 @@ function setup() {
     const canvas = createCanvas(containerWidth, containerHeight);
     const mainEl = document.querySelector('main');
     canvas.parent(mainEl);
-
-    newPedigreeBtn = createButton('New Pedigree');
-    newPedigreeBtn.parent(mainEl);
-    newPedigreeBtn.mousePressed(loadNewPedigree);
-
-    positionControls();
     textFont('Arial');
     shufflePedigrees();
-    loadNewPedigree();
-    describe('Interactive pedigree analyzer quiz for inheritance mode classification');
-}
-
-function positionControls() {
-    newPedigreeBtn.position(10, drawHeight + 8);
+    loadPedigree();
+    describe('Interactive pedigree analyzer with Explore and Quiz modes');
 }
 
 function shufflePedigrees() {
     pedigreeOrder = [];
     for (let i = 0; i < PEDIGREES.length; i++) pedigreeOrder.push(i);
-    // Fisher-Yates shuffle
     for (let i = pedigreeOrder.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
         [pedigreeOrder[i], pedigreeOrder[j]] = [pedigreeOrder[j], pedigreeOrder[i]];
@@ -271,8 +272,13 @@ function shufflePedigrees() {
     pedigreeIdx = 0;
 }
 
-function loadNewPedigree() {
+function loadPedigree() {
     if (pedigreeIdx >= pedigreeOrder.length) {
+        if (mode === 'quiz') {
+            quizComplete = true;
+            startCelebration();
+            return;
+        }
         shufflePedigrees();
     }
     currentPedigree = PEDIGREES[pedigreeOrder[pedigreeIdx]];
@@ -280,20 +286,227 @@ function loadNewPedigree() {
     selectedAnswer = null;
     answered = false;
     hoveredIndividual = null;
+    showModal = false;
 }
+
+function switchMode(newMode) {
+    mode = newMode;
+    score = 0;
+    totalAttempts = 0;
+    quizComplete = false;
+    celebrating = false;
+    shufflePedigrees();
+    loadPedigree();
+}
+
+// ===========================
+// CELEBRATION
+// ===========================
+
+function startCelebration() {
+    celebrating = true;
+    celebrationTimer = 300; // 5 seconds at 60fps
+    confetti = [];
+    for (let i = 0; i < 150; i++) {
+        confetti.push({
+            x: random(canvasWidth),
+            y: random(-canvasHeight, -20),
+            vx: random(-2, 2),
+            vy: random(2, 5),
+            size: random(4, 10),
+            color: [random(50, 255), random(50, 255), random(50, 255)],
+            rot: random(TWO_PI),
+            rotSpeed: random(-0.1, 0.1)
+        });
+    }
+}
+
+function updateCelebration() {
+    celebrationTimer--;
+    if (celebrationTimer <= 0) {
+        celebrating = false;
+    }
+    for (let c of confetti) {
+        c.x += c.vx;
+        c.y += c.vy;
+        c.vy += 0.03;
+        c.rot += c.rotSpeed;
+        if (c.y > canvasHeight + 20) {
+            c.y = random(-40, -10);
+            c.x = random(canvasWidth);
+            c.vy = random(2, 5);
+        }
+    }
+}
+
+function drawCelebration() {
+    // Semi-transparent overlay
+    fill(240, 248, 255, 200);
+    noStroke();
+    rect(0, 0, canvasWidth, drawHeight);
+
+    // Confetti
+    for (let c of confetti) {
+        push();
+        translate(c.x, c.y);
+        rotate(c.rot);
+        fill(c.color[0], c.color[1], c.color[2]);
+        noStroke();
+        rect(-c.size / 2, -c.size / 4, c.size, c.size / 2, 1);
+        pop();
+    }
+
+    // Celebration message
+    let cx = canvasWidth / 2;
+    let cy = drawHeight / 2 - 30;
+
+    fill(255, 255, 255, 220);
+    stroke(255, 200, 0);
+    strokeWeight(3);
+    rect(cx - 180, cy - 60, 360, 150, 12);
+
+    // Gold star
+    drawGoldStar(cx, cy - 20, 30);
+
+    fill(40);
+    noStroke();
+    textSize(20);
+    textStyle(BOLD);
+    textAlign(CENTER, CENTER);
+    text('Quiz Complete!', cx, cy + 30);
+    textStyle(NORMAL);
+    textSize(14);
+    fill(80);
+    text('Score: ' + score + ' / ' + totalAttempts, cx, cy + 55);
+    textSize(12);
+    let pct = totalAttempts > 0 ? Math.round(score / totalAttempts * 100) : 0;
+    fill(pct >= 80 ? [39, 174, 96] : pct >= 50 ? [243, 156, 18] : [231, 76, 60]);
+    text(pct + '% correct', cx, cy + 75);
+}
+
+// ===========================
+// MODAL (gold star for correct)
+// ===========================
+
+function showCorrectModal(msg) {
+    showModal = true;
+    modalTimer = 180; // 3 seconds
+    modalMessage = msg;
+    modalIsCorrect = true;
+}
+
+function showIncorrectModal(msg) {
+    showModal = true;
+    modalTimer = 180;
+    modalMessage = msg;
+    modalIsCorrect = false;
+}
+
+function drawModal() {
+    if (!showModal) return;
+    modalTimer--;
+    if (modalTimer <= 0) {
+        showModal = false;
+        if (mode === 'quiz' && modalIsCorrect) {
+            loadPedigree();
+        }
+        return;
+    }
+
+    // Fade alpha
+    let alpha = modalTimer < 30 ? map(modalTimer, 0, 30, 0, 230) : 230;
+
+    // Overlay
+    fill(0, 0, 0, alpha * 0.3);
+    noStroke();
+    rect(0, 0, canvasWidth, drawHeight);
+
+    // Modal box
+    let mw = min(380, canvasWidth * 0.7);
+    let mh = 200;
+    let mx = (canvasWidth - mw) / 2;
+    let my = (drawHeight - mh) / 2;
+
+    fill(255, 255, 255, alpha);
+    stroke(modalIsCorrect ? color(255, 200, 0) : color(231, 76, 60));
+    strokeWeight(3);
+    rect(mx, my, mw, mh, 12);
+
+    if (modalIsCorrect) {
+        // Gold star
+        drawGoldStar(canvasWidth / 2, my + 45, 28);
+
+        fill(39, 174, 96, alpha);
+        noStroke();
+        textSize(18);
+        textStyle(BOLD);
+        textAlign(CENTER, CENTER);
+        text('Correct!', canvasWidth / 2, my + 80);
+        textStyle(NORMAL);
+
+        fill(60, 60, 60, alpha);
+        textSize(11);
+        textLeading(15);
+        textAlign(CENTER, TOP);
+        text(modalMessage, mx + 15, my + 100, mw - 30, mh - 110);
+    } else {
+        // Red X
+        let starX = canvasWidth / 2;
+        let starY = my + 40;
+        fill(231, 76, 60, alpha);
+        noStroke();
+        textSize(36);
+        textStyle(BOLD);
+        textAlign(CENTER, CENTER);
+        text('\u2717', starX, starY);
+        textStyle(NORMAL);
+
+        fill(180, 40, 30, alpha);
+        textSize(18);
+        textStyle(BOLD);
+        text('Not Quite', canvasWidth / 2, my + 75);
+        textStyle(NORMAL);
+
+        fill(60, 60, 60, alpha);
+        textSize(11);
+        textLeading(15);
+        textAlign(CENTER, TOP);
+        text(modalMessage, mx + 15, my + 95, mw - 30, mh - 105);
+    }
+}
+
+function drawGoldStar(cx, cy, r) {
+    fill(255, 200, 0);
+    stroke(200, 150, 0);
+    strokeWeight(1.5);
+    beginShape();
+    for (let i = 0; i < 10; i++) {
+        let angle = -HALF_PI + i * PI / 5;
+        let rad = (i % 2 === 0) ? r : r * 0.45;
+        vertex(cx + cos(angle) * rad, cy + sin(angle) * rad);
+    }
+    endShape(CLOSE);
+}
+
+// ===========================
+// DRAW
+// ===========================
 
 function draw() {
     updateCanvasSize();
-    background('aliceblue');
+    background('#F0F8FF');
 
-    stroke('silver');
+    stroke(200);
     strokeWeight(1);
-    fill('aliceblue');
-    rect(0, 0, canvasWidth, drawHeight);
+    fill('#F0F8FF');
+    rect(0, 0, canvasWidth - 1, drawHeight);
 
-    fill('white');
-    noStroke();
-    rect(0, drawHeight, canvasWidth, controlHeight);
+    if (celebrating) {
+        updateCelebration();
+        drawCelebration();
+        drawControls();
+        return;
+    }
 
     if (!currentPedigree) return;
 
@@ -301,50 +514,64 @@ function draw() {
     fill(30);
     noStroke();
     textAlign(CENTER, TOP);
-    textSize(17);
-    text('Pedigree Analyzer', canvasWidth / 2, 5);
+    textSize(16);
+    textStyle(BOLD);
+    text('Pedigree Analyzer', canvasWidth / 2, 4);
+    textStyle(NORMAL);
 
-    // Score
-    fill(80);
-    textSize(12);
-    textAlign(RIGHT, TOP);
-    text('Score: ' + score + ' / ' + totalAttempts, canvasWidth - 15, 8);
+    // Score (quiz mode)
+    if (mode === 'quiz') {
+        fill(80);
+        textSize(12);
+        textAlign(RIGHT, TOP);
+        text('Score: ' + score + ' / ' + totalAttempts + '  (' + pedigreeIdx + '/' + PEDIGREES.length + ')', canvasWidth - 12, 7);
+    } else {
+        // Pedigree counter
+        fill(120);
+        textSize(11);
+        textAlign(RIGHT, TOP);
+        text('Pedigree ' + pedigreeIdx + ' of ' + PEDIGREES.length, canvasWidth - 12, 7);
+    }
 
-    // Draw pedigree
-    drawPedigree(margin, 28, canvasWidth * 0.55, 260);
+    drawPedigree(margin, 26, canvasWidth * 0.52, drawHeight * 0.78);
 
-    // Draw answer buttons
-    drawAnswerButtons(canvasWidth * 0.6, 30, canvasWidth * 0.38, 130);
+    if (mode === 'explore') {
+        drawExplorePanel(canvasWidth * 0.56, 26, canvasWidth * 0.42, drawHeight - 36);
+    } else {
+        drawAnswerButtons(canvasWidth * 0.56, 26, canvasWidth * 0.42, 130);
+        drawFeedbackPanel(canvasWidth * 0.56, 166, canvasWidth * 0.42, drawHeight - 180);
+    }
 
-    // Draw feedback panel
-    drawFeedbackPanel(canvasWidth * 0.6, 170, canvasWidth * 0.38, 120);
-
-    // Draw genotype tooltip on hover (only after answered)
-    if (answered && hoveredIndividual) {
+    // Genotype tooltip (explore always, quiz after answer)
+    if ((mode === 'explore' || answered) && hoveredIndividual) {
         drawGenotypeTooltip();
     }
 
-    // Instruction at bottom of pedigree area
-    if (!answered) {
-        fill(100);
-        noStroke();
-        textSize(11);
-        textAlign(CENTER, TOP);
-        text('Examine the pedigree and select the inheritance pattern below.', canvasWidth * 0.28, 295);
+    // Bottom instruction
+    fill(100);
+    noStroke();
+    textSize(10);
+    textAlign(CENTER, BOTTOM);
+    if (mode === 'explore') {
+        text('Hover over individuals to see genotypes. Click "Next" for another pedigree.', canvasWidth * 0.28, drawHeight - 4);
+    } else if (!answered) {
+        text('Examine the pedigree and select the inheritance pattern.', canvasWidth * 0.28, drawHeight - 4);
     } else {
-        fill(100);
-        noStroke();
-        textSize(11);
-        textAlign(CENTER, TOP);
-        text('Hover over individuals to see their genotypes.', canvasWidth * 0.28, 295);
+        text('Hover over individuals to see genotypes.', canvasWidth * 0.28, drawHeight - 4);
     }
+
+    drawModal();
+    drawControls();
 }
+
+// ===========================
+// PEDIGREE DRAWING
+// ===========================
 
 function drawPedigree(x, y, w, h) {
     let ped = currentPedigree;
     let people = ped.people;
 
-    // Find bounds
     let maxGen = 0, maxPos = 0;
     people.forEach(p => {
         if (p.gen > maxGen) maxGen = p.gen;
@@ -353,7 +580,7 @@ function drawPedigree(x, y, w, h) {
 
     let genSpacing = h / (maxGen + 1);
     let posSpacing = w / (maxPos + 1.5);
-    let symbolSize = min(genSpacing * 0.3, posSpacing * 0.35, 22);
+    let symbolSize = min(genSpacing * 0.28, posSpacing * 0.32, 20);
 
     // Generation labels
     fill(150);
@@ -361,65 +588,63 @@ function drawPedigree(x, y, w, h) {
     textSize(10);
     textAlign(RIGHT, CENTER);
     for (let g = 0; g <= maxGen; g++) {
-        text('Gen ' + (g + 1), x + 30, y + 25 + g * genSpacing);
+        let gy = y + 25 + g * genSpacing;
+        let roman = ['I', 'II', 'III'][g] || (g + 1);
+        text(roman, x + 18, gy);
     }
 
-    // Draw mating lines first
+    // Mating lines
     ped.matings.forEach(m => {
         let p1 = people.find(p => p.id === m.p1);
         let p2 = people.find(p => p.id === m.p2);
-        let x1 = x + 35 + p1.pos * posSpacing;
+        let x1 = x + 25 + p1.pos * posSpacing;
         let y1 = y + 25 + p1.gen * genSpacing;
-        let x2 = x + 35 + p2.pos * posSpacing;
+        let x2 = x + 25 + p2.pos * posSpacing;
         let y2 = y + 25 + p2.gen * genSpacing;
         stroke(120);
         strokeWeight(1.5);
         line(x1 + symbolSize, y1, x2 - symbolSize, y2);
     });
 
-    // Draw parent-to-child lines
+    // Parent-to-child lines
     ped.children.forEach(c => {
         let mating = ped.matings[c.mi];
         let p1 = people.find(p => p.id === mating.p1);
         let p2 = people.find(p => p.id === mating.p2);
         let child = people.find(p => p.id === c.child);
 
-        let parentMidX = (x + 35 + p1.pos * posSpacing + x + 35 + p2.pos * posSpacing) / 2;
+        let parentMidX = (x + 25 + p1.pos * posSpacing + x + 25 + p2.pos * posSpacing) / 2;
         let parentY = y + 25 + p1.gen * genSpacing;
-        let childX = x + 35 + child.pos * posSpacing;
+        let childX = x + 25 + child.pos * posSpacing;
         let childY = y + 25 + child.gen * genSpacing;
 
         stroke(120);
         strokeWeight(1.5);
-        // Vertical from parent line down
         let midY = parentY + genSpacing * 0.45;
         line(parentMidX, parentY, parentMidX, midY);
-        // Horizontal to child's x position
         line(parentMidX, midY, childX, midY);
-        // Vertical down to child
         line(childX, midY, childX, childY - symbolSize);
     });
 
     // Draw individuals
     hoveredIndividual = null;
     people.forEach(p => {
-        let px = x + 35 + p.pos * posSpacing;
+        let px = x + 25 + p.pos * posSpacing;
         let py = y + 25 + p.gen * genSpacing;
 
-        // Check hover
         let d = dist(mouseX, mouseY, px, py);
-        if (d < symbolSize + 4) {
+        if (d < symbolSize + 5) {
             hoveredIndividual = p;
         }
 
-        // Affected fill
         if (p.affected) {
-            fill(44, 62, 80); // #2C3E50
+            fill(44, 62, 80);
         } else {
             fill(255);
         }
 
-        if (hoveredIndividual === p && answered) {
+        let isHovered = hoveredIndividual === p;
+        if (isHovered && (mode === 'explore' || answered)) {
             stroke(46, 204, 113);
             strokeWeight(3);
         } else {
@@ -435,78 +660,201 @@ function drawPedigree(x, y, w, h) {
             ellipse(px, py, symbolSize * 2, symbolSize * 2);
         }
     });
+
+    // Legend
+    let lx = x + 5;
+    let ly = y + h - 8;
+    textSize(9);
+    fill(80);
+    noStroke();
+    textAlign(LEFT, CENTER);
+
+    // Male symbol
+    stroke(60);
+    strokeWeight(1.5);
+    noFill();
+    rectMode(CENTER);
+    rect(lx + 6, ly, 10, 10, 1);
+    rectMode(CORNER);
+    noStroke();
+    fill(80);
+    text('= Male', lx + 14, ly);
+
+    // Female symbol
+    stroke(60);
+    strokeWeight(1.5);
+    noFill();
+    ellipse(lx + 65, ly, 10, 10);
+    noStroke();
+    fill(80);
+    text('= Female', lx + 73, ly);
+
+    // Affected
+    fill(44, 62, 80);
+    stroke(60);
+    strokeWeight(1.5);
+    rectMode(CENTER);
+    rect(lx + 135, ly, 10, 10, 1);
+    rectMode(CORNER);
+    noStroke();
+    fill(80);
+    text('= Affected', lx + 143, ly);
 }
 
 function drawGenotypeTooltip() {
     let p = hoveredIndividual;
     let tipText = p.genotype;
-    let tipW = textWidth(tipText) + 20;
+    textSize(13);
+    textStyle(BOLD);
+    let tipW = textWidth(tipText) + 24;
+    let tipH = 24;
+    let tx = mouseX + 12;
+    let ty = mouseY - 28;
+    if (tx + tipW > canvasWidth) tx = mouseX - tipW - 5;
+    if (ty < 0) ty = mouseY + 12;
 
     fill(255, 255, 220);
     stroke(180);
     strokeWeight(1);
-    textSize(12);
-    tipW = max(tipW, textWidth(tipText) + 20);
-    rect(mouseX + 10, mouseY - 25, tipW, 22, 4);
+    rect(tx, ty, tipW, tipH, 4);
+
     fill(40);
     noStroke();
     textAlign(LEFT, CENTER);
-    text(tipText, mouseX + 18, mouseY - 14);
+    text(tipText, tx + 10, ty + tipH / 2);
+    textStyle(NORMAL);
 }
 
-function drawAnswerButtons(x, y, w, h) {
+// ===========================
+// EXPLORE PANEL
+// ===========================
+
+function drawExplorePanel(x, y, w, h) {
+    // Panel background
+    fill(248, 250, 255);
+    stroke(210);
+    strokeWeight(1);
+    rect(x, y, w, h, 6);
+
+    let px = x + 10;
+    let py = y + 10;
+    let pw = w - 20;
+
+    // Mode badge
+    let modeColor = MODE_COLORS[currentPedigree.mode];
+    fill(modeColor[0], modeColor[1], modeColor[2]);
+    noStroke();
+    rect(px, py, pw, 28, 5);
+    fill(255);
+    textSize(13);
+    textStyle(BOLD);
+    textAlign(CENTER, CENTER);
+    text(MODES[currentPedigree.mode], px + pw / 2, py + 14);
+    textStyle(NORMAL);
+
+    py += 38;
+
+    // Accent line
+    stroke(modeColor[0], modeColor[1], modeColor[2]);
+    strokeWeight(2);
+    line(px, py, px + pw, py);
+    py += 8;
+
+    // Key evidence
+    fill(50);
+    noStroke();
+    textSize(12);
+    textStyle(BOLD);
+    textAlign(LEFT, TOP);
+    text('Key Evidence:', px, py);
+    textStyle(NORMAL);
+    py += 18;
+
+    textSize(11);
+    textLeading(15);
     fill(60);
+    text(currentPedigree.clues, px, py, pw, h - (py - y) - 50);
+
+    // Hint section
+    let hintY = y + h - 50;
+    fill(255, 248, 225);
+    stroke(243, 156, 18, 100);
+    strokeWeight(1);
+    rect(px - 2, hintY, pw + 4, 42, 4);
+
+    fill(180, 120, 0);
+    noStroke();
+    textSize(10);
+    textStyle(BOLD);
+    textAlign(LEFT, TOP);
+    text('Diagnostic Clue:', px + 4, hintY + 4);
+    textStyle(NORMAL);
+    fill(120, 80, 0);
+    textSize(10);
+    textLeading(13);
+    text(currentPedigree.hint, px + 4, hintY + 17, pw - 4, 24);
+}
+
+// ===========================
+// QUIZ ANSWER BUTTONS
+// ===========================
+
+function drawAnswerButtons(x, y, w, h) {
+    fill(50);
     noStroke();
     textAlign(LEFT, TOP);
     textSize(13);
     textStyle(BOLD);
-    text('Select Inheritance Pattern:', x, y);
+    text('Select Inheritance Pattern:', x + 4, y);
     textStyle(NORMAL);
 
-    let btnW = w * 0.48;
-    let btnH = 32;
-    let gap = 6;
-    let startY = y + 22;
-
-    let modes = ['AD', 'AR', 'XR', 'XD'];
-    let labels = ['Autosomal Dominant', 'Autosomal Recessive', 'X-Linked Recessive', 'X-Linked Dominant'];
+    let btnW = (w - 8) * 0.48;
+    let btnH = 36;
+    let gap = 8;
+    let startY = y + 24;
 
     for (let i = 0; i < 4; i++) {
         let bx = x + (i % 2) * (btnW + gap);
         let by = startY + Math.floor(i / 2) * (btnH + gap);
-        let mode = modes[i];
+        let m = MODE_SHORT[i];
+        let mc = MODE_COLORS[m];
 
-        let isCorrect = answered && mode === currentPedigree.mode;
-        let isWrong = answered && mode === selectedAnswer && mode !== currentPedigree.mode;
-        let isHover = !answered && mouseX > bx && mouseX < bx + btnW && mouseY > by && mouseY < by + btnH;
+        let isCorrect = answered && m === currentPedigree.mode;
+        let isWrong = answered && m === selectedAnswer && m !== currentPedigree.mode;
+        let isHover = !answered && !showModal && mouseX > bx && mouseX < bx + btnW && mouseY > by && mouseY < by + btnH;
 
         if (isCorrect) {
-            fill(46, 204, 113, 80);
-            stroke(46, 204, 113);
-            strokeWeight(2);
+            fill(39, 174, 96, 60);
+            stroke(39, 174, 96);
+            strokeWeight(2.5);
         } else if (isWrong) {
-            fill(231, 76, 60, 80);
+            fill(231, 76, 60, 60);
             stroke(231, 76, 60);
-            strokeWeight(2);
+            strokeWeight(2.5);
         } else if (isHover) {
-            fill(220, 230, 240);
-            stroke(150);
-            strokeWeight(1);
+            fill(mc[0], mc[1], mc[2], 30);
+            stroke(mc[0], mc[1], mc[2]);
+            strokeWeight(1.5);
         } else {
             fill(245);
             stroke(180);
             strokeWeight(1);
         }
-
         rect(bx, by, btnW, btnH, 6);
 
-        fill(answered ? (isCorrect ? [30,120,60] : isWrong ? [180,40,30] : 120) : 50);
+        fill(isCorrect ? [20, 100, 50] : isWrong ? [180, 40, 30] : 50);
         noStroke();
         textSize(11);
+        textStyle(BOLD);
         textAlign(CENTER, CENTER);
-        text(labels[i], bx + btnW / 2, by + btnH / 2);
+        text(MODE_LABELS[i], bx + btnW / 2, by + btnH / 2);
+        textStyle(NORMAL);
     }
 }
+
+// ===========================
+// QUIZ FEEDBACK PANEL
+// ===========================
 
 function drawFeedbackPanel(x, y, w, h) {
     if (!answered) {
@@ -514,7 +862,7 @@ function drawFeedbackPanel(x, y, w, h) {
         stroke(200);
         strokeWeight(1);
         rect(x, y, w, h, 6);
-        fill(150);
+        fill(140);
         noStroke();
         textSize(11);
         textAlign(CENTER, CENTER);
@@ -524,63 +872,234 @@ function drawFeedbackPanel(x, y, w, h) {
 
     let correct = selectedAnswer === currentPedigree.mode;
     fill(correct ? [235, 250, 240] : [255, 240, 238]);
-    stroke(correct ? [46, 204, 113] : [231, 76, 60]);
+    stroke(correct ? [39, 174, 96] : [231, 76, 60]);
     strokeWeight(1);
     rect(x, y, w, h, 6);
 
-    fill(correct ? [30, 120, 60] : [180, 40, 30]);
+    let px = x + 10;
+    let py = y + 10;
+    let pw = w - 20;
+
+    fill(correct ? [20, 100, 50] : [180, 40, 30]);
     noStroke();
     textSize(13);
     textStyle(BOLD);
     textAlign(LEFT, TOP);
-    text(correct ? '\u2713 Correct!' : '\u2717 Incorrect', x + 10, y + 8);
+    text(correct ? '\u2713 Correct!' : '\u2717 Incorrect', px, py);
     textStyle(NORMAL);
+    py += 20;
 
     fill(60);
     textSize(10);
     textLeading(14);
-    textAlign(LEFT, TOP);
-
     if (correct) {
-        text('Pattern: ' + MODES[currentPedigree.mode] + '\n\n' + currentPedigree.clues, x + 10, y + 28, w - 20, h - 35);
+        text('Pattern: ' + MODES[currentPedigree.mode] + '\n\n' + currentPedigree.clues, px, py, pw, h - 35);
     } else {
-        text('The correct answer is: ' + MODES[currentPedigree.mode] + '\n\nHint: ' + currentPedigree.hint, x + 10, y + 28, w - 20, h - 35);
+        text('The correct answer is: ' + MODES[currentPedigree.mode] + '\n\nHint: ' + currentPedigree.hint, px, py, pw, h - 35);
     }
 }
 
+// ===========================
+// CONTROLS
+// ===========================
+
+function drawControls() {
+    let cy = drawHeight;
+    fill(240, 244, 248);
+    noStroke();
+    rect(0, cy, canvasWidth, controlHeight);
+    stroke(210);
+    strokeWeight(1);
+    line(0, cy, canvasWidth, cy);
+
+    let btnH = 30;
+    let bx = 10;
+    let by = cy + 8;
+
+    // Explore button
+    let expW = 80;
+    if (mode === 'explore') {
+        fill(41, 128, 185);
+        stroke(41, 128, 185);
+    } else {
+        fill(220, 225, 235);
+        stroke(180);
+    }
+    strokeWeight(mode === 'explore' ? 2 : 1);
+    rect(bx, by, expW, btnH, 6);
+    fill(mode === 'explore' ? 255 : 60);
+    noStroke();
+    textSize(12);
+    textStyle(BOLD);
+    textAlign(CENTER, CENTER);
+    text('Explore', bx + expW / 2, by + btnH / 2);
+    textStyle(NORMAL);
+
+    // Quiz button
+    bx += expW + 8;
+    let quizW = 80;
+    if (mode === 'quiz') {
+        fill(243, 156, 18);
+        stroke(243, 156, 18);
+    } else {
+        fill(220, 225, 235);
+        stroke(180);
+    }
+    strokeWeight(mode === 'quiz' ? 2 : 1);
+    rect(bx, by, quizW, btnH, 6);
+    fill(mode === 'quiz' ? 255 : 60);
+    noStroke();
+    textSize(12);
+    textStyle(BOLD);
+    textAlign(CENTER, CENTER);
+    text('Quiz', bx + quizW / 2, by + btnH / 2);
+    textStyle(NORMAL);
+
+    // Next / New Pedigree button
+    bx += quizW + 16;
+    let nextW = 110;
+    let nextLabel = mode === 'explore' ? 'Next Pedigree' : (answered ? 'Next Pedigree' : '');
+    if (celebrating) nextLabel = 'Play Again';
+    if (quizComplete && !celebrating) nextLabel = 'Play Again';
+
+    if (nextLabel) {
+        fill(220, 225, 235);
+        stroke(100, 160, 100);
+        strokeWeight(1);
+        rect(bx, by, nextW, btnH, 6);
+        fill(50);
+        noStroke();
+        textSize(12);
+        textStyle(BOLD);
+        textAlign(CENTER, CENTER);
+        text(nextLabel, bx + nextW / 2, by + btnH / 2);
+        textStyle(NORMAL);
+    }
+
+    // Hint button (quiz mode, before answered)
+    if (mode === 'quiz' && !answered && !quizComplete && !celebrating) {
+        let hintBx = canvasWidth - 80;
+        fill(255, 248, 225);
+        stroke(243, 156, 18);
+        strokeWeight(1);
+        rect(hintBx, by, 70, btnH, 6);
+        fill(180, 120, 0);
+        noStroke();
+        textSize(11);
+        textStyle(BOLD);
+        textAlign(CENTER, CENTER);
+        text('Hint', hintBx + 35, by + btnH / 2);
+        textStyle(NORMAL);
+    }
+
+    // Mode instruction
+    fill(120);
+    noStroke();
+    textSize(9);
+    textAlign(RIGHT, CENTER);
+    if (mode === 'explore') {
+        text('Explore mode: study each pedigree with full explanation', canvasWidth - 10, by + btnH / 2);
+    } else if (!quizComplete) {
+        text('Quiz mode: classify all 12 pedigrees', canvasWidth - 10, by + btnH / 2);
+    }
+}
+
+// ===========================
+// INTERACTION
+// ===========================
+
 function mousePressed() {
-    if (answered) return;
-    if (!currentPedigree) return;
+    let cy = drawHeight;
+    let btnH = 30;
+    let by = cy + 8;
 
-    // Check answer button clicks
-    let x = canvasWidth * 0.6;
-    let y = 52;
-    let btnW = (canvasWidth * 0.38) * 0.48;
-    let btnH = 32;
-    let gap = 6;
-
-    let modes = ['AD', 'AR', 'XR', 'XD'];
-    for (let i = 0; i < 4; i++) {
-        let bx = x + (i % 2) * (btnW + gap);
-        let by = y + Math.floor(i / 2) * (btnH + gap);
-
-        if (mouseX > bx && mouseX < bx + btnW && mouseY > by && mouseY < by + btnH) {
-            selectedAnswer = modes[i];
-            answered = true;
-            totalAttempts++;
-            if (selectedAnswer === currentPedigree.mode) {
-                score++;
-            }
+    // Mode buttons
+    if (mouseY >= by && mouseY <= by + btnH) {
+        // Explore button
+        if (mouseX >= 10 && mouseX <= 90) {
+            if (mode !== 'explore') switchMode('explore');
             return;
         }
+        // Quiz button
+        if (mouseX >= 98 && mouseX <= 178) {
+            if (mode !== 'quiz') switchMode('quiz');
+            return;
+        }
+        // Next button
+        let nextBx = 194;
+        let nextW = 110;
+        if (mouseX >= nextBx && mouseX <= nextBx + nextW) {
+            if (celebrating || quizComplete) {
+                switchMode(mode);
+                return;
+            }
+            if (mode === 'explore' || (mode === 'quiz' && answered)) {
+                loadPedigree();
+                return;
+            }
+        }
+        // Hint button (quiz mode)
+        if (mode === 'quiz' && !answered && !quizComplete) {
+            let hintBx = canvasWidth - 80;
+            if (mouseX >= hintBx && mouseX <= hintBx + 70) {
+                showIncorrectHintModal();
+                return;
+            }
+        }
     }
+
+    // Quiz answer buttons
+    if (mode === 'quiz' && !answered && !showModal && !quizComplete && !celebrating) {
+        let x = canvasWidth * 0.56;
+        let startY = 50;
+        let btnW = (canvasWidth * 0.42 - 8) * 0.48;
+        let btnBH = 36;
+        let gap = 8;
+
+        for (let i = 0; i < 4; i++) {
+            let bx = x + (i % 2) * (btnW + gap);
+            let bby = startY + Math.floor(i / 2) * (btnBH + gap);
+
+            if (mouseX > bx && mouseX < bx + btnW && mouseY > bby && mouseY < bby + btnBH) {
+                selectedAnswer = MODE_SHORT[i];
+                answered = true;
+                totalAttempts++;
+                if (selectedAnswer === currentPedigree.mode) {
+                    score++;
+                    showCorrectModal(
+                        MODES[currentPedigree.mode] + '\n\n' + currentPedigree.clues
+                    );
+                } else {
+                    showIncorrectModal(
+                        'The correct answer is ' + MODES[currentPedigree.mode] + '.\n\n' + currentPedigree.hint
+                    );
+                }
+                return;
+            }
+        }
+    }
+
+    // Dismiss modal on click
+    if (showModal) {
+        showModal = false;
+        if (mode === 'quiz' && modalIsCorrect) {
+            loadPedigree();
+        }
+        return;
+    }
+}
+
+function showIncorrectHintModal() {
+    if (!currentPedigree) return;
+    showModal = true;
+    modalTimer = 180;
+    modalMessage = currentPedigree.hint;
+    modalIsCorrect = false;
 }
 
 function windowResized() {
     updateCanvasSize();
     resizeCanvas(containerWidth, containerHeight);
-    positionControls();
-    redraw();
 }
 
 function updateCanvasSize() {

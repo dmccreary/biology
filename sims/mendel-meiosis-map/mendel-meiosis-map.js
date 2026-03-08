@@ -17,11 +17,11 @@ const nodeData = [
     { id: 'sister-separation',  label: 'Sister Chromatid\nSeparation\n(Anaphase II)', x: -320, y: 320, group: 'meiosis' },
 
     // Genetic Outcomes (green cluster, right side)
-    { id: 'segregation',        label: 'Law of\nSegregation',                  x: 120, y: -160, group: 'genetics' },
-    { id: 'independent',        label: 'Law of Independent\nAssortment',       x: 120, y: -40,  group: 'genetics' },
-    { id: 'recombination',      label: 'Genetic\nRecombination',               x: 120, y: 80,   group: 'genetics' },
-    { id: 'haploid',            label: 'Haploid\nGametes',                     x: 120, y: 200,  group: 'genetics' },
-    { id: 'diversity',          label: 'Genetic\nDiversity',                   x: 120, y: 320,  group: 'genetics' }
+    { id: 'segregation',        label: 'Law of\nSegregation',                  x: 100, y: -160, group: 'genetics' },
+    { id: 'independent',        label: 'Law of Independent\nAssortment',       x: 100, y: -40,  group: 'genetics' },
+    { id: 'recombination',      label: 'Genetic\nRecombination',               x: 100, y: 80,   group: 'genetics' },
+    { id: 'haploid',            label: 'Haploid\nGametes',                     x: 100, y: 200,  group: 'genetics' },
+    { id: 'diversity',          label: 'Genetic\nDiversity',                   x: 100, y: 320,  group: 'genetics' }
 ];
 
 // ===========================
@@ -168,13 +168,24 @@ function initializeNetwork() {
     const data = { nodes: nodes, edges: edges };
     network = new vis.Network(container, data, options);
 
-    // Pan to offset for right panel
+    // Pan to offset for right panel and hold a zoomed-out view (~2 "-" clicks)
     network.once('afterDrawing', function() {
-        const pos = network.getViewPosition();
-        network.moveTo({
-            position: { x: pos.x + 60, y: pos.y },
-            animation: false
-        });
+        const basePos = network.getViewPosition();
+        const baseScale = network.getScale();
+        const targetPos = { x: basePos.x + 60, y: basePos.y };
+        const targetScale = baseScale * 0.9 * 0.9;
+
+        const applyInitialView = () => {
+            network.moveTo({
+                position: targetPos,
+                scale: targetScale,
+                animation: false
+            });
+        };
+
+        applyInitialView();
+        setTimeout(applyInitialView, 100);
+        setTimeout(applyInitialView, 400);
     });
 
     // Event: hover over node

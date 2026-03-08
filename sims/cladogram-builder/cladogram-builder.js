@@ -25,18 +25,18 @@ const datasets = [
         outgroup: 0
     },
     {
-        name: 'Arthropods',
-        species: ['Crab', 'Spider', 'Scorpion', 'Butterfly', 'Ant', 'Centipede'],
-        traits: ['Exoskeleton', 'Jointed legs', 'Antennae', 'Wings', 'Complete metamorphosis', 'Venom'],
+        name: 'Plants',
+        species: ['Moss', 'Fern', 'Pine', 'Lily', 'Oak', 'Sunflower'],
+        traits: ['Chloroplasts', 'Vascular tissue', 'Seeds', 'Flowers', 'Broad leaves', 'Composite flower'],
         matrix: [
-            [1, 1, 1, 0, 0, 0], // Crab
-            [1, 1, 0, 0, 0, 1], // Spider
-            [1, 1, 0, 0, 0, 1], // Scorpion
-            [1, 1, 1, 1, 1, 0], // Butterfly
-            [1, 1, 1, 1, 1, 0], // Ant
-            [1, 1, 0, 0, 0, 1]  // Centipede
+            [1, 0, 0, 0, 0, 0], // Moss
+            [1, 1, 0, 0, 0, 0], // Fern
+            [1, 1, 1, 0, 0, 0], // Pine
+            [1, 1, 1, 1, 0, 0], // Lily
+            [1, 1, 1, 1, 1, 0], // Oak
+            [1, 1, 1, 1, 1, 1]  // Sunflower
         ],
-        correctOrder: [0, 3, 4, 1, 2, 5],
+        correctOrder: [0, 1, 2, 3, 4, 5], // Moss, Fern, Pine, Lily, Oak, Sunflower
         outgroup: 0
     }
 ];
@@ -72,7 +72,6 @@ function setup() {
     updateCanvasSize();
     let canvas = createCanvas(canvasWidth, canvasHeight);
     canvas.parent(select('main'));
-    textFont('Arial');
     loadDataset(0);
 }
 
@@ -88,8 +87,10 @@ function loadDataset(idx) {
 
 function computeLayout() {
     let n = data.species.length;
-    let treeX = canvasWidth * 0.45;
-    let treeW = canvasWidth * 0.5;
+
+    // Three-column layout: matrix (left 28%), cladogram (center 47%), species pool (right 15%)
+    let treeX = canvasWidth * 0.30;
+    let treeW = canvasWidth * 0.42;
     let treeY = 50;
     let treeH = drawHeight * 0.7;
 
@@ -103,23 +104,40 @@ function computeLayout() {
         });
     }
 
-    // Species pool positions (left side)
+    // Species pool positions (right side)
     speciesPool = [];
-    let poolX = 20;
+    let poolX = canvasWidth * 0.82;
+    let poolW = canvasWidth * 0.16;
     let poolY = 55;
     let poolSpacing = 32;
     for (let i = 0; i < n; i++) {
         speciesPool.push({
             x: poolX,
             y: poolY + i * poolSpacing,
-            w: 90,
+            w: poolW,
             h: 24
         });
     }
 }
 
 function draw() {
-    background('#F0F8FF');
+    // make the background aliceblue
+    fill('aliceblue');
+    // add a sliver border around both the drawing area and the controls area
+    stroke('silver');
+    strokeWeight(1);
+    rect(0, 0, canvasWidth, canvasHeight);
+    // make the background of the drawing area white
+    fill('white');
+    rect(0, 0, canvasWidth, drawHeight);
+
+    // Draw the title at the top center
+    fill('black')
+    noStroke();
+    textSize(24);
+    textAlign(CENTER, TOP);
+    text('Cladogram Builder', canvasWidth / 2, 10);
+    textStyle(NORMAL);
 
     drawCharacterMatrix();
     drawCladogram();
@@ -131,7 +149,8 @@ function draw() {
 
 function drawCharacterMatrix() {
     let mx = 10;
-    let my = 10;
+    // Vertical spacing and dimensions for the matrix
+    let my = 100;
     let cellW = 22;
     let cellH = 20;
     let labelW = 65;
@@ -157,7 +176,7 @@ function drawCharacterMatrix() {
         translate(tx, my);
         rotate(-HALF_PI * 0.7);
         textAlign(LEFT, CENTER);
-        text(data.traits[j], 0, 0);
+        text(data.traits[j], -25, 15);
         pop();
     }
     pop();
@@ -214,8 +233,8 @@ function drawCharacterMatrix() {
 
 function drawCladogram() {
     let n = data.species.length;
-    let treeX = canvasWidth * 0.42;
-    let treeW = canvasWidth * 0.5;
+    let treeX = canvasWidth * 0.30;
+    let treeW = canvasWidth * 0.42;
 
     // Draw the tree structure (nested brackets)
     stroke(80);
@@ -345,9 +364,12 @@ function drawSpeciesPool() {
     textStyle(BOLD);
     textAlign(LEFT, TOP);
 
-    let poolHeaderY = speciesPool[0].y - 18;
-    text('Species (drag to tree)', speciesPool[0].x, poolHeaderY);
+    let poolHeaderY = speciesPool[0].y - 28;
+    text('Species', speciesPool[0].x, poolHeaderY);
     textStyle(NORMAL);
+    fill(120);
+    textSize(8);
+    text('(drag to tree)', speciesPool[0].x, poolHeaderY + 14);
 
     for (let i = 0; i < data.species.length; i++) {
         // Check if already placed
@@ -396,8 +418,8 @@ function drawDragItem() {
 function drawFeedback() {
     if (!checked) return;
 
-    let fx = canvasWidth * 0.42;
-    let fy = drawHeight * 0.85;
+    let fx = canvasWidth * 0.30;
+    let fy = drawHeight * 0.95;
 
     fill(score === data.species.length ? [46, 204, 113] : [230, 126, 34]);
     noStroke();
@@ -489,7 +511,7 @@ function drawControls() {
     noStroke();
     textSize(9);
     textAlign(LEFT, CENTER);
-    text('Drag species from the pool to the correct branch tips on the cladogram. Use the character matrix as a guide.', 15, cy + 48);
+    text('Drag species from the right panel to the correct branch tips. Use the character matrix as a guide.', 15, cy + 48);
 }
 
 function mousePressed() {
@@ -517,8 +539,8 @@ function mousePressed() {
         return;
     }
 
-    // Dataset buttons
-    let bx = 300;
+    // Dataset buttons (must match drawControls layout: 15 + 80 + 70 + 80 + 55 = 300)
+    let bx = 15 + 80 + 70 + 80 + 55;
     for (let i = 0; i < datasets.length; i++) {
         textSize(10);
         let dw = textWidth(datasets[i].name) + 16;

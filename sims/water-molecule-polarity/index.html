@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for water molecule polarity.">
+        <meta name="description" content="Step-through interactive visualization revealing water molecule polarity — from bare geometry through partial charges, net dipole, and hydrogen bonds — with a detail panel explaining each layer.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Water Molecule Polarity - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for water molecule polarity.">
+        <meta property="og:description" content="Step-through interactive visualization revealing water molecule polarity — from bare geometry through partial charges, net dipole, and hydrogen bonds — with a detail panel explaining each layer.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/water-molecule-polarity/water-molecule-polarity.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Water Molecule Polarity - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for water molecule polarity.">
+        <meta name="twitter:description" content="Step-through interactive visualization revealing water molecule polarity — from bare geometry through partial charges, net dipole, and hydrogen bonds — with a detail panel explaining each layer.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/water-molecule-polarity/water-molecule-polarity.png">
       
@@ -2671,15 +2671,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lesson-plan" class="md-nav__link">
     <span class="md-ellipsis">
       Lesson Plan
@@ -3176,15 +3167,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lesson-plan" class="md-nav__link">
     <span class="md-ellipsis">
       Lesson Plan
@@ -3278,47 +3260,52 @@
 
 
 <h1 id="water-molecule-polarity">Water Molecule Polarity</h1>
-<iframe src="main.html" height="500" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="422" width="100%" scrolling="no"></iframe>
 
 <p><a class="md-button md-button--primary" href="main.html">Run the Water Molecule Polarity MicroSim Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>This MicroSim demonstrates how the bent geometry and electronegativity difference of the water molecule produce a permanent dipole moment, and how this polarity leads to hydrogen bonding between adjacent water molecules.</p>
+<p>This interactive visualization builds an understanding of water's polarity through progressive disclosure. Starting with the bare water molecule and its 104.5° bond angle, students toggle three overlays — partial charges, net dipole moment, and hydrogen bonds — to see how simple geometry and electronegativity differences produce the properties that make water essential for life.</p>
+<p>The right-side information panel updates with each overlay, providing detailed explanations of electronegativity values, VSEPR theory, vector addition of bond dipoles, and hydrogen bond strength relative to covalent bonds.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>Use the checkboxes to toggle layers on and off independently:</p>
 <ol>
-<li><strong>Partial Charges</strong> — shows the partial negative charge on oxygen and partial positive charges on hydrogen, with electronegativity values</li>
-<li><strong>Dipole</strong> — shows the net dipole arrow illustrating why the bent geometry prevents dipole cancellation</li>
-<li><strong>H-Bonds</strong> — shows hydrogen bonds to neighboring water molecules with bond length comparisons</li>
+<li><strong>Start</strong> with the bare molecule view — note the 104.5° bond angle and 0.10 nm bond lengths.</li>
+<li><strong>Click "Partial Charges"</strong> to reveal the unequal electron sharing (O electronegativity 3.44 vs H 2.20).</li>
+<li><strong>Click "Dipole"</strong> to see the net dipole arrow — the bent geometry prevents bond dipoles from canceling.</li>
+<li><strong>Click "H-Bonds"</strong> to see two neighboring water molecules connected by dashed hydrogen bonds (~0.18 nm).</li>
+<li><strong>Click "Reset"</strong> to return to the bare molecule view.</li>
+<li>Overlays can be toggled independently — try combining partial charges with H-bonds to see the electrostatic attraction directly.</li>
 </ol>
-<p>Multiple layers can be active at the same time for comparison.</p>
-<h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
-<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/water-molecule-polarity/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"500"</span>
-        <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
-        <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
 <p>9-12 (AP Biology)</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Basic understanding of atomic structure and covalent bonding</li>
+<li>Familiarity with electronegativity as a periodic trend</li>
+<li>Introduction to molecular geometry (VSEPR model)</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Start with the bare molecule. Why is the bond angle 104.5° instead of 180°? Toggle on partial charges and read the electronegativity values. Predict: which atom pulls the shared electrons more strongly?</li>
+<li><strong>Guided Practice</strong> (5 min): Toggle the dipole arrow. If water were linear (180°), would there be a net dipole? Why does the bent shape matter? Now toggle H-bonds. How does the partial positive charge on H attract the partial negative charge on a neighboring O?</li>
+<li><strong>Assessment</strong> (5 min): With all overlays off, have students draw the molecule from memory with correct bond angle, label partial charges, draw the dipole arrow direction, and sketch one hydrogen bond to a neighbor. Compare with the simulation.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Can students explain why oxygen carries a partial negative charge (higher electronegativity)?</li>
+<li>Can students explain why water has a net dipole moment (bent geometry prevents cancellation)?</li>
+<li>Can students distinguish between covalent bonds (0.10 nm, strong) and hydrogen bonds (0.18 nm, ~10x weaker)?</li>
+<li>Can students connect water's polarity to its macroscopic properties (high boiling point, solvent ability)?</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Water">Water - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Chemical_polarity">Chemical polarity - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hydrogen_bond">Hydrogen bond - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/VSEPR_theory">VSEPR theory - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Electronegativity">Electronegativity - Wikipedia</a></li>
 </ol>
 
 

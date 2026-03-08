@@ -49,12 +49,79 @@
             display: flex;
             gap: 10px;
         }
-        .chart-container {
+        .chart-wrapper {
             flex: 1;
             position: relative;
-            height: 350px;
             min-width: 0;
         }
+        .chart-container {
+            position: relative;
+            height: 370px;
+        }
+        /* Drop zones overlay the chart */
+        .drop-overlay {
+            position: absolute;
+            left: 60px;   /* approximate chart area left edge */
+            right: 10px;  /* approximate chart area right edge */
+            border: 2px dashed transparent;
+            border-radius: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            align-content: flex-start;
+            gap: 3px;
+            padding: 4px 8px;
+            transition: all 0.2s;
+            z-index: 10;
+            cursor: default;
+        }
+        .drop-overlay .zone-label {
+            font-size: 12px;
+            font-weight: bold;
+            pointer-events: none;
+            width: 100%;
+            margin-bottom: 2px;
+        }
+        /* Three zones stacked vertically over the chart */
+        .drop-type1 {
+            top: 30px;
+            height: 28%;
+            background: rgba(52, 152, 219, 0.06);
+            border-color: rgba(52, 152, 219, 0.3);
+        }
+        .drop-type1 .zone-label { color: #2980b9; }
+        .drop-type2 {
+            top: calc(30px + 28% + 4px);
+            height: 28%;
+            background: rgba(39, 174, 96, 0.06);
+            border-color: rgba(39, 174, 96, 0.3);
+        }
+        .drop-type2 .zone-label { color: #1e8449; }
+        .drop-type3 {
+            top: calc(30px + 56% + 8px);
+            height: 28%;
+            background: rgba(230, 126, 34, 0.06);
+            border-color: rgba(230, 126, 34, 0.3);
+        }
+        .drop-type3 .zone-label { color: #d35400; }
+        .drop-overlay.drag-over {
+            border-style: solid;
+        }
+        .drop-type1.drag-over { background: rgba(52, 152, 219, 0.15); border-color: #3498db; }
+        .drop-type2.drag-over { background: rgba(39, 174, 96, 0.15); border-color: #27ae60; }
+        .drop-type3.drag-over { background: rgba(230, 126, 34, 0.15); border-color: #e67e22; }
+        .drop-overlay.selected-target {
+            border-style: solid;
+            animation: pulse-border 0.8s ease-in-out infinite alternate;
+        }
+        @keyframes pulse-border {
+            from { border-width: 2px; }
+            to { border-width: 3px; }
+        }
+        .drop-type1.selected-target { background: rgba(52, 152, 219, 0.12); border-color: #3498db; }
+        .drop-type2.selected-target { background: rgba(39, 174, 96, 0.12); border-color: #27ae60; }
+        .drop-type3.selected-target { background: rgba(230, 126, 34, 0.12); border-color: #e67e22; }
+
         .organism-panel {
             width: 180px;
             flex-shrink: 0;
@@ -82,39 +149,23 @@
         }
         .organism-chip:hover { transform: scale(1.03); box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
         .organism-chip.dragging { opacity: 0.5; cursor: grabbing; }
-        .organism-chip.correct { background: #d5f5e3; border-color: #27ae60; color: #1e8449; }
-        .organism-chip.incorrect { background: #fadbd8; border-color: #e74c3c; color: #c0392b; }
-        .organism-chip.placed { opacity: 0.4; cursor: default; }
-        .drop-zones {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            margin-top: 8px;
+        .organism-chip.selected {
+            border-color: #8e44ad;
+            background: #f5eef8;
+            box-shadow: 0 0 8px rgba(142,68,173,0.4);
+            transform: scale(1.05);
         }
-        .drop-zone {
-            padding: 8px;
-            border: 2px dashed #bbb;
-            border-radius: 8px;
-            text-align: center;
-            font-size: 11px;
-            color: #888;
-            min-height: 28px;
-            transition: all 0.2s;
-        }
-        .drop-zone.drag-over { border-color: #3498db; background: rgba(52,152,219,0.1); }
-        .drop-zone-type1 { border-color: #3498db; }
-        .drop-zone-type2 { border-color: #27ae60; }
-        .drop-zone-type3 { border-color: #e67e22; }
         .placed-chip {
             display: inline-block;
-            padding: 3px 8px;
-            margin: 2px;
+            padding: 2px 6px;
+            margin: 1px;
             border-radius: 4px;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: bold;
+            pointer-events: none;
         }
-        .placed-correct { background: #d5f5e3; color: #1e8449; }
-        .placed-incorrect { background: #fadbd8; color: #c0392b; }
+        .placed-correct { background: rgba(213, 245, 227, 0.9); color: #1e8449; }
+        .placed-incorrect { background: rgba(250, 219, 216, 0.9); color: #c0392b; }
         .info-row {
             font-size: 11px;
             color: #666;
@@ -151,33 +202,34 @@
         <span class="score-display" id="score-display"></span>
     </div>
     <div class="main-area">
-        <div class="chart-container">
-            <canvas id="survChart"></canvas>
-        </div>
-        <div class="organism-panel">
-            <div class="panel-title">Drag organisms to curves</div>
-            <div id="organism-pool"></div>
-            <div class="drop-zones">
-                <div class="drop-zone drop-zone-type1" id="drop-type1"
+        <div class="chart-wrapper">
+            <div class="chart-container">
+                <canvas id="survChart"></canvas>
+                <!-- Drop zones overlaid on the chart -->
+                <div class="drop-overlay drop-type1" id="drop-type1"
                      ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)"
-                     ondrop="handleDrop(event, 'I')">
-                    <strong>Type I</strong> — low early mortality
+                     ondrop="handleDrop(event, 'I')" onclick="handleZoneClick('I')">
+                    <span class="zone-label">Type I — low early mortality</span>
                 </div>
-                <div class="drop-zone drop-zone-type2" id="drop-type2"
+                <div class="drop-overlay drop-type2" id="drop-type2"
                      ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)"
-                     ondrop="handleDrop(event, 'II')">
-                    <strong>Type II</strong> — constant mortality
+                     ondrop="handleDrop(event, 'II')" onclick="handleZoneClick('II')">
+                    <span class="zone-label">Type II — constant mortality</span>
                 </div>
-                <div class="drop-zone drop-zone-type3" id="drop-type3"
+                <div class="drop-overlay drop-type3" id="drop-type3"
                      ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)"
-                     ondrop="handleDrop(event, 'III')">
-                    <strong>Type III</strong> — high early mortality
+                     ondrop="handleDrop(event, 'III')" onclick="handleZoneClick('III')">
+                    <span class="zone-label">Type III — high early mortality</span>
                 </div>
             </div>
         </div>
+        <div class="organism-panel">
+            <div class="panel-title">Click or drag organisms to curves</div>
+            <div id="organism-pool"></div>
+        </div>
     </div>
     <div class="info-row" id="info-text">
-        Drag each organism to the survivorship curve type that best describes its life history strategy.
+        Click an organism, then click a curve zone — or drag and drop.
     </div>
 </div>
 <div id="return-link" style="display:none; padding: 8px 16px;">

@@ -3,10 +3,21 @@
 // alter the mRNA codon sequence and resulting amino acid chain
 
 let canvasWidth = 800;
-let drawHeight = 400;
-let controlHeight = 80;
+let drawHeight = 300;
+let controlHeight = 140;
 let canvasHeight = drawHeight + controlHeight;
-let sliderLeftMargin = 140;
+let canvas;
+let mutationButtons = {};
+let resetButton;
+const simTitle = 'Mutation Effects Comparator';
+const clusterPadding = 12;
+const clusterLabelHeight = 28;
+const buttonColumns = 3;
+const buttonColumnSpacing = 12;
+const controlButtonHeight = 34;
+let selectedBase = -1;
+let selectionFeedback = '';
+let feedbackTimer = 0; // frames remaining to show flash feedback
 
 // Original mRNA: AUG GCU UAC CGA AAC UGA
 // Encodes: Met-Ala-Tyr-Arg-Asn-Stop
@@ -48,6 +59,8 @@ let mutationType = null; // 'silent','missense','nonsense','insertion','deletion
 let mutationPos = -1;    // nucleotide position of mutation
 let mutantMRNA = [];
 let hoverBase = -1;
+let controlLayout = null;
+let needsRepositioning = true;
 
 const mutationTypes = [
     { id: 'silent', label: 'Silent', color: [100, 180, 100] },
@@ -59,8 +72,6 @@ const mutationTypes = [
 
 // Pre-computed mutation examples for each type at specific positions
 const silentSubs = {
-    // position: [original, replacement] that gives same AA
-    2: ['G','A'],   // AUG→AUA would change, so use position 5: GCU→GCC
     5: ['U','C'],   // GCU→GCC = Ala→Ala (silent)
     8: ['C','U'],   // UAC→UAU = Tyr→Tyr (silent)
     11:['A','G'],   // CGA→CGG = Arg→Arg (silent)
@@ -71,38 +82,34 @@ const missenseSubs = {
     3: ['G','A'],   // GCU→ACU = Ala→Thr
     4: ['C','A'],   // GCU→GAU = Ala→Asp
     6: ['U','G'],   // UAC→GAC = Tyr→Asp
-    9: ['C','U'],   // CGA→UGA = Arg→Stop (careful, this is nonsense)
     10:['G','A'],   // CGA→CAA = Arg→Gln
     12:['A','G'],   // AAC→GAC = Asn→Asp
 };
 
 const nonsenseSubs = {
-    3: ['G','U'],   // GCU→UCU... then reading frame: no, single sub
-    6: ['U','A'],   // UAC→AAC... no.
-    // UAC at pos 6,7,8 → change to UAA (stop)
-    8: ['C','A'],   // UAC→UAA = Tyr→Stop (nonsense!)
-    11:['A','U'],   // CGA→UGA... wait CGA is pos 9,10,11. pos 9='C', change C→U: UGA=Stop
+    8: ['C','A'],   // UAC→UAA = Tyr→Stop
+    9: ['C','U'],   // CGA→UGA... pos 9='C', change C→U: UGA=Stop
 };
 
 function applyMutation(type, pos) {
     mutantMRNA = [...originalMRNA];
+    let applied = false;
 
     if (type === 'silent') {
-        // Find nearest valid silent substitution
         let bestPos = findNearest(pos, Object.keys(silentSubs).map(Number));
         if (bestPos >= 0) {
             mutationPos = bestPos;
             mutantMRNA[bestPos] = silentSubs[bestPos][1];
+            applied = true;
         }
     } else if (type === 'missense') {
         let bestPos = findNearest(pos, Object.keys(missenseSubs).map(Number));
         if (bestPos >= 0) {
             mutationPos = bestPos;
             mutantMRNA[bestPos] = missenseSubs[bestPos][1];
+            applied = true;
         }
     } else if (type === 'nonsense') {
-        // Change UAC (pos 6,7,8) → UAA (pos 8: C→A)
-        // or CGA (pos 9,10,11) → UGA (pos 9: C→U)
         if (pos <= 8) {
             mutationPos = 8;
             mutantMRNA[8] = 'A'; // UAC→UAA = Stop
@@ -110,16 +117,22 @@ function applyMutation(type, pos) {
             mutationPos = 9;
             mutantMRNA[9] = 'U'; // CGA→UGA = Stop
         }
+        applied = true;
     } else if (type === 'insertion') {
-        // Insert a random base after the clicked position
         mutationPos = constrain(pos, 3, originalMRNA.length - 4);
         let inserted = ['A','U','G','C'][floor(random(4))];
         mutantMRNA.splice(mutationPos + 1, 0, inserted);
+        applied = true;
     } else if (type === 'deletion') {
-        // Delete the clicked base
         mutationPos = constrain(pos, 3, originalMRNA.length - 4);
         mutantMRNA.splice(mutationPos, 1);
+        applied = true;
     }
+
+    if (!applied) {
+        mutationPos = -1;
+    }
+    return applied;
 }
 
 function findNearest(pos, validPositions) {
@@ -150,38 +163,138 @@ function getAAColor(aa) {
     return aaColors[aa] || [180, 180, 180];
 }
 
+// Helper: get base layout info (shared by draw and mouse handling)
+function getBaseLayout() {
+    let marginX = 15;
+    let seqW = canvasWidth - 30;
+    let baseW = min(seqW / originalMRNA.length, 38);
+    return { marginX, baseW };
+}
+
 function updateCanvasSize() {
     let container = select('main');
     if (container) {
         let w = container.elt.getBoundingClientRect().width;
-        if (w > 50) canvasWidth = w;
+        if (w > 50) {
+            canvasWidth = w;
+        }
     }
 }
 
 function setup() {
     updateCanvasSize();
-    let canvas = createCanvas(canvasWidth, canvasHeight);
-    canvas.parent(select('main'));
-    textFont('Arial');
+    canvas = createCanvas(canvasWidth, canvasHeight);
+    const mainElement = select('main');
+    if (mainElement) {
+        canvas.parent(mainElement);
+    }
     mutantMRNA = [...originalMRNA];
+    createControlElements();
+    positionControls();
 }
 
 function draw() {
-    background('#F0F8FF');
+    // Do NOT change this code
+    fill('aliceblue');
+    stroke('silver');
+    strokeWeight(2);
+    rect(0, 0, canvasWidth, drawHeight);
+    fill('white');
+    rect(0, drawHeight, canvasWidth, controlHeight);
+    noStroke();
 
-    drawSequenceRow('Original mRNA:', originalMRNA, 55, false);
-    drawSequenceRow('Mutant mRNA:', mutantMRNA, 195, true);
-    drawMutationButtons();
-    drawInstructions();
+    drawTitleAndDirections();
+    drawStatusBar();
+    drawSequenceRow('Original mRNA:', originalMRNA, 90, false);
+    drawSequenceRow('Mutant mRNA:', mutantMRNA, 225, true);
+    drawControlRegion();
+
+    if (needsRepositioning) {
+        positionControls();
+        needsRepositioning = false;
+    }
+
+    if (feedbackTimer > 0) feedbackTimer--;
+
+    // Set cursor based on hover
+    if (hoverBase >= 0) {
+        cursor(HAND);
+    } else {
+        cursor(ARROW);
+    }
+}
+
+function drawTitleAndDirections() {
+    fill(35);
+    textAlign(CENTER, TOP);
+    textStyle(BOLD);
+    textSize(20);
+    text(simTitle, canvasWidth / 2, 8);
+    textStyle(NORMAL);
+}
+
+// Prominent status bar between title and sequences
+function drawStatusBar() {
+    let barY = 32;
+    let barH = 24;
+    let barX = 15;
+    let barW = canvasWidth - 30;
+
+    // Background color depends on state
+    if (feedbackTimer > 0 && selectionFeedback.includes('cannot')) {
+        // Error flash - red tint
+        fill(255, 220, 220);
+        stroke(231, 76, 60);
+    } else if (mutationType && mutationPos >= 0) {
+        // Mutation applied - green tint
+        fill(220, 255, 220);
+        stroke(46, 204, 113);
+    } else if (mutationType) {
+        // Type selected, waiting for click - amber tint
+        fill(255, 248, 220);
+        stroke(241, 196, 15);
+    } else {
+        // Nothing selected - neutral
+        fill(235, 240, 250);
+        stroke(180, 190, 210);
+    }
+
+    strokeWeight(1);
+    rect(barX, barY, barW, barH, 5);
+
+    // Status text
+    noStroke();
+    textSize(12);
+    textAlign(LEFT, CENTER);
+
+    if (feedbackTimer > 0 && selectionFeedback) {
+        fill(180, 30, 30);
+        textStyle(BOLD);
+        text(selectionFeedback, barX + 10, barY + barH / 2);
+        textStyle(NORMAL);
+    } else if (mutationType && mutationPos >= 0) {
+        fill(20, 100, 40);
+        text(getMutationDescription(), barX + 10, barY + barH / 2);
+    } else if (mutationType) {
+        fill(140, 100, 0);
+        textStyle(BOLD);
+        let arrow = '  \u25B6 ';  // ▶
+        text(mutationTypes.find(m => m.id === mutationType).label +
+             ' selected.' + arrow + 'Click a nucleotide in the Original mRNA row above.',
+             barX + 10, barY + barH / 2);
+        textStyle(NORMAL);
+    } else {
+        fill(80);
+        text('Step 1: Select a mutation type below.   Step 2: Click a nucleotide in the Original mRNA row.',
+             barX + 10, barY + barH / 2);
+    }
 }
 
 function drawSequenceRow(label, bases, topY, isMutant) {
     let origAAs = translateSequence(originalMRNA);
     let aas = translateSequence(bases);
 
-    let marginX = 15;
-    let seqW = canvasWidth - 30;
-    let baseW = min(seqW / max(bases.length, originalMRNA.length), 38);
+    let { marginX, baseW } = getBaseLayout();
     let startX = marginX;
 
     // Label
@@ -219,7 +332,7 @@ function drawSequenceRow(label, bases, topY, isMutant) {
         if (isMutant && mutationType) {
             if (mutationType === 'insertion') {
                 if (i === mutationPos + 1) isChanged = true;
-                else if (i > mutationPos + 1 && i < bases.length) isChanged = true; // frameshift
+                else if (i > mutationPos + 1 && i < bases.length) isChanged = true;
             } else if (mutationType === 'deletion') {
                 if (i >= mutationPos) isChanged = true;
             } else {
@@ -239,11 +352,28 @@ function drawSequenceRow(label, bases, topY, isMutant) {
             rect(bx - baseW / 2 + 1, by - 2, baseW - 2, 24, 2);
         }
 
-        // Hover highlight for original row
-        if (!isMutant && mutationType && i === hoverBase) {
-            fill(255, 255, 100, 120);
+        // Hover highlight on original row — always active so bases look clickable
+        if (!isMutant && i === hoverBase) {
+            if (i < 3) {
+                // Start codon — show red tint to indicate non-clickable
+                fill(255, 200, 200, 150);
+            } else {
+                fill(255, 255, 100, 150);
+            }
             noStroke();
             rect(bx - baseW / 2 + 1, by - 2, baseW - 2, 24, 2);
+        }
+
+        // Selected base highlight — filled background, not just outline
+        if (!isMutant && selectedBase === i) {
+            fill(100, 160, 255, 80);
+            noStroke();
+            rect(bx - baseW / 2 + 1, by - 2, baseW - 2, 24, 2);
+            stroke(30, 90, 200);
+            strokeWeight(2.5);
+            noFill();
+            rect(bx - baseW / 2 + 1, by - 2, baseW - 2, 24, 3);
+            strokeWeight(1);
         }
 
         // Base letter
@@ -264,10 +394,8 @@ function drawSequenceRow(label, bases, topY, isMutant) {
         let ax = startX + 14 + entry.startIdx * baseW;
         let aw = baseW * 3;
 
-        // Check if this AA differs from original
         let origAA = j < origAAs.length ? origAAs[j].aa : null;
         let changed = isMutant && mutationType && entry.aa !== origAA;
-        let isFrameshifted = isMutant && mutationType && (mutationType === 'insertion' || mutationType === 'deletion');
 
         // AA background
         let col = getAAColor(entry.aa);
@@ -303,7 +431,6 @@ function drawSequenceRow(label, bases, topY, isMutant) {
 
         // Strike-through downstream AAs after premature stop
         if (isMutant && entry.aa === 'Stop' && j < origAAs.length - 1) {
-            // Show grayed-out remaining original AAs
             for (let k = j + 1; k < origAAs.length; k++) {
                 let gx = startX + 14 + k * 3 * baseW;
                 fill(200, 200, 200, 100);
@@ -313,7 +440,6 @@ function drawSequenceRow(label, bases, topY, isMutant) {
                 fill(180);
                 textSize(constrain(baseW * 0.5, 9, 12));
                 textAlign(CENTER, CENTER);
-                // Strikethrough
                 let origName = origAAs[k].aa;
                 text(origName, gx + baseW, aaY + 11);
                 stroke(150);
@@ -325,106 +451,87 @@ function drawSequenceRow(label, bases, topY, isMutant) {
     }
 
     // Frameshift warning
+    let isFrameshifted = isMutant && mutationType && (mutationType === 'insertion' || mutationType === 'deletion');
     if (isMutant && isFrameshifted && mutationType) {
         fill(231, 76, 60);
         textSize(11);
         textAlign(LEFT, CENTER);
         noStroke();
         textStyle(BOLD);
-        text('⚠ FRAMESHIFT — all downstream codons altered', startX, aaY + 45);
+        text('FRAMESHIFT — all downstream codons altered', startX, aaY + 45);
         textStyle(NORMAL);
     }
 }
 
-function drawMutationButtons() {
-    let cy = drawHeight + 8;
-    let btnW = constrain((canvasWidth - 60) / 6, 70, 110);
-    let btnH = 30;
-    let startX = 10;
+function drawControlRegion() {
+    controlLayout = getControlLayout();
+    const regionTop = controlLayout.regionTop;
+    noStroke();
+    fill('#ffffff');
+    rect(0, regionTop, canvasWidth, controlHeight);
+
+    // Button cluster background
+    fill(233, 241, 255);
+    rect(controlLayout.clusterLeft, controlLayout.clusterTop, controlLayout.clusterWidth, controlHeight - 32, 10);
+    fill(55);
+    textAlign(LEFT, TOP);
+    textStyle(BOLD);
+    textSize(13);
+    text('Mutation Types', controlLayout.clusterLeft + clusterPadding, controlLayout.clusterTop + 6);
+    textStyle(NORMAL);
+
+    // Instruction panel background
+    fill(245, 249, 255);
+    rect(controlLayout.infoLeft, controlLayout.infoTop, controlLayout.infoWidth, controlHeight - 32, 10);
+
+    drawInstructionPanel(controlLayout.infoLeft, controlLayout.infoTop + 8, controlLayout.infoWidth);
+}
+
+function drawInstructionPanel(x, y, panelWidth) {
+    const summary = 'Original protein: Met-Ala-Tyr-Arg-Asn-Stop\nmRNA: AUG GCU UAC CGA AAC UGA';
 
     fill(60);
-    noStroke();
-    textSize(11);
-    textAlign(LEFT, CENTER);
-    text('Mutation type:', startX, cy + btnH / 2);
-
-    let bx = startX + 95;
-
-    for (let i = 0; i < mutationTypes.length; i++) {
-        let mt = mutationTypes[i];
-        let isActive = mutationType === mt.id;
-
-        if (isActive) {
-            fill(mt.color[0], mt.color[1], mt.color[2]);
-        } else {
-            fill(220);
-        }
-        stroke(150);
-        strokeWeight(1);
-        rect(bx, cy, btnW, btnH, 6);
-
-        fill(isActive ? 255 : 60);
-        noStroke();
-        textSize(constrain(btnW * 0.13, 9, 11));
-        textAlign(CENTER, CENTER);
-        text(mt.label, bx + btnW / 2, cy + btnH / 2);
-
-        bx += btnW + 5;
-    }
-
-    // Reset button
-    fill(180, 60, 60);
-    stroke(150);
-    strokeWeight(1);
-    rect(bx, cy, 55, btnH, 6);
-    fill(255);
-    noStroke();
-    textSize(11);
-    textAlign(CENTER, CENTER);
-    text('Reset', bx + 27, cy + btnH / 2);
-
-    // Instructions
-    drawControlInstructions(cy + btnH + 8);
-}
-
-function drawControlInstructions(y) {
-    fill(100);
-    noStroke();
-    textSize(10);
-    textAlign(LEFT, CENTER);
-
-    if (!mutationType) {
-        text('Select a mutation type above, then click a nucleotide in the original sequence to place the mutation.', 15, y + 8);
-    } else if (mutationPos < 0) {
-        text('Now click a nucleotide position in the original mRNA sequence (top row) to place the mutation.', 15, y + 8);
-    } else {
-        let desc = getMutationDescription();
-        text(desc, 15, y + 8);
-    }
-
-    // Sequence summary
-    let summY = y + 24;
+    textSize(12);
+    textAlign(LEFT, TOP);
+    textStyle(BOLD);
+    text('Sequence Summary', x + 12, y);
+    textStyle(NORMAL);
     fill(80);
     textSize(10);
-    text('Original: Met-Ala-Tyr-Arg-Asn-Stop    |    mRNA: AUG GCU UAC CGA AAC UGA', 15, summY);
+    text(summary, x + 12, y + 18, panelWidth - 24, 40);
+
+    // Current state
+    fill(60);
+    textSize(12);
+    textStyle(BOLD);
+    text('Status', x + 12, y + 54);
+    textStyle(NORMAL);
+    fill(70);
+    textSize(11);
+    let statusText = getStatusText();
+    text(statusText, x + 12, y + 72, panelWidth - 24, 60);
 }
 
-function drawInstructions() {
-    // No separate instructions needed — integrated into controls
+function getStatusText() {
+    if (mutationType && mutationPos >= 0) {
+        return getMutationDescription();
+    }
+    if (mutationType) {
+        return 'Mutation type selected: ' + mutationTypes.find(m => m.id === mutationType).label +
+               '. Click a nucleotide in the original mRNA.';
+    }
+    return 'Select a mutation type, then click a nucleotide to see the effect.';
 }
 
 function getMutationDescription() {
     if (!mutationType || mutationPos < 0) return '';
 
-    let orig = originalMRNA[mutationPos];
-    let mut = mutationPos < mutantMRNA.length ? mutantMRNA[mutationPos] : '—';
-
     if (mutationType === 'silent') {
-        return `Silent mutation: ${orig}→${mutantMRNA[mutationPos]} at position ${mutationPos + 1}. Codon changed but amino acid remains the same.`;
+        return `Silent mutation: ${originalMRNA[mutationPos]}→${mutantMRNA[mutationPos]} at position ${mutationPos + 1}. Codon changed but amino acid remains the same.`;
     } else if (mutationType === 'missense') {
-        return `Missense mutation: ${orig}→${mutantMRNA[mutationPos]} at position ${mutationPos + 1}. One amino acid changed to a different amino acid.`;
+        return `Missense mutation: ${originalMRNA[mutationPos]}→${mutantMRNA[mutationPos]} at position ${mutationPos + 1}. One amino acid changed to a different amino acid.`;
     } else if (mutationType === 'nonsense') {
-        return `Nonsense mutation: ${orig}→${mutantMRNA[mutationPos]} at position ${mutationPos + 1}. Creates a premature stop codon — protein is truncated.`;
+        return `Nonsense mutation: ${originalMRNA[mutationPos]}→${mutantMRNA[mutationPos]} at position ${mutationPos + 1}. Creates a premature stop codon — protein is truncated.`;
     } else if (mutationType === 'insertion') {
         return `Insertion at position ${mutationPos + 1}: extra base added. All downstream codons shift — frameshift mutation.`;
     } else if (mutationType === 'deletion') {
@@ -433,73 +540,195 @@ function getMutationDescription() {
     return '';
 }
 
-function mousePressed() {
-    // Check mutation type buttons
-    let cy = drawHeight + 8;
-    let btnW = constrain((canvasWidth - 60) / 6, 70, 110);
-    let btnH = 30;
-    let bx = 10 + 95;
+// Hit-test a base in the original mRNA row
+function hitTestBase(mx, my) {
+    let { marginX, baseW } = getBaseLayout();
+    let topY = 90;
+    for (let i = 0; i < originalMRNA.length; i++) {
+        let bxPos = marginX + 14 + i * baseW;
+        if (mx >= bxPos - baseW / 2 && mx <= bxPos + baseW / 2 &&
+            my >= topY - 4 && my <= topY + 26) {
+            return i;
+        }
+    }
+    return -1;
+}
 
-    for (let i = 0; i < mutationTypes.length; i++) {
-        if (mouseX >= bx && mouseX <= bx + btnW &&
-            mouseY >= cy && mouseY <= cy + btnH) {
-            mutationType = mutationTypes[i].id;
-            mutationPos = -1;
-            mutantMRNA = [...originalMRNA];
+function mousePressed() {
+    let clickedBase = hitTestBase(mouseX, mouseY);
+
+    if (clickedBase >= 0) {
+        // Clicked a nucleotide
+        if (!mutationType) {
+            selectionFeedback = 'Select a mutation type first (buttons below), then click a nucleotide.';
+            feedbackTimer = 120; // ~2 seconds at 60fps
+            selectedBase = clickedBase;
             return;
         }
-        bx += btnW + 5;
-    }
 
-    // Reset button
-    if (mouseX >= bx && mouseX <= bx + 55 &&
-        mouseY >= cy && mouseY <= cy + btnH) {
-        mutationType = null;
-        mutationPos = -1;
-        mutantMRNA = [...originalMRNA];
+        if (clickedBase < 3) {
+            selectedBase = clickedBase;
+            selectionFeedback = 'Start codon (AUG) cannot be mutated. Click a downstream nucleotide (position 4+).';
+            feedbackTimer = 120;
+            return;
+        }
+
+        const wasApplied = applyMutation(mutationType, clickedBase);
+        if (wasApplied) {
+            selectedBase = mutationPos;
+            selectionFeedback = getMutationDescription();
+            feedbackTimer = 0; // clear flash since this is success
+        } else {
+            selectedBase = clickedBase;
+            selectionFeedback = 'No valid substitution at that position for this mutation type. Try a nearby base.';
+            feedbackTimer = 120;
+        }
         return;
     }
 
-    // Click on original sequence to place mutation
-    if (mutationType && mutationPos < 0) {
-        let marginX = 15;
-        let seqW = canvasWidth - 30;
-        let baseW = min(seqW / originalMRNA.length, 38);
-        let topY = 55;
-
-        for (let i = 0; i < originalMRNA.length; i++) {
-            let bxPos = marginX + 14 + i * baseW;
-            if (mouseX >= bxPos - baseW / 2 && mouseX <= bxPos + baseW / 2 &&
-                mouseY >= topY - 2 && mouseY <= topY + 24) {
-                // Don't allow mutation at start codon positions 0,1,2
-                if (i < 3) continue;
-                applyMutation(mutationType, i);
-                return;
-            }
-        }
-    }
+    // Did not click a nucleotide — let other handlers (buttons) work
 }
 
 function mouseMoved() {
-    hoverBase = -1;
-    if (mutationType && mutationPos < 0) {
-        let marginX = 15;
-        let seqW = canvasWidth - 30;
-        let baseW = min(seqW / originalMRNA.length, 38);
-        let topY = 55;
-
-        for (let i = 0; i < originalMRNA.length; i++) {
-            let bxPos = marginX + 14 + i * baseW;
-            if (mouseX >= bxPos - baseW / 2 && mouseX <= bxPos + baseW / 2 &&
-                mouseY >= topY - 2 && mouseY <= topY + 24) {
-                if (i >= 3) hoverBase = i;
-                break;
-            }
-        }
-    }
+    // Always detect hover over original mRNA bases (not just when mutation type selected)
+    hoverBase = hitTestBase(mouseX, mouseY);
 }
 
 function windowResized() {
     updateCanvasSize();
     resizeCanvas(canvasWidth, canvasHeight);
+    needsRepositioning = true;
+}
+
+function createControlElements() {
+    const container = document.querySelector('main');
+    if (!container) return;
+    mutationButtons = {};
+
+    mutationTypes.forEach(mt => {
+        const btn = createButton(mt.label);
+        btn.parent(container);
+        btn.mousePressed(() => handleMutationSelection(mt.id));
+        btn.style('background-color', `rgb(${mt.color[0]}, ${mt.color[1]}, ${mt.color[2]})`);
+        btn.style('color', '#ffffff');
+        btn.style('border', 'none');
+        btn.style('border-radius', '6px');
+        btn.style('padding', '8px 12px');
+        btn.style('cursor', 'pointer');
+        btn.style('font-weight', 'bold');
+        btn.style('font-size', '12px');
+        btn.style('position', 'absolute');
+        btn.style('z-index', '5');
+        mutationButtons[mt.id] = btn;
+    });
+
+    resetButton = createButton('Reset');
+    resetButton.parent(container);
+    resetButton.mousePressed(resetSimulation);
+    resetButton.style('background-color', '#d9485d');
+    resetButton.style('color', '#ffffff');
+    resetButton.style('border', 'none');
+    resetButton.style('border-radius', '6px');
+    resetButton.style('padding', '8px 12px');
+    resetButton.style('cursor', 'pointer');
+    resetButton.style('font-weight', 'bold');
+    resetButton.style('font-size', '12px');
+    resetButton.style('position', 'absolute');
+    resetButton.style('z-index', '5');
+
+    updateButtonStates();
+}
+
+function positionControls() {
+    if (!canvas) return;
+    controlLayout = getControlLayout();
+
+    // Buttons are position:absolute inside <main>, so coordinates are relative to <main>.
+    // Canvas is at top of <main>, so canvas-relative coords work directly.
+    const clusterInnerWidth = controlLayout.clusterWidth - clusterPadding * 2;
+    const buttonWidth = (clusterInnerWidth - buttonColumnSpacing * (buttonColumns - 1)) / buttonColumns;
+    const baseX = controlLayout.clusterLeft + clusterPadding;
+    const baseY = controlLayout.clusterTop + clusterPadding + clusterLabelHeight;
+
+    mutationTypes.forEach((mt, index) => {
+        const btn = mutationButtons[mt.id];
+        if (!btn) return;
+        const row = floor(index / buttonColumns);
+        const col = index % buttonColumns;
+        const x = baseX + col * (buttonWidth + buttonColumnSpacing);
+        const y = baseY + row * (controlButtonHeight + 12);
+        btn.position(x, y);
+        btn.size(buttonWidth, controlButtonHeight);
+    });
+
+    if (resetButton) {
+        const resetX = baseX + (buttonColumns - 1) * (buttonWidth + buttonColumnSpacing);
+        const resetY = baseY + controlButtonHeight + 12;
+        resetButton.position(resetX, resetY);
+        resetButton.size(buttonWidth, controlButtonHeight);
+    }
+}
+
+function getControlLayout() {
+    const regionTop = drawHeight;
+    const pad = 16;
+    const available = canvasWidth - pad * 3;
+    let clusterWidth = available * 0.62;
+    let infoWidth = available - clusterWidth;
+
+    if (infoWidth < 150) {
+        infoWidth = 150;
+        clusterWidth = available - infoWidth;
+    }
+
+    if (clusterWidth < 230) {
+        clusterWidth = 230;
+        infoWidth = available - clusterWidth;
+    }
+
+    return {
+        regionTop,
+        pad,
+        clusterLeft: pad,
+        clusterTop: regionTop + 14,
+        clusterWidth,
+        infoLeft: pad * 2 + clusterWidth,
+        infoTop: regionTop + 14,
+        infoWidth
+    };
+}
+
+function handleMutationSelection(selectedType) {
+    mutationType = selectedType;
+    mutationPos = -1;
+    mutantMRNA = [...originalMRNA];
+    selectedBase = -1;
+    selectionFeedback = '';
+    feedbackTimer = 0;
+    updateButtonStates();
+}
+
+function resetSimulation() {
+    mutationType = null;
+    mutationPos = -1;
+    mutantMRNA = [...originalMRNA];
+    selectedBase = -1;
+    selectionFeedback = '';
+    feedbackTimer = 0;
+    updateButtonStates();
+}
+
+function updateButtonStates() {
+    Object.keys(mutationButtons).forEach(id => {
+        const btn = mutationButtons[id];
+        if (!btn) return;
+        const isActive = mutationType === id;
+        btn.style('opacity', isActive ? '1' : '0.85');
+        btn.style('box-shadow', isActive ? '0 0 0 3px rgba(30, 41, 59, 0.5)' : 'none');
+        btn.style('transform', isActive ? 'scale(1.05)' : 'scale(1)');
+    });
+
+    if (resetButton) {
+        resetButton.style('opacity', mutationType === null ? '0.9' : '1');
+    }
 }

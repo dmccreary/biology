@@ -7,6 +7,7 @@ let drawHeight = 380;
 let controlHeight = 100;
 let canvasHeight = drawHeight + controlHeight;
 let sliderLeftMargin = 130;
+const buttonXOffset = 150;
 
 // Parameters
 let popSize = 50;
@@ -26,6 +27,7 @@ let losses = 0;
 
 // Sliders
 let popSlider, pSlider, genSlider, trialSlider;
+let runButton, instantButton, clearButton, bottleneckButton;
 
 // Use power curve for population size slider (logarithmic feel)
 function popSliderToValue(v) {
@@ -79,6 +81,23 @@ function setup() {
     trialSlider.style('width', '140px');
     trialSlider.position(sliderLeftMargin + 200, drawHeight + 12);
 
+    // Control buttons
+    runButton = createControlButton('▶ Run', '#2ECC71', 70, 30, () => {
+        runSimulation();
+    });
+    instantButton = createControlButton('Instant', '#3498DB', 70, 30, () => {
+        runInstant();
+    });
+    clearButton = createControlButton('Clear', '#C86464', 55, 30, () => {
+        clearSimulation();
+    });
+    bottleneckButton = createControlButton('Bottleneck', '#E67E22', 80, 30, () => {
+        if (trials.length > 0 && !isRunning) {
+            applyBottleneck();
+        }
+    });
+    positionButtons();
+
     updateParams();
 }
 
@@ -108,7 +127,8 @@ function draw() {
     drawChart();
     drawSummary();
     drawControlLabels();
-    drawButtons();
+    updateButtonStates();
+    drawStatusText();
 }
 
 function advanceOneGeneration() {
@@ -354,116 +374,18 @@ function drawControlLabels() {
     text(`Trials (${numTrials}):`, sliderLeftMargin + 195, cy + 22);
 }
 
-function drawButtons() {
-    let cy = drawHeight + 38;
-    let bx = sliderLeftMargin + 340;
-    let btnW = 70;
-    let btnH = 28;
-
-    // Run (animated)
-    fill(46, 204, 113);
-    stroke(80);
-    strokeWeight(1);
-    rect(bx, cy, btnW, btnH, 6);
-    fill(255);
-    noStroke();
-    textSize(12);
-    textAlign(CENTER, CENTER);
-    text('▶ Run', bx + btnW / 2, cy + btnH / 2);
-
-    // Instant
-    bx += btnW + 8;
-    fill(52, 152, 219);
-    stroke(80);
-    strokeWeight(1);
-    rect(bx, cy, btnW, btnH, 6);
-    fill(255);
-    noStroke();
-    textSize(11);
-    textAlign(CENTER, CENTER);
-    text('Instant', bx + btnW / 2, cy + btnH / 2);
-
-    // Clear
-    bx += btnW + 8;
-    fill(200, 100, 100);
-    stroke(80);
-    strokeWeight(1);
-    rect(bx, cy, 55, btnH, 6);
-    fill(255);
-    noStroke();
-    textSize(11);
-    textAlign(CENTER, CENTER);
-    text('Clear', bx + 27, cy + btnH / 2);
-
-    // Bottleneck button
-    bx += 63;
-    let bottleAvail = trials.length > 0 && !isRunning;
-    fill(bottleAvail ? [230, 126, 34] : [200, 200, 200]);
-    stroke(80);
-    strokeWeight(1);
-    rect(bx, cy, 80, btnH, 6);
-    fill(bottleAvail ? 255 : 150);
-    noStroke();
-    textSize(10);
-    textAlign(CENTER, CENTER);
-    text('Bottleneck', bx + 40, cy + btnH / 2);
-
-    // Status
+function drawStatusText() {
+    let statusX = sliderLeftMargin + buttonXOffset;
+    let statusY = drawHeight + 80;
     fill(100);
     textSize(9);
     textAlign(LEFT, CENTER);
-    let statusX = sliderLeftMargin + 340;
-    let statusY = cy + btnH + 14;
     if (isRunning) {
         text(`Running... generation ${currentGen}/${numGenerations}`, statusX, statusY);
     } else if (trials.length > 0) {
         text(`Complete. ${numTrials} trials × ${numGenerations} generations, N=${popSize}`, statusX, statusY);
     } else {
         text('Adjust parameters, then click Run or Instant.', statusX, statusY);
-    }
-}
-
-function mousePressed() {
-    let cy = drawHeight + 38;
-    let bx = sliderLeftMargin + 340;
-    let btnW = 70;
-    let btnH = 28;
-
-    // Run button
-    if (mouseX >= bx && mouseX <= bx + btnW &&
-        mouseY >= cy && mouseY <= cy + btnH) {
-        runSimulation();
-        return;
-    }
-
-    // Instant button
-    bx += btnW + 8;
-    if (mouseX >= bx && mouseX <= bx + btnW &&
-        mouseY >= cy && mouseY <= cy + btnH) {
-        runInstant();
-        return;
-    }
-
-    // Clear button
-    bx += btnW + 8;
-    if (mouseX >= bx && mouseX <= bx + 55 &&
-        mouseY >= cy && mouseY <= cy + btnH) {
-        trials = [];
-        isRunning = false;
-        currentGen = 0;
-        fixations = 0;
-        losses = 0;
-        return;
-    }
-
-    // Bottleneck button
-    bx += 63;
-    if (mouseX >= bx && mouseX <= bx + 80 &&
-        mouseY >= cy && mouseY <= cy + btnH) {
-        if (trials.length > 0 && !isRunning) {
-            applyBottleneck();
-        }
-        return;
     }
 }
 
@@ -515,4 +437,50 @@ function windowResized() {
     pSlider.position(sliderLeftMargin, drawHeight + 38);
     genSlider.position(sliderLeftMargin, drawHeight + 64);
     trialSlider.position(sliderLeftMargin + 200, drawHeight + 12);
+    positionButtons();
+}
+
+function positionButtons() {
+    if (!runButton) return;
+    let baseX = sliderLeftMargin + buttonXOffset;
+    let btnY = drawHeight + 32;
+    runButton.position(baseX, btnY);
+    instantButton.position(baseX + 78, btnY);
+    clearButton.position(baseX + 156, btnY);
+    bottleneckButton.position(baseX + 219, btnY);
+}
+
+function createControlButton(label, bgColor, width, height, handler) {
+    let container = select('main');
+    let btn = createButton(label);
+    btn.parent(container);
+    btn.style('background-color', bgColor);
+    btn.style('color', '#FFFFFF');
+    btn.style('border', '1px solid #555555');
+    btn.style('border-radius', '6px');
+    btn.style('cursor', 'pointer');
+    btn.size(width, height);
+    btn.mousePressed(handler);
+    return btn;
+}
+
+function updateButtonStates() {
+    if (!bottleneckButton) return;
+    if (trials.length > 0 && !isRunning) {
+        bottleneckButton.removeAttribute('disabled');
+        bottleneckButton.style('opacity', '1');
+        bottleneckButton.style('cursor', 'pointer');
+    } else {
+        bottleneckButton.attribute('disabled', '');
+        bottleneckButton.style('opacity', '0.5');
+        bottleneckButton.style('cursor', 'not-allowed');
+    }
+}
+
+function clearSimulation() {
+    trials = [];
+    isRunning = false;
+    currentGen = 0;
+    fixations = 0;
+    losses = 0;
 }

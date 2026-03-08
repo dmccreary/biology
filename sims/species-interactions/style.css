@@ -70,12 +70,12 @@ body {
     margin-right: 6px;
 }
 
-/* Right Panel */
+/* Right Info Panel */
 .right-panel {
     position: absolute;
     top: 50px;
     right: 10px;
-    width: 260px;
+    width: 170px;
     display: flex;
     flex-direction: column;
     gap: 8px;
