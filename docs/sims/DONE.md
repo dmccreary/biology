@@ -4,6 +4,10 @@
 
 These MicroSims have been fully implemented with substantial JavaScript or shared-libs overlays.
 
+### MicroSim Scaffolding Note
+
+All 79 MicroSim directories under `docs/sims/` have scaffolding in place (`main.html`, `index.md`, `metadata.json`). To determine whether a MicroSim is actually **complete**, check for a substantial JavaScript file (e.g., `<sim-name>.js`) in the sim directory. If the directory has no `.js` file, or only a skeleton, the sim still needs to be implemented. The TODO list in `docs/sims/TODO.md` tracks which sims need JS implementation.
+
 ---
 
 ## camp-signaling-cascade

@@ -131,7 +131,7 @@ function draw() {
     drawDataPanel(15, 35, rfAB, rfBC, rfAC);
 
     // Draw results table (center)
-    drawResultsTable(canvasWidth * 0.38, 35, rfAB, rfBC, rfAC, order, distances);
+    drawResultsTable(canvasWidth * 0.38 + 50, 35, rfAB, rfBC, rfAC, order, distances);
 
     // Draw chromosome map (right side and bottom)
     drawChromosomeMap(margin + 10, 290, canvasWidth - 2 * margin - 20, order, distances, totalDist);

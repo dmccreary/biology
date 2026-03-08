@@ -52,3 +52,7 @@ Always use the /microsim-generator skill to implement these Microsims
 @docs/sims/species-interactions/ has no visual feedback in the quiz mode
 
 @docs/sims/cladogram-builder/ has UI and logic issues
+
+@docs/sims/mutation-effects/ should provide a model window when the user has an error in the deletion of an item
+
+

@@ -1,3 +1,4 @@
+---
 title: Osmosis and Water Potential Simulator
 description: Interactive p5.js MicroSim for osmosis and water potential simulator.
 image: /sims/osmosis-simulator/osmosis-simulator.png
