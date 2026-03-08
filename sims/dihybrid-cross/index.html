@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive Chart.js MicroSim for dihybrid cross outcome visualizer.">
+        <meta name="description" content="Interactive Chart.js MicroSim showing a 4x4 Punnett square and phenotype bar chart for dihybrid crosses with configurable parent genotypes.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Dihybrid Cross Outcome Visualizer - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive Chart.js MicroSim for dihybrid cross outcome visualizer.">
+        <meta property="og:description" content="Interactive Chart.js MicroSim showing a 4x4 Punnett square and phenotype bar chart for dihybrid crosses with configurable parent genotypes.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/dihybrid-cross/dihybrid-cross.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Dihybrid Cross Outcome Visualizer - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive Chart.js MicroSim for dihybrid cross outcome visualizer.">
+        <meta name="twitter:description" content="Interactive Chart.js MicroSim showing a 4x4 Punnett square and phenotype bar chart for dihybrid crosses with configurable parent genotypes.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/dihybrid-cross/dihybrid-cross.png">
       
@@ -438,6 +438,12 @@
       
         
           
+        
+      
+        
+      
+        
+      
         
       
         
@@ -1371,15 +1377,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lesson-plan" class="md-nav__link">
     <span class="md-ellipsis">
       Lesson Plan
@@ -1716,9 +1713,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../fermentation-pathways/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../fermentation-pathways/" class="md-nav__link">
+      
   
   
   <span class="md-ellipsis">
@@ -1727,7 +1747,13 @@
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -2745,6 +2771,75 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TODO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim TODO Tracker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DONE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim Completion Log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared-libs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared MicroSim Libraries README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2763,6 +2858,8 @@
       
         
           
+        
+      
         
       
         
@@ -2818,6 +2915,14 @@
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -2947,6 +3052,18 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -3050,15 +3167,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lesson-plan" class="md-nav__link">
     <span class="md-ellipsis">
       Lesson Plan
@@ -3152,43 +3260,48 @@
 
 
 <h1 id="dihybrid-cross-outcome-visualizer">Dihybrid Cross Outcome Visualizer</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="470" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Dihybrid Cross Outcome Visualizer MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">Run the Dihybrid Cross Outcome Visualizer MicroSim Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim lets students explore dihybrid crosses using two classic pea plant traits: seed shape (Round vs. Wrinkled, alleles R/r) and seed color (Yellow vs. Green, alleles Y/y). A 4x4 Punnett square shows all 16 offspring genotypes alongside a bar chart displaying phenotype counts, reinforcing the connection between the grid method and the expected 9:3:3:1 ratio.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
-<h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
-<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/dihybrid-cross/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
-        <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
-        <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li><strong>Select parent genotypes</strong> using the dropdown menus for each locus (e.g., Rr x Rr, YY x Yy)</li>
+<li><strong>Read the Punnett square</strong> to see all 16 offspring combinations</li>
+<li><strong>Toggle</strong> between genotype and phenotype views using the button</li>
+<li><strong>Click a bar</strong> in the chart to highlight all matching cells in the Punnett square</li>
+<li><strong>Hover over bars</strong> to see exact counts and percentages</li>
+<li><strong>Observe the ratio</strong> in the summary line below the chart</li>
+</ol>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>9-12 (AP Biology)</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of dominant and recessive alleles</li>
+<li>Familiarity with monohybrid crosses and Punnett squares</li>
+<li>Knowledge of Mendel's Law of Segregation</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Set both parents to heterozygous (RrYy x RrYy) and observe the classic 9:3:3:1 ratio. Toggle between genotype and phenotype views.</li>
+<li><strong>Guided Practice</strong> (5 min): Change one parent to homozygous dominant (RRYY) and predict the outcome before looking. Try other combinations and compare ratios.</li>
+<li><strong>Assessment</strong> (5 min): Given a specific ratio outcome, work backward to determine what the parent genotypes must have been.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Can the student predict the phenotypic ratio before changing parent genotypes?</li>
+<li>Can the student explain why the 9:3:3:1 ratio only appears with two heterozygous parents?</li>
+<li>Can the student identify which genotypes produce each phenotype category?</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Mendelian_inheritance">Mendel's Laws of Inheritance - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Dihybrid_cross">Dihybrid Cross - Wikipedia</a></li>
+<li><a href="https://www.chartjs.org/docs/latest/">Chart.js Documentation</a></li>
 </ol>
 
 

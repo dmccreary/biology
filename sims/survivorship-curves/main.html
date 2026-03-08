@@ -4,16 +4,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
-    <title>Survivorship Curves Comparator using Chart.js</title>
-    <style>
-        body { margin: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif; }
-    </style>
+    <title>Survivorship Curves Comparator</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
-    <script src="survivorship-curves.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: aliceblue;
+            user-select: none;
+        }
+        .container {
+            max-width: 100%;
+            padding: 6px 10px;
+        }
+        .controls {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 4px;
+        }
+        .action-btn {
+            padding: 5px 14px;
+            border: 1px solid #999;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+        .reset-btn { background: #95a5a6; color: white; border-color: #7f8c8d; }
+        .reset-btn:hover { background: #7f8c8d; }
+        .hint-btn { background: #f39c12; color: white; border-color: #e67e22; }
+        .hint-btn:hover { background: #e67e22; }
+        .hint-btn.active { background: #d35400; }
+        .score-display {
+            font-size: 13px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-left: auto;
+        }
+        .main-area {
+            display: flex;
+            gap: 10px;
+        }
+        .chart-container {
+            flex: 1;
+            position: relative;
+            height: 350px;
+            min-width: 0;
+        }
+        .organism-panel {
+            width: 180px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .panel-title {
+            font-size: 12px;
+            font-weight: bold;
+            color: #555;
+            text-align: center;
+            margin-bottom: 2px;
+        }
+        .organism-chip {
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: grab;
+            text-align: center;
+            transition: all 0.2s;
+            border: 2px solid #ccc;
+            background: white;
+        }
+        .organism-chip:hover { transform: scale(1.03); box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+        .organism-chip.dragging { opacity: 0.5; cursor: grabbing; }
+        .organism-chip.correct { background: #d5f5e3; border-color: #27ae60; color: #1e8449; }
+        .organism-chip.incorrect { background: #fadbd8; border-color: #e74c3c; color: #c0392b; }
+        .organism-chip.placed { opacity: 0.4; cursor: default; }
+        .drop-zones {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-top: 8px;
+        }
+        .drop-zone {
+            padding: 8px;
+            border: 2px dashed #bbb;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 11px;
+            color: #888;
+            min-height: 28px;
+            transition: all 0.2s;
+        }
+        .drop-zone.drag-over { border-color: #3498db; background: rgba(52,152,219,0.1); }
+        .drop-zone-type1 { border-color: #3498db; }
+        .drop-zone-type2 { border-color: #27ae60; }
+        .drop-zone-type3 { border-color: #e67e22; }
+        .placed-chip {
+            display: inline-block;
+            padding: 3px 8px;
+            margin: 2px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        .placed-correct { background: #d5f5e3; color: #1e8449; }
+        .placed-incorrect { background: #fadbd8; color: #c0392b; }
+        .info-row {
+            font-size: 11px;
+            color: #666;
+            margin-top: 4px;
+        }
+        .legend-inline {
+            display: flex;
+            gap: 16px;
+            font-size: 11px;
+            color: #555;
+            margin-bottom: 2px;
+        }
+        .legend-dot {
+            display: inline-block;
+            width: 12px;
+            height: 3px;
+            border-radius: 2px;
+            margin-right: 4px;
+            vertical-align: middle;
+        }
+    </style>
 </head>
 <body>
-    <main></main>
-    <br/>
-    <a href=".">Back to Lesson Plan</a>
+<div class="container">
+    <div class="controls">
+        <div class="legend-inline">
+            <span><span class="legend-dot" style="background:#3498db;"></span>Type I</span>
+            <span><span class="legend-dot" style="background:#27ae60;"></span>Type II</span>
+            <span><span class="legend-dot" style="background:#e67e22;"></span>Type III</span>
+        </div>
+        <span style="margin-left: 8px;"></span>
+        <button class="action-btn hint-btn" id="btn-hint" onclick="toggleHints()">Hints</button>
+        <button class="action-btn reset-btn" onclick="resetAll()">Reset</button>
+        <span class="score-display" id="score-display"></span>
+    </div>
+    <div class="main-area">
+        <div class="chart-container">
+            <canvas id="survChart"></canvas>
+        </div>
+        <div class="organism-panel">
+            <div class="panel-title">Drag organisms to curves</div>
+            <div id="organism-pool"></div>
+            <div class="drop-zones">
+                <div class="drop-zone drop-zone-type1" id="drop-type1"
+                     ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)"
+                     ondrop="handleDrop(event, 'I')">
+                    <strong>Type I</strong> — low early mortality
+                </div>
+                <div class="drop-zone drop-zone-type2" id="drop-type2"
+                     ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)"
+                     ondrop="handleDrop(event, 'II')">
+                    <strong>Type II</strong> — constant mortality
+                </div>
+                <div class="drop-zone drop-zone-type3" id="drop-type3"
+                     ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)"
+                     ondrop="handleDrop(event, 'III')">
+                    <strong>Type III</strong> — high early mortality
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="info-row" id="info-text">
+        Drag each organism to the survivorship curve type that best describes its life history strategy.
+    </div>
+</div>
+<div id="return-link" style="display:none; padding: 8px 16px;">
+    <a href=".">← Return to Lesson Plan</a>
+</div>
+<script>
+    if (window.self === window.top) {
+        document.getElementById('return-link').style.display = 'block';
+    }
+</script>
+<script src="survivorship-curves.js"></script>
 </body>
 </html>

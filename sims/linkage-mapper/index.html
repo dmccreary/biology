@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for genetic linkage and recombination mapper.">
+        <meta name="description" content="Interactive tool for calculating recombination frequencies from test cross data and constructing a genetic linkage map showing relative gene positions on a chromosome.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Genetic Linkage and Recombination Mapper - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for genetic linkage and recombination mapper.">
+        <meta property="og:description" content="Interactive tool for calculating recombination frequencies from test cross data and constructing a genetic linkage map showing relative gene positions on a chromosome.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/linkage-mapper/linkage-mapper.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Genetic Linkage and Recombination Mapper - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for genetic linkage and recombination mapper.">
+        <meta name="twitter:description" content="Interactive tool for calculating recombination frequencies from test cross data and constructing a genetic linkage map showing relative gene positions on a chromosome.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/linkage-mapper/linkage-mapper.png">
       
@@ -438,6 +438,12 @@
       
         
           
+        
+      
+        
+      
+        
+      
         
       
         
@@ -1578,9 +1584,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../fermentation-pathways/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../fermentation-pathways/" class="md-nav__link">
+      
   
   
   <span class="md-ellipsis">
@@ -1589,7 +1618,13 @@
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -1756,15 +1791,6 @@
   <a href="#how-to-use" class="md-nav__link">
     <span class="md-ellipsis">
       How to Use
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
     </span>
   </a>
   
@@ -2745,6 +2771,75 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TODO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim TODO Tracker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DONE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim Completion Log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared-libs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared MicroSim Libraries README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2763,6 +2858,8 @@
       
         
           
+        
+      
         
       
         
@@ -2818,6 +2915,14 @@
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -2947,6 +3052,18 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -3050,15 +3167,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lesson-plan" class="md-nav__link">
     <span class="md-ellipsis">
       Lesson Plan
@@ -3152,43 +3260,50 @@
 
 
 <h1 id="genetic-linkage-and-recombination-mapper">Genetic Linkage and Recombination Mapper</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="500px" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Genetic Linkage and Recombination Mapper MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">View Genetic Linkage Mapper Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This tool lets students calculate recombination frequencies (RF) from test cross
+offspring data and construct a genetic linkage map. Three gene pairs are entered,
+RF is auto-calculated, gene order is determined (the largest RF identifies the
+outside genes), and genes are positioned proportionally on a chromosome bar.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
-<h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
-<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/linkage-mapper/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
-        <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
-        <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li><strong>Load an example</strong> using the dropdown and "Load Example" button (Drosophila or Corn).</li>
+<li>The <strong>data panel</strong> shows recombinant counts, total offspring, and calculated RF for each gene pair.</li>
+<li>The <strong>map distances</strong> panel shows the determined gene order and centiMorgan (cM) distances.</li>
+<li>The <strong>chromosome map</strong> at the bottom positions genes proportionally with distance labels.</li>
+<li>A <strong>consistency check</strong> verifies whether the sum of segments matches the largest RF.</li>
+</ol>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>9-12 (AP Biology)</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of linked genes and crossing over</li>
+<li>Knowledge that recombination frequency reflects physical distance between genes</li>
+<li>Ability to calculate RF = (recombinants / total) x 100</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Load the Drosophila example. Observe how the three RFs determine gene order and map distances. Note the consistency check result.</li>
+<li><strong>Guided Practice</strong> (5 min): Using the map, answer: "Which two genes are farthest apart? How do you know?" Explain why the largest RF identifies the outside genes.</li>
+<li><strong>Assessment</strong> (5 min): Load the Corn example and predict the gene order before looking at the map. Verify your prediction.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Can students calculate RF from offspring data?</li>
+<li>Can students determine gene order from three pairwise RFs?</li>
+<li>Can students explain why double crossovers can make the sum of segments differ from the largest RF?</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Genetic_linkage">Genetic linkage - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Recombination_frequency">Recombination frequency - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Centimorgan">Centimorgan - Wikipedia</a></li>
 </ol>
 
 

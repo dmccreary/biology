@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for interactive cladogram builder.">
+        <meta name="description" content="Drag-and-drop cladogram builder where students place species on a phylogenetic tree based on shared derived characters (synapomorphies) shown in a character matrix, with answer checking and hints.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Interactive Cladogram Builder - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for interactive cladogram builder.">
+        <meta property="og:description" content="Drag-and-drop cladogram builder where students place species on a phylogenetic tree based on shared derived characters (synapomorphies) shown in a character matrix, with answer checking and hints.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/cladogram-builder/cladogram-builder.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Interactive Cladogram Builder - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for interactive cladogram builder.">
+        <meta name="twitter:description" content="Drag-and-drop cladogram builder where students place species on a phylogenetic tree based on shared derived characters (synapomorphies) shown in a character matrix, with answer checking and hints.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/cladogram-builder/cladogram-builder.png">
       
@@ -438,6 +438,12 @@
       
         
           
+        
+      
+        
+      
+        
+      
         
       
         
@@ -1578,9 +1584,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../fermentation-pathways/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../fermentation-pathways/" class="md-nav__link">
+      
   
   
   <span class="md-ellipsis">
@@ -1589,7 +1618,13 @@
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -1825,15 +1860,6 @@
   <a href="#how-to-use" class="md-nav__link">
     <span class="md-ellipsis">
       How to Use
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
     </span>
   </a>
   
@@ -2745,6 +2771,75 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TODO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim TODO Tracker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DONE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim Completion Log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared-libs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared MicroSim Libraries README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2763,6 +2858,8 @@
       
         
           
+        
+      
         
       
         
@@ -2818,6 +2915,14 @@
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -2947,6 +3052,18 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -3050,15 +3167,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lesson-plan" class="md-nav__link">
     <span class="md-ellipsis">
       Lesson Plan
@@ -3152,43 +3260,50 @@
 
 
 <h1 id="interactive-cladogram-builder">Interactive Cladogram Builder</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="530px" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Interactive Cladogram Builder MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">View Interactive Cladogram Builder Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This interactive cladogram builder teaches students how phylogenetic trees are constructed from shared derived characters (synapomorphies). A character matrix on the left shows which traits each species possesses. Students drag species labels from a pool and drop them onto the correct tip positions on the cladogram tree on the right. Trait markers at branch points show where each character evolved. Two datasets are available: Vertebrates (6 species, 6 traits) and Arthropods (5 species, 5 traits).</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
-<h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
-<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/cladogram-builder/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
-        <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
-        <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li><strong>Read the character matrix</strong> on the left — each row is a species, each column is a trait, and checkmarks indicate which traits that species has.</li>
+<li><strong>Drag species labels</strong> from the pool at the bottom and drop them onto the numbered tip slots on the cladogram tree.</li>
+<li><strong>Rearrange species</strong> by dragging them from one slot to another — they will swap positions.</li>
+<li><strong>Click "Check"</strong> to verify your placement — correct positions get a green checkmark, incorrect ones get a red X.</li>
+<li><strong>Toggle "Hints"</strong> to see which traits mark each branch point (orange diamonds on the tree).</li>
+<li><strong>Switch datasets</strong> using the Vertebrates/Arthropods buttons to practice with different organisms.</li>
+<li><strong>Click "Reset"</strong> to return all species to the pool and try again.</li>
+</ol>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>9-12 (AP Biology)</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of evolutionary relationships and common ancestry</li>
+<li>Knowledge of homologous vs. analogous structures</li>
+<li>Familiarity with the concept of shared derived characters (synapomorphies)</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Select the Vertebrates dataset. Examine the character matrix and identify which species share the most traits. Try placing species on the tree and check your answer. Which species is most basal (fewest derived traits)? Which two species are most closely related?</li>
+<li><strong>Guided Practice</strong> (5 min): Turn on Hints to see trait markers at branch points. Notice how each branch point represents the evolution of a new trait shared by all species above that node. Reset and try the Arthropods dataset — apply the same logic to a different group of organisms.</li>
+<li><strong>Assessment</strong> (5 min): Without hints, correctly place all species in both datasets. Then answer: Why is the lamprey placed at the base of the vertebrate cladogram? What trait unites the pigeon and mouse but excludes the lizard? How does the number of shared traits relate to evolutionary distance?</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Can students correctly place all species on the cladogram using the character matrix?</li>
+<li>Can students explain why shared derived characters indicate closer evolutionary relationships?</li>
+<li>Can students identify the most recent common ancestor of any two species on the tree?</li>
+<li>Can students predict which traits a newly discovered species might have based on its position on the tree?</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Cladistics">Cladistics - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Phylogenetic_tree">Phylogenetic tree - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Synapomorphy">Synapomorphy - Wikipedia</a></li>
 </ol>
 
 

@@ -1,9 +1,9 @@
 {
   "title": "Cell Cycle Checkpoint Control",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
-  "description": "Interactive MicroSim for cell cycle checkpoint control",
-  "date": "2026-02-27",
+  "subject": "AP Biology",
+  "description": "Interactive MicroSim showing how cyclin-CDK complexes and checkpoint proteins regulate cell cycle progression, with damage response and p53 mutation scenarios",
+  "date": "2026-03-07",
   "educational": {
     "gradeLevel": [
       "9",
@@ -11,14 +11,20 @@
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
+    "subjectArea": "Biology",
     "topic": "Cell Cycle Checkpoint Control",
     "learningObjectives": [
-      "TODO: Add learning objectives"
+      "Explain how cyclin-CDK complexes regulate cell cycle progression",
+      "Predict what happens when checkpoint proteins fail",
+      "Compare G1/S and G2/M checkpoint requirements",
+      "Analyze the consequences of p53 mutations on cell cycle control"
     ],
-    "bloomsTaxonomy": "Create",
+    "bloomsTaxonomy": "Understand",
     "duration": "10-15 minutes",
-    "prerequisites": [],
+    "prerequisites": [
+      "Cell cycle phases (G1, S, G2, M)",
+      "Protein kinases and phosphorylation"
+    ],
     "standards": []
   },
   "technical": {
@@ -26,20 +32,31 @@
     "version": "1.0",
     "canvasDimensions": {
       "width": "responsive",
-      "height": 450
+      "height": 500
     },
     "responsive": true,
     "dependencies": [],
     "accessibility": {
-      "hasAltText": false,
+      "hasAltText": true,
       "keyboardNavigable": false
     }
   },
   "pedagogical": {
-    "teachingStrategy": "Interactive exploration",
-    "keyQuestions": [],
-    "commonMisconceptions": [],
-    "assessmentOpportunities": []
+    "teachingStrategy": "Interactive exploration with hover tooltips and toggle scenarios",
+    "keyQuestions": [
+      "What happens to cell division when DNA damage is detected?",
+      "Why does Cyclin B drop sharply at anaphase?",
+      "How does p53 mutation contribute to cancer?"
+    ],
+    "commonMisconceptions": [
+      "Cyclins are always present at the same level throughout the cell cycle",
+      "A single checkpoint failure is sufficient to cause cancer",
+      "G1/S and G2/M checkpoints check for the same conditions"
+    ],
+    "assessmentOpportunities": [
+      "Predict outcomes of checkpoint failure",
+      "Identify which cyclin-CDK pair controls each transition"
+    ]
   },
   "chapter": "10-cell-cycle-mitosis-and-cancer"
 }

@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for genetic code table explorer.">
+        <meta name="description" content="Interactive codon lookup table color-coded by amino acid property (hydrophobic, polar, positive, negative, stop) with mRNA translation input, random sequence generation, and point mutation simulation.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Genetic Code Table Explorer - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for genetic code table explorer.">
+        <meta property="og:description" content="Interactive codon lookup table color-coded by amino acid property (hydrophobic, polar, positive, negative, stop) with mRNA translation input, random sequence generation, and point mutation simulation.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/genetic-code-table/genetic-code-table.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Genetic Code Table Explorer - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for genetic code table explorer.">
+        <meta name="twitter:description" content="Interactive codon lookup table color-coded by amino acid property (hydrophobic, polar, positive, negative, stop) with mRNA translation input, random sequence generation, and point mutation simulation.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/genetic-code-table/genetic-code-table.png">
       
@@ -438,6 +438,12 @@
       
         
           
+        
+      
+        
+      
+        
+      
         
       
         
@@ -1578,9 +1584,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../fermentation-pathways/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../fermentation-pathways/" class="md-nav__link">
+      
   
   
   <span class="md-ellipsis">
@@ -1589,7 +1618,13 @@
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -1710,15 +1745,6 @@
   <a href="#how-to-use" class="md-nav__link">
     <span class="md-ellipsis">
       How to Use
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
     </span>
   </a>
   
@@ -2745,6 +2771,75 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TODO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim TODO Tracker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DONE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim Completion Log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared-libs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared MicroSim Libraries README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2763,6 +2858,8 @@
       
         
           
+        
+      
         
       
         
@@ -2818,6 +2915,14 @@
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -2947,6 +3052,18 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -3050,15 +3167,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lesson-plan" class="md-nav__link">
     <span class="md-ellipsis">
       Lesson Plan
@@ -3154,41 +3262,45 @@
 <h1 id="genetic-code-table-explorer">Genetic Code Table Explorer</h1>
 <iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Genetic Code Table Explorer MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">View Genetic Code Table Explorer Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This interactive genetic code table displays all 64 codons organized by first, second, and third base position. Each codon cell is color-coded by amino acid property: blue for hydrophobic, green for polar uncharged, red for positively charged, purple for negatively charged, and dark red for stop codons. Students can hover over any codon to see the amino acid name, abbreviation, and property classification. An mRNA input field translates sequences in real time, and "Random" and "Mutate" buttons let students explore how single nucleotide changes affect the resulting protein.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
-<h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
-<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/genetic-code-table/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
-        <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
-        <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li><strong>Hover over any codon cell</strong> in the table to see detailed information about the amino acid it encodes.</li>
+<li><strong>Type an mRNA sequence</strong> (using A, U, G, C) in the input field to see the translated amino acid sequence appear below.</li>
+<li><strong>Click "Random"</strong> to generate a random mRNA sequence and observe the translation.</li>
+<li><strong>Click "Mutate"</strong> to introduce a single random point mutation in the current sequence — watch how one nucleotide change can alter (or preserve) the protein.</li>
+<li><strong>Read the property counts</strong> to see the composition of hydrophobic, polar, charged, and stop codons in your translated sequence.</li>
+</ol>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>9-12 (AP Biology)</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of DNA and RNA nucleotide bases (A, U, G, C)</li>
+<li>Knowledge of the central dogma (DNA → mRNA → protein)</li>
+<li>Familiarity with codons as triplets of nucleotides</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Hover over codons in each row. Notice that codons starting with U tend to encode hydrophobic amino acids. Find the start codon (AUG) and all three stop codons.</li>
+<li><strong>Guided Practice</strong> (5 min): Type <code>AUGUUUAAAGCUUGA</code> into the input field. Identify each amino acid. Then click "Mutate" three times and record which mutations are silent (synonymous) vs. which change the amino acid (nonsynonymous).</li>
+<li><strong>Assessment</strong> (5 min): Explain why the genetic code is described as "degenerate" (redundant). Use the table to find an amino acid encoded by six different codons and one encoded by only one codon.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Can students use the codon table to translate a short mRNA sequence into amino acids?</li>
+<li>Can students explain why some point mutations are silent while others change the protein?</li>
+<li>Can students identify the start codon, stop codons, and the concept of codon degeneracy?</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Genetic_code">Genetic code - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Codon_usage_bias">Codon usage bias - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Point_mutation">Point mutation - Wikipedia</a></li>
 </ol>
 
 

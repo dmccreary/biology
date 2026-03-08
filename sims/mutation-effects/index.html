@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for mutation effects comparator.">
+        <meta name="description" content="Interactive side-by-side comparison of original and mutant mRNA sequences showing how silent, missense, nonsense, insertion, and deletion mutations alter codons and amino acids, with frameshift visualization.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Mutation Effects Comparator - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for mutation effects comparator.">
+        <meta property="og:description" content="Interactive side-by-side comparison of original and mutant mRNA sequences showing how silent, missense, nonsense, insertion, and deletion mutations alter codons and amino acids, with frameshift visualization.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/mutation-effects/mutation-effects.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Mutation Effects Comparator - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for mutation effects comparator.">
+        <meta name="twitter:description" content="Interactive side-by-side comparison of original and mutant mRNA sequences showing how silent, missense, nonsense, insertion, and deletion mutations alter codons and amino acids, with frameshift visualization.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/mutation-effects/mutation-effects.png">
       
@@ -438,6 +438,12 @@
       
         
           
+        
+      
+        
+      
+        
+      
         
       
         
@@ -1578,9 +1584,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../fermentation-pathways/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../fermentation-pathways/" class="md-nav__link">
+      
   
   
   <span class="md-ellipsis">
@@ -1589,7 +1618,13 @@
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -2101,15 +2136,6 @@
   <a href="#how-to-use" class="md-nav__link">
     <span class="md-ellipsis">
       How to Use
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
     </span>
   </a>
   
@@ -2745,6 +2771,75 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TODO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim TODO Tracker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DONE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim Completion Log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared-libs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared MicroSim Libraries README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2763,6 +2858,8 @@
       
         
           
+        
+      
         
       
         
@@ -2818,6 +2915,14 @@
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -2947,6 +3052,18 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -3050,15 +3167,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lesson-plan" class="md-nav__link">
     <span class="md-ellipsis">
       Lesson Plan
@@ -3152,43 +3260,47 @@
 
 
 <h1 id="mutation-effects-comparator">Mutation Effects Comparator</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="490px" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Mutation Effects Comparator MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">View Mutation Effects Comparator Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This interactive tool compares original and mutant mRNA sequences side by side. Students select a mutation type (silent, missense, nonsense, insertion, or deletion), then click a nucleotide position in the original sequence to place the mutation. The mutant row instantly shows the changed bases (highlighted in red), altered codon groupings, and resulting amino acid changes. Frameshift mutations from insertions and deletions show all downstream codons shifting, often producing a premature stop codon. Nonsense mutations show the truncated protein with grayed-out downstream amino acids.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
-<h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
-<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/mutation-effects/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
-        <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
-        <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li><strong>Select a mutation type</strong> from the five buttons at the bottom (Silent, Missense, Nonsense, Insertion, Deletion).</li>
+<li><strong>Click a nucleotide</strong> in the original mRNA sequence (top row) to place the mutation at that position.</li>
+<li><strong>Compare the two rows</strong> — original (top) and mutant (bottom) — to see how the change affects codons and amino acids.</li>
+<li><strong>Look for red highlighting</strong> on changed bases and orange-outlined amino acid boxes that differ from the original.</li>
+<li><strong>Click "Reset"</strong> to clear the mutation and try a different type or position.</li>
+</ol>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>9-12 (AP Biology)</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of mRNA codons and the genetic code</li>
+<li>Knowledge of how codons are read in triplets during translation</li>
+<li>Familiarity with amino acid properties</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Place each of the five mutation types at different positions. Observe: Which types change the amino acid? Which shift the reading frame? Which create a premature stop?</li>
+<li><strong>Guided Practice</strong> (5 min): For each mutation type, answer: (a) How many amino acids changed? (b) Is the protein still functional? (c) Why is a frameshift generally more damaging than a point mutation?</li>
+<li><strong>Assessment</strong> (5 min): Without using the simulator, predict the effect of changing the 9th nucleotide (C in UAC) to A. Then check with the tool. Was it silent, missense, or nonsense?</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Can students classify a given base change as silent, missense, or nonsense?</li>
+<li>Can students explain why insertions and deletions cause frameshifts?</li>
+<li>Can students rank mutation types by likely severity (silent &lt; missense &lt; nonsense &lt; frameshift)?</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Point_mutation">Point mutation - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Frameshift_mutation">Frameshift mutation - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nonsense_mutation">Nonsense mutation - Wikipedia</a></li>
 </ol>
 
 

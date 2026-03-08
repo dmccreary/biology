@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for translation step-through simulator.">
+        <meta name="description" content="Step-through visualization of protein translation showing initiation, elongation (codon recognition, peptide bond formation, translocation), and termination with visible A, P, and E ribosomal sites, tRNA anticodons, and growing polypeptide chain.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Translation Step-Through Simulator - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for translation step-through simulator.">
+        <meta property="og:description" content="Step-through visualization of protein translation showing initiation, elongation (codon recognition, peptide bond formation, translocation), and termination with visible A, P, and E ribosomal sites, tRNA anticodons, and growing polypeptide chain.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/translation-simulator/translation-simulator.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Translation Step-Through Simulator - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for translation step-through simulator.">
+        <meta name="twitter:description" content="Step-through visualization of protein translation showing initiation, elongation (codon recognition, peptide bond formation, translocation), and termination with visible A, P, and E ribosomal sites, tRNA anticodons, and growing polypeptide chain.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/translation-simulator/translation-simulator.png">
       
@@ -438,6 +438,12 @@
       
         
           
+        
+      
+        
+      
+        
+      
         
       
         
@@ -1578,9 +1584,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../fermentation-pathways/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../fermentation-pathways/" class="md-nav__link">
+      
   
   
   <span class="md-ellipsis">
@@ -1589,7 +1618,13 @@
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -2613,15 +2648,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lesson-plan" class="md-nav__link">
     <span class="md-ellipsis">
       Lesson Plan
@@ -2745,6 +2771,75 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TODO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim TODO Tracker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DONE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim Completion Log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared-libs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared MicroSim Libraries README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2763,6 +2858,8 @@
       
         
           
+        
+      
         
       
         
@@ -2818,6 +2915,14 @@
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -2947,6 +3052,18 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -3050,15 +3167,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lesson-plan" class="md-nav__link">
     <span class="md-ellipsis">
       Lesson Plan
@@ -3152,43 +3260,50 @@
 
 
 <h1 id="translation-step-through-simulator">Translation Step-Through Simulator</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="530px" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Translation Step-Through Simulator MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">View Translation Simulator Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This step-through simulator visualizes protein translation from an mRNA template (AUG-GCU-UAC-AAA-CGC-UGA), encoding Met-Ala-Tyr-Lys-Arg-Stop. Students advance through initiation (small subunit binding, initiator tRNA, large subunit joining), elongation (codon recognition, peptide bond formation, translocation for each codon), and termination (release factor binding, polypeptide release). The ribosome's A, P, and E sites are labeled, tRNAs are shown with anticodons, and the growing polypeptide chain is displayed as color-coded amino acid circles.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
-<h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
-<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/translation-simulator/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
-        <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
-        <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li><strong>Click "Next"</strong> to advance through each sub-step of translation.</li>
+<li><strong>Watch the ribosome</strong> move along the mRNA — the A (aminoacyl), P (peptidyl), and E (exit) sites are labeled above.</li>
+<li><strong>Observe tRNAs</strong> arriving with amino acids and their anticodons base-pairing with mRNA codons.</li>
+<li><strong>Track the polypeptide</strong> growing at the top of the screen as each amino acid is added.</li>
+<li><strong>Toggle "Anticodons"</strong> to show or hide the anticodon labels on tRNAs.</li>
+<li><strong>Read the description panel</strong> at each step for detailed molecular explanations.</li>
+<li>Use <strong>"Previous"</strong> to revisit earlier steps or <strong>"Reset"</strong> to start over.</li>
+</ol>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>9-12 (AP Biology)</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of mRNA codons and the genetic code</li>
+<li>Knowledge of ribosome structure (large and small subunits)</li>
+<li>Familiarity with tRNA structure and amino acid attachment</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Step through the entire translation process. At each step, identify: What is in the A site? The P site? The E site? How many amino acids are in the chain?</li>
+<li><strong>Guided Practice</strong> (5 min): Before clicking "Next" at each elongation step, predict what will happen next (which tRNA arrives, where the peptide bond forms, how translocation moves everything). Then check your prediction.</li>
+<li><strong>Assessment</strong> (5 min): From memory, list the three stages of translation and the three sub-steps within each elongation cycle. Then verify against the simulator.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Can students name the three stages of translation (initiation, elongation, termination)?</li>
+<li>Can students describe the three sub-steps of elongation (codon recognition, peptide bond formation, translocation)?</li>
+<li>Can students explain why no tRNA binds to a stop codon and what binds instead?</li>
+<li>Can students trace which tRNA site (A, P, E) each tRNA occupies at each step?</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Translation_(biology)">Translation (biology) - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ribosome">Ribosome - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Transfer_RNA">Transfer RNA - Wikipedia</a></li>
 </ol>
 
 

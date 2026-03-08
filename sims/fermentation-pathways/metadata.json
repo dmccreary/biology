@@ -1,24 +1,25 @@
 {
   "title": "Fermentation Pathways Comparison",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
-  "description": "Interactive MicroSim for fermentation pathways comparison",
-  "date": "2026-02-27",
+  "subject": "AP Biology",
+  "description": "Interactive step-through MicroSim comparing lactic acid and alcoholic fermentation with NAD+ recycling, ATP tally, and organism fun facts",
+  "date": "2026-03-07",
   "educational": {
-    "gradeLevel": [
-      "9",
-      "10",
-      "11",
-      "12"
-    ],
-    "subjectArea": "Mathematics",
-    "topic": "Fermentation Pathways Comparison",
+    "gradeLevel": ["9", "10", "11", "12"],
+    "subjectArea": "Biology",
+    "topic": "Fermentation Pathways",
     "learningObjectives": [
-      "TODO: Add learning objectives"
+      "Compare lactic acid and alcoholic fermentation in terms of reactants and products",
+      "Explain why fermentation is necessary when oxygen is absent",
+      "Identify the shared purpose of NAD+ regeneration in both pathways"
     ],
-    "bloomsTaxonomy": "Create",
+    "bloomsTaxonomy": "Analyze",
     "duration": "10-15 minutes",
-    "prerequisites": [],
+    "prerequisites": [
+      "Glycolysis",
+      "NAD+/NADH electron carriers",
+      "Anaerobic vs aerobic conditions"
+    ],
     "standards": []
   },
   "technical": {
@@ -26,20 +27,31 @@
     "version": "1.0",
     "canvasDimensions": {
       "width": "responsive",
-      "height": 450
+      "height": 860
     },
     "responsive": true,
     "dependencies": [],
     "accessibility": {
-      "hasAltText": false,
+      "hasAltText": true,
       "keyboardNavigable": false
     }
   },
   "pedagogical": {
-    "teachingStrategy": "Interactive exploration",
-    "keyQuestions": [],
-    "commonMisconceptions": [],
-    "assessmentOpportunities": []
+    "teachingStrategy": "Step-through narration with pathway focus toggle",
+    "keyQuestions": [
+      "Why do both fermentation pathways yield only 2 ATP per glucose?",
+      "What is the real purpose of fermentation if not ATP production?",
+      "How do the waste products differ between the two pathways?"
+    ],
+    "commonMisconceptions": [
+      "Fermentation produces extra ATP beyond glycolysis (it does not)",
+      "Lactic acid fermentation only occurs in animals (bacteria use it too)",
+      "Alcoholic fermentation and lactic acid fermentation are completely different processes (they share glycolysis and NAD+ recycling)"
+    ],
+    "assessmentOpportunities": [
+      "Trace NAD+ recycling through each pathway",
+      "Predict which organisms use which pathway and why"
+    ]
   },
   "chapter": "08-cellular-respiration"
 }

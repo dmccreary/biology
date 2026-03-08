@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for operon regulation simulator.">
+        <meta name="description" content="Interactive comparison of lac (inducible) and trp (repressible) operon regulation with toggleable environmental conditions (lactose, glucose, tryptophan), visible repressor binding, RNA polymerase activity, and quiz mode for predicting operon state.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Operon Regulation Simulator - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for operon regulation simulator.">
+        <meta property="og:description" content="Interactive comparison of lac (inducible) and trp (repressible) operon regulation with toggleable environmental conditions (lactose, glucose, tryptophan), visible repressor binding, RNA polymerase activity, and quiz mode for predicting operon state.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/operon-regulation/operon-regulation.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Operon Regulation Simulator - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for operon regulation simulator.">
+        <meta name="twitter:description" content="Interactive comparison of lac (inducible) and trp (repressible) operon regulation with toggleable environmental conditions (lactose, glucose, tryptophan), visible repressor binding, RNA polymerase activity, and quiz mode for predicting operon state.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/operon-regulation/operon-regulation.png">
       
@@ -438,6 +438,12 @@
       
         
           
+        
+      
+        
+      
+        
+      
         
       
         
@@ -1578,9 +1584,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../fermentation-pathways/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../fermentation-pathways/" class="md-nav__link">
+      
   
   
   <span class="md-ellipsis">
@@ -1589,7 +1618,13 @@
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -2176,15 +2211,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lesson-plan" class="md-nav__link">
     <span class="md-ellipsis">
       Lesson Plan
@@ -2745,6 +2771,75 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TODO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim TODO Tracker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DONE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim Completion Log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared-libs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared MicroSim Libraries README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2763,6 +2858,8 @@
       
         
           
+        
+      
         
       
         
@@ -2818,6 +2915,14 @@
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -2947,6 +3052,18 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -3050,15 +3167,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lesson-plan" class="md-nav__link">
     <span class="md-ellipsis">
       Lesson Plan
@@ -3152,43 +3260,48 @@
 
 
 <h1 id="operon-regulation-simulator">Operon Regulation Simulator</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="490px" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Operon Regulation Simulator MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">View Operon Regulation Simulator Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This interactive simulator compares inducible (lac) and repressible (trp) operon regulation in prokaryotes. Students toggle environmental conditions — lactose and glucose presence for the lac operon, or tryptophan presence for the trp operon — and observe the molecular consequences: repressor proteins binding or releasing from the operator, RNA polymerase proceeding or being blocked, and structural genes being transcribed into mRNA and proteins (or not). A quiz mode lets students predict whether the operon will be ON or OFF before revealing the answer.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
-<h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
-<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/operon-regulation/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
-        <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
-        <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li><strong>Select an operon</strong> — click "Lac Operon" or "Trp Operon" at the top.</li>
+<li><strong>Toggle conditions</strong> at the bottom — click Lactose/Glucose (lac mode) or Tryptophan (trp mode) to change environmental conditions.</li>
+<li><strong>Observe the diagram</strong> — watch the repressor bind or release from the operator, and whether RNA polymerase transcribes the structural genes.</li>
+<li><strong>Read the explanation</strong> in the result panel for a detailed description of why the operon is ON or OFF.</li>
+<li><strong>Enable "Quiz Mode"</strong> — predict whether the operon is ON or OFF before the answer is revealed.</li>
+</ol>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>9-12 (AP Biology)</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of gene regulation and transcription</li>
+<li>Knowledge of promoters, operators, and structural genes</li>
+<li>Familiarity with the concept of inducible vs. repressible systems</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Try all four combinations of lactose/glucose for the lac operon. Then switch to the trp operon and toggle tryptophan. Record which conditions turn each operon ON.</li>
+<li><strong>Guided Practice</strong> (5 min): Enable Quiz Mode. For each condition combination, predict ON/OFF before revealing. Score yourself — aim for 4/4 on lac and 2/2 on trp.</li>
+<li><strong>Assessment</strong> (5 min): Without the simulator, complete this table from memory: Lac operon with (a) no lactose + glucose, (b) lactose + glucose, (c) lactose + no glucose, (d) no lactose + no glucose. Then verify with the sim.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Can students explain the difference between an inducible and a repressible operon?</li>
+<li>Can students predict the lac operon state for all four lactose/glucose combinations?</li>
+<li>Can students explain the role of allolactose as an inducer and tryptophan as a corepressor?</li>
+<li>Can students describe why glucose presence reduces lac operon expression even when lactose is present?</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Lac_operon">Lac operon - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Trp_operon">Trp operon - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Operon">Operon - Wikipedia</a></li>
 </ol>
 
 

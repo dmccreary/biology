@@ -1,24 +1,25 @@
 {
   "title": "cAMP Signaling Cascade",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
-  "description": "Interactive MicroSim for camp signaling cascade",
-  "date": "2026-02-27",
+  "subject": "AP Biology",
+  "description": "Interactive step-through MicroSim of the GPCR-cAMP-PKA signal transduction pathway with amplification counter and PDE signal termination",
+  "date": "2026-03-07",
   "educational": {
-    "gradeLevel": [
-      "9",
-      "10",
-      "11",
-      "12"
-    ],
-    "subjectArea": "Mathematics",
-    "topic": "cAMP Signaling Cascade",
+    "gradeLevel": ["9", "10", "11", "12"],
+    "subjectArea": "Biology",
+    "topic": "Cell Signaling - cAMP Pathway",
     "learningObjectives": [
-      "TODO: Add learning objectives"
+      "Trace the sequence from epinephrine binding through GPCR to cellular response",
+      "Explain how signal amplification occurs at each cascade step",
+      "Describe how phosphodiesterase terminates the cAMP signal"
     ],
-    "bloomsTaxonomy": "Create",
+    "bloomsTaxonomy": "Apply",
     "duration": "10-15 minutes",
-    "prerequisites": [],
+    "prerequisites": [
+      "Cell membrane receptors",
+      "Enzyme function",
+      "ATP as energy currency"
+    ],
     "standards": []
   },
   "technical": {
@@ -26,20 +27,31 @@
     "version": "1.0",
     "canvasDimensions": {
       "width": "responsive",
-      "height": 450
+      "height": 500
     },
     "responsive": true,
     "dependencies": [],
     "accessibility": {
-      "hasAltText": false,
+      "hasAltText": true,
       "keyboardNavigable": false
     }
   },
   "pedagogical": {
-    "teachingStrategy": "Interactive exploration",
-    "keyQuestions": [],
-    "commonMisconceptions": [],
-    "assessmentOpportunities": []
+    "teachingStrategy": "Step-through cascade with amplification counter",
+    "keyQuestions": [
+      "Why does signal transduction use a multi-step cascade?",
+      "At which step does the greatest amplification occur?",
+      "What would happen if PDE were inhibited?"
+    ],
+    "commonMisconceptions": [
+      "The receptor directly activates the cellular response (it requires multiple intermediate steps)",
+      "cAMP is a protein (it is a small nucleotide derivative)",
+      "Signal amplification means the signal gets louder (it means more molecules are activated at each step)"
+    ],
+    "assessmentOpportunities": [
+      "Trace the complete pathway from ligand to response",
+      "Calculate the amplification factor across the cascade"
+    ]
   },
   "chapter": "09-cell-signaling-and-feedback"
 }

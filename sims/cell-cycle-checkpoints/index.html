@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for cell cycle checkpoint control.">
+        <meta name="description" content="Interactive p5.js MicroSim showing how cyclin-CDK complexes and checkpoint proteins regulate cell cycle progression.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Cell Cycle Checkpoint Control - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for cell cycle checkpoint control.">
+        <meta property="og:description" content="Interactive p5.js MicroSim showing how cyclin-CDK complexes and checkpoint proteins regulate cell cycle progression.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/cell-cycle-checkpoints/cell-cycle-checkpoints.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Cell Cycle Checkpoint Control - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for cell cycle checkpoint control.">
+        <meta name="twitter:description" content="Interactive p5.js MicroSim showing how cyclin-CDK complexes and checkpoint proteins regulate cell cycle progression.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/cell-cycle-checkpoints/cell-cycle-checkpoints.png">
       
@@ -438,6 +438,12 @@
       
         
           
+        
+      
+        
+      
+        
+      
         
       
         
@@ -1716,9 +1722,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../fermentation-pathways/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../fermentation-pathways/" class="md-nav__link">
+      
   
   
   <span class="md-ellipsis">
@@ -1727,7 +1756,13 @@
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -2745,6 +2780,75 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TODO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim TODO Tracker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DONE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim Completion Log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared-libs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared MicroSim Libraries README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2763,6 +2867,8 @@
       
         
           
+        
+      
         
       
         
@@ -2818,6 +2924,14 @@
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -2933,6 +3047,18 @@
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -3152,43 +3278,58 @@
 
 
 <h1 id="cell-cycle-checkpoint-control">Cell Cycle Checkpoint Control</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="502px" width="100%" scrolling="no"></iframe>
 
 <p><a class="md-button md-button--primary" href="main.html">Run the Cell Cycle Checkpoint Control MicroSim Fullscreen</a>
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim demonstrates how cyclin-CDK complexes regulate cell cycle progression and how checkpoint proteins ensure cells only divide when conditions are favorable. The left panel shows cyclin concentration curves across the four cell cycle phases (G1, S, G2, M), while the right panel displays a checkpoint decision flowchart.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Hover over cyclin curves</strong> on the left graph to see each cyclin's partner CDK and function</li>
+<li><strong>Click checkpoint decision nodes</strong> in the flowchart to see explanatory tooltips</li>
+<li><strong>Toggle between G1/S and G2/M checkpoints</strong> using the button below the simulation</li>
+<li><strong>Press "DNA Damage Event"</strong> to see how ATM/ATR kinases activate p53 and halt the cycle</li>
+<li><strong>Press "What if p53 is mutated?"</strong> to observe how checkpoint failure leads to cancer risk</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
 <p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/cell-cycle-checkpoints/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"502px"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>9-12 (AP Biology)</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Basic understanding of the cell cycle phases (G1, S, G2, M)</li>
+<li>Familiarity with protein kinases and phosphorylation</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Students explore the cyclin concentration graph, hovering over each curve to learn about the four cyclins and their CDK partners.</li>
+<li><strong>Guided Practice</strong> (5 min): Students toggle between G1/S and G2/M checkpoints, clicking decision nodes to understand the logic of checkpoint control.</li>
+<li><strong>Assessment</strong> (5 min): Students use the "DNA Damage Event" and "p53 mutation" buttons to predict and observe checkpoint failure scenarios.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Can students explain why Cyclin B drops sharply at anaphase?</li>
+<li>Can students predict the outcome of a p53 mutation on cell cycle control?</li>
+<li>Can students differentiate between G1/S and G2/M checkpoint requirements?</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Cell_cycle">Cell Cycle - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cyclin-dependent_kinase">Cyclin-dependent kinase - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cell_cycle_checkpoint">Cell cycle checkpoint - Wikipedia</a></li>
 </ol>
 
 

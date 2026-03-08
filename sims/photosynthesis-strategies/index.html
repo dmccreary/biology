@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for c3, c4, and cam photosynthesis comparison.">
+        <meta name="description" content="Interactive p5.js MicroSim comparing the three photosynthetic carbon fixation strategies — C3, C4 (Kranz anatomy), and CAM (temporal separation) — with climate suitability sliders.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="C3, C4, and CAM Photosynthesis Comparison - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for c3, c4, and cam photosynthesis comparison.">
+        <meta property="og:description" content="Interactive p5.js MicroSim comparing the three photosynthetic carbon fixation strategies — C3, C4 (Kranz anatomy), and CAM (temporal separation) — with climate suitability sliders.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/photosynthesis-strategies/photosynthesis-strategies.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="C3, C4, and CAM Photosynthesis Comparison - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for c3, c4, and cam photosynthesis comparison.">
+        <meta name="twitter:description" content="Interactive p5.js MicroSim comparing the three photosynthetic carbon fixation strategies — C3, C4 (Kranz anatomy), and CAM (temporal separation) — with climate suitability sliders.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/photosynthesis-strategies/photosynthesis-strategies.png">
       
@@ -438,6 +438,12 @@
       
         
           
+        
+      
+        
+      
+        
+      
         
       
         
@@ -980,9 +986,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
+  <a href="#key-concepts" class="md-nav__link">
     <span class="md-ellipsis">
-      Iframe Embed Code
+      Key Concepts
     </span>
   </a>
   
@@ -1716,9 +1722,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../fermentation-pathways/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../fermentation-pathways/" class="md-nav__link">
+      
   
   
   <span class="md-ellipsis">
@@ -1727,7 +1756,13 @@
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -2745,6 +2780,75 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TODO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim TODO Tracker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DONE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim Completion Log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared-libs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared MicroSim Libraries README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2763,6 +2867,8 @@
       
         
           
+        
+      
         
       
         
@@ -2818,6 +2924,14 @@
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -2947,6 +3061,18 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -3050,9 +3176,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
+  <a href="#key-concepts" class="md-nav__link">
     <span class="md-ellipsis">
-      Iframe Embed Code
+      Key Concepts
     </span>
   </a>
   
@@ -3152,43 +3278,54 @@
 
 
 <h1 id="c3-c4-and-cam-photosynthesis-comparison">C3, C4, and CAM Photosynthesis Comparison</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="385" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the C3, C4, and CAM Photosynthesis Comparison MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">Run the Photosynthesis Strategies MicroSim Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This interactive comparison tool lets students explore the three major carbon fixation strategies used by plants: <strong>C3</strong> (direct fixation), <strong>C4</strong> (spatial separation via Kranz anatomy), and <strong>CAM</strong> (temporal separation via night/day cycles). Each strategy view shows a leaf cross-section or timeline diagram with labeled enzyme locations and CO2 flow arrows. The <strong>Compare All</strong> view places all three strategies side by side for direct comparison.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
-<h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
-<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/photosynthesis-strategies/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
-        <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
-        <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li>Click <strong>C3</strong>, <strong>C4</strong>, or <strong>CAM</strong> in the left panel to view each strategy's diagram</li>
+<li>Use <strong>Compare All</strong> to see all three strategies side by side with key facts</li>
+<li>Adjust the <strong>Temperature</strong>, <strong>Water</strong>, and <strong>Light</strong> sliders in the right panel to see which strategy is best suited for different climate conditions</li>
+<li>Watch the <strong>suitability bars</strong> update in real time as you move the sliders</li>
+</ol>
+<h2 id="key-concepts">Key Concepts</h2>
+<ul>
+<li><strong>C3 plants</strong> fix CO2 directly with RuBisCO in mesophyll cells — efficient in cool, moist conditions but vulnerable to photorespiration at high temperatures</li>
+<li><strong>C4 plants</strong> use PEP carboxylase in mesophyll cells to pre-fix CO2, then transport it to bundle sheath cells (Kranz anatomy) where RuBisCO operates at high [CO2] — suppresses photorespiration in hot, sunny environments</li>
+<li><strong>CAM plants</strong> open stomata only at night to fix CO2 into organic acids stored in vacuoles, then release CO2 to RuBisCO during the day with stomata closed — conserves water in arid environments</li>
+</ul>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>9-12 (AP Biology)</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Calvin cycle and carbon fixation basics</li>
+<li>Role of RuBisCO and photorespiration</li>
+<li>Stomata function and gas exchange</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Students click through each strategy, identifying where CO2 is first fixed and where the Calvin cycle occurs</li>
+<li><strong>Climate Analysis</strong> (5 min): Students adjust the climate sliders to discover which strategy dominates under different conditions and explain why</li>
+<li><strong>Assessment</strong> (5 min): Students answer: "A farmer wants to grow crops in a hot, dry region. Which photosynthetic strategy would be most advantageous and why?"</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Can students identify the key structural or temporal difference in each strategy?</li>
+<li>Can students explain why C4 plants suppress photorespiration?</li>
+<li>Can students predict which strategy is favored in a given climate scenario?</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/C3_carbon_fixation">C3 carbon fixation - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/C4_carbon_fixation">C4 carbon fixation - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Crassulacean_acid_metabolism">Crassulacean acid metabolism - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Photorespiration">Photorespiration - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RuBisCO">RuBisCO - Wikipedia</a></li>
 </ol>
 
 

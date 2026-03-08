@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive Chart.js MicroSim for polygenic trait distribution visualizer.">
+        <meta name="description" content="Interactive Chart.js visualization showing how increasing the number of contributing genes transforms a discrete phenotype distribution into a continuous bell curve.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Polygenic Trait Distribution Visualizer - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive Chart.js MicroSim for polygenic trait distribution visualizer.">
+        <meta property="og:description" content="Interactive Chart.js visualization showing how increasing the number of contributing genes transforms a discrete phenotype distribution into a continuous bell curve.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/polygenic-distribution/polygenic-distribution.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Polygenic Trait Distribution Visualizer - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive Chart.js MicroSim for polygenic trait distribution visualizer.">
+        <meta name="twitter:description" content="Interactive Chart.js visualization showing how increasing the number of contributing genes transforms a discrete phenotype distribution into a continuous bell curve.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/polygenic-distribution/polygenic-distribution.png">
       
@@ -438,6 +438,12 @@
       
         
           
+        
+      
+        
+      
+        
+      
         
       
         
@@ -1578,9 +1584,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../fermentation-pathways/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../fermentation-pathways/" class="md-nav__link">
+      
   
   
   <span class="md-ellipsis">
@@ -1589,7 +1618,13 @@
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -2245,15 +2280,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lesson-plan" class="md-nav__link">
     <span class="md-ellipsis">
       Lesson Plan
@@ -2745,6 +2771,75 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TODO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim TODO Tracker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DONE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim Completion Log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared-libs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared MicroSim Libraries README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2763,6 +2858,8 @@
       
         
           
+        
+      
         
       
         
@@ -2818,6 +2915,14 @@
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -2947,6 +3052,18 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -3050,15 +3167,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lesson-plan" class="md-nav__link">
     <span class="md-ellipsis">
       Lesson Plan
@@ -3152,43 +3260,50 @@
 
 
 <h1 id="polygenic-trait-distribution-visualizer">Polygenic Trait Distribution Visualizer</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="600px" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Polygenic Trait Distribution Visualizer MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">View Polygenic Trait Distribution Visualizer Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This visualization demonstrates how polygenic inheritance produces continuous
+phenotype distributions. As the number of contributing genes increases from 1 to 6,
+the histogram transitions from a discrete 1:2:1 Mendelian ratio to an
+approximately normal (bell-shaped) curve. The binomial coefficients that
+generate each distribution are shown in the "Show Math" panel.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
-<h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
-<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/polygenic-distribution/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
-        <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
-        <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li><strong>Drag the slider</strong> to change the number of contributing genes (1-6).</li>
+<li><strong>Hover</strong> over any bar to see its exact frequency percentage.</li>
+<li><strong>Normal Curve</strong> button overlays a theoretical normal distribution for comparison (visible at 2+ genes).</li>
+<li><strong>Show Math</strong> button displays the binomial expansion, coefficients, and exact frequencies.</li>
+<li>Observe the summary statistics (classes, mean, SD, shape) below the chart.</li>
+</ol>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>9-12 (AP Biology)</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of Mendelian single-gene inheritance (1:2:1 ratio for incomplete dominance)</li>
+<li>Concept of additive alleles contributing equally to a quantitative trait</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Start at 1 gene and observe the familiar 1:2:1 ratio. Slowly increase to 6 genes and watch the distribution become bell-shaped. Toggle the normal curve overlay to see how well the distribution matches.</li>
+<li><strong>Guided Practice</strong> (5 min): Use "Show Math" to examine the binomial coefficients. Answer: "How many phenotypic classes exist for 3 genes? For 5 genes?" Verify with the slider.</li>
+<li><strong>Assessment</strong> (5 min): Explain in writing why human height follows a bell curve distribution. How many genes would need to contribute for the distribution to appear continuous?</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Can students explain why more genes produce more phenotypic classes?</li>
+<li>Can students connect the binomial expansion to the shape of the distribution?</li>
+<li>Can students distinguish polygenic inheritance from single-gene Mendelian patterns?</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Polygenic_inheritance">Polygenic inheritance - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Quantitative_trait_locus">Quantitative trait locus - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Normal_distribution">Normal distribution - Wikipedia</a></li>
 </ol>
 
 

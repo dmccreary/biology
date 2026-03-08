@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for endosymbiosis model.">
+        <meta name="description" content="Step-through visualization of endosymbiotic theory showing the engulfment of aerobic bacteria (becoming mitochondria) and cyanobacteria (becoming chloroplasts), with evidence cards and double membrane highlighting at each stage.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Endosymbiosis Model - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for endosymbiosis model.">
+        <meta property="og:description" content="Step-through visualization of endosymbiotic theory showing the engulfment of aerobic bacteria (becoming mitochondria) and cyanobacteria (becoming chloroplasts), with evidence cards and double membrane highlighting at each stage.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/endosymbiosis-model/endosymbiosis-model.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Endosymbiosis Model - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for endosymbiosis model.">
+        <meta name="twitter:description" content="Step-through visualization of endosymbiotic theory showing the engulfment of aerobic bacteria (becoming mitochondria) and cyanobacteria (becoming chloroplasts), with evidence cards and double membrane highlighting at each stage.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/endosymbiosis-model/endosymbiosis-model.png">
       
@@ -438,6 +438,12 @@
       
         
           
+        
+      
+        
+      
+        
+      
         
       
         
@@ -1486,15 +1492,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lesson-plan" class="md-nav__link">
     <span class="md-ellipsis">
       Lesson Plan
@@ -1716,9 +1713,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../fermentation-pathways/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../fermentation-pathways/" class="md-nav__link">
+      
   
   
   <span class="md-ellipsis">
@@ -1727,7 +1747,13 @@
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -2745,6 +2771,75 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TODO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim TODO Tracker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DONE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim Completion Log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared-libs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared MicroSim Libraries README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2763,6 +2858,8 @@
       
         
           
+        
+      
         
       
         
@@ -2818,6 +2915,14 @@
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -2947,6 +3052,18 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -3050,15 +3167,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lesson-plan" class="md-nav__link">
     <span class="md-ellipsis">
       Lesson Plan
@@ -3152,43 +3260,48 @@
 
 
 <h1 id="endosymbiosis-model">Endosymbiosis Model</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="490px" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Endosymbiosis Model MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">View Endosymbiosis Model Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This step-through visualization walks through the endosymbiotic theory in six stages: ancestral cells, engulfment of an aerobic bacterium, its transformation into a mitochondrion, the five key pieces of molecular evidence, a second engulfment of a cyanobacterium becoming a chloroplast, and the modern eukaryotic cell with both organelles. An "Evidence" toggle shows the supporting evidence at each stage, and a "Double Membrane" toggle highlights the origin of the double membrane (inner from the endosymbiont, outer from the host's vesicle).</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
-<h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
-<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/endosymbiosis-model/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
-        <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
-        <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li><strong>Click "Next"</strong> to advance through the six stages of endosymbiosis.</li>
+<li><strong>Click "Evidence"</strong> to display an evidence card showing the molecular and structural evidence relevant to the current stage.</li>
+<li><strong>Click "Double Membrane"</strong> to highlight the two membranes and their origins (inner = bacterium, outer = host vesicle).</li>
+<li><strong>Read the description panel</strong> at each step for detailed explanations.</li>
+<li>Use <strong>"Previous"</strong> to revisit earlier stages.</li>
+</ol>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>9-12 (AP Biology)</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of prokaryotic vs. eukaryotic cell structure</li>
+<li>Knowledge of organelle functions (mitochondria, chloroplasts)</li>
+<li>Familiarity with cellular respiration and photosynthesis</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Step through all 6 stages with both "Evidence" and "Double Membrane" toggled on. At each stage, identify which organisms are present and what is happening.</li>
+<li><strong>Guided Practice</strong> (5 min): List the 5 pieces of evidence for endosymbiosis from memory. Then toggle "Evidence" at Step 4 to check your list. Which piece of evidence do you find most convincing and why?</li>
+<li><strong>Assessment</strong> (5 min): Explain why chloroplasts are only found in plants and algae (not all eukaryotes), but mitochondria are found in nearly all eukaryotes. Use the timeline shown in Step 6 to support your answer.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Can students list at least 4 of the 5 key pieces of evidence for endosymbiosis?</li>
+<li>Can students explain the origin of the double membrane?</li>
+<li>Can students explain why the second engulfment (chloroplasts) only occurred in one lineage?</li>
+<li>Can students describe the relationship between endosymbiotic gene transfer and organelle dependence on the host?</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Symbiogenesis">Endosymbiotic theory - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mitochondrion">Mitochondrion - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Chloroplast">Chloroplast - Wikipedia</a></li>
 </ol>
 
 

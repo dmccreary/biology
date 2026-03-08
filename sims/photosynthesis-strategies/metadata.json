@@ -1,24 +1,25 @@
 {
   "title": "C3, C4, and CAM Photosynthesis Comparison",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
-  "description": "Interactive MicroSim for c3, c4, and cam photosynthesis comparison",
-  "date": "2026-02-27",
+  "subject": "AP Biology",
+  "description": "Interactive MicroSim comparing C3, C4, and CAM photosynthetic strategies with leaf cross-section diagrams and climate suitability analysis",
+  "date": "2026-03-06",
   "educational": {
-    "gradeLevel": [
-      "9",
-      "10",
-      "11",
-      "12"
-    ],
-    "subjectArea": "Mathematics",
-    "topic": "C3, C4, and CAM Photosynthesis Comparison",
+    "gradeLevel": ["9", "10", "11", "12"],
+    "subjectArea": "Biology",
+    "topic": "Photosynthesis Carbon Fixation Strategies",
     "learningObjectives": [
-      "TODO: Add learning objectives"
+      "Compare the C3, C4, and CAM photosynthetic strategies",
+      "Identify spatial vs temporal CO2 concentration mechanisms",
+      "Predict which strategy is favored under different climate conditions"
     ],
     "bloomsTaxonomy": "Analyze",
     "duration": "10-15 minutes",
-    "prerequisites": [],
+    "prerequisites": [
+      "Calvin cycle basics",
+      "RuBisCO and photorespiration",
+      "Stomata function"
+    ],
     "standards": []
   },
   "technical": {
@@ -26,20 +27,31 @@
     "version": "1.0",
     "canvasDimensions": {
       "width": "responsive",
-      "height": 450
+      "height": 460
     },
     "responsive": true,
     "dependencies": [],
     "accessibility": {
-      "hasAltText": false,
+      "hasAltText": true,
       "keyboardNavigable": false
     }
   },
   "pedagogical": {
-    "teachingStrategy": "Interactive exploration",
-    "keyQuestions": [],
-    "commonMisconceptions": [],
-    "assessmentOpportunities": []
+    "teachingStrategy": "Interactive comparison with climate parameter exploration",
+    "keyQuestions": [
+      "Why do C4 plants outperform C3 plants in hot environments?",
+      "How does CAM photosynthesis conserve water?",
+      "What is the tradeoff each strategy makes?"
+    ],
+    "commonMisconceptions": [
+      "C4 and CAM plants skip the Calvin cycle (they all use it)",
+      "CAM plants don't photosynthesize during the day (they do, with stomata closed)",
+      "C3 is inferior to C4 (C3 is more efficient in cool, moist conditions)"
+    ],
+    "assessmentOpportunities": [
+      "Predict which strategy wins in a given climate scenario",
+      "Explain the structural basis of C4 CO2 concentration"
+    ]
   },
   "chapter": "07-photosynthesis"
 }

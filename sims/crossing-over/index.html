@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for crossing over visualization.">
+        <meta name="description" content="Interactive step-through p5.js MicroSim showing how crossing over during prophase I generates recombinant chromatids with novel allele combinations.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Crossing Over Visualization - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for crossing over visualization.">
+        <meta property="og:description" content="Interactive step-through p5.js MicroSim showing how crossing over during prophase I generates recombinant chromatids with novel allele combinations.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/crossing-over/crossing-over.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Crossing Over Visualization - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for crossing over visualization.">
+        <meta name="twitter:description" content="Interactive step-through p5.js MicroSim showing how crossing over during prophase I generates recombinant chromatids with novel allele combinations.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/crossing-over/crossing-over.png">
       
@@ -438,6 +438,12 @@
       
         
           
+        
+      
+        
+      
+        
+      
         
       
         
@@ -1716,9 +1722,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../fermentation-pathways/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../fermentation-pathways/" class="md-nav__link">
+      
   
   
   <span class="md-ellipsis">
@@ -1727,7 +1756,13 @@
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -2745,6 +2780,75 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TODO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim TODO Tracker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DONE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim Completion Log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared-libs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared MicroSim Libraries README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2763,6 +2867,8 @@
       
         
           
+        
+      
         
       
         
@@ -2818,6 +2924,14 @@
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -2933,6 +3047,18 @@
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -3152,43 +3278,60 @@
 
 
 <h1 id="crossing-over-visualization">Crossing Over Visualization</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="502px" width="100%" scrolling="no"></iframe>
 
 <p><a class="md-button md-button--primary" href="main.html">Run the Crossing Over Visualization MicroSim Fullscreen</a>
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim provides a step-through visualization of crossing over during prophase I of meiosis. Students see exactly which alleles are located on each chromatid and watch as segments are exchanged at the chiasma, producing recombinant chromatids with novel allele combinations.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Stage 1</strong>: Observe two homologous chromosomes — maternal (pink, A-B-C-D) and paternal (blue, a-b-c-d)</li>
+<li><strong>Stage 2</strong>: Watch chromosomes replicate into sister chromatids forming a tetrad</li>
+<li><strong>Stage 3</strong>: See the chiasma (X-shaped crossover point) form between loci B and C</li>
+<li><strong>Stage 4</strong>: Before seeing the results, you are prompted to <strong>predict</strong> which alleles each recombinant chromatid will carry. Click "Reveal Answer" to check your prediction.</li>
+<li><strong>Stage 5</strong>: View the four separated gametes — 2 parental and 2 recombinant — with their allele combinations</li>
+<li><strong>Toggle "Double Crossover"</strong> to see what happens when a second chiasma forms between loci A and B</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
 <p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/crossing-over/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"502px"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>9-12 (AP Biology)</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of homologous chromosomes and alleles</li>
+<li>Basic knowledge of meiosis phases (especially prophase I)</li>
+<li>Familiarity with dominant and recessive alleles</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Students step through all 5 stages to see how crossing over works with concrete allele data visible at each step.</li>
+<li><strong>Guided Practice</strong> (5 min): Students use the prediction prompt at Stage 4 to predict recombinant allele combinations before revealing the answer. Then toggle on double crossover and predict those outcomes.</li>
+<li><strong>Assessment</strong> (5 min): Students explain why crossing over increases genetic diversity and predict the recombination frequency from the four resulting gametes.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Can students predict which alleles will appear on recombinant chromatids?</li>
+<li>Can students distinguish parental from recombinant chromatid types?</li>
+<li>Can students explain why double crossover between adjacent loci reduces the observed recombination frequency?</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Chromosomal_crossover">Chromosomal crossover - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Genetic_recombination">Genetic recombination - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Meiosis">Meiosis - Wikipedia</a></li>
 </ol>
 
 

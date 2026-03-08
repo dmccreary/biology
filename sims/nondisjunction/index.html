@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for nondisjunction in meiosis visualizer.">
+        <meta name="description" content="Interactive step-through comparison of normal meiosis, nondisjunction in meiosis I, and nondisjunction in meiosis II showing chromosome segregation errors and resulting gamete compositions.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Nondisjunction in Meiosis Visualizer - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for nondisjunction in meiosis visualizer.">
+        <meta property="og:description" content="Interactive step-through comparison of normal meiosis, nondisjunction in meiosis I, and nondisjunction in meiosis II showing chromosome segregation errors and resulting gamete compositions.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/nondisjunction/nondisjunction.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Nondisjunction in Meiosis Visualizer - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for nondisjunction in meiosis visualizer.">
+        <meta name="twitter:description" content="Interactive step-through comparison of normal meiosis, nondisjunction in meiosis I, and nondisjunction in meiosis II showing chromosome segregation errors and resulting gamete compositions.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/nondisjunction/nondisjunction.png">
       
@@ -438,6 +438,12 @@
       
         
           
+        
+      
+        
+      
+        
+      
         
       
         
@@ -1578,9 +1584,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../fermentation-pathways/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../fermentation-pathways/" class="md-nav__link">
+      
   
   
   <span class="md-ellipsis">
@@ -1589,7 +1618,13 @@
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -2147,15 +2182,6 @@
   <a href="#how-to-use" class="md-nav__link">
     <span class="md-ellipsis">
       How to Use
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
     </span>
   </a>
   
@@ -2745,6 +2771,75 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TODO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim TODO Tracker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DONE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim Completion Log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared-libs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared MicroSim Libraries README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2763,6 +2858,8 @@
       
         
           
+        
+      
         
       
         
@@ -2818,6 +2915,14 @@
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -2947,6 +3052,18 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -3050,15 +3167,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lesson-plan" class="md-nav__link">
     <span class="md-ellipsis">
       Lesson Plan
@@ -3152,43 +3260,51 @@
 
 
 <h1 id="nondisjunction-in-meiosis-visualizer">Nondisjunction in Meiosis Visualizer</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="510px" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Nondisjunction in Meiosis Visualizer MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">View Nondisjunction Visualizer Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This step-through visualization compares three parallel columns showing the same
+cell progressing through meiosis: normal meiosis (left), nondisjunction in
+meiosis I (center), and nondisjunction in meiosis II (right). Students can
+pinpoint exactly where each error occurs and trace the chromosomal consequences
+through both divisions to the final gametes.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
-<h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
-<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/nondisjunction/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
-        <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
-        <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li><strong>Click "Next"</strong> to advance through the 5 stages of meiosis (synchronized across all three columns).</li>
+<li><strong>Compare columns</strong> at each stage — the error step is highlighted with a red glow and "FAIL" label.</li>
+<li><strong>Read descriptions</strong> at the bottom of each column for stage-specific explanations.</li>
+<li><strong>At the final stage</strong>, observe the gamete compositions: green borders = normal (n=2), red borders = abnormal (n+1 or n-1).</li>
+<li>Use <strong>"Previous"</strong> to step back and re-examine any stage.</li>
+</ol>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>9-12 (AP Biology)</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of meiosis I (homolog separation) and meiosis II (sister chromatid separation)</li>
+<li>Knowledge of diploid (2n) and haploid (n) chromosome numbers</li>
+<li>Familiarity with homologous chromosomes vs. sister chromatids</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Step through all 5 stages. At each stage, compare the three columns. Identify which column shows the error and at which stage.</li>
+<li><strong>Guided Practice</strong> (5 min): Answer: "How do the final gametes differ between nondisjunction in meiosis I vs. meiosis II?" Note the number of abnormal gametes in each case.</li>
+<li><strong>Assessment</strong> (5 min): Predict: if a gamete with n+1 chromosomes is fertilized by a normal gamete, what will the resulting zygote's chromosome number be? What condition does this cause?</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Can students identify at which meiotic stage each type of nondisjunction occurs?</li>
+<li>Can students predict the chromosomal composition of gametes resulting from each error?</li>
+<li>Can students explain why nondisjunction in meiosis I produces 4 abnormal gametes but nondisjunction in meiosis II produces only 2 abnormal gametes?</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Nondisjunction">Nondisjunction - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Aneuploidy">Aneuploidy - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Down_syndrome">Down syndrome - Wikipedia</a></li>
 </ol>
 
 

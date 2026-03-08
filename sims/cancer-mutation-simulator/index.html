@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for cancer mutation simulator.">
+        <meta name="description" content="Interactive p5.js MicroSim demonstrating how accumulating mutations in proto-oncogenes and tumor suppressor genes progressively disrupt cell cycle control, leading to cancer.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Cancer Mutation Simulator - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for cancer mutation simulator.">
+        <meta property="og:description" content="Interactive p5.js MicroSim demonstrating how accumulating mutations in proto-oncogenes and tumor suppressor genes progressively disrupt cell cycle control, leading to cancer.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/cancer-mutation-simulator/cancer-mutation-simulator.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Cancer Mutation Simulator - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for cancer mutation simulator.">
+        <meta name="twitter:description" content="Interactive p5.js MicroSim demonstrating how accumulating mutations in proto-oncogenes and tumor suppressor genes progressively disrupt cell cycle control, leading to cancer.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/cancer-mutation-simulator/cancer-mutation-simulator.png">
       
@@ -438,6 +438,12 @@
       
         
           
+        
+      
+        
+      
+        
+      
         
       
         
@@ -1716,9 +1722,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../fermentation-pathways/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../fermentation-pathways/" class="md-nav__link">
+      
   
   
   <span class="md-ellipsis">
@@ -1727,7 +1756,13 @@
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -2745,6 +2780,75 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TODO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim TODO Tracker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DONE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim Completion Log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared-libs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared MicroSim Libraries README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2763,6 +2867,8 @@
       
         
           
+        
+      
         
       
         
@@ -2818,6 +2924,14 @@
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -2933,6 +3047,18 @@
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -3152,43 +3278,61 @@
 
 
 <h1 id="cancer-mutation-simulator">Cancer Mutation Simulator</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="522px" width="100%" scrolling="no"></iframe>
 
 <p><a class="md-button md-button--primary" href="main.html">Run the Cancer Mutation Simulator MicroSim Fullscreen</a>
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim demonstrates the multi-hit model of colorectal cancer, showing how six sequential mutations progressively transform normal colon epithelial cells into malignant carcinoma. Each mutation removes one layer of cell cycle control, illustrating the hallmarks of cancer.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Click each mutation</strong> in the left panel in sequential order (mutations must be added in order, matching the actual progression of colorectal cancer)</li>
+<li><strong>Observe the cell behavior</strong> in the center panel as cells become increasingly disorganized, the growth curve steepens, and colors shift from healthy green to cancer red</li>
+<li><strong>Read the mutation details</strong> in the right panel to learn about each gene, its protein product, and its role in cancer</li>
+<li><strong>Hover over any mutation</strong> in the checklist to see the affected protein and associated cancer types</li>
+<li><strong>Track the hallmarks progress bar</strong> at the bottom right to see which cancer hallmarks have been acquired</li>
+<li><strong>Press "Reset to Normal"</strong> to return to healthy cell state and start over</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
 <p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/cancer-mutation-simulator/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"522px"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>9-12 (AP Biology)</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of cell cycle phases and checkpoint control</li>
+<li>Familiarity with proto-oncogenes and tumor suppressor genes</li>
+<li>Basic understanding of signal transduction pathways</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Students click through all 6 mutations, observing how each change affects cell behavior, growth rate, and organization.</li>
+<li><strong>Guided Practice</strong> (5 min): Students identify which mutations are in oncogenes vs. tumor suppressors and explain why oncogene mutations are dominant while tumor suppressor mutations are recessive.</li>
+<li><strong>Assessment</strong> (5 min): Students predict what would happen if only mutations 1 and 6 occurred (without the intermediate steps) and explain why cancer requires multiple mutations.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Can students distinguish between oncogene activation and tumor suppressor loss?</li>
+<li>Can students explain why cancer is a multi-step process requiring 5-7 mutations?</li>
+<li>Can students identify which hallmark of cancer each mutation contributes to?</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Colorectal_cancer">Colorectal cancer - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Knudson_hypothesis">Knudson hypothesis - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/The_Hallmarks_of_Cancer">Hallmarks of cancer - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tumor_suppressor_gene">Tumor suppressor gene - Wikipedia</a></li>
 </ol>
 
 

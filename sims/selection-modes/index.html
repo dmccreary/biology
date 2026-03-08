@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive Chart.js MicroSim for selection modes visualizer.">
+        <meta name="description" content="Animated Chart.js visualization showing how stabilizing, directional, and disruptive selection change a phenotype distribution over 30 generations, with fitness zones, original distribution overlay, and speed control.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Selection Modes Visualizer - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive Chart.js MicroSim for selection modes visualizer.">
+        <meta property="og:description" content="Animated Chart.js visualization showing how stabilizing, directional, and disruptive selection change a phenotype distribution over 30 generations, with fitness zones, original distribution overlay, and speed control.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/selection-modes/selection-modes.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Selection Modes Visualizer - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive Chart.js MicroSim for selection modes visualizer.">
+        <meta name="twitter:description" content="Animated Chart.js visualization showing how stabilizing, directional, and disruptive selection change a phenotype distribution over 30 generations, with fitness zones, original distribution overlay, and speed control.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/selection-modes/selection-modes.png">
       
@@ -438,6 +438,12 @@
       
         
           
+        
+      
+        
+      
+        
+      
         
       
         
@@ -1578,9 +1584,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../fermentation-pathways/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../fermentation-pathways/" class="md-nav__link">
+      
   
   
   <span class="md-ellipsis">
@@ -1589,7 +1618,13 @@
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -2360,15 +2395,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lesson-plan" class="md-nav__link">
     <span class="md-ellipsis">
       Lesson Plan
@@ -2745,6 +2771,75 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TODO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim TODO Tracker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DONE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim Completion Log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared-libs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared MicroSim Libraries README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2763,6 +2858,8 @@
       
         
           
+        
+      
         
       
         
@@ -2818,6 +2915,14 @@
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -2947,6 +3052,18 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -3050,15 +3167,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lesson-plan" class="md-nav__link">
     <span class="md-ellipsis">
       Lesson Plan
@@ -3152,43 +3260,49 @@
 
 
 <h1 id="selection-modes-visualizer">Selection Modes Visualizer</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="460px" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Selection Modes Visualizer MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">View Selection Modes Visualizer Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This animated visualization shows how three types of natural selection — stabilizing, directional, and disruptive — change a population's phenotype distribution over 30 generations. A green fitness zone shows which phenotype values are favored under each mode. Students select a mode, click Run, and watch the bar chart distribution shift in real time. An overlay toggle shows the original distribution (dashed line) for comparison, making the shape change dramatic and clear.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
-<h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
-<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/selection-modes/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
-        <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
-        <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li><strong>Select a mode</strong> — click Stabilizing, Directional, or Disruptive.</li>
+<li><strong>Click "Run"</strong> to animate the distribution changing over 30 generations.</li>
+<li><strong>Adjust the speed slider</strong> to control how fast generations advance.</li>
+<li><strong>Click "Show Original"</strong> to overlay the starting distribution as a dashed line for comparison.</li>
+<li><strong>Click "Reset"</strong> to return to generation 0 and try a different mode.</li>
+<li><strong>Hover over bars</strong> to see exact frequency values.</li>
+</ol>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>9-12 (AP Biology)</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of phenotype variation within populations</li>
+<li>Knowledge of natural selection as differential reproductive success</li>
+<li>Familiarity with normal (bell curve) distributions</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Run all three selection modes with the overlay turned on. For each, describe how the distribution shape changed: Did it narrow? Shift? Split? Sketch the final shape for each mode.</li>
+<li><strong>Guided Practice</strong> (5 min): For each mode, identify a real organism example: (a) stabilizing — human birth weight, (b) directional — antibiotic resistance in bacteria, (c) disruptive — beak size in African seed crackers. Explain why each example matches the pattern you observed.</li>
+<li><strong>Assessment</strong> (5 min): Given a before-and-after distribution that has shifted to the right, identify the selection mode. Repeat for a distribution that has narrowed, and one that has become bimodal. Explain your reasoning.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Can students match each selection mode to the resulting distribution shape (narrowed, shifted, bimodal)?</li>
+<li>Can students identify real-world examples of each selection type?</li>
+<li>Can students explain why the fitness zone shape determines the distribution change?</li>
+<li>Can students predict the outcome after 30 generations given a fitness zone diagram?</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Stabilizing_selection">Stabilizing selection - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Directional_selection">Directional selection - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Disruptive_selection">Disruptive selection - Wikipedia</a></li>
 </ol>
 
 

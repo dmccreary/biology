@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive Chart.js MicroSim for population growth model explorer.">
+        <meta name="description" content="Interactive Chart.js visualization comparing exponential and logistic population growth models with adjustable r, K, and N₀ parameters, carrying capacity line, overshoot mode, and data table.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Population Growth Model Explorer - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive Chart.js MicroSim for population growth model explorer.">
+        <meta property="og:description" content="Interactive Chart.js visualization comparing exponential and logistic population growth models with adjustable r, K, and N₀ parameters, carrying capacity line, overshoot mode, and data table.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/population-growth/population-growth.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Population Growth Model Explorer - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive Chart.js MicroSim for population growth model explorer.">
+        <meta name="twitter:description" content="Interactive Chart.js visualization comparing exponential and logistic population growth models with adjustable r, K, and N₀ parameters, carrying capacity line, overshoot mode, and data table.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/population-growth/population-growth.png">
       
@@ -438,6 +438,12 @@
       
         
           
+        
+      
+        
+      
+        
+      
         
       
         
@@ -1578,9 +1584,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../fermentation-pathways/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../fermentation-pathways/" class="md-nav__link">
+      
   
   
   <span class="md-ellipsis">
@@ -1589,7 +1618,13 @@
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -2268,15 +2303,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lesson-plan" class="md-nav__link">
     <span class="md-ellipsis">
       Lesson Plan
@@ -2745,6 +2771,75 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TODO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim TODO Tracker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DONE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim Completion Log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared-libs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared MicroSim Libraries README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2763,6 +2858,8 @@
       
         
           
+        
+      
         
       
         
@@ -2818,6 +2915,14 @@
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -2947,6 +3052,18 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -3050,15 +3167,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lesson-plan" class="md-nav__link">
     <span class="md-ellipsis">
       Lesson Plan
@@ -3152,43 +3260,52 @@
 
 
 <h1 id="population-growth-model-explorer">Population Growth Model Explorer</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="460px" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Population Growth Model Explorer MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">View Population Growth Model Explorer Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This interactive visualization compares exponential and logistic population growth models side by side. Students adjust four key parameters — intrinsic growth rate (<span class="arithmatex">\(r_{max}\)</span>), carrying capacity (<span class="arithmatex">\(K\)</span>), initial population size (<span class="arithmatex">\(N_0\)</span>), and number of generations — and immediately see how each parameter affects the growth curves. The exponential model (<span class="arithmatex">\(dN/dt = rN\)</span>) shows unlimited growth, while the logistic model (<span class="arithmatex">\(dN/dt = rN(K-N)/K\)</span>) demonstrates density-dependent growth that levels off at the carrying capacity. An overshoot mode adds a time lag that produces oscillations around <span class="arithmatex">\(K\)</span>.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
-<h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
-<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/population-growth/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
-        <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
-        <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li><strong>Select a view</strong> — click "Both Models", "Exponential", or "Logistic" to focus on one or both curves.</li>
+<li><strong>Adjust parameters</strong> using the sliders on the right:</li>
+<li><strong>r</strong> — intrinsic rate of increase (0.01 to 2.0)</li>
+<li><strong>K</strong> — carrying capacity (100 to 10,000)</li>
+<li><strong>N₀</strong> — starting population (1 to 1,000)</li>
+<li><strong>Generations</strong> — time range (10 to 200)</li>
+<li><strong>Enable Overshoot</strong> to add a 3-generation time lag, causing the logistic population to oscillate around <span class="arithmatex">\(K\)</span>.</li>
+<li><strong>Click "Data Table"</strong> to see numerical values at each time step.</li>
+<li><strong>Hover over the chart</strong> to see exact population values at any generation.</li>
+</ol>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>9-12 (AP Biology)</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of population as a group of interbreeding organisms</li>
+<li>Familiarity with birth rate, death rate, and growth rate concepts</li>
+<li>Basic understanding of exponential functions</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Start with both models visible. Set r=0.5, K=1000, N₀=10. Notice where the two curves diverge. At what population size does the logistic curve start to slow down? What fraction of K is this? (Answer: approximately K/2, the inflection point where dN/dt is maximized.)</li>
+<li><strong>Guided Practice</strong> (5 min): Switch to logistic only. Increase r from 0.1 to 1.5 — how does r affect how quickly the population reaches K? Now enable Overshoot — what happens when r is high (&gt;1.0)? Why do real populations sometimes overshoot K?</li>
+<li><strong>Assessment</strong> (5 min): A population of rabbits has r=0.3, K=500, and starts with 20 individuals. Predict: How many generations until the population reaches 250 (half of K)? Set the parameters and check. Then answer: If K drops to 200 due to habitat loss, what happens to the population trajectory?</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Can students explain why the exponential model is unrealistic for long-term population growth?</li>
+<li>Can students identify the inflection point of the logistic curve and explain its biological significance?</li>
+<li>Can students predict how changing r, K, or N₀ will affect the growth curve shape?</li>
+<li>Can students explain why time lags cause population oscillations around K?</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Logistic_function">Logistic function - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Population_dynamics">Population dynamics - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Carrying_capacity">Carrying capacity - Wikipedia</a></li>
 </ol>
 
 

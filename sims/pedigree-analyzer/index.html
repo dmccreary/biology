@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for interactive pedigree analyzer.">
+        <meta name="description" content="Quiz-style pedigree analysis tool where students classify 12 pre-built pedigrees by inheritance mode (autosomal dominant, autosomal recessive, X-linked recessive, X-linked dominant) with immediate feedback and genotype reveal.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -74,7 +74,7 @@
       
         <meta property="og:title" content="Interactive Pedigree Analyzer - AP Biology - An Interactive Course">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for interactive pedigree analyzer.">
+        <meta property="og:description" content="Quiz-style pedigree analysis tool where students classify 12 pre-built pedigrees by inheritance mode (autosomal dominant, autosomal recessive, X-linked recessive, X-linked dominant) with immediate feedback and genotype reveal.">
       
         <meta property="og:image" content="https://dmccreary.github.io/biology/sims/pedigree-analyzer/pedigree-analyzer.png">
       
@@ -90,7 +90,7 @@
       
         <meta name="twitter:title" content="Interactive Pedigree Analyzer - AP Biology - An Interactive Course">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for interactive pedigree analyzer.">
+        <meta name="twitter:description" content="Quiz-style pedigree analysis tool where students classify 12 pre-built pedigrees by inheritance mode (autosomal dominant, autosomal recessive, X-linked recessive, X-linked dominant) with immediate feedback and genotype reveal.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/biology/sims/pedigree-analyzer/pedigree-analyzer.png">
       
@@ -438,6 +438,12 @@
       
         
           
+        
+      
+        
+      
+        
+      
         
       
         
@@ -1578,9 +1584,32 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../fermentation-pathways/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../fermentation-pathways/" class="md-nav__link">
+      
   
   
   <span class="md-ellipsis">
@@ -1589,7 +1618,13 @@
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -1848,15 +1883,6 @@
   <a href="#how-to-use" class="md-nav__link">
     <span class="md-ellipsis">
       How to Use
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
     </span>
   </a>
   
@@ -2745,6 +2771,75 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TODO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim TODO Tracker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DONE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MicroSim Completion Log
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared-libs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared MicroSim Libraries README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2763,6 +2858,8 @@
       
         
           
+        
+      
         
       
         
@@ -2818,6 +2915,14 @@
       
         
           
+        
+      
+        
+      
+        
+      
+        
+      
         
       
         
@@ -2947,6 +3052,18 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -3050,15 +3167,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iframe-embed-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Iframe Embed Code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#lesson-plan" class="md-nav__link">
     <span class="md-ellipsis">
       Lesson Plan
@@ -3152,43 +3260,51 @@
 
 
 <h1 id="interactive-pedigree-analyzer">Interactive Pedigree Analyzer</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="530px" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Interactive Pedigree Analyzer MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">View Pedigree Analyzer Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This quiz-style tool presents 12 pre-built three-generation pedigrees (3 per
+inheritance mode) in randomized order. Students must analyze the pedigree and
+select the correct inheritance pattern. Immediate feedback explains the key
+diagnostic clues. After answering, hovering over any individual reveals their
+inferred genotype.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
-<h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
-<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/biology/sims/pedigree-analyzer/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
-        <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
-        <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></tbody></table></div>
+<ol>
+<li><strong>Examine the pedigree</strong> — squares are males, circles are females, filled = affected, unfilled = unaffected.</li>
+<li><strong>Select an inheritance pattern</strong> from the four buttons (Autosomal Dominant, Autosomal Recessive, X-Linked Recessive, X-Linked Dominant).</li>
+<li><strong>Read the feedback</strong> — correct answers show the key clues; incorrect answers provide a diagnostic hint.</li>
+<li><strong>Hover over individuals</strong> after answering to see their inferred genotypes.</li>
+<li><strong>Click "New Pedigree"</strong> to load the next challenge. Your score is tracked.</li>
+</ol>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>9-12 (AP Biology)</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of dominant vs. recessive alleles</li>
+<li>Knowledge of autosomal vs. sex-linked inheritance</li>
+<li>Familiarity with standard pedigree symbols (squares, circles, filled/unfilled)</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Work through 3-4 pedigrees. After each answer, hover over individuals to see genotypes and read the diagnostic clues.</li>
+<li><strong>Guided Practice</strong> (5 min): Before selecting an answer, write down: (a) Does the trait skip generations? (b) Are males and females equally affected? (c) Do affected fathers pass to all daughters? Use these questions to narrow down the mode.</li>
+<li><strong>Assessment</strong> (5 min): Try to get 5 correct in a row. For each one, explain which clue was most diagnostic.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ul>
+<li>Can students distinguish autosomal dominant from autosomal recessive based on whether the trait skips generations?</li>
+<li>Can students identify X-linked recessive by noting that only males are affected?</li>
+<li>Can students recognize X-linked dominant by the pattern of affected father transmitting to all daughters but no sons?</li>
+</ul>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Pedigree_chart">Pedigree chart - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Autosomal_dominant">Autosomal dominant inheritance - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/X-linked_recessive_inheritance">X-linked recessive inheritance - Wikipedia</a></li>
 </ol>
 
 

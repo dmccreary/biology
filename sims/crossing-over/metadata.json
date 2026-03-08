@@ -1,9 +1,9 @@
 {
   "title": "Crossing Over Visualization",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
-  "description": "Interactive MicroSim for crossing over visualization",
-  "date": "2026-02-27",
+  "subject": "AP Biology",
+  "description": "Step-through visualization of crossing over during prophase I showing how allele segments are exchanged between homologous chromosomes to produce recombinant chromatids",
+  "date": "2026-03-07",
   "educational": {
     "gradeLevel": [
       "9",
@@ -11,14 +11,21 @@
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
-    "topic": "Crossing Over Visualization",
+    "subjectArea": "Biology",
+    "topic": "Crossing Over and Genetic Recombination",
     "learningObjectives": [
-      "TODO: Add learning objectives"
+      "Explain how crossing over during prophase I generates recombinant chromatids",
+      "Predict which alleles will appear on recombinant chromatids after crossing over",
+      "Distinguish parental from recombinant chromatid types",
+      "Compare single vs double crossover outcomes"
     ],
-    "bloomsTaxonomy": "Create",
+    "bloomsTaxonomy": "Understand",
     "duration": "10-15 minutes",
-    "prerequisites": [],
+    "prerequisites": [
+      "Homologous chromosomes and alleles",
+      "Meiosis phases (especially prophase I)",
+      "Dominant and recessive alleles"
+    ],
     "standards": []
   },
   "technical": {
@@ -26,20 +33,31 @@
     "version": "1.0",
     "canvasDimensions": {
       "width": "responsive",
-      "height": 450
+      "height": 500
     },
     "responsive": true,
     "dependencies": [],
     "accessibility": {
-      "hasAltText": false,
+      "hasAltText": true,
       "keyboardNavigable": false
     }
   },
   "pedagogical": {
-    "teachingStrategy": "Interactive exploration",
-    "keyQuestions": [],
-    "commonMisconceptions": [],
-    "assessmentOpportunities": []
+    "teachingStrategy": "Step-through with predict-before-reveal",
+    "keyQuestions": [
+      "Which alleles will each recombinant chromatid carry after crossing over?",
+      "How does crossing over increase genetic diversity?",
+      "What effect does double crossover have on recombination frequency?"
+    ],
+    "commonMisconceptions": [
+      "Crossing over exchanges entire chromosomes rather than segments",
+      "All four chromatids in a tetrad are recombinant after crossing over",
+      "Crossing over always occurs at the same location"
+    ],
+    "assessmentOpportunities": [
+      "Predict recombinant allele combinations before reveal",
+      "Compare single vs double crossover results"
+    ]
   },
   "chapter": "11-meiosis-and-mendelian-genetics"
 }
