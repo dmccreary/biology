@@ -50,3 +50,5 @@ Always use the /microsim-generator skill to implement these Microsims
 @docs/sims/cell-cycle-phases/ needs UI adjustments
 
 @docs/sims/species-interactions/ has no visual feedback in the quiz mode
+
+@docs/sims/cladogram-builder/ has UI and logic issues

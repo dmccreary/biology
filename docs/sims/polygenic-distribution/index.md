@@ -11,7 +11,7 @@ quality_score: 0
 
 # Polygenic Trait Distribution Visualizer
 
-<iframe src="main.html" height="480px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="600px" width="100%" scrolling="no"></iframe>
 
 [View Polygenic Trait Distribution Visualizer Fullscreen](./main.html){ .md-button .md-button--primary }
 
