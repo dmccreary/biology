@@ -1,0 +1,212 @@
+/* Species Interactions Web Stylesheet */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: aliceblue;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#network {
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+}
+
+/* Title */
+.title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #1a1a1a;
+    background-color: aliceblue;
+    padding: 2px 12px;
+    z-index: 10;
+}
+
+/* Legend */
+.legend {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 6px 10px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.legend-title {
+    font-size: 11px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 3px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin: 2px 0;
+    font-size: 11px;
+}
+
+.legend-line {
+    width: 20px;
+    height: 3px;
+    border-radius: 2px;
+    margin-right: 6px;
+}
+
+/* Right Panel */
+.right-panel {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 10;
+}
+
+.status-info {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.status-title {
+    font-weight: bold;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #2C3E50;
+}
+
+.status-text {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.controls {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn {
+    padding: 7px 14px;
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-secondary {
+    background-color: #757575;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #616161;
+}
+
+.btn-quiz {
+    background-color: #F39C12;
+    color: white;
+}
+
+.btn-quiz:hover {
+    background-color: #E67E22;
+}
+
+.btn-quiz.active {
+    background-color: #D35400;
+}
+
+/* Quiz Panel */
+#quiz-panel {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.quiz-prompt {
+    font-size: 13px;
+    font-weight: bold;
+    color: #2C3E50;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.quiz-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.quiz-option {
+    padding: 6px 10px;
+    font-size: 12px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s;
+}
+
+.quiz-option:hover {
+    background: #f0f0f0;
+    border-color: #999;
+}
+
+.quiz-option.correct {
+    background: #D5F5E3;
+    border-color: #27AE60;
+    color: #1E8449;
+}
+
+.quiz-option.incorrect {
+    background: #FADBD8;
+    border-color: #E74C3C;
+    color: #C0392B;
+}
+
+.quiz-option:disabled {
+    cursor: default;
+    opacity: 0.7;
+}
+
+.quiz-score {
+    font-size: 12px;
+    font-weight: bold;
+    color: #555;
+    margin-top: 8px;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .title { font-size: 16px; }
+    .right-panel { width: 200px; }
+    .legend-item { font-size: 9px; }
+    .btn { padding: 6px 10px; font-size: 11px; }
+}
