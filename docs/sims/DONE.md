@@ -121,6 +121,52 @@ Step-through model of homologous chromosomes: Stage 1 shows chromatids with loci
 
 ---
 
+## test-cross-simulator
+
+- **Title:** Test Cross Simulator
+- **Chapter:** 11-meiosis-and-mendelian-genetics
+- **Library:** p5.js
+- **Bloom:** Create (L6)
+- **Status:** implemented
+- **Complexity Rating:** 6
+- **Target:** `docs/sims/test-cross-simulator/test-cross-simulator.js`
+
+### Specification
+
+**Type:** MicroSim (p5.js)<br/>
+**sim-id:** test-cross-simulator<br/>
+**Library:** p5.js<br/>
+
+**Learning objective:** Students will be able to *apply* (Bloom's L3: Apply) the test cross procedure to determine an unknown genotype, and *evaluate* (Bloom's L5: Evaluate) observed offspring ratios to distinguish homozygous from heterozygous parents.
+
+**Instructional Rationale:** A simulation approach lets students perform multiple test crosses and observe the statistical patterns that distinguish AA from Aa genotypes. Generating offspring one at a time creates engagement and mirrors real experimental uncertainty.
+
+**Canvas:** 780 × 460 px, responsive.
+
+**Layout:**
+
+- Left panel: "Mystery parent" box showing dominant phenotype with unknown genotype ("T?")
+- Center: Cross diagram showing the mystery parent × homozygous recessive parent
+- Right panel: Offspring tally and running ratio
+
+**Interaction:**
+- "Generate Offspring" button: produces one offspring at a time with genotype revealed after a brief delay
+- After 20+ offspring, a "Reveal Genotype" button appears
+- Confidence meter: as offspring accumulate, shows statistical confidence in the determination
+- "New Mystery" button: randomizes the mystery parent's genotype (50% chance AA, 50% chance Aa)
+- Trait selector dropdown: choose from 3 sample traits (seed shape, flower color, plant height)
+
+**Data Visibility:**
+- Running tally: Dominant: X, Recessive: Y
+- Running ratio displayed as "X : Y"
+- After reveal: explanation of the statistical reasoning
+
+**Colors:** Dominant phenotype offspring: green. Recessive phenotype offspring: tan. Mystery parent: purple with "?" overlay.
+
+**Responsive design:** Width responsive design so the MicroSim can be used within a fixed-height iframe.
+
+---
+
 ## punnett-square-calculator
 
 - **Title:** Interactive Punnett Square Calculator
