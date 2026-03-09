@@ -86,7 +86,7 @@
 - **UI Elements:** 9
 - **Difficulty:** Hard
 
-### [Cell Membrane — Phospholipid Bilayer](../chapters/03-biological-macromolecules/index.md#diagram-cell-membrane-—-phospholipid-bilayer)
+### [Cell Membrane — Phospholipid Bilayer](../chapters/03-biological-macromolecules/index.md#diagram-cell-membrane-phospholipid-bilayer)
 - **Status:** Complete
 - **Type:** Microsim
 - **Bloom's Taxonomy:** Not specified
@@ -125,7 +125,7 @@
 - **UI Elements:** 9
 - **Difficulty:** Hard
 
-### [Endomembrane System — Protein Secretion Pathway](../chapters/04-cell-organization-and-organelles/index.md#diagram-endomembrane-system-—-protein-secretion-pathway)
+### [Endomembrane System — Protein Secretion Pathway](../chapters/04-cell-organization-and-organelles/index.md#diagram-endomembrane-system-protein-secretion-pathway)
 - **Status:** Specified
 - **Type:** Microsim
 - **Bloom's Taxonomy:** Not specified
@@ -164,7 +164,7 @@
 - **UI Elements:** 10
 - **Difficulty:** Hard
 
-### [Cell Membrane — Fluid Mosaic Model](../chapters/05-cell-membranes-and-transport/index.md#diagram-cell-membrane-—-fluid-mosaic-model)
+### [Cell Membrane — Fluid Mosaic Model](../chapters/05-cell-membranes-and-transport/index.md#diagram-cell-membrane-fluid-mosaic-model)
 - **Status:** Complete
 - **Type:** Microsim
 - **Bloom's Taxonomy:** Not specified

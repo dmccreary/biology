@@ -495,7 +495,7 @@ Most autosomal monosomies are lethal before birth, while some trisomies (particu
 
 #### Diagram: Nondisjunction in Meiosis Visualizer
 
-<iframe src="../../sims/nondisjunction/main.html" height="580" width="100%" scrolling="no"></iframe>
+<iframe src="../../sims/nondisjunction/main.html" height="400" width="100%" scrolling="no"></iframe>
 
 *[View Fullscreen](../../sims/nondisjunction/main.html)*
 

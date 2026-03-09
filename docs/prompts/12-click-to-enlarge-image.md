@@ -23,4 +23,4 @@ plugins:
 
 ## Test
 
-[Stages of Mitosis Image](../chapters/10-cell-cycle-mitosis-and-cancer/#diagram-the-stages-of-mitosis-image)
+![Stages of Mitosis Image](../img/six-stages-of-mitosis.png)

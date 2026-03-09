@@ -11,7 +11,7 @@ quality_score: 0
 
 # Nondisjunction in Meiosis Visualizer
 
-<iframe src="main.html" height="510px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="400px" width="100%" scrolling="no"></iframe>
 
 [View Nondisjunction Visualizer Fullscreen](./main.html){ .md-button .md-button--primary }
 

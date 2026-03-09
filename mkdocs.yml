@@ -131,22 +131,6 @@ nav:
     - MicroSim Completion Log: sims/DONE.md
     - Shared MicroSim Libraries README: sims/shared-libs/README.md
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   - Stories:
     - "List of Stories": stories/index.md
     - "Gregor Mendel": stories/gregor-mendel/index.md
@@ -172,9 +156,6 @@ nav:
     - Chapter Metrics: learning-graph/chapter-metrics.md
     - Book Metrics: learning-graph/book-metrics.md
   
-  - FAQ: faq.md
-  - Glossary: glossary.md
-
   - Sample Prompts:
     - List of Prompts: prompts/index.md
     - prompts/01-seed-prompt.md
@@ -190,6 +171,8 @@ nav:
     - prompts/20-microsim-generation.md
     - prompts/mascot-tuning.md
 
+  - FAQ: faq.md
+  - Glossary: glossary.md
   - License: license.md
 
 theme:

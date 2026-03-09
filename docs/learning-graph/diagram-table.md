@@ -30,17 +30,17 @@ hide:
 | 2 | [Water Molecule Polarity](../chapters/02-water-ph-and-organic-chemistry/index.md#diagram-water-molecule-polarity) | Specified | Microsim | Not specified | 10 | Hard |  |
 | 2 | [pH Scale Explorer](../chapters/02-water-ph-and-organic-chemistry/index.md#diagram-ph-scale-explorer) | Complete | Microsim | Not specified | 1 | Medium |  |
 | 3 | [Carbohydrate Structures Explorer](../chapters/03-biological-macromolecules/index.md#diagram-carbohydrate-structures-explorer) | Specified | Microsim | Not specified | 9 | Hard |  |
-| 3 | [Cell Membrane — Phospholipid Bilayer](../chapters/03-biological-macromolecules/index.md#diagram-cell-membrane-—-phospholipid-bilayer) | Complete | Microsim | Not specified | 0 | Easy |  |
+| 3 | [Cell Membrane — Phospholipid Bilayer](../chapters/03-biological-macromolecules/index.md#diagram-cell-membrane-phospholipid-bilayer) | Complete | Microsim | Not specified | 0 | Easy |  |
 | 3 | [DNA Double Helix Structure](../chapters/03-biological-macromolecules/index.md#diagram-dna-double-helix-structure) | Complete | Microsim | Not specified | 0 | Easy |  |
 | 3 | [Protein Structure Levels Explorer](../chapters/03-biological-macromolecules/index.md#diagram-protein-structure-levels-explorer) | Specified | Microsim | Not specified | 11 | Hard |  |
 | 4 | [Chloroplast Structure](../chapters/04-cell-organization-and-organelles/index.md#diagram-chloroplast-structure) | Complete | Microsim | Not specified | 0 | Easy |  |
 | 4 | [Cytoskeleton Component Explorer](../chapters/04-cell-organization-and-organelles/index.md#diagram-cytoskeleton-component-explorer) | Specified | Microsim | Not specified | 9 | Hard |  |
-| 4 | [Endomembrane System — Protein Secretion Pathway](../chapters/04-cell-organization-and-organelles/index.md#diagram-endomembrane-system-—-protein-secretion-pathway) | Specified | Microsim | Not specified | 8 | Hard |  |
+| 4 | [Endomembrane System — Protein Secretion Pathway](../chapters/04-cell-organization-and-organelles/index.md#diagram-endomembrane-system-protein-secretion-pathway) | Specified | Microsim | Not specified | 8 | Hard |  |
 | 4 | [Mitochondria Structure](../chapters/04-cell-organization-and-organelles/index.md#diagram-mitochondria-structure) | Complete | Microsim | Not specified | 0 | Easy |  |
 | 4 | [Prokaryote vs. Eukaryote Cell Comparison](../chapters/04-cell-organization-and-organelles/index.md#diagram-prokaryote-vs-eukaryote-cell-comparison) | Specified | Microsim | Not specified | 4 | Hard |  |
 | 4 | [Surface Area to Volume Ratio Explorer](../chapters/04-cell-organization-and-organelles/index.md#diagram-surface-area-to-volume-ratio-explorer) | Specified | Microsim | Not specified | 15 | Very Hard |  |
 | 5 | [Cell Junctions Explorer](../chapters/05-cell-membranes-and-transport/index.md#diagram-cell-junctions-explorer) | Specified | Microsim | Not specified | 10 | Hard |  |
-| 5 | [Cell Membrane — Fluid Mosaic Model](../chapters/05-cell-membranes-and-transport/index.md#diagram-cell-membrane-—-fluid-mosaic-model) | Complete | Microsim | Not specified | 0 | Easy |  |
+| 5 | [Cell Membrane — Fluid Mosaic Model](../chapters/05-cell-membranes-and-transport/index.md#diagram-cell-membrane-fluid-mosaic-model) | Complete | Microsim | Not specified | 0 | Easy |  |
 | 5 | [Osmosis and Water Potential Simulator](../chapters/05-cell-membranes-and-transport/index.md#diagram-osmosis-and-water-potential-simulator) | Specified | Microsim | Not specified | 14 | Hard |  |
 | 5 | [Sodium-Potassium Pump Cycle](../chapters/05-cell-membranes-and-transport/index.md#diagram-sodium-potassium-pump-cycle) | Specified | Microsim | Not specified | 8 | Hard |  |
 | 6 | [Activation Energy and Reaction Coordinate](../chapters/06-thermodynamics-and-enzymes/index.md#diagram-activation-energy-and-reaction-coordinate) | Specified | Microsim | Not specified | 11 | Hard |  |
