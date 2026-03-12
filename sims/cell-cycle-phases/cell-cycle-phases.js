@@ -1,13 +1,12 @@
 // Cell Cycle Phases Explorer (p5.js)
-// Shows proportional cell-cycle arc segments with checkpoints and detail panel
+// Two-column layout: cycle ring left, detail panel right — no overlapping elements
 
 let canvasWidth = 760;
-const drawHeight = 420;
-const controlHeight = 80; // (2 × 35) + 10
+const drawHeight = 440;
+const controlHeight = 50;
 const canvasHeight = drawHeight + controlHeight;
-const margin = 25;
-const sliderLeftMargin = 230;
-const defaultTextSize = 16;
+const margin = 15;
+const defaultTextSize = 14;
 
 let stepButton;
 let animateButton;
@@ -66,12 +65,10 @@ const checkpoints = [
   }
 ];
 
-const ring = {
-  cx: 0,
-  cy: 0,
-  innerR: 95,
-  outerR: 165
-};
+// Ring geometry — computed dynamically based on canvas width
+let ring = { cx: 0, cy: 0, innerR: 0, outerR: 0 };
+// Boundary between ring column and detail column
+let dividerX = 0;
 
 let selectedPhase = 0;
 let pointerAngle = -90;
@@ -102,40 +99,54 @@ function setup() {
   describe('Interactive cell-cycle clock with clickable phases, checkpoints, animation, and detail panel.');
 }
 
+function computeLayout() {
+  // Left column: ring occupies ~48% of width
+  dividerX = canvasWidth * 0.48;
+  ring.cx = dividerX / 2;
+  ring.cy = drawHeight / 2 + 20; // offset below title
+  // Scale ring to fit in column with padding for labels
+  const maxR = Math.min(dividerX / 2 - 45, (drawHeight - 80) / 2 - 30);
+  ring.outerR = Math.max(80, maxR);
+  ring.innerR = ring.outerR * 0.58;
+}
+
 function draw() {
   updateCanvasSize();
-  background('white');
-  stroke('silver');
-  strokeWeight(1);
-  fill('aliceblue');
-  rect(0, 0, canvasWidth, drawHeight);
-  fill('white');
-  rect(0, drawHeight, canvasWidth, controlHeight);
+  computeLayout();
 
-  ring.cx = canvasWidth * 0.38;
-  ring.cy = drawHeight / 2;
+  // Draw area background
+  background('aliceblue');
+  noStroke();
+
+  // Control strip background
+  fill(245);
+  rect(0, drawHeight, canvasWidth, controlHeight);
+  stroke(210);
+  strokeWeight(1);
+  line(0, drawHeight, canvasWidth, drawHeight);
 
   updateAnimation();
+  hoveredCheckpoint = null;
 
   drawTitle();
   drawCycleRing();
-  hoveredCheckpoint = null;
   drawCheckpoints();
-  drawCheckpointTooltip();
   drawPointer();
-  drawLegend();
   drawDetailPanel();
   drawControlsLabel();
 }
 
 function drawTitle() {
   noStroke();
-  fill('black');
-  textSize(24);
+  fill(30);
+  textSize(18);
   textAlign(CENTER, TOP);
-  text('Cell Cycle Phases Explorer', canvasWidth / 2, 10);
-  textSize(defaultTextSize);
-  text('Click a phase or animate the clock to see durations, checkpoints, and key events.', canvasWidth / 2, 40);
+  textStyle(BOLD);
+  text('Cell Cycle Phases Explorer', canvasWidth / 2, 8);
+  textStyle(NORMAL);
+  textSize(12);
+  fill(80);
+  text('Click a phase or animate the clock to explore durations, checkpoints, and key events.', canvasWidth / 2, 30);
   textAlign(LEFT, CENTER);
 }
 
@@ -158,27 +169,47 @@ function drawCycleRing() {
   for (let i = 0; i < phases.length; i++) {
     const phase = phases[i];
     stroke(phase.color);
-    strokeWeight(i === selectedPhase ? 26 : 20);
+    strokeWeight(i === selectedPhase ? 28 : 20);
     const startRad = radians(phase.startDeg);
     const endRad = radians(phase.endDeg);
     arc(ring.cx, ring.cy, outer, outer, startRad, endRad);
   }
 
+  // Phase labels outside ring
   noStroke();
-  fill('black');
+  fill(30);
   textSize(defaultTextSize);
+  textStyle(BOLD);
   textAlign(CENTER, CENTER);
   phases.forEach((phase) => {
     const angle = radians(phase.midDeg);
-    const radius = ring.outerR + 25;
-    const x = ring.cx + cos(angle) * radius;
-    const y = ring.cy + sin(angle) * radius;
-    text(`${phase.name}`, x, y);
+    const labelR = ring.outerR + 22;
+    const lx = ring.cx + cos(angle) * labelR;
+    const ly = ring.cy + sin(angle) * labelR;
+    text(phase.name, lx, ly);
   });
+
+  // Duration inside center of ring
+  textStyle(NORMAL);
+  textSize(12);
+  fill(80);
+  const totalHours = phases.reduce((s, p) => s + p.hours, 0);
+  text('~' + totalHours + ' hrs', ring.cx, ring.cy - 8);
+  textSize(11);
+  text('total cycle', ring.cx, ring.cy + 8);
   textAlign(LEFT, CENTER);
 }
 
 function drawCheckpoints() {
+  // Label placement: push each label to a different side of its marker
+  // so nearby checkpoints (G2/M and Spindle are ~7.5° apart) don't overlap.
+  // 'out' = label on the outer edge, 'in' = label toward ring center
+  const labelSide = {
+    'G1/S checkpoint': 'out',
+    'G2/M checkpoint': 'out',
+    'Spindle checkpoint': 'in'
+  };
+
   checkpoints.forEach((cp) => {
     const phase = phases[cp.phaseIndex];
     let angleDeg = phase.endDeg;
@@ -186,121 +217,193 @@ function drawCheckpoints() {
       angleDeg = phase.startDeg + (phase.endDeg - phase.startDeg) * 0.5;
     }
     const angle = radians(angleDeg);
-    const radius = (ring.innerR + ring.outerR) / 2;
-    const x = ring.cx + cos(angle) * radius;
-    const y = ring.cy + sin(angle) * radius;
+    const cpR = (ring.innerR + ring.outerR) / 2;
+    const cx = ring.cx + cos(angle) * cpR;
+    const cy = ring.cy + sin(angle) * cpR;
+
+    // Red octagon marker
     fill('#E74C3C');
     stroke('#943126');
     strokeWeight(1.5);
-    polygon(x, y, 12, 8);
+    drawPolygon(cx, cy, 10, 8);
+
+    // Place label offset from the marker to avoid overlap
     noStroke();
-    fill('black');
-    textSize(12);
-    textAlign(CENTER, TOP);
-    text(cp.name, x, y + 14);
+    fill(60);
+    textSize(10);
+
+    let lx, ly;
+    if (cp.name === 'Spindle checkpoint') {
+      // Place to the right of the marker
+      lx = cx + 14;
+      ly = cy + 10;
+      textAlign(LEFT, CENTER);
+    } else {
+      // Push outward along the radial direction
+      const labelR = cpR + 20;
+      lx = ring.cx + cos(angle) * labelR;
+      ly = ring.cy + sin(angle) * labelR;
+      if (cp.name === 'G2/M checkpoint') ly += 40;
+      if (lx < ring.cx - 10) {
+        textAlign(RIGHT, CENTER);
+      } else if (lx > ring.cx + 10) {
+        textAlign(LEFT, CENTER);
+      } else {
+        textAlign(CENTER, BOTTOM);
+      }
+    }
+    text(cp.name, lx, ly);
     textAlign(LEFT, CENTER);
 
-    const dist = dist2(mouseX, mouseY, x, y);
-    if (dist < 18) hoveredCheckpoint = cp;
+    // Hover detection
+    if (dist(mouseX, mouseY, cx, cy) < 18) hoveredCheckpoint = cp;
   });
-}
-
-function dist2(x1, y1, x2, y2) {
-  return Math.hypot(x1 - x2, y1 - y2);
-}
-
-function drawCheckpointTooltip() {
-  if (!hoveredCheckpoint) return;
-  const panelX = margin;
-  const panelY = drawHeight - 260;
-  const w = 270;
-  const h = 90;
-  stroke('#E74C3C');
-  fill(255, 255, 255, 240);
-  rect(panelX, panelY, w, h, 10);
-  noStroke();
-  fill('black');
-  textSize(defaultTextSize);
-  text(`${hoveredCheckpoint.name}`, panelX + 12, panelY + 18);
-  text(hoveredCheckpoint.info, panelX + 12, panelY + 42, w - 24, h - 48);
 }
 
 function drawPointer() {
-  const radius = (ring.innerR + ring.outerR) / 2 + 10;
+  const pointerR = (ring.innerR + ring.outerR) / 2 + 8;
   const angle = radians(pointerAngle);
-  const x = ring.cx + cos(angle) * radius;
-  const y = ring.cy + sin(angle) * radius;
-  fill('white');
+  const px = ring.cx + cos(angle) * pointerR;
+  const py = ring.cy + sin(angle) * pointerR;
+  fill(255);
   stroke('#2C3E50');
   strokeWeight(2);
-  circle(x, y, 22);
+  circle(px, py, 18);
   noStroke();
   fill('#2C3E50');
   textAlign(CENTER, CENTER);
-  text('•', x, y + 2);
+  textSize(14);
+  text('\u2022', px, py + 1);
   textAlign(LEFT, CENTER);
 }
 
-function drawLegend() {
-  const panelX = margin;
-  const panelY = drawHeight - 150;
-  stroke(200);
-  fill(255, 255, 255, 240);
-  rect(panelX, panelY, 260, 110, 12);
-  noStroke();
-  fill('black');
-  textSize(defaultTextSize);
-  text('Checkpoint icons mark critical control points.', panelX + 12, panelY + 24, 236, 60);
-}
-
 function drawDetailPanel() {
-  const panelX = canvasWidth * 0.62;
-  const panelW = canvasWidth - panelX - margin;
-  const panelH = 260;
-  const panelY = 90;
+  const px = dividerX + 10;
+  const pw = canvasWidth - px - margin;
+  const py = 50;
+  const ph = drawHeight - py - 10;
 
+  // Panel background
   stroke(200);
-  fill(255, 255, 255, 240);
-  rect(panelX, panelY, panelW, panelH, 14);
+  strokeWeight(1);
+  fill(255, 255, 255, 230);
+  rect(px, py, pw, ph, 10);
   noStroke();
-  fill('black');
-  textSize(defaultTextSize);
-  textAlign(LEFT, TOP);
 
+  let yOff = py + 14;
+  const indent = px + 16;
+  const bulletIndent = px + 26;
+  const wrapW = pw - 36;
+
+  // Phase header with color swatch
   const phase = phases[selectedPhase];
-  text(`${phase.name} phase`, panelX + 14, panelY + 12);
-  text(`Duration: ~${phase.hours} hours`, panelX + 14, panelY + 38);
-  text('Key events:', panelX + 14, panelY + 70);
-  let offsetY = panelY + 92;
+  fill(phase.color);
+  rect(indent - 2, yOff - 2, 14, 14, 3);
+  fill(30);
+  textSize(16);
+  textStyle(BOLD);
+  textAlign(LEFT, TOP);
+  text(phase.name + ' Phase', indent + 18, yOff);
+  textStyle(NORMAL);
+  yOff += 26;
+
+  // Duration
+  textSize(defaultTextSize);
+  fill(60);
+  text('Duration: ~' + phase.hours + ' hours', indent, yOff);
+  yOff += 28;
+
+  // Key events
+  fill(30);
+  textStyle(BOLD);
+  text('Key Events', indent, yOff);
+  textStyle(NORMAL);
+  yOff += 20;
+  fill(50);
+  textSize(13);
   phase.events.forEach((evt) => {
-    text(`• ${evt}`, panelX + 24, offsetY);
-    offsetY += 20;
+    text('\u2022 ' + evt, bulletIndent, yOff, wrapW, 40);
+    yOff += 22;
   });
-  text('Key molecules:', panelX + 14, offsetY + 10);
-  offsetY += 34;
+  yOff += 10;
+
+  // Key molecules
+  fill(30);
+  textSize(defaultTextSize);
+  textStyle(BOLD);
+  text('Key Molecules', indent, yOff);
+  textStyle(NORMAL);
+  yOff += 20;
+  fill(50);
+  textSize(13);
   phase.molecules.forEach((mol) => {
-    text(`• ${mol}`, panelX + 24, offsetY);
-    offsetY += 20;
+    text('\u2022 ' + mol, bulletIndent, yOff, wrapW, 40);
+    yOff += 22;
   });
+  yOff += 14;
+
+  // Checkpoint info (shown in panel, not floating over drawing)
+  const relatedCp = checkpoints.find(c => c.phaseIndex === selectedPhase);
+  if (relatedCp) {
+    // Divider line
+    stroke(220);
+    strokeWeight(1);
+    line(indent, yOff, indent + wrapW, yOff);
+    noStroke();
+    yOff += 12;
+
+    fill('#C0392B');
+    textSize(defaultTextSize);
+    textStyle(BOLD);
+    text('\u26D4 ' + relatedCp.name, indent, yOff);
+    textStyle(NORMAL);
+    yOff += 20;
+    fill(60);
+    textSize(13);
+    text(relatedCp.info, bulletIndent, yOff, wrapW, 50);
+    yOff += 30;
+  }
+
+  // Hovered checkpoint (if different from current phase's checkpoint)
+  if (hoveredCheckpoint && (!relatedCp || hoveredCheckpoint.name !== relatedCp.name)) {
+    stroke(220);
+    strokeWeight(1);
+    line(indent, yOff, indent + wrapW, yOff);
+    noStroke();
+    yOff += 12;
+
+    fill('#E67E22');
+    textSize(defaultTextSize);
+    textStyle(BOLD);
+    text('\u26D4 ' + hoveredCheckpoint.name + ' (hovered)', indent, yOff);
+    textStyle(NORMAL);
+    yOff += 20;
+    fill(60);
+    textSize(13);
+    text(hoveredCheckpoint.info, bulletIndent, yOff, wrapW, 50);
+  }
+
+  textAlign(LEFT, CENTER);
 }
 
 function drawControlsLabel() {
   noStroke();
-  fill('black');
-  textSize(defaultTextSize);
+  fill(60);
+  textSize(12);
+  textAlign(LEFT, CENTER);
   const speedValue = (speedSlider.value() / 100).toFixed(1);
-  text(`Speed: ${speedValue}×`, margin, drawHeight + 55);
+  text('Speed: ' + speedValue + '\u00D7', margin, drawHeight + 38);
 }
 
 function positionControls() {
-  const row1Y = drawHeight + 5;
-  stepButton.position(margin, row1Y);
-  animateButton.position(margin + 165, row1Y);
-  resetButton.position(margin + 330, row1Y);
+  const btnY = drawHeight + 8;
+  stepButton.position(margin, btnY);
+  animateButton.position(margin + 110, btnY);
+  resetButton.position(margin + 250, btnY);
 
-  const row2Y = drawHeight + 40;
-  speedSlider.position(sliderLeftMargin, row2Y);
-  speedSlider.size(canvasWidth - sliderLeftMargin - margin);
+  const sliderX = margin + 100;
+  speedSlider.position(sliderX, drawHeight + 30);
+  speedSlider.size(canvasWidth - sliderX - margin - 120);
 }
 
 function stepPhase() {
@@ -310,7 +413,7 @@ function stepPhase() {
 
 function toggleAnimate() {
   animateActive = !animateActive;
-  animateButton.html(animateActive ? 'Pause Animation' : 'Animate Cycle');
+  animateButton.html(animateActive ? 'Pause' : 'Animate Cycle');
 }
 
 function resetCycle() {
@@ -323,24 +426,18 @@ function resetCycle() {
 function updateAnimation() {
   if (!animateActive) return;
   const dt = deltaTime / 1000;
-  const speed = speedSlider.value() / 100; // 0.5–2.0
+  const speed = speedSlider.value() / 100;
   pointerAngle += 40 * dt * speed;
   if (pointerAngle >= phases[phases.length - 1].endDeg) pointerAngle -= 360;
   const normalized = (pointerAngle + 360) % 360;
   for (let i = 0; i < phases.length; i++) {
     const phase = phases[i];
-    const start = (phase.startDeg + 360) % 360;
-    const end = (phase.endDeg + 360) % 360;
-    if (start < end) {
-      if (normalized >= start && normalized < end) {
-        selectedPhase = i;
-        break;
-      }
+    const s = (phase.startDeg + 360) % 360;
+    const e = (phase.endDeg + 360) % 360;
+    if (s < e) {
+      if (normalized >= s && normalized < e) { selectedPhase = i; break; }
     } else {
-      if (normalized >= start || normalized < end) {
-        selectedPhase = i;
-        break;
-      }
+      if (normalized >= s || normalized < e) { selectedPhase = i; break; }
     }
   }
 }
@@ -348,35 +445,27 @@ function updateAnimation() {
 function mousePressed() {
   const dx = mouseX - ring.cx;
   const dy = mouseY - ring.cy;
-  const dist = sqrt(dx * dx + dy * dy);
-  if (dist < ring.innerR || dist > ring.outerR) return;
+  const d = sqrt(dx * dx + dy * dy);
+  if (d < ring.innerR || d > ring.outerR + 20) return;
   let angle = degrees(atan2(dy, dx));
   if (angle < 0) angle += 360;
   for (let i = 0; i < phases.length; i++) {
     const phase = phases[i];
-    const start = (phase.startDeg + 360) % 360;
-    const end = (phase.endDeg + 360) % 360;
-    if (start < end) {
-      if (angle >= start && angle < end) {
-        selectedPhase = i;
-        pointerAngle = phase.startDeg;
-        return;
-      }
+    const s = (phase.startDeg + 360) % 360;
+    const e = (phase.endDeg + 360) % 360;
+    if (s < e) {
+      if (angle >= s && angle < e) { selectedPhase = i; pointerAngle = phase.startDeg; return; }
     } else {
-      if (angle >= start || angle < end) {
-        selectedPhase = i;
-        pointerAngle = phase.startDeg;
-        return;
-      }
+      if (angle >= s || angle < e) { selectedPhase = i; pointerAngle = phase.startDeg; return; }
     }
   }
 }
 
-function polygon(x, y, radius, sides) {
+function drawPolygon(x, y, radius, sides) {
   beginShape();
   for (let i = 0; i < sides; i++) {
-    const angle = (TWO_PI * i) / sides;
-    vertex(x + cos(angle) * radius, y + sin(angle) * radius);
+    const a = (TWO_PI * i) / sides;
+    vertex(x + cos(a) * radius, y + sin(a) * radius);
   }
   endShape(CLOSE);
 }

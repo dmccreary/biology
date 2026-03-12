@@ -4,8 +4,8 @@
 
 let containerWidth;
 let canvasWidth = 800;
-let drawHeight = 460;
-let controlHeight = 40;
+let drawHeight = 340;
+let controlHeight = 60;
 let canvasHeight = drawHeight + controlHeight;
 let containerHeight = canvasHeight;
 let margin = 10;
@@ -91,15 +91,14 @@ function positionControls() {
 
 function draw() {
     updateCanvasSize();
-    background('aliceblue');
-
+    // fill the drawing area and control area backgrounds
+    // fill the drawing area with a light blue, and the control area with white
+    fill('aliceblue');
+    // draw a thin gray line around both the drawing and control area
     stroke('silver');
     strokeWeight(1);
-    fill('aliceblue');
     rect(0, 0, canvasWidth, drawHeight);
-
     fill('white');
-    noStroke();
     rect(0, drawHeight, canvasWidth, controlHeight);
 
     // Title
@@ -121,12 +120,12 @@ function draw() {
         drawColumn(cx, 40, colW, c);
     }
 
-    // Step indicator dots
-    let dotY = drawHeight + 25;
+    // Step indicator dots at the bottom of the control area
+    let dotY = drawHeight + 45;
     for (let i = 0; i < totalSteps; i++) {
         fill(i === currentStep ? '#2C3E50' : '#BDC3C7');
         noStroke();
-        ellipse(canvasWidth / 2 - 40 + i * 20, dotY, 8, 8);
+        circle(canvasWidth / 2 - 40 + i * 20, dotY, 8);
     }
 
     // Disable buttons at boundaries
@@ -169,7 +168,7 @@ function drawColumn(x, y, w, colIdx) {
     textAlign(LEFT, BOTTOM);
     textLeading(12);
     let desc = stageDescriptions[currentStep][colIdx];
-    text(desc, x + 6, drawHeight - 14, w - 12, 60);
+    text(desc, x + 6, drawHeight - 74, w - 12, 60);
 }
 
 function drawCells(x, y, w, h, colIdx, step) {
