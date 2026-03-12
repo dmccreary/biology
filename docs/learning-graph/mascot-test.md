@@ -1,3 +1,9 @@
+---
+title: Gregor the Tree Frog Mascot Test
+description: This test page shows all mascot images as well as the admonition styles for our pedagogical agent, Gregor the Tree Frog.
+image: img/mascot/welcome.png
+og:image: img/mascot/welcome.png
+---
 # Gregor the Tree Frog - Mascot Test
 
 This page shows all mascot images as well as the admonition styles for reference. Check that all the images have a transparent background

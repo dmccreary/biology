@@ -55,4 +55,8 @@ Always use the /microsim-generator skill to implement these Microsims
 
 @docs/sims/mutation-effects/ should provide a model window when the user has an error in the deletion of an item
 
+## Screenshots Needed
 
+@docs/sims/alcoholic-fermentation-explorer/ — missing screenshot PNG
+
+@docs/sims/lactic-fermentation-explorer/ — missing screenshot PNG

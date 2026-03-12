@@ -8,6 +8,10 @@
 
     Interactive MicroSim for activation energy and reaction coordinate.
 
+-   **[Alcoholic Fermentation Explorer](./alcoholic-fermentation-explorer/index.md)**
+
+    Interactive MicroSim focusing on alcoholic fermentation in yeast and plants.
+
 -   **[Animal Cell MicroSim](./animal-cell/index.md)**
 
     ![Animal Cell MicroSim](./animal-cell/animal-cell.png)
@@ -291,6 +295,10 @@
     ![Krebs Cycle Explorer](./krebs-cycle-explorer/krebs-cycle-explorer.png)
 
     Interactive MicroSim for krebs cycle explorer.
+
+-   **[Lactic Acid Fermentation Explorer](./lactic-fermentation-explorer/index.md)**
+
+    Interactive MicroSim focusing on the lactic acid fermentation pathway.
 
 -   **[Light-Dependent Reactions (Z-Scheme)](./light-dependent-reactions/index.md)**
 
