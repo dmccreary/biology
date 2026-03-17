@@ -3,7 +3,7 @@
 - **Skill:** learning-graph-generator
 - **Skill Version:** 0.03
 - **Date:** 2026-02-25
-- **Course:** AP Biology: An Interactive Course
+- **Course:** college placement Biology: An Interactive Course
 - **Working Directory:** /Users/danmccreary/Documents/ws/biology/
 
 ## Python Programs Used
@@ -36,7 +36,7 @@
 
 ## Key Metrics
 
-- **Total Concepts:** 375 (exceeds default 200 — appropriate for full AP Biology curriculum)
+- **Total Concepts:** 375 (exceeds default 200 — appropriate for full college placement Biology curriculum)
 - **Total Edges:** 764
 - **Foundational Concepts:** 6 (Scientific Method, Atomic Structure, Cell Theory, Thermodynamics, History of Evolutionary Thought, Ecology Overview)
 - **Maximum Dependency Chain:** 25 steps
@@ -76,8 +76,8 @@
 
 ## Notes
 
-- The user requested more than the default 200 concepts given the complexity of AP Biology.
-- 375 concepts were generated covering all 8 AP Biology curriculum units.
+- The user requested more than the default 200 concepts given the complexity of college placement Biology.
+- 375 concepts were generated covering all 8 college placement Biology curriculum units.
 - The course description scored 98/100 (well above the 85 threshold), so Step 1 quality check was expedited.
 - Concepts 129/130/131/132 were reordered in the CSV to resolve a C3/C4/CAM/Photorespiration dependency chain.
 - Concepts 300/301 were reordered in the CSV to allow Biological Species Concept to serve as a prerequisite for Speciation Overview.

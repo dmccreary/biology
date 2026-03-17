@@ -15,7 +15,7 @@ The remaining rules focus on the generation of high-quality MicroSims.
 
 ## Project Overview
 
-AP Biology: An Interactive Course — an MkDocs Material intelligent textbook for advanced high school students preparing for the AP Biology exam. The textbook covers 8 College Board units across 375 concepts organized in a dependency graph.
+college placement Biology: An Interactive Course — an MkDocs Material intelligent textbook for advanced high school students preparing for the college placement Biology exam. The textbook covers 8 College Board units across 375 concepts organized in a dependency graph.
 
 
 ## Development Environment

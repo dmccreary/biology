@@ -17,11 +17,11 @@ quality_score: 5
 
 ## About This MicroSim
 
-This interactive diagram shows the complete enzymatic machinery at a DNA replication fork. Students can explore 13 labeled structures including helicase, DNA Polymerase III, primase, Okazaki fragments, DNA Polymerase I, and DNA ligase. Each callout provides a detailed description and an AP Exam Tip highlighting common misconceptions and exam strategies.
+This interactive diagram shows the complete enzymatic machinery at a DNA replication fork. Students can explore 13 labeled structures including helicase, DNA Polymerase III, primase, Okazaki fragments, DNA Polymerase I, and DNA ligase. Each callout provides a detailed description and an college placement Exam Tip highlighting common misconceptions and exam strategies.
 
 ## How to Use
 
-- **Explore Mode:** Hover over any numbered marker or label to see a description of the structure, its function, and an AP exam tip.
+- **Explore Mode:** Hover over any numbered marker or label to see a description of the structure, its function, and an college placement exam tip.
 - **Quiz Mode:** Click the Quiz button to test your knowledge. Marker labels are hidden — click the correct marker when prompted to identify each structure. A gold star appears for each correct answer, and a celebration animation plays when you complete the quiz.
 
 ## Structures at the Replication Fork
@@ -62,7 +62,7 @@ Seals the nicks between adjacent Okazaki fragments by forming phosphodiester bon
 ## Lesson Plan
 
 ### Grade Level
-9-12 (AP Biology)
+9-12 (college placement Biology)
 
 ### Duration
 10-15 minutes

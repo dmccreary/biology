@@ -21,7 +21,7 @@ detail, explains how crossing over at chiasmata creates genetic recombination,
 and traces the journey from diploid parent cell to haploid gametes and fertilization.
 The second half applies Mendel's laws of segregation and independent assortment to
 predict inheritance outcomes, working through monohybrid and dihybrid crosses,
-Punnett squares, and test crosses with quantitative rigor appropriate for the AP exam.
+Punnett squares, and test crosses with quantitative rigor appropriate for the college placement exam.
 
 ## Concepts Covered
 
@@ -189,7 +189,7 @@ The result is that each recombinant chromatid carries a novel combination of all
 
 !!! mascot-tip "Gregor's Tip"
     <img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Gregor's tip">
-    The AP exam frequently tests the distinction between crossing over (exchange of segments between non-sister chromatids) and independent assortment (random orientation of tetrads at metaphase I). Both generate genetic variation, but they work by different mechanisms. Crossing over creates new allele combinations *within* a chromosome; independent assortment shuffles *whole chromosomes* between daughter cells.
+    The college placement exam frequently tests the distinction between crossing over (exchange of segments between non-sister chromatids) and independent assortment (random orientation of tetrads at metaphase I). Both generate genetic variation, but they work by different mechanisms. Crossing over creates new allele combinations *within* a chromosome; independent assortment shuffles *whole chromosomes* between daughter cells.
 
 #### Diagram: Crossing Over Visualization
 
@@ -292,7 +292,7 @@ An **allele** is an alternative version of a gene. Diploid organisms carry two a
 
 !!! mascot-warning "Common Mistake"
     <img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Gregor warns you">
-    "Dominant" does NOT mean "more common" or "better." A dominant allele simply masks the recessive allele in heterozygotes. In many populations, the recessive allele is actually more common (e.g., the allele for five fingers is recessive — but nearly universal). The AP exam tests this distinction directly.
+    "Dominant" does NOT mean "more common" or "better." A dominant allele simply masks the recessive allele in heterozygotes. In many populations, the recessive allele is actually more common (e.g., the allele for five fingers is recessive — but nearly universal). The college placement exam tests this distinction directly.
 
 ### Genotype and Phenotype
 
@@ -559,7 +559,7 @@ The test cross was Mendel's primary tool for deducing genotypes, and it remains 
 
 !!! mascot-encourage "You've Got This!"
     <img src="../../img/mascot/encouraging.png" class="mascot-admonition-img" alt="Gregor encourages you">
-    Genetics problems can feel intimidating at first, but they follow consistent logical patterns. If you can set up a Punnett square, identify gamete types, and read the ratios, you can solve any Mendelian genetics problem. Practice is the key — work through several crosses until the 3:1 and 9:3:3:1 ratios feel like second nature. You'll be ready for the AP exam's genetics free-response questions in no time!
+    Genetics problems can feel intimidating at first, but they follow consistent logical patterns. If you can set up a Punnett square, identify gamete types, and read the ratios, you can solve any Mendelian genetics problem. Practice is the key — work through several crosses until the 3:1 and 9:3:3:1 ratios feel like second nature. You'll be ready for the college placement exam's genetics free-response questions in no time!
 
 ---
 
@@ -641,7 +641,7 @@ Mendel published his work in 1866 — decades before chromosomes were understood
 
 ---
 
-??? question "AP Practice: Test Your Understanding"
+??? question "college placement Practice: Test Your Understanding"
     **Question 1:** A cell with a diploid number of 2n = 6 undergoes meiosis. How many chromosomes will be in each gamete? How many genetically distinct types of gametes can this organism produce by independent assortment alone?
 
     **Answer:** Each gamete will contain n = 3 chromosomes. By independent assortment: $2^3 = 8$ genetically distinct gamete types.

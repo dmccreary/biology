@@ -30,7 +30,7 @@ A professional educational textbook cover, 1200×630 pixels wide landscape
   depth-of-field effects.
 
   Typography (overlay on the right center): Bold, clean white sans-serif title
-  "AP Biology" in very large text (approximately 80–90pt equivalent), directly
+  "college placement Biology" in very large text (approximately 80–90pt equivalent), directly
   below it "An Interactive Course" in medium-weight white text (~36pt). Below
   the subtitle, a thin horizontal rule, then small white text "An Intelligent
   Textbook for Advanced High School Students." All text is right-center aligned

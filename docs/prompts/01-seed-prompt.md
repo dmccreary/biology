@@ -1,7 +1,7 @@
 # Seed Prompt
 
 !!! prompt
-    Create a detailed course description for a course on high-school-level on AP Biology.  Include the audience, prerequisites, course overview, topics covered, topics not covered, and a detailed breakdown of the  learning objectives categorized by the 2001 Bloom Taxonomy.  Save the course description into the file @docs/course-description.md
+    Create a detailed course description for a course on high-school-level on college placement Biology.  Include the audience, prerequisites, course overview, topics covered, topics not covered, and a detailed breakdown of the  learning objectives categorized by the 2001 Bloom Taxonomy.  Save the course description into the file @docs/course-description.md
 
 ## Result
 

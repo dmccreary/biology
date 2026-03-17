@@ -18,7 +18,7 @@ social:
 
 This interactive diagram shows the five stages of mitosis — **Prophase**, **Metaphase**, **Anaphase**, **Telophase**, and **Cytokinesis** — in a single panoramic view. Each stage is shown as a separate cell with key structures labeled by numbered callout markers.
 
-Use **Explore mode** to hover over any marker or label and read detailed descriptions of each structure, including AP Exam Tips for testable concepts.
+Use **Explore mode** to hover over any marker or label and read detailed descriptions of each structure, including college placement Exam Tips for testable concepts.
 
 Switch to **Quiz mode** to test your ability to identify mitotic structures by clicking the correct marker when prompted.
 
@@ -51,14 +51,14 @@ Switch to **Quiz mode** to test your ability to identify mitotic structures by c
 
 ## How to Use
 
-1. **Explore mode (default):** Hover over any numbered marker or label to see a description and AP Exam Tip
+1. **Explore mode (default):** Hover over any numbered marker or label to see a description and college placement Exam Tip
 2. **Quiz mode:** Click the Quiz button — labels are hidden and you must click the correct marker for each prompted structure
 3. **Edit mode:** Open `main.html?edit=true` in a browser to drag markers and calibrate positions
 
 ## Lesson Plan
 
 ### Grade Level
-9-12 (AP Biology)
+9-12 (college placement Biology)
 
 ### Duration
 10-15 minutes
@@ -70,7 +70,7 @@ Switch to **Quiz mode** to test your ability to identify mitotic structures by c
 
 ### Activities
 
-1. **Exploration** (5 min): Students hover over all 15 structures in Explore mode, reading descriptions and AP tips for each stage
+1. **Exploration** (5 min): Students hover over all 15 structures in Explore mode, reading descriptions and college placement tips for each stage
 2. **Stage Comparison** (5 min): Students identify which structures appear, disappear, or change between stages
 3. **Quiz Assessment** (5 min): Students complete the Quiz mode, identifying all 15 structures by clicking the correct marker
 

@@ -10,7 +10,7 @@ version: 0.05
 
 !!! mascot-welcome "Gregor Welcomes You!"
     <img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Gregor welcomes you">
-    Welcome, investigators! We now shift from the molecular and genetic scale to the grand theater of ecology — how organisms interact with each other and their environment. This chapter asks deceptively simple questions: How fast can a population grow? What stops it? Why do some organisms have thousands of offspring while others have just one or two? The mathematical models you learn here will let you predict population dynamics with quantitative precision — a skill the AP exam tests directly. Let's investigate!
+    Welcome, investigators! We now shift from the molecular and genetic scale to the grand theater of ecology — how organisms interact with each other and their environment. This chapter asks deceptively simple questions: How fast can a population grow? What stops it? Why do some organisms have thousands of offspring while others have just one or two? The mathematical models you learn here will let you predict population dynamics with quantitative precision — a skill the college placement exam tests directly. Let's investigate!
 
 ## Summary
 
@@ -207,7 +207,7 @@ The term $\frac{K-N}{K}$ is the **environmental resistance** — it equals 1 whe
 
 !!! mascot-tip "Gregor's Tip"
     <img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Gregor's tip">
-    The AP exam will give you the logistic growth equation and ask you to interpret it — not derive it. Know three things: (1) growth rate is highest at $N = K/2$, (2) the $(K-N)/K$ term is what slows growth as the population approaches $K$, and (3) when $N > K$, the growth rate becomes negative (population declines). Be prepared to read and interpret graphs.
+    The college placement exam will give you the logistic growth equation and ask you to interpret it — not derive it. Know three things: (1) growth rate is highest at $N = K/2$, (2) the $(K-N)/K$ term is what slows growth as the population approaches $K$, and (3) when $N > K$, the growth rate becomes negative (population declines). Be prepared to read and interpret graphs.
 
 ---
 
@@ -278,7 +278,7 @@ These terms describe a continuum of life history strategies:
 
 !!! mascot-warning "Common Mistake"
     <img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Gregor warns you">
-    The r/K framework is a continuum, not a strict dichotomy. Most organisms fall somewhere in between. Also, don't confuse $r$ (the per capita growth rate from the growth equations) with "r-selected" (the life history strategy). An r-selected species *maximizes* r, but all species have some value of r. The AP exam expects nuanced understanding, not oversimplification.
+    The r/K framework is a continuum, not a strict dichotomy. Most organisms fall somewhere in between. Also, don't confuse $r$ (the per capita growth rate from the growth equations) with "r-selected" (the life history strategy). An r-selected species *maximizes* r, but all species have some value of r. The college placement exam expects nuanced understanding, not oversimplification.
 
 #### Diagram: Survivorship Curves Comparator
 
@@ -341,7 +341,7 @@ These terms describe a continuum of life history strategies:
 
 ---
 
-??? question "AP Practice: Test Your Understanding"
+??? question "college placement Practice: Test Your Understanding"
     **Question 1:** A population of 500 rabbits has $r_{max} = 0.1$ per month and $K = 2000$. Calculate the population growth rate ($dN/dt$).
 
     **Answer:** $dN/dt = r_{max} \times N \times (K-N)/K = 0.1 \times 500 \times (2000-500)/2000 = 0.1 \times 500 \times 0.75 = 37.5$ rabbits per month.

@@ -1,5 +1,5 @@
 // Atomic Structure Explorer MicroSim
-// AP Biology — Chapter 1: Scientific Foundations and Atomic Chemistry
+// college placement Biology — Chapter 1: Scientific Foundations and Atomic Chemistry
 // Bloom Level: Understand (L2) — Verb: explain
 // Students explain the relationship between atomic number, electron configuration,
 // valence electrons, and bonding behavior in biological molecules.

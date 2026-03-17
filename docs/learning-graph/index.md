@@ -1,6 +1,6 @@
-# Learning Graph for AP Biology
+# Learning Graph for college placement Biology
 
-This section contains the learning graph for the AP Biology intelligent textbook. A learning graph is
+This section contains the learning graph for the college placement Biology intelligent textbook. A learning graph is
 a graph of concepts used in this textbook. Each concept is represented by a
 node in a network graph. Concepts are connected by directed edges that indicate
 what concepts each node depends on before that concept is understood by the student.
@@ -14,7 +14,7 @@ understanding these foundational prerequisite concepts. At the far right
 we have the most advanced concepts in the course. To master these concepts you
 must understand all the concepts that they point to.
 
-This AP Biology learning graph contains **375 concepts** organized across 12 thematic categories, spanning from the chemistry of life through ecology. The graph has **764 dependency edges** and a maximum learning path depth of **25 steps**.
+This college placement Biology learning graph contains **375 concepts** organized across 12 thematic categories, spanning from the chemistry of life through ecology. The graph has **764 dependency edges** and a maximum learning path depth of **25 steps**.
 
 ## Course Description
 
@@ -26,7 +26,7 @@ The course description uses the 2001 Bloom taxonomy to order learning objectives
 
 We use generative AI to convert the course description into a [Concept List](./concept-list.md).
 Each concept is in the form of a short Title Case label with most labels under 32 characters long.
-This AP Biology course has 375 concepts spanning 8 curriculum units and 12 taxonomy categories.
+This college placement Biology course has 375 concepts spanning 8 curriculum units and 12 taxonomy categories.
 
 ## Concept Dependency List
 
@@ -38,7 +38,7 @@ graph using an editor built with the vis-network tools.
 
 ## Foundational Concepts
 
-The following 6 concepts are the entry points into the AP Biology learning graph — they have no prerequisites within the course:
+The following 6 concepts are the entry points into the college placement Biology learning graph — they have no prerequisites within the course:
 
 - **Scientific Method** — the foundation of all empirical biological inquiry
 - **Atomic Structure** — the chemical basis of all matter
@@ -82,7 +82,7 @@ to each concept based on the concept type. We use generative AI to
 create 12 categories for our concepts and then place each concept
 into a single primary classifier.
 
-- 12 taxonomy categories covering all AP Biology units
+- 12 taxonomy categories covering all college placement Biology units
 - Category organization — foundational elements first, advanced ecology and conservation last
 - No category exceeds 15% of total concepts
 - Clear 3-6 letter abbreviations for use in CSV file

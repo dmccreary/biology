@@ -6,7 +6,7 @@
 
 - **Aspect ratio:** landscape 4:3
 - **Resolution:** 1200 × 900 px
-- **Style:** biological textbook illustration, clean line art with light color fills, white background, AP Biology high school level
+- **Style:** biological textbook illustration, clean line art with light color fills, white background, college placement Biology high school level
 - **Layout:** Horizontal flow from left to right showing the three stages of a GPCR-mediated signal transduction pathway. A cell membrane runs horizontally across the upper third of the image, dividing extracellular space (top) from intracellular space (bottom two-thirds).
 
 ## Spatial Layout

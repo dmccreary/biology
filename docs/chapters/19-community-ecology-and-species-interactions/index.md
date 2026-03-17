@@ -145,7 +145,7 @@ An organism's **ecological niche** is the sum of all the abiotic and biotic cond
 
 !!! mascot-thinking "Key Insight"
     <img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Gregor thinking">
-    The competitive exclusion principle and resource partitioning are two sides of the same coin. If two species have identical niches, one will be excluded. In reality, species coexist because their niches are slightly different — they partition resources. The AP exam often asks students to explain how species with similar needs coexist: the answer is always resource partitioning (spatial, temporal, or morphological).
+    The competitive exclusion principle and resource partitioning are two sides of the same coin. If two species have identical niches, one will be excluded. In reality, species coexist because their niches are slightly different — they partition resources. The college placement exam often asks students to explain how species with similar needs coexist: the answer is always resource partitioning (spatial, temporal, or morphological).
 
 ---
 
@@ -254,7 +254,7 @@ This is a **top-down trophic cascade** — changes at the top predator level cas
 
 !!! mascot-tip "Gregor's Tip"
     <img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Gregor's tip">
-    Trophic cascades are a favorite AP exam free-response topic. To earn full marks, describe the **mechanism** at each level — don't just say "wolves affect plants." Say "wolves reduce elk populations AND change elk grazing behavior, which allows riparian vegetation to recover." Show the chain of cause and effect through at least three trophic levels.
+    Trophic cascades are a favorite college placement exam free-response topic. To earn full marks, describe the **mechanism** at each level — don't just say "wolves affect plants." Say "wolves reduce elk populations AND change elk grazing behavior, which allows riparian vegetation to recover." Show the chain of cause and effect through at least three trophic levels.
 
 ---
 
@@ -374,7 +374,7 @@ This theory extends beyond literal islands to any isolated habitat: mountaintops
 
 ---
 
-??? question "AP Practice: Test Your Understanding"
+??? question "college placement Practice: Test Your Understanding"
     **Question 1:** Two species of warblers both eat insects in the same spruce trees but feed at different heights. What concept explains their coexistence?
 
     **Answer:** **Resource partitioning** (specifically, spatial partitioning). By feeding at different heights in the canopy, the two species reduce their niche overlap and avoid competitive exclusion. This was famously studied by Robert MacArthur with Cape May, Blackburnian, and other warbler species.

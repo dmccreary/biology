@@ -17,7 +17,7 @@ image**. The diagram overlay architecture will annotate elements later.
   view inside a single yeast cell's cytoplasm
 - Aspect ratio: landscape 2:1, 1200 x 600 px
 - Style: biological textbook illustration with clean line art, light color
-  fills, white background inside the molecular inset, AP Biology high school
+  fills, white background inside the molecular inset, college placement Biology high school
   level
 - Palette continuity: glucose = warm gold, pyruvate = orange-red,
   acetaldehyde = salmon pink, ethanol = pale blue-green, ATP = bright

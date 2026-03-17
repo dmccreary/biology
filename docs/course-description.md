@@ -2,7 +2,7 @@
 
 ## Overview
 
-This course is a rigorous, college-level introduction to biology designed for advanced high school students preparing for the AP Biology examination administered by the College Board. Students explore the core principles of life science — from the molecular machinery inside cells to the dynamics of entire ecosystems — developing both conceptual understanding and laboratory skills. The course emphasizes scientific inquiry, quantitative reasoning, and the application of biological concepts to real-world problems, mirroring the depth and pace of an introductory university biology course.
+This course is a rigorous, college-level introduction to biology designed for advanced high school students preparing for the college placement Biology examination administered by the College Board. Students explore the core principles of life science — from the molecular machinery inside cells to the dynamics of entire ecosystems — developing both conceptual understanding and laboratory skills. The course emphasizes scientific inquiry, quantitative reasoning, and the application of biological concepts to real-world problems, mirroring the depth and pace of an introductory university biology course.
 
 ## Target Audience
 
@@ -23,14 +23,14 @@ This course is a rigorous, college-level introduction to biology designed for ad
 
 ## Course Overview
 
-AP Biology is organized around four Big Ideas established by the College Board:
+college placement Biology is organized around four Big Ideas established by the College Board:
 
 1. **Evolution** — The process of evolution drives the diversity and unity of life.
 2. **Cellular Processes** — Biological systems utilize free energy and molecular building blocks to grow, reproduce, and maintain dynamic homeostasis.
 3. **Information Storage and Transmission** — Living systems store, retrieve, transmit, and respond to information essential to life processes.
 4. **Systems Interactions** — Biological systems interact, and these systems and their interactions possess complex properties.
 
-Students engage with approximately 25 hands-on laboratory investigations (both wet labs and computational simulations), practice mathematical modeling, analyze primary literature, and develop skills in scientific argumentation. The course culminates in preparation for the AP Biology exam, which consists of multiple-choice, grid-in, and free-response questions.
+Students engage with approximately 25 hands-on laboratory investigations (both wet labs and computational simulations), practice mathematical modeling, analyze primary literature, and develop skills in scientific argumentation. The course culminates in preparation for the college placement Biology exam, which consists of multiple-choice, grid-in, and free-response questions.
 
 ## Topics Covered
 
@@ -60,9 +60,9 @@ Population ecology (growth models, carrying capacity, survivorship curves), comm
 
 ## Topics NOT Covered
 
-To maintain focus on the College Board AP Biology curriculum and prepare students effectively for the AP exam, this course does NOT cover:
+To maintain focus on the College Board college placement Biology curriculum and prepare students effectively for the college placement exam, this course does NOT cover:
 
-- **Advanced human physiology** — Detailed study of organ systems (cardiovascular, respiratory, renal, nervous, endocrine) is covered in AP Human Anatomy & Physiology or introductory college physiology courses.
+- **Advanced human physiology** — Detailed study of organ systems (cardiovascular, respiratory, renal, nervous, endocrine) is covered in college placement Human Anatomy & Physiology or introductory college physiology courses.
 - **Advanced biochemistry** — Enzyme mechanisms beyond Michaelis-Menten kinetics, detailed metabolic pathway regulation, and structural biochemistry are deferred to college biochemistry.
 - **Clinical medicine and pathology** — Disease mechanisms, pharmacology, and medical diagnostics are outside the scope of this course.
 - **Marine biology and oceanography** — Specialized ecosystems are mentioned only in the context of biomes; specialized marine science is a separate discipline.
@@ -190,11 +190,11 @@ The following objectives are organized using the six cognitive levels of the rev
 
 Learning is assessed through a variety of formative and summative measures:
 
-- **Chapter Quizzes** — Multiple-choice and short-answer questions aligned to AP exam style
+- **Chapter Quizzes** — Multiple-choice and short-answer questions aligned to college placement exam style
 - **Laboratory Reports** — Written analyses of wet lab and simulation investigations using the scientific method
-- **Free-Response Practice** — Long-form written responses modeled on AP exam free-response questions
+- **Free-Response Practice** — Long-form written responses modeled on college placement exam free-response questions
 - **Unit Exams** — Comprehensive assessments combining multiple-choice, grid-in, and free-response items
-- **AP Exam Preparation** — Timed practice exams and review sessions in the weeks prior to the official AP Biology exam
+- **college placement Exam Preparation** — Timed practice exams and review sessions in the weeks prior to the official college placement Biology exam
 
 ## Time Commitment
 
@@ -202,12 +202,12 @@ Learning is assessed through a variety of formative and summative measures:
 - **Class Time:** 5 hours per week (including one 2-hour laboratory period per week)
 - **Independent Study:** 6–8 hours per week recommended
 - **Chapters:** 8 units, approximately 4–6 chapters per unit
-- **Pace:** Instructor-led with structured pacing guide aligned to the College Board AP Biology Course and Exam Description (CED)
+- **Pace:** Instructor-led with structured pacing guide aligned to the College Board college placement Biology Course and Exam Description (CED)
 
 ## Resources
 
-- **Primary Text:** This intelligent textbook (AP Biology: An Interactive Course)
-- **Official Reference:** College Board AP Biology Course and Exam Description (CED), current edition
-- **Supplementary:** Khan Academy AP Biology, HHMI BioInteractive videos and virtual labs, NCBI databases
-- **Laboratory:** College Board–recommended 25 AP Biology lab investigations
+- **Primary Text:** This intelligent textbook (college placement Biology: An Interactive Course)
+- **Official Reference:** College Board college placement Biology Course and Exam Description (CED), current edition
+- **Supplementary:** Khan Academy college placement Biology, HHMI BioInteractive videos and virtual labs, NCBI databases
+- **Laboratory:** College Board–recommended 25 college placement Biology lab investigations
 - **Community:** Course discussion forum, peer study groups, and teacher office hours

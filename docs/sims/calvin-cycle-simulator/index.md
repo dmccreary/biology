@@ -82,5 +82,5 @@ You can add this MicroSim to any web page by adding this to your HTML:
 ## References
 
 1. Nelson, D. and Cox, M. *Lehninger Principles of Biochemistry*, 8th ed. (Calvin cycle chapter).  
-2. AP Biology Course and Exam Description (2024) – Unit 3, Photosynthesis.  
+2. college placement Biology Course and Exam Description (2024) – Unit 3, Photosynthesis.  
 3. Taiz & Zeiger. *Plant Physiology* (Energy transformations in the chloroplast).

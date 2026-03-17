@@ -1,6 +1,6 @@
 ---
 title: Chi-Square Test Calculator
-description: Interactive step-by-step calculator for the chi-square statistical test, showing all computation stages and an accept/reject decision for AP Biology genetic cross data.
+description: Interactive step-by-step calculator for the chi-square statistical test, showing all computation stages and an accept/reject decision for college placement Biology genetic cross data.
 image: /sims/chi-square-calculator/chi-square-calculator.png
 og:image: /sims/chi-square-calculator/chi-square-calculator.png
 twitter:image: /sims/chi-square-calculator/chi-square-calculator.png
@@ -17,7 +17,7 @@ social:
 ## About This MicroSim
 
 This calculator walks students through every computational stage of the
-chi-square (χ²) statistical test — the primary tool AP Biology uses to evaluate
+chi-square (χ²) statistical test — the primary tool college placement Biology uses to evaluate
 whether observed genetic cross results match Mendelian expected ratios.
 Students enter their own observed counts, choose an expected ratio (3:1, 1:2:1,
 or 9:3:3:1), and watch the step-by-step table populate with O, E, (O−E),
@@ -57,7 +57,7 @@ comparison, and a color-coded accept/reject verdict.
 
 ### Grade Level
 
-9–12 (AP Biology, Unit 1 and Unit 5)
+9–12 (college placement Biology, Unit 1 and Unit 5)
 
 ### Duration
 
@@ -122,4 +122,4 @@ whether to reject the null hypothesis.
 
 1. [Chi-Squared Test — Wikipedia](https://en.wikipedia.org/wiki/Chi-squared_test)
 2. [Mendelian Inheritance — Wikipedia](https://en.wikipedia.org/wiki/Mendelian_inheritance)
-3. [AP Biology Course and Exam Description — College Board](https://apcentral.collegeboard.org/courses/ap-biology)
+3. [college placement Biology Course and Exam Description — College Board](https://apcentral.collegeboard.org/courses/ap-biology)

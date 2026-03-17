@@ -1,6 +1,6 @@
 ---
 title: Cell Junctions Explorer
-description: Interactive diagram comparing four types of cell junctions — tight junctions, desmosomes, gap junctions, and plasmodesmata — with structural details and AP exam tips.
+description: Interactive diagram comparing four types of cell junctions — tight junctions, desmosomes, gap junctions, and plasmodesmata — with structural details and college placement exam tips.
 image: /sims/cell-junctions-explorer/cell-junctions-explorer.png
 og:image: /sims/cell-junctions-explorer/cell-junctions-explorer.png
 twitter:image: /sims/cell-junctions-explorer/cell-junctions-explorer.png
@@ -23,7 +23,7 @@ Use **Explore mode** to hover over each structure and learn about its molecular 
 
 ## How to Use
 
-1. **Explore mode** — Hover over any numbered marker or label to see a description and AP exam tip
+1. **Explore mode** — Hover over any numbered marker or label to see a description and college placement exam tip
 2. **Quiz mode** — A structure name appears in the prompt; click the correct marker on the diagram
 3. Compare junction types by exploring structures across all four quadrants
 
@@ -39,7 +39,7 @@ Use **Explore mode** to hover over each structure and learn about its molecular 
 ## Lesson Plan
 
 ### Grade Level
-9-12 (AP Biology)
+9-12 (college placement Biology)
 
 ### Duration
 10-15 minutes

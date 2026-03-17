@@ -24,7 +24,7 @@ crushed grain to ethanol in the finished beer. Each stage pairs a
 detailed cutaway illustration of brewing equipment with a magnified
 inset showing the molecular-scale reactions inside a yeast cell.
 
-The five stages map directly to the AP Biology cellular respiration
+The five stages map directly to the college placement Biology cellular respiration
 and fermentation curriculum:
 
 1. **Glucose Feedstock Preparation** — starch hydrolysis by amylase enzymes
@@ -93,16 +93,16 @@ Fermentation yields only 2 ATP per glucose — far less than the 30-38 ATP from
 aerobic respiration — but it allows the yeast to survive and reproduce when
 oxygen is unavailable.
 
-## AP Biology Connections
+## college placement Biology Connections
 
-| AP Big Idea | Connection |
+| college placement Big Idea | Connection |
 |-------------|------------|
 | **Big Idea 1: Evolution** | Fermentation is an ancient metabolic pathway conserved across yeasts, bacteria, and animal muscle cells |
 | **Big Idea 2: Energetics** | Glycolysis + fermentation illustrate substrate-level phosphorylation and the necessity of $\ce{NAD+}$ recycling |
 | **Big Idea 3: Information** | Enzyme specificity (pyruvate decarboxylase vs. lactate dehydrogenase) determines whether ethanol or lactate is produced |
 | **Big Idea 4: Systems** | The sealed fermenter is a model closed system for studying anaerobic metabolism |
 
-**Common AP Exam Misconception:** Students often believe fermentation
+**Common college placement Exam Misconception:** Students often believe fermentation
 *produces* ATP. In fact, glycolysis produces the ATP. Fermentation's sole
 purpose is to regenerate $\ce{NAD+}$ so that glycolysis can continue.
 
@@ -110,13 +110,13 @@ purpose is to regenerate $\ce{NAD+}$ so that glycolysis can continue.
 
 ### Grade Level
 
-9-12 (High School Biology / AP Biology)
+9-12 (High School Biology / college placement Biology)
 
 ### Duration
 
 45 minutes (one class period)
 
-### AP Biology Standards Alignment
+### college placement Biology Standards Alignment
 
 - **Essential Knowledge 3.D.1** — Cell communication and responses to internal changes
 - **Learning Objective ENE-1.L** — Explain how cellular respiration and fermentation generate ATP
@@ -412,7 +412,7 @@ You can add this MicroSim to any web page by adding this to your HTML:
 2. [Glycolysis](https://en.wikipedia.org/wiki/Glycolysis) — Wikipedia article covering the ten-enzyme pathway that splits glucose into pyruvate, producing 2 ATP and 2 NADH per glucose molecule.
 3. [Saccharomyces cerevisiae](https://en.wikipedia.org/wiki/Saccharomyces_cerevisiae) — Wikipedia article on brewer's yeast, the organism responsible for alcoholic fermentation in beer, wine, and bread.
 4. [Fermentation in Food Processing](https://en.wikipedia.org/wiki/Fermentation_in_food_processing) — Wikipedia overview of how fermentation is used across food and beverage production, including brewing, baking, and dairy.
-5. [AP Biology Course and Exam Description](https://apcentral.collegeboard.org/courses/ap-biology) — College Board curriculum framework covering cellular energetics, including glycolysis and fermentation (Unit 3: Cellular Energetics).
+5. [college placement Biology Course and Exam Description](https://apcentral.collegeboard.org/courses/ap-biology) — College Board curriculum framework covering cellular energetics, including glycolysis and fermentation (Unit 3: Cellular Energetics).
 6. [Pyruvate Decarboxylase](https://en.wikipedia.org/wiki/Pyruvate_decarboxylase) — Wikipedia article on the TPP-dependent enzyme that removes $\ce{CO2}$ from pyruvate, the first step of alcoholic fermentation.
 7. [Alcohol Dehydrogenase](https://en.wikipedia.org/wiki/Alcohol_dehydrogenase) — Wikipedia article on the enzyme family that catalyzes the interconversion of alcohols and aldehydes, including the final step of fermentation.
 8. [NAD+ / NADH](https://en.wikipedia.org/wiki/Nicotinamide_adenine_dinucleotide) — Wikipedia article on the essential coenzyme whose recycling is the biological purpose of fermentation.

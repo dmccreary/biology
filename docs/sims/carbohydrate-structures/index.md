@@ -32,7 +32,7 @@ This MicroSim allows students to explore Haworth projection diagrams of key carb
 ## Lesson Plan
 
 ### Grade Level
-9-12 (AP Biology)
+9-12 (college placement Biology)
 
 ### Duration
 10-15 minutes

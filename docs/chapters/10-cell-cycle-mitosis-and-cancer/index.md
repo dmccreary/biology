@@ -159,7 +159,7 @@ During **metaphase**, the nuclear envelope has completely disassembled, and spin
 This alignment is not merely geometric — it is required for the **spindle assembly checkpoint** to be satisfied. Every kinetochore must be properly attached to microtubules from opposite poles before anaphase is permitted to begin.
 
 !!! mascot-warning "Common Mistake"
-    Students frequently confuse **mitosis** and **meiosis**. Remember: mitosis produces **two genetically identical diploid (2n) daughter cells** and occurs in all somatic cells for growth and repair. Meiosis produces **four genetically unique haploid (n) cells** and occurs only in reproductive organs to make gametes. This chapter covers mitosis only; meiosis is in Chapter 11. On the AP exam, read the question carefully for which process is being described.
+    Students frequently confuse **mitosis** and **meiosis**. Remember: mitosis produces **two genetically identical diploid (2n) daughter cells** and occurs in all somatic cells for growth and repair. Meiosis produces **four genetically unique haploid (n) cells** and occurs only in reproductive organs to make gametes. This chapter covers mitosis only; meiosis is in Chapter 11. On the college placement exam, read the question carefully for which process is being described.
 
 ### Anaphase
 
@@ -254,7 +254,7 @@ Examples:
 - **Myc:** Transcription factor; overexpression or chromosomal translocation → constant expression of proliferative genes
 
 !!! mascot-tip "Gregor's Tip"
-    The AP exam tests the distinction between oncogenes and tumor suppressor genes with great regularity. A simple rule: oncogenes are like a stuck accelerator — one copy is enough to cause problems (**dominant**, gain-of-function). Tumor suppressor genes are like brakes — you need to lose **both** copies before the brakes fail (**recessive** at the cellular level, though the initial inherited mutation is dominant for cancer predisposition — this is the Knudson "two-hit hypothesis").
+    The college placement exam tests the distinction between oncogenes and tumor suppressor genes with great regularity. A simple rule: oncogenes are like a stuck accelerator — one copy is enough to cause problems (**dominant**, gain-of-function). Tumor suppressor genes are like brakes — you need to lose **both** copies before the brakes fail (**recessive** at the cellular level, though the initial inherited mutation is dominant for cancer predisposition — this is the Knudson "two-hit hypothesis").
 
 ### Tumor Suppressor Genes
 
@@ -328,7 +328,7 @@ Hallmarks of cancer (Hanahan and Weinberg) include:
 
 !!! mascot-celebration "Excellent Work!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Gregor celebrates">
-    From the restriction point in G1 to the caspase cascade in apoptosis, from cyclin oscillations to oncogene mutations — you now understand the molecular logic connecting normal cell division to cancer. This is some of the most medically important biology in the AP curriculum. Outstanding investigation, scientists!
+    From the restriction point in G1 to the caspase cascade in apoptosis, from cyclin oscillations to oncogene mutations — you now understand the molecular logic connecting normal cell division to cancer. This is some of the most medically important biology in the college placement curriculum. Outstanding investigation, scientists!
 
 ## Summary
 

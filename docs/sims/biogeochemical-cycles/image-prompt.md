@@ -10,7 +10,7 @@ Generate a **single landscape illustration** showing a cross-section of Earth's 
 
 - **Aspect ratio:** Landscape 2:1
 - **Resolution:** 1200 × 600 px
-- **Style:** Biological textbook illustration, clean line art with light color fills, earth cross section at the bottom, green land in the middle, sky blue at top, AP Biology high school level
+- **Style:** Biological textbook illustration, clean line art with light color fills, earth cross section at the bottom, green land in the middle, sky blue at top, college placement Biology high school level
 - **Perspective:** Cross-section view from left to right, showing atmosphere above, land surface in the middle, and underground/underwater layers below
 - Do not place any white board on the lower edge of the image
 

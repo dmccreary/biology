@@ -31,7 +31,7 @@ This side-by-side visualization compares allopatric and sympatric speciation thr
 ## Lesson Plan
 
 ### Grade Level
-9-12 (AP Biology)
+9-12 (college placement Biology)
 
 ### Duration
 10-15 minutes

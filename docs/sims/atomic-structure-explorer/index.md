@@ -57,7 +57,7 @@ biological role in living systems.
 
 ### Grade Level
 
-AP Biology (grades 10–12)
+college placement Biology (grades 10–12)
 
 ### Duration
 

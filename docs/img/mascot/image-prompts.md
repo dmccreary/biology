@@ -17,7 +17,7 @@ The image has a frog in the center but it the background
 is transparent.
 
 A modern flat vector illustration of Gregor the Tree Frog, a friendly
-pedagogical mascot for an AP Biology high school textbook. Gregor is a
+pedagogical mascot for an college placement Biology high school textbook. Gregor is a
 small, round-bodied tree frog with bright lime-green skin, large expressive
 golden eyes with round pupils, and a cream-white underbelly. He wears a
 tiny white lab coat and holds a small round magnifying glass. His expression
@@ -78,7 +78,7 @@ at his side.  Fill in the body of the frog with non-transparent pixels.
 
 ## Pose 3 — Tip (tip.png)
 
-For helpful hints and AP exam strategies.
+For helpful hints and college placement exam strategies.
 
 ```
 [BASE]

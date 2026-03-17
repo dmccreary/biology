@@ -47,7 +47,7 @@ Compact summary
      - Non-text elements: markdown tables, diagram specs with `<details>` blocks, LaTeX equations using `
      delimiters
      - Each diagram spec includes: sim-id, Library, Status, Learning objective, Instructional Rationale
-     - AP Practice collapsible Q&A at end
+     - college placement Practice collapsible Q&A at end
      - Key Takeaways section
      - 5-6 mascot admonitions per chapter (welcome, thinking, tip, warning, celebration/encourage)
 
@@ -66,7 +66,7 @@ Compact summary
 
      Summary:
      1. Primary Request and Intent:
-        The user requested sequential generation of educational chapter content for an AP Biology
+        The user requested sequential generation of educational chapter content for an college placement Biology
      intelligent textbook using the `/chapter-content-generator` skill (v0.05). The work spanned three
      separate requests:
         - First: Generate content for Chapter 11 (Meiosis and Mendelian Genetics)
@@ -74,7 +74,7 @@ Compact summary
         - Third: Generate content for ALL remaining chapters (13–20) sequentially
 
         The textbook is an MkDocs Material site targeting advanced high school students (grades 11-12) at
-     "Advanced Senior High / Early College" reading level, preparing for the AP Biology exam.
+     "Advanced Senior High / Early College" reading level, preparing for the college placement Biology exam.
 
      2. Key Technical Concepts:
         - MkDocs Material intelligent textbook framework with `mkdocs serve` for local dev
@@ -126,7 +126,7 @@ Compact summary
      - Non-text elements: markdown tables, diagram specs with `<details>` blocks, LaTeX equations using `
      delimiters
      - Each diagram spec includes: sim-id, Library, Status, Learning objective, Instructional Rationale
-     - AP Practice collapsible Q&A at end
+     - college placement Practice collapsible Q&A at end
      - Key Takeaways section
      - 5-6 mascot admonitions per chapter (welcome, thinking, tip, warning, celebration/encourage)
 
@@ -259,7 +259,7 @@ Compact summary
 
         ---
 
-        ??? question "AP Practice: Test Your Understanding"
+        ??? question "college placement Practice: Test Your Understanding"
             [3 practice questions with answers]
         ```
 
@@ -378,7 +378,7 @@ Compact summary
   └─────────┴────────────────────────────────────────────┴────────┴──────────┘
 
   All chapters include mascot admonitions, tables, diagram specifications, LaTeX equations (where
-  appropriate), and collapsible AP Practice Q&A sections. Session logs were written to
+  appropriate), and collapsible college placement Practice Q&A sections. Session logs were written to
   logs/ch-11-content-generation.md through logs/ch-20-content-generation.md.
 
   No remaining chapters need content generation — all 20 are done.

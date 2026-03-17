@@ -5,7 +5,7 @@
 [View Fullscreen](main.html)
 
 This interactive diagram covers 16 structures of the chloroplast and the
-light-dependent reactions of photosynthesis (AP Biology Unit 3). The upper
+light-dependent reactions of photosynthesis (college placement Biology Unit 3). The upper
 section shows the overall chloroplast architecture; the lower zoom reveals the
 four protein complexes of the thylakoid electron transport chain in the order
 electrons flow: PSII → Cyt b6f → PSI → ATP synthase.

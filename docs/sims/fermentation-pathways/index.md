@@ -38,7 +38,7 @@ This interactive step-through diagram compares **lactic acid fermentation** and 
 ## Lesson Plan
 
 ### Grade Level
-9-12 (AP Biology)
+9-12 (college placement Biology)
 
 ### Duration
 10-15 minutes

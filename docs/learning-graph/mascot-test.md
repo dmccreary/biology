@@ -40,7 +40,7 @@ Note that the images have a dashed blue border around them so you can clearly se
 !!! mascot-welcome "Gregor Welcomes You!"
     <img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Gregor welcomes you">
     Welcome, investigators! I'm Gregor the Tree Frog, your guide through
-    the living world of AP Biology. From the chemistry inside a cell to
+    the living world of college placement Biology. From the chemistry inside a cell to
     the dynamics of entire ecosystems — Let's investigate!
 
 !!! mascot-thinking "Key Insight"
@@ -51,7 +51,7 @@ Note that the images have a dashed blue border around them so you can clearly se
 
 !!! mascot-tip "Gregor's Tip"
     <img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Gregor shares a tip">
-    When you see a question about enzyme inhibition on the AP exam,
+    When you see a question about enzyme inhibition on the college placement exam,
     always ask: *Does the inhibitor bind the active site or somewhere else?*
     That single question tells you whether it's competitive or noncompetitive.
 
@@ -75,6 +75,6 @@ Note that the images have a dashed blue border around them so you can clearly se
 
 !!! mascot-neutral "A Note from Gregor"
     <img src="../../img/mascot/neutral.png" class="mascot-admonition-img" alt="Gregor notes">
-    AP Biology covers a lot of ground — from atoms to ecosystems. Each unit
+    college placement Biology covers a lot of ground — from atoms to ecosystems. Each unit
     builds on the last, so if something feels shaky, it's worth going back
     to reinforce it before moving forward.

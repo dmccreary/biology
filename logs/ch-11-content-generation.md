@@ -30,7 +30,7 @@
 | Diagram specs (MicroSims) | 5 | Meiosis Stages Explorer, Crossing Over Visualization, Punnett Square Calculator, Dihybrid Cross Visualizer, Test Cross Simulator |
 | Infographic specs | 1 | Mendel-to-Meiosis Concept Map (vis-network) |
 | Equations (LaTeX) | 5 | n+n=2n, 2^n, 2^23, multiplication rule fractions, chi-square context |
-| Collapsible Q&A | 1 | AP Practice section with 3 questions |
+| Collapsible Q&A | 1 | college placement Practice section with 3 questions |
 
 ## Concepts Coverage Checklist
 

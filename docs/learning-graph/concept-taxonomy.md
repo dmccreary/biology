@@ -1,6 +1,6 @@
-# AP Biology Concept Taxonomy
+# college placement Biology Concept Taxonomy
 
-Twelve categories organize the 375 AP Biology concepts into coherent thematic groups for visualization and navigation. Each category is assigned a short TaxonomyID (uppercase, 3-5 letters) used in the learning graph CSV and JSON.
+Twelve categories organize the 375 college placement Biology concepts into coherent thematic groups for visualization and navigation. Each category is assigned a short TaxonomyID (uppercase, 3-5 letters) used in the learning graph CSV and JSON.
 
 ---
 

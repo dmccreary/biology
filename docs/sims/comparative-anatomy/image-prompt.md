@@ -7,7 +7,7 @@ Generate a single wide illustration showing the forelimbs of five vertebrate spe
 ## Global Specifications
 
 - **Aspect ratio:** 5:2 landscape (1500 × 600 px)
-- **Style:** Clean biological textbook illustration, precise anatomical line art with flat color fills, white background, AP Biology high school level
+- **Style:** Clean biological textbook illustration, precise anatomical line art with flat color fills, white background, college placement Biology high school level
 - **Layout:** Five equal-width vertical panels arranged horizontally, separated by thin light-gray divider lines. Each panel contains one species forelimb.
 - **Orientation:** All forelimbs oriented vertically with the shoulder/proximal end at the top and digits/distal end at the bottom
 - **Background:** Pure white within each panel

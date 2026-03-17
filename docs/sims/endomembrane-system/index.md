@@ -21,7 +21,7 @@ This interactive diagram traces the journey of a secretory protein through the e
 
 ## How to Use
 
-- **Explore mode**: Hover over any numbered marker or label in the side panel to see a description of that structure, its function in the secretory pathway, and AP exam tips.
+- **Explore mode**: Hover over any numbered marker or label in the side panel to see a description of that structure, its function in the secretory pathway, and college placement exam tips.
 - **Quiz mode**: Click the Quiz button to test your knowledge. Marker labels are hidden — click the correct marker when prompted to identify each structure.
 - **Edit mode**: Open `main.html?edit=true` to calibrate marker positions by dragging them onto the image.
 

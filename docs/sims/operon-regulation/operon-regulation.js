@@ -46,7 +46,7 @@ function draw() {
 function isOperonON() {
     if (operonMode === 'lac') {
         // Lac operon ON when: lactose present AND glucose absent
-        // (simplified: CAP activation not shown, just glucose repression)
+        // (simplified: Ccollege placement activation not shown, just glucose repression)
         return lactosePresent && !glucosePresent;
     } else {
         // Trp operon ON when: tryptophan absent
@@ -264,7 +264,7 @@ function drawRNAPolymerase(x, y, on, blocked) {
     let rpY = y - 30;
 
     if (on) {
-        // RNAP bound and transcribing
+        // RNcollege placement bound and transcribing
         fill(46, 204, 113, 200);
         stroke(34, 153, 84);
         strokeWeight(1.5);
@@ -277,7 +277,7 @@ function drawRNAPolymerase(x, y, on, blocked) {
         text('RNA Pol', x, rpY - 2);
         text('→→→', x, rpY + 8);
     } else if (blocked) {
-        // RNAP blocked, shown hovering
+        // RNcollege placement blocked, shown hovering
         fill(200, 200, 200, 180);
         stroke(150);
         strokeWeight(1.5);
@@ -290,7 +290,7 @@ function drawRNAPolymerase(x, y, on, blocked) {
         text('RNA Pol', x, rpY - 12);
         text('BLOCKED', x, rpY - 1);
     } else {
-        // RNAP present but conditions not met (glucose present for lac)
+        // RNcollege placement present but conditions not met (glucose present for lac)
         fill(200, 200, 200, 150);
         stroke(150);
         strokeWeight(1);
@@ -538,7 +538,7 @@ function getExplanation() {
         if (!lactosePresent && glucosePresent) {
             return 'No lactose, glucose available. The repressor binds the operator, blocking RNA polymerase. The cell uses glucose as its preferred energy source — no need to make lac enzymes.';
         } else if (!lactosePresent && !glucosePresent) {
-            return 'No lactose, no glucose. The repressor binds the operator, blocking transcription. Even though glucose is absent (CAP would activate), there is no inducer to remove the repressor.';
+            return 'No lactose, no glucose. The repressor binds the operator, blocking transcription. Even though glucose is absent (Ccollege placement would activate), there is no inducer to remove the repressor.';
         } else if (lactosePresent && glucosePresent) {
             return 'Lactose present, but glucose also present. Allolactose removes the repressor from the operator, but low CAP-cAMP levels (due to glucose) mean RNA polymerase binds weakly. Transcription is minimal.';
         } else {

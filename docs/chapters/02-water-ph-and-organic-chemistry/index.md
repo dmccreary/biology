@@ -47,7 +47,7 @@ This chapter builds on concepts from:
 
 !!! mascot-welcome "Gregor Welcomes You!"
     <img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Gregor welcomes you"/>
-    Welcome to Chapter 2, investigators! Everything we study in AP Biology — from the proteins that catalyze reactions to the membranes that define cells — happens in, on, or because of water. Before we can understand the molecular machinery of life, we need to understand the extraordinary molecule that makes it possible. Then we will build the chemical vocabulary — acids, bases, buffers, functional groups, polymers — that we will use for the rest of the course. Let's investigate!
+    Welcome to Chapter 2, investigators! Everything we study in college placement Biology — from the proteins that catalyze reactions to the membranes that define cells — happens in, on, or because of water. Before we can understand the molecular machinery of life, we need to understand the extraordinary molecule that makes it possible. Then we will build the chemical vocabulary — acids, bases, buffers, functional groups, polymers — that we will use for the rest of the course. Let's investigate!
 
 ## Introduction
 
@@ -160,7 +160,7 @@ When hydrophobic molecules are forced into water, the surrounding water cannot f
 
 !!! mascot-thinking "Key Insight: One Cause, Many Consequences"
     <img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Gregor thinking"/>
-    Notice how every property we just discussed — cohesion, adhesion, surface tension, specific heat, solvent ability, and the hydrophobic effect — traces back to the single fact that water is a polar molecule with a bent geometry. On the AP exam, whenever a question asks *why* water has any of these properties, your first sentence should always connect back to polarity and hydrogen bonding. The rest is detail.
+    Notice how every property we just discussed — cohesion, adhesion, surface tension, specific heat, solvent ability, and the hydrophobic effect — traces back to the single fact that water is a polar molecule with a bent geometry. On the college placement exam, whenever a question asks *why* water has any of these properties, your first sentence should always connect back to polarity and hydrogen bonding. The rest is detail.
 
 ---
 
@@ -229,7 +229,7 @@ The following table shows representative pH values for biologically important so
 
 !!! mascot-warning "Common Mistake: pH Is Logarithmic!"
     <img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Gregor warning"/>
-    AP exam students frequently forget that pH is a *logarithmic* scale. Blood at pH 7.4 does not have "a little more" hydrogen ions than blood at pH 7.2 — it has $10^{0.2} \approx 1.6$ times as many. And a solution at pH 3 contains **10,000 times** more $\ce{H+}$ than one at pH 7. Always express pH differences as powers of ten, not linear multiples.
+    college placement exam students frequently forget that pH is a *logarithmic* scale. Blood at pH 7.4 does not have "a little more" hydrogen ions than blood at pH 7.2 — it has $10^{0.2} \approx 1.6$ times as many. And a solution at pH 3 contains **10,000 times** more $\ce{H+}$ than one at pH 7. Always express pH differences as powers of ten, not linear multiples.
 
 ### Buffers
 
@@ -331,7 +331,7 @@ The simplest organic molecules are **hydrocarbons**, containing only carbon and 
 
 !!! mascot-tip "Gregor's Tip: Learn the Groups, Predict the Molecule"
     <img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Gregor tip"/>
-    The AP exam will not test complex organic synthesis. What it *will* test is your ability to predict whether a molecule is hydrophilic or hydrophobic, whether it is acidic or basic, and what type of bond it can form — all from recognizing its functional groups. Learn the seven major groups: their structure, polarity, and biological role. That knowledge applies unchanged to every macromolecule in Chapters 3 through 6.
+    The college placement exam will not test complex organic synthesis. What it *will* test is your ability to predict whether a molecule is hydrophilic or hydrophobic, whether it is acidic or basic, and what type of bond it can form — all from recognizing its functional groups. Learn the seven major groups: their structure, polarity, and biological role. That knowledge applies unchanged to every macromolecule in Chapters 3 through 6.
 
 ### Functional Groups
 
@@ -516,7 +516,7 @@ Responsive: Must respond to window resize events
 
 ## Key Connections and Chapter Summary
 
-This chapter established the chemical vocabulary that every subsequent unit of AP Biology will use. The four major themes to carry forward are:
+This chapter established the chemical vocabulary that every subsequent unit of college placement Biology will use. The four major themes to carry forward are:
 
 - **Water's polarity explains everything.** Cohesion, adhesion, surface tension, high specific heat, dissolving power, and the hydrophobic effect all trace back to the bent geometry of $\ce{H2O}$ and the polar O–H bonds that create a permanent dipole.
 - **pH is logarithmic and biologically critical.** A one-unit pH change means a tenfold change in $[\ce{H+}]$; cells function within a narrow pH window enforced by buffer systems.

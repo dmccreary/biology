@@ -1,6 +1,6 @@
-# AP Biology Concept List
+# college placement Biology Concept List
 
-380 concept labels for the AP Biology learning graph.
+380 concept labels for the college placement Biology learning graph.
 Each label is in Title Case and does not exceed 32 characters.
 
 ## Unit 1: Scientific Foundations and Chemistry of Life (Concepts 1–47)

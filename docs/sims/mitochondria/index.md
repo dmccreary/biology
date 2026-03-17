@@ -5,7 +5,7 @@
 [View Fullscreen](main.html)
 
 This interactive diagram covers 15 structures of the mitochondrion and the
-electron transport chain (AP Biology Unit 3). The upper section shows the
+electron transport chain (college placement Biology Unit 3). The upper section shows the
 overall mitochondrial architecture; the lower zoom reveals the five protein
 complexes of the inner membrane in order of electron flow:
 Complex I → CoQ → Complex III → Cytochrome c → Complex IV → ATP synthase,

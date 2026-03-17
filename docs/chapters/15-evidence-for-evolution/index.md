@@ -186,7 +186,7 @@ Comparing the body structures of different species reveals evolutionary relation
 
 !!! mascot-thinking "Key Insight"
     <img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Gregor thinking">
-    The AP exam distinguishes sharply between homologous and analogous structures. Remember: **homologous = same ancestry, different function** (evidence for common descent); **analogous = different ancestry, same function** (evidence for similar selection pressures, not close kinship). If the underlying bone structure is the same, it's homologous. If only the function is the same, it's analogous.
+    The college placement exam distinguishes sharply between homologous and analogous structures. Remember: **homologous = same ancestry, different function** (evidence for common descent); **analogous = different ancestry, same function** (evidence for similar selection pressures, not close kinship). If the underlying bone structure is the same, it's homologous. If only the function is the same, it's analogous.
 
 #### Diagram: Comparative Anatomy Explorer
 
@@ -326,7 +326,7 @@ Artificial selection provides a direct analogy for natural selection — the onl
 
 !!! mascot-warning "Common Mistake"
     <img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Gregor warns you">
-    Students often describe evolution as "organisms trying to adapt" or "species evolving to survive." Evolution has no goal or intention. Natural selection simply favors individuals that happen to have traits suited to the current environment. Organisms do not choose to evolve, and evolution does not anticipate future needs. Avoid teleological language on the AP exam.
+    Students often describe evolution as "organisms trying to adapt" or "species evolving to survive." Evolution has no goal or intention. Natural selection simply favors individuals that happen to have traits suited to the current environment. Organisms do not choose to evolve, and evolution does not anticipate future needs. Avoid teleological language on the college placement exam.
 
 ---
 
@@ -350,7 +350,7 @@ The **endosymbiotic theory** (championed by Lynn Margulis in 1967) proposes that
 
 !!! mascot-tip "Gregor's Tip"
     <img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Gregor's tip">
-    The AP exam frequently asks for evidence supporting endosymbiosis. Memorize the "Big Five": (1) double membrane, (2) own circular DNA, (3) 70S ribosomes, (4) binary fission, (5) DNA similarity to bacteria. The double membrane is especially telling — the inner membrane is the original bacterium's plasma membrane, and the outer membrane is the host cell's endocytic vesicle.
+    The college placement exam frequently asks for evidence supporting endosymbiosis. Memorize the "Big Five": (1) double membrane, (2) own circular DNA, (3) 70S ribosomes, (4) binary fission, (5) DNA similarity to bacteria. The double membrane is especially telling — the inner membrane is the original bacterium's plasma membrane, and the outer membrane is the host cell's endocytic vesicle.
 
 ### Origin of Eukaryotes
 
@@ -427,7 +427,7 @@ This "cells within cells" arrangement allowed eukaryotes to perform aerobic resp
 
 ---
 
-??? question "AP Practice: Test Your Understanding"
+??? question "college placement Practice: Test Your Understanding"
     **Question 1:** A researcher compares the amino acid sequence of hemoglobin across five species: human, chimpanzee, horse, chicken, and frog. The chimpanzee sequence differs by 0 amino acids from human, horse by 25, chicken by 45, and frog by 67. What can you conclude about evolutionary relationships?
 
     **Answer:** Species with fewer amino acid differences are more closely related (shared a more recent common ancestor). Humans and chimpanzees are most closely related (0 differences), followed by horse, chicken, and frog in order of increasing evolutionary distance. This molecular data is consistent with the known phylogeny of vertebrates.

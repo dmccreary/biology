@@ -12,7 +12,7 @@ hide:
 
 ## Lesson Plan: Exploring the Animal Cell
 
-**Audience:** AP Biology or advanced high-school biology students  
+**Audience:** college placement Biology or advanced high-school biology students  
 **Duration:** 45–60 minutes  
 **Materials:** Animal Cell MicroSim (embedded above), student notebooks or digital lab journal, projector (optional)
 
@@ -23,7 +23,7 @@ By the end of this lesson, students will be able to:
 1. Identify the nucleus, cell membrane, cytoplasm, ribosomes, mitochondria, and endoplasmic reticulum on a schematic animal cell.
 2. Explain how structure supports function for each organelle, citing at least one specific detail (e.g., cristae of mitochondria, pores of the nuclear envelope).
 3. Trace the movement of a newly synthesized protein through the endomembrane system using the MicroSim annotations.
-4. Connect each organelle to a relevant AP Biology concept or exam tip (e.g., selective permeability, endosymbiotic theory, glycolysis location).
+4. Connect each organelle to a relevant college placement Biology concept or exam tip (e.g., selective permeability, endosymbiotic theory, glycolysis location).
 
 ### Lesson Flow
 
@@ -35,7 +35,7 @@ By the end of this lesson, students will be able to:
 
 Students work in pairs with laptops:
 
-- Click each hotspot to reveal the organelle description and AP tip.  
+- Click each hotspot to reveal the organelle description and college placement tip.  
 - Record two facts per organelle in a T-chart: **Structure Detail** vs. **Function/Process Supported**.  
 - Prompt questions:
   - Nucleus: How do nuclear pores support rapid transcription-response cycles?
@@ -50,8 +50,8 @@ Students work in pairs with laptops:
 Facilitate a class discussion anchored in the MicroSim:
 
 - **Mini whiteboard share-out:** Each pair chooses one organelle and sketches it quickly, labeling one key structural feature from the sim (e.g., folded cristae).  
-- **Protein journey walkthrough:** Use the callouts to narrate the path of a hormone protein: transcription in the nucleus → ribosome on rough ER → ER lumen processing → transport vesicle → Golgi (describe even if not shown) → plasma membrane secretion. Emphasize the AP exam “endomembrane system” terminology noted in the ER callout.
-- Highlight AP tips embedded in the data (e.g., endosymbiotic evidence in mitochondria, glycolysis location in cytoplasm) and connect them to past FRQs or MCQ distractors.
+- **Protein journey walkthrough:** Use the callouts to narrate the path of a hormone protein: transcription in the nucleus → ribosome on rough ER → ER lumen processing → transport vesicle → Golgi (describe even if not shown) → plasma membrane secretion. Emphasize the college placement exam “endomembrane system” terminology noted in the ER callout.
+- Highlight college placement tips embedded in the data (e.g., endosymbiotic evidence in mitochondria, glycolysis location in cytoplasm) and connect them to past FRQs or MCQ distractors.
 
 #### 4. Elaborate (10 minutes)
 
@@ -81,4 +81,4 @@ Assign quick synthesis tasks:
 
 - The MicroSim callouts include AP-specific reminders (e.g., ribosome size differences, endosymbiotic theory). Encourage students to capture these in their notebooks as “exam traps to avoid.”  
 - If bandwidth is limited, download the `main.html` bundle locally so each group can run the simulation offline.  
-- Reinforce vocabulary precision: nucleus vs. nucleolus, cytoplasm vs. cytosol, rough vs. smooth ER. These distinctions often appear in AP free-response questions.
+- Reinforce vocabulary precision: nucleus vs. nucleolus, cytoplasm vs. cytosol, rough vs. smooth ER. These distinctions often appear in college placement free-response questions.

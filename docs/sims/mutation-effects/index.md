@@ -30,7 +30,7 @@ This interactive tool compares original and mutant mRNA sequences side by side. 
 ## Lesson Plan
 
 ### Grade Level
-9-12 (AP Biology)
+9-12 (college placement Biology)
 
 ### Duration
 10-15 minutes

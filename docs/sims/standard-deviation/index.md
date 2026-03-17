@@ -55,7 +55,7 @@ the exact width of 1 standard deviation.
 
 ### Grade Level
 
-9–12 (AP Biology, AP Statistics, or introductory data analysis)
+9–12 (college placement Biology, college placement Statistics, or introductory data analysis)
 
 ### Duration
 

@@ -7,7 +7,7 @@ Generate a single wide illustration showing a prokaryotic bacterial cell on the 
 ## Global Specifications
 
 - **Aspect ratio:** 4:3 landscape (1200 × 900 px)
-- **Style:** Clean biological textbook illustration, precise molecular-level artwork with flat color fills, white background, AP Biology high school level
+- **Style:** Clean biological textbook illustration, precise molecular-level artwork with flat color fills, white background, college placement Biology high school level
 - **Layout:** A single continuous scene with two cells. The prokaryotic cell occupies the left ~40% of the image. The eukaryotic cell occupies the right ~55%. A narrow gap of white space (~5%) separates them.
 - **Background:** Pure white
 - **No text of any kind in the image. No labels, no cell type names, no chemical formulas, no numbers, no arrows, no annotation marks. Repeat: absolutely no text.**

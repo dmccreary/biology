@@ -2,7 +2,7 @@
 
 **Date:** 2026-02-25
 **Status:** Confirmed working, user verified
-**Topic:** MathJax + mhchem delimiter strategy for AP Biology intelligent textbook
+**Topic:** MathJax + mhchem delimiter strategy for college placement Biology intelligent textbook
 
 ---
 
@@ -14,10 +14,10 @@
 
 ## Problem Statement
 
-AP Biology requires two categories of mathematical notation:
+college placement Biology requires two categories of mathematical notation:
 
 1. **Standard math** — equations such as Hardy-Weinberg ($p^2 + 2pq + q^2 = 1$), Michaelis-Menten kinetics, logistic growth, and free energy ($\Delta G = \Delta H - T\Delta S$)
-2. **Chemical notation** — molecular formulas, balanced reactions, equilibrium arrows, and ionic species that appear throughout all 8 AP Biology units
+2. **Chemical notation** — molecular formulas, balanced reactions, equilibrium arrows, and ionic species that appear throughout all 8 college placement Biology units
 
 The challenge is that MkDocs Material uses Python-Markdown, which processes the document before MathJax receives it. Writing backslash delimiters (`\[`, `\(`) directly in markdown creates a fragile pipeline: Python-Markdown may interpret `\[` as an escaped bracket and emit a literal `[`, which MathJax never sees. Chemistry formulas that include square brackets — such as the iron complex `[Fe(CN)6]^{3-}` or the bicarbonate ion `[HCO3-]` — are especially vulnerable because they look like Markdown link syntax `[text](url)` to the parser.
 
@@ -71,7 +71,7 @@ The full `tex-chtml.js` bundle (already loaded via CDN in `mkdocs.yml`) includes
 
 ## Test Coverage
 
-The test page `docs/learning-graph/chemical-equation-tests.md` covers the 10 most common AP Biology equations, selected to exercise every rendering feature:
+The test page `docs/learning-graph/chemical-equation-tests.md` covers the 10 most common college placement Biology equations, selected to exercise every rendering feature:
 
 | Equation | Primary feature tested |
 |---|---|

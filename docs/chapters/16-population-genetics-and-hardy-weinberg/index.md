@@ -356,7 +356,7 @@ Natural selection can shift the distribution of phenotypes in a population in th
 
 !!! mascot-warning "Common Mistake"
     <img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Gregor warns you">
-    Students often confuse genetic drift with natural selection. The key distinction: **natural selection is non-random** (certain traits are systematically favored), while **genetic drift is random** (allele frequency changes are due to chance). Drift is most powerful in small populations; selection can operate in any size population. On the AP exam, if a question describes a random catastrophe reducing a population, think drift (bottleneck). If it describes certain individuals surviving better, think selection.
+    Students often confuse genetic drift with natural selection. The key distinction: **natural selection is non-random** (certain traits are systematically favored), while **genetic drift is random** (allele frequency changes are due to chance). Drift is most powerful in small populations; selection can operate in any size population. On the college placement exam, if a question describes a random catastrophe reducing a population, think drift (bottleneck). If it describes certain individuals surviving better, think selection.
 
 ---
 
@@ -412,7 +412,7 @@ The three-domain system (proposed by Carl Woese in 1990) replaced the older five
 
 ---
 
-??? question "AP Practice: Test Your Understanding"
+??? question "college placement Practice: Test Your Understanding"
     **Question 1:** In a population of 1,000 individuals, 40 show the recessive phenotype. Assuming HWE, calculate $p$, $q$, and the number of heterozygous carriers.
 
     **Answer:** $q^2 = 40/1000 = 0.04$. $q = \sqrt{0.04} = 0.20$. $p = 1 - 0.20 = 0.80$. Heterozygote frequency = $2pq = 2(0.80)(0.20) = 0.32$. Number of carriers = $0.32 \times 1000 = 320$ individuals.

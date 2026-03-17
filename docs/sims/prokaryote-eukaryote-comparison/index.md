@@ -1,6 +1,6 @@
 ---
 title: Prokaryote vs. Eukaryote Cell Comparison
-description: Interactive diagram comparing prokaryotic and eukaryotic cell structures with labeled callouts, explore and quiz modes, and AP Biology exam tips.
+description: Interactive diagram comparing prokaryotic and eukaryotic cell structures with labeled callouts, explore and quiz modes, and college placement Biology exam tips.
 image: /sims/prokaryote-eukaryote-comparison/prokaryote-eukaryote-comparison.png
 og:image: /sims/prokaryote-eukaryote-comparison/prokaryote-eukaryote-comparison.png
 twitter:image: /sims/prokaryote-eukaryote-comparison/prokaryote-eukaryote-comparison.png
@@ -16,7 +16,7 @@ social:
 
 ## About This MicroSim
 
-This interactive diagram displays a prokaryotic bacterial cell and a eukaryotic animal cell side by side, with 15 labeled structures. Students can explore each structure by hovering over numbered markers or labels to read descriptions and AP Biology exam tips. Quiz mode tests structure identification with immediate feedback and a celebration animation on completion.
+This interactive diagram displays a prokaryotic bacterial cell and a eukaryotic animal cell side by side, with 15 labeled structures. Students can explore each structure by hovering over numbered markers or labels to read descriptions and college placement Biology exam tips. Quiz mode tests structure identification with immediate feedback and a celebration animation on completion.
 
 ## How to Use
 
@@ -27,7 +27,7 @@ This interactive diagram displays a prokaryotic bacterial cell and a eukaryotic 
 ## Lesson Plan
 
 ### Grade Level
-9-12 (AP Biology)
+9-12 (college placement Biology)
 
 ### Duration
 15-20 minutes
@@ -52,4 +52,4 @@ Basic understanding of cell theory and the difference between living and non-liv
 1. [Prokaryote](https://en.wikipedia.org/wiki/Prokaryote) — Wikipedia
 2. [Eukaryote](https://en.wikipedia.org/wiki/Eukaryote) — Wikipedia
 3. [Endosymbiotic theory](https://en.wikipedia.org/wiki/Endosymbiotic_theory) — Wikipedia
-4. [AP Biology Course and Exam Description](https://apcentral.collegeboard.org/courses/ap-biology) — College Board
+4. [college placement Biology Course and Exam Description](https://apcentral.collegeboard.org/courses/ap-biology) — College Board

@@ -32,7 +32,7 @@ This interactive cladogram builder teaches students how phylogenetic trees are c
 ## Lesson Plan
 
 ### Grade Level
-9-12 (AP Biology)
+9-12 (college placement Biology)
 
 ### Duration
 10-15 minutes

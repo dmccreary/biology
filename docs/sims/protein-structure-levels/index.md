@@ -1,6 +1,6 @@
 ---
 title: Protein Structure Levels Explorer
-description: Interactive explorer showing the four levels of protein structure — primary, secondary, tertiary, and quaternary — with hover descriptions of stabilizing forces and AP Biology exam tips.
+description: Interactive explorer showing the four levels of protein structure — primary, secondary, tertiary, and quaternary — with hover descriptions of stabilizing forces and college placement Biology exam tips.
 image: /sims/protein-structure-levels/protein-structure-levels.png
 og:image: /sims/protein-structure-levels/protein-structure-levels.png
 twitter:image: /sims/protein-structure-levels/protein-structure-levels.png
@@ -16,18 +16,18 @@ social:
 
 ## About This MicroSim
 
-This interactive explorer displays the four levels of protein structure side by side: primary (amino acid sequence), secondary (alpha helices and beta sheets), tertiary (3D folding), and quaternary (multi-subunit assembly). Each panel shows a detailed biological illustration with hover-activated descriptions explaining the structures, stabilizing forces, and AP Biology exam relevance.
+This interactive explorer displays the four levels of protein structure side by side: primary (amino acid sequence), secondary (alpha helices and beta sheets), tertiary (3D folding), and quaternary (multi-subunit assembly). Each panel shows a detailed biological illustration with hover-activated descriptions explaining the structures, stabilizing forces, and college placement Biology exam relevance.
 
 ## How to Use
 
 1. **Hover** over any of the four panels to highlight that level and read its description in the infobox below.
 2. Each panel shows the **stabilizing forces** (peptide bonds, hydrogen bonds, R-group interactions, etc.) that maintain that level of structure.
-3. **AP Tips** at the bottom of each description highlight common exam questions and misconceptions.
+3. **college placement Tips** at the bottom of each description highlight common exam questions and misconceptions.
 
 ## Lesson Plan
 
 ### Grade Level
-9-12 (AP Biology)
+9-12 (college placement Biology)
 
 ### Duration
 10-15 minutes
@@ -51,4 +51,4 @@ Understanding of amino acid structure, functional groups, and types of chemical 
 1. [Protein structure](https://en.wikipedia.org/wiki/Protein_structure) — Wikipedia
 2. [Alpha helix](https://en.wikipedia.org/wiki/Alpha_helix) — Wikipedia
 3. [Beta sheet](https://en.wikipedia.org/wiki/Beta_sheet) — Wikipedia
-4. [AP Biology Course and Exam Description](https://apcentral.collegeboard.org/courses/ap-biology) — College Board
+4. [college placement Biology Course and Exam Description](https://apcentral.collegeboard.org/courses/ap-biology) — College Board

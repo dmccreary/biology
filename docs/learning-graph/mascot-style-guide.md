@@ -1,7 +1,7 @@
 # Gregor the Tree Frog — Mascot Style Guide
 
 This page shows all six admonition styles for **Gregor the Tree Frog**,
-the pedagogical mascot for AP Biology. Use it as a reference when writing
+the pedagogical mascot for college placement Biology. Use it as a reference when writing
 chapter content.
 
 ---
@@ -12,7 +12,7 @@ Use `mascot-welcome` at the start of each chapter to introduce the topic.
 
 !!! mascot-welcome "Gregor Welcomes You!"
 
-    Welcome to AP Biology! I'm Gregor, your guide through the living world.
+    Welcome to college placement Biology! I'm Gregor, your guide through the living world.
     Whether we're exploring the chemistry inside a cell or the dynamics of
     an entire ecosystem, I'll be right here with you. Let's investigate!
 
@@ -36,7 +36,7 @@ Use `mascot-tip` for exam strategies, memory tricks, or shortcuts.
 
 !!! mascot-tip "Gregor's Tip"
 
-    When you see a question about enzyme inhibition on the AP exam, always ask:
+    When you see a question about enzyme inhibition on the college placement exam, always ask:
     *Does the inhibitor bind the active site or somewhere else?* That single
     question tells you whether it's competitive or noncompetitive inhibition.
 
@@ -85,7 +85,7 @@ where none of the specific poses fits.
 
 !!! mascot-neutral "A Note from Gregor"
 
-    AP Biology covers a lot of ground — from atoms to ecosystems. Each unit
+    college placement Biology covers a lot of ground — from atoms to ecosystems. Each unit
     builds on the last, so if something feels shaky, it's worth going back
     to reinforce it before moving forward.
 

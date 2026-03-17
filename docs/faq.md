@@ -2,13 +2,13 @@
 
 ## Course Logistics & Planning
 
-### What makes this AP Biology course different from a standard high-school class?
+### What makes this college placement Biology course different from a standard high-school class?
 The curriculum mirrors a first-year university biology sequence: rapid pacing, data-heavy analysis, primary literature readings, and extensive MicroSim investigations in place of cookbook labs. Review `course-description.md` for scope and pacing expectations.
 
 ### Who is the ideal student for this program?
 Students in grades 11–12 (or exceptionally prepared sophomores) with prior biology and chemistry coursework, strong algebra skills, and an interest in authentic scientific inquiry. See the **Target Audience** section of `course-description.md`.
 
-### How should I manage workload alongside other AP classes?
+### How should I manage workload alongside other college placement classes?
 Allocate 60–90 minutes daily plus a longer block for MicroSim/data work. Use the pacing chart in `chapters/index.md` to coordinate deadlines and practice exams with other courses.
 
 ### What materials or technology do I need?
@@ -29,7 +29,7 @@ Yes. All textbook chapters and MicroSims are unlocked. Document completion in yo
 ### What should I do if a MicroSim fails to load?
 Update your browser, disable script blockers, and refresh. If issues persist, report them with details (device, browser, screenshot) using the troubleshooting guidance in `sims/index.md`.
 
-### How will I know I’m ready for the AP exam?
+### How will I know I’m ready for the college placement exam?
 When you can articulate every learning objective in `chapters/index.md`, score 70%+ on practice exams, and justify claims with quantitative evidence drawn from course data sets.
 
 ## Study Strategies & Assessments
@@ -59,7 +59,7 @@ Complete self-check tables at the end of each chapter and log MicroSim scores in
 Yes—discussion prompts labeled “Peer Exchange” invite collaborative whiteboarding or shared MicroSim runs. Follow your instructor’s academic honesty policy when working in groups.
 
 ### How can I stay motivated over a long course?
-Set milestone goals (unit checkpoints, practice exam dates), celebrate MicroSim achievements, and revisit the “Why AP Biology?” section in `course-description.md` to keep the big picture in mind.
+Set milestone goals (unit checkpoints, practice exam dates), celebrate MicroSim achievements, and revisit the “Why college placement Biology?” section in `course-description.md` to keep the big picture in mind.
 
 ### What exam-day strategies are recommended?
 Practice pacing using the sample exams referenced in `chapters/index.md`, annotate questions during reading periods, and answer easier items first to build confidence.
@@ -323,7 +323,7 @@ Use quadrat sampling, mark-recapture calculations, and logistic growth equations
 ## Labs, Data Skills & MicroSims
 
 ### How do MicroSims replace traditional labs?
-They recreate AP lab investigations digitally (diffusion/osmosis, enzyme kinetics, photosynthesis, genetics), allowing safe, repeatable experiments with exportable data. See `sims/index.md`.
+They recreate college placement lab investigations digitally (diffusion/osmosis, enzyme kinetics, photosynthesis, genetics), allowing safe, repeatable experiments with exportable data. See `sims/index.md`.
 
 ### How can I design an investigation?
 Use the Scientific Method Workflow MicroSim (`sims/scientific-method/index.md`) to structure hypotheses, variables, procedures, and analysis plans.
@@ -335,7 +335,7 @@ Export tables/screenshots, graph data in spreadsheets, calculate statistics, and
 Maintain a lab notebook recording objective, procedure, data tables, calculations, graphs, and CER conclusions for every MicroSim. Templates are provided in `chapters/index.md`.
 
 ### How do MicroSims prepare me for FRQs?
-They provide authentic data sets similar to AP exam prompts, letting you practice interpreting tables/graphs, identifying trends, and supporting claims with evidence.
+They provide authentic data sets similar to college placement exam prompts, letting you practice interpreting tables/graphs, identifying trends, and supporting claims with evidence.
 
 ### Can I collaborate on MicroSim investigations?
 Yes—work synchronously (screen sharing) or asynchronously (shared spreadsheets). Always note collaborators and follow instructor policies on shared work.
@@ -350,4 +350,4 @@ Each MicroSim introduction lists the corresponding textbook sections, and each c
 Graphing (line, scatter, bar), calculating slope/rate, performing chi-square analysis, and writing CER paragraphs. Practice sets are embedded in every chapter’s “Data Practice” section.
 
 ### How can I practice data-based questions without running a MicroSim?
-Use archived AP FRQ datasets and the “Analysis” prompts at the end of each chapter (`chapters/index.md`), applying the same interpretation skills you develop with the MicroSims.
+Use archived college placement FRQ datasets and the “Analysis” prompts at the end of each chapter (`chapters/index.md`), applying the same interpretation skills you develop with the MicroSims.

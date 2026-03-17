@@ -10,7 +10,7 @@ Create a biological textbook illustration of a **DNA replication fork** viewed f
 
 - **Aspect ratio:** landscape 4:3
 - **Resolution:** 1200 × 900 px
-- **Style:** biological textbook illustration, clean line art with light color fills, white background, AP Biology high school level
+- **Style:** biological textbook illustration, clean line art with light color fills, white background, college placement Biology high school level
 - **Background:** clean white, no gradients or artistic flourishes
 
 ## CRITICAL: No text, labels, numbers, arrows, callout lines, leader lines, or annotation marks anywhere in the image.

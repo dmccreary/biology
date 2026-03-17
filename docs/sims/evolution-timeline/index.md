@@ -20,8 +20,8 @@ This interactive timeline traces the development of evolutionary thinking from C
 
 ## How to Use
 
-1. **Hover** over any event to see a context tooltip with AP Biology connections.
-2. **Click** an event to expand its full description and AP exam context in the detail panel below the timeline.
+1. **Hover** over any event to see a context tooltip with college placement Biology connections.
+2. **Click** an event to expand its full description and college placement exam context in the detail panel below the timeline.
 3. **Filter** by era using the category buttons to focus on a specific period.
 4. **Navigate** with the pan (arrows) and zoom (+/−) buttons, or drag the timeline to pan.
 5. **Fit All** resets the view to show all events.
@@ -29,7 +29,7 @@ This interactive timeline traces the development of evolutionary thinking from C
 ## Lesson Plan
 
 ### Grade Level
-9-12 (AP Biology)
+9-12 (college placement Biology)
 
 ### Duration
 10-15 minutes
@@ -50,6 +50,6 @@ Basic understanding of what evolution means in a biological context.
 
 ## References
 
-1. [AP Biology Course and Exam Description](https://apcentral.collegeboard.org/courses/ap-biology) — College Board
+1. [college placement Biology Course and Exam Description](https://apcentral.collegeboard.org/courses/ap-biology) — College Board
 2. [Evolution](https://en.wikipedia.org/wiki/Evolution) — Wikipedia
 3. [History of Evolutionary Thought](https://en.wikipedia.org/wiki/History_of_evolutionary_thought) — Wikipedia

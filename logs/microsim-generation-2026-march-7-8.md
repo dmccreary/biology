@@ -69,7 +69,7 @@
       33  
       34  ### Grade Level
       42 -9-12 (High School Geometry)                                                                                                           
-      35 +9-12 (AP Biology)                                                                                                                     
+      35 +9-12 (college placement Biology)                                                                                                                     
       36  
       37  ### Duration
       38  10-15 minutes
@@ -418,7 +418,7 @@
       35  
       36  ### Grade Level
       42 -9-12 (High School Geometry)                                                                                                           
-      37 +9-12 (AP Biology)                                                                                                                     
+      37 +9-12 (college placement Biology)                                                                                                                     
       38  
       39  ### Duration
       40  10-15 minutes
@@ -760,7 +760,7 @@
       32  
       33  ### Grade Level
       42 -9-12 (High School Geometry)                                                                                                           
-      34 +9-12 (AP Biology)                                                                                                                     
+      34 +9-12 (college placement Biology)                                                                                                                     
       35  
       36  ### Duration
       37  10-15 minutes

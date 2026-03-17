@@ -64,5 +64,5 @@ You can add this MicroSim to any web page by adding this to your HTML:
 
 ## References
 
-1. Miller, G. T. & Spoolman, S. (2022). *Environmental Science: Sustaining Your World* (AP Edition). Cengage.
+1. Miller, G. T. & Spoolman, S. (2022). *Environmental Science: Sustaining Your World* (college placement Edition). Cengage.
 2. U.S. National Park Service. “Ecological Succession.” https://www.nps.gov/subjects/fire/ecological-succession.htm

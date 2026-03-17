@@ -1,6 +1,6 @@
 # Sample Biology Diagrams with Callouts
 
-This document lists the 10 most common labeled illustrations in AP Biology textbooks,
+This document lists the 10 most common labeled illustrations in college placement Biology textbooks,
 along with their typical callouts. It is intended to assess feasibility of generating
 these diagrams with a text-to-image LLM and overlaying interactive hover-text infoboxes.
 

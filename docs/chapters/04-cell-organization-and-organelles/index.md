@@ -357,7 +357,7 @@ Type: diagram
 **Library:** p5.js<br/>
 **Status:** Complete
 
-This interactive diagram labels 15 structures of the mitochondrion, including the outer and inner membranes, cristae, matrix, intermembrane space, ATP synthase, and the five electron transport chain complexes (I–V). Use Explore mode to read about each structure and its AP Biology significance; use Quiz mode to test identification.
+This interactive diagram labels 15 structures of the mitochondrion, including the outer and inner membranes, cristae, matrix, intermembrane space, ATP synthase, and the five electron transport chain complexes (I–V). Use Explore mode to read about each structure and its college placement Biology significance; use Quiz mode to test identification.
 </details>
 
 ### Chloroplasts
@@ -391,7 +391,7 @@ This interactive diagram labels 12 chloroplast structures including the outer an
 
 !!! mascot-thinking "Key Insight: The Endosymbiotic Theory"
     <img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Gregor thinking"/>
-    Both mitochondria and chloroplasts have their own circular DNA, their own 70S ribosomes (like bacteria, not like the 80S ribosomes of the eukaryotic cytoplasm), divide by binary fission, and are bounded by double membranes consistent with an engulfment event. This convergence of evidence from genetics, biochemistry, and cell biology makes the endosymbiotic theory one of the most thoroughly supported ideas in modern biology — and a common topic on AP free-response questions.
+    Both mitochondria and chloroplasts have their own circular DNA, their own 70S ribosomes (like bacteria, not like the 80S ribosomes of the eukaryotic cytoplasm), divide by binary fission, and are bounded by double membranes consistent with an engulfment event. This convergence of evidence from genetics, biochemistry, and cell biology makes the endosymbiotic theory one of the most thoroughly supported ideas in modern biology — and a common topic on college placement free-response questions.
 
 ---
 
@@ -545,7 +545,7 @@ The following table summarizes the key differences between animal and plant cell
 
 !!! mascot-warning "Common Mistake: Animal Cells Have No Chloroplasts"
     <img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Gregor warning"/>
-    The AP exam regularly tests the differences between animal and plant cells. Remember: animal cells have centrioles and lysosomes but no chloroplasts, no central vacuole, and no cell wall. Plant cells have chloroplasts, a central vacuole, and a cell wall but generally lack centrioles. Both have mitochondria, ribosomes, ER, Golgi, and a nucleus. Don't mix these up on a free-response question!
+    The college placement exam regularly tests the differences between animal and plant cells. Remember: animal cells have centrioles and lysosomes but no chloroplasts, no central vacuole, and no cell wall. Plant cells have chloroplasts, a central vacuole, and a cell wall but generally lack centrioles. Both have mitochondria, ribosomes, ER, Golgi, and a nucleus. Don't mix these up on a free-response question!
 
 ---
 

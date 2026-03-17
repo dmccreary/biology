@@ -18,7 +18,7 @@ social:
 
 This interactive diagram shows all stages of meiosis in two rows: **Meiosis I** (top row) and **Meiosis II** (bottom row). Sixteen callout markers highlight key structures and concepts across all 9 stages, from interphase through the production of four genetically unique haploid cells.
 
-Use **Explore mode** to hover over any marker or label and read detailed descriptions including AP Exam Tips.
+Use **Explore mode** to hover over any marker or label and read detailed descriptions including college placement Exam Tips.
 
 Switch to **Quiz mode** to test your ability to identify meiotic structures and concepts.
 
@@ -76,14 +76,14 @@ Switch to **Quiz mode** to test your ability to identify meiotic structures and 
 
 ## How to Use
 
-1. **Explore mode (default):** Hover over any numbered marker or label to see a description and AP Exam Tip
+1. **Explore mode (default):** Hover over any numbered marker or label to see a description and college placement Exam Tip
 2. **Quiz mode:** Click the Quiz button — labels are hidden and you must click the correct marker for each prompted structure
 3. **Edit mode:** Open `main.html?edit=true` in a browser to drag markers and calibrate positions
 
 ## Lesson Plan
 
 ### Grade Level
-9-12 (AP Biology)
+9-12 (college placement Biology)
 
 ### Duration
 15-20 minutes

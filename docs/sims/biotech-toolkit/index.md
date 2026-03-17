@@ -40,7 +40,7 @@ The diagram highlights three shared tools (PCR, gel electrophoresis, and DNA seq
 ## Lesson Plan
 
 ### Grade Level
-9-12 (AP Biology)
+9-12 (college placement Biology)
 
 ### Duration
 10-15 minutes

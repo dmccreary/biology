@@ -6,7 +6,7 @@
 
 The fluid mosaic model describes the plasma membrane as a dynamic, two-dimensional
 fluid in which a mosaic of proteins, lipids, and carbohydrates can move laterally.
-The 13 structures shown in the diagram are central to AP Biology Unit 2
+The 13 structures shown in the diagram are central to college placement Biology Unit 2
 (Cell Structure and Function).
 
 ## Phospholipid Bilayer

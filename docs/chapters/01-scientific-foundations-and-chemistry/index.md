@@ -10,7 +10,7 @@ version: 0.05
 
 ## Summary
 
-This opening chapter establishes the two pillars upon which all of AP Biology rests:
+This opening chapter establishes the two pillars upon which all of college placement Biology rests:
 the nature of scientific inquiry and the atomic chemistry that underlies every
 biological process. Students learn to design controlled experiments, apply statistical
 tests, and interpret quantitative data — skills exercised throughout the entire course.
@@ -59,11 +59,11 @@ in the [course description](../../course-description.md):
 
 !!! mascot-welcome "Gregor Welcomes You!"
     <img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Gregor welcomes you"/>
-    Welcome to AP Biology, investigators! I'm Gregor the Tree Frog, and I'll be guiding you through this course. Before we can understand how life works at any level — from a single protein to an entire ecosystem — we need two fundamental tools: a rigorous method for asking questions about nature, and a solid grasp of the atoms and chemical bonds that make biology possible. These aren't just preliminaries to "get through"; they are the lens through which every chapter that follows will make sense. Let's investigate!
+    Welcome to college placement Biology, investigators! I'm Gregor the Tree Frog, and I'll be guiding you through this course. Before we can understand how life works at any level — from a single protein to an entire ecosystem — we need two fundamental tools: a rigorous method for asking questions about nature, and a solid grasp of the atoms and chemical bonds that make biology possible. These aren't just preliminaries to "get through"; they are the lens through which every chapter that follows will make sense. Let's investigate!
 
 ## Introduction
 
-Science is, at its core, a way of knowing. It differs from other ways of understanding the world — intuition, tradition, authority — because it demands evidence, reproducibility, and the willingness to be proven wrong. Biology is the application of this approach to the study of living systems, and the AP Biology course will ask you to think and act as a scientist throughout. That means designing experiments, analyzing data, constructing graphs, and drawing conclusions that are proportional to the evidence.
+Science is, at its core, a way of knowing. It differs from other ways of understanding the world — intuition, tradition, authority — because it demands evidence, reproducibility, and the willingness to be proven wrong. Biology is the application of this approach to the study of living systems, and the college placement Biology course will ask you to think and act as a scientist throughout. That means designing experiments, analyzing data, constructing graphs, and drawing conclusions that are proportional to the evidence.
 
 Underlying every biological phenomenon is chemistry — and underlying chemistry is atomic physics. A cell membrane is not magic; it is a carefully arranged assembly of phospholipid molecules whose behavior is entirely predictable from the properties of covalent bonds and hydrogen bonds. DNA stores genetic information because the geometry of its covalent backbone and the specificity of its hydrogen-bond base pairs make it uniquely suited for that role. Understanding life at the molecular level requires a working vocabulary of atomic structure and chemical bonding.
 
@@ -75,7 +75,7 @@ This chapter is organized in two major parts. Part 1 covers the process of scien
 
 ### The Scientific Method
 
-The scientific method is an iterative, self-correcting process for building reliable knowledge about the natural world. It is not a rigid checklist performed in one direction, but a cycle of observation, inference, testing, and refinement. In AP Biology, you will apply these steps in laboratory investigations, analyze data from field studies, and evaluate claims made in the scientific literature.
+The scientific method is an iterative, self-correcting process for building reliable knowledge about the natural world. It is not a rigid checklist performed in one direction, but a cycle of observation, inference, testing, and refinement. In college placement Biology, you will apply these steps in laboratory investigations, analyze data from field studies, and evaluate claims made in the scientific literature.
 
 Below is a workflow of the scientific method.  Note that it is not a single pass.  There can be many loops in the scientific method.
 
@@ -150,7 +150,7 @@ In statistical testing, biologists work with two complementary hypotheses. The *
 !!! mascot-thinking "Key Insight: Falsifiability"
     <img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Gregor thinking"/>
 
-    Every scientific hypothesis must be falsifiable — meaning it must be possible, in principle, to obtain evidence that would prove it wrong. A claim like "some unknown force guides evolution" is not falsifiable and therefore not scientific. When you write hypotheses in AP Biology labs, always ask yourself: "What result would convince me my hypothesis is wrong?" If you can't answer that question, revise your hypothesis.
+    Every scientific hypothesis must be falsifiable — meaning it must be possible, in principle, to obtain evidence that would prove it wrong. A claim like "some unknown force guides evolution" is not falsifiable and therefore not scientific. When you write hypotheses in college placement Biology labs, always ask yourself: "What result would convince me my hypothesis is wrong?" If you can't answer that question, revise your hypothesis.
 
 ### Controlled Experiments: Variables and Controls
 
@@ -172,11 +172,11 @@ A controlled experiment must include at least two groups: the **experimental gro
 
 Biology is a quantitative science. Raw data collected from an experiment — a column of numbers representing enzyme activity, leaf length, or population size — cannot be interpreted by inspection alone. Statistical tools transform raw numbers into meaningful statements about the biological world, with an explicit assessment of how much confidence we should place in our conclusions.
 
-Two statistical measures are central to AP Biology: **standard deviation** and the **chi-square test**. Both will appear throughout the course and on the AP exam.
+Two statistical measures are central to college placement Biology: **standard deviation** and the **chi-square test**. Both will appear throughout the course and on the college placement exam.
 
 !!! mascot-encourage "You've Got This!"
     <img src="../../img/mascot/encouraging.png" class="mascot-admonition-img" alt="Gregor encouraging"/>
-    Statistics can feel intimidating at first — I know that feeling well! But here's the truth: you only need two statistical tools for the entire AP Biology course, and both have a clear biological purpose. Standard deviation tells you how variable your measurements are. Chi-square tells you whether your genetic ratios match what Mendel's laws predict. Master these two tools early and you will have a real advantage on free-response questions.
+    Statistics can feel intimidating at first — I know that feeling well! But here's the truth: you only need two statistical tools for the entire college placement Biology course, and both have a clear biological purpose. Standard deviation tells you how variable your measurements are. Chi-square tells you whether your genetic ratios match what Mendel's laws predict. Master these two tools early and you will have a real advantage on free-response questions.
 
 ### Standard Deviation
 
@@ -195,7 +195,7 @@ $$
 
 Where $x_i$ is each individual measurement, $\bar{x}$ is the sample mean, and $n$ is the number of observations. The denominator $n - 1$ (rather than $n$) corrects for the fact that we are estimating a population parameter from a sample.
 
-In AP Biology, standard deviation is typically used to add **error bars** to bar graphs and line graphs. When the error bars of two groups do not overlap, it suggests (though does not prove) that the difference between the groups is statistically significant. On the AP exam, you may be asked to draw error bars or interpret whether overlapping bars indicate a meaningful difference.
+In college placement Biology, standard deviation is typically used to add **error bars** to bar graphs and line graphs. When the error bars of two groups do not overlap, it suggests (though does not prove) that the difference between the groups is statistically significant. On the college placement exam, you may be asked to draw error bars or interpret whether overlapping bars indicate a meaningful difference.
 
 ### The Chi-Square ($\chi^2$) Statistical Test
 
@@ -276,7 +276,7 @@ Must be fully responsive — all elements reposition when canvas width changes.
 
 ### Data Interpretation and Graph Construction
 
-Collecting data is only half the work; communicating and interpreting it is equally important. In AP Biology, you will construct and analyze several types of graphs. The choice of graph type depends on the nature of the data and the relationship you are trying to show.
+Collecting data is only half the work; communicating and interpreting it is equally important. In college placement Biology, you will construct and analyze several types of graphs. The choice of graph type depends on the nature of the data and the relationship you are trying to show.
 
 | Graph Type | When to Use | X-Axis | Y-Axis | Example |
 |------------|-------------|--------|--------|---------|
@@ -285,7 +285,7 @@ Collecting data is only half the work; communicating and interpreting it is equa
 | Scatter plot | Showing correlation between two variables | One quantitative variable | Another quantitative variable | Body mass vs. metabolic rate |
 | Histogram | Showing frequency distribution | Measurement bins | Frequency or count | Leaf lengths in a population |
 
-When constructing any graph in AP Biology, follow these conventions:
+When constructing any graph in college placement Biology, follow these conventions:
 
 - Title the graph descriptively (e.g., "Effect of Temperature on Catalase Activity")
 - Label both axes with the variable name **and units** (e.g., "Temperature (°C)")
@@ -294,7 +294,7 @@ When constructing any graph in AP Biology, follow these conventions:
 - Add a legend if multiple data series are plotted
 - Never connect data points in a scatter plot unless a regression line is shown
 
-A common AP exam question asks you to "describe the data" in a graph. Trained biologists describe **trends** (direction of change), **magnitude** (by how much), and **anomalies** (any unexpected patterns). Avoid simply restating the axis labels — interpret what the numbers mean biologically.
+A common college placement exam question asks you to "describe the data" in a graph. Trained biologists describe **trends** (direction of change), **magnitude** (by how much), and **anomalies** (any unexpected patterns). Avoid simply restating the axis labels — interpret what the numbers mean biologically.
 
 ### Systems Thinking and Models in Science
 
@@ -309,7 +309,7 @@ Biology increasingly studies not just individual components but the **systems** 
 
 !!! mascot-tip "Gregor's Tip"
     <img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Gregor tip"/>
-    On AP free-response questions, you will often be asked to "use a model to predict" or "identify a limitation of this model." The key is to recognize that all models are simplifications. A limitation is something the model leaves out or gets wrong — for example, the Hardy-Weinberg model assumes no mutation, random mating, and infinite population size. Real populations violate all three assumptions, which is exactly why populations evolve!
+    On college placement free-response questions, you will often be asked to "use a model to predict" or "identify a limitation of this model." The key is to recognize that all models are simplifications. A limitation is something the model leaves out or gets wrong — for example, the Hardy-Weinberg model assumes no mutation, random mating, and infinite population size. Real populations violate all three assumptions, which is exactly why populations evolve!
 
 ---
 
@@ -525,7 +525,7 @@ Responsive: columns stack vertically (one per row) when canvas width < 600 px.
 
 ### Key Takeaways
 
-This chapter established the conceptual and chemical foundation for everything that follows in AP Biology. The following points summarize the most important ideas:
+This chapter established the conceptual and chemical foundation for everything that follows in college placement Biology. The following points summarize the most important ideas:
 
 **Scientific Foundations:**
 

@@ -7,7 +7,7 @@
 
 Replaced all physics-based examples in the Scientific Method interactive diagram
 with a single coherent biology example: the effect of temperature on catalase
-activity (potato extract + H₂O₂). This experiment is a standard AP Biology lab
+activity (potato extract + H₂O₂). This experiment is a standard college placement Biology lab
 investigation and directly connects to Chapter 1 concepts (controlled experiments,
 independent/dependent variables, standard deviation, graph construction).
 
@@ -25,7 +25,7 @@ independent/dependent variables, standard deviation, graph construction).
 | Decision1 → example | Smoother = farther, supports friction hypothesis | Activity peaked at 37°C, fell sharply above 60°C; error bars support significance |
 | Accept → example | Friction reduces kinetic energy | Catalase peaks at 37°C; nearly abolished at 80°C — denaturation confirmed |
 | Revise → example | Tile worse than wood → hardness hypothesis | 0°C unexpectedly high → revise to bell-curve optimal temperature model |
-| Communicate → example | Basic lab report outline | Full AP lab report with SD table, error-bar graph, structural biology context |
+| Communicate → example | Basic lab report outline | Full college placement lab report with SD table, error-bar graph, structural biology context |
 | Decision2 → example | Ball mass, inclined surfaces, humidity | pH effect, substrate concentration, liver vs. potato optimal temperatures |
 | End → example | Air resistance curiosity | New pH experiment designed, holding temperature constant at 37°C |
 | `defaultInfo.description` | "…see a physics example" | "…see a biology example" |
@@ -42,7 +42,7 @@ All 12 nodes tell a single continuous story:
 > temperature — and is abolished at 80°C. The investigation raises new questions
 > about pH and substrate concentration, launching the next experimental cycle.
 
-## AP Biology Connections
+## college placement Biology Connections
 
 - **Controlled experiments** — 5 temperature levels, same potato/H₂O₂ batch, 3 trials
 - **Independent/dependent variables** — temperature (IV), bubble height (DV)

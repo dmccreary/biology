@@ -212,8 +212,8 @@ The **lac operon** controls the metabolism of lactose in *E. coli*. It is an **i
 | Condition | Lactose | Glucose | lac operon |
 |---|---|---|---|
 | No need | Absent | Present | **OFF** — repressor binds operator |
-| Lactose available | Present | Absent | **ON** — allolactose (inducer) binds repressor, releases it from operator; cAMP + CAP activate transcription |
-| Both sugars | Present | Present | **LOW** — glucose is preferred; low cAMP means weak CAP activation |
+| Lactose available | Present | Absent | **ON** — allolactose (inducer) binds repressor, releases it from operator; cAMP + Ccollege placement activate transcription |
+| Both sugars | Present | Present | **LOW** — glucose is preferred; low cAMP means weak Ccollege placement activation |
 
 !!! mascot-thinking "Key Insight"
     <img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Gregor thinking">
@@ -454,7 +454,7 @@ The system works by:
 
 !!! mascot-tip "Gregor's Tip"
     <img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Gregor's tip">
-    CRISPR is a frequent AP exam topic. Know three things: (1) the guide RNA provides **specificity** (targeting), (2) Cas9 provides the **cutting** function, and (3) the cell's own repair machinery does the actual editing. Also be prepared to discuss ethical considerations — CRISPR can edit human germline cells, raising questions about heritable genetic modifications.
+    CRISPR is a frequent college placement exam topic. Know three things: (1) the guide RNA provides **specificity** (targeting), (2) Cas9 provides the **cutting** function, and (3) the cell's own repair machinery does the actual editing. Also be prepared to discuss ethical considerations — CRISPR can edit human germline cells, raising questions about heritable genetic modifications.
 
 ### Gene Therapy Concepts
 
@@ -555,14 +555,14 @@ Each node is a rounded rectangle with tool name and icon.
 
 ---
 
-??? question "AP Practice: Test Your Understanding"
+??? question "college placement Practice: Test Your Understanding"
     **Question 1:** A mutation changes the mRNA codon from UAC (tyrosine) to UAG. What type of mutation is this, and what is the likely effect on the protein?
 
     **Answer:** This is a **nonsense mutation** — UAG is a stop codon. The protein will be truncated at this position, losing all downstream amino acids. The protein is likely nonfunctional.
 
     **Question 2:** An *E. coli* cell is growing in a medium containing both glucose and lactose. Predict the state of the lac operon and explain your reasoning.
 
-    **Answer:** The lac operon is **mostly OFF** (low expression). Although lactose is present (so allolactose can remove the repressor from the operator), glucose is also present — which keeps cAMP levels low. Without cAMP, the CAP activator protein cannot bind the promoter region effectively, resulting in minimal transcription. The cell preferentially uses glucose.
+    **Answer:** The lac operon is **mostly OFF** (low expression). Although lactose is present (so allolactose can remove the repressor from the operator), glucose is also present — which keeps cAMP levels low. Without cAMP, the Ccollege placement activator protein cannot bind the promoter region effectively, resulting in minimal transcription. The cell preferentially uses glucose.
 
     **Question 3:** A researcher wants to insert a human insulin gene into a bacterial plasmid. Describe the key steps using recombinant DNA technology.
 

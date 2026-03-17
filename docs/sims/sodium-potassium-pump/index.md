@@ -23,7 +23,7 @@ Use **Explore mode** to hover over each structure and learn about its role in ac
 
 ## How to Use
 
-1. **Explore mode** — Hover over any numbered marker or label to see a description of that structure and its AP exam relevance
+1. **Explore mode** — Hover over any numbered marker or label to see a description of that structure and its college placement exam relevance
 2. **Quiz mode** — A structure name appears in the prompt; click the correct marker on the diagram to identify it
 3. After completing the quiz, try again to improve your score
 
@@ -59,7 +59,7 @@ Use **Explore mode** to hover over each structure and learn about its role in ac
 ## Lesson Plan
 
 ### Grade Level
-9-12 (AP Biology)
+9-12 (college placement Biology)
 
 ### Duration
 10-15 minutes
@@ -83,5 +83,5 @@ Use **Explore mode** to hover over each structure and learn about its role in ac
 ## References
 
 1. [Sodium-potassium pump — Wikipedia](https://en.wikipedia.org/wiki/Na%2B/K%2B-ATPase)
-2. [Active Transport — AP Biology, College Board](https://apcentral.collegeboard.org/)
+2. [Active Transport — college placement Biology, College Board](https://apcentral.collegeboard.org/)
 3. Alberts et al. *Molecular Biology of the Cell*, 6th ed. — Chapter 11: Membrane Transport

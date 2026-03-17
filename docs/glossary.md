@@ -184,7 +184,7 @@ ATP synthase is one of the most efficient molecular machines known, operating li
 
 The total number of ATP molecules generated from the complete oxidation of one glucose molecule through glycolysis, pyruvate oxidation, the citric acid cycle, and oxidative phosphorylation. The theoretical maximum is 30 to 32 ATP, though actual yield varies with shuttle mechanisms and cellular conditions.
 
-The AP exam expects students to know that the majority of ATP comes from oxidative phosphorylation, not substrate-level phosphorylation.
+The college placement exam expects students to know that the majority of ATP comes from oxidative phosphorylation, not substrate-level phosphorylation.
 
 #### Base Pairing Rules
 
@@ -232,7 +232,7 @@ This concept has limitations for asexual organisms, fossils, and species that hy
 
 Large-scale ecological regions characterized by distinct climate conditions, dominant vegetation types, and associated animal communities. Terrestrial biomes include tropical rainforest, temperate deciduous forest, grassland, desert, taiga, and tundra, distributed primarily by temperature and precipitation gradients.
 
-The AP exam expects students to predict which biome occurs at given latitude and climate conditions.
+The college placement exam expects students to predict which biome occurs at given latitude and climate conditions.
 
 #### Biotechnology Overview
 
@@ -288,7 +288,7 @@ A signal transduction pathway in which binding of a ligand to a G protein-couple
 
 The study of uncontrolled cell division resulting from accumulated mutations in proto-oncogenes (which become oncogenes) and tumor suppressor genes. Cancer cells evade apoptosis, ignore growth-inhibiting signals, stimulate angiogenesis, and can metastasize to distant tissues.
 
-The AP exam focuses on how mutations in cell cycle regulators (p53, Ras, Rb) disrupt normal growth controls.
+The college placement exam focuses on how mutations in cell cycle regulators (p53, Ras, Rb) disrupt normal growth controls.
 
 **Example:** A mutation converting the Ras proto-oncogene to an oncogene produces a constitutively active Ras protein that continuously stimulates cell division.
 
@@ -382,7 +382,7 @@ The process transfers energy from glucose to ATP through a series of redox react
 
 Attractive forces between atoms that hold molecules together, including covalent bonds (shared electrons), ionic bonds (electron transfer), and hydrogen bonds (weak attraction to electronegative atoms).
 
-Understanding bond types is critical in AP Biology because the structure and function of every biological molecule depends on which bonds form, how strong they are, and how they break.
+Understanding bond types is critical in college placement Biology because the structure and function of every biological molecule depends on which bonds form, how strong they are, and how they break.
 
 **Example:** Peptide bonds (covalent) link amino acids, while hydrogen bonds stabilize DNA base pairing.
 
@@ -462,7 +462,7 @@ Climate change is the dominant ecological challenge of the 21st century, affecti
 
 The study of how rising temperatures, altered precipitation, and increased atmospheric $\ce{CO2}$ affect ecological processes including species range shifts, phenological mismatches, coral bleaching, ocean acidification, and changes in community composition.
 
-The AP exam expects students to connect climate change to disruptions in food webs, symbioses, and biogeochemical cycles.
+The college placement exam expects students to connect climate change to disruptions in food webs, symbioses, and biogeochemical cycles.
 
 **Example:** Coral bleaching occurs when elevated ocean temperatures cause corals to expel their symbiotic zooxanthellae, leading to reef degradation.
 
@@ -560,7 +560,7 @@ An applied science focused on preserving biodiversity and managing threatened ec
 
 The property of normal cells to cease dividing when they come into contact with neighboring cells, forming a single confluent layer. Loss of contact inhibition is a hallmark of cancer cells, which continue dividing and pile up in multiple layers.
 
-Contact inhibition provides a key distinction between normal and transformed cells on the AP exam.
+Contact inhibition provides a key distinction between normal and transformed cells on the college placement exam.
 
 #### Controlled Experiments
 
@@ -596,7 +596,7 @@ A genome editing technology adapted from a bacterial adaptive immune system, in 
 
 #### Critical Thinking
 
-The disciplined process of analyzing evidence, evaluating claims, identifying assumptions, and drawing logical conclusions in scientific inquiry. In AP Biology, critical thinking includes designing experiments, interpreting data, distinguishing correlation from causation, and evaluating the strength of evidence.
+The disciplined process of analyzing evidence, evaluating claims, identifying assumptions, and drawing logical conclusions in scientific inquiry. In college placement Biology, critical thinking includes designing experiments, interpreting data, distinguishing correlation from causation, and evaluating the strength of evidence.
 
 #### Crossing Over
 
@@ -632,7 +632,7 @@ The cytoskeleton is not a static scaffold; it is continuously assembled and disa
 
 The set of empirical observations Charles Darwin made during his voyage on HMS Beagle and afterward, including variation within populations, overproduction of offspring, competition for resources, and differential survival and reproduction.
 
-These observations formed the logical foundation for the theory of evolution by natural selection, one of the four Big Ideas in AP Biology.
+These observations formed the logical foundation for the theory of evolution by natural selection, one of the four Big Ideas in college placement Biology.
 
 **Example:** Darwin noted that Galapagos finch species had beak shapes suited to different food sources on different islands, suggesting adaptation to local environments.
 
@@ -640,7 +640,7 @@ These observations formed the logical foundation for the theory of evolution by 
 
 The process of analyzing quantitative and qualitative results from experiments or observations to draw evidence-based conclusions, identify patterns, and evaluate whether data support or refute a hypothesis.
 
-Data interpretation is a core AP Biology science practice; the exam frequently presents unfamiliar graphs, tables, or experimental results that students must analyze without prior context.
+Data interpretation is a core college placement Biology science practice; the exam frequently presents unfamiliar graphs, tables, or experimental results that students must analyze without prior context.
 
 **Example:** A student examines a bar graph showing enzyme activity at different pH values and concludes that the enzyme functions optimally at pH 7.4.
 
@@ -648,7 +648,7 @@ Data interpretation is a core AP Biology science practice; the exam frequently p
 
 Factors that influence population growth rates in proportion to population density, typically intensifying as population size increases relative to available resources.
 
-Density-dependent factors create negative feedback loops that drive populations toward carrying capacity and are central to understanding logistic growth models on the AP exam.
+Density-dependent factors create negative feedback loops that drive populations toward carrying capacity and are central to understanding logistic growth models on the college placement exam.
 
 **Example:** As a deer population grows denser, competition for browse intensifies, disease spreads more easily, and predation rates increase, slowing population growth.
 
@@ -680,7 +680,7 @@ Diffusion is a passive process requiring no energy input and underlies gas excha
 
 Genetic crosses that simultaneously track the inheritance of two independently assorting genes, producing a characteristic 9:3:3:1 phenotypic ratio in the F2 generation when both parents are heterozygous for both traits.
 
-Dihybrid crosses illustrate Mendel's law of independent assortment and are a frequent source of AP exam free-response questions involving probability calculations.
+Dihybrid crosses illustrate Mendel's law of independent assortment and are a frequent source of college placement exam free-response questions involving probability calculations.
 
 **Example:** Crossing RrYy (round, yellow) pea plants yields offspring in a 9 round yellow : 3 round green : 3 wrinkled yellow : 1 wrinkled green ratio.
 
@@ -704,7 +704,7 @@ Understanding disaccharide structure reinforces the relationship between monomer
 
 The spatial distribution of individuals within a population's habitat, classified as clumped, uniform, or random depending on resource distribution, social behavior, and interspecific interactions.
 
-Dispersion patterns provide ecologists with information about species interactions and habitat quality and are a testable concept in the AP Biology ecology unit.
+Dispersion patterns provide ecologists with information about species interactions and habitat quality and are a testable concept in the college placement Biology ecology unit.
 
 **Example:** Creosote bushes in a desert exhibit uniform dispersion due to competition for water, with each plant's root system inhibiting growth of nearby individuals.
 
@@ -792,7 +792,7 @@ This concept is fundamental to Mendelian genetics, though many real traits invol
 
 A measure of human demand on Earth's ecosystems, expressed as the area of biologically productive land and water required to produce the resources consumed and absorb the wastes generated by a given population.
 
-Ecological footprint analysis helps quantify sustainability by comparing resource demand against Earth's biocapacity, connecting human ecology to AP Biology's ecosystem concepts.
+Ecological footprint analysis helps quantify sustainability by comparing resource demand against Earth's biocapacity, connecting human ecology to college placement Biology's ecosystem concepts.
 
 **Example:** The average ecological footprint of a person in the United States is approximately 8 global hectares, which exceeds Earth's per-capita biocapacity of roughly 1.6 global hectares.
 
@@ -816,7 +816,7 @@ Primary succession begins on bare substrate with no soil, while secondary succes
 
 The scientific study of interactions among organisms and between organisms and their physical environment, encompassing levels of biological organization from individual organisms to the biosphere.
 
-Ecology integrates concepts from all other AP Biology units, including evolution, energetics, and information transfer, making it a unifying framework for the course.
+Ecology integrates concepts from all other college placement Biology units, including evolution, energetics, and information transfer, making it a unifying framework for the course.
 
 #### Ecosystem Ecology
 
@@ -950,7 +950,7 @@ Epigenetic changes allow cells with identical genomes to differentiate into dist
 
 A gene interaction in which the phenotypic expression of one gene (the hypostatic gene) is masked or modified by the alleles of a different gene (the epistatic gene), altering expected Mendelian ratios.
 
-Epistasis demonstrates that genes do not act in isolation and is important for understanding modified dihybrid ratios on the AP exam.
+Epistasis demonstrates that genes do not act in isolation and is important for understanding modified dihybrid ratios on the college placement exam.
 
 **Example:** In Labrador retrievers, the E gene is epistatic to the B gene: the ee genotype produces yellow coat color regardless of whether the dog carries BB, Bb, or bb alleles, modifying the 9:3:3:1 ratio to 9:3:4.
 
@@ -1006,7 +1006,7 @@ Facilitated diffusion is essential for transporting polar molecules and ions tha
 
 Long hydrocarbon chains with a terminal carboxyl group that serve as building blocks of lipids; classified as saturated (no carbon-carbon double bonds, straight chains) or unsaturated (one or more double bonds, introducing kinks).
 
-The degree of saturation affects membrane fluidity and the physical properties of fats and oils, a concept tested frequently on the AP exam.
+The degree of saturation affects membrane fluidity and the physical properties of fats and oils, a concept tested frequently on the college placement exam.
 
 **Example:** Oleic acid is a monounsaturated fatty acid with one cis double bond that creates a bend, preventing tight packing and keeping olive oil liquid at room temperature.
 
@@ -1014,7 +1014,7 @@ The degree of saturation affects membrane fluidity and the physical properties o
 
 A regulatory mechanism in which the end product of a metabolic pathway allosterically inhibits an enzyme early in the pathway, preventing overproduction and conserving cellular resources.
 
-Feedback inhibition is a form of negative feedback that maintains metabolic homeostasis and is a common example of allosteric regulation on the AP exam.
+Feedback inhibition is a form of negative feedback that maintains metabolic homeostasis and is a common example of allosteric regulation on the college placement exam.
 
 **Example:** In the isoleucine biosynthesis pathway, accumulation of isoleucine inhibits threonine deaminase, the first enzyme in the pathway, shutting down its own production.
 
@@ -1150,7 +1150,7 @@ Gametes are the vehicles for genetic transmission between generations, and their
 
 A laboratory technique that separates DNA, RNA, or protein molecules by size and charge by pulling them through a porous gel matrix (agarose or polyacrylamide) using an electric field; smaller fragments migrate farther from the well.
 
-Gel electrophoresis is a core biotechnology technique tested on the AP exam, used in conjunction with restriction enzymes, PCR, and DNA fingerprinting.
+Gel electrophoresis is a core biotechnology technique tested on the college placement exam, used in conjunction with restriction enzymes, PCR, and DNA fingerprinting.
 
 **Example:** After digesting DNA with a restriction enzyme, gel electrophoresis separates the resulting fragments, which appear as distinct bands when stained with ethidium bromide or a safer dye.
 
@@ -1174,7 +1174,7 @@ The complexity of eukaryotic gene regulation allows a single genome to produce h
 
 The control of gene expression in prokaryotes primarily at the transcriptional level through operons, in which a cluster of functionally related genes shares a single promoter and is regulated by a single operator sequence bound by repressor or activator proteins.
 
-The lac operon and trp operon are the classic AP Biology examples of inducible and repressible gene regulation, respectively.
+The lac operon and trp operon are the classic college placement Biology examples of inducible and repressible gene regulation, respectively.
 
 **Example:** In the lac operon, when lactose is present and glucose is absent, allolactose binds the lac repressor, releasing it from the operator and allowing RNA polymerase to transcribe the genes for lactose metabolism.
 
@@ -1182,7 +1182,7 @@ The lac operon and trp operon are the classic AP Biology examples of inducible a
 
 Therapeutic approaches that aim to treat or prevent disease by introducing, altering, or replacing genetic material within a patient's cells, using delivery methods such as viral vectors, lipid nanoparticles, or CRISPR-Cas9 gene editing.
 
-Gene therapy represents the clinical application of molecular biology concepts covered in AP Biology and raises important bioethical considerations about germline versus somatic modifications.
+Gene therapy represents the clinical application of molecular biology concepts covered in college placement Biology and raises important bioethical considerations about germline versus somatic modifications.
 
 **Example:** In 2017, the FDA approved voretigene neparvovec, a gene therapy that delivers a functional copy of the RPE65 gene via an adeno-associated virus vector to treat inherited retinal dystrophy.
 
@@ -1270,7 +1270,7 @@ The Golgi apparatus functions as the cell's processing and shipping center, with
 
 The process of representing quantitative data visually using appropriate graph types (line graphs, bar graphs, scatter plots, histograms), including proper labeling of axes with units, selection of appropriate scales, and interpretation of trends, patterns, and statistical relationships.
 
-Graph construction and analysis is one of the most heavily tested science practices on the AP Biology exam; students must both create graphs from data tables and interpret unfamiliar graphs in free-response questions.
+Graph construction and analysis is one of the most heavily tested science practices on the college placement Biology exam; students must both create graphs from data tables and interpret unfamiliar graphs in free-response questions.
 
 **Example:** A student plots population size versus time on a line graph, identifies the inflection point where growth rate begins to decrease, and explains that the population is approaching carrying capacity using the logistic growth model.
 
@@ -1378,7 +1378,7 @@ This distinction is central to membrane biology. The hydrophobic interior of the
 
 A systematic process in which a testable, falsifiable prediction is evaluated through controlled experimentation or observation, with results used to support or reject the hypothesis.
 
-Hypothesis testing is the foundation of the scientific method. In AP Biology, students must distinguish between null and alternative hypotheses and interpret data to draw valid conclusions.
+Hypothesis testing is the foundation of the scientific method. In college placement Biology, students must distinguish between null and alternative hypotheses and interpret data to draw valid conclusions.
 
 **Example:** A researcher hypothesizes that fertilizer increases plant growth, then compares the height of fertilized plants to unfertilized controls over four weeks.
 
@@ -1482,9 +1482,9 @@ The Krebs cycle is central to aerobic respiration because the electron carriers 
 
 A regulated cluster of genes in *E. coli* that encodes enzymes for lactose metabolism, controlled by a repressor protein and an activator (CAP) that respond to lactose and glucose availability.
 
-The lac operon is a model system for understanding gene regulation in prokaryotes. It demonstrates both negative control (repressor binding) and positive control (CAP activation).
+The lac operon is a model system for understanding gene regulation in prokaryotes. It demonstrates both negative control (repressor binding) and positive control (Ccollege placement activation).
 
-**Example:** When lactose is present and glucose is absent, the repressor releases from the operator and CAP binds the promoter, maximizing transcription of the lac genes.
+**Example:** When lactose is present and glucose is absent, the repressor releases from the operator and Ccollege placement binds the promoter, maximizing transcription of the lac genes.
 
 #### Lactic Acid Fermentation
 
@@ -1498,7 +1498,7 @@ This pathway allows cells to sustain ATP production when oxygen is limited, thou
 
 During DNA replication, the leading strand is synthesized continuously in the 5' to 3' direction toward the replication fork, while the lagging strand is synthesized discontinuously as Okazaki fragments in the opposite direction.
 
-This asymmetry arises because DNA polymerase can only add nucleotides in the 5' to 3' direction, yet the two template strands run antiparallel. Understanding this mechanism is essential for AP Biology.
+This asymmetry arises because DNA polymerase can only add nucleotides in the 5' to 3' direction, yet the two template strands run antiparallel. Understanding this mechanism is essential for college placement Biology.
 
 **Example:** On the lagging strand, primase repeatedly lays down RNA primers, and DNA polymerase III synthesizes short Okazaki fragments that DNA ligase later joins.
 
@@ -1874,7 +1874,7 @@ Operons allow prokaryotes to coordinate expression of genes involved in the same
 
 The chemistry of carbon-containing compounds, emphasizing carbon's ability to form four covalent bonds, create long chains and rings, and serve as the backbone of all biological macromolecules.
 
-Understanding organic chemistry fundamentals is essential for AP Biology because the structure and function of carbohydrates, lipids, proteins, and nucleic acids all depend on carbon bonding chemistry.
+Understanding organic chemistry fundamentals is essential for college placement Biology because the structure and function of carbohydrates, lipids, proteins, and nucleic acids all depend on carbon bonding chemistry.
 
 **Example:** Carbon can form single, double, and triple bonds with other atoms, allowing molecules such as ethanol ($\ce{C2H5OH}$) and glucose ($\ce{C6H12O6}$) to have diverse structures and properties.
 
@@ -2000,7 +2000,7 @@ Sequential chains of protein kinase activations in which each kinase phosphoryla
 
 These cascades allow a single extracellular signal molecule to produce a large intracellular response and provide multiple points for regulation and integration of signals.
 
-**Example:** The MAP kinase cascade amplifies a growth factor signal from the membrane receptor to transcription factors in the nucleus.
+**Example:** The Mcollege placement kinase cascade amplifies a growth factor signal from the membrane receptor to transcription factors in the nucleus.
 
 #### Photorespiration
 
@@ -2084,7 +2084,7 @@ Point mutations are the simplest form of genetic change but can have effects ran
 
 An inheritance pattern in which two or more genes at different loci contribute additively to a single phenotypic trait, producing continuous variation that typically follows a bell-shaped distribution.
 
-Polygenic traits are important in AP Biology because they explain why most human characteristics do not follow simple Mendelian ratios.
+Polygenic traits are important in college placement Biology because they explain why most human characteristics do not follow simple Mendelian ratios.
 
 **Example:** Human skin color is determined by at least three genes, each with alleles that contribute varying amounts of melanin.
 
@@ -2248,7 +2248,7 @@ The proton gradient across the inner mitochondrial membrane and thylakoid membra
 
 A diagram used to predict the genotypic and phenotypic ratios of offspring from a genetic cross by arranging all possible combinations of parental gametes in a grid format.
 
-Punnett squares provide a simple visual method for applying the rules of probability to Mendelian genetics problems on the AP exam.
+Punnett squares provide a simple visual method for applying the rules of probability to Mendelian genetics problems on the college placement exam.
 
 **Example:** A monohybrid cross between two heterozygous parents (Aa x Aa) yields a predicted 3:1 phenotypic ratio in a Punnett square.
 
@@ -2272,7 +2272,7 @@ Not all proteins have quaternary structure, but those that do often exhibit coop
 
 A framework describing life history strategies along a continuum. r-selected species maximize reproductive rate with many small offspring and little parental care; K-selected species produce fewer offspring with greater parental investment near carrying capacity.
 
-While modern ecology uses more nuanced life history models, r/K selection remains a useful conceptual tool for comparing reproductive strategies on the AP exam.
+While modern ecology uses more nuanced life history models, r/K selection remains a useful conceptual tool for comparing reproductive strategies on the college placement exam.
 
 **Example:** Dandelions (r-selected) produce thousands of seeds with no parental care, while elephants (K-selected) have long gestation, few offspring, and extensive parental investment.
 
@@ -2280,7 +2280,7 @@ While modern ecology uses more nuanced life history models, r/K selection remain
 
 Enzyme-linked membrane receptors that dimerize upon ligand binding and phosphorylate tyrosine residues on each other (autophosphorylation), activating intracellular signaling cascades that regulate cell growth, differentiation, and survival.
 
-RTKs are important in AP Biology because many growth factors signal through them, and mutations in RTK genes are commonly associated with cancer.
+RTKs are important in college placement Biology because many growth factors signal through them, and mutations in RTK genes are commonly associated with cancer.
 
 **Example:** The epidermal growth factor receptor (EGFR) is an RTK whose overactivation promotes uncontrolled cell division in certain cancers.
 
@@ -2410,7 +2410,7 @@ The degree of saturation affects membrane fluidity and is linked to dietary heal
 
 A systematic process for investigating natural phenomena, involving observation, hypothesis formulation, experimental testing with controlled variables, data collection and analysis, and drawing conclusions. Hypotheses must be testable and falsifiable.
 
-The scientific method is the foundation of all biological inquiry, and the AP exam frequently tests the ability to design and analyze experiments using this framework.
+The scientific method is the foundation of all biological inquiry, and the college placement exam frequently tests the ability to design and analyze experiments using this framework.
 
 #### Second Law of Thermodynamics
 
@@ -2504,7 +2504,7 @@ Signal amplification ensures that cells can respond sensitively and rapidly to v
 
 The process by which an extracellular signal is converted into an intracellular response through a series of molecular steps: signal reception at the membrane, relay via intracellular signaling molecules, and a cellular response.
 
-Signal transduction pathways allow cells to respond appropriately to their environment and are a major topic on the AP Biology exam, particularly regarding specificity and amplification.
+Signal transduction pathways allow cells to respond appropriately to their environment and are a major topic on the college placement Biology exam, particularly regarding specificity and amplification.
 
 **Example:** A growth factor binds a receptor tyrosine kinase, triggering a phosphorylation cascade that activates transcription factors and promotes cell division.
 
@@ -2566,7 +2566,7 @@ Stabilizing selection is the most common form of selection and maintains well-ad
 
 A statistical measure of the spread of data points around the mean in a data set. In biology, it quantifies the variation within a sample and is used to assess the reliability and significance of experimental results.
 
-AP Biology requires students to calculate and interpret standard deviations and use them to construct error bars and evaluate overlap between data sets.
+college placement Biology requires students to calculate and interpret standard deviations and use them to construct error bars and evaluate overlap between data sets.
 
 **Example:** If two experimental groups have means of 15 and 18 with standard deviations of 2, their error bars do not overlap, suggesting a significant difference.
 
@@ -2606,7 +2606,7 @@ Surface tension is biologically significant because it affects gas exchange at r
 
 Graphical representations of the proportion of individuals in a cohort surviving to each age. Three generalized types exist: Type I (high early survival, mortality in old age), Type II (constant mortality), and Type III (high early mortality, few survivors).
 
-Survivorship curves link population ecology to life history strategies and are frequently tested on the AP exam.
+Survivorship curves link population ecology to life history strategies and are frequently tested on the college placement exam.
 
 **Example:** Humans display a Type I survivorship curve, while oysters display a Type III curve with massive juvenile mortality.
 
@@ -2630,7 +2630,7 @@ Synapsis and tetrad formation are essential for proper homolog segregation and f
 
 An approach in biology that analyzes how components of a biological system interact and generate emergent properties that cannot be predicted from the parts alone. It emphasizes feedback loops, interdependence, and dynamic equilibrium.
 
-The AP Biology curriculum explicitly emphasizes systems thinking as a way to understand how molecular, cellular, organismal, and ecological levels are interconnected.
+The college placement Biology curriculum explicitly emphasizes systems thinking as a way to understand how molecular, cellular, organismal, and ecological levels are interconnected.
 
 #### Telomeres
 
@@ -2680,7 +2680,7 @@ Tertiary structure determines protein function because it creates the specific a
 
 A genetic cross between an individual expressing a dominant phenotype of unknown genotype and a homozygous recessive individual. The offspring ratios reveal whether the dominant parent is homozygous or heterozygous.
 
-Test crosses are a fundamental technique in genetics for determining unknown genotypes, and they appear frequently in AP Biology problem sets.
+Test crosses are a fundamental technique in genetics for determining unknown genotypes, and they appear frequently in college placement Biology problem sets.
 
 **Example:** Crossing a purple-flowered pea plant (P?) with a white-flowered plant (pp): if all offspring are purple, the parent is PP; if half are white, the parent is Pp.
 

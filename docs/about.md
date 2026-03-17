@@ -15,7 +15,7 @@ The scale of learners tackling these ideas is enormous:
 
 **In the United States (2025):**
 
-- More than **265,000 students** take the AP Biology exam each year, making it the most popular advanced lab-science assessment[^1]
+- More than **265,000 students** take the college placement Biology exam each year, making it the most popular advanced lab-science assessment[^1]
 - Biological and biomedical sciences account for **over 6% of all U.S. bachelor’s degrees**, a share that has more than doubled since the 1980s[^2]
 - Employment for biological scientists is projected to grow **7% this decade**, faster than the average for all occupations[^3]
 
@@ -55,13 +55,19 @@ The scope of this course was guided by the following guiding question:
 !!! prompt
     What concepts that should be covered in a high-school Biology course that maximizes a student’s chance of earning college credit?
 
-For the past three years we have iterated on AI-assisted authoring workflows to pair accurate biology content with interactive assets. The first daft of this book was produced with Claude Code Opus 4.6 using Skills on February 3, 2026, with an emphasis on tighter alignment to AP Biology, NGSS Life Science performance expectations, and story-driven MicroSims.
+For the past three years we have iterated on AI-assisted authoring workflows to pair accurate biology content with interactive assets. The first daft of this book was produced with Claude Code Opus 4.6 using Skills on February 3, 2026, with an emphasis on tighter alignment to college placement Biology, NGSS Life Science performance expectations, and story-driven MicroSims.
+
+## About the AP® Biology Trademark
+
+Note that the term AP® is a registered trademark of The College Board.  The authors of this textbook
+are in no way affiliated with The College Board and no endorsement of this textbook by
+The College Board is implied.
 
 ## About Dan McCreary
 
 Dan McCreary is a semi-retired AI researcher, solution architect, and educator who has spent more than three decades helping Fortune 100 organizations reason over massive datasets. At Optum he founded the Generative AI Center of Excellence and led the team that built one of the world’s largest healthcare knowledge graphs—spanning over 25 billion vertices—to unify member, provider, and patient insights. Dan’s deep background in knowledge representation and systems thinking underpins the precise learning graphs and intelligent textbook workflows used throughout this course.
 
-He is the co-author of *Making Sense of NoSQL* (Manning Publications), the founding chair of the NoSQL Now! conference, and a frequent keynote speaker on semantic search, ontology strategy, and AI hardware. Beyond industry, Dan has mentored students as a STEM volunteer since 2014 now applies the same rigor to building open AP Biology resources.  You can visit the [Intelligent Textbooks Case Studies](https://dmccreary.github.io/intelligent-textbooks/case-studies/) to see over 70 textbooks that Dan has create or co-created with other authors.
+He is the co-author of *Making Sense of NoSQL* (Manning Publications), the founding chair of the NoSQL Now! conference, and a frequent keynote speaker on semantic search, ontology strategy, and AI hardware. Beyond industry, Dan has mentored students as a STEM volunteer since 2014 now applies the same rigor to building open college placement Biology resources.  You can visit the [Intelligent Textbooks Case Studies](https://dmccreary.github.io/intelligent-textbooks/case-studies/) to see over 70 textbooks that Dan has create or co-created with other authors.
 
 **Selected Credentials for Dan McCreary**
 
@@ -74,7 +80,7 @@ He is the co-author of *Making Sense of NoSQL* (Manning Publications), the found
 
 ## References
 
-[^1]: College Board. [2024 AP Score Distributions](https://apstudents.collegeboard.org/about-ap-scores/score-distributions). Reporting 265,356 AP Biology exam takers.
+[^1]: College Board. [2024 college placement Score Distributions](https://apstudents.collegeboard.org/about-ap-scores/score-distributions). Reporting 265,356 college placement Biology exam takers.
 [^2]: National Science Foundation. *Science and Engineering Indicators 2024*, Table 2-9, showing growth in biological and biomedical bachelor’s degrees.
 [^3]: U.S. Bureau of Labor Statistics. *Occupational Outlook Handbook: Biological Scientists* (2024).
 [^4]: UNESCO. *SDG 4 Midterm Progress Review* (2023), prioritization of life-science curricula.

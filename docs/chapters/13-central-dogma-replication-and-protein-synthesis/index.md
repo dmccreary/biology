@@ -140,7 +140,7 @@ This result ruled out conservative replication (which would produce only heavy a
 
 !!! mascot-thinking "Key Insight"
     <img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Gregor thinking">
-    The Meselson-Stahl experiment is considered one of the "most beautiful experiments in biology." It demonstrates a powerful principle: a well-designed experiment can distinguish between competing hypotheses by generating predictions that differ. On the AP exam, be prepared to interpret density gradient results and explain how they support semiconservative replication.
+    The Meselson-Stahl experiment is considered one of the "most beautiful experiments in biology." It demonstrates a powerful principle: a well-designed experiment can distinguish between competing hypotheses by generating predictions that differ. On the college placement exam, be prepared to interpret density gradient results and explain how they support semiconservative replication.
 
 ### The Replication Fork: Key Enzymes
 
@@ -252,7 +252,7 @@ Additional repair mechanisms handle DNA damage from external sources:
 
 !!! mascot-tip "Gregor's Tip"
     <img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Gregor's tip">
-    The AP exam connects telomeres to both aging and cancer. Remember: telomerase is normally OFF in somatic cells (contributing to aging) but is reactivated in ~90% of cancers (allowing unlimited division). This links directly to the cell cycle checkpoints you studied in Chapter 10.
+    The college placement exam connects telomeres to both aging and cancer. Remember: telomerase is normally OFF in somatic cells (contributing to aging) but is reactivated in ~90% of cancers (allowing unlimited division). This links directly to the cell cycle checkpoints you studied in Chapter 10.
 
 ---
 
@@ -451,7 +451,7 @@ Key properties:
 
 **Learning objective:** Students will be able to *use* (Bloom's L3: Apply) the genetic code table to translate an mRNA sequence into an amino acid sequence, and *explain* (Bloom's L2: Understand) the properties of the genetic code including redundancy and universality.
 
-**Instructional Rationale:** An interactive codon table where students can click codons to see the corresponding amino acid (and vice versa) builds fluency with reading the table — a skill directly tested on the AP exam. The mRNA translation tool provides immediate practice.
+**Instructional Rationale:** An interactive codon table where students can click codons to see the corresponding amino acid (and vice versa) builds fluency with reading the table — a skill directly tested on the college placement exam. The mRNA translation tool provides immediate practice.
 
 **Canvas:** 780 × 480 px, responsive.
 
@@ -615,7 +615,7 @@ In prokaryotes, transcription and translation are **coupled** — ribosomes begi
 
 ---
 
-??? question "AP Practice: Test Your Understanding"
+??? question "college placement Practice: Test Your Understanding"
     **Question 1:** If the template strand of DNA reads 3'-TACGGATCCAATT-5', what is the sequence of the resulting mRNA?
 
     **Answer:** mRNA is synthesized complementary to the template, in the 5'→3' direction: 5'-AUGCCUAGGUUAA-3'. Note: AUG is the start codon, and UAA is a stop codon.

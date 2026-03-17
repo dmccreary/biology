@@ -13,7 +13,7 @@
       "color": "#E8F4FC",
       "hint": "pale sky-blue region above the membrane",
       "description": "The aqueous environment outside the cell. This is where extracellular signals (hormones, neurotransmitters, growth factors) arrive and bind receptor proteins. The concentration gradients of ions and molecules across the membrane relative to this space drive osmosis, diffusion, and active transport.",
-      "ap_tip": "The extracellular face of the membrane carries the carbohydrate chains (glycocalyx) that identify the cell to the immune system. Signals received here are transduced across the membrane without the signal molecule entering the cell — a principle central to AP Unit 4 (cell communication)."
+      "ap_tip": "The extracellular face of the membrane carries the carbohydrate chains (glycocalyx) that identify the cell to the immune system. Signals received here are transduced across the membrane without the signal molecule entering the cell — a principle central to college placement Unit 4 (cell communication)."
     },
     {
       "id": 2,
@@ -25,7 +25,7 @@
       "color": "#9B8EC4",
       "hint": "lavender oval resting on the outer membrane surface, not embedded",
       "description": "A protein loosely associated with the surface of the membrane — attached to the head groups of phospholipids or to exposed portions of integral proteins, but not embedded in the hydrophobic core. Found on either the extracellular or intracellular face. Functions include signal transduction, anchoring the cytoskeleton, and enzymatic activity.",
-      "ap_tip": "Peripheral proteins are loosely attached and can be removed without disrupting the bilayer. They are often involved in cell signaling. The AP exam may ask you to distinguish peripheral from integral proteins by their relationship to the hydrophobic core."
+      "ap_tip": "Peripheral proteins are loosely attached and can be removed without disrupting the bilayer. They are often involved in cell signaling. The college placement exam may ask you to distinguish peripheral from integral proteins by their relationship to the hydrophobic core."
     },
     {
       "id": 3,
@@ -37,7 +37,7 @@
       "color": "#7DB84A",
       "hint": "teal protein with branching lime-green sugar chains extending above the membrane",
       "description": "An integral membrane protein with one or more branching oligosaccharide (sugar) chains covalently attached to its extracellular domain. The carbohydrate chains form part of the glycocalyx — the cell-surface sugar coat — and participate in cell-cell recognition, immune response, and cell adhesion.",
-      "ap_tip": "Glycoproteins are critical for cell-cell recognition — the basis of immune self/non-self distinction. The ABO blood group antigens are glycoproteins. On the AP exam, carbohydrates are always on the EXTRACELLULAR face of the membrane, never the intracellular face."
+      "ap_tip": "Glycoproteins are critical for cell-cell recognition — the basis of immune self/non-self distinction. The ABO blood group antigens are glycoproteins. On the college placement exam, carbohydrates are always on the EXTRACELLULAR face of the membrane, never the intracellular face."
     },
     {
       "id": 4,
@@ -73,7 +73,7 @@
       "color": "#2D7D9A",
       "hint": "deep teal-blue protein spanning the full thickness of the membrane",
       "description": "A protein that is permanently embedded in the phospholipid bilayer, typically spanning both leaflets. Also called a transmembrane protein. The portions that sit within the hydrophobic core have nonpolar amino acid side chains; the portions that protrude into aqueous environments have polar or charged side chains.",
-      "ap_tip": "Integral proteins cannot be removed from the membrane without detergents that disrupt the bilayer. Compare to peripheral proteins, which can be removed with high-salt solutions. On the AP exam, channel and carrier proteins are both types of integral proteins."
+      "ap_tip": "Integral proteins cannot be removed from the membrane without detergents that disrupt the bilayer. Compare to peripheral proteins, which can be removed with high-salt solutions. On the college placement exam, channel and carrier proteins are both types of integral proteins."
     },
     {
       "id": 7,
@@ -85,7 +85,7 @@
       "color": "#C47A7A",
       "hint": "dusty rose/salmon-pink protein spanning the membrane with a large lobed domain above",
       "description": "A transmembrane protein with an extracellular binding domain shaped to recognize and bind a specific signaling molecule (ligand) such as a hormone or neurotransmitter. Binding triggers a conformational change that activates a signal transduction cascade inside the cell, converting an extracellular signal into an intracellular response.",
-      "ap_tip": "Receptor proteins are at the heart of signal transduction (AP Unit 4). Remember: the signal molecule (first messenger) does NOT need to enter the cell — it binds the receptor, which activates an intracellular pathway. G-protein coupled receptors and receptor tyrosine kinases are two key types tested on the AP exam."
+      "ap_tip": "Receptor proteins are at the heart of signal transduction (college placement Unit 4). Remember: the signal molecule (first messenger) does NOT need to enter the cell — it binds the receptor, which activates an intracellular pathway. G-protein coupled receptors and receptor tyrosine kinases are two key types tested on the college placement exam."
     },
     {
       "id": 8,
@@ -157,7 +157,7 @@
       "color": "#2D7D9A",
       "hint": "deep teal-blue protein spanning the membrane with a visible narrow white or pale channel through its center",
       "description": "A transmembrane protein that forms a hydrophilic pore through the bilayer, allowing specific ions or small polar molecules to pass by facilitated diffusion — down their concentration gradient, no energy required. Aquaporins are channel proteins specific to water. Ion channels may be gated (opened or closed by a stimulus) or ungated.",
-      "ap_tip": "Channel proteins enable facilitated diffusion — movement DOWN a concentration gradient through a protein, requiring NO ATP. Do not confuse with active transport pumps, which move ions AGAINST their gradient using ATP. Aquaporins are a classic AP example of channel proteins."
+      "ap_tip": "Channel proteins enable facilitated diffusion — movement DOWN a concentration gradient through a protein, requiring NO ATP. Do not confuse with active transport pumps, which move ions AGAINST their gradient using ATP. Aquaporins are a classic college placement example of channel proteins."
     }
   ],
   "layout": "top-bottom"

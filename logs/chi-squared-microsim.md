@@ -207,7 +207,7 @@
        17 -    <a href=".">Back to Lesson Plan</a>                                                  
       135 +<main>                                                                                   
       136 +    <h2>Chi-Square (χ²) Test Calculator</h2>                                             
-      137 +    <div class="subtitle">AP Biology — Statistical Analysis of Genetic Crosses</div>     
+      137 +    <div class="subtitle">college placement Biology — Statistical Analysis of Genetic Crosses</div>     
       138 +                                                                                         
       139 +    <!-- Controls -->                                                                    
       140 +    <div class="controls">                                                               
@@ -472,7 +472,7 @@
        3 -description: Interactive p5.js MicroSim for standard deviation.                                  
        2 +title: Chi-Square Test Calculator                                                                
        3 +description: Interactive step-by-step calculator for the chi-square statistical test, show       
-         +ing all computation stages and an accept/reject decision for AP Biology genetic cross data
+         +ing all computation stages and an accept/reject decision for college placement Biology genetic cross data
          +.                                                                                         
        4  image: /sims/chi-square-calculator/chi-square-calculator.png
        5  og:image: /sims/chi-square-calculator/chi-square-calculator.png
@@ -498,7 +498,7 @@
       18  
       22 -TODO: Describe what this MicroSim demonstrates.                                           
       19 +This calculator walks students through every computational stage of the                   
-      20 +chi-square (χ²) statistical test — the primary tool AP Biology uses to evaluate           
+      20 +chi-square (χ²) statistical test — the primary tool college placement Biology uses to evaluate           
       21 +whether observed genetic cross results match Mendelian expected ratios.                   
       22 +Students enter their own observed counts, choose an expected ratio (3:1, 1:2:1,           
       23 +or 9:3:3:1), and watch the step-by-step table populate with O, E, (O−E),                  
@@ -545,7 +545,7 @@
        58  ### Grade Level
        42 -9-12 (High School Geometry)                                                              
        59  
-       60 +9–12 (AP Biology, Unit 1 and Unit 5)                                                     
+       60 +9–12 (college placement Biology, Unit 1 and Unit 5)                                                     
        61 +                                                                                         
        62  ### Duration
        45 -10-15 minutes                                                                            
@@ -618,7 +618,7 @@
       123 +1. [Chi-Squared Test — Wikipedia](https://en.wikipedia.org/wiki/Chi-squared_test)        
       124 +2. [Mendelian Inheritance — Wikipedia](https://en.wikipedia.org/wiki/Mendelian_inheritanc
           +e)                                                                                       
-      125 +3. [AP Biology Course and Exam Description — College Board](https://apcentral.collegeboar
+      125 +3. [college placement Biology Course and Exam Description — College Board](https://apcentral.collegeboar
           +d.org/courses/ap-biology)                                                                
 
 ⏺ Bash(open -a "Google Chrome" "http://127.0.0.1:8000/biology/sims/chi-square-calculator/")
@@ -635,11 +635,11 @@
   - About — explains the 5-stage step-through approach and the three ratio options
   - How to Use — 6 numbered steps matching the actual UI controls
   - Key Concepts table — defines O, E, (O−E)²/E, χ², df, and critical value
-  - Lesson Plan — fully rewritten for AP Biology (Units 1 & 5), 20–30 min, with 5 activities that build
+  - Lesson Plan — fully rewritten for college placement Biology (Units 1 & 5), 20–30 min, with 5 activities that build
   from the default 3:1 case through dihybrid crosses
-  - Common Misconceptions — three AP exam traps (fail to reject ≠ accept, sample size effect, df
+  - Common Misconceptions — three college placement exam traps (fail to reject ≠ accept, sample size effect, df
   definition)
-  - References — Wikipedia chi-square, Mendelian inheritance, College Board AP Bio
+  - References — Wikipedia chi-square, Mendelian inheritance, College Board college placement Bio
 
 ✻ Sautéed for 47s
 
@@ -729,7 +729,7 @@
 
 ❯ Perfect!                                                                                                 
            
-⏺ Glad it worked out! The chi-square calculator now covers all the key AP Biology scenarios — three that   
+⏺ Glad it worked out! The chi-square calculator now covers all the key college placement Biology scenarios — three that   
   demonstrate normal Mendelian variation (fail to reject) and one that clearly shows a statistically
   significant deviation (reject). That's exactly the contrast students need to understand what the test is 
   actually doing.

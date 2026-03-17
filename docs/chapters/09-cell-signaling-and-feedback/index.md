@@ -176,12 +176,12 @@ The RTK activation mechanism differs from GPCRs:
 2. **Autophosphorylation:** Each RTK in the dimer phosphorylates tyrosine residues on its partner.
 3. The phosphorylated tyrosines serve as **docking sites** for intracellular signaling proteins.
 4. Docked proteins activate downstream cascades, most prominently the **Ras/MAPK pathway**:
-   - Ras (a GTPase) is activated → activates a kinase cascade (MAP kinase kinase kinase → MAP kinase kinase → MAP kinase)
+   - Ras (a GTPase) is activated → activates a kinase cascade (Mcollege placement kinase kinase kinase → Mcollege placement kinase kinase → Mcollege placement kinase)
    - Activated MAPK enters the nucleus and phosphorylates transcription factors
    - Result: changes in gene expression, often promoting cell growth and division
 
 !!! mascot-tip "Gregor's Tip"
-    The AP exam frequently tests the distinction between GPCRs and RTKs. Key differences: GPCRs use a **separate G protein** and often act through **second messengers** (cAMP); RTKs are **enzymes themselves** (the receptor IS the kinase) and activate **multiple downstream cascades** simultaneously via phosphotyrosine docking sites. RTK mutations that cause constitutive activity are a major cause of cancer — this is a high-probability AP free-response topic.
+    The college placement exam frequently tests the distinction between GPCRs and RTKs. Key differences: GPCRs use a **separate G protein** and often act through **second messengers** (cAMP); RTKs are **enzymes themselves** (the receptor IS the kinase) and activate **multiple downstream cascades** simultaneously via phosphotyrosine docking sites. RTK mutations that cause constitutive activity are a major cause of cancer — this is a high-probability college placement free-response topic.
 
 ## Intracellular Receptors
 
@@ -209,7 +209,7 @@ Common second messengers:
 **Signal amplification** occurs because each activated molecule in the cascade can activate many downstream molecules. A single hormone molecule binding one GPCR can activate hundreds of G proteins; each G protein activates adenylyl cyclase for multiple cycles, producing thousands of cAMP molecules; each active PKA phosphorylates many targets. The result: one hormone molecule can ultimately trigger the production of millions of product molecules.
 
 !!! mascot-warning "Common Mistake"
-    Second messengers are **not** the same as receptors, and they are **not** the original signal molecules. cAMP is produced *inside* the cell in response to extracellular signals — it relays the signal but is not the signal itself. Also note that second messengers are small molecules, not proteins. On the AP exam, be careful to distinguish: extracellular signal (ligand/first messenger) → receptor → second messenger → effector protein.
+    Second messengers are **not** the same as receptors, and they are **not** the original signal molecules. cAMP is produced *inside* the cell in response to extracellular signals — it relays the signal but is not the signal itself. Also note that second messengers are small molecules, not proteins. On the college placement exam, be careful to distinguish: extracellular signal (ligand/first messenger) → receptor → second messenger → effector protein.
 
 ## Feedback Loops: Negative and Positive
 

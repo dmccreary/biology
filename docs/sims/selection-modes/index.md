@@ -31,7 +31,7 @@ This animated visualization shows how three types of natural selection — stabi
 ## Lesson Plan
 
 ### Grade Level
-9-12 (AP Biology)
+9-12 (college placement Biology)
 
 ### Duration
 10-15 minutes

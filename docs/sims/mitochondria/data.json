@@ -34,7 +34,7 @@
       "color": "#A1887F",
       "hint": "finger-like or shelf-like inward folds of the inner membrane projecting into the matrix",
       "description": "Cristae are extensive infoldings of the inner membrane that dramatically increase its surface area — a single mitochondrion can have cristae with 5× the surface area of the outer membrane. The ETC complexes are concentrated on cristae membranes. Cristae shape is regulated by proteins such as MICOS (mitochondrial contact site complex) and OPA1, and changes dynamically in response to the cell's energy state.",
-      "ap_tip": "More cristae = more ETC surface area = more ATP production capacity. Cells with high energy demands (cardiac muscle, liver) have densely packed cristae. On the AP exam, know that the inner membrane (including cristae) is the site of the ETC and ATP synthase — not the matrix and not the outer membrane."
+      "ap_tip": "More cristae = more ETC surface area = more ATP production capacity. Cells with high energy demands (cardiac muscle, liver) have densely packed cristae. On the college placement exam, know that the inner membrane (including cristae) is the site of the ETC and ATP synthase — not the matrix and not the outer membrane."
     },
     {
       "id": 4,
@@ -56,7 +56,7 @@
       "color": "#FFF3E0",
       "hint": "large pale amber interior space enclosed by the inner membrane, the dominant central region",
       "description": "The matrix is the aqueous compartment enclosed by the inner membrane. It contains the enzymes of the citric acid (Krebs) cycle, the pyruvate dehydrogenase complex, fatty acid beta-oxidation enzymes, mitochondrial DNA (a circular chromosome of ~16,569 bp in humans), mitochondrial ribosomes (55S), and tRNAs. NADH and FADH₂ are produced in the matrix and feed electrons into the ETC.",
-      "ap_tip": "The matrix is analogous to the stroma of the chloroplast — it is where the carbon-processing cycles occur (Krebs cycle in mitochondria; Calvin cycle in chloroplasts). Both compartments receive electron carriers (NADH/FADH₂ or NADPH/ATP) from their respective membrane systems. Key AP fact: pyruvate enters the matrix from the cytoplasm and is converted to Acetyl-CoA."
+      "ap_tip": "The matrix is analogous to the stroma of the chloroplast — it is where the carbon-processing cycles occur (Krebs cycle in mitochondria; Calvin cycle in chloroplasts). Both compartments receive electron carriers (NADH/FADH₂ or NADPH/ATP) from their respective membrane systems. Key college placement fact: pyruvate enters the matrix from the cytoplasm and is converted to Acetyl-CoA."
     },
     {
       "id": 6,
@@ -78,7 +78,7 @@
       "color": "#FF7043",
       "hint": "red upward arrows above Complexes I, III, and IV showing H+ being pumped from the matrix into the intermembrane space",
       "description": "Proton pumping by Complexes I, III, and IV creates an electrochemical gradient across the inner membrane — the proton-motive force (PMF). It has two components: a chemical gradient (ΔpH ≈ 1 unit, matrix is more basic) and an electrical gradient (membrane potential ΔΨ ≈ −180 mV, matrix is negative). The combined PMF drives H⁺ back through ATP synthase. For every O₂ reduced: Complex I pumps 4 H⁺, Complex III pumps 4 H⁺, Complex IV pumps 4 H⁺ — total of 12 H⁺ per O₂.",
-      "ap_tip": "Chemiosmosis — proton gradient driving ATP synthesis — is the central mechanism of both cellular respiration and photosynthesis (Mitchell hypothesis, Nobel 1978). On the AP exam, always specify the DIRECTION of H⁺ movement: pumped from matrix → IMS by the ETC; flows from IMS → matrix through ATP synthase. The gradient collapses if the inner membrane becomes permeable (uncouplers like DNP or thermogenin in brown fat)."
+      "ap_tip": "Chemiosmosis — proton gradient driving ATP synthesis — is the central mechanism of both cellular respiration and photosynthesis (Mitchell hypothesis, Nobel 1978). On the college placement exam, always specify the DIRECTION of H⁺ movement: pumped from matrix → IMS by the ETC; flows from IMS → matrix through ATP synthase. The gradient collapses if the inner membrane becomes permeable (uncouplers like DNP or thermogenin in brown fat)."
     },
     {
       "id": 8,
@@ -89,7 +89,7 @@
       "color": "#0288D1",
       "hint": "sky blue O2 and H2O molecular shapes on the matrix side of Complex IV, indicating the final reduction",
       "description": "Molecular oxygen (O₂) is the final electron acceptor of the electron transport chain. At Complex IV, 4 electrons (from 4 cytochrome c molecules) reduce O₂ to 2 H₂O, consuming 4 H⁺ from the matrix. This reaction has a very negative reduction potential (ΔE°′ = +0.82 V), making it thermodynamically favorable and pulling electrons through the entire ETC. Without O₂, the chain backs up: NADH and FADH₂ cannot be oxidized, NAD⁺ and FAD become depleted, and the citric acid cycle and pyruvate oxidation halt.",
-      "ap_tip": "O₂ is consumed at Complex IV, not at ATP synthase. The water produced at Complex IV is metabolic water — it is distinct from water consumed by the citric acid cycle or other reactions. Classic AP question: where is O₂ used and what product forms? Answer: Complex IV, and the product is H₂O (not released as O₂ — that only happens in photosynthesis)."
+      "ap_tip": "O₂ is consumed at Complex IV, not at ATP synthase. The water produced at Complex IV is metabolic water — it is distinct from water consumed by the citric acid cycle or other reactions. Classic college placement question: where is O₂ used and what product forms? Answer: Complex IV, and the product is H₂O (not released as O₂ — that only happens in photosynthesis)."
     },
     {
       "id": 9,
@@ -100,7 +100,7 @@
       "color": "#AD1457",
       "hint": "large pink mushroom-shaped protein complex, rightmost in the ETC zoom, with the F1 head protruding into the matrix and the Fo rotor embedded in the membrane",
       "description": "ATP synthase (F₀F₁-ATPase, Complex V) uses the proton-motive force — H⁺ flowing from IMS back into the matrix through the F₀ transmembrane channel — to phosphorylate ADP + Pᵢ → ATP in the matrix via the F₁ catalytic head. The F₀ c-ring rotates as H⁺ passes through, driving rotation of the central γ-subunit, which causes conformational changes in the three β-subunits of F₁ (binding change mechanism). Approximately 2.7 H⁺ flow through F₁ per ATP synthesized.",
-      "ap_tip": "The ATP synthase binding change mechanism (Paul Boyer, Nobel Prize 1997) is a rotating motor — one of the key mechanistic concepts at AP level. Know that: (1) H⁺ flows from IMS → matrix through ATP synthase; (2) F₁ head is in the matrix (where ATP is made); (3) oligomycin blocks the F₀ channel. Compare with CF₁ in chloroplasts — same mechanism, opposite side (H⁺ flows lumen → stroma)."
+      "ap_tip": "The ATP synthase binding change mechanism (Paul Boyer, Nobel Prize 1997) is a rotating motor — one of the key mechanistic concepts at college placement level. Know that: (1) H⁺ flows from IMS → matrix through ATP synthase; (2) F₁ head is in the matrix (where ATP is made); (3) oligomycin blocks the F₀ channel. Compare with CF₁ in chloroplasts — same mechanism, opposite side (H⁺ flows lumen → stroma)."
     },
     {
       "id": 10,
@@ -111,7 +111,7 @@
       "color": "#1976D2",
       "hint": "smaller teal-blue complex embedded in the inner membrane, right of Complex I, with FADH2 entering from the matrix",
       "description": "Complex II (succinate:ubiquinone oxidoreductase) is the only ETC complex that is also a citric acid cycle enzyme — it catalyzes the oxidation of succinate to fumarate in the matrix, producing FADH₂ (which remains enzyme-bound). The electrons from FADH₂ are passed through FAD and iron-sulfur clusters to ubiquinone. Unlike Complexes I, III, and IV, Complex II does NOT pump H⁺ into the IMS, which is why FADH₂ yields less ATP than NADH.",
-      "ap_tip": "FADH₂ enters at Complex II, bypassing Complex I. Because Complex II does not pump H⁺, FADH₂ yields only ~1.5 ATP (vs. ~2.5 ATP for NADH). This is a key AP calculation fact. Complex II mutations are associated with certain hereditary tumors (paragangliomas, pheochromocytomas)."
+      "ap_tip": "FADH₂ enters at Complex II, bypassing Complex I. Because Complex II does not pump H⁺, FADH₂ yields only ~1.5 ATP (vs. ~2.5 ATP for NADH). This is a key college placement calculation fact. Complex II mutations are associated with certain hereditary tumors (paragangliomas, pheochromocytomas)."
     },
     {
       "id": 11,
@@ -122,7 +122,7 @@
       "color": "#00695C",
       "hint": "small teal/aqua globular protein on the IMS face of the inner membrane, between Complex III and Complex IV",
       "description": "Cytochrome c is a small, soluble, heme-containing protein (12 kDa) loosely associated with the outer face of the inner membrane in the IMS. It carries one electron at a time from Complex III to Complex IV. Its heme iron alternates between Fe³⁺ (oxidized) and Fe²⁺ (reduced) during electron transfer. In addition to its ETC role, cytochrome c released into the cytoplasm during apoptosis binds Apaf-1 to activate caspase-9, initiating the intrinsic apoptosis pathway.",
-      "ap_tip": "Cytochrome c is analogous to plastocyanin in chloroplasts — both are small, soluble, metal-containing electron carriers in the aqueous compartment (IMS or thylakoid lumen) between a cytochrome complex and the terminal photosystem/oxidase. Cytochrome c release from the IMS is the key signal that triggers apoptosis — an important AP Biology concept in cell communication."
+      "ap_tip": "Cytochrome c is analogous to plastocyanin in chloroplasts — both are small, soluble, metal-containing electron carriers in the aqueous compartment (IMS or thylakoid lumen) between a cytochrome complex and the terminal photosystem/oxidase. Cytochrome c release from the IMS is the key signal that triggers apoptosis — an important college placement Biology concept in cell communication."
     },
     {
       "id": 12,
@@ -133,7 +133,7 @@
       "color": "#B71C1C",
       "hint": "dark red transmembrane protein complex right of center in the ETC zoom, with O2 and H2O shown on the matrix side",
       "description": "Complex IV (cytochrome c oxidase) is the terminal enzyme of the ETC. It accepts 4 electrons from 4 cytochrome c molecules and uses them to reduce one O₂ molecule to 2 H₂O in the matrix: O₂ + 4H⁺ + 4e⁻ → 2H₂O. Simultaneously, 4 H⁺ are pumped into the IMS per O₂ reduced. It contains copper centers (CuA, CuB) and heme centers (cytochrome a, cytochrome a3) as electron carriers. It is inhibited by cyanide (CN⁻), carbon monoxide (CO), and azide (N₃⁻).",
-      "ap_tip": "Complex IV is where O₂ is consumed — O₂ is the 'final electron acceptor' that makes aerobic respiration possible. Without O₂, the entire ETC backs up and NADH/FADH₂ cannot be re-oxidized to NAD⁺/FAD. Classic AP poisons: cyanide blocks Complex IV; rotenone blocks Complex I; oligomycin blocks ATP synthase."
+      "ap_tip": "Complex IV is where O₂ is consumed — O₂ is the 'final electron acceptor' that makes aerobic respiration possible. Without O₂, the entire ETC backs up and NADH/FADH₂ cannot be re-oxidized to NAD⁺/FAD. Classic college placement poisons: cyanide blocks Complex IV; rotenone blocks Complex I; oligomycin blocks ATP synthase."
     },
     {
       "id": 13,

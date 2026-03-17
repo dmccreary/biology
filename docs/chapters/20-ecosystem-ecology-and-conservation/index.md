@@ -10,7 +10,7 @@ version: 0.05
 
 !!! mascot-welcome "Gregor Welcomes You!"
     <img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Gregor welcomes you">
-    Welcome to the final chapter, investigators! Everything you have learned — from molecules to cells to organisms to populations to communities — converges here in **ecosystem ecology**. How does energy flow through an entire ecosystem? How is matter recycled through biogeochemical cycles? And most urgently: what is happening to Earth's biodiversity, and what can we do about it? This chapter brings your AP Biology journey full circle. Let's investigate one last time!
+    Welcome to the final chapter, investigators! Everything you have learned — from molecules to cells to organisms to populations to communities — converges here in **ecosystem ecology**. How does energy flow through an entire ecosystem? How is matter recycled through biogeochemical cycles? And most urgently: what is happening to Earth's biodiversity, and what can we do about it? This chapter brings your college placement Biology journey full circle. Let's investigate one last time!
 
 ## Summary
 
@@ -370,7 +370,7 @@ A community with 5 species and 20% of each is more diverse (higher evenness) tha
 
 !!! mascot-warning "Common Mistake"
     <img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Gregor warns you">
-    On the AP exam, be specific about climate change mechanisms. Don't just say "global warming hurts animals." Explain the mechanism: rising temperatures shift the geographic range of suitable habitat; species that cannot migrate fast enough face extinction. Or: ocean acidification reduces carbonate ion concentration, making it harder for corals and mollusks to build calcium carbonate structures.
+    On the college placement exam, be specific about climate change mechanisms. Don't just say "global warming hurts animals." Explain the mechanism: rising temperatures shift the geographic range of suitable habitat; species that cannot migrate fast enough face extinction. Or: ocean acidification reduces carbonate ion concentration, making it harder for corals and mollusks to build calcium carbonate structures.
 
 ### Conservation Biology
 
@@ -394,7 +394,7 @@ An **ecological footprint** measures the total amount of biologically productive
 
 !!! mascot-celebration "Excellent Work!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Gregor celebrates">
-    Congratulations, investigators! You have now completed all 20 chapters of AP Biology — from atoms and molecules to the grand patterns of the biosphere. Every concept connects: the chemistry of Chapter 1 underlies the enzyme kinetics of Chapter 6; the DNA replication of Chapter 13 makes the heredity of Chapter 11 possible; the population genetics of Chapter 16 explains the biodiversity you just studied here. You are ready for the AP exam. Go make Gregor proud!
+    Congratulations, investigators! You have now completed all 20 chapters of college placement Biology — from atoms and molecules to the grand patterns of the biosphere. Every concept connects: the chemistry of Chapter 1 underlies the enzyme kinetics of Chapter 6; the DNA replication of Chapter 13 makes the heredity of Chapter 11 possible; the population genetics of Chapter 16 explains the biodiversity you just studied here. You are ready for the college placement exam. Go make Gregor proud!
 
 ---
 
@@ -422,7 +422,7 @@ An **ecological footprint** measures the total amount of biologically productive
 
 ---
 
-??? question "AP Practice: Test Your Understanding"
+??? question "college placement Practice: Test Your Understanding"
     **Question 1:** A grassland ecosystem receives 20,000 kcal/m²/yr of sunlight. If producers capture 1% and the 10% rule applies, how much energy is available to tertiary consumers?
 
     **Answer:** Producers capture: $20{,}000 \times 0.01 = 200$ kcal. Primary consumers: $200 \times 0.10 = 20$ kcal. Secondary consumers: $20 \times 0.10 = 2$ kcal. Tertiary consumers: $2 \times 0.10 = 0.2$ kcal/m²/yr.

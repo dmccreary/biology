@@ -125,7 +125,7 @@ causes overlap when multiple substituents project from the same side of a ring.
 - Replaced all TODO placeholders with actual content:
   - About section explaining the 5 molecules and what to observe
   - How to Use with 5 numbered steps
-  - Lesson Plan with AP Biology grade level, 3 activities, and assessment criteria
+  - Lesson Plan with college placement Biology grade level, 3 activities, and assessment criteria
 
 ### 7. Generalized into CLAUDE.md Guide
 

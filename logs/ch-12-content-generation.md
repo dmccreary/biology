@@ -29,7 +29,7 @@
 | Markdown tables | 10 | Dominance patterns, blood types (×2), sex determination, X-linked genotypes, aneuploidy conditions, epistasis, inheritance patterns summary, pedigree clues, gene interactions comparison |
 | Diagram specs (MicroSims) | 5 | Blood Type Inheritance Explorer, X-Linked Inheritance Simulator, Polygenic Distribution Visualizer, Nondisjunction Visualizer, Pedigree Analyzer |
 | Equations (LaTeX) | 3 | Recombination frequency formula, RF calculation example, genotype notation |
-| Collapsible Q&A | 1 | AP Practice section with 3 questions |
+| Collapsible Q&A | 1 | college placement Practice section with 3 questions |
 
 ## Concepts Coverage Checklist
 

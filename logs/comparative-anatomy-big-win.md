@@ -28,7 +28,7 @@ The first implementation drew all five vertebrate forelimbs (human, whale, bat, 
 3. Rewrote `comparative-anatomy.js` to:
    - Load `forelimbs.png` as a background image
    - Divide it into 5 equal columns (one per species)
-   - Column hover: dims other columns, highlights hovered species, shows description + AP tip in infobox below
+   - Column hover: dims other columns, highlights hovered species, shows description + college placement tip in infobox below
    - Quiz mode: classification quiz for homologous/analogous/vestigial pairs
    - No per-bone hover needed — column-level hover is sufficient and cleaner
 

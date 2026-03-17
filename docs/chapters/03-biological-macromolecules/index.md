@@ -68,7 +68,7 @@ This chapter builds on concepts from:
 
 !!! mascot-welcome "Gregor Welcomes You!"
     <img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Gregor welcomes you"/>
-    Welcome to Chapter 3, investigators! If Chapter 2 gave us the chemical vocabulary of life, this chapter introduces the cast of characters — the four families of molecules that build, power, protect, and inform every living cell. By the time we finish, you will be able to look at any biological molecule and identify its class, predict its properties, and understand its role. These are the molecules the AP exam tests constantly, so every section here is high-yield. Let's investigate!
+    Welcome to Chapter 3, investigators! If Chapter 2 gave us the chemical vocabulary of life, this chapter introduces the cast of characters — the four families of molecules that build, power, protect, and inform every living cell. By the time we finish, you will be able to look at any biological molecule and identify its class, predict its properties, and understand its role. These are the molecules the college placement exam tests constantly, so every section here is high-yield. Let's investigate!
 
 ## Introduction
 
@@ -116,7 +116,7 @@ The extensive branching of glycogen (more than starch) gives it a larger number 
 
 !!! mascot-tip "Gregor's Tip: α vs. β — A Structural Choice with Huge Consequences"
     <img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Gregor tip"/>
-    The AP exam frequently asks why humans can digest starch but not cellulose, even though both are glucose polymers. The answer is the glycosidic bond orientation: α-1,4 bonds in starch are hydrolyzed by amylase, but humans lack the enzyme (cellulase) needed to break β-1,4 bonds in cellulose. Herbivores digest cellulose using cellulase-producing bacteria in their gut. This single structural difference — α vs. β — determines whether glucose is food or fiber.
+    The college placement exam frequently asks why humans can digest starch but not cellulose, even though both are glucose polymers. The answer is the glycosidic bond orientation: α-1,4 bonds in starch are hydrolyzed by amylase, but humans lack the enzyme (cellulase) needed to break β-1,4 bonds in cellulose. Herbivores digest cellulose using cellulase-producing bacteria in their gut. This single structural difference — α vs. β — determines whether glucose is food or fiber.
 
 #### Diagram: Carbohydrate Structures Explorer
 
@@ -370,7 +370,7 @@ Denaturation destroys the protein's function because function depends entirely o
 
 !!! mascot-warning "Common Mistake: Denaturation ≠ Hydrolysis"
     <img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Gregor warning"/>
-    Students often confuse denaturation with hydrolysis. Denaturation disrupts the 3D shape by breaking *noncovalent* interactions between R groups — the primary sequence (peptide bonds) is unchanged. Hydrolysis breaks *covalent* peptide bonds and produces free amino acids. A denatured protein still has the same amino acid sequence; a hydrolyzed protein is broken into individual amino acids. On the AP exam, if a question asks what happens when you cook a protein, the answer is denaturation — not hydrolysis.
+    Students often confuse denaturation with hydrolysis. Denaturation disrupts the 3D shape by breaking *noncovalent* interactions between R groups — the primary sequence (peptide bonds) is unchanged. Hydrolysis breaks *covalent* peptide bonds and produces free amino acids. A denatured protein still has the same amino acid sequence; a hydrolyzed protein is broken into individual amino acids. On the college placement exam, if a question asks what happens when you cook a protein, the answer is denaturation — not hydrolysis.
 
 ---
 
@@ -456,7 +456,7 @@ The comparison between DNA and RNA reveals a structural logic: DNA's stability (
 
 ## Key Connections and Chapter Summary
 
-The four classes of biological macromolecules are the molecular foundation of every biological process studied in AP Biology. The key themes to carry forward are:
+The four classes of biological macromolecules are the molecular foundation of every biological process studied in college placement Biology. The key themes to carry forward are:
 
 - **Carbohydrates** — built from monosaccharides by α- or β-glycosidic bonds; α-linkages yield digestible energy-storage polymers (starch, glycogen); β-linkages yield structural, indigestible polymers (cellulose, chitin).
 - **Lipids** — unified by hydrophobicity, not by polymer structure; saturated fats are solid (tightly packed chains), unsaturated fats are liquid (kinked chains prevent packing); phospholipids self-assemble into bilayers; cholesterol buffers membrane fluidity and is the precursor to steroid hormones.
@@ -465,7 +465,7 @@ The four classes of biological macromolecules are the molecular foundation of ev
 
 !!! mascot-celebration "Excellent Work!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Gregor celebrating"/>
-    You have just completed one of the most content-dense chapters in AP Biology, investigators! The macromolecules you mastered here will appear in every remaining chapter. Phospholipids in Chapter 5 (membranes and transport). Proteins in Chapter 6 (enzyme kinetics). DNA and RNA in Chapters 13 and 14 (gene expression). Polysaccharides in the context of cell walls and glycolipids throughout. Every concept you learned here is an investment that pays dividends for the rest of the course.
+    You have just completed one of the most content-dense chapters in college placement Biology, investigators! The macromolecules you mastered here will appear in every remaining chapter. Phospholipids in Chapter 5 (membranes and transport). Proteins in Chapter 6 (enzyme kinetics). DNA and RNA in Chapters 13 and 14 (gene expression). Polysaccharides in the context of cell walls and glycolipids throughout. Every concept you learned here is an investment that pays dividends for the rest of the course.
 
 ??? note "Self-Check: Test Your Understanding — Click to Reveal"
     **Question:** A student heats a solution containing the enzyme catalase until the enzyme no longer breaks down hydrogen peroxide. She then cools the solution back to 37°C, but enzyme activity does not return. (a) What process destroyed the enzyme's activity? (b) Which level(s) of protein structure were disrupted? (c) Were any peptide bonds broken? (d) Why does the enzyme not recover when cooled?

@@ -39,7 +39,7 @@ This MicroSim provides an interactive step-through visualization of the **Krebs 
 ## Lesson Plan
 
 ### Grade Level
-9-12 (AP Biology)
+9-12 (college placement Biology)
 
 ### Duration
 10-15 minutes

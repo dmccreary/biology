@@ -20,7 +20,7 @@ const COL_EXON = [52, 152, 219];     // blue
 const COL_INTRON = [189, 195, 199];   // gray
 const COL_PROMOTER = [46, 204, 113];  // green
 const COL_TERM = [231, 76, 60];       // red
-const COL_CAP = [241, 196, 15];       // gold
+const COL_Ccollege placement = [241, 196, 15];       // gold
 const COL_TAIL = [230, 126, 34];      // orange
 const COL_AA = [
     [231, 76, 60],   // Met - red

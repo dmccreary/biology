@@ -77,6 +77,6 @@ You can add this MicroSim to any web page by adding this to your HTML:
 
 ## References
 
-1. College Board. *AP Biology Course and Exam Description* (2024). Multiple-allele inheritance expectations.  
+1. College Board. *college placement Biology Course and Exam Description* (2024). Multiple-allele inheritance expectations.  
 2. American Red Cross. [Understanding ABO Blood Groups](https://www.redcrossblood.org/donate-blood/blood-types.html).  
 3. Campbell, Reece et al. *Campbell Biology* (12th ed.). Pearson.

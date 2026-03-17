@@ -1,4 +1,4 @@
-// MathJax configuration for AP Biology
+// MathJax configuration for college placement Biology
 // Enables standard math notation AND mhchem for chemical equations (\ce{})
 //
 // ── Rendering Pipeline ────────────────────────────────────────────────────────

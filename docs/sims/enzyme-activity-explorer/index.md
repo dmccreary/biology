@@ -44,7 +44,7 @@ You can add this MicroSim to any web page by adding this to your HTML:
 ## Lesson Plan
 
 ### Grade Level
-10-12 (Honors or AP Biology)
+10-12 (Honors or college placement Biology)
 
 ### Duration
 15-20 minutes

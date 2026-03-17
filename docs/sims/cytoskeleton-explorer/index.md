@@ -21,7 +21,7 @@ This interactive diagram compares the three major cytoskeletal filament types si
 
 ## How to Use
 
-- **Explore mode**: Hover over any numbered marker or label to see a description of that structure, its function, and AP exam tips.
+- **Explore mode**: Hover over any numbered marker or label to see a description of that structure, its function, and college placement exam tips.
 - **Quiz mode**: Click the Quiz button to test your knowledge. Labels are hidden — click the correct marker when prompted.
 - **Edit mode**: Open `main.html?edit=true` to calibrate marker positions by dragging.
 

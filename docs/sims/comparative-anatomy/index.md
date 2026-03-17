@@ -27,7 +27,7 @@ This interactive explorer displays the forelimbs of five vertebrate species — 
 ## Lesson Plan
 
 ### Grade Level
-9-12 (AP Biology)
+9-12 (college placement Biology)
 
 ### Duration
 10-15 minutes
@@ -50,7 +50,7 @@ Basic understanding of natural selection and common ancestry.
 
 1. [Homology (biology)](https://en.wikipedia.org/wiki/Homology_(biology)) — Wikipedia
 2. [Comparative anatomy](https://en.wikipedia.org/wiki/Comparative_anatomy) — Wikipedia
-3. [AP Biology Course and Exam Description](https://apcentral.collegeboard.org/courses/ap-biology) — College Board
+3. [college placement Biology Course and Exam Description](https://apcentral.collegeboard.org/courses/ap-biology) — College Board
 
 ## Forelimbs Image
 

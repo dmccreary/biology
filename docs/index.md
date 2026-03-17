@@ -1,14 +1,15 @@
 ---
-title: AP Biology - An Interactive Course
-description: A rigorous, college-level AP Biology intelligent textbook for advanced high school students preparing for the AP exam. Covers evolution, cellular energetics, genetics, gene expression, and ecology.
+title: Biology - An Interactive Course
+description: A rigorous, college-level Biology intelligent textbook for advanced high school students preparing for exams that provide college credit. Covers evolution, cellular energetics, genetics, gene expression, and ecology.
 image: img/cover.png
 ---
 
-# AP Biology: An Interactive Course
+# Biology: An Interactive Course
 
-![AP Biology Cover](./img/cover.png){ width="100%" }
+![Biology Cover](./img/cover.png){ width="100%" }
 
-An interactive intelligent textbook for AP Biology, designed for advanced high school students (grades 11–12) preparing for the AP Biology exam. This course covers all eight College Board units — from the chemistry of macromolecules to the dynamics of ecosystems — with hands-on simulations, interactive learning graphs, and AP exam strategies throughout.
+An interactive intelligent textbook for Biology, designed for advanced high school students (grades 11–12) preparing for the Biology exams that provide college credit. This course covers all eight units suggested by the AP® College Board — from the chemistry of macromolecules to the dynamics of ecosystems — with hands-on simulations, interactive learning graphs, and college placement exam strategies throughout.
+This course is not associated with The College Board in any way and no endorsement from The College Board are implied.
 
 ## What You Will Learn
 
@@ -28,8 +29,8 @@ An interactive intelligent textbook for AP Biology, designed for advanced high s
 - **Interactive MicroSims** — computational simulations for every major concept
 - **Learning Graph** — visual map of all 375+ course concepts and dependencies
 - **Bloom's Taxonomy Alignment** — objectives at all six cognitive levels
-- **AP Exam Strategies** — targeted tips and common misconception warnings from Gregor
-- **Chapter Quizzes** — self-assessment questions aligned to AP exam style
+- **College Test Exam Strategies** — targeted tips and common misconception warnings from Gregor
+- **Chapter Quizzes** — self-assessment questions aligned to college credit exam style
 
 ## How to Use This Book
 

@@ -1428,7 +1428,7 @@ Layout: Z-scheme energy diagram (upper left, 70%) with reduction potential y-axi
 
 **Learning objective:** Students will be able to *analyze* (Bloom's L4: Analyze) pedigree diagrams to determine the most likely mode of inheritance, and *evaluate* (Bloom's L5: Evaluate) whether observed patterns are consistent with autosomal dominant, autosomal recessive, or X-linked recessive inheritance.
 
-**Instructional Rationale:** Presenting multiple pedigrees that students must classify builds the diagnostic reasoning skills tested on the AP exam. The immediate feedback loop — guess the pattern, then check — reinforces the distinguishing clues for each inheritance mode.
+**Instructional Rationale:** Presenting multiple pedigrees that students must classify builds the diagnostic reasoning skills tested on the college placement exam. The immediate feedback loop — guess the pattern, then check — reinforces the distinguishing clues for each inheritance mode.
 
 **Canvas:** 800 × 520 px, responsive.
 
@@ -1479,7 +1479,7 @@ Each pedigree object includes: nodes (generation, position, sex, affected status
 
 **Learning objective:** Students will be able to *use* (Bloom's L3: Apply) the genetic code table to translate an mRNA sequence into an amino acid sequence, and *explain* (Bloom's L2: Understand) the properties of the genetic code including redundancy and universality.
 
-**Instructional Rationale:** An interactive codon table where students can click codons to see the corresponding amino acid (and vice versa) builds fluency with reading the table — a skill directly tested on the AP exam. The mRNA translation tool provides immediate practice.
+**Instructional Rationale:** An interactive codon table where students can click codons to see the corresponding amino acid (and vice versa) builds fluency with reading the table — a skill directly tested on the college placement exam. The mRNA translation tool provides immediate practice.
 
 **Canvas:** 780 × 480 px, responsive.
 
@@ -1902,7 +1902,7 @@ Each pedigree object includes: nodes (generation, position, sex, affected status
 
 **Learning objective:** Students will be able to *construct* (Bloom's L6: Create) a cladogram from a character matrix and *interpret* (Bloom's L2: Understand) evolutionary relationships from an existing cladogram.
 
-**Instructional Rationale:** Building a cladogram from raw character data (rather than just reading a pre-made one) develops the reasoning skills tested on the AP exam, where students must interpret or construct phylogenetic trees from data tables.
+**Instructional Rationale:** Building a cladogram from raw character data (rather than just reading a pre-made one) develops the reasoning skills tested on the college placement exam, where students must interpret or construct phylogenetic trees from data tables.
 
 **Canvas:** 800 × 480 px, responsive.
 

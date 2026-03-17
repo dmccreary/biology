@@ -69,6 +69,6 @@
 - Chemiosmosis: 2.5 ATP per NADH and 1.5 ATP per FADH₂ (modern P/O ratios, not classical 3 and 2).
 - Fermentation framed as NAD⁺ regeneration mechanism, not ATP-producing pathway.
 - Lactic acid and alcoholic fermentation given individual sections with chemical equations.
-- Krebs cycle note added: AP exam does not require memorizing all 8 intermediate names.
+- Krebs cycle note added: college placement exam does not require memorizing all 8 intermediate names.
 - Electron and carbon accounting section confirms 6 CO₂ and 6 H₂O match overall equation.
 - Reading level: Advanced Senior High / Early College.

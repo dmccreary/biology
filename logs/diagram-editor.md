@@ -32,7 +32,7 @@ editor workflow (Edit mode) for calibrating callout positions after image genera
 |------|---------|
 | `docs/sims/animal-cell/image-prompt.md` | Text-to-image prompt for unlabeled animal cell diagram |
 | `docs/sims/animal-cell/animal-cell.png` | AI-generated diagram (no embedded text) |
-| `docs/sims/animal-cell/data.json` | Callout positions, labels, descriptions, AP tips (calibrated by Dan) |
+| `docs/sims/animal-cell/data.json` | Callout positions, labels, descriptions, college placement tips (calibrated by Dan) |
 | `docs/sims/animal-cell/main.html` | MicroSim shell — embeddable iframe |
 | `docs/sims/animal-cell/diagram.js` | All interactive logic (Explore / Quiz / Edit modes) |
 
@@ -41,7 +41,7 @@ editor workflow (Edit mode) for calibrating callout positions after image genera
 | File | Purpose |
 |------|---------|
 | `docs/sims/plant-cell/plant-cell.png` | AI-generated plant cell diagram (no embedded text) |
-| `docs/sims/plant-cell/data.json` | Callout positions, labels, descriptions, AP tips (calibrated by Dan) |
+| `docs/sims/plant-cell/data.json` | Callout positions, labels, descriptions, college placement tips (calibrated by Dan) |
 | `docs/sims/plant-cell/main.html` | MicroSim shell — 65/35 grid layout (image left, labels right) |
 | `docs/sims/plant-cell/diagram.js` | Interactive logic including SVG bezier leader lines and label reorder |
 
@@ -98,7 +98,7 @@ resizes within the responsive iframe. No JavaScript resize listener needed.
       "y": 33.7,
       "radius": 5.0,
       "description": "Full explanation for Explore mode infobox.",
-      "ap_tip": "AP exam tip or common misconception (optional)."
+      "ap_tip": "college placement exam tip or common misconception (optional)."
     }
   ]
 }
@@ -178,7 +178,7 @@ extra ARIA roles.
 The infobox below the diagram has `min-height: 130px`.
 
 **Rationale:** Prevents layout shift (content jumping) when the infobox transitions
-from the default prompt text to a full description with AP tip.
+from the default prompt text to a full description with college placement tip.
 
 ### 12. iframe embed convention
 
@@ -311,5 +311,5 @@ easier to see while calibrating positions, where precision matters most.
    and verify height, scrolling, and responsiveness in the published site.
 
 5. **Image generation pipeline** — now that the text-to-image → edit → calibrate →
-   publish workflow is proven, scale to other key AP Biology diagrams: ETC
+   publish workflow is proven, scale to other key college placement Biology diagrams: ETC
    (mitochondria inner membrane), chloroplast light reactions, neuron structure.

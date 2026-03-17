@@ -30,7 +30,7 @@
 | Diagram specs (MicroSims) | 4 | Replication Fork Explorer, Gene Expression Pipeline, Genetic Code Table Explorer, Translation Step-Through Simulator |
 | Existing sim embeds | 1 | DNA Double Helix (pre-existing) |
 | Equations (LaTeX) | 4 | Central dogma flow, error rates, aminoacyl-tRNA reaction, codon count |
-| Collapsible Q&A | 1 | AP Practice section with 3 questions |
+| Collapsible Q&A | 1 | college placement Practice section with 3 questions |
 
 ## Concepts Coverage Checklist
 

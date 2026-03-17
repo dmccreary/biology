@@ -1,6 +1,6 @@
 ---
 title: Neuron Structure
-description: A interactive diagram with callouts and a quiz that covers the thirteen key structures of a multipolar motor neuron for use in AP biology.
+description: A interactive diagram with callouts and a quiz that covers the thirteen key structures of a multipolar motor neuron for use in college placement biology.
 image: sims/neuron-structure/neuron-structure.png
 og:image: sims/neuron-structure/neuron-structure.png
 ---
@@ -11,7 +11,7 @@ og:image: sims/neuron-structure/neuron-structure.png
 [View Fullscreen](main.html)
 
 This interactive diagram covers the 13 key structures of a multipolar motor neuron
-(AP Biology Unit 5 — Nervous System). The main view shows the full neuron from
+(college placement Biology Unit 5 — Nervous System). The main view shows the full neuron from
 dendrites through the myelinated axon to the axon terminals, with a synaptic inset
 revealing the ultrastructure of the chemical synapse.
 

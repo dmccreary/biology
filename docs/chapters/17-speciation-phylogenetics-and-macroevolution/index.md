@@ -78,7 +78,7 @@ Limitations:
 - Cannot be applied to fossils (we can't observe their mating behavior)
 - Some closely related species can hybridize (e.g., wolves and coyotes)
 
-Despite these limitations, the biological species concept remains the most widely used definition in AP Biology.
+Despite these limitations, the biological species concept remains the most widely used definition in college placement Biology.
 
 ## Speciation: The Birth of New Species
 
@@ -263,7 +263,7 @@ How to read a cladogram:
 
 **Learning objective:** Students will be able to *construct* (Bloom's L6: Create) a cladogram from a character matrix and *interpret* (Bloom's L2: Understand) evolutionary relationships from an existing cladogram.
 
-**Instructional Rationale:** Building a cladogram from raw character data (rather than just reading a pre-made one) develops the reasoning skills tested on the AP exam, where students must interpret or construct phylogenetic trees from data tables.
+**Instructional Rationale:** Building a cladogram from raw character data (rather than just reading a pre-made one) develops the reasoning skills tested on the college placement exam, where students must interpret or construct phylogenetic trees from data tables.
 
 **Canvas:** 800 × 480 px, responsive.
 
@@ -322,7 +322,7 @@ Despite these limitations, molecular clocks are invaluable for estimating diverg
 
 !!! mascot-tip "Gregor's Tip"
     <img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Gregor's tip">
-    On the AP exam, cladogram questions are common. Remember: you cannot determine the age of a species by its position left or right on a cladogram — only the branching pattern (topology) matters. Two species are most closely related if they share the most recent common ancestor (the node closest to the tips). Rotating branches around a node does not change the relationships.
+    On the college placement exam, cladogram questions are common. Remember: you cannot determine the age of a species by its position left or right on a cladogram — only the branching pattern (topology) matters. Two species are most closely related if they share the most recent common ancestor (the node closest to the tips). Rotating branches around a node does not change the relationships.
 
 ---
 
@@ -344,7 +344,7 @@ Despite these limitations, molecular clocks are invaluable for estimating diverg
 
 ---
 
-??? question "AP Practice: Test Your Understanding"
+??? question "college placement Practice: Test Your Understanding"
     **Question 1:** Two species of frogs live in the same pond but breed at different times of year. What type of reproductive barrier is this? Is it prezygotic or postzygotic?
 
     **Answer:** This is **temporal isolation**, a **prezygotic** barrier. The two species never encounter each other during their breeding seasons, so mating (and therefore fertilization) cannot occur.

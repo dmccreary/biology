@@ -24,8 +24,8 @@
   ---
   Proposed Chapter Structure
 
-  I've designed a 20-chapter structure for AP Biology: An Interactive Course covering all 380 concepts, mapped to the 8 College
-  Board AP Biology units.
+  I've designed a 20-chapter structure for college placement Biology: An Interactive Course covering all 380 concepts, mapped to the 8 College
+  Board college placement Biology units.
 
   ---
   Chapters
@@ -222,7 +222,7 @@
   │ internal dependencies           │ any order within the chapter                                                           │
   ├─────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────┤
   │ Ch 14 reaches 29 concepts       │ At the upper limit; justified because mutations + gene regulation + biotech form one   │
-  │                                 │ tightly coupled AP exam topic (Unit 6 on the CED). Could split into 2 if desired.      │
+  │                                 │ tightly coupled college placement exam topic (Unit 6 on the CED). Could split into 2 if desired.      │
   ├─────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────┤
   │ Ch 7 (Photosynthesis) has only  │ Acceptable — content density is very high; students typically need 2–3 weeks for this  │
   │ 17 concepts                     │ topic                                                                                  │
@@ -264,7 +264,7 @@
 # Detailed Analytical Session Log
 
 **Date:** 2026-02-26
-**Session:** Chapter structure analysis and generation for AP Biology: An Interactive Course
+**Session:** Chapter structure analysis and generation for college placement Biology: An Interactive Course
 **Analyst:** Claude Sonnet 4.6
 
 ---
@@ -275,14 +275,14 @@
 
 Read `docs/course-description.md`. Key structural constraints extracted:
 
-- **Course scope:** 8 College Board AP Biology units (Unit 1–8)
+- **Course scope:** 8 College Board college placement Biology units (Unit 1–8)
 - **Target audience:** AP-level high school students (grades 11–12)
 - **Stated chapter count hint:** "8 units, approximately 4–6 chapters per unit"
   — This suggested 32–48 chapters, far exceeding the skill's 6–20 chapter ceiling.
   **Decision:** Ignore the per-unit sub-chapter hint and target 20 chapters total
   that map thematically to the 8 units. The units still serve as the primary
   organizational grouping in the nav and summaries.
-- **AP exam alignment:** All concept coverage must support College Board CED
+- **college placement exam alignment:** All concept coverage must support College Board CED
   (Course and Exam Description) learning objectives.
 
 ### 1.2 Learning Graph Analysis
@@ -449,7 +449,7 @@ Even a 2-way split gives ~21–22 concepts each, at the upper end of optimal.
 
 **Decision: 2-way split into Chapters 4 and 5.**
 
-This split aligns with the two major AP exam skill clusters for Unit 2 and mirrors
+This split aligns with the two major college placement exam skill clusters for Unit 2 and mirrors
 the organization of all major biology textbooks. Organelle structure (Ch 4) is a
 prerequisite for membrane transport (Ch 5) — students need to know what the plasma
 membrane is before learning how molecules cross it.
@@ -473,7 +473,7 @@ This is the largest single category, nearly 3× the optimal chapter size.
 Both fall below the 12–18 optimal range (17 and 14 concepts). Merging them was
 evaluated: 17 + 14 = 31 concepts, which would be the largest chapter in the book,
 well above the 25-concept ceiling. Additionally, photosynthesis and respiration are
-distinct AP exam topics with their own MicroSim interactive diagrams (chloroplast sim
+distinct college placement exam topics with their own MicroSim interactive diagrams (chloroplast sim
 and mitochondria sim). Despite the lower concept counts, each chapter has very high
 content density per concept — every step in the ETC or Calvin cycle requires detailed
 mechanistic understanding.
@@ -482,7 +482,7 @@ mechanistic understanding.
 pathway. Treating thermodynamics + enzyme kinetics as a dedicated chapter (rather than
 folding them into photosynthesis or respiration) ensures that competitive inhibition,
 allosteric regulation, and feedback inhibition receive the focused attention they
-deserve on the AP exam before students encounter the specific enzymes of each pathway.
+deserve on the college placement exam before students encounter the specific enzymes of each pathway.
 
 **Decision: 3-way split into Chapters 6, 7, and 8.**
 
@@ -490,7 +490,7 @@ deserve on the AP exam before students encounter the specific enzymes of each pa
 
 **Raw chapter need:** 30 ÷ 19 ≈ 1.6 chapters → split into 2.
 
-**Natural split — two AP CED Unit 4 sub-topics:**
+**Natural split — two college placement CED Unit 4 sub-topics:**
 
 | Part 1: Signaling (Ch 9, 14 concepts) | Part 2: Cell Cycle (Ch 10, 16 concepts) |
 |---------------------------------------|------------------------------------------|
@@ -554,7 +554,7 @@ have no internal ordering requirements (100% foundational within the category).
 
 Problem with 3-way: Breaking the central dogma between transcription and translation
 would fragment the "information flow" narrative (DNA → RNA → protein) that is
-definitional to AP Unit 6. The AP CED treats replication, transcription, and
+definitional to college placement Unit 6. The college placement CED treats replication, transcription, and
 translation as a continuous unit.
 
 **Two-chapter option evaluated:**
@@ -570,7 +570,7 @@ independently ordered concept clusters.
 
 **Decision: 2-way split into Chapters 13 and 14.**
 
-The AP CED Unit 6 explicitly combines "Gene Expression and Regulation" with
+The college placement CED Unit 6 explicitly combines "Gene Expression and Regulation" with
 "Biotechnology" — the 2-chapter structure mirrors this. Mutations, gene regulation,
 and biotechnology are all consequences of or interventions on the central dogma;
 they form a natural "applications and modifications" unit following the mechanistic
@@ -580,7 +580,7 @@ Chapter 13.
 
 **Raw chapter need:** 49 ÷ 19 ≈ 2.6 chapters → split into 3.
 
-**Three thematic blocks — each a distinct AP exam topic:**
+**Three thematic blocks — each a distinct college placement exam topic:**
 
 | Block | Chapter | Concepts | Count |
 |-------|---------|----------|-------|
@@ -634,7 +634,7 @@ of 7–13 concepts each, all below optimal.
 **Decision: Single chapter (25 concepts, Chapter 20).**
 
 25 is at the top of the acceptable range. Ecosystem ecology, biomes, and conservation
-biology form a natural AP exam capstone unit taught together in every biology course.
+biology form a natural college placement exam capstone unit taught together in every biology course.
 The chapter's internal structure (energy flow → matter cycling → biomes → biodiversity
 threats → conservation) follows a clean logical progression.
 
@@ -709,14 +709,14 @@ Running sum: 18+14+23+22+21+24+17+14+14+16+20+15+26+29+18+16+15+15+18+25 = **380
 |----------|----------|----------|----------|---------------|-----------------|
 | FOUND (11) | 11 | 0.6 | Merge with CHEM | 0 own → into Ch 1 | Too thin alone; bonds naturally to atomic chemistry |
 | CHEM (21) | 21 | 1.1 | Split 7 + 14 | 2 (Ch 1 partial, Ch 2) | Atomic bonds belong with FOUND; water/organics form own unit |
-| MACRO (23) | 23 | 1.2 | Keep whole | 1 (Ch 3) | AP exam tests 4 macromolecule classes as a unified topic |
+| MACRO (23) | 23 | 1.2 | Keep whole | 1 (Ch 3) | college placement exam tests 4 macromolecule classes as a unified topic |
 | CELL (43) | 43 | 2.3 | Split 22 + 21 | 2 (Ch 4, Ch 5) | Organelles vs. membrane transport — classic textbook division |
 | ENRG (55) | 55 | 2.9 | Split 24 + 17 + 14 | 3 (Ch 6, 7, 8) | Enzymes are a prerequisite layer; photosynthesis ≠ respiration |
 | COMM (30) | 30 | 1.6 | Split 14 + 16 | 2 (Ch 9, Ch 10) | Signaling vs. cell division — CED Unit 4 natural boundary |
 | GENET (35) | 35 | 1.8 | Split 20 + 15 | 2 (Ch 11, Ch 12) | Mendelian vs. non-Mendelian — classic textbook division |
 | MOLBIO (32) | 32 | 1.7 | Split 26 + 6 merged w/ BIOTECH | 2 (Ch 13, Ch 14) | Central dogma kept whole; mutations bridge to regulation |
 | BIOTECH (23) | 23 | 1.2 | Merge with MOLBIO part 2 | 0 own → into Ch 14 | All foundational; logically follows mutations/gene expression |
-| EVOL (49) | 49 | 2.6 | Split 18 + 16 + 15 | 3 (Ch 15, 16, 17) | Evidence, quantitative genetics, and macroevolution are distinct AP topics |
+| EVOL (49) | 49 | 2.6 | Split 18 + 16 + 15 | 3 (Ch 15, 16, 17) | Evidence, quantitative genetics, and macroevolution are distinct college placement topics |
 | POPECO (33) | 33 | 1.7 | Split 15 + 18 | 2 (Ch 18, Ch 19) | Population vs. community ecology — CED Unit 8 natural boundary |
 | ECOSYS (25) | 25 | 1.3 | Keep whole | 1 (Ch 20) | Capstone unit; any split produces thin sub-chapters |
 
@@ -742,13 +742,13 @@ Running sum: 18+14+23+22+21+24+17+14+14+16+20+15+26+29+18+16+15+15+18+25 = **380
   and Ch 14b "Biotechnology" (11)
   - Ch 14b at 11 concepts would be below optimal and pedagogically thin
   - Separating gene regulation (lac operon, transcription factors, epigenetics) from
-    biotechnology tools (PCR, CRISPR, gel electrophoresis) fragments AP Unit 6, where
+    biotechnology tools (PCR, CRISPR, gel electrophoresis) fragments college placement Unit 6, where
     the two are assessed together — e.g., CRISPR questions require understanding of
     gene regulation and transcription
 - All 23 BIOTECH concepts are internally independent (zero dependencies on each other),
   making the chapter read as 6 + 12 + 11 independently ordered sub-sections rather than
   a 29-step dependency chain
-- The AP CED Unit 6 explicitly groups "Gene Expression and Regulation" with "Biotechnology"
+- The college placement CED Unit 6 explicitly groups "Gene Expression and Regulation" with "Biotechnology"
 - **Accepted at 29 concepts; flagged for possible future split in a second edition**
 
 ---

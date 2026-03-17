@@ -84,7 +84,7 @@ The diagram is embedded in a chapter page as a standard MicroSim iframe:
 | `y` | float | Vertical center of the hotspot as % of image height |
 | `radius` | float | Clickable zone radius as % of image width |
 | `description` | string | Full explanation shown in Explore mode infobox |
-| `ap_tip` | string | AP exam strategy or common misconception (optional) |
+| `ap_tip` | string | college placement exam strategy or common misconception (optional) |
 
 For multi-panel diagrams (e.g., mitosis), each callout also carries a `"panel"` integer
 identifying which sub-panel it belongs to.
@@ -97,7 +97,7 @@ identifying which sub-panel it belongs to.
 
 - Numbered circular markers are overlaid on the image at `(x%, y%)` positions
 - On **hover** (desktop) or **tap** (mobile), the marker pulses and the infobox updates
-- Infobox shows: structure name, description, and AP tip (if present)
+- Infobox shows: structure name, description, and college placement tip (if present)
 - Infobox placement:
   - **Landscape** images → infobox appears **below** the diagram
   - **Portrait** images → infobox appears **to the right** of the diagram
@@ -141,7 +141,7 @@ identifying which sub-panel it belongs to.
 │                                      │
 │  Structure Name                      │
 │  Description text...                 │
-│  AP Tip: ...                         │
+│  college placement Tip: ...                         │
 └──────────────────────────────────────┘
 ```
 
@@ -153,7 +153,7 @@ identifying which sub-panel it belongs to.
 │  diagram.jpg       │                 │
 │  with markers      │ Structure Name  │
 │  [1] [2] [3]       │ Description...  │
-│                    │ AP Tip: ...     │
+│                    │ college placement Tip: ...     │
 └────────────────────┴─────────────────┘
 ```
 
@@ -165,7 +165,7 @@ identifying which sub-panel it belongs to.
 |------|-------------|-------|
 | **1** | Pilot: `animal-cell` Explore mode, landscape | 6 callouts; validate concept |
 | **2** | Portrait layout variant | CSS grid change only |
-| **3** | Quiz Sub-mode A — "Find It" | Highest AP exam value |
+| **3** | Quiz Sub-mode A — "Find It" | Highest college placement exam value |
 | **4** | Quiz Sub-mode B — "Name It" (4-choice) | Mobile-friendly |
 | **5** | Score tracking + progress bar | UX polish |
 | **6** | Panel-aware mode for multi-panel diagrams | Needed for mitosis |

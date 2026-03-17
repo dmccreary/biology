@@ -33,7 +33,7 @@ The right-side information panel updates with each overlay, providing detailed e
 ## Lesson Plan
 
 ### Grade Level
-9-12 (AP Biology)
+9-12 (college placement Biology)
 
 ### Duration
 10-15 minutes

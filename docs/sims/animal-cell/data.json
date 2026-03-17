@@ -12,7 +12,7 @@
       "color": "#8E44AD",
       "hint": "Large round purple structure near the center of the cell, the most prominent organelle.",
       "description": "The control center of the cell. The nucleus is enclosed by a double-membrane nuclear envelope studded with pores, and contains the cell's DNA organized into chromosomes. It directs all cellular activity through gene expression.",
-      "ap_tip": "Do not confuse the nucleus with the nucleolus — the nucleolus is a dense region inside the nucleus where ribosomal RNA is assembled. Both are common AP exam distractors."
+      "ap_tip": "Do not confuse the nucleus with the nucleolus — the nucleolus is a dense region inside the nucleus where ribosomal RNA is assembled. Both are common college placement exam distractors."
     },
     {
       "id": 2,
@@ -45,7 +45,7 @@
       "color": "#3498DB",
       "hint": "Network of folded membrane sacs extending from the nuclear envelope, rough ER has dots on surface.",
       "description": "A network of interconnected membrane sacs and tubes extending from the nuclear envelope. The rough ER (studded with ribosomes) synthesizes and processes proteins destined for secretion or membrane insertion. The smooth ER (no ribosomes) synthesizes lipids and detoxifies drugs and poisons.",
-      "ap_tip": "The rough ER → Golgi apparatus → vesicle → cell membrane secretory pathway is called the endomembrane system. Know the order and function of each step for the AP exam."
+      "ap_tip": "The rough ER → Golgi apparatus → vesicle → cell membrane secretory pathway is called the endomembrane system. Know the order and function of each step for the college placement exam."
     },
     {
       "id": 5,
@@ -67,7 +67,7 @@
       "color": "#BDC3C7",
       "hint": "The gel-like fluid filling the interior of the cell between organelles.",
       "description": "The gel-like fluid that fills the interior of the cell, composed mostly of water with dissolved salts, sugars, and proteins. The cytoplasm suspends and surrounds all organelles and is the site of many metabolic reactions including glycolysis.",
-      "ap_tip": "Glycolysis — the first stage of cellular respiration — occurs in the cytoplasm (cytosol), not in the mitochondria. This is a frequent AP exam question."
+      "ap_tip": "Glycolysis — the first stage of cellular respiration — occurs in the cytoplasm (cytosol), not in the mitochondria. This is a frequent college placement exam question."
     }
   ]
 }

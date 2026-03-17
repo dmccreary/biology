@@ -334,7 +334,7 @@ Responsive: Must respond to window resize events
 
 !!! mascot-tip "Gregor's Tip: Active vs. Passive — The Energy Test"
     <img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Gregor tip"/>
-    The fastest way to classify any transport mechanism on the AP exam is to ask two questions: (1) Does it move the solute against its concentration gradient? If yes, it must be active transport. (2) Does it require ATP directly (primary) or use a gradient built by ATP (secondary)? Facilitated diffusion can look like active transport because it uses proteins, but it never moves solutes against their gradient and never requires energy.
+    The fastest way to classify any transport mechanism on the college placement exam is to ask two questions: (1) Does it move the solute against its concentration gradient? If yes, it must be active transport. (2) Does it require ATP directly (primary) or use a gradient built by ATP (secondary)? Facilitated diffusion can look like active transport because it uses proteins, but it never moves solutes against their gradient and never requires energy.
 
 ### Endocytosis
 

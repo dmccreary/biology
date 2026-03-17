@@ -75,5 +75,5 @@ Grades 9–11 biology (intro genetics) or health science
 ## References
 
 1. American Red Cross. *Blood Types Explained* (2024).  
-2. College Board AP Biology CED, Unit 5: Genetics.  
+2. College Board college placement Biology CED, Unit 5: Genetics.  
 3. Mayo Clinic. [Blood Types: What They Mean and Why They Matter](https://www.mayoclinic.org/).

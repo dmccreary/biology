@@ -13,7 +13,7 @@
       "color": "#FF8C00",
       "hint": "Small bright orange diamond shape in the extracellular space above the membrane, upper-left area.",
       "description": "A signaling molecule (such as a hormone, neurotransmitter, or growth factor) released by another cell. The ligand is the first messenger in the signaling pathway. It binds specifically to a receptor on the target cell surface, triggering the entire signaling cascade. Ligand-receptor binding is highly specific, like a key fitting a lock.",
-      "ap_tip": "The AP exam distinguishes between hydrophilic ligands (bind surface receptors) and hydrophobic ligands like steroid hormones (pass through the membrane and bind intracellular receptors). GPCR ligands are always hydrophilic — they cannot cross the membrane."
+      "ap_tip": "The college placement exam distinguishes between hydrophilic ligands (bind surface receptors) and hydrophobic ligands like steroid hormones (pass through the membrane and bind intracellular receptors). GPCR ligands are always hydrophilic — they cannot cross the membrane."
     },
     {
       "id": 2,
@@ -25,7 +25,7 @@
       "color": "#8B5CF6",
       "hint": "Purple serpentine protein with 7 transmembrane segments crossing the membrane, left-center area.",
       "description": "A G-protein-coupled receptor (GPCR) is a seven-transmembrane receptor protein that spans the plasma membrane. When a ligand binds its extracellular domain, the receptor undergoes a conformational change that activates a G-protein on the intracellular side. GPCRs are the largest family of cell-surface receptors in the human body, mediating responses to hormones, neurotransmitters, and sensory signals.",
-      "ap_tip": "GPCRs are the most common receptor type tested on the AP exam. Know the three-step pattern: (1) ligand binds receptor, (2) receptor activates G-protein (GDP→GTP exchange), (3) G-protein activates effector enzyme. Epinephrine signaling through GPCRs is a classic AP example."
+      "ap_tip": "GPCRs are the most common receptor type tested on the college placement exam. Know the three-step pattern: (1) ligand binds receptor, (2) receptor activates G-protein (GDP→GTP exchange), (3) G-protein activates effector enzyme. Epinephrine signaling through GPCRs is a classic college placement example."
     },
     {
       "id": 3,
@@ -37,7 +37,7 @@
       "color": "#F5A623",
       "hint": "Horizontal phospholipid bilayer running across the full width of the image at the upper quarter.",
       "description": "The plasma membrane is a phospholipid bilayer that separates the extracellular environment from the cytoplasm. It is selectively permeable, blocking most hydrophilic signaling molecules from entering the cell. This barrier is why cells need surface receptors — most signals must be transduced across the membrane without the signal molecule itself entering the cell.",
-      "ap_tip": "The membrane's role in signaling is a key AP concept: the signal molecule (first messenger) stays outside, while the second messenger (cAMP) is generated inside. This separation allows signal amplification — one ligand can trigger production of thousands of second messenger molecules."
+      "ap_tip": "The membrane's role in signaling is a key college placement concept: the signal molecule (first messenger) stays outside, while the second messenger (cAMP) is generated inside. This separation allows signal amplification — one ligand can trigger production of thousands of second messenger molecules."
     },
     {
       "id": 4,
@@ -73,7 +73,7 @@
       "color": "#EAB308",
       "hint": "Golden-yellow enzyme embedded in the membrane, center of the image.",
       "description": "An integral membrane enzyme activated by the Gα-GTP subunit. Adenylyl cyclase catalyzes the conversion of ATP to cyclic AMP (cAMP), the second messenger. One activated adenylyl cyclase molecule can produce hundreds of cAMP molecules per second, providing massive signal amplification at this step.",
-      "ap_tip": "Adenylyl cyclase is the effector enzyme in the GPCR-cAMP pathway. The AP exam may present this enzyme as the link between the G-protein and the second messenger. Remember: it converts ATP (abundant in the cytoplasm) to cAMP (the actual signaling molecule)."
+      "ap_tip": "Adenylyl cyclase is the effector enzyme in the GPCR-cAMP pathway. The college placement exam may present this enzyme as the link between the G-protein and the second messenger. Remember: it converts ATP (abundant in the cytoplasm) to cAMP (the actual signaling molecule)."
     },
     {
       "id": 7,
@@ -85,7 +85,7 @@
       "color": "#3B82F6",
       "hint": "Small blue circular molecules clustered below adenylyl cyclase in the intracellular space.",
       "description": "Cyclic adenosine monophosphate (cAMP) is a small, water-soluble second messenger produced from ATP by adenylyl cyclase. cAMP diffuses rapidly through the cytoplasm and activates protein kinase A (PKA) by binding to its regulatory subunits. cAMP is degraded by the enzyme phosphodiesterase (PDE), which terminates the signal.",
-      "ap_tip": "cAMP is the classic second messenger on the AP exam. Know that: (1) it amplifies the signal — one adenylyl cyclase makes many cAMP; (2) caffeine inhibits phosphodiesterase, prolonging cAMP signaling; (3) cAMP activates PKA, which phosphorylates downstream targets."
+      "ap_tip": "cAMP is the classic second messenger on the college placement exam. Know that: (1) it amplifies the signal — one adenylyl cyclase makes many cAMP; (2) caffeine inhibits phosphodiesterase, prolonging cAMP signaling; (3) cAMP activates PKA, which phosphorylates downstream targets."
     },
     {
       "id": 8,
@@ -97,7 +97,7 @@
       "color": "#22C55E",
       "hint": "Green diamond-shaped enzyme in the center-lower area, below the cAMP molecules.",
       "description": "Protein kinase A is an enzyme activated by cAMP binding. In its inactive state, PKA has two regulatory and two catalytic subunits. When four cAMP molecules bind the regulatory subunits, the catalytic subunits are released and become active. Active PKA phosphorylates specific target proteins by transferring a phosphate group from ATP to serine or threonine residues, altering the target's activity.",
-      "ap_tip": "PKA is a kinase — it adds phosphate groups. The AP exam contrasts kinases (add phosphate, activate or inactivate targets) with phosphatases (remove phosphate, reverse the kinase effect). This kinase/phosphatase balance controls signaling duration."
+      "ap_tip": "PKA is a kinase — it adds phosphate groups. The college placement exam contrasts kinases (add phosphate, activate or inactivate targets) with phosphatases (remove phosphate, reverse the kinase effect). This kinase/phosphatase balance controls signaling duration."
     },
     {
       "id": 9,
@@ -108,8 +108,8 @@
       "panel": "right",
       "color": "#16A34A",
       "hint": "Three stacked oval shapes in progressively darker greens with pink phosphate circles, center-right area.",
-      "description": "A relay of protein kinases, each phosphorylating and activating the next kinase in the chain. Each kinase in the cascade activates many copies of the next, creating exponential signal amplification. The cascade may include kinases like RAF → MEK → ERK (in the MAP kinase pathway) or other tissue-specific kinases that ultimately activate transcription factors or metabolic enzymes.",
-      "ap_tip": "The phosphorylation cascade is the key amplification mechanism tested on AP exams. Each step multiplies the signal: 1 receptor → 10 G-proteins → 100 cAMP → 1000 PKA activations → 10,000 phosphorylated targets. This explains how a tiny amount of hormone can produce a massive cellular response."
+      "description": "A relay of protein kinases, each phosphorylating and activating the next kinase in the chain. Each kinase in the cascade activates many copies of the next, creating exponential signal amplification. The cascade may include kinases like RAF → MEK → ERK (in the Mcollege placement kinase pathway) or other tissue-specific kinases that ultimately activate transcription factors or metabolic enzymes.",
+      "ap_tip": "The phosphorylation cascade is the key amplification mechanism tested on college placement exams. Each step multiplies the signal: 1 receptor → 10 G-proteins → 100 cAMP → 1000 PKA activations → 10,000 phosphorylated targets. This explains how a tiny amount of hormone can produce a massive cellular response."
     },
     {
       "id": 10,
@@ -121,7 +121,7 @@
       "color": "#EF4444",
       "hint": "Large red-orange rectangular shape at the right side, representing the final activated enzyme.",
       "description": "The terminal target of the phosphorylation cascade — an enzyme whose activity is altered by phosphorylation. Examples include glycogen phosphorylase (breaks down glycogen to glucose in liver cells during the fight-or-flight response) or lipase (breaks down fat in adipose tissue). The specific response depends on the cell type and which enzymes are expressed.",
-      "ap_tip": "The AP exam emphasizes that the same signal molecule can trigger different responses in different cell types. Epinephrine causes glycogen breakdown in liver cells, increased heart rate in cardiac muscle, and bronchodilation in lung cells — all through the same GPCR-cAMP pathway but with different target enzymes."
+      "ap_tip": "The college placement exam emphasizes that the same signal molecule can trigger different responses in different cell types. Epinephrine causes glycogen breakdown in liver cells, increased heart rate in cardiac muscle, and bronchodilation in lung cells — all through the same GPCR-cAMP pathway but with different target enzymes."
     },
     {
       "id": 11,
@@ -133,7 +133,7 @@
       "color": "#A78BFA",
       "hint": "Large circular structure with double-membrane envelope in the lower-right corner.",
       "description": "The nucleus houses the cell's DNA and is the site of gene transcription. Some signal transduction pathways culminate in the activation of transcription factors that enter the nucleus through nuclear pores and bind to specific DNA regulatory sequences, turning genes on or off. This gene expression response is slower than enzyme activation but produces longer-lasting cellular changes.",
-      "ap_tip": "Signal transduction can produce two types of responses: (1) fast responses — enzyme activation, ion channel opening (seconds to minutes); (2) slow responses — changes in gene expression (minutes to hours). The AP exam may ask you to distinguish these and explain why gene expression changes are more durable."
+      "ap_tip": "Signal transduction can produce two types of responses: (1) fast responses — enzyme activation, ion channel opening (seconds to minutes); (2) slow responses — changes in gene expression (minutes to hours). The college placement exam may ask you to distinguish these and explain why gene expression changes are more durable."
     },
     {
       "id": 12,
@@ -145,7 +145,7 @@
       "color": "#EC4899",
       "hint": "Small magenta oval shapes entering the nucleus through a nuclear pore.",
       "description": "Proteins activated by the phosphorylation cascade that translocate from the cytoplasm into the nucleus. Once inside, they bind to promoter or enhancer regions of specific genes, recruiting RNA polymerase and initiating transcription. Common examples include CREB (cAMP response element-binding protein), which is directly phosphorylated by PKA and activates genes with CRE sequences in their promoters.",
-      "ap_tip": "CREB is a direct link between the cAMP pathway and gene expression. The AP exam may describe a pathway where PKA phosphorylates CREB, which then enters the nucleus and activates gene transcription — connecting signal transduction to the central dogma."
+      "ap_tip": "CREB is a direct link between the cAMP pathway and gene expression. The college placement exam may describe a pathway where PKA phosphorylates CREB, which then enters the nucleus and activates gene transcription — connecting signal transduction to the central dogma."
     },
     {
       "id": 13,

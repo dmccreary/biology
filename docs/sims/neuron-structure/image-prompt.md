@@ -56,7 +56,7 @@ horizontal green band along the bottom-right).
 ### Style and technical specifications
 
 - **Style:** Biological textbook illustration, clean line art with light color fills,
-  white background, professional and accurate anatomical style suitable for AP Biology.
+  white background, professional and accurate anatomical style suitable for college placement Biology.
 - **Aspect ratio:** Landscape 4:3
 - **Resolution:** 1200 × 900 px
 - **Color palette:** Distinct colors per structure — soma (soft pink), nucleus

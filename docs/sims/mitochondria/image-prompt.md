@@ -79,5 +79,5 @@ Leave enough clear space around each structure so that circular marker dots
 (≈3–5% of image width) can be placed without overlapping neighbors.
 
 Style: biological textbook illustration, clean line art with flat color fills,
-white background. Suitable for AP Biology high school level.
+white background. Suitable for college placement Biology high school level.
 Aspect ratio: landscape 4:3. Resolution: 1200×900 px.

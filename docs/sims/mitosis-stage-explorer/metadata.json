@@ -1,7 +1,7 @@
 {
   "title": "Mitosis Stage Explorer",
   "creator": "Dan McCreary",
-  "subject": "AP Biology",
+  "subject": "college placement Biology",
   "description": "Interactive diagram overlay showing the five stages of mitosis with 15 callout markers for key structures, featuring Explore and Quiz modes.",
   "date": "2026-02-28",
   "educational": {
@@ -27,7 +27,7 @@
       "Cytoskeleton components (microtubules, microfilaments)"
     ],
     "standards": [
-      "AP Biology Unit 10: Cell Cycle, Mitosis, and Cancer"
+      "college placement Biology Unit 10: Cell Cycle, Mitosis, and Cancer"
     ]
   },
   "technical": {

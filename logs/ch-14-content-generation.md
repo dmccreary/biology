@@ -29,7 +29,7 @@
 | Markdown tables | 6 | Mutation types, PCR cycles, lac operon conditions, chromatin modifications, and others |
 | Diagram specs | 4 | Mutation Effects Comparator, Operon Regulation Simulator, Eukaryotic Gene Regulation Layers, Biotechnology Toolkit Workflow |
 | Equations (LaTeX) | 2 | 2^n amplification, chemical notation |
-| Collapsible Q&A | 1 | AP Practice section with 3 questions |
+| Collapsible Q&A | 1 | college placement Practice section with 3 questions |
 
 ## Concepts Coverage — All 29 ✓
 

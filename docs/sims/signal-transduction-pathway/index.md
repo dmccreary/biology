@@ -27,7 +27,7 @@ and **response**.
 ## How to Use
 
 - **Explore mode**: Hover over any numbered marker or label to learn about
-  that structure. The infobox below shows a detailed description and AP Exam
+  that structure. The infobox below shows a detailed description and college placement Exam
   tips for each component.
 - **Quiz mode**: Click the Quiz button to test your knowledge. Markers show
   "?" and you must click the correct structure when prompted.
@@ -61,7 +61,7 @@ and **response**.
 ## Lesson Plan
 
 ### Grade Level
-9-12 (AP Biology)
+9-12 (college placement Biology)
 
 ### Duration
 10-15 minutes

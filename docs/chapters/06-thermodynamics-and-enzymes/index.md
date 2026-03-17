@@ -68,7 +68,7 @@ This chapter builds on concepts from:
 
 !!! mascot-welcome "Gregor Welcomes You!"
     <img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Gregor welcomes you"/>
-    Welcome to Chapter 6, investigators! You are about to meet the two most powerful ideas in all of biochemistry: the concept of free energy, which tells us whether any reaction can happen spontaneously, and enzymes, which determine whether reactions actually happen at a useful rate inside a cell. These ideas appear in every metabolic pathway, every AP free-response question about energy, and every experiment you will run in the lab. Master them here, and the rest of the course will feel like playing with familiar tools. Let's investigate!
+    Welcome to Chapter 6, investigators! You are about to meet the two most powerful ideas in all of biochemistry: the concept of free energy, which tells us whether any reaction can happen spontaneously, and enzymes, which determine whether reactions actually happen at a useful rate inside a cell. These ideas appear in every metabolic pathway, every college placement free-response question about energy, and every experiment you will run in the lab. Master them here, and the rest of the course will feel like playing with familiar tools. Let's investigate!
 
 ## Introduction
 
@@ -517,7 +517,7 @@ The thermodynamic and enzymatic principles in this chapter are the engine behind
 
 !!! mascot-celebration "Excellent Work!"
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Gregor celebrating"/>
-    Outstanding, investigators! You now hold the thermodynamic and enzymatic keys to understanding every metabolic pathway in this course. In Chapter 7, photosynthesis will use the same redox carriers (NADPH) and coupled reactions (ATP synthesis) you learned here. In Chapter 8, cellular respiration will be entirely built from the exergonic/endergonic coupling logic you just mastered. And whenever an AP exam question asks you to predict what happens when a drug inhibits a metabolic enzyme, you now have exactly the tools to reason through it.
+    Outstanding, investigators! You now hold the thermodynamic and enzymatic keys to understanding every metabolic pathway in this course. In Chapter 7, photosynthesis will use the same redox carriers (NADPH) and coupled reactions (ATP synthesis) you learned here. In Chapter 8, cellular respiration will be entirely built from the exergonic/endergonic coupling logic you just mastered. And whenever an college placement exam question asks you to predict what happens when a drug inhibits a metabolic enzyme, you now have exactly the tools to reason through it.
 
 ??? note "Self-Check: Test Your Understanding — Click to Reveal"
     **Question:** A student tests an enzyme at pH 7 and 37°C and finds that it converts substrate to product at a rate of 40 µmol/min. She then adds a large excess of a competitive inhibitor. (a) What happens to the enzyme's Vmax and apparent Km? (b) She adds more substrate until its concentration is 1000× Km. What happens to the reaction rate compared to the uninhibited enzyme at the same substrate concentration? (c) A second student argues that because $\Delta G$ of the reaction is –25 kJ/mol, an enzyme that lowers $E_a$ will make the reaction release more energy. Is this correct? Explain.

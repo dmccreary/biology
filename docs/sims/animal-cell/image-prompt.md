@@ -17,7 +17,7 @@ system and must not appear.
 - **Dimensions**: 1200 × 900 px (landscape, 4:3 ratio)
 - **Background**: clean white (#FFFFFF)
 - **Style**: clean scientific illustration; flat design with soft gradients;
-  suitable for a high-school AP Biology textbook
+  suitable for a high-school college placement Biology textbook
 
 ---
 

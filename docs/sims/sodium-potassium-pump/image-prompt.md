@@ -6,7 +6,7 @@
 
 - Aspect ratio: landscape 4:3
 - Resolution: 1200 x 900 px
-- Style: biological textbook illustration, clean line art with light color fills, white background, AP Biology high school level
+- Style: biological textbook illustration, clean line art with light color fills, white background, college placement Biology high school level
 - The image must contain NO text, labels, numbers, arrows, or annotations of any kind
 
 ## Overall Layout

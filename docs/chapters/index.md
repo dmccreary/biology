@@ -1,7 +1,7 @@
 # Chapters
 
-This textbook is organized into 20 chapters covering all 380 AP Biology concepts,
-aligned to the 8 College Board AP Biology units. Chapters are ordered so that every
+This textbook is organized into 20 chapters covering all 380 college placement Biology concepts,
+aligned to the 8 College Board college placement Biology units. Chapters are ordered so that every
 prerequisite concept appears before the chapters that depend on it.
 
 ## Chapter Overview
@@ -58,7 +58,7 @@ MicroSim diagrams in **Explore mode** to build understanding, then switch to
 **Quiz mode** to test yourself before the chapter quiz.
 
 Each chapter includes a **Concepts Covered** list that maps directly to the
-AP Biology learning graph. If you are strong in certain areas, you can use the
+college placement Biology learning graph. If you are strong in certain areas, you can use the
 learning graph viewer to identify which chapters to focus on.
 
 ---

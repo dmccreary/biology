@@ -7,7 +7,7 @@ Generate a single wide illustration showing the four levels of protein structure
 ## Global Specifications
 
 - **Aspect ratio:** 4:3 landscape (1600 × 1200 px)
-- **Style:** Clean biological textbook illustration, precise molecular-level artwork with flat color fills, white background, AP Biology high school level
+- **Style:** Clean biological textbook illustration, precise molecular-level artwork with flat color fills, white background, college placement Biology high school level
 - **Layout:** Four equal-width vertical panels arranged horizontally, separated by thin light-gray divider lines. Each panel contains one level of protein structure.
 - **Background:** Pure white within each panel
 - **No text of any kind in the image. No labels, no level names, no chemical formulas, no numbers, no arrows, no annotation marks. Repeat: absolutely no text.**

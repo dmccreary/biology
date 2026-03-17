@@ -7,7 +7,7 @@
 The DNA double helix is the molecular basis of heredity. Its structure — discovered
 by Watson and Crick in 1953 using X-ray diffraction data from Franklin and Wilkins —
 explains how genetic information is stored, copied, and expressed. The 13 structures
-shown are central to AP Biology Units 3 and 6 (Gene Expression and Genetics).
+shown are central to college placement Biology Units 3 and 6 (Gene Expression and Genetics).
 
 ## Sugar-Phosphate Backbone
 

@@ -62,7 +62,7 @@ The answer for teachers is almost always cheaper. See
 
 - Uses clear, precise scientific language appropriate for AP-level high school students
 - Frames biology as an active investigation ("Let's investigate!", "What does the evidence tell us?")
-- Normalizes difficulty: "This is one of the trickiest concepts in AP Biology — that's completely normal"
+- Normalizes difficulty: "This is one of the trickiest concepts in college placement Biology — that's completely normal"
 - Celebrates connections between units: "Notice how this connects back to what we saw in Unit 3"
 - Refers to students as "investigators" or "scientists"
 - Signature phrases: "Let's investigate!", "What does the evidence tell us?", "You're closer than you think!", "The answer is hiding in plain sight"
@@ -74,7 +74,7 @@ The answer for teachers is almost always cheaper. See
 | General note / sidebar | `mascot-neutral` | As needed |
 | Chapter opening | `mascot-welcome` | Every chapter (required) |
 | Major concept introduction | `mascot-thinking` | 2–3 per chapter |
-| AP exam strategy / memory tip | `mascot-tip` | As needed |
+| college placement exam strategy / memory tip | `mascot-tip` | As needed |
 | Common misconception | `mascot-warning` | As needed |
 | End of major section | `mascot-celebration` | 1 per chapter |
 | Difficult content (e.g., Hardy-Weinberg, ETC) | `mascot-encourage` | Where students typically struggle |
@@ -85,7 +85,7 @@ The answer for teachers is almost always cheaper. See
 - Include the catchphrase "Let's investigate!" in the welcome admonition
 - Keep Gregor's dialogue brief: 1–4 sentences maximum
 - Use `mascot-thinking` for Big Ideas connections across units
-- Use `mascot-warning` for the most common AP exam misconceptions
+- Use `mascot-warning` for the most common college placement exam misconceptions
 
 ### Don'ts
 
@@ -108,10 +108,10 @@ The answer for teachers is almost always cheaper. See
     A critical conceptual connection or big-picture observation.
 
 !!! mascot-tip "Gregor's Tip"
-    An AP exam strategy, memory trick, or problem-solving shortcut.
+    An college placement exam strategy, memory trick, or problem-solving shortcut.
 
 !!! mascot-warning "Common Mistake"
-    A frequent misconception or error students make on the AP exam.
+    A frequent misconception or error students make on the college placement exam.
 
 !!! mascot-celebration "Excellent Work!"
     Acknowledgment of completing a difficult section or mastering a concept.
@@ -348,7 +348,7 @@ A core principle of this intelligent textbook is that complex biological diagram
 be **interactive**, not static. Every multi-callout diagram should support two modes:
 
 **Explore mode** — The student hovers over a callout label or numbered marker and sees
-an infobox that describes the structure, its function, and any AP exam relevance.
+an infobox that describes the structure, its function, and any college placement exam relevance.
 - Infobox placement: **below** the diagram for landscape-orientation images;
   **to the right** of the diagram for portrait-orientation images.
 
@@ -427,7 +427,7 @@ retouching and has clear, non-overlapping landing zones for every callout marker
 - Aspect ratio: **landscape 4:3** (standard for all biology diagram sims)
 - Resolution: **1200 × 900 px**
 - Style: **"biological textbook illustration, clean line art with light color fills,
-  white background, AP Biology high school level"**
+  white background, college placement Biology high school level"**
 - List every structure to be visible, in order of visual prominence
 - Note any structures that must be visible inside other structures (nested anatomy)
 
@@ -552,8 +552,8 @@ Every field shown is required (except `ap_tip`, which is omitted if not AP-testa
       "radius": 3.5,
       "color": "#F5A623",
       "hint": "1–2 sentence visual description and location in the image for the calibrator.",
-      "description": "3–5 sentence explanation: what it is, physical characteristics, function, how it relates to neighboring structures. AP Biology reading level.",
-      "ap_tip": "2–3 sentences: common misconception, exam question format, analogy to another AP Biology system."
+      "description": "3–5 sentence explanation: what it is, physical characteristics, function, how it relates to neighboring structures. college placement Biology reading level.",
+      "ap_tip": "2–3 sentences: common misconception, exam question format, analogy to another college placement Biology system."
     }
   ]
 }
@@ -568,18 +568,18 @@ Every field shown is required (except `ap_tip`, which is omitted if not AP-testa
   - 3.5 — small structures (small organelle, thin membrane layer)
   - 4.0 — medium structures (mid-size organelle, short process)
   - 5.0 — large structures (nucleus, soma, large organelle interior)
-- `label` — the canonical biological name used in AP Biology. Capitalize only the
+- `label` — the canonical biological name used in college placement Biology. Capitalize only the
   first word (or proper nouns). Match exactly the name used in `index.md` section headings.
 - `description` — **required, 3–5 sentences** covering: (1) what the structure is
   and its physical characteristics; (2) its specific biological function; (3) how it
   interacts with adjacent structures or fits into the pathway/process. Write at
-  AP Biology reading level (rigorous but accessible to high school students). Include
+  college placement Biology reading level (rigorous but accessible to high school students). Include
   relevant molecules, ions, or numerical values where appropriate.
 - `ap_tip` — **required for all AP-testable structures**; omit only for purely
   anatomical landmarks with no exam relevance. Write 2–3 sentences covering:
-  (1) the most common AP exam misconception or trick question involving this structure;
+  (1) the most common college placement exam misconception or trick question involving this structure;
   (2) the exam question format (e.g., "Know that..."); (3) a useful analogy to another
-  system covered in AP Biology (e.g., chloroplast vs. mitochondria parallels). The
+  system covered in college placement Biology (e.g., chloroplast vs. mitochondria parallels). The
   `ap_tip` box renders in amber — use it for genuine exam strategy, not general facts.
 - `color` — **required for every callout**. Use the hex color that matches the
   dominant color of the structure as it appears in the generated image. This must
@@ -676,7 +676,7 @@ Manual coordinate formula if needed: `x = pixel_x / imageWidth * 100`,
 Open `main.html` (no `?edit=true`) and check:
 
 - [ ] **Explore mode** — hovering a marker or label row highlights both, shows infobox
-- [ ] **Explore mode** — AP Exam Tip box appears (amber) for callouts that have `ap_tip`
+- [ ] **Explore mode** — college placement Exam Tip box appears (amber) for callouts that have `ap_tip`
 - [ ] **Quiz mode** — label texts are hidden, markers show `?`
 - [ ] **Quiz mode** — clicking the correct marker reveals label text and shows description
 - [ ] **Quiz mode** — clicking a wrong marker shows red shake animation and "Not quite" text

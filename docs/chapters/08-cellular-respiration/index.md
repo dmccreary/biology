@@ -39,7 +39,7 @@ Every time your muscles contract, your neurons fire, or your ribosomes assemble 
 
 $$\ce{C6H12O6 + 6O2 -> 6CO2 + 6H2O + ~32 ATP}$$
 
-But the path from glucose to those 32 ATP molecules is a three-stage metabolic journey spanning the cytoplasm and two mitochondrial compartments. Understanding each stage — its location, its inputs and outputs, and its contribution to the ATP total — is central to AP Biology and to understanding life itself.
+But the path from glucose to those 32 ATP molecules is a three-stage metabolic journey spanning the cytoplasm and two mitochondrial compartments. Understanding each stage — its location, its inputs and outputs, and its contribution to the ATP total — is central to college placement Biology and to understanding life itself.
 
 ## Overview: Three Stages, Two Locations
 
@@ -74,7 +74,7 @@ The net yield of glycolysis per glucose molecule:
 $$\text{Glucose} + 2\,\ce{NAD+} + 2\,\text{ADP} + 2\,P_i \rightarrow 2\,\text{Pyruvate} + 2\,\text{NADH} + 2\,\text{H}^+ + 2\,\text{ATP} + 2\,\ce{H2O}$$
 
 !!! mascot-tip "Gregor's Tip"
-    On the AP exam, questions often ask whether glycolysis requires oxygen. It does **not** — it occurs in both aerobic and anaerobic conditions. The 2 NADH produced in glycolysis can only be used by the ETC if oxygen is present; in anaerobic conditions, fermentation regenerates NAD⁺ so glycolysis can continue.
+    On the college placement exam, questions often ask whether glycolysis requires oxygen. It does **not** — it occurs in both aerobic and anaerobic conditions. The 2 NADH produced in glycolysis can only be used by the ETC if oxygen is present; in anaerobic conditions, fermentation regenerates NAD⁺ so glycolysis can continue.
 
 **Substrate-level phosphorylation** is the mechanism operating in both glycolysis and the Krebs cycle. Unlike oxidative phosphorylation (which uses a proton gradient), substrate-level phosphorylation couples phosphate transfer directly to a spontaneous chemical reaction. It is less efficient but oxygen-independent.
 
@@ -129,7 +129,7 @@ Per glucose (two pyruvates): two acetyl-CoA, two CO₂ released, and two NADH pr
 
 !!! mascot-encourage "You've Got This!"
     <img src="../../img/mascot/encouraging.png" class="mascot-admonition-img" alt="Gregor encourages you">
-    The Krebs cycle has eight reactions and a lot of intermediate names. You do **not** need to memorize every intermediate for the AP exam! Focus on the inputs and outputs: what goes **in** (acetyl-CoA, NAD⁺, FAD, ADP), what comes **out** (CO₂, NADH, FADH₂, ATP), and how many turns per glucose. The intermediate names are context — the accounting is what matters.
+    The Krebs cycle has eight reactions and a lot of intermediate names. You do **not** need to memorize every intermediate for the college placement exam! Focus on the inputs and outputs: what goes **in** (acetyl-CoA, NAD⁺, FAD, ADP), what comes **out** (CO₂, NADH, FADH₂, ATP), and how many turns per glucose. The intermediate names are context — the accounting is what matters.
 
 ### The Krebs Cycle (Citric Acid Cycle)
 
@@ -282,7 +282,7 @@ Approximately **2.5 ATP** are synthesized per NADH oxidized and **1.5 ATP** per 
 | **Total per glucose** | | **4** | **10** | **2** | **~28** | **~32** |
 
 !!! mascot-warning "Common Mistake"
-    Many textbooks and older AP materials list the total ATP yield as **36 or 38 ATP per glucose**. This is the **theoretical maximum** based on idealized P/O ratios. Modern biochemistry measures the actual yield at **~30–32 ATP** due to membrane leakage, the energy cost of importing cytoplasmic NADH into the mitochondria, and variable coupling efficiency. The AP exam accepts both estimates but be ready to explain why the actual yield is lower than the theoretical maximum.
+    Many textbooks and older college placement materials list the total ATP yield as **36 or 38 ATP per glucose**. This is the **theoretical maximum** based on idealized P/O ratios. Modern biochemistry measures the actual yield at **~30–32 ATP** due to membrane leakage, the energy cost of importing cytoplasmic NADH into the mitochondria, and variable coupling efficiency. The college placement exam accepts both estimates but be ready to explain why the actual yield is lower than the theoretical maximum.
 
 ## Fermentation: Anaerobic Energy Production
 
@@ -324,7 +324,7 @@ $$\ce{Acetaldehyde + NADH + H+ -> Ethanol + NAD+}$$
 #### MicroSim: Brewing Beer Process Explorer
 
 ![](../../img/mascot/beer.png){ align="left" width="150px"}
-Even though beer brewing is beyond the scope of the AP Biology exam, it's a fun, memorable way to see glycolysis and alcoholic fermentation unfold step by step right inside a real-world fermenter.
+Even though beer brewing is beyond the scope of the college placement Biology exam, it's a fun, memorable way to see glycolysis and alcoholic fermentation unfold step by step right inside a real-world fermenter.
 
 #### Diagram: Brewing Beer
 

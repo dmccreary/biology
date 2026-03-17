@@ -70,7 +70,7 @@ The right-hand summary panel always reports how many cells are currently reveale
 ## Lesson Plan
 
 ### Grade Level
-AP / Honors Biology (Grades 10–12)
+college placement / Honors Biology (Grades 10–12)
 
 ### Duration
 15 minutes (5 min explore + 5 min guided questions + 5 min wrap-up)
@@ -89,5 +89,5 @@ Look for accurate genotype/phenotype identification, correct ratio statements, a
 
 ## References
 
-1. College Board AP Biology Course and Exam Description, Unit 5: Heredity.
+1. College Board college placement Biology Course and Exam Description, Unit 5: Heredity.
 2. Gregor Mendel, “Experiments on Plant Hybridization” (1866) — foundational monohybrid and dihybrid analysis.

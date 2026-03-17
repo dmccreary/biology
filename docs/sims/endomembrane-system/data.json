@@ -12,7 +12,7 @@
       "color": "#1A5276",
       "hint": "Small gap-like openings visible in the double membrane of the nuclear envelope.",
       "description": "Nuclear pores are large protein complexes (nuclear pore complexes, NPCs) that span the double nuclear membrane. They regulate the bidirectional transport of molecules: mRNA and ribosomal subunits exit the nucleus, while proteins (like transcription factors and histones) are imported. Small molecules pass freely, but large molecules require nuclear localization signals for active transport through the pore.",
-      "ap_tip": "Nuclear pores are selectively permeable — not just open holes. The AP exam may ask why mRNA must be fully processed (5' cap, poly-A tail, spliced) before export: the pore complex checks for these markers. Unprocessed pre-mRNA is retained in the nucleus."
+      "ap_tip": "Nuclear pores are selectively permeable — not just open holes. The college placement exam may ask why mRNA must be fully processed (5' cap, poly-A tail, spliced) before export: the pore complex checks for these markers. Unprocessed pre-mRNA is retained in the nucleus."
     },
     {
       "id": 2,
@@ -23,7 +23,7 @@
       "color": "#2C3E80",
       "hint": "Large dark blue oval with double-membrane envelope in the upper-left area of the cell.",
       "description": "The nucleus houses the cell's DNA, organized into linear chromosomes. Messenger RNA (mRNA) transcribed here carries the instructions for proteins destined for the endomembrane system. These mRNAs exit through nuclear pores and are translated by ribosomes on the rough ER. The nuclear envelope is continuous with the rough ER membrane, forming the starting point of the endomembrane system.",
-      "ap_tip": "The nuclear envelope is part of the endomembrane system — it is physically continuous with the rough ER. The AP exam tests this connection. mRNA for secretory proteins has a signal sequence at the 5' end that directs the ribosome to the rough ER surface."
+      "ap_tip": "The nuclear envelope is part of the endomembrane system — it is physically continuous with the rough ER. The college placement exam tests this connection. mRNA for secretory proteins has a signal sequence at the 5' end that directs the ribosome to the rough ER surface."
     },
     {
       "id": 3,
@@ -34,7 +34,7 @@
       "color": "#7E57C2",
       "hint": "Blue-purple folded membranes with ribosome dots on the surface, extending from the nuclear envelope toward the center of the cell.",
       "description": "The rough ER is a network of membrane-enclosed cisternae studded with ribosomes. It is the entry point for the secretory pathway: ribosomes on the rough ER translate mRNA for secretory, membrane, and lysosomal proteins. As translation proceeds, the growing polypeptide is threaded into the ER lumen (co-translational translocation), where it is folded by chaperone proteins and receives initial N-linked glycosylation (addition of sugar chains).",
-      "ap_tip": "Co-translational translocation is triggered by the signal recognition particle (SRP), which binds the signal sequence on the growing polypeptide and docks the ribosome on the ER membrane. Free ribosomes vs. bound ribosomes make DIFFERENT proteins — bound ribosomes make secretory/membrane proteins. This is a classic AP FRQ topic."
+      "ap_tip": "Co-translational translocation is triggered by the signal recognition particle (SRP), which binds the signal sequence on the growing polypeptide and docks the ribosome on the ER membrane. Free ribosomes vs. bound ribosomes make DIFFERENT proteins — bound ribosomes make secretory/membrane proteins. This is a classic college placement FRQ topic."
     },
     {
       "id": 4,
@@ -45,7 +45,7 @@
       "color": "#9B59B6",
       "hint": "Tubular purple membrane network continuous with rough ER but without ribosome dots, positioned below the rough ER.",
       "description": "The smooth ER lacks ribosomes and specializes in lipid synthesis, steroid hormone production, carbohydrate metabolism, and detoxification of drugs and poisons. In liver cells, smooth ER enzymes (cytochrome P450 family) metabolize alcohol and drugs. In muscle cells, a specialized smooth ER called the sarcoplasmic reticulum stores calcium ions that trigger muscle contraction.",
-      "ap_tip": "The smooth ER is NOT directly involved in the protein secretion pathway, but it IS part of the endomembrane system. The AP exam may ask you to distinguish rough ER functions (protein processing) from smooth ER functions (lipid synthesis, detoxification). Liver cells exposed to alcohol develop extensive smooth ER — an example of organelle proliferation in response to cellular demand."
+      "ap_tip": "The smooth ER is NOT directly involved in the protein secretion pathway, but it IS part of the endomembrane system. The college placement exam may ask you to distinguish rough ER functions (protein processing) from smooth ER functions (lipid synthesis, detoxification). Liver cells exposed to alcohol develop extensive smooth ER — an example of organelle proliferation in response to cellular demand."
     },
     {
       "id": 5,
@@ -56,7 +56,7 @@
       "color": "#48C9B0",
       "hint": "Small teal-green coated vesicles visible between the rough ER and the cis face of the Golgi.",
       "description": "COPII-coated vesicles bud from the rough ER and carry newly synthesized proteins to the cis face of the Golgi apparatus. The COPII coat proteins (Sec23, Sec24, Sec13, Sec31) select cargo proteins for export and shape the vesicle membrane. Once the vesicle reaches the Golgi, the coat disassembles, and the vesicle membrane fuses with the cis Golgi membrane, delivering its cargo into the Golgi lumen.",
-      "ap_tip": "COPII vesicles travel ER → Golgi (anterograde transport). COPI vesicles travel Golgi → ER (retrograde transport, returning escaped ER-resident proteins). The AP exam may not name the coat proteins specifically, but knowing the direction of vesicle traffic (ER → Golgi → plasma membrane) is essential for FRQ answers on the secretory pathway."
+      "ap_tip": "COPII vesicles travel ER → Golgi (anterograde transport). COPI vesicles travel Golgi → ER (retrograde transport, returning escaped ER-resident proteins). The college placement exam may not name the coat proteins specifically, but knowing the direction of vesicle traffic (ER → Golgi → plasma membrane) is essential for FRQ answers on the secretory pathway."
     },
     {
       "id": 6,
@@ -67,7 +67,7 @@
       "color": "#F7DC6F",
       "hint": "The receiving side of the Golgi stack — the left-most curved cisterna facing toward the ER.",
       "description": "The cis face (also called the 'receiving face') of the Golgi apparatus is the entry point for proteins arriving from the ER in COPII vesicles. Vesicles fuse with the cis Golgi membrane, releasing their cargo into the first cisterna. Here, initial quality control occurs: misfolded proteins are identified and returned to the ER via COPI vesicles for refolding or degradation.",
-      "ap_tip": "The cis face always faces the ER; the trans face always faces the plasma membrane. This polarity creates a directional processing assembly line. The AP exam tests cis-to-trans directionality — proteins enter at the cis face and exit from the trans face. Think of it as the 'receiving dock' of the Golgi."
+      "ap_tip": "The cis face always faces the ER; the trans face always faces the plasma membrane. This polarity creates a directional processing assembly line. The college placement exam tests cis-to-trans directionality — proteins enter at the cis face and exit from the trans face. Think of it as the 'receiving dock' of the Golgi."
     },
     {
       "id": 7,
@@ -78,7 +78,7 @@
       "color": "#F5A623",
       "hint": "The middle stacked amber/gold cisternae of the Golgi apparatus.",
       "description": "The medial cisternae are the middle processing compartments of the Golgi stack. Here, proteins undergo further glycosylation modifications: N-linked oligosaccharides added in the ER are trimmed and remodeled, and O-linked glycosylation (addition of sugars to serine/threonine residues) occurs. Each cisterna has a distinct set of enzymes, creating a sequential processing pipeline as proteins move from cis to trans.",
-      "ap_tip": "The Golgi modifies, sorts, and packages proteins — it does NOT synthesize them (that's the ribosome/ER). The AP exam tests the distinction between where proteins are MADE (rough ER ribosomes) and where they are PROCESSED (Golgi). Glycosylation patterns serve as molecular 'address labels' that direct proteins to their correct destinations."
+      "ap_tip": "The Golgi modifies, sorts, and packages proteins — it does NOT synthesize them (that's the ribosome/ER). The college placement exam tests the distinction between where proteins are MADE (rough ER ribosomes) and where they are PROCESSED (Golgi). Glycosylation patterns serve as molecular 'address labels' that direct proteins to their correct destinations."
     },
     {
       "id": 8,
@@ -100,7 +100,7 @@
       "color": "#2ECC71",
       "hint": "Medium green round vesicles between the trans Golgi and the plasma membrane, moving toward the cell surface.",
       "description": "Secretory vesicles bud from the trans Golgi network carrying proteins destined for export from the cell. They travel along cytoskeletal tracks (microtubules) toward the plasma membrane. In regulated secretion (e.g., insulin release from pancreatic beta cells), vesicles accumulate and fuse with the membrane only when triggered by a signal (like elevated blood glucose). In constitutive secretion, vesicles fuse continuously without a signal.",
-      "ap_tip": "The AP exam distinguishes regulated vs. constitutive secretion. Regulated secretion requires a signal (hormone, neurotransmitter release) — the vesicles are stored until needed. Constitutive secretion happens continuously (membrane maintenance, extracellular matrix secretion). Insulin secretion is a classic AP Biology example of regulated exocytosis."
+      "ap_tip": "The college placement exam distinguishes regulated vs. constitutive secretion. Regulated secretion requires a signal (hormone, neurotransmitter release) — the vesicles are stored until needed. Constitutive secretion happens continuously (membrane maintenance, extracellular matrix secretion). Insulin secretion is a classic college placement Biology example of regulated exocytosis."
     },
     {
       "id": 10,
@@ -111,7 +111,7 @@
       "color": "#D35400",
       "hint": "Small dark orange-brown sphere with granular content, near the trans Golgi but separate from secretory vesicles.",
       "description": "Lysosomes are membrane-bound vesicles containing over 50 types of hydrolytic enzymes (acid hydrolases) that break down proteins, lipids, carbohydrates, and nucleic acids. They maintain an internal pH of ~4.5–5.0, optimal for their enzymes but safely acidic compared to the neutral cytoplasm (pH 7.2). Lysosomes digest material from phagocytosis (foreign particles), autophagy (damaged organelles), and endocytosis (receptor-ligand complexes).",
-      "ap_tip": "Lysosomal enzymes are tagged with mannose-6-phosphate in the Golgi for proper targeting. If the lysosomal membrane ruptures, the acidic enzymes could digest the cell (autolysis) — but the neutral cytoplasmic pH partially inactivates them. Tay-Sachs disease (missing hexosaminidase A) is the classic AP exam example of lysosomal storage disease."
+      "ap_tip": "Lysosomal enzymes are tagged with mannose-6-phosphate in the Golgi for proper targeting. If the lysosomal membrane ruptures, the acidic enzymes could digest the cell (autolysis) — but the neutral cytoplasmic pH partially inactivates them. Tay-Sachs disease (missing hexosaminidase A) is the classic college placement exam example of lysosomal storage disease."
     },
     {
       "id": 11,
@@ -122,7 +122,7 @@
       "color": "#5DADE2",
       "hint": "Thin blue phospholipid bilayer forming the outer boundary of the cell along the bottom and right edges.",
       "description": "The plasma membrane is the final destination for secretory vesicles. When a vesicle fuses with the plasma membrane (exocytosis), its contents are released into the extracellular space, and its membrane lipids and proteins become part of the plasma membrane. This is how the cell adds new membrane proteins (like receptors and channels) and secretes signaling molecules, hormones, and digestive enzymes.",
-      "ap_tip": "Exocytosis adds membrane to the cell surface; endocytosis removes it. This dynamic recycling keeps the plasma membrane area roughly constant. The AP exam tests the connection between the endomembrane system and the plasma membrane — vesicle fusion is how cells secrete proteins without creating holes in their membrane."
+      "ap_tip": "Exocytosis adds membrane to the cell surface; endocytosis removes it. This dynamic recycling keeps the plasma membrane area roughly constant. The college placement exam tests the connection between the endomembrane system and the plasma membrane — vesicle fusion is how cells secrete proteins without creating holes in their membrane."
     },
     {
       "id": 12,
@@ -133,7 +133,7 @@
       "color": "#27AE60",
       "hint": "A region where a secretory vesicle is fusing with the plasma membrane, with the membrane bulging outward.",
       "description": "Exocytosis is the process by which a vesicle's membrane fuses with the plasma membrane, releasing the vesicle contents to the extracellular space. The fusion is mediated by SNARE proteins: v-SNAREs on the vesicle interact with t-SNAREs on the target membrane, pulling the two membranes together until they merge. This is the final step of the secretory pathway — the protein that began as mRNA in the nucleus is now outside the cell.",
-      "ap_tip": "SNARE proteins are the molecular machinery of membrane fusion. Botulinum toxin (Botox) cleaves SNARE proteins, preventing neurotransmitter release at synapses — this is why it causes paralysis. The AP exam connects exocytosis to neurotransmitter release at synapses and hormone secretion by endocrine cells."
+      "ap_tip": "SNARE proteins are the molecular machinery of membrane fusion. Botulinum toxin (Botox) cleaves SNARE proteins, preventing neurotransmitter release at synapses — this is why it causes paralysis. The college placement exam connects exocytosis to neurotransmitter release at synapses and hormone secretion by endocrine cells."
     },
     {
       "id": 13,
@@ -144,7 +144,7 @@
       "color": "#555555",
       "hint": "Tiny dark gray dots scattered in the cytoplasm, separate from the rough ER.",
       "description": "Free ribosomes float in the cytoplasm and synthesize proteins that function within the cytoplasm (metabolic enzymes like those in glycolysis), in the nucleus (histones, transcription factors), or in other non-endomembrane compartments (mitochondrial and chloroplast proteins, which are imported post-translationally). Free ribosomes are structurally identical to bound ribosomes — the difference is determined by the mRNA being translated, not the ribosome itself.",
-      "ap_tip": "A common AP misconception: free ribosomes and bound ribosomes are NOT different types of ribosomes. The same ribosome can be free or bound depending on whether the mRNA it translates has a signal sequence. If the signal sequence is present, SRP directs the ribosome to the rough ER. If absent, the ribosome remains free in the cytoplasm."
+      "ap_tip": "A common college placement misconception: free ribosomes and bound ribosomes are NOT different types of ribosomes. The same ribosome can be free or bound depending on whether the mRNA it translates has a signal sequence. If the signal sequence is present, SRP directs the ribosome to the rough ER. If absent, the ribosome remains free in the cytoplasm."
     }
   ]
 }

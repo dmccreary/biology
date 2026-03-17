@@ -204,7 +204,7 @@ Responsive: Must respond to window resize events
 
 !!! mascot-thinking "Key Insight: Water Splitting — The Source of Atmospheric Oxygen"
     <img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Gregor thinking"/>
-    Every oxygen molecule you breathe was produced by the photolysis of water in photosystem II — not from $\ce{CO2}$. This is one of the most commonly misunderstood facts in AP Biology. The carbon in $\ce{CO2}$ ends up in glucose; the oxygen in $\ce{CO2}$ ends up in water (in cellular respiration) or in G3P (in the Calvin cycle). The oxygen released by photosynthesis comes entirely from water. This was confirmed elegantly by isotope-labeling experiments using $\ce{^{18}O}$-labeled water in the 1940s.
+    Every oxygen molecule you breathe was produced by the photolysis of water in photosystem II — not from $\ce{CO2}$. This is one of the most commonly misunderstood facts in college placement Biology. The carbon in $\ce{CO2}$ ends up in glucose; the oxygen in $\ce{CO2}$ ends up in water (in cellular respiration) or in G3P (in the Calvin cycle). The oxygen released by photosynthesis comes entirely from water. This was confirmed elegantly by isotope-labeling experiments using $\ce{^{18}O}$-labeled water in the 1940s.
 
 ---
 
@@ -401,15 +401,15 @@ Interactive controls:
 
 Default state: C3 selected; climate sliders at moderate values (C3 suitable)
 
-Instructional Rationale: Presenting the three strategies in the same visual format (leaf cross-section) with explicit CO₂ flow arrows, then connecting each to its optimal climate via interactive sliders, supports Analysis-level work by requiring students to attribute structural differences to functional consequences in specific environmental contexts — a core AP Biology analytical skill.
+Instructional Rationale: Presenting the three strategies in the same visual format (leaf cross-section) with explicit CO₂ flow arrows, then connecting each to its optimal climate via interactive sliders, supports Analysis-level work by requiring students to attribute structural differences to functional consequences in specific environmental contexts — a core college placement Biology analytical skill.
 
 Canvas size: 700 × 460 px
 Responsive: Must respond to window resize events
 </details>
 
-!!! mascot-tip "Gregor's Tip: C3, C4, CAM on the AP Exam"
+!!! mascot-tip "Gregor's Tip: C3, C4, CAM on the college placement Exam"
     <img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Gregor tip"/>
-    The AP exam loves C3/C4/CAM comparisons, especially in the context of climate change. Practice three key questions: (1) Which pathway does each use first — RuBisCO (C3) or PEP carboxylase (C4/CAM)? (2) Is the separation spatial (C4: different cells) or temporal (CAM: different times of day)? (3) Which is most water-efficient (CAM), most productive in hot/sunny conditions (C4), and most common globally (C3)? If you can answer these without hesitation, you will handle any photosynthesis free-response question.
+    The college placement exam loves C3/C4/CAM comparisons, especially in the context of climate change. Practice three key questions: (1) Which pathway does each use first — RuBisCO (C3) or PEP carboxylase (C4/CAM)? (2) Is the separation spatial (C4: different cells) or temporal (CAM: different times of day)? (3) Which is most water-efficient (CAM), most productive in hot/sunny conditions (C4), and most common globally (C3)? If you can answer these without hesitation, you will handle any photosynthesis free-response question.
 
 ---
 

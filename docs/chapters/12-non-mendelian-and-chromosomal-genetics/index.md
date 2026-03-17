@@ -81,7 +81,7 @@ Notice that in incomplete dominance, the phenotypic ratio equals the genotypic r
 
 !!! mascot-tip "Gregor's Tip"
     <img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Gregor's tip">
-    The AP exam loves to test the difference between incomplete dominance and codominance. The key: incomplete dominance produces a **blended** intermediate phenotype (pink from red + white), while codominance produces a phenotype where **both alleles are fully expressed** simultaneously. If you see a blended phenotype, it's incomplete dominance. If both traits appear side by side, it's codominance.
+    The college placement exam loves to test the difference between incomplete dominance and codominance. The key: incomplete dominance produces a **blended** intermediate phenotype (pink from red + white), while codominance produces a phenotype where **both alleles are fully expressed** simultaneously. If you see a blended phenotype, it's incomplete dominance. If both traits appear side by side, it's codominance.
 
 ### Codominance
 
@@ -353,7 +353,7 @@ The ee genotype is epistatic to the B/b locus — it masks whatever pigment gene
 
 !!! mascot-thinking "Key Insight"
     <img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Gregor thinking">
-    Modified dihybrid ratios are a big signal on the AP exam that epistasis is at play. Whenever the F2 phenotypic ratio departs from 9:3:3:1 but the total still adds to 16, suspect epistasis. Common epistatic ratios include 9:3:4, 9:7, 12:3:1, and 15:1 — each reflects a different type of gene interaction.
+    Modified dihybrid ratios are a big signal on the college placement exam that epistasis is at play. Whenever the F2 phenotypic ratio departs from 9:3:3:1 but the total still adds to 16, suspect epistasis. Common epistatic ratios include 9:3:4, 9:7, 12:3:1, and 15:1 — each reflects a different type of gene interaction.
 
 ### Pleiotropy
 
@@ -578,7 +578,7 @@ By analyzing which individuals are affected and how the trait passes through gen
 
 **Learning objective:** Students will be able to *analyze* (Bloom's L4: Analyze) pedigree diagrams to determine the most likely mode of inheritance, and *evaluate* (Bloom's L5: Evaluate) whether observed patterns are consistent with autosomal dominant, autosomal recessive, or X-linked recessive inheritance.
 
-**Instructional Rationale:** Presenting multiple pedigrees that students must classify builds the diagnostic reasoning skills tested on the AP exam. The immediate feedback loop — guess the pattern, then check — reinforces the distinguishing clues for each inheritance mode.
+**Instructional Rationale:** Presenting multiple pedigrees that students must classify builds the diagnostic reasoning skills tested on the college placement exam. The immediate feedback loop — guess the pattern, then check — reinforces the distinguishing clues for each inheritance mode.
 
 **Canvas:** 800 × 520 px, responsive.
 
@@ -626,7 +626,7 @@ Consider a pedigree where two unaffected parents in generation I have one affect
 
 !!! mascot-encourage "You've Got This!"
     <img src="../../img/mascot/encouraging.png" class="mascot-admonition-img" alt="Gregor encourages you">
-    Pedigree analysis combines everything you have learned about dominance, recessiveness, and sex linkage into a single detective challenge. On the AP exam, start by checking if the trait is dominant or recessive (does it skip generations?), then check if it's autosomal or X-linked (is it much more common in one sex?). With practice, you will be able to read pedigrees as fluently as you read Punnett squares.
+    Pedigree analysis combines everything you have learned about dominance, recessiveness, and sex linkage into a single detective challenge. On the college placement exam, start by checking if the trait is dominant or recessive (does it skip generations?), then check if it's autosomal or X-linked (is it much more common in one sex?). With practice, you will be able to read pedigrees as fluently as you read Punnett squares.
 
 ---
 
@@ -656,7 +656,7 @@ Consider a pedigree where two unaffected parents in generation I have one affect
 
 ---
 
-??? question "AP Practice: Test Your Understanding"
+??? question "college placement Practice: Test Your Understanding"
     **Question 1:** In a cross between a red snapdragon ($C^R C^R$) and a white snapdragon ($C^W C^W$), all F1 offspring are pink. If two F1 plants are crossed, what phenotypic ratio is expected in the F2 generation?
 
     **Answer:** 1 red ($C^R C^R$) : 2 pink ($C^R C^W$) : 1 white ($C^W C^W$). This 1:2:1 ratio is characteristic of incomplete dominance.
