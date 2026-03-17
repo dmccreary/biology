@@ -35,3 +35,6 @@ This course is not associated with The College Board in any way and no endorseme
 ## How to Use This Book
 
 Navigate using the sidebar on the left. Start with the [Course Description](course-description.md) for a full overview, then explore the [Learning Graph](learning-graph/index.md) to see how concepts connect before diving into chapters.
+
+!!! note
+    AP® is a registered trademark of the College Board, which is not affiliated with, and does not endorse, this product.

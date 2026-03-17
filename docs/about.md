@@ -59,9 +59,7 @@ For the past three years we have iterated on AI-assisted authoring workflows to 
 
 ## About the AP® Biology Trademark
 
-Note that the term AP® is a registered trademark of The College Board.  The authors of this textbook
-are in no way affiliated with The College Board and no endorsement of this textbook by
-The College Board is implied.
+AP® is a registered trademark of the College Board, which is not affiliated with, and does not endorse, this product.
 
 ## About Dan McCreary
 
