@@ -23,7 +23,7 @@ const panelData = [
     color: '#2C3E50',
     summary: 'The primary structure is the unique linear sequence of amino acids in a polypeptide chain, read from the N-terminus to the C-terminus. This sequence is encoded directly by the gene\'s DNA and determines all higher levels of structure. Each amino acid is linked to the next by a peptide bond — a covalent bond formed by a condensation reaction between the carboxyl group of one amino acid and the amino group of the next.',
     forces: 'Stabilized by: Covalent peptide bonds between amino acids.',
-    apTip: 'Even a single amino acid substitution in the primary sequence (e.g., sickle cell: Glu → Val at position 6 of β-globin) can alter folding and function. The AP exam frequently tests how primary structure determines all higher levels.'
+    apTip: 'Even a single amino acid substitution in the primary sequence (e.g., sickle cell: Glu → Val at position 6 of β-globin) can alter folding and function. The college placement exam frequently tests how primary structure determines all higher levels.'
   },
   {
     name: 'Secondary Structure',
@@ -31,7 +31,7 @@ const panelData = [
     color: '#E67E22',
     summary: 'Secondary structure refers to local folding patterns that arise from hydrogen bonds between backbone atoms (not R-groups). The two most common motifs are the alpha helix — a right-handed coil stabilized by H-bonds between every 4th peptide bond — and the beta pleated sheet — flat, zigzag strands aligned side by side with H-bonds running between them. Most proteins contain a mix of both.',
     forces: 'Stabilized by: Hydrogen bonds between backbone C=O and N-H groups.',
-    apTip: 'Know that secondary structure involves BACKBONE hydrogen bonds only — not R-group interactions. The AP exam may ask you to distinguish which bonds stabilize which level. Alpha helices and beta sheets are the two types you must know.'
+    apTip: 'Know that secondary structure involves BACKBONE hydrogen bonds only — not R-group interactions. The college placement exam may ask you to distinguish which bonds stabilize which level. Alpha helices and beta sheets are the two types you must know.'
   },
   {
     name: 'Tertiary Structure',
@@ -47,7 +47,7 @@ const panelData = [
     color: '#8E44AD',
     summary: 'Quaternary structure exists only in proteins with multiple polypeptide subunits. Hemoglobin is the classic example: four subunits (2 alpha, 2 beta) assemble into a functional tetramer. Each subunit contains a heme group that binds one oxygen molecule. The subunits interact through noncovalent forces at their contact surfaces. Quaternary structure enables cooperative binding — when one subunit binds O₂, it changes shape and increases the other subunits\' affinity for O₂.',
     forces: 'Stabilized by: Same R-group interactions as tertiary, but between different polypeptide subunits (hydrophobic interactions, ionic bonds, H-bonds).',
-    apTip: 'Not all proteins have quaternary structure — only those with multiple subunits. Hemoglobin (4 subunits) has it; myoglobin (1 subunit) does not. The AP exam tests cooperative binding in hemoglobin as a consequence of quaternary structure.'
+    apTip: 'Not all proteins have quaternary structure — only those with multiple subunits. Hemoglobin (4 subunits) has it; myoglobin (1 subunit) does not. The college placement exam tests cooperative binding in hemoglobin as a consequence of quaternary structure.'
   }
 ];
 
@@ -180,11 +180,11 @@ function drawInfo(infoTop) {
     textSize(Math.min(11.5, canvasWidth * 0.017));
     text(p.summary, pad, infoTop + 40, textW, 46);
 
-    // AP tip
+    // college placement tip
     fill('#B7950B');
     textSize(Math.min(10.5, canvasWidth * 0.015));
     textStyle(ITALIC);
-    text('AP Tip: ' + p.apTip, pad, infoTop + 88, textW, 38);
+    text('college placement Tip: ' + p.apTip, pad, infoTop + 88, textW, 38);
     textStyle(NORMAL);
   } else {
     fill('#999');

@@ -34,7 +34,7 @@
       "color": "#CE93D8",
       "hint": "large purple-violet round nucleus inside the soma, often with a prominent dark nucleolus visible at its center",
       "description": "The nucleus of the neuron houses the cell's DNA and directs transcription of genes encoding ion channels, receptors, neurotransmitter-synthesizing enzymes, and structural proteins. The prominent nucleolus reflects the neuron's high demand for ribosome production to maintain protein synthesis across an enormous cell volume (some motor neuron axons extend over 1 meter).",
-      "ap_tip": "Neuronal nuclei are a good example of how gene expression differs by cell type — neurons express highly specific sets of ion channels and signaling proteins not found in other cells. On the AP exam, the nucleus in any cell is the site of transcription (DNA → mRNA); translation occurs at ribosomes in the cytoplasm or rough ER."
+      "ap_tip": "Neuronal nuclei are a good example of how gene expression differs by cell type — neurons express highly specific sets of ion channels and signaling proteins not found in other cells. On the college placement exam, the nucleus in any cell is the site of transcription (DNA → mRNA); translation occurs at ribosomes in the cytoplasm or rough ER."
     },
     {
       "id": 4,
@@ -45,7 +45,7 @@
       "color": "#FF8A65",
       "hint": "cone-shaped narrowing where the soma transitions into the axon, slightly brighter or more distinct in color from both the soma and the axon",
       "description": "The axon hillock is the cone-shaped region where the soma merges into the axon. It has the highest density of voltage-gated Na⁺ channels of any part of the neuron, making it the site with the lowest threshold for action potential generation. All graded potentials from dendrites and the soma are summed here (spatial and temporal summation), and if the net depolarization reaches threshold (typically −55 mV), an action potential fires.",
-      "ap_tip": "The axon hillock is the 'decision point' of the neuron — where summation determines whether an action potential is triggered. This is a favorite AP Biology question topic. Know that: (1) graded potentials from dendrites sum at the hillock; (2) threshold at the hillock is lower than elsewhere due to high Na⁺ channel density; (3) if threshold is NOT reached, no action potential fires (all-or-nothing law)."
+      "ap_tip": "The axon hillock is the 'decision point' of the neuron — where summation determines whether an action potential is triggered. This is a favorite college placement Biology question topic. Know that: (1) graded potentials from dendrites sum at the hillock; (2) threshold at the hillock is lower than elsewhere due to high Na⁺ channel density; (3) if threshold is NOT reached, no action potential fires (all-or-nothing law)."
     },
     {
       "id": 5,
@@ -56,7 +56,7 @@
       "color": "#80CBC4",
       "hint": "rounded knob-shaped enlargements at the far right end of the axon, branching into several terminal boutons clustered near the postsynaptic cell",
       "description": "Axon terminals (terminal boutons or synaptic knobs) are the swollen tips of axon branches that form the presynaptic component of the synapse. They contain many synaptic vesicles filled with neurotransmitter, abundant mitochondria to supply ATP for vesicle cycling, and voltage-gated Ca²⁺ channels. When an action potential arrives, the membrane depolarization opens Ca²⁺ channels, and Ca²⁺ influx triggers neurotransmitter exocytosis.",
-      "ap_tip": "Axon terminals are the presynaptic side of the synapse. The sequence of events for neurotransmitter release: (1) action potential arrives → (2) voltage-gated Ca²⁺ channels open → (3) Ca²⁺ enters terminal → (4) synaptic vesicles fuse with membrane (SNARE proteins) → (5) neurotransmitter released into synaptic cleft. This is a classic AP Biology process to know step by step."
+      "ap_tip": "Axon terminals are the presynaptic side of the synapse. The sequence of events for neurotransmitter release: (1) action potential arrives → (2) voltage-gated Ca²⁺ channels open → (3) Ca²⁺ enters terminal → (4) synaptic vesicles fuse with membrane (SNARE proteins) → (5) neurotransmitter released into synaptic cleft. This is a classic college placement Biology process to know step by step."
     },
     {
       "id": 6,
@@ -89,7 +89,7 @@
       "color": "#F48FB1",
       "hint": "pink or magenta protein complexes embedded in the postsynaptic membrane, shown as Y-shaped or cylindrical transmembrane proteins facing the synaptic cleft",
       "description": "Neurotransmitter receptors are integral membrane proteins in the postsynaptic membrane that bind specific neurotransmitters with high affinity and trigger a cellular response. Ionotropic receptors (e.g., AMPA, NMDA, nicotinic ACh receptors) are ligand-gated ion channels — neurotransmitter binding opens the channel directly. Metabotropic receptors (e.g., GABA-B, muscarinic ACh receptors) are G-protein-coupled receptors (GPCRs) that trigger intracellular signaling cascades, producing slower but more diverse and amplified responses.",
-      "ap_tip": "Receptor specificity is fundamental to synaptic signaling — only the correct neurotransmitter fits a given receptor (lock-and-key analogy, similar to enzyme-substrate specificity). This is directly analogous to ligand-receptor binding in cell communication (AP Unit 4). Drugs often work by mimicking neurotransmitters (agonists) or blocking receptors (antagonists): e.g., opioids act as agonists at opioid receptors; naloxone blocks them."
+      "ap_tip": "Receptor specificity is fundamental to synaptic signaling — only the correct neurotransmitter fits a given receptor (lock-and-key analogy, similar to enzyme-substrate specificity). This is directly analogous to ligand-receptor binding in cell communication (college placement Unit 4). Drugs often work by mimicking neurotransmitters (agonists) or blocking receptors (antagonists): e.g., opioids act as agonists at opioid receptors; naloxone blocks them."
     },
     {
       "id": 9,
@@ -100,7 +100,7 @@
       "color": "#66BB6A",
       "hint": "dark green membrane of the target cell (muscle fiber or next neuron) directly opposite the axon terminal, thickened at the postsynaptic density where receptors cluster",
       "description": "The postsynaptic membrane is the region of the target cell membrane that faces the synaptic cleft and contains a high density of neurotransmitter receptors. It is thickened by the postsynaptic density (PSD), a protein scaffold that anchors receptors and signal transduction proteins. When neurotransmitter binds receptors here, it either opens ion channels (ionotropic receptors, fast signaling) or activates G-protein cascades (metabotropic receptors, slow/modulatory signaling).",
-      "ap_tip": "The postsynaptic membrane can belong to a dendrite, soma, or muscle cell (neuromuscular junction). Distinguish ionotropic (ligand-gated ion channels — fast, direct) from metabotropic receptors (G-protein coupled — slow, amplified). The AP exam may ask about the neuromuscular junction specifically: acetylcholine binds nicotinic receptors (ionotropic), opening Na⁺ channels and depolarizing the motor end plate."
+      "ap_tip": "The postsynaptic membrane can belong to a dendrite, soma, or muscle cell (neuromuscular junction). Distinguish ionotropic (ligand-gated ion channels — fast, direct) from metabotropic receptors (G-protein coupled — slow, amplified). The college placement exam may ask about the neuromuscular junction specifically: acetylcholine binds nicotinic receptors (ionotropic), opening Na⁺ channels and depolarizing the motor end plate."
     },
     {
       "id": 10,
@@ -111,7 +111,7 @@
       "color": "#EF9A9A",
       "hint": "narrow dark gap or pinch point in the myelin sheath where the axon is briefly exposed, with distinct constriction between two myelin segments",
       "description": "Nodes of Ranvier are the short (~1–2 µm) gaps between adjacent myelin segments where the axon membrane is exposed to the extracellular fluid. They are densely packed with voltage-gated Na⁺ and K⁺ channels. During saltatory conduction, the action potential is regenerated only at each node — current flows through the axoplasm from node to node under the insulating myelin, skipping the internodal regions and dramatically speeding conduction.",
-      "ap_tip": "Saltatory conduction (from Latin 'saltare' = to jump) is the mechanism by which action potentials travel fast in myelinated axons. The AP exam frequently asks: why is myelinated conduction faster and more energy-efficient? Answer: ions only move at nodes, so less Na⁺ enters and less Na⁺/K⁺-ATPase activity is needed to restore the resting potential."
+      "ap_tip": "Saltatory conduction (from Latin 'saltare' = to jump) is the mechanism by which action potentials travel fast in myelinated axons. The college placement exam frequently asks: why is myelinated conduction faster and more energy-efficient? Answer: ions only move at nodes, so less Na⁺ enters and less Na⁺/K⁺-ATPase activity is needed to restore the resting potential."
     },
     {
       "id": 11,
@@ -133,7 +133,7 @@
       "color": "#F5F5DC",
       "hint": "thick pale cream or white segmented wrapping around the axon, present in regular intervals between the darker nodes of Ranvier",
       "description": "The myelin sheath is a multilayered wrapping of Schwann cell (PNS) or oligodendrocyte (CNS) plasma membrane spiraled around the axon up to 100 times. This electrical insulation forces ion current to jump between nodes of Ranvier (saltatory conduction), which increases conduction velocity up to 100× compared with unmyelinated fibers and dramatically reduces ATP expenditure per action potential. Myelin is ~70–80% lipid (mainly galactocerebroside and sphingomyelin).",
-      "ap_tip": "Myelin increases the speed and efficiency of action potential conduction. Demyelinating diseases (multiple sclerosis, Guillain-Barré syndrome) disrupt saltatory conduction, causing slowed or blocked nerve signals. This is an important application of membrane structure for the AP exam — myelin's high lipid content makes it an excellent electrical insulator."
+      "ap_tip": "Myelin increases the speed and efficiency of action potential conduction. Demyelinating diseases (multiple sclerosis, Guillain-Barré syndrome) disrupt saltatory conduction, causing slowed or blocked nerve signals. This is an important application of membrane structure for the college placement exam — myelin's high lipid content makes it an excellent electrical insulator."
     },
     {
       "id": 13,

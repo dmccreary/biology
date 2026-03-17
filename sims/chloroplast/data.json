@@ -12,7 +12,7 @@
       "color": "#8BC34A",
       "hint": "smooth outermost green boundary of the chloroplast, curved ellipse edge",
       "description": "The outer membrane is the smooth, freely permeable outer boundary of the chloroplast envelope. It contains porins — channel-forming proteins — that allow small molecules (sugars, ions, metabolites up to ~10 kDa) to pass freely. It does not regulate the selective exchange of larger molecules.",
-      "ap_tip": "The outer membrane is permeable; the inner membrane is selectively permeable. This distinction matters for AP questions about how products of the Calvin cycle (G3P, triose phosphates) exit the stroma and reach the cytoplasm."
+      "ap_tip": "The outer membrane is permeable; the inner membrane is selectively permeable. This distinction matters for college placement questions about how products of the Calvin cycle (G3P, triose phosphates) exit the stroma and reach the cytoplasm."
     },
     {
       "id": 2,
@@ -34,7 +34,7 @@
       "color": "#2E7D32",
       "hint": "dark green stack of flattened disc-shaped membranes (like a stack of coins) inside the stroma",
       "description": "A granum (plural: grana) is a stack of flattened, disc-shaped thylakoids interconnected by stroma lamellae (unstacked thylakoid regions). Chloroplasts typically contain 10–100 grana. Stacking increases the surface area available for the light-reaction protein complexes, maximizing the chloroplast's capacity for photon capture.",
-      "ap_tip": "Grana stacking is regulated. Under high-light conditions, phosphorylation of LHCII can cause some unstacking (state transitions). AP exams sometimes ask what compartment ATP and NADPH are produced in — the answer is the stroma (released from the stroma-side surface of the thylakoid membrane)."
+      "ap_tip": "Grana stacking is regulated. Under high-light conditions, phosphorylation of LHCII can cause some unstacking (state transitions). college placement exams sometimes ask what compartment ATP and NADPH are produced in — the answer is the stroma (released from the stroma-side surface of the thylakoid membrane)."
     },
     {
       "id": 4,
@@ -45,7 +45,7 @@
       "color": "#C8E6C9",
       "hint": "large pale green fluid-filled interior space between the inner membrane and the grana",
       "description": "The stroma is the aqueous fluid filling the interior of the chloroplast (between the inner membrane and the thylakoids). It contains the enzymes of the Calvin cycle (carbon fixation), chloroplast DNA, ribosomes, and the products of the light reactions — ATP and NADPH — that drive the Calvin cycle. G3P (glyceraldehyde-3-phosphate) is produced here.",
-      "ap_tip": "The Calvin cycle (light-independent reactions) occurs in the stroma. The three stages — carbon fixation (RuBisCO), reduction (ATP + NADPH consumed), and RuBP regeneration — all happen in this compartment. A key AP fact: the stroma is analogous to the mitochondrial matrix."
+      "ap_tip": "The Calvin cycle (light-independent reactions) occurs in the stroma. The three stages — carbon fixation (RuBisCO), reduction (ATP + NADPH consumed), and RuBP regeneration — all happen in this compartment. A key college placement fact: the stroma is analogous to the mitochondrial matrix."
     },
     {
       "id": 5,
@@ -100,7 +100,7 @@
       "color": "#BF360C",
       "hint": "small reddish iron-sulfur protein on the stromal face of PSI, just above the membrane",
       "description": "Ferredoxin (Fd) is a small, soluble iron-sulfur protein on the stromal face of Photosystem I. It accepts high-energy electrons from P700 and passes them to FNR (ferredoxin-NADP⁺ reductase), which uses two electrons from two Fd molecules to reduce NADP⁺ + H⁺ → NADPH. Ferredoxin also participates in cyclic electron flow, routing electrons back to the cytochrome b6f complex.",
-      "ap_tip": "Ferredoxin is a one-electron carrier — it transfers electrons one at a time. FNR pairs two single-electron transfers to make one NADPH. On the AP exam, Ferredoxin is part of the PSI reaction and is located on the stromal side of the thylakoid membrane."
+      "ap_tip": "Ferredoxin is a one-electron carrier — it transfers electrons one at a time. FNR pairs two single-electron transfers to make one NADPH. On the college placement exam, Ferredoxin is part of the PSI reaction and is located on the stromal side of the thylakoid membrane."
     },
     {
       "id": 10,
@@ -133,7 +133,7 @@
       "color": "#FF7043",
       "hint": "orange arrow showing protons (H+) flowing from the thylakoid lumen through the ATP synthase channel into the stroma",
       "description": "The proton gradient (proton-motive force) across the thylakoid membrane is established by three processes: (1) water splitting at PSII releases H⁺ into the lumen; (2) plastoquinol oxidation at the cytochrome b6f complex pumps additional H⁺ into the lumen via the Q-cycle; (3) NADPH production consumes H⁺ from the stroma. The resulting ΔpH (lumen pH ~5 vs. stroma pH ~8) drives H⁺ through ATP synthase to produce ATP.",
-      "ap_tip": "Chemiosmosis (Mitchell hypothesis) applies identically in both chloroplasts and mitochondria — a proton gradient drives ATP synthase rotation. On the AP exam, be ready to trace the path of H⁺ in each organelle and identify where ATP is produced (stroma in chloroplasts, matrix in mitochondria)."
+      "ap_tip": "Chemiosmosis (Mitchell hypothesis) applies identically in both chloroplasts and mitochondria — a proton gradient drives ATP synthase rotation. On the college placement exam, be ready to trace the path of H⁺ in each organelle and identify where ATP is produced (stroma in chloroplasts, matrix in mitochondria)."
     },
     {
       "id": 13,
@@ -144,7 +144,7 @@
       "color": "#00838F",
       "hint": "small teal copper-containing protein on the lumenal face, moving between the cytochrome b6f complex and PSI",
       "description": "Plastocyanin (PC) is a small, soluble, copper-containing electron carrier protein located in the thylakoid lumen. It accepts electrons from the cytochrome b6f complex and donates them to the oxidized reaction-center chlorophyll (P700⁺) of Photosystem I. Its copper atom alternates between Cu²⁺ (oxidized) and Cu⁺ (reduced) during electron transfer.",
-      "ap_tip": "Plastocyanin is a lumenal protein — it shuttles within the thylakoid lumen. Its copper cofactor is why copper deficiency impairs photosynthesis. On the AP exam, remember the sequence: PSII → PQ → Cyt b6f → PC → PSI."
+      "ap_tip": "Plastocyanin is a lumenal protein — it shuttles within the thylakoid lumen. Its copper cofactor is why copper deficiency impairs photosynthesis. On the college placement exam, remember the sequence: PSII → PQ → Cyt b6f → PC → PSI."
     },
     {
       "id": 14,
@@ -166,7 +166,7 @@
       "color": "#FFA000",
       "hint": "small orange mobile molecule shown moving within the thylakoid membrane between PSII and the cytochrome b6f complex",
       "description": "Plastoquinone (PQ) is a small, hydrophobic, mobile electron carrier embedded in the lipid bilayer of the thylakoid membrane. It accepts 2 electrons and 2 H⁺ from PSII to become plastoquinol (PQH₂), diffuses laterally through the membrane, and donates electrons to the cytochrome b6f complex — releasing the 2 H⁺ into the lumen and contributing to the proton gradient.",
-      "ap_tip": "PQ is analogous to ubiquinone (CoQ) in the mitochondrial ETC — both are mobile hydrophobic carriers that shuttle electrons between complexes within the membrane. On the AP exam, know that PQ carries H⁺ from the stroma into the lumen, helping build the proton-motive force."
+      "ap_tip": "PQ is analogous to ubiquinone (CoQ) in the mitochondrial ETC — both are mobile hydrophobic carriers that shuttle electrons between complexes within the membrane. On the college placement exam, know that PQ carries H⁺ from the stroma into the lumen, helping build the proton-motive force."
     },
     {
       "id": 16,
@@ -177,7 +177,7 @@
       "color": "#0288D1",
       "hint": "water molecule and oxygen bubble symbols on the lumenal (interior) side of PSII",
       "description": "Water oxidation (photolysis) occurs on the lumenal face of PSII via the oxygen-evolving complex (OEC), which contains a Mn₄CaO₅ cluster. The reaction — 2H₂O → O₂ + 4H⁺ + 4e⁻ — releases O₂ as a byproduct, donates 4 electrons to P680, and deposits 4 H⁺ into the lumen, contributing to the proton gradient that drives ATP synthesis.",
-      "ap_tip": "Oxygen produced during photosynthesis comes from water, NOT from CO₂. This was confirmed by isotope labeling experiments (¹⁸O in water → ¹⁸O₂ produced). This is a classic AP exam question about the origin of photosynthetic oxygen."
+      "ap_tip": "Oxygen produced during photosynthesis comes from water, NOT from CO₂. This was confirmed by isotope labeling experiments (¹⁸O in water → ¹⁸O₂ produced). This is a classic college placement exam question about the origin of photosynthetic oxygen."
     }
   ]
 }

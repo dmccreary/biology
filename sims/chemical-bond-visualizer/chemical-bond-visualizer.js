@@ -1,5 +1,5 @@
 // Chemical Bond Visualizer
-// AP Biology - Chapter 1: Scientific Foundations and Atomic Chemistry
+// college placement Biology - Chapter 1: Scientific Foundations and Atomic Chemistry
 // Bloom Level: Analyze (L4) — Verb: compare
 // Students compare ionic, nonpolar covalent, polar covalent, hydrogen, and
 // van der Waals bonds by examining electron distribution, strength, and

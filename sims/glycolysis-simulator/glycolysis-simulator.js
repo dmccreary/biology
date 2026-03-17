@@ -61,7 +61,7 @@ const steps = [
   {
     id: 'step4',
     number: 4,
-    title: 'Fructose-1,6-bisP → DHAP + G3P',
+    title: 'Fructose-1,6-bisP → DHcollege placement + G3P',
     enzyme: 'Aldolase',
     detail: 'Six-carbon sugar split into two three-carbon molecules',
     cofactor: 'ΔG°\' is positive but pulled forward in cells',
@@ -71,9 +71,9 @@ const steps = [
   {
     id: 'step5',
     number: 5,
-    title: 'DHAP ↔ G3P',
+    title: 'DHcollege placement ↔ G3P',
     enzyme: 'Triose phosphate isomerase',
-    detail: 'DHAP rapidly converted to second molecule of G3P',
+    detail: 'DHcollege placement rapidly converted to second molecule of G3P',
     cofactor: 'No energy change; ensures two G3P feed payoff phase',
     phase: 'investment',
     badges: []

@@ -13,7 +13,7 @@
       "color": "#4A90D9",
       "hint": "Thick X-shaped blue and red rods inside the cell in the Prophase panel (leftmost).",
       "description": "During prophase, chromatin fibers coil and condense into visible chromosomes. Each chromosome consists of two identical sister chromatids joined at the centromere. The condensation is driven by condensin proteins and makes the chromosomes compact enough to be moved without tangling during cell division.",
-      "ap_tip": "The AP exam distinguishes chromatin (diffuse, interphase) from chromosomes (condensed, mitosis). Remember: chromosomes become visible only after condensation in prophase. Each chromosome at this stage is TWO sister chromatids — a common source of counting errors."
+      "ap_tip": "The college placement exam distinguishes chromatin (diffuse, interphase) from chromosomes (condensed, mitosis). Remember: chromosomes become visible only after condensation in prophase. Each chromosome at this stage is TWO sister chromatids — a common source of counting errors."
     },
     {
       "id": 2,
@@ -25,7 +25,7 @@
       "color": "#FF9800",
       "hint": "Small orange circles at opposite sides of the cell in the Prophase panel, with green lines radiating outward.",
       "description": "Centrosomes are microtubule-organizing centers that migrate to opposite poles of the cell during prophase. Each centrosome contains a pair of centrioles (in animal cells) surrounded by pericentriolar material that nucleates microtubule growth. The aster is the radial array of short microtubules extending from each centrosome, anchoring the spindle to the cell cortex.",
-      "ap_tip": "Plant cells lack centrioles but still form a mitotic spindle from other microtubule-organizing centers. The AP exam may test this distinction — mitotic spindles are universal, but centrioles are animal-cell specific."
+      "ap_tip": "Plant cells lack centrioles but still form a mitotic spindle from other microtubule-organizing centers. The college placement exam may test this distinction — mitotic spindles are universal, but centrioles are animal-cell specific."
     },
     {
       "id": 3,
@@ -37,7 +37,7 @@
       "color": "#555555",
       "hint": "Dark gray dashed circle with gaps around the chromosomes in the Prophase panel.",
       "description": "The nuclear envelope fragments during late prophase (prometaphase). Phosphorylation of nuclear lamins by cyclin-dependent kinases (CDKs) causes the lamina meshwork to disassemble, and the double membrane breaks into small vesicles. This allows spindle microtubules from the cytoplasm to access and attach to the chromosomes at their kinetochores.",
-      "ap_tip": "Nuclear envelope breakdown is triggered by M-CDK (cyclin B-CDK1) phosphorylating lamins. The AP exam connects this to the cell cycle regulation topic — the same kinase that triggers mitosis also dismantles the nuclear envelope. Lamin phosphorylation is a classic example of how protein phosphorylation changes protein function."
+      "ap_tip": "Nuclear envelope breakdown is triggered by M-CDK (cyclin B-CDK1) phosphorylating lamins. The college placement exam connects this to the cell cycle regulation topic — the same kinase that triggers mitosis also dismantles the nuclear envelope. Lamin phosphorylation is a classic example of how protein phosphorylation changes protein function."
     },
     {
       "id": 4,
@@ -49,7 +49,7 @@
       "color": "#6A1B9A",
       "hint": "Small dark purple fading circle inside the nuclear envelope area in the Prophase panel.",
       "description": "The nucleolus disassembles during prophase as ribosomal RNA (rRNA) gene transcription shuts down. The nucleolus is not membrane-bound — it is a concentration of rRNA genes, rRNA transcripts, and ribosomal proteins that disperses when transcription ceases. It will reform in telophase when rRNA transcription resumes around the nucleolar organizer regions (NORs) on specific chromosomes.",
-      "ap_tip": "The nucleolus disappears in prophase and reappears in telophase. If the AP exam asks what happens to the nucleolus during mitosis, remember it disperses (not destroyed) because it lacks a membrane — it reassembles from the same chromosomal regions after division."
+      "ap_tip": "The nucleolus disappears in prophase and reappears in telophase. If the college placement exam asks what happens to the nucleolus during mitosis, remember it disperses (not destroyed) because it lacks a membrane — it reassembles from the same chromosomal regions after division."
     },
     {
       "id": 5,
@@ -61,7 +61,7 @@
       "color": "#E91E9F",
       "hint": "Chromosomes lined up in a vertical row at the center of the cell in the Metaphase panel (second from left).",
       "description": "During metaphase, all chromosomes align at the metaphase plate — an imaginary plane equidistant between the two spindle poles. This alignment is achieved by the balanced pulling forces of kinetochore microtubules attached to sister chromatid kinetochores from opposite poles (bi-orientation). The cell will not proceed to anaphase until every chromosome is properly bi-oriented, a checkpoint called the spindle assembly checkpoint.",
-      "ap_tip": "The metaphase plate is NOT a physical structure — it is the plane of alignment. The spindle assembly checkpoint (SAC) prevents anaphase until all chromosomes are attached to microtubules from both poles. Defective SAC leads to aneuploidy, which connects mitosis to cancer (a key AP Biology theme)."
+      "ap_tip": "The metaphase plate is NOT a physical structure — it is the plane of alignment. The spindle assembly checkpoint (SAC) prevents anaphase until all chromosomes are attached to microtubules from both poles. Defective SAC leads to aneuploidy, which connects mitosis to cancer (a key college placement Biology theme)."
     },
     {
       "id": 6,
@@ -73,7 +73,7 @@
       "color": "#4CAF50",
       "hint": "Green lines extending from orange centrosomes at the poles to the center of each chromosome in the Metaphase panel.",
       "description": "Kinetochore microtubules are spindle fibers that attach to the kinetochore protein complex at each chromosome's centromere. Each sister chromatid has its own kinetochore, and proper bi-orientation requires that sister kinetochores attach to microtubules from opposite poles. These microtubules generate the pulling force that will separate sister chromatids in anaphase by depolymerizing at their kinetochore-attached (plus) ends.",
-      "ap_tip": "Know the three types of spindle microtubules: kinetochore (attach to chromosomes), polar/interpolar (overlap at the center and push poles apart), and astral (anchor spindle to cell cortex). The AP exam most commonly asks about kinetochore microtubules and their role in chromosome movement."
+      "ap_tip": "Know the three types of spindle microtubules: kinetochore (attach to chromosomes), polar/interpolar (overlap at the center and push poles apart), and astral (anchor spindle to cell cortex). The college placement exam most commonly asks about kinetochore microtubules and their role in chromosome movement."
     },
     {
       "id": 7,
@@ -85,7 +85,7 @@
       "color": "#FF5722",
       "hint": "Conceptual checkpoint at metaphase — associated with the metaphase plate in the Metaphase panel.",
       "description": "The spindle assembly checkpoint (SAC) is a critical cell cycle control point that monitors kinetochore-microtubule attachment. Unattached kinetochores generate a 'wait' signal (the mitotic checkpoint complex, MCC) that inhibits the anaphase-promoting complex/cyclosome (APC/C). Only when all kinetochores are properly attached does the SAC signal cease, allowing APC/C to activate and trigger anaphase by degrading securin.",
-      "ap_tip": "The SAC connects to cancer biology on the AP exam. If the checkpoint fails, cells can divide with unequal chromosome numbers (aneuploidy). Many cancer cells have defective spindle checkpoints, contributing to chromosomal instability. This is a testable connection between cell cycle regulation and cancer."
+      "ap_tip": "The SAC connects to cancer biology on the college placement exam. If the checkpoint fails, cells can divide with unequal chromosome numbers (aneuploidy). Many cancer cells have defective spindle checkpoints, contributing to chromosomal instability. This is a testable connection between cell cycle regulation and cancer."
     },
     {
       "id": 8,
@@ -97,7 +97,7 @@
       "color": "#D94A4A",
       "hint": "V-shaped chromatids being pulled toward opposite poles in the Anaphase panel (center).",
       "description": "In anaphase, the enzyme separase cleaves cohesin proteins that hold sister chromatids together at their centromeres. Once freed, each chromatid — now an individual chromosome — is pulled toward the nearest pole by the shortening of kinetochore microtubules. The chromatids adopt a characteristic V-shape as the centromere leads and the chromosome arms trail behind.",
-      "ap_tip": "Anaphase is the stage where chromosome number effectively doubles (from N chromosomes of 2 chromatids each to 2N individual chromosomes). The AP exam may ask: when do sister chromatids become individual chromosomes? Answer: at the start of anaphase, when cohesin is cleaved by separase."
+      "ap_tip": "Anaphase is the stage where chromosome number effectively doubles (from N chromosomes of 2 chromatids each to 2N individual chromosomes). The college placement exam may ask: when do sister chromatids become individual chromosomes? Answer: at the start of anaphase, when cohesin is cleaved by separase."
     },
     {
       "id": 9,
@@ -109,7 +109,7 @@
       "color": "#BDBDBD",
       "hint": "The cell is visibly stretched horizontally in the Anaphase panel, wider than cells in other stages.",
       "description": "During anaphase, the cell elongates as polar (interpolar) microtubules from opposite poles slide past each other, pushing the poles further apart. Motor proteins (kinesin-5) walk along overlapping polar microtubules, generating an outward force. This elongation, combined with kinetochore microtubule shortening, ensures complete separation of the two chromosome sets before cytokinesis divides the cell.",
-      "ap_tip": "Two distinct movements occur in anaphase: Anaphase A (chromatids move to poles via kinetochore microtubule shortening) and Anaphase B (poles move apart via polar microtubule sliding). The AP exam usually focuses on the overall outcome — equal distribution of chromosomes to daughter cells."
+      "ap_tip": "Two distinct movements occur in anaphase: Anaphase A (chromatids move to poles via kinetochore microtubule shortening) and Anaphase B (poles move apart via polar microtubule sliding). The college placement exam usually focuses on the overall outcome — equal distribution of chromosomes to daughter cells."
     },
     {
       "id": 10,
@@ -121,7 +121,7 @@
       "color": "#555555",
       "hint": "Two dark gray dashed circles reforming around chromosome clusters at each pole in the Telophase panel (second from right).",
       "description": "In telophase, the nuclear envelope reassembles around each set of chromosomes. Nuclear membrane vesicles from the fragmented prophase envelope fuse around the decondensing chromatin. Nuclear pore complexes reassemble, restoring nuclear-cytoplasmic transport. Dephosphorylation of lamins by phosphatases allows the nuclear lamina to reform on the inner surface of the new nuclear envelope.",
-      "ap_tip": "Telophase is essentially prophase in reverse: nuclear envelope reforms, chromosomes decondense, nucleolus reappears. The AP exam may describe telophase events and ask you to identify the stage — look for the combination of decondensing chromosomes AND reforming nuclear envelopes."
+      "ap_tip": "Telophase is essentially prophase in reverse: nuclear envelope reforms, chromosomes decondense, nucleolus reappears. The college placement exam may describe telophase events and ask you to identify the stage — look for the combination of decondensing chromosomes AND reforming nuclear envelopes."
     },
     {
       "id": 11,
@@ -145,7 +145,7 @@
       "color": "#F48FB1",
       "hint": "Visible pinching/indentation at the center of the cell in the Telophase panel, with small pink dots representing the contractile ring.",
       "description": "The cleavage furrow is the indentation of the cell surface that marks the beginning of cytokinesis in animal cells. It forms at the position of the former metaphase plate, specified by signals from the central spindle (the overlapping polar microtubules between the separating chromosome sets). An actin-myosin contractile ring assembles just beneath the plasma membrane at the furrow site.",
-      "ap_tip": "Animal cells use a cleavage furrow (contractile ring pinches inward), while plant cells form a cell plate (vesicles fuse outward). This is a classic AP comparison — know that the difference is due to the rigid cell wall in plants preventing pinching."
+      "ap_tip": "Animal cells use a cleavage furrow (contractile ring pinches inward), while plant cells form a cell plate (vesicles fuse outward). This is a classic college placement comparison — know that the difference is due to the rigid cell wall in plants preventing pinching."
     },
     {
       "id": 13,
@@ -157,7 +157,7 @@
       "color": "#F48FB1",
       "hint": "Ring of small pink dots at the cleavage furrow site in the Telophase panel.",
       "description": "The contractile ring is a dynamic belt of actin filaments and myosin II motor proteins that assembles at the cell equator during late anaphase and telophase. Myosin II slides along actin filaments, generating force that constricts the ring like a drawstring purse, pulling the membrane inward. As the ring tightens, it eventually pinches the cell in two, completing cytokinesis.",
-      "ap_tip": "The contractile ring uses the same actin-myosin mechanism as muscle contraction — a useful AP connection between cell division and the cytoskeleton. Remember: actin (microfilaments) drives cytokinesis; tubulin (microtubules) drives chromosome movement. Different cytoskeletal elements for different mitotic tasks."
+      "ap_tip": "The contractile ring uses the same actin-myosin mechanism as muscle contraction — a useful college placement connection between cell division and the cytoskeleton. Remember: actin (microfilaments) drives cytokinesis; tubulin (microtubules) drives chromosome movement. Different cytoskeletal elements for different mitotic tasks."
     },
     {
       "id": 14,
@@ -169,7 +169,7 @@
       "color": "#FFF8E1",
       "hint": "Two completely separated round cells side by side in the Cytokinesis panel (rightmost).",
       "description": "The two genetically identical daughter cells produced by mitosis and cytokinesis. Each daughter cell contains the same number of chromosomes as the original parent cell (2n in diploid organisms). The cells are roughly half the size of the parent cell and will grow during the G1 phase of the next cell cycle before potentially dividing again. Each daughter cell has a complete nucleus with decondensed chromatin.",
-      "ap_tip": "Mitosis produces two genetically IDENTICAL daughter cells (barring rare mutations). This contrasts with meiosis, which produces four genetically UNIQUE haploid cells. The AP exam frequently compares mitosis and meiosis outcomes — identical vs. unique, diploid vs. haploid, 2 cells vs. 4 cells."
+      "ap_tip": "Mitosis produces two genetically IDENTICAL daughter cells (barring rare mutations). This contrasts with meiosis, which produces four genetically UNIQUE haploid cells. The college placement exam frequently compares mitosis and meiosis outcomes — identical vs. unique, diploid vs. haploid, 2 cells vs. 4 cells."
     },
     {
       "id": 15,

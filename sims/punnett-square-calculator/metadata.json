@@ -1,7 +1,7 @@
 {
   "title": "Interactive Punnett Square Calculator",
   "creator": "Dan McCreary",
-  "subject": "AP Biology",
+  "subject": "college placement Biology",
   "description": "Interactive MicroSim that animates mono- and dihybrid Punnett squares, tracks genotype/phenotype counts, and lets students compare observed ratios to Mendelian expectations.",
   "date": "2026-02-27",
   "educational": {
@@ -24,7 +24,7 @@
       "Has solved a basic Punnett square manually"
     ],
     "standards": [
-      "AP Biology Unit 5: Heredity",
+      "college placement Biology Unit 5: Heredity",
       "NGSS HS-LS3-3"
     ]
   },

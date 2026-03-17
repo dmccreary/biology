@@ -1,5 +1,5 @@
 (function (global) {
-  const MAP = {
+  const Mcollege placement = {
     A: 'ᴬ',
     B: 'ᴮ',
     C: '꜀',

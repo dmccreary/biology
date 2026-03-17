@@ -119,7 +119,7 @@ function showEventDetails(itemId) {
     desc.innerHTML = evt.text.text;
 
     if (evt.notes) {
-        ctx.innerHTML = '<strong>AP Biology Context:</strong> ' + evt.notes;
+        ctx.innerHTML = '<strong>college placement Biology Context:</strong> ' + evt.notes;
         ctx.style.display = 'block';
     } else {
         ctx.style.display = 'none';

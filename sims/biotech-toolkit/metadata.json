@@ -1,7 +1,7 @@
 {
   "title": "Biotechnology Toolkit Workflow",
   "creator": "Dan McCreary",
-  "subject": "AP Biology",
+  "subject": "college placement Biology",
   "description": "Interactive Mermaid workflow diagram comparing gene cloning and CRISPR gene editing pipelines with shared tools highlighted",
   "date": "2026-03-06",
   "type": "Interactive Workflow Diagram",
@@ -9,7 +9,7 @@
   "language": "en-US",
   "coverage": "Introductory to Intermediate",
   "rights": "CC BY-NC-SA 4.0",
-  "audience": "High School AP Biology",
+  "audience": "High School college placement Biology",
   "educational": {
     "gradeLevel": ["9", "10", "11", "12"],
     "subjectArea": "Biology",

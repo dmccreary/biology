@@ -33,19 +33,19 @@ const speciesData = [
     name: 'Human',
     function: 'Manipulation & tool use',
     summary: 'The human arm retains the generalized mammalian forelimb plan with a long humerus, separate radius and ulna allowing forearm rotation, 8 flexible carpal bones, and 14 long phalanges enabling precise grip. This is the "baseline" pattern — all five bone groups are clearly visible and proportional.',
-    apTip: 'The human arm is often used as the reference limb on the AP exam. Know that the same five bone groups appear in all vertebrate forelimbs — this is the definition of homologous structures.'
+    apTip: 'The human arm is often used as the reference limb on the college placement exam. Know that the same five bone groups appear in all vertebrate forelimbs — this is the definition of homologous structures.'
   },
   {
     name: 'Whale',
     function: 'Swimming (flipper)',
     summary: 'The whale flipper contains the same five bone groups, but dramatically modified: the humerus is extremely short and thick, the radius and ulna are flattened plates, and the phalanges are greatly elongated with extra bones (hyperphalangy) to form a broad paddle. The entire structure is encased in a smooth, rigid flipper — you cannot see the fingers from the outside.',
-    apTip: 'Whale flippers are the classic AP exam example of homologous structures. Despite looking nothing like a human arm externally, the internal bone pattern proves common ancestry with land mammals.'
+    apTip: 'Whale flippers are the classic college placement exam example of homologous structures. Despite looking nothing like a human arm externally, the internal bone pattern proves common ancestry with land mammals.'
   },
   {
     name: 'Bat',
     function: 'Powered flight (membrane wing)',
     summary: 'The bat wing has a short, strong humerus, an elongated radius (the dominant forearm bone), a vestigial ulna, and spectacularly elongated finger bones (phalanges) that spread apart like tent poles supporting a thin membrane (patagium). This is the opposite strategy from the bird — flexible, membranous wings supported by spread fingers.',
-    apTip: 'Bat wings vs. bird wings is a common AP exam question testing analogous vs. homologous. Bat and bird wings are ANALOGOUS (same function, different structure). But bat wing and human arm are HOMOLOGOUS (same bones, different function).'
+    apTip: 'Bat wings vs. bird wings is a common college placement exam question testing analogous vs. homologous. Bat and bird wings are ANALOGOUS (same function, different structure). But bat wing and human arm are HOMOLOGOUS (same bones, different function).'
   },
   {
     name: 'Dog',
@@ -251,11 +251,11 @@ function drawExploreInfo(infoTop) {
     textSize(Math.min(12, canvasWidth * 0.017));
     text(sp.summary, pad, infoTop + 28, textW, 50);
 
-    // AP tip
+    // college placement tip
     fill('#B7950B');
     textSize(Math.min(11, canvasWidth * 0.015));
     textStyle(ITALIC);
-    text('AP Tip: ' + sp.apTip, pad, infoTop + 80, textW, 36);
+    text('college placement Tip: ' + sp.apTip, pad, infoTop + 80, textW, 36);
     textStyle(NORMAL);
   } else {
     fill('#999');

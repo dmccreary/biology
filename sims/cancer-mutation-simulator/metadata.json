@@ -1,7 +1,7 @@
 {
   "title": "Cancer Mutation Simulator",
   "creator": "Dan McCreary",
-  "subject": "AP Biology",
+  "subject": "college placement Biology",
   "description": "Interactive MicroSim demonstrating the multi-hit model of colorectal cancer showing how 6 sequential mutations in proto-oncogenes and tumor suppressor genes progressively disrupt cell cycle control",
   "date": "2026-03-07",
   "educational": {

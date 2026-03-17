@@ -1,7 +1,7 @@
 {
   "title": "Meiosis Stages Explorer",
   "creator": "Dan McCreary",
-  "subject": "AP Biology",
+  "subject": "college placement Biology",
   "description": "Interactive diagram overlay showing all stages of meiosis I and meiosis II with 16 callout markers, featuring Explore and Quiz modes.",
   "date": "2026-02-28",
   "educational": {
@@ -28,7 +28,7 @@
       "Diploid vs haploid concepts"
     ],
     "standards": [
-      "AP Biology Unit 11: Meiosis and Mendelian Genetics"
+      "college placement Biology Unit 11: Meiosis and Mendelian Genetics"
     ]
   },
   "technical": {
