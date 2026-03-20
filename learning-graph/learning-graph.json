@@ -10,27 +10,6 @@
     "license": "CC BY-NC-SA 4.0 DEED"
   },
   "groups": {
-    "POPECO": {
-      "classifierName": "Population and Community Ecology",
-      "color": "MistyRose",
-      "font": {
-        "color": "black"
-      }
-    },
-    "BIOTECH": {
-      "classifierName": "Gene Regulation and Biotechnology",
-      "color": "PeachPuff",
-      "font": {
-        "color": "black"
-      }
-    },
-    "COMM": {
-      "classifierName": "Cell Communication and Division",
-      "color": "LightYellow",
-      "font": {
-        "color": "black"
-      }
-    },
     "FOUND": {
       "classifierName": "Scientific Foundations",
       "color": "Honeydew",
@@ -59,9 +38,37 @@
         "color": "black"
       }
     },
+    "ENRG": {
+      "classifierName": "Cellular Energetics",
+      "color": "MintCream",
+      "font": {
+        "color": "black"
+      }
+    },
+    "COMM": {
+      "classifierName": "Cell Communication and Division",
+      "color": "LightYellow",
+      "font": {
+        "color": "black"
+      }
+    },
+    "GENET": {
+      "classifierName": "Heredity and Genetics",
+      "color": "LightCoral",
+      "font": {
+        "color": "black"
+      }
+    },
     "MOLBIO": {
       "classifierName": "Molecular Biology",
       "color": "LavenderBlush",
+      "font": {
+        "color": "black"
+      }
+    },
+    "BIOTECH": {
+      "classifierName": "Gene Regulation and Biotechnology",
+      "color": "PeachPuff",
       "font": {
         "color": "black"
       }
@@ -73,16 +80,9 @@
         "color": "black"
       }
     },
-    "ENRG": {
-      "classifierName": "Cellular Energetics",
-      "color": "MintCream",
-      "font": {
-        "color": "black"
-      }
-    },
-    "GENET": {
-      "classifierName": "Heredity and Genetics",
-      "color": "LightCoral",
+    "POPECO": {
+      "classifierName": "Population and Community Ecology",
+      "color": "MistyRose",
       "font": {
         "color": "black"
       }
