@@ -40,6 +40,7 @@ nav:
 
   - MicroSims:
     - List of MicroSims: sims/index.md
+    - Learning Graph Viewer: sims/graph-viewer/index.md
     - Activation Energy and Reaction Coordinate: sims/activation-energy-diagram/index.md
     - Alcoholic Fermentation Explorer: sims/alcoholic-fermentation-explorer/index.md
     - Animal Cell MicroSim: sims/animal-cell/index.md

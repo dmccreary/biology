@@ -1,5 +1,8 @@
 # Learning Graph for college placement Biology
 
+[View the Learning Graph Fullscreen (recommended)](../sims/graph-viewer/main.html)
+<iframe src="../sims/graph-viewer/main.html" width="100%" height="800px" scrolling="no"></iframe>
+
 This section contains the learning graph for the college placement Biology intelligent textbook. A learning graph is
 a graph of concepts used in this textbook. Each concept is represented by a
 node in a network graph. Concepts are connected by directed edges that indicate
