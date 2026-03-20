@@ -1,4 +1,10 @@
-# Learning Graph for college placement Biology
+---
+title: Learning Graph for Biology
+description: A directed learning graph for 380 concepts in a college placement Biology course including 780 learning dependency relationships.
+image: learning-graph/learning-graph-preview.png
+og:image: learning-graph/learning-graph-preview.png
+---
+# Learning Graph for Biology
 
 [View the Learning Graph Fullscreen (recommended)](../sims/graph-viewer/main.html)
 <iframe src="../sims/graph-viewer/main.html" width="100%" height="800px" scrolling="no"></iframe>
