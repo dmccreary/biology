@@ -1,4 +1,14 @@
-# Learning Graph Viewer
+---
+title: Learning Graph for Biology
+description: A directed learning graph for 380 concepts in a college placement Biology course including 780 learning dependency relationships.
+image: sims/graph-viewer/graph-viewer.png
+og:image: sims/graph-viewer/graph-viewer.png
+---
+# Learning Graph Viewer for Biology
+
+[Open Learning Graph Viewer Fullscreen (recommended)](./main.html){ .md-button .md-button--primary }
+
+<iframe src="./main.html" width="100%" height="600px" scrolling="no"></iframe>
 
 This interactive viewer allows you to explore the learning graph for the college placement Biology course.
 
@@ -27,9 +37,3 @@ This interactive viewer allows you to explore the learning graph for the college
 - **Foundational Concepts** (left side): Prerequisites with no dependencies
 - **Advanced Concepts** (right side): Topics that build on multiple prerequisites
 - **Edges**: Arrows point from a concept to its prerequisites
-
-## Launch the Viewer
-
-[Open Learning Graph Viewer](./main.html){ .md-button .md-button--primary }
-
-<iframe src="./main.html" width="100%" height="600px" frameborder="0" scrolling="no"></iframe>
