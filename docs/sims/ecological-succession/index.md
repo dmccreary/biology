@@ -11,7 +11,7 @@ quality_score: 0
 
 # Ecological Succession Timeline
 
-<iframe src="main.html" height="830px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="890px" width="100%" scrolling="no"></iframe>
 
 [Run the Ecological Succession Timeline MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -34,7 +34,7 @@ You can add this MicroSim to any web page by adding this to your HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/biology/sims/ecological-succession/main.html"
-        height="830px"
+        height="890px"
         width="100%"
         scrolling="no"></iframe>
 ```

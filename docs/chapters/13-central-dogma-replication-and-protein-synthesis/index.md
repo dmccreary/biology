@@ -438,7 +438,7 @@ Key properties:
 
 #### Diagram: Genetic Code Table Explorer
 
-<iframe src="../../sims/genetic-code-table/main.html" height="560" width="100%" scrolling="no"></iframe>
+<iframe src="../../sims/genetic-code-table/main.html" height="520" width="100%" scrolling="no"></iframe>
 
 *[View Fullscreen](../../sims/genetic-code-table/main.html)*
 

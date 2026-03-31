@@ -11,7 +11,7 @@ quality_score: 0
 
 # Genetic Code Table Explorer
 
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="520px" width="100%" scrolling="no"></iframe>
 
 [View Genetic Code Table Explorer Fullscreen](./main.html){ .md-button .md-button--primary }
 

@@ -38,7 +38,7 @@ We can summarize the stages with the following terms:
 
 #### Diagram: Cell Cycle Phases Explorer
 
-<iframe src="../../sims/cell-cycle-phases/main.html" height="500" width="100%" scrolling="no"></iframe>
+<iframe src="../../sims/cell-cycle-phases/main.html" height="510" width="100%" scrolling="no"></iframe>
 
 *[View Fullscreen](../../sims/cell-cycle-phases/main.html)*
 

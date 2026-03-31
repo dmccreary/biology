@@ -342,7 +342,7 @@ A single miRNA can regulate hundreds of different mRNA targets, and a single mRN
 
 #### Diagram: Eukaryotic Gene Regulation Layers
 
-<iframe src="../../sims/eukaryotic-gene-regulation/main.html" height="560" width="100%" scrolling="no"></iframe>
+<iframe src="../../sims/eukaryotic-gene-regulation/main.html" height="550" width="100%" scrolling="no"></iframe>
 
 *[View Fullscreen](../../sims/eukaryotic-gene-regulation/main.html)*
 

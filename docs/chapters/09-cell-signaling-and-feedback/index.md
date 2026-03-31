@@ -235,7 +235,7 @@ Examples:
 
 #### Diagram: Feedback Loop Simulator
 
-<iframe src="../../sims/feedback-loop-simulator/main.html" height="500" width="100%" scrolling="no"></iframe>
+<iframe src="../../sims/feedback-loop-simulator/main.html" height="940" width="100%" scrolling="no"></iframe>
 
 *[View Fullscreen](../../sims/feedback-loop-simulator/main.html)*
 

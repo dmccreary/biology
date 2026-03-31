@@ -292,7 +292,7 @@ A **climax community** is the relatively stable, mature community that persists 
 
 #### Diagram: Ecological Succession Timeline
 
-<iframe src="../../sims/ecological-succession/main.html" height="520" width="100%" scrolling="no"></iframe>
+<iframe src="../../sims/ecological-succession/main.html" height="890" width="100%" scrolling="no"></iframe>
 
 *[View Fullscreen](../../sims/ecological-succession/main.html)*
 
