@@ -5,10 +5,11 @@
 let containerWidth = 760;
 let canvasWidth = 760;
 const minDrawHeight = 500;
-let drawHeight = 500;
+let drawHeight = (window.self !== window.top) ? 500 : 500;
 const controlHeight = 200;
 let canvasHeight = drawHeight + controlHeight;
 const margin = 20;
+const inIframe = (window.self !== window.top);
 const historyWindow = 36; // seconds kept in the plot
 
 let p5Canvas = null;
@@ -648,7 +649,8 @@ function computeLayout() {
 
   const availableWidth = max(0, canvasWidth - margin * 2);
   const squareSize = max(0, (availableWidth - margin) / 2);
-  const squareHeight = squareSize + 70;
+  const maxPanelHeight = inIframe ? (drawHeight - topY - margin) : squareSize + 70;
+  const squareHeight = min(squareSize + 70, maxPanelHeight);
   enforceDrawHeight(topY + squareHeight + margin);
   const usedWidth = squareSize * 2 + margin;
   const horizontalPadding = max(0, (availableWidth - usedWidth) / 2);
@@ -680,6 +682,7 @@ function syncDrawHeightForCurrentWidth() {
 }
 
 function enforceDrawHeight(requiredDrawHeight) {
+  if (inIframe) return;  // fixed height inside iframe, responsive in fullscreen
   const target = max(minDrawHeight, requiredDrawHeight);
   if (abs(target - drawHeight) > 0.5) {
     drawHeight = target;
