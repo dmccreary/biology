@@ -522,7 +522,7 @@ The following interactive diagrams show the complete annotated organization of t
 
 #### Diagram: Eukaryotic Animal Cell
 
-<iframe src="../../sims/animal-cell/main.html" width="100%" height="730" scrolling="no"></iframe>
+<iframe src="../../sims/animal-cell/main.html" width="100%" height="660" scrolling="no"></iframe>
 
 [View Fullscreen](../../sims/animal-cell/main.html)
 

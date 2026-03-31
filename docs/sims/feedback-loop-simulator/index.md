@@ -11,7 +11,7 @@ quality_score: 90
 
 # Feedback Loop Simulator
 
-<iframe src="main.html" height="710px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="740px" width="100%" scrolling="no"></iframe>
 
 [Run the Feedback Loop Simulator MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>

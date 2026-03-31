@@ -10,6 +10,7 @@
 
 -   **[Alcoholic Fermentation Explorer](./alcoholic-fermentation-explorer/index.md)**
 
+    ![Activation Energy and Reaction Coordinate](./alcoholic-fermentation-explorer/alcoholic-fermentation-explorer.png)
     Interactive MicroSim focusing on alcoholic fermentation in yeast and plants.
 
 -   **[Animal Cell MicroSim](./animal-cell/index.md)**

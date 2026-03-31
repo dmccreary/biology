@@ -1,4 +1,4 @@
-site_name: college placement Biology - An Interactive Course
+site_name: Biology
 repo_url: https://github.com/dmccreary/biology
 site_url: https://dmccreary.github.io/biology/
 site_description: An interactive intelligent textbook for college placement Biology designed for college credit.
@@ -172,6 +172,7 @@ nav:
     - prompts/20-microsim-generation.md
     - prompts/mascot-tuning.md
 
+  - Teachers Guide: teachers-guide/index.md
   - FAQ: faq.md
   - Glossary: glossary.md
   - License: license.md

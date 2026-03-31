@@ -1,11 +1,11 @@
 // Feedback Loop Simulator MicroSim (p5.js)
-// CANVAS_HEIGHT = 700
+// CANVAS_HEIGHT = 740
 // Simulates negative and positive biological feedback loops with a causal diagram and time-series graph.
 
 let containerWidth = 760;
 let canvasWidth = 760;
-const minDrawHeight = 500;
-let drawHeight = (window.self !== window.top) ? 500 : 500;
+const minDrawHeight = 540;
+let drawHeight = minDrawHeight;
 const controlHeight = 200;
 let canvasHeight = drawHeight + controlHeight;
 const margin = 20;
