@@ -1,0 +1,725 @@
+{
+  "project": {
+    "title": "Biology",
+    "subtitle": "Auto-scanned intelligent textbook",
+    "author": "Dan McCreary",
+    "costPerMTokens": 15,
+    "sessionBudget": {
+      "pro": 900000,
+      "max": 3500000
+    }
+  },
+  "sections": {
+    "scaffold": {
+      "status": "published",
+      "tokensTarget": 2000,
+      "tokensDone": 2000
+    },
+    "course-description": {
+      "status": "published",
+      "tokensTarget": 4000,
+      "tokensDone": 3152
+    },
+    "learning-graph": {
+      "status": "published",
+      "tokensTarget": 20000,
+      "tokensDone": 20000
+    },
+    "chapter-structure": {
+      "status": "published",
+      "tokensTarget": 15000,
+      "tokensDone": 15000
+    },
+    "chapter-content": {
+      "countLabel": "20 chapters",
+      "children": [
+        {
+          "n": 1,
+          "title": "Scientific Foundations and Atomic Chemistry",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 2,
+          "title": "Water, pH, and Organic Chemistry",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 3,
+          "title": "Biological Macromolecules",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 4,
+          "title": "Cell Organization and Organelles",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 5,
+          "title": "Cell Membranes and Transport",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 6,
+          "title": "Thermodynamics and Enzyme Kinetics",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 7,
+          "title": "Photosynthesis",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 8,
+          "title": "Cellular Respiration and Fermentation",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 9,
+          "title": "Cell Signaling and Feedback",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 10,
+          "title": "The Cell Cycle, Mitosis, and Cancer",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 11,
+          "title": "Meiosis and Mendelian Genetics",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 12,
+          "title": "Non-Mendelian Inheritance and Chromosomal Genetics",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 13,
+          "title": "The Central Dogma: DNA Replication and Protein Synthesis",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 14,
+          "title": "Mutations, Gene Regulation, and Biotechnology",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 15,
+          "title": "Evidence for Evolution and Mechanisms of Change",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 16,
+          "title": "Population Genetics and Hardy-Weinberg Equilibrium",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 17,
+          "title": "Speciation, Phylogenetics, and Macroevolution",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 18,
+          "title": "Population Ecology and Life History",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 19,
+          "title": "Community Ecology and Species Interactions",
+          "status": "reviewed",
+          "tokens": 10000
+        },
+        {
+          "n": 20,
+          "title": "Ecosystem Ecology, Biogeochemical Cycles, and Conservation",
+          "status": "reviewed",
+          "tokens": 10000
+        }
+      ]
+    },
+    "chapter-images": {
+      "status": "published",
+      "tokensTarget": 8000,
+      "tokensDone": 8000
+    },
+    "microsims": {
+      "countLabel": "86 simulations",
+      "children": [
+        {
+          "n": 1,
+          "title": "Activation Energy and Reaction Coordinate",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 2,
+          "title": "Alcoholic Fermentation Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 3,
+          "title": "Animal Cell",
+          "status": "drafted",
+          "tokens": 5000
+        },
+        {
+          "n": 4,
+          "title": "Atomic Structure Explorer MicroSim",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 5,
+          "title": "ATP Yield Calculator",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 6,
+          "title": "Biogeochemical Cycles Dashboard",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 7,
+          "title": "Biotechnology Toolkit Workflow",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 8,
+          "title": "Blood Type Explorer",
+          "status": "drafted",
+          "tokens": 5000
+        },
+        {
+          "n": 9,
+          "title": "Blood Type Inheritance Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 10,
+          "title": "Brewing Beer Process Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 11,
+          "title": "Buffer Action Simulator",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 12,
+          "title": "Calvin Cycle Simulator",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 13,
+          "title": "cAMP Signaling Cascade",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 14,
+          "title": "Cancer Mutation Simulator",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 15,
+          "title": "Carbohydrate Structures Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 16,
+          "title": "Cell Cycle Checkpoint Control",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 17,
+          "title": "Cell Cycle Phases Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 18,
+          "title": "Cell Junctions Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 19,
+          "title": "Cell Membrane",
+          "status": "drafted",
+          "tokens": 5000
+        },
+        {
+          "n": 20,
+          "title": "Chemical Bond Visualizer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 21,
+          "title": "Chemical Equation Rendering Pipeline",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 22,
+          "title": "Standard Deviation",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 23,
+          "title": "Chloroplast",
+          "status": "drafted",
+          "tokens": 5000
+        },
+        {
+          "n": 24,
+          "title": "Interactive Cladogram Builder",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 25,
+          "title": "Comparative Anatomy Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 26,
+          "title": "Condensation and Hydrolysis Reaction Simulator",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 27,
+          "title": "Crossing Over Visualization",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 28,
+          "title": "Cytoskeleton Component Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 29,
+          "title": "Dihybrid Cross Outcome Visualizer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 30,
+          "title": "Dna Double Helix",
+          "status": "drafted",
+          "tokens": 5000
+        },
+        {
+          "n": 31,
+          "title": "Ecological Succession Timeline",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 32,
+          "title": "Endomembrane System \u2014 Protein Secretion Pathway",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 33,
+          "title": "Endosymbiosis Model",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 34,
+          "title": "Energy Pyramid Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 35,
+          "title": "Temperature and pH Effects on Enzyme Activity",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 36,
+          "title": "Enzyme Kinetics Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 37,
+          "title": "Enzyme Regulation Simulator",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 38,
+          "title": "Eukaryotic Gene Regulation Layers",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 39,
+          "title": "Timeline of Evolutionary Thought",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 40,
+          "title": "Feedback Loop Simulator",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 41,
+          "title": "Fermentation Comparison Matrix",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 42,
+          "title": "Fermentation Pathways Comparison",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 43,
+          "title": "Functional Groups Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 44,
+          "title": "Gene Expression Pipeline",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 45,
+          "title": "Genetic Code Table Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 46,
+          "title": "Genetic Drift Simulator",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 47,
+          "title": "Glycolysis Pathway Simulator",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 48,
+          "title": "Graph Viewer",
+          "status": "drafted",
+          "tokens": 5000
+        },
+        {
+          "n": 49,
+          "title": "Hardy-Weinberg Equilibrium Calculator",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 50,
+          "title": "Krebs Cycle Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 51,
+          "title": "Lactic Acid Fermentation Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 52,
+          "title": "Light-Dependent Reactions (Z-Scheme)",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 53,
+          "title": "Genetic Linkage and Recombination Mapper",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 54,
+          "title": "Load Image Test",
+          "status": "drafted",
+          "tokens": 5000
+        },
+        {
+          "n": 55,
+          "title": "Meiosis Stages Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 56,
+          "title": "Mendel-to-Meiosis Concept Map",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 57,
+          "title": "Mitochondria",
+          "status": "drafted",
+          "tokens": 5000
+        },
+        {
+          "n": 58,
+          "title": "Mitosis Stage Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 59,
+          "title": "Mutation Effects Comparator",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 60,
+          "title": "Neuron Structure",
+          "status": "drafted",
+          "tokens": 5000
+        },
+        {
+          "n": 61,
+          "title": "Nondisjunction in Meiosis Visualizer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 62,
+          "title": "Operon Regulation Simulator",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 63,
+          "title": "Osmosis and Water Potential Simulator",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 64,
+          "title": "Interactive Pedigree Analyzer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 65,
+          "title": "Interactive pH Scale Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 66,
+          "title": "C3, C4, and CAM Photosynthesis Comparison",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 67,
+          "title": "Plant Cell",
+          "status": "drafted",
+          "tokens": 5000
+        },
+        {
+          "n": 68,
+          "title": "Polygenic Trait Distribution Visualizer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 69,
+          "title": "Population Growth Model Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 70,
+          "title": "Prokaryote vs. Eukaryote Cell Comparison",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 71,
+          "title": "Protein Structure Levels Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 72,
+          "title": "Interactive Punnett Square Calculator",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 73,
+          "title": "DNA Replication Fork Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 74,
+          "title": "Scientific Method Workflow",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 75,
+          "title": "Selection Modes Visualizer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 76,
+          "title": "Signal Transduction Pathway Overview",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 77,
+          "title": "Sodium-Potassium Pump Cycle",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 78,
+          "title": "Speciation Pathways Comparison",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 79,
+          "title": "Species Interactions Web",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 80,
+          "title": "Standard Deviation Visualization",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 81,
+          "title": "Surface Area to Volume Ratio Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 82,
+          "title": "Survivorship Curves Comparator",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 83,
+          "title": "Test Cross Simulator",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 84,
+          "title": "Translation Step-Through Simulator",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 85,
+          "title": "Water Molecule Polarity",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 86,
+          "title": "X-Linked Inheritance Simulator",
+          "status": "published",
+          "tokens": 5000
+        }
+      ]
+    },
+    "glossary": {
+      "status": "published",
+      "tokensTarget": 36608,
+      "tokensDone": 36608
+    },
+    "faq": {
+      "status": "published",
+      "tokensTarget": 12000,
+      "tokensDone": 3971
+    },
+    "quiz": {
+      "status": "drafted",
+      "tokensTarget": 30000,
+      "tokensDone": 2616
+    },
+    "reference": {
+      "status": "not-started",
+      "tokensTarget": 20000,
+      "tokensDone": 0
+    },
+    "teachers-guide": {
+      "status": "published",
+      "tokensTarget": 15000,
+      "tokensDone": 5917
+    },
+    "book-metrics": {
+      "status": "published",
+      "tokensTarget": 2000,
+      "tokensDone": 2000
+    },
+    "publish": {
+      "status": "not-started",
+      "tokensTarget": 10000,
+      "tokensDone": 0
+    },
+    "stories": {
+      "status": "drafted",
+      "tokensTarget": 30000,
+      "tokensDone": 1184
+    }
+  }
+}
