@@ -353,3 +353,5 @@ These terms describe a continuum of life history strategies:
     **Question 3:** Sea turtles lay hundreds of eggs per nesting season, but fewer than 1% of hatchlings survive to adulthood. Classify their survivorship curve type and life history strategy.
 
     **Answer:** **Type III** survivorship curve (high early mortality, few survivors to old age). **r-selected** strategy — many small offspring with minimal parental care. This strategy is adaptive in unpredictable marine environments where most hatchlings are lost to predation.
+
+[See Annotated References](./references.md)

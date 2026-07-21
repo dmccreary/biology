@@ -561,3 +561,5 @@ This chapter established the conceptual and chemical foundation for everything t
     Expected dominant = 400 × 3/4 = **300**
     Expected recessive = 400 × 1/4 = **100**
     These are the $E$ values you would use in the formula $\chi^2 = \sum (O-E)^2/E$.
+
+[See Annotated References](./references.md)

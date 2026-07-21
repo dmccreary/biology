@@ -386,3 +386,5 @@ This theory extends beyond literal islands to any isolated habitat: mountaintops
     **Question 3:** Two islands are the same distance from the mainland, but Island A is 10 times larger than Island B. According to island biogeography theory, which will have more species? Explain.
 
     **Answer:** **Island A** (the larger island) will have more species. Larger islands have lower extinction rates (more resources, more habitat diversity, larger population sizes) while immigration rates are similar (same distance from mainland). The equilibrium species richness is therefore higher on the larger island.
+
+[See Annotated References](./references.md)

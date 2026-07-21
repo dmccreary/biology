@@ -531,3 +531,5 @@ This chapter established the chemical vocabulary that every subsequent unit of c
     **Question:** A student adds a small amount of hydrochloric acid ($\ce{HCl}$) to a bicarbonate buffer solution at pH 7.4. The pH drops by only 0.05 units. The same amount of $\ce{HCl}$ added to pure water at pH 7.0 drops the pH by 3.0 units. Explain, using a specific chemical equation, why the buffer resists the pH change while pure water does not.
 
     **Answer:** $\ce{HCl}$ is a strong acid that dissociates completely, releasing $\ce{H+}$ ions. In the buffer solution, bicarbonate ion ($\ce{HCO3-}$) acts as a conjugate base and absorbs the excess protons: $\ce{H+ + HCO3- -> H2CO3 -> CO2 + H2O}$. The $\ce{H+}$ ions are consumed by this reaction and do not accumulate in solution, so $[\ce{H+}]$ barely changes and the pH drop is minimal. In pure water, there is no conjugate base present to react with the added $\ce{H+}$, so all the protons remain free in solution and $[\ce{H+}]$ increases dramatically, causing the large pH drop.
+
+[See Annotated References](./references.md)

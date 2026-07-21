@@ -356,3 +356,5 @@ Despite these limitations, molecular clocks are invaluable for estimating diverg
     **Question 3:** Explain why polyploidy can lead to instant speciation in plants but is rare in animals.
 
     **Answer:** Polyploidy instantly creates reproductive isolation because a polyploid individual (e.g., 4n) cannot produce viable offspring with diploid (2n) members of the parent species — the resulting triploid (3n) offspring would have unbalanced chromosome segregation during meiosis. Plants tolerate polyploidy well because they can self-fertilize or reproduce vegetatively, establishing a viable polyploid population. Animals, with obligate sexual reproduction and more complex development, rarely survive polyploidy.
+
+[See Annotated References](./references.md)

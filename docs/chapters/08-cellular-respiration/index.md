@@ -452,3 +452,5 @@ Fermentation (lactic acid or alcoholic) sustains glycolysis under anaerobic cond
 12. Fermentation
 13. Lactic Acid Fermentation
 14. Alcoholic Fermentation
+
+[See Annotated References](./references.md)

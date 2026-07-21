@@ -424,3 +424,5 @@ The three-domain system (proposed by Carl Woese in 1990) replaced the older five
     **Question 3:** Explain why disruptive selection might lead to speciation over many generations.
 
     **Answer:** Disruptive selection favors both extreme phenotypes and selects against intermediates. Over time, this can produce a bimodal distribution — two distinct phenotypic groups within the population. If these groups begin to mate preferentially with similar individuals (assortative mating), gene flow between the groups decreases. Eventually, reproductive isolation may develop, splitting the population into two separate species (sympatric speciation).
+
+[See Annotated References](./references.md)

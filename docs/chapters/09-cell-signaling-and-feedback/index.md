@@ -350,3 +350,5 @@ Cell signaling proceeds through three universal stages:
 
     ??? success "Answer"
         Apoptosis is an ordered, controlled process that eliminates damaged, infected, or excess cells without inflammation. It is essential for normal development (digit formation, neural pruning), immune regulation (deletion of self-reactive T cells), and cancer suppression (elimination of cells with unrepaired DNA damage). Unlike necrosis, the cellular contents are packaged into apoptotic bodies and phagocytosed cleanly. Loss of apoptosis — not too much of it — is what drives cancer progression.
+
+[See Annotated References](./references.md)

@@ -653,3 +653,5 @@ Mendel published his work in 1866 — decades before chromosomes were understood
     **Question 3:** Explain why a cross between two organisms that are both Aa produces a 3:1 phenotypic ratio rather than a 2:1 ratio.
 
     **Answer:** The 3:1 ratio arises because both AA (homozygous dominant) and Aa (heterozygous) produce the dominant phenotype. The Punnett square yields 1 AA : 2 Aa : 1 aa. Since AA and Aa are phenotypically identical, the dominant class = 1 + 2 = 3 out of 4 total, giving 3:1.
+
+[See Annotated References](./references.md)

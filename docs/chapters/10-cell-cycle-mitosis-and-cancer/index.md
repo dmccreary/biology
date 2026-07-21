@@ -364,3 +364,5 @@ Three checkpoints guard fidelity: G1/S (growth and damage), G2/M (replication co
 
     ??? success "Answer"
         Oncogene mutations are **dominant** at the cellular level because they confer a gain-of-function: the mutant protein is constitutively active and drives proliferation even in the presence of one normal allele. The normal allele cannot override the constitutively active mutant. This contrasts with tumor suppressor gene mutations, which are recessive at the cellular level (both copies must be inactivated to eliminate the suppressor function).
+
+[See Annotated References](./references.md)

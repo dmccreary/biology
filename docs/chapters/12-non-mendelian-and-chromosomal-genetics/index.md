@@ -668,3 +668,5 @@ Consider a pedigree where two unaffected parents in generation I have one affect
     **Question 3:** In Labrador retrievers, a cross of BbEe × BbEe yields 91 black, 30 chocolate, and 39 yellow puppies. Is this consistent with a 9:3:4 epistatic ratio? How would you test this statistically?
 
     **Answer:** Expected 9:3:4 ratio predicts 90 black : 30 chocolate : 40 yellow out of 160 total. The observed values (91:30:39) are very close. To test statistically, you would apply a **chi-square test** comparing observed to expected values. The chi-square value here would be very small, indicating no significant deviation from the 9:3:4 ratio.
+
+[See Annotated References](./references.md)

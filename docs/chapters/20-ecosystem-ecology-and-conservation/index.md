@@ -434,3 +434,5 @@ An **ecological footprint** measures the total amount of biologically productive
     **Question 3:** A conservation biologist is managing a species with only 200 individuals in a fragmented habitat. Using concepts from this course, recommend three specific management actions.
 
     **Answer:** (1) **Establish habitat corridors** connecting fragmented patches to increase gene flow and reduce inbreeding depression (population genetics — Chapter 16). (2) **Monitor genetic diversity** using Hardy-Weinberg analysis and consider translocating individuals from other populations to increase allele diversity (genetic drift mitigation). (3) **Protect and restore habitat** to increase carrying capacity ($K$), reducing the risk of demographic stochasticity and environmental catastrophes driving the population to extinction (population ecology — Chapter 18).
+
+[See Annotated References](./references.md)

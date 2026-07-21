@@ -439,3 +439,5 @@ This "cells within cells" arrangement allowed eukaryotes to perform aerobic resp
     **Question 3:** List three pieces of evidence that support the endosymbiotic origin of mitochondria.
 
     **Answer:** (1) Mitochondria have their own **circular DNA** without histones, like bacteria. (2) Mitochondria have **70S ribosomes**, the same size as bacterial ribosomes (not the 80S ribosomes found in the eukaryotic cytoplasm). (3) Mitochondria are surrounded by a **double membrane** — the inner membrane corresponds to the original bacterial plasma membrane, and the outer membrane corresponds to the host cell's endocytic vesicle. Additional evidence: mitochondria divide by binary fission, and their DNA sequences are most similar to $\alpha$-proteobacteria.
+
+[See Annotated References](./references.md)

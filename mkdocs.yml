@@ -11,32 +11,86 @@ nav:
 
   - Chapters:
     - Overview: chapters/index.md
-    - 1. Scientific Foundations and Atomic Chemistry: 
+    - 1. Scientific Foundations and Atomic Chemistry:
       - Content: chapters/01-scientific-foundations-and-chemistry/index.md
       - Quiz: chapters/01-scientific-foundations-and-chemistry/quiz.md
-    - 2. Water, pH, and Organic Chemistry: 
+      - Annotated References: chapters/01-scientific-foundations-and-chemistry/references.md
+    - 2. Water, pH, and Organic Chemistry:
       - Content: chapters/02-water-ph-and-organic-chemistry/index.md
       - Quiz: chapters/02-water-ph-and-organic-chemistry/quiz.md
+      - Annotated References: chapters/02-water-ph-and-organic-chemistry/references.md
     - 3. Biological Macromolecules:
       - Content: chapters/03-biological-macromolecules/index.md
       - Quiz: chapters/03-biological-macromolecules/quiz.md
-    - 4. Cell Organization and Organelles: chapters/04-cell-organization-and-organelles/index.md
-    - 5. Cell Membranes and Transport: chapters/05-cell-membranes-and-transport/index.md
-    - 6. Thermodynamics and Enzyme Kinetics: chapters/06-thermodynamics-and-enzymes/index.md
-    - 7. Photosynthesis: chapters/07-photosynthesis/index.md
-    - 8. Cellular Respiration and Fermentation: chapters/08-cellular-respiration/index.md
-    - 9. Cell Signaling and Feedback: chapters/09-cell-signaling-and-feedback/index.md
-    - 10. The Cell Cycle, Mitosis, and Cancer: chapters/10-cell-cycle-mitosis-and-cancer/index.md
-    - 11. Meiosis and Mendelian Genetics: chapters/11-meiosis-and-mendelian-genetics/index.md
-    - 12. Non-Mendelian and Chromosomal Genetics: chapters/12-non-mendelian-and-chromosomal-genetics/index.md
-    - 13. The Central Dogma: chapters/13-central-dogma-replication-and-protein-synthesis/index.md
-    - 14. Mutations, Gene Regulation, and Biotechnology: chapters/14-mutations-gene-regulation-and-biotechnology/index.md
-    - 15. Evidence for Evolution: chapters/15-evidence-for-evolution/index.md
-    - 16. Population Genetics and Hardy-Weinberg: chapters/16-population-genetics-and-hardy-weinberg/index.md
-    - 17. Speciation, Phylogenetics, and Macroevolution: chapters/17-speciation-phylogenetics-and-macroevolution/index.md
-    - 18. Population Ecology and Life History: chapters/18-population-ecology-and-life-history/index.md
-    - 19. Community Ecology and Species Interactions: chapters/19-community-ecology-and-species-interactions/index.md
-    - 20. Ecosystem Ecology and Conservation: chapters/20-ecosystem-ecology-and-conservation/index.md
+      - Annotated References: chapters/03-biological-macromolecules/references.md
+    - 4. Cell Organization and Organelles:
+      - Content: chapters/04-cell-organization-and-organelles/index.md
+      - Quiz: chapters/04-cell-organization-and-organelles/quiz.md
+      - Annotated References: chapters/04-cell-organization-and-organelles/references.md
+    - 5. Cell Membranes and Transport:
+      - Content: chapters/05-cell-membranes-and-transport/index.md
+      - Quiz: chapters/05-cell-membranes-and-transport/quiz.md
+      - Annotated References: chapters/05-cell-membranes-and-transport/references.md
+    - 6. Thermodynamics and Enzyme Kinetics:
+      - Content: chapters/06-thermodynamics-and-enzymes/index.md
+      - Quiz: chapters/06-thermodynamics-and-enzymes/quiz.md
+      - Annotated References: chapters/06-thermodynamics-and-enzymes/references.md
+    - 7. Photosynthesis:
+      - Content: chapters/07-photosynthesis/index.md
+      - Quiz: chapters/07-photosynthesis/quiz.md
+      - Annotated References: chapters/07-photosynthesis/references.md
+    - 8. Cellular Respiration and Fermentation:
+      - Content: chapters/08-cellular-respiration/index.md
+      - Quiz: chapters/08-cellular-respiration/quiz.md
+      - Annotated References: chapters/08-cellular-respiration/references.md
+    - 9. Cell Signaling and Feedback:
+      - Content: chapters/09-cell-signaling-and-feedback/index.md
+      - Quiz: chapters/09-cell-signaling-and-feedback/quiz.md
+      - Annotated References: chapters/09-cell-signaling-and-feedback/references.md
+    - 10. The Cell Cycle, Mitosis, and Cancer:
+      - Content: chapters/10-cell-cycle-mitosis-and-cancer/index.md
+      - Quiz: chapters/10-cell-cycle-mitosis-and-cancer/quiz.md
+      - Annotated References: chapters/10-cell-cycle-mitosis-and-cancer/references.md
+    - 11. Meiosis and Mendelian Genetics:
+      - Content: chapters/11-meiosis-and-mendelian-genetics/index.md
+      - Quiz: chapters/11-meiosis-and-mendelian-genetics/quiz.md
+      - Annotated References: chapters/11-meiosis-and-mendelian-genetics/references.md
+    - 12. Non-Mendelian and Chromosomal Genetics:
+      - Content: chapters/12-non-mendelian-and-chromosomal-genetics/index.md
+      - Quiz: chapters/12-non-mendelian-and-chromosomal-genetics/quiz.md
+      - Annotated References: chapters/12-non-mendelian-and-chromosomal-genetics/references.md
+    - 13. The Central Dogma:
+      - Content: chapters/13-central-dogma-replication-and-protein-synthesis/index.md
+      - Quiz: chapters/13-central-dogma-replication-and-protein-synthesis/quiz.md
+      - Annotated References: chapters/13-central-dogma-replication-and-protein-synthesis/references.md
+    - 14. Mutations, Gene Regulation, and Biotechnology:
+      - Content: chapters/14-mutations-gene-regulation-and-biotechnology/index.md
+      - Quiz: chapters/14-mutations-gene-regulation-and-biotechnology/quiz.md
+      - Annotated References: chapters/14-mutations-gene-regulation-and-biotechnology/references.md
+    - 15. Evidence for Evolution:
+      - Content: chapters/15-evidence-for-evolution/index.md
+      - Quiz: chapters/15-evidence-for-evolution/quiz.md
+      - Annotated References: chapters/15-evidence-for-evolution/references.md
+    - 16. Population Genetics and Hardy-Weinberg:
+      - Content: chapters/16-population-genetics-and-hardy-weinberg/index.md
+      - Quiz: chapters/16-population-genetics-and-hardy-weinberg/quiz.md
+      - Annotated References: chapters/16-population-genetics-and-hardy-weinberg/references.md
+    - 17. Speciation, Phylogenetics, and Macroevolution:
+      - Content: chapters/17-speciation-phylogenetics-and-macroevolution/index.md
+      - Quiz: chapters/17-speciation-phylogenetics-and-macroevolution/quiz.md
+      - Annotated References: chapters/17-speciation-phylogenetics-and-macroevolution/references.md
+    - 18. Population Ecology and Life History:
+      - Content: chapters/18-population-ecology-and-life-history/index.md
+      - Quiz: chapters/18-population-ecology-and-life-history/quiz.md
+      - Annotated References: chapters/18-population-ecology-and-life-history/references.md
+    - 19. Community Ecology and Species Interactions:
+      - Content: chapters/19-community-ecology-and-species-interactions/index.md
+      - Quiz: chapters/19-community-ecology-and-species-interactions/quiz.md
+      - Annotated References: chapters/19-community-ecology-and-species-interactions/references.md
+    - 20. Ecosystem Ecology and Conservation:
+      - Content: chapters/20-ecosystem-ecology-and-conservation/index.md
+      - Quiz: chapters/20-ecosystem-ecology-and-conservation/quiz.md
+      - Annotated References: chapters/20-ecosystem-ecology-and-conservation/references.md
 
   - MicroSims:
     - List of MicroSims: sims/index.md
@@ -145,6 +199,7 @@ nav:
     - Concept List: learning-graph/concept-list.md
     - Graph Quality Analysis: learning-graph/quality-metrics.md
     - FAQ Quality Report: learning-graph/faq-quality-report.md
+    - Quiz Generation Report: learning-graph/quiz-generation-report.md
     - Concept Taxonomy: learning-graph/concept-taxonomy.md
     - Taxonomy Distribution Report: learning-graph/taxonomy-distribution.md
     - Mascot Style Guide: learning-graph/mascot-style-guide.md
@@ -175,6 +230,7 @@ nav:
   - Teachers Guide: teachers-guide/index.md
   - FAQ: faq.md
   - Glossary: glossary.md
+  - References: references.md
   - License: license.md
   - Contact: contact.md
 

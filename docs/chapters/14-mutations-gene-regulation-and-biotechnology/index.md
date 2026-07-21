@@ -567,3 +567,5 @@ Each node is a rounded rectangle with tool name and icon.
     **Question 3:** A researcher wants to insert a human insulin gene into a bacterial plasmid. Describe the key steps using recombinant DNA technology.
 
     **Answer:** (1) Cut the human insulin gene and the plasmid with the **same restriction enzyme** to generate compatible sticky ends. (2) Mix the gene and plasmid → sticky ends base-pair. (3) Use **DNA ligase** to seal the phosphodiester backbone → recombinant plasmid. (4) **Transform** bacteria with the recombinant plasmid (heat shock or electroporation). (5) Select transformants using an antibiotic resistance gene on the plasmid. (6) Confirm the insert by **gel electrophoresis** or **DNA sequencing**.
+
+[See Annotated References](./references.md)

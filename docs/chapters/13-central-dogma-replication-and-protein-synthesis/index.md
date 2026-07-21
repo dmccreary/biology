@@ -627,3 +627,5 @@ In prokaryotes, transcription and translation are **coupled** — ribosomes begi
     **Question 3:** Explain why an error in an aminoacyl-tRNA synthetase could be more damaging than a single-base mutation in DNA.
 
     **Answer:** An aminoacyl-tRNA synthetase charges **every** tRNA of a given type. If it loads the wrong amino acid, that error is repeated in every protein that uses that amino acid — potentially affecting thousands of proteins simultaneously. A DNA mutation, by contrast, affects only one gene (and only the proteins translated from that gene).
+
+[See Annotated References](./references.md)
