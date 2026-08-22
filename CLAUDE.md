@@ -28,7 +28,7 @@ open -a "Google Chrome" "http://127.0.0.1:8000/biology/sims/<sim-name>/main.html
 
 ### p5.js MicroSim Development
 
-When building a p5.js MicroSim, always read the p5 guide at `/Users/danmccreary/Documents/ws/claude-skills/skills/microsim-generator/references/p5-guide.md` first. Mention to the user in the dialog that you are reading the p5-guide.md before generating code.
+When building a p5.js MicroSim, always read the p5 guide at `/Users/danmccreary/Documents/ws/ibook-skills/skills/microsim-generator/references/p5-guide.md` first. Mention to the user in the dialog that you are reading the p5-guide.md before generating code.
 
 ### Anatomy & Biology Diagrams: Use Text-to-Image + p5.js Overlay
 
