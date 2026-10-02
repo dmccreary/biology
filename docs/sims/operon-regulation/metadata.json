@@ -41,5 +41,8 @@
     "commonMisconceptions": [],
     "assessmentOpportunities": []
   },
-  "chapter": "14-mutations-gene-regulation-and-biotechnology"
+  "chapter": "14-mutations-gene-regulation-and-biotechnology",
+  "search": {
+    "showcase": true
+  }
 }

@@ -41,5 +41,8 @@
     "commonMisconceptions": [],
     "assessmentOpportunities": []
   },
-  "chapter": "16-population-genetics-and-hardy-weinberg"
+  "chapter": "16-population-genetics-and-hardy-weinberg",
+  "search": {
+    "showcase": true
+  }
 }
