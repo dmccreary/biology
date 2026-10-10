@@ -1,17 +1,15 @@
 {
   "title": "Buffer Action Simulator",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
+  "subject": "Biology",
   "description": "Interactive MicroSim for buffer action simulator",
   "date": "2026-02-27",
   "educational": {
     "gradeLevel": [
-      "9",
-      "10",
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
+    "subjectArea": "Biology",
     "topic": "Buffer Action Simulator",
     "learningObjectives": [
       "TODO: Add learning objectives"

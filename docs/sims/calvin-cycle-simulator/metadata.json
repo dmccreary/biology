@@ -1,17 +1,15 @@
 {
   "title": "Calvin Cycle Simulator",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
+  "subject": "Biology",
   "description": "Interactive MicroSim for calvin cycle simulator",
   "date": "2026-02-27",
   "educational": {
     "gradeLevel": [
-      "9",
-      "10",
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
+    "subjectArea": "Biology",
     "topic": "Calvin Cycle Simulator",
     "learningObjectives": [
       "TODO: Add learning objectives"

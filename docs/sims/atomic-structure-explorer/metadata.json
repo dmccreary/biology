@@ -1,17 +1,15 @@
 {
   "title": "Atomic Structure Explorer MicroSim",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
+  "subject": "Biology",
   "description": "Interactive MicroSim for atomic structure explorer microsim",
   "date": "2026-02-26",
   "educational": {
     "gradeLevel": [
-      "9",
-      "10",
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
+    "subjectArea": "Biology",
     "topic": "Atomic Structure Explorer MicroSim",
     "learningObjectives": [
       "TODO: Add learning objectives"

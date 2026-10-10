@@ -1,17 +1,15 @@
 {
   "title": "Mutation Effects Comparator",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
+  "subject": "Biology",
   "description": "Interactive MicroSim for mutation effects comparator",
   "date": "2026-02-27",
   "educational": {
     "gradeLevel": [
-      "9",
-      "10",
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
+    "subjectArea": "Biology",
     "topic": "Mutation Effects Comparator",
     "learningObjectives": [
       "TODO: Add learning objectives"

@@ -1,17 +1,15 @@
 {
   "title": "Selection Modes Visualizer",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
+  "subject": "Biology",
   "description": "Interactive MicroSim for selection modes visualizer",
   "date": "2026-02-27",
   "educational": {
     "gradeLevel": [
-      "9",
-      "10",
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
+    "subjectArea": "Biology",
     "topic": "Selection Modes Visualizer",
     "learningObjectives": [
       "TODO: Add learning objectives"

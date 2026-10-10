@@ -1,17 +1,15 @@
 {
   "title": "Standard Deviation",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
+  "subject": "Biology",
   "description": "Interactive MicroSim for standard deviation",
   "date": "2026-02-26",
   "educational": {
     "gradeLevel": [
-      "9",
-      "10",
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
+    "subjectArea": "Biology",
     "topic": "Standard Deviation",
     "learningObjectives": [
       "TODO: Add learning objectives"

@@ -1,17 +1,15 @@
 {
   "title": "Water Molecule Polarity",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
+  "subject": "Biology",
   "description": "Interactive MicroSim for water molecule polarity",
   "date": "2026-02-27",
   "educational": {
     "gradeLevel": [
-      "9",
-      "10",
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
+    "subjectArea": "Biology",
     "topic": "Water Molecule Polarity",
     "learningObjectives": [
       "TODO: Add learning objectives"

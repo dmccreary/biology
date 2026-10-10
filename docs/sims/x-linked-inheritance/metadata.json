@@ -1,17 +1,15 @@
 {
   "title": "X-Linked Inheritance Simulator",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
+  "subject": "Biology",
   "description": "Interactive MicroSim for x-linked inheritance simulator",
   "date": "2026-02-27",
   "educational": {
     "gradeLevel": [
-      "9",
-      "10",
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
+    "subjectArea": "Biology",
     "topic": "X-Linked Inheritance Simulator",
     "learningObjectives": [
       "TODO: Add learning objectives"

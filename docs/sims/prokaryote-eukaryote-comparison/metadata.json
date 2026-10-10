@@ -1,17 +1,15 @@
 {
   "title": "Prokaryote vs. Eukaryote Cell Comparison",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
+  "subject": "Biology",
   "description": "Interactive MicroSim for prokaryote vs. eukaryote cell comparison",
   "date": "2026-02-27",
   "educational": {
     "gradeLevel": [
-      "9",
-      "10",
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
+    "subjectArea": "Biology",
     "topic": "Prokaryote vs. Eukaryote Cell Comparison",
     "learningObjectives": [
       "TODO: Add learning objectives"

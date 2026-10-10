@@ -1,17 +1,15 @@
 {
   "title": "Carbohydrate Structures Explorer",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
+  "subject": "Biology",
   "description": "Interactive MicroSim for carbohydrate structures explorer",
   "date": "2026-02-27",
   "educational": {
     "gradeLevel": [
-      "9",
-      "10",
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
+    "subjectArea": "Biology",
     "topic": "Carbohydrate Structures Explorer",
     "learningObjectives": [
       "TODO: Add learning objectives"

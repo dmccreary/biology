@@ -1,17 +1,15 @@
 {
   "title": "Activation Energy and Reaction Coordinate",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
+  "subject": "Biology",
   "description": "Interactive MicroSim for activation energy and reaction coordinate",
   "date": "2026-02-27",
   "educational": {
     "gradeLevel": [
-      "9",
-      "10",
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
+    "subjectArea": "Biology",
     "topic": "Activation Energy and Reaction Coordinate",
     "learningObjectives": [
       "TODO: Add learning objectives"

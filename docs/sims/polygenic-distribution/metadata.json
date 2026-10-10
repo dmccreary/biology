@@ -1,17 +1,15 @@
 {
   "title": "Polygenic Trait Distribution Visualizer",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
+  "subject": "Biology",
   "description": "Interactive MicroSim for polygenic trait distribution visualizer",
   "date": "2026-02-27",
   "educational": {
     "gradeLevel": [
-      "9",
-      "10",
       "11",
       "12"
     ],
-    "subjectArea": "Mathematics",
+    "subjectArea": "Biology",
     "topic": "Polygenic Trait Distribution Visualizer",
     "learningObjectives": [
       "TODO: Add learning objectives"
